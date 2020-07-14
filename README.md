@@ -1,1 +1,1 @@
-# PraticalPythonProjects
+# PythonProjects
