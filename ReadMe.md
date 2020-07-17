@@ -1,3 +1,3 @@
 # PraticalPythonProjects
 
-Collection of Cool Pratical Python Projects.. All in One Place.. 
+Collection of Cool Practical Python Projects.. All in One Place.. 
