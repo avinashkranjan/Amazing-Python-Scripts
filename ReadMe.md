@@ -2,27 +2,27 @@
 
 Projects in Alphabetical Orders
 
-##1. Calculator
+<h2> 1. Calculator </h2>
 
 <summary>A Simple CLI Based Calculator Made Using Python.
 </summary>
 
-##2. Chrome Automation
+<h2>Chrome Automation<h2>
 
 <summary>An Automation Script used to open webistes in chrome.
 </summary>
 
-##3. Covid-19 Updater
-##4. Email-Sender
-##5. Face Detection
-##6. Internet Speed Test
-##7. OCR-Image-To-Text
-##8. Password Generator
-##9. Screen Recorder
-##10. Screenshot
-##11. Speech to Text
-##12. Text to Speech
-##13. URL Shortener
-##14. Weather App
-##15. WebCam - Image Capture
+<h2> 3. Covid-19 Updater </h2>
+<h2> 4. Email-Sender </h2>
+<h2> 5. Face Detection </h2>
+<h2> 6. Internet Speed Test </h2>
+<h2> 7. OCR-Image-To-Text </h2>
+<h2> 8. Password Generator </h2>
+<h2> 9. Screen Recorder </h2>
+<h2> 10. Screenshot </h2>
+<h2> 11. Speech to Text </h2>
+<h2> 12. Text to Speech </h2>
+<h2> 13. URL Shortener </h2>
+<h2> 14. Weather App </h2> 
+<h2> 15. WebCam - Image Capture </h2>
 
