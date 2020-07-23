@@ -7,7 +7,7 @@ Projects in Alphabetical Orders
 <summary>A Simple CLI Based Calculator Made Using Python.
 </summary>
 
-<h2>Chrome Automation<h2>
+<h2> 2. Chrome Automation </h2>
 
 <summary>An Automation Script used to open webistes in chrome.
 </summary>
