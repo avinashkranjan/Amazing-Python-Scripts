@@ -13,9 +13,13 @@ Projects in Alphabetical Orders
 </summary>
 
 <h2> 3. Covid-19 Updater </h2>
+
+<summary>An Automation Script which through a toast notification informs you about <br>i. Number of COVID-19 Cases <br> ii. Number of Patients Recovered <br> iii. Number of Total deaths <br> hourly.
+</summary>
+
 <h2> 4. Email-Sender </h2>
 <h2> 5. Face Detection </h2>
-<h2> 6. Internet Speed Test </h2>
+<h2> 6. Internet Speed Test </h2
 <h2> 7. OCR-Image-To-Text </h2>
 <h2> 8. Password Generator </h2>
 <h2> 9. Screen Recorder </h2>
