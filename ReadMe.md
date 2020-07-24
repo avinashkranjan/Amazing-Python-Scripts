@@ -19,7 +19,7 @@ Projects in Alphabetical Orders
 
 <h2> 4. Email-Sender </h2>
 <h2> 5. Face Detection </h2>
-<h2> 6. Internet Speed Test </h2
+<h2> 6. Internet Speed Test </h2>
 <h2> 7. OCR-Image-To-Text </h2>
 <h2> 8. Password Generator </h2>
 <h2> 9. Screen Recorder </h2>
