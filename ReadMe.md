@@ -18,6 +18,7 @@ Projects in Alphabetical Orders
 </summary>
 
 <h2> 4. Email-Sender </h2>
+<summary>Send Emails Using Python</summary>
 <h2> 5. Face Detection </h2>
 <h2> 6. Internet Speed Test </h2>
 <h2> 7. OCR-Image-To-Text </h2>
