@@ -1,16 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
-#city = input("Enter City: ")
-
-search = "weather in"+ input("Enter City: ")
-
+# Taking City You Want to Check Temperaature
+city = input("Enter City : ")
+# Storing City You Want to Check Temperaature
+search = "weather in" + city
+# Searching it on google
 url = f"https://www.google.com/search?&q={search}"
-
+# Sending and Receiving Requests
 r = requests.get(url)
-
+# Scraping Details
 s = BeautifulSoup(r.text, "html.parser")
-
-update  = s.find("div", class_="BNeawe").text
-
-print(update)
+# Storing Details
+update = s.find("div", class_="BNeawe").text
+# Printing Details
+print("Temperature in " + city + " is: " + update)
