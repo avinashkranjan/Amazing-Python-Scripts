@@ -20,7 +20,9 @@ Projects in Alphabetical Orders
 <h2> 4. Email-Sender </h2>
 <summary>Send Emails Using Python</summary>
 <h2> 5. Face Detection </h2>
+<summary>Detect Faces Using your Webcam Using Python</summary>
 <h2> 6. Internet Speed Test </h2>
+<summary>Check Internet Speed Using Python</summary>
 <h2> 7. OCR-Image-To-Text </h2>
 <h2> 8. Password Generator </h2>
 <h2> 9. Screen Recorder </h2>
