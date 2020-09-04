@@ -23,6 +23,7 @@ You can refer to the following articles on basics of Git and Github and also con
 
 ## 📝 How to Contribute?
 
+- Take a look ar [Contributing Guide](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/CONTRIBUTING.md)
 - Take a look at the Existing Issues or create your own Issues!
 - Wait for the Issue to be assigned to you after which you can start working on it.
 - Fork the Repo and create a Branch for any Issue that you are working upon.
