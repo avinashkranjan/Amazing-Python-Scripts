@@ -33,25 +33,19 @@ You can refer to the following articles on basics of Git and Github and also con
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
 - Add Screenshots to help us know what this Script is all about.
 
-
-## ❤️ Project Admin
-
-|                                     <a href="https://github.com/avinashkranjan"><img src="https://avatars1.githubusercontent.com/u/55796944?s=460&u=e6985588320978737a51ac23c8a624005fce5e18&v=4" width=150px height=150px /></a>                                      |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                      **[Avinash Kr. Ranjan](https://www.linkedin.com/in/avinashkranjan//)**                                                                                       |
-
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people 👨🏻‍💻:
+
+🚀 Contributions of any kind is welcome! 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tr>
+        <td align="center"><a href="http://avinashranjan.tech"><img src="https://avatars2.githubusercontent.com/u/55796944?v=4" width="100px;" alt=""/><br /><sub><b>Avinash Kr. Ranjan</b></sub></a><br /><a href="#ideas-avinashkranjan" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-avinashkranjan" title="Project Management">📆</a> <a href="#question-avinashkranjan" title="Answering Questions">💬</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+reviewed-by%3Aavinashkranjan" title="Reviewed Pull Requests">👀</a> <a href="#talk-avinashkranjan" title="Talks">📢</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jeffugo"><img src="https://avatars0.githubusercontent.com/u/70389806?v=4" width="100px;" alt=""/><br /><sub><b>jeffugo</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=jeffugo" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://avinashranjan.tech"><img src="https://avatars2.githubusercontent.com/u/55796944?v=4" width="100px;" alt=""/><br /><sub><b>Avinash Kr. Ranjan</b></sub></a><br /><a href="#ideas-avinashkranjan" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-avinashkranjan" title="Project Management">📆</a> <a href="#question-avinashkranjan" title="Answering Questions">💬</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+reviewed-by%3Aavinashkranjan" title="Reviewed Pull Requests">👀</a> <a href="#talk-avinashkranjan" title="Talks">📢</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Documentation">📖</a></td>
   </tr>
 </table>
 
@@ -59,7 +53,12 @@ Thanks goes to these wonderful people 👨🏻‍💻:
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-🚀 Contributions of any kind is welcome! 
+## ❤️ Project Admin
+
+|                                     <a href="https://github.com/avinashkranjan"><img src="https://avatars1.githubusercontent.com/u/55796944?s=460&u=e6985588320978737a51ac23c8a624005fce5e18&v=4" width=150px height=150px /></a>                                      |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                      **[Avinash Kr. Ranjan](https://www.linkedin.com/in/avinashkranjan//)**                                                                                       |
+
 
 ## Scripts Available 
 
