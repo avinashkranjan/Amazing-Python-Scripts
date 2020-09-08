@@ -58,7 +58,7 @@ Thanks goes to these wonderful people 👨🏻‍💻:
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-🚀 Contributions of any kind welcome! 
+🚀 Contributions of any kind is welcome! 
 
 ## Scripts Available 
 
