@@ -22,7 +22,11 @@
       "contributions": [
         "ideas",
         "projectManagement",
-        "question"
+        "question",
+        "review",
+        "talk",
+        "code",
+        "doc"
       ]
     }
   ],
