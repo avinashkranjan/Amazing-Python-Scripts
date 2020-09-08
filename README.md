@@ -1,6 +1,6 @@
 # Amazing-Python-Scripts 🚀
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
@@ -51,6 +51,7 @@ Thanks goes to these wonderful people 👨🏻‍💻:
 <table>
   <tr>
     <td align="center"><a href="https://github.com/jeffugo"><img src="https://avatars0.githubusercontent.com/u/70389806?v=4" width="100px;" alt=""/><br /><sub><b>jeffugo</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=jeffugo" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://avinashranjan.tech"><img src="https://avatars2.githubusercontent.com/u/55796944?v=4" width="100px;" alt=""/><br /><sub><b>Avinash Kr. Ranjan</b></sub></a><br /><a href="#ideas-avinashkranjan" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
