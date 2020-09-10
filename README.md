@@ -1,4 +1,4 @@
-# Amazing-Python-Scripts 🚀
+<h1 align=center> 🚀 Amazing-Python-Scripts </h1>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -24,12 +24,13 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
-## 📑 Introduction
+
+<h2 align=center> 📑 Introduction </h2>
 
 A curated collection of **Amazing Python scripts** from **_Basics to Advance with automation task scripts_**. This is your Personal space to find or add any new script
 that can make Life Easier for you, as a **_Developer_**, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to **_download PDFs from an Online Source or just to randomly like everyone's Instagram Post_**.
 
-## 👨🏻‍💻 How to get started?
+<h2 align=center> 👨🏻‍💻 How to get started? </h2> 
 
 You can refer to the following articles on **_basics of Git and Github and also contact the Project Mentors, in case you are stuck_**:
 
@@ -39,7 +40,7 @@ You can refer to the following articles on **_basics of Git and Github and also 
 - [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
 
 
-## 📝 How to Contribute?
+<h2 align=center> 📝 How to Contribute? </h2>  
 
 - Take a look at [Contributing Guide](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/CONTRIBUTING.md)
 - Take a look at the Existing Issues or create your own Issues!
@@ -48,7 +49,7 @@ You can refer to the following articles on **_basics of Git and Github and also 
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
 - Add Screenshots to help us know what this Script is all about.
 
-## Contributors ✨
+<h2 align=center> ✨ Contributors </h2>
 
 Thanks goes to these **Wonderful People** 👨🏻‍💻:
 
