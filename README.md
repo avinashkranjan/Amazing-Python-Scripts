@@ -1,7 +1,22 @@
 # Amazing-Python-Scripts 🚀
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+[![GitHub forks](https://img.shields.io/github/forks/avinashkranjan/Amazing-Python-Scripts.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/avinashkranjan/Amazing-Python-Scripts/network/)
+[![GitHub stars](https://img.shields.io/github/stars/avinashkranjan/Amazing-Python-Scripts.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/avinashkranjan/Amazing-Python-Scripts/stargazers/)
+
+
+[![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+is%3Aclosed)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -11,12 +26,12 @@
 
 ## 📑 Introduction
 
-A curated collection of awesome Python scripts from basic to advance with automation task scripts. This is your personal space to find or add any new script
-that can make Life Easier for you, as a Developer, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to download PDFs from an Online Source or just to randomly like everyone's Instagram Post.
+A curated collection of **Amazing Python scripts** from **_Basics to Advance with automation task scripts_**. This is your Personal space to find or add any new script
+that can make Life Easier for you, as a **_Developer_**, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to **_download PDFs from an Online Source or just to randomly like everyone's Instagram Post_**.
 
 ## 👨🏻‍💻 How to get started?
 
-You can refer to the following articles on basics of Git and Github and also contact the Project Mentors, in case you are stuck:
+You can refer to the following articles on **_basics of Git and Github and also contact the Project Mentors, in case you are stuck_**:
 
 - [Forking a Repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 - [Cloning a Repo](https://help.github.com/en/desktop/contributing-to-projects/creating-a-pull-request)
@@ -35,9 +50,9 @@ You can refer to the following articles on basics of Git and Github and also con
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people 👨🏻‍💻:
+Thanks goes to these **Wonderful People** 👨🏻‍💻:
 
-🚀 Contributions of any kind is welcome! 
+🚀 **Contributions** of any kind is welcome! 
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
