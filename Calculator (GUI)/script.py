@@ -1,5 +1,7 @@
 from tkinter import *
 window=Tk()
+window.title("Calculator")
+window.resizable(0,0)
 
 def func1():
     s=e1_val.get()
