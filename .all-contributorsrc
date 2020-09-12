@@ -28,6 +28,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "geekymeeky",
+      "name": "Srijan Kumar Gupta",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/66238394?v=4",
+      "profile": "https://github.com/geekymeeky",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
