@@ -85,58 +85,58 @@ def func17():
     e1.insert(END,"+")
 
 e1_val=StringVar()
-e1=Entry(window,textvariable=e1_val,width=10)
+e1=Entry(window,textvariable=e1_val,width=20)
 e1.grid(row=0,column=0,columnspan=2)
 
-clear=Button(window,text="Clear",width=10,command=func1)
+clear=Button(window,text="Clear",width=20,command=func1)
 clear.grid(row=0,column=2,columnspan=2)
 
-b2=Button(window,text="7",width=4,command=func2)
+b2=Button(window,text="7",width=8,height=4,command=func2)
 b2.grid(row=1,column=0)
 
-b2=Button(window,text="8",width=4,command=func3)
+b2=Button(window,text="8",width=8,height=4,command=func3)
 b2.grid(row=1,column=1)
 
-b2=Button(window,text="9",width=4,command=func4)
+b2=Button(window,text="9",width=8,height=4,command=func4)
 b2.grid(row=1,column=2)
 
-b2=Button(window,text="/",width=4,command=func5)
+b2=Button(window,text="/",width=8,height=4,command=func5)
 b2.grid(row=1,column=3)
 
-b2=Button(window,text="4",width=4,command=func6)
+b2=Button(window,text="4",width=8,height=4,command=func6)
 b2.grid(row=2,column=0)
 
-b2=Button(window,text="5",width=4,command=func7)
+b2=Button(window,text="5",width=8,height=4,command=func7)
 b2.grid(row=2,column=1)
 
-b2=Button(window,text="6",width=4,command=func8)
+b2=Button(window,text="6",width=8,height=4,command=func8)
 b2.grid(row=2,column=2)
 
-b2=Button(window,text="X",width=4,command=func9)
+b2=Button(window,text="X",width=8,height=4,command=func9)
 b2.grid(row=2,column=3)
 
-b2=Button(window,text="1",width=4,command=func10)
+b2=Button(window,text="1",width=8,height=4,command=func10)
 b2.grid(row=3,column=0)
 
-b2=Button(window,text="2",width=4,command=func11)
+b2=Button(window,text="2",width=8,height=4,command=func11)
 b2.grid(row=3,column=1)
 
-b2=Button(window,text="3",width=4,command=func12)
+b2=Button(window,text="3",width=8,height=4,command=func12)
 b2.grid(row=3,column=2)
 
-b2=Button(window,text="-",width=4,command=func13)
+b2=Button(window,text="-",width=8,height=4,command=func13)
 b2.grid(row=3,column=3)
 
-b2=Button(window,text="0",width=4,command=func14)
+b2=Button(window,text="0",width=8,height=4,command=func14)
 b2.grid(row=4,column=0)
 
-b2=Button(window,text=".",width=4,command=func15)
+b2=Button(window,text=".",width=8,height=4,command=func15)
 b2.grid(row=4,column=1)
 
-b2=Button(window,text="=",width=4,command=func16)
+b2=Button(window,text="=",width=8,height=4,command=func16)
 b2.grid(row=4,column=2)
 
-b2=Button(window,text="+",width=4,command=func17)
+b2=Button(window,text="+",width=8,height=4,command=func17)
 b2.grid(row=4,column=3)
 
 window.mainloop()
