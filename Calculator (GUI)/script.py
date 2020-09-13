@@ -1,6 +1,6 @@
 from tkinter import *
 window=Tk()
-window.title("Calculator")
+window.title("Standard Calculator")
 window.resizable(0,0)
 
 def func1():
@@ -20,7 +20,26 @@ def func4():
     e1.insert(END,"9")
 
 def func5():
+    x=0.0
+    flag=1
     s=e1_val.get()
+    for i in range (0,len(s)):
+        if s[i]=='/' or s[i]=='X' or s[i]=='+' or s=='-':
+            a=s[0:i]
+            b=s[i+1:len(s)]
+            flag=0
+            if s[i]=='/':
+                x=float(a)/float(b)
+            elif s[i]=='X':
+                x=float(a)*float(b)
+            elif s[i]=='+':
+                x=float(a)+float(b)
+            elif s[i]=='-':
+                x=float(a)-float(b)
+    if flag==0:
+        e1.delete(first=0,last=len(s))
+        e1.insert(END,"")
+        e1.insert(END,str(x))
     e1.insert(END,"/")
 
 def func6():
@@ -36,7 +55,26 @@ def func8():
     e1.insert(END,"6")
 
 def func9():
+    x=0.0
+    flag=1
     s=e1_val.get()
+    for i in range (0,len(s)):
+        if s[i]=='/' or s[i]=='X' or s[i]=='+' or s=='-':
+            a=s[0:i]
+            b=s[i+1:len(s)]
+            flag=0
+            if s[i]=='/':
+                x=float(a)/float(b)
+            elif s[i]=='X':
+                x=float(a)*float(b)
+            elif s[i]=='+':
+                x=float(a)+float(b)
+            elif s[i]=='-':
+                x=float(a)-float(b)
+    if flag==0:
+        e1.delete(first=0,last=len(s))
+        e1.insert(END,"")
+        e1.insert(END,str(x))
     e1.insert(END,"X")
 
 def func10():
@@ -52,7 +90,26 @@ def func12():
     e1.insert(END,"3")
 
 def func13():
+    x=0.0
+    flag=1
     s=e1_val.get()
+    for i in range (0,len(s)):
+        if s[i]=='/' or s[i]=='X' or s[i]=='+' or s=='-':
+            a=s[0:i]
+            b=s[i+1:len(s)]
+            flag=0
+            if s[i]=='/':
+                x=float(a)/float(b)
+            elif s[i]=='X':
+                x=float(a)*float(b)
+            elif s[i]=='+':
+                x=float(a)+float(b)
+            elif s[i]=='-':
+                x=float(a)-float(b)
+    if flag==0:
+        e1.delete(first=0,last=len(s))
+        e1.insert(END,"")
+        e1.insert(END,str(x))
     e1.insert(END,"-")
 
 def func14():
@@ -83,15 +140,34 @@ def func16():
     e1.insert(END,str(x))
 
 def func17():
+    x=0.0
+    flag=1
     s=e1_val.get()
+    for i in range (0,len(s)):
+        if s[i]=='/' or s[i]=='X' or s[i]=='+' or s=='-':
+            a=s[0:i]
+            b=s[i+1:len(s)]
+            flag=0
+            if s[i]=='/':
+                x=float(a)/float(b)
+            elif s[i]=='X':
+                x=float(a)*float(b)
+            elif s[i]=='+':
+                x=float(a)+float(b)
+            elif s[i]=='-':
+                x=float(a)-float(b)
+    if flag==0:
+        e1.delete(first=0,last=len(s))
+        e1.insert(END,"")
+        e1.insert(END,str(x))
     e1.insert(END,"+")
 
 e1_val=StringVar()
-e1=Entry(window,textvariable=e1_val,width=20)
-e1.grid(row=0,column=0,columnspan=2)
+e1=Entry(window,textvariable=e1_val,width=40)
+e1.grid(row=0,column=0,columnspan=3)
 
-clear=Button(window,text="Clear",width=20,command=func1)
-clear.grid(row=0,column=2,columnspan=2)
+clear=Button(window,text="Clear",width=8,height=2,command=func1)
+clear.grid(row=0,column=3)
 
 b2=Button(window,text="7",width=8,height=4,command=func2)
 b2.grid(row=1,column=0)
