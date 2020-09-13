@@ -1,0 +1,8 @@
+The packages used are:
+1) tkinter
+2) geopy
+
+If geopy is not installed, open command prompt and use the following command:
+pip install geopy
+I hope it resolves any kind of problems that may arise.
+Also make sure your machine is connected to Internet while you are executing this program.
