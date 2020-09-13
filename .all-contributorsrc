@@ -5,7 +5,7 @@
   "imageSize": 100,
   "commit": false,
   "contributors": [
-      {
+    {
       "login": "avinashkranjan",
       "name": "Avinash Kr. Ranjan",
       "avatar_url": "https://avatars2.githubusercontent.com/u/55796944?v=4",
@@ -46,6 +46,15 @@
       "contributions": [
         "code",
         "ideas"
+      ]
+    },
+    {
+      "login": "madihamallick",
+      "name": "Madiha Mallick",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/70858557?v=4",
+      "profile": "https://github.com/madihamallick",
+      "contributions": [
+        "code"
       ]
     }
   ],
