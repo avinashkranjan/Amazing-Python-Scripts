@@ -1,5 +1,6 @@
 from tkinter import *
 from geopy.geocoders import ArcGIS
+import clipboard
 
 def f():
     s=e1.get()
@@ -11,6 +12,16 @@ def f():
     u.delete(first=0,last=len(u1.get()))
     t.insert(END,str(x))
     u.insert(END,str(y))
+
+def g():
+    x=t1.get()
+    y=u1.get()
+    s=""
+    s=s+"Latitude=> "+x
+    s=s+" "
+    s=s+"Longitude=> "+y
+    #print(s)
+    clipboard.copy(s)
 
 window=Tk()
 window.title("Geocordinate Detector")
@@ -24,7 +35,7 @@ e=Entry(window,textvariable=e1,width=50)
 e.grid(row=0,column=1)
 
 b1=Button(window,text="Locate Me!",width=40,command=f)
-b1.grid(row=1,column=0,columnspan=2,)
+b1.grid(row=1,column=0,columnspan=2)
 
 l2=Label(window,text="Latitude")
 l2.grid(row=2,column=0)
@@ -39,5 +50,8 @@ t.grid(row=2,column=1)
 u1=StringVar()
 u=Entry(window,textvariable=u1,width=50)
 u.grid(row=3,column=1)
+
+b2=Button(window,text="Copy",width=40,command=g)
+b2.grid(row=4,column=0,columnspan=2)
 
 window.mainloop()
