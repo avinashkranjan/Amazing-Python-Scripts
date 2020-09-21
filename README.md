@@ -72,7 +72,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
 
 | SL No\.  | 🚀 Script Name          | 👨🏻‍💻 Script Function                                                               | 🔗 Link    |
 |----------|-------------------------|---------------------------------------------------------------------------------------|------------|
-| 1\.      | Calculator              | A CLI based calculator\.                                                              | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Calculator/Calcy.py) |
+| 1\.      | Calculator              | A GUI based calculator\.                                                              | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Calculator/Calcy.py) |
 | 2\.      | Chrome Automation       | An Automation Script used to open websites in chrome                                  | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/ChromeAutomation/chrome-automation.py) |
 | 3\.      | Covid\-19 Updater       | An Automation Script which through a toast notification updates you about covid cases | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Covid-19-Updater/covid-19-updater_bot.py) |
 | 4\.      | Email\-Sender           | Send Emails                                                                           | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Email-Sender/email-sender.py) |
