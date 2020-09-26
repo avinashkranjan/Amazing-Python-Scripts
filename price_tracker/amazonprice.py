@@ -38,8 +38,22 @@ def mail_sending(mail_id, title, password):
 
 def check_price():
     title = soup.find(id="productTitle").get_text().strip()
-    price = soup.find(id="priceblock_ourprice_row").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
+    try:
+        price = soup.find(id="priceblock_ourprice_row").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
         'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu','')
+
+        price = soup.find(id="priceblock_dealprice").get_text().strip()[:20].replace('₹', '').replace(' ',  '').replace(
+            'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu','')
+
+        price = soup.find(id="priceblock_ourprice").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
+            'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+
+        price = soup.find(id="priceblock_ourprice_lbl").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
+            'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+
+    except AttributeError:
+        pass
+
     fixed_price = float(price)
     print(title)
     print(f'The current price is {fixed_price}')
