@@ -20,44 +20,43 @@ Url = input("Drop the Url of product you wish to buy...!\n")
 page = requests.get(Url, headers=headers)
 soup = BeautifulSoup(page.content, "html.parser")
 # print(soup)
-y_price = (input('Enter the price you wish to get the product at:'))
-your_price = y_price.replace(',', '')
 
 
-def mail_sending(Id, title):
+def mail_sending(mail_id, title, password):
     server_mail = "smtp.gmail.com"
     port = 587
-    mail_id = "mallickmadiha9031@gmail.com"
-    password = "meaclqmbilrljtbm"
     server = smtplib.SMTP(server_mail, port)
     server.ehlo()
     server.starttls()
     server.login(mail_id, password)
     subject = "GO BUY FAST!"
-    body = f"Price of {title} is fallen below the threshold amount. Click on the link below to buy the product\n\n" + Url
+    body = f"Price of {title} is fallen below the threshold amount. Click on the link below to buy the product!!!\n\n" + Url
     message = f'Subject:{subject}\n\n {body}'
-    server.sendmail(mail_id, Id, message)
+    server.sendmail(mail_id, mail_id, message)
     server.quit()
 
 
-def check_price(your_price):
+def check_price():
     title = soup.find(id="productTitle").get_text().strip()
     price = soup.find(id="priceblock_ourprice_row").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
         'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu','')
     fixed_price = float(price)
     print(title)
     print(f'The current price is {fixed_price}')
-    Id = input("Please enter your email id: ")
+    y_price = (input('Enter the price you wish to get the product at:'))
+    your_price = y_price.replace(',', '')
+    mail_id = input("Please enter your email id: ")
+    password = input("Enter your app password here: ")
     print("Thank You! You'll receive an email as soon as the price of product drops...!")
     # print(price)
     if fixed_price <= float(your_price):
-        mail_sending(Id, title)
+        mail_sending(mail_id, title, password)
         exit()
     else:
         pass
 
 
 while 1:
-    check_price(your_price)
+    check_price()
     # checks at an interval of 2 hours
     time.sleep(7200.00)
