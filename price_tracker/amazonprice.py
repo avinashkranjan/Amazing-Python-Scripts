@@ -3,11 +3,11 @@ from bs4 import BeautifulSoup
 import time
 import smtplib
 
-#header = {
-        #"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
-#}
+# header = {
+# "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+# }
 
-#Url = "https://www.amazon.in/Apple-AirPods-Wireless-Charging-Case/dp/B07QDRYVCZ/ref=sr_1_1_sspa?crid=2O0YQXVBL4T86&dchild=1&keywords=airpods&qid=1601031081&sprefix=airpod%2Caps%2C615&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFPVUpPNUNIQUE1RUUmZW5jcnlwdGVkSWQ9QTAxNzI3NjJPNlg3OTJFSTVSOE8mZW5jcnlwdGVkQWRJZD1BMDg1MTYzNjJSRUw4VFVKQzQ1TDkmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
+# Url = "https://www.amazon.in/Apple-AirPods-Wireless-Charging-Case/dp/B07QDRYVCZ/ref=sr_1_1_sspa?crid=2O0YQXVBL4T86&dchild=1&keywords=airpods&qid=1601031081&sprefix=airpod%2Caps%2C615&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFPVUpPNUNIQUE1RUUmZW5jcnlwdGVkSWQ9QTAxNzI3NjJPNlg3OTJFSTVSOE8mZW5jcnlwdGVkQWRJZD1BMDg1MTYzNjJSRUw4VFVKQzQ1TDkmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
 
 # get your browser information by searching "my user agent"
 user_agent = input("Enter your User-Agent string here\n")
@@ -19,6 +19,8 @@ Url = input("Drop the Url of product you wish to buy...!\n")
 
 page = requests.get(Url, headers=headers)
 soup = BeautifulSoup(page.content, "html.parser")
+
+
 # print(soup)
 
 
@@ -39,20 +41,26 @@ def mail_sending(mail_id, title, password):
 def check_price():
     title = soup.find(id="productTitle").get_text().strip()
     try:
-        price = soup.find(id="priceblock_ourprice_row").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
-        'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu','')
-
-        price = soup.find(id="priceblock_dealprice").get_text().strip()[:20].replace('₹', '').replace(' ',  '').replace(
-            'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu','')
-
-        price = soup.find(id="priceblock_ourprice").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
+        price = soup.find(id="priceblock_ourprice_row").get_text().strip()[:20].replace('₹', '').replace(' ',
+                                                                                                         '').replace(
             'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
 
-        price = soup.find(id="priceblock_ourprice_lbl").get_text().strip()[:20].replace('₹', '').replace(' ', '').replace(
-            'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+    except:
+        try:
+            price = soup.find(id="priceblock_dealprice").get_text().strip()[:20].replace('₹', '').replace(' ',
+                                                                                                          '').replace(
+                'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
 
-    except AttributeError:
-        pass
+        except:
+            try:
+                price = soup.find(id="priceblock_ourprice").get_text().strip()[:20].replace('₹', '').replace(' ',
+                                                                                                             '').replace(
+                    'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+
+            except:
+                price = soup.find(id="priceblock_ourprice_lbl").get_text().strip()[:20].replace('₹', '').replace(' ',
+                                                                                                                 '').replace(
+                    'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
 
     fixed_price = float(price)
     print(title)
