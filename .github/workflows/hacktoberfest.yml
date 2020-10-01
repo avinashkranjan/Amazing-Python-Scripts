@@ -1,0 +1,15 @@
+name:  Hacktoberfest Label
+on:
+  issues:
+    types: [opened,labeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: hacktoberfest-action
+        uses: mdb571/hacktoberfest-action@master
+        env:
+          LABEL_COLOR: ${{ secrets.LABEL_COLOR }}
+          LABEL_FILTER: ${{secrets.LABEL_FILTER}}
