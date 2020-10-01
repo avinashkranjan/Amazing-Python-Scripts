@@ -11,5 +11,5 @@ jobs:
       - name: hacktoberfest-action
         uses: mdb571/hacktoberfest-action@master
         env:
-          LABEL_COLOR: "9400D3"
+          LABEL_COLOR: ${{secrets.LABEL_COLOR}}
           LABEL_FILTER: ${{secrets.LABEL_FILTER}}
