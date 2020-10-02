@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -56,6 +56,9 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
     <td align="center"><a href="https://github.com/madihamallick"><img src="https://avatars1.githubusercontent.com/u/70858557?v=4" width="100px;" alt=""/><br /><sub><b>Madiha Mallick</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=madihamallick" title="Code">💻</a></td>
     <td align="center"><a href="http://mohammedbilal.me"><img src="https://avatars2.githubusercontent.com/u/55395092?v=4" width="100px;" alt=""/><br /><sub><b>Mohammed Bilal</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=mdb571" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/shivamsh555"><img src="https://avatars0.githubusercontent.com/u/72130276?v=4" width="100px;" alt=""/><br /><sub><b>shivam sharma</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=shivamsh555" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/sooryaprakash31"><img src="https://avatars1.githubusercontent.com/u/41444412?v=4" width="100px;" alt=""/><br /><sub><b>Soorya Prakash</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Documentation">📖</a></td>
   </tr>
 </table>
 
