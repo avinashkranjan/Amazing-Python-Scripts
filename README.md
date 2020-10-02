@@ -58,7 +58,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
     <td align="center"><a href="https://github.com/shivamsh555"><img src="https://avatars0.githubusercontent.com/u/72130276?v=4" width="100px;" alt=""/><br /><sub><b>shivam sharma</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=shivamsh555" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/sooryaprakash31"><img src="https://avatars1.githubusercontent.com/u/41444412?v=4" width="100px;" alt=""/><br /><sub><b>Soorya Prakash</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/sooryaprakash31"><img src="https://avatars1.githubusercontent.com/u/41444412?v=4" width="100px;" alt=""/><br /><sub><b>Soorya Prakash</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Documentation">📖</a></td>
   </tr>
 </table>
 
