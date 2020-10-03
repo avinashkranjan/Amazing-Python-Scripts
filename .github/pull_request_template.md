@@ -8,9 +8,9 @@ Happy Contributing!
 
 Please include a summary of the change and which issue is fixed. List any dependencies that are required for this change.
 
-Fixes #(issue_no)
+## Fixes #(issue_no)
 
-<!-- Replace `issue_no` with the issue number which is fixed in this PR --!>
+Replace `issue_no` with the issue number which is fixed in this PR
 
 ## Have you read the [Contributing Guidelines on Pull Requests](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/CONTRIBUTING.md)?
 
