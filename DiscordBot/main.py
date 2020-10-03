@@ -10,5 +10,26 @@ TOKEN = ""
 bot = commands.Bot(command_prefix="!")
 
 
+@bot.event
+async def on_ready():
+    print("bot started")
+
+
+@commands.has_permissions(ban_members=True)
+@bot.command()
+async def ban(ctx, user: discord.Member):
+    """Ban the given user"""
+    await ctx.guild.ban(user, delete_message_days=0)
+    await ctx.send(f"banned user {user}")
+
+
+@commands.has_permissions(ban_members=True)
+@bot.command()
+async def unban(ctx, user: discord.User):
+    "Unban the given user"
+    await ctx.guild.unban(user)
+    await ctx.send(f"unbanned user {user}")
+
+
 if __name__ == "__main__":
     bot.run(TOKEN)
