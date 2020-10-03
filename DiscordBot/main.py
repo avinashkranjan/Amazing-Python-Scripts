@@ -20,7 +20,7 @@ async def on_ready():
 async def ban(ctx, user: discord.Member):
     """Ban the given user"""
     await ctx.guild.ban(user, delete_message_days=0)
-    await ctx.send(f"banned user {user}")
+    await ctx.send(f"banned {user}")
 
 
 @commands.has_permissions(ban_members=True)
@@ -28,7 +28,15 @@ async def ban(ctx, user: discord.Member):
 async def unban(ctx, user: discord.User):
     "Unban the given user"
     await ctx.guild.unban(user)
-    await ctx.send(f"unbanned user {user}")
+    await ctx.send(f"unbanned {user}")
+
+
+@commands.has_permissions(kick_members=True)
+@bot.command()
+async def kick(ctx, user: discord.User):
+    "Kick the given user"
+    await ctx.guild.kick(user)
+    await ctx.send(f"kicked {user}")
 
 
 if __name__ == "__main__":
