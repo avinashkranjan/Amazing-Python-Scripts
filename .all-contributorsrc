@@ -84,6 +84,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "hardikkhurana",
+      "name": "Hardik Khurana",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/43683221?v=4",
+      "profile": "http://github.com/hardikkhurana",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
