@@ -59,12 +59,19 @@ async def kick(ctx, user: discord.User):
 
 
 @bot.command(aliases=["rnick"])
-async def random_nickname(ctx):
+async def random_nick(ctx):
     """Set your nickname to a random one"""
     new_nick = random.choice(NICKS)
     await ctx.author.edit(nick=new_nick)
     await ctx.send(f"Your new nickname is {new_nick}")
 
+
+@commands.has_permissions(manage_nicknames=True)
+@bot.command(aliases=["change_name"])
+async def change_nick(ctx, user: discord.Member, *, new_nick):
+    """Change somebody elses nickname."""
+    await user.edit(nick=new_nick)
+    await ctx.send(f"Changed the nick of {user.mention} to `{new_nick}`")
 
 
 if __name__ == "__main__":
