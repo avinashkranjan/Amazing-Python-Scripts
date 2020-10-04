@@ -1,3 +1,5 @@
+import random
+
 import discord
 from discord.ext import commands
 
@@ -6,7 +8,12 @@ from discord.ext import commands
 TOKEN = ""
 # channel to send welcome messages to
 WELCOME_CHANNEL = "welcome"
-
+# all the nicknames for the random_nickname command
+NICKS = [
+        "example1",
+        "example2",
+        "example3"
+        ]
 
 # you can change the prefix here
 bot = commands.Bot(command_prefix="!")
@@ -49,6 +56,15 @@ async def kick(ctx, user: discord.User):
     "Kick the given user"
     await ctx.guild.kick(user)
     await ctx.send(f"kicked {user}")
+
+
+@bot.command(aliases=["rnick"])
+async def random_nickname(ctx):
+    """Set your nickname to a random one"""
+    new_nick = random.choice(NICKS)
+    await ctx.author.edit(nick=new_nick)
+    await ctx.send(f"Your new nickname is {new_nick}")
+
 
 
 if __name__ == "__main__":
