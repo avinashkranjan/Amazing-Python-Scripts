@@ -1,6 +1,0 @@
-Use this command to add instaloader
-pip3 install instaloader
-
-1) After that when the script will rum it will ask an input for username of the account 
-2) Enter the username 
-3) and you will find the profile picture in the same folder as of the python script
