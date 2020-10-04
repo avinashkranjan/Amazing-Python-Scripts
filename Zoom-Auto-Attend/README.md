@@ -2,7 +2,7 @@
 A zoom bot that automatically joins zoom calls for you and saves the meeting id and password.
 
 # Requirements Before Use
-1.  Add a webdriver for your browser to the webdriver directory. 
+1.  Add a webdriver for your browser to PATH or the webdriver directory. 
     1.  **Chrome/Chromium** webdrivers can be found here: https://chromedriver.chromium.org/downloads
     1.  **Firefox** gecko webdrivers can be found here: https://github.com/mozilla/geckodriver/releases
     
