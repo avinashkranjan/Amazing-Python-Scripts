@@ -6,15 +6,6 @@
   "commit": false,
   "contributors": [
     {
-      "login": "jeffugo",
-      "name": "jeffugo",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/70389806?v=4",
-      "profile": "https://github.com/jeffugo",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
       "login": "avinashkranjan",
       "name": "Avinash Kr. Ranjan",
       "avatar_url": "https://avatars2.githubusercontent.com/u/55796944?v=4",
@@ -25,6 +16,81 @@
         "question",
         "review",
         "talk",
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "jeffugo",
+      "name": "jeffugo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/70389806?v=4",
+      "profile": "https://github.com/jeffugo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "geekymeeky",
+      "name": "Srijan Kumar Gupta",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/66238394?v=4",
+      "profile": "https://github.com/geekymeeky",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "abirbhattacharya82",
+      "name": "Abir Bhattacharya",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/70687014?v=4",
+      "profile": "https://abirbhattacharya.herokuapp.com/",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "madihamallick",
+      "name": "Madiha Mallick",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/70858557?v=4",
+      "profile": "https://github.com/madihamallick",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mdb571",
+      "name": "Mohammed Bilal",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/55395092?v=4",
+      "profile": "http://mohammedbilal.me",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "shivamsh555",
+      "name": "shivam sharma",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/72130276?v=4",
+      "profile": "https://github.com/shivamsh555",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sooryaprakash31",
+      "name": "Soorya Prakash",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/41444412?v=4",
+      "profile": "https://www.linkedin.com/in/sooryaprakash31",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "hardikkhurana",
+      "name": "Hardik Khurana",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/43683221?v=4",
+      "profile": "http://github.com/hardikkhurana",
+      "contributions": [
         "code",
         "doc"
       ]

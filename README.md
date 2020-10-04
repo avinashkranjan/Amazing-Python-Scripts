@@ -1,29 +1,18 @@
 <h1 align=center> 🚀 Amazing-Python-Scripts </h1>
 
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-
-[![GitHub forks](https://img.shields.io/github/forks/avinashkranjan/Amazing-Python-Scripts.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/avinashkranjan/Amazing-Python-Scripts/network/)
-[![GitHub stars](https://img.shields.io/github/stars/avinashkranjan/Amazing-Python-Scripts.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/avinashkranjan/Amazing-Python-Scripts/stargazers/)
-
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+is%3Aclosed)
-
-[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
-
 
 <h2 align=center> 📑 Introduction </h2>
 
@@ -60,8 +49,17 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-        <td align="center"><a href="http://avinashranjan.tech"><img src="https://avatars2.githubusercontent.com/u/55796944?v=4" width="100px;" alt=""/><br /><sub><b>Avinash Kr. Ranjan</b></sub></a><br /><a href="#ideas-avinashkranjan" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-avinashkranjan" title="Project Management">📆</a> <a href="#question-avinashkranjan" title="Answering Questions">💬</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+reviewed-by%3Aavinashkranjan" title="Reviewed Pull Requests">👀</a> <a href="#talk-avinashkranjan" title="Talks">📢</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://avinashranjan.tech"><img src="https://avatars2.githubusercontent.com/u/55796944?v=4" width="100px;" alt=""/><br /><sub><b>Avinash Kr. Ranjan</b></sub></a><br /><a href="#ideas-avinashkranjan" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-avinashkranjan" title="Project Management">📆</a> <a href="#question-avinashkranjan" title="Answering Questions">💬</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+reviewed-by%3Aavinashkranjan" title="Reviewed Pull Requests">👀</a> <a href="#talk-avinashkranjan" title="Talks">📢</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=avinashkranjan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jeffugo"><img src="https://avatars0.githubusercontent.com/u/70389806?v=4" width="100px;" alt=""/><br /><sub><b>jeffugo</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=jeffugo" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/geekymeeky"><img src="https://avatars3.githubusercontent.com/u/66238394?v=4" width="100px;" alt=""/><br /><sub><b>Srijan Kumar Gupta</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=geekymeeky" title="Code">💻</a></td>
+    <td align="center"><a href="https://abirbhattacharya.herokuapp.com/"><img src="https://avatars0.githubusercontent.com/u/70687014?v=4" width="100px;" alt=""/><br /><sub><b>Abir Bhattacharya</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=abirbhattacharya82" title="Code">💻</a> <a href="#ideas-abirbhattacharya82" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/madihamallick"><img src="https://avatars1.githubusercontent.com/u/70858557?v=4" width="100px;" alt=""/><br /><sub><b>Madiha Mallick</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=madihamallick" title="Code">💻</a></td>
+    <td align="center"><a href="http://mohammedbilal.me"><img src="https://avatars2.githubusercontent.com/u/55395092?v=4" width="100px;" alt=""/><br /><sub><b>Mohammed Bilal</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=mdb571" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/shivamsh555"><img src="https://avatars0.githubusercontent.com/u/72130276?v=4" width="100px;" alt=""/><br /><sub><b>shivam sharma</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=shivamsh555" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/sooryaprakash31"><img src="https://avatars1.githubusercontent.com/u/41444412?v=4" width="100px;" alt=""/><br /><sub><b>Soorya Prakash</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sooryaprakash31" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://github.com/hardikkhurana"><img src="https://avatars0.githubusercontent.com/u/43683221?v=4" width="100px;" alt=""/><br /><sub><b>Hardik Khurana</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=hardikkhurana" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=hardikkhurana" title="Documentation">📖</a></td>
   </tr>
 </table>
 
@@ -80,7 +78,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
 
 | SL No\.  | 🚀 Script Name          | 👨🏻‍💻 Script Function                                                               | 🔗 Link    |
 |----------|-------------------------|---------------------------------------------------------------------------------------|------------|
-| 1\.      | Calculator              | A CLI based calculator\.                                                              | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Calculator/Calcy.py) |
+| 1\.      | Calculator              | A GUI based calculator\.                                                              | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Calculator/Calcy.py) |
 | 2\.      | Chrome Automation       | An Automation Script used to open websites in chrome                                  | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/ChromeAutomation/chrome-automation.py) |
 | 3\.      | Covid\-19 Updater       | An Automation Script which through a toast notification updates you about covid cases | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Covid-19-Updater/covid-19-updater_bot.py) |
 | 4\.      | Email\-Sender           | Send Emails                                                                           | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Email-Sender/email-sender.py) |
