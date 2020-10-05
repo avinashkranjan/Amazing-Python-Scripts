@@ -1,5 +1,7 @@
 import html2md
-
+"""
+User needs to change the two paths here or else it wont work.
+"""
 path = "Path/To/Your/HTML"
 
 def html_to_md():
