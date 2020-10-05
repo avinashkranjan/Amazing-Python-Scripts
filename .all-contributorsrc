@@ -94,6 +94,36 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "vivax3794",
+      "name": "vivax",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/51753506?v=4",
+      "profile": "https://github.com/vivax3794",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "SethWalkeroo",
+      "name": "Seth Walker",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16292617?v=4",
+      "profile": "https://github.com/SethWalkeroo",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "sarthak1905",
+      "name": "sarthak1905",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/61883822?v=4",
+      "profile": "https://www.linkedin.com/in/sarthak-saxena-b3a0001b8/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
