@@ -1,5 +1,5 @@
 # Amazon prices keep fluctuating- Let's scrape them!
- ### Developed by [Sarthak Saxena](https://github.com/sarthak1905) 
+
  C3PO is a web-scraper built on BeautifulSoup that alerts you when the price of an amazon prduct falls within your budget! Currently in development.
  
  ## What is the use?
@@ -24,3 +24,5 @@
  
  ## Development Status 
  This scrapper is complete. A future version may have emails sent via a server.
+ 
+  ### Developed by [Sarthak Saxena](https://github.com/sarthak1905) 
