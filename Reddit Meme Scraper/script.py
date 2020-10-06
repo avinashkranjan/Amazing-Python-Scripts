@@ -1,16 +1,47 @@
 import praw
-import PySimpleGUI as pg
-import urllib
-import pandas
+import PySimpleGUI as sg
+import wget
+import pandas as pd
 import datetime as dt
 import os
 
-reddit = praw.Reddit(client_id = '',
-                     client_secret = '',
-                     user_agent = '')
+destination_folder = sg.popup_get_folder('Choose where to download files:\n\n'
+                                         'NOTE: A folder to store the files will be created within the directory!',
+                                         default_path='', title='Choose destination')
+folder_lst = [destination_folder]
+if folder_lst[0] is None:
+    sg.Popup('Destination not specified!\nProgram terminated!', title='ERROR: No destination!',
+                  custom_text='Close', button_type=0)
+    raise SystemExit()
 
-subreddit = reddit.subreddit('sbname+sbname+sbname')
-posts = subreddit.hot(limit=10)
+
+class RedditCred:
+    def __init__(self):
+        self.text_file = 'reddit_tokens.txt'
+
+# Functions made to read the reddit app id and secret from file
+    def read_id(self):
+        file = self.text_file
+        with open(file, 'r') as f:
+            lines = f.readlines()
+            return lines[0].strip()
+
+    def read_secret(self):
+        file = self.text_file
+        with open(file, 'r') as f:
+            lines = f.readlines()
+            return lines[1].strip()
+
+
+red_cred = RedditCred()
+u_agent = 'Script that downloads memes from various subreddits'
+
+reddit = praw.Reddit(client_id=red_cred.read_id(),
+                     client_secret=red_cred.read_secret(),
+                     user_agent=u_agent)
+
+subreddit = reddit.subreddit('deepfriedmemes+surrealmemes+nukedmemes+bigbangedmemes+wackytictacs+bonehurtingjuice')
+posts = subreddit.hot(limit=25)
 
 # Empty lists to hold data
 
@@ -33,11 +64,33 @@ for post in posts:
 # This iterates through URLs, checks if it has the specified image extension and downloads the image
 
 for index, url in enumerate(image_urls):
-    images_path = os.getcwd()
-    _, ext = os.path.splitext(url)
-    if ext in image_extensions:
+    path = str(folder_lst[0])
+    file_ending = str(url)[2:-1]
+    _, extension = os.path.splitext(file_ending)
+    if extension in image_extensions:
         try:
-            print('Downloading ', image_urls[index], ' at', images_path + image_titles[index] + ext)
-            urllib.urlretrieve(image_urls[index], images_path + image_titles[index] + ext)
+            if os.path.exists(path + '/' + 'Downloaded Images'):
+                pass
+            else:
+                os.mkdir(path + '/' + 'Downloaded Images')
+
+            destination = str(folder_lst[0]) + '/' + 'Downloaded Images' + '/'
+            print(f"Downloading '{str(image_titles[index])[2:-1]}' to '{path}' from '{str(image_urls[index])[2:-1]}'")
+            download = wget.download(str(image_urls[index])[2:-1], out=destination)
         except:
-            print('Something went wrong while downloading ', image_urls[index])
+            print(f"Something went wrong while downloading '{str(image_urls[index])[2:-1]}'\n")
+else:
+    print("\nDownload complete!")
+    sg.Popup(f"Files downloaded into:\n\n'{path}/Downloaded Images'", title='Download complete!')
+
+
+# Optional saving of collected data to .csv file
+
+dataframe = pd.DataFrame({
+    'Title': image_titles,
+    'Score': image_scores,
+    'URL': image_urls,
+    'Timestamp': image_timestamps,
+    'ID': image_ids
+})
+csv = dataframe.to_csv('./images.csv', index=True, header=True)

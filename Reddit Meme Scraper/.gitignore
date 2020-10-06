@@ -1,2 +1,9 @@
 venv/
 .idea/
+*.csv
+Test/
+*.txt
+scriptcopy.py
+*.png
+*.jpg
+*.jpeg
