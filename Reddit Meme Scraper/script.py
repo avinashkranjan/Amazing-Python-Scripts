@@ -64,11 +64,20 @@ for post in posts:
     image_timestamps.append(dt.datetime.fromtimestamp(post.created))
     image_ids.append(post.id)
 
+# This creates a GUI window with a progress bar to keep track of the download
+
+layout = [[sg.Text(f"Downloading files...", key='textkey')],
+         [sg.ProgressBar(25, orientation='h', size=(20, 20), key='progbar')],
+         [sg.Cancel()]]
+
+window = sg.Window('Download in Progress', layout)
+
 # This iterates through URLs, checks if it has the specified image extension and downloads the image
 
 for index, url in enumerate(image_urls):
     path = str(folder_lst[0])
     file_ending = str(url)[2:-1]
+    event, values = window.read(timeout=0)
     _, extension = os.path.splitext(file_ending)
     if extension in image_extensions:
         try:
@@ -76,14 +85,18 @@ for index, url in enumerate(image_urls):
                 pass
             else:
                 os.mkdir(path + '/' + 'Downloaded Images')
+            if event == 'Cancel' or event == sg.WIN_CLOSED:
+                break
 
             destination = str(folder_lst[0]) + '/' + 'Downloaded Images' + '/'
+            window['progbar'].update_bar(index + 1)
             print(f"Downloading '{str(image_titles[index])[2:-1]}' to '{path}' from '{str(image_urls[index])[2:-1]}'")
             download = wget.download(str(image_urls[index])[2:-1], out=destination)
         except:
             print(f"Something went wrong while downloading '{str(image_urls[index])[2:-1]}'\n")
 else:
     print("\nDownload complete!")
+    window.close()
     sg.Popup(f"Files downloaded into:\n\n'{path}/Downloaded Images'", title='Download complete!')
 
 
