@@ -3,6 +3,7 @@ import PySimpleGUI as sg
 import wget
 import pandas as pd
 import datetime as dt
+import json
 import os
 
 destination_folder = sg.popup_get_folder('Choose where to download files:\n\n'
@@ -17,20 +18,22 @@ if folder_lst[0] is None:
 
 class RedditCred:
     def __init__(self):
-        self.text_file = 'reddit_tokens.txt'
+        self.text_file = 'reddit_tokens.json'
 
 # Functions made to read the reddit app id and secret from file
     def read_id(self):
         file = self.text_file
         with open(file, 'r') as f:
-            lines = f.readlines()
-            return lines[0].strip()
+            data = json.load(f)
+            keys = data.keys()
+            return str(*keys)
 
     def read_secret(self):
         file = self.text_file
         with open(file, 'r') as f:
-            lines = f.readlines()
-            return lines[1].strip()
+            data = json.load(f)
+            value = data.values()
+            return str(*value)
 
 
 red_cred = RedditCred()

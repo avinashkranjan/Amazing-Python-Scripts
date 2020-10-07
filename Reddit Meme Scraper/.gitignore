@@ -2,7 +2,7 @@ venv/
 .idea/
 *.csv
 Test/
-reddit_tokens.txt
+reddit_tokens.json
 scriptcopy.py
 *.png
 *.jpg
