@@ -7,9 +7,17 @@ However, you are **welcome to modify that limit** to whatever amount you'd like 
 
 ## Usage
 
-Make sure you have installed the **necessary packages** listed in `requirements.txt`, then simply run `script.py`.
+Make sure you have installed the **necessary packages** listed in **`requirements.txt`**, then simply run **`script.py`**.
 You'll be greeted by a popup window asking where to download the images, after which the download will commence.
 
 ## Screenshots
 
 Some screenshots showing how the script works:
+
+[Popup Asking For Destination Folder](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Popup_Win_01.PNG?raw=true)
+
+[Progress Bar Window](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Popup_Win_03.PNG?raw=true)
+
+[Popup Informing The User Where The Files Are Located](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Popup_Win_02.PNG?raw=true)
+
+[Console Output](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Console.PNG?raw=true)
