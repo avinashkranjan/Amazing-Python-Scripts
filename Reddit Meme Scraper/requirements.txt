@@ -1,0 +1,4 @@
+praw
+pandas
+PySimpleGUI
+wget
