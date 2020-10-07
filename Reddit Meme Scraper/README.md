@@ -14,10 +14,10 @@ You'll be greeted by a popup window asking where to download the images, after w
 
 Some screenshots showing how the script works:
 
-[Popup Asking For Destination Folder](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Popup_Win_01.PNG?raw=true)
+[Popup Asking For Destination Folder](https://raw.githubusercontent.com/Kreateer/Amazing-Python-Scripts/redditmemescraper/Reddit%20Meme%20Scraper/images/RM_Scraper_Popup_Win_01.PNG)
 
-[Progress Bar Window](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Popup_Win_03.PNG?raw=true)
+[Progress Bar Window](https://raw.githubusercontent.com/Kreateer/Amazing-Python-Scripts/redditmemescraper/Reddit%20Meme%20Scraper/images/RM_Scraper_Popup_Win_03.PNG)
 
-[Popup Informing The User Where The Files Are Located](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Popup_Win_02.PNG?raw=true)
+[Popup Informing The User Where The Files Are Located](https://raw.githubusercontent.com/Kreateer/Amazing-Python-Scripts/redditmemescraper/Reddit%20Meme%20Scraper/images/RM_Scraper_Popup_Win_02.PNG)
 
-[Console Output](https://github.com/Kreateer/Amazing-Python-Scripts/blob/redditmemescraper/Reddit%20Meme%20Scraper/RM_Scraper_Console.PNG?raw=true)
+[Console Output](https://raw.githubusercontent.com/Kreateer/Amazing-Python-Scripts/redditmemescraper/Reddit%20Meme%20Scraper/images/RM_Scraper_Console.PNG)
