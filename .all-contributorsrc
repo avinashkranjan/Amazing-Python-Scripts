@@ -134,6 +134,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Kreateer",
+      "name": "Matija Milaković",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/19147258?v=4",
+      "profile": "https://github.com/Kreateer",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
