@@ -144,6 +144,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "DevLokCodes",
+      "name": "DevLokCodes",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/69622048?v=4",
+      "profile": "https://github.com/DevLokCodes",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
