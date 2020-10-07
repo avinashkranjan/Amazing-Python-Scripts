@@ -4,6 +4,5 @@ venv/
 Test/
 reddit_tokens.json
 scriptcopy.py
-*.png
 *.jpg
 *.jpeg
