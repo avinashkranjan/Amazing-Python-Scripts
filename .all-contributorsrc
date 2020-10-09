@@ -184,6 +184,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "xayke",
+      "name": "Viktor Bakulin",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/14005254?v=4",
+      "profile": "https://github.com/xayke",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
