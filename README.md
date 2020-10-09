@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -69,6 +69,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
   <tr>
     <td align="center"><a href="https://github.com/DevLokCodes"><img src="https://avatars2.githubusercontent.com/u/69622048?v=4" width="100px;" alt=""/><br /><sub><b>DevLokCodes</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=DevLokCodes" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=DevLokCodes" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Tanujcbe"><img src="https://avatars0.githubusercontent.com/u/25898488?v=4" width="100px;" alt=""/><br /><sub><b>Tanujcbe</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Tanujcbe" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/abhishekjoshi2612"><img src="https://avatars3.githubusercontent.com/u/66815782?v=4" width="100px;" alt=""/><br /><sub><b>abhishekjoshi2612</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=abhishekjoshi2612" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=abhishekjoshi2612" title="Documentation">📖</a></td>
   </tr>
 </table>
 
