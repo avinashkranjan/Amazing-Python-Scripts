@@ -4,7 +4,7 @@ from tkinter import *
 def clear_all():
     Player1_field.delete(0, END)
     Player2_field.delete(0, END)
-    Status_field.delete(1.0, END)
+    Status_field.delete(0, END)
     # set focus on the Player1_field entry box
     Player1_field.focus_set()
 
