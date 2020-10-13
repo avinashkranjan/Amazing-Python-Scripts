@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -72,6 +72,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
     <td align="center"><a href="https://github.com/abhishekjoshi2612"><img src="https://avatars3.githubusercontent.com/u/66815782?v=4" width="100px;" alt=""/><br /><sub><b>abhishekjoshi2612</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=abhishekjoshi2612" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=abhishekjoshi2612" title="Documentation">📖</a></td>
     <td align="center"><a href="https://jayaganeshkumar.me/"><img src="https://avatars0.githubusercontent.com/u/56192588?v=4" width="100px;" alt=""/><br /><sub><b>jayaganeshkumar</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=jayaganeshkumar" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=jayaganeshkumar" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/xayke"><img src="https://avatars3.githubusercontent.com/u/14005254?v=4" width="100px;" alt=""/><br /><sub><b>Viktor Bakulin</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=xayke" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/quentin-vigne"><img src="https://avatars3.githubusercontent.com/u/59710953?v=4" width="100px;" alt=""/><br /><sub><b>quentin-vigne</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=quentin-vigne" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=quentin-vigne" title="Documentation">📖</a></td>
   </tr>
 </table>
 
