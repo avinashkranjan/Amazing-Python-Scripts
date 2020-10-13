@@ -193,6 +193,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "quentin-vigne",
+      "name": "quentin-vigne",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/59710953?v=4",
+      "profile": "https://github.com/quentin-vigne",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
