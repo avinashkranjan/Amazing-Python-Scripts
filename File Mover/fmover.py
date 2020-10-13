@@ -9,6 +9,10 @@ file_type = []
 mode_list = []
 sort_list = []
 
+image_list = ['.png', '.jpg', '.jpeg', '.gif']
+archive_list = ['.zip', '.rar', '.7z']
+textf_list = ['.txt', '.md', '.pdf', '.doc', '.docx']
+
 
 def get_path(src_or_dst):
     folders = {source_folder: destination_folder}
@@ -34,7 +38,7 @@ class fmGUI:
                  sg.Radio("Disabled", "RADIO1", default=True, key='SBYTD', enable_events=True)]
                  ], title='Sorting Options', title_color='red', relief=sg.RELIEF_SUNKEN)],
             [sg.Text("Choose filetype:")],
-            [sg.Combo(['.zip', '.png', '.txt', '.md'], key='FILETYPE', enable_events=True)],
+            [sg.Combo(["Archive ('.zip', '.rar'...)", "Image ('.png', '.jpg'...)", "Text ('.txt', '.docx'...)"], key='FILETYPE', enable_events=True)],
             [sg.Ok(), sg.Cancel()]]
 
         window = sg.Window('Choose filetype to move', layout, default_element_size=(40, 1))
@@ -85,6 +89,26 @@ class fmGUI:
 
         window.close()
 
+def translate_filetype():
+    for value in file_type:
+        if value.startswith("Archive"):
+            file_type.clear()
+            for arch in archive_list:
+              file_type.append(arch)
+            return str(file_type)
+        elif value.startswith("Image"):
+            file_type.clear()
+            for img in image_list:
+              file_type.append(img)
+            return str(file_type)
+        elif value.startswith("Text"):
+            file_type.clear()
+            for txt in textf_list:
+              file_type.append(txt)
+            return str(file_type)
+        else:
+            pass
+
 
 def append_mode(mode):
     mode_list.append(mode)
@@ -97,19 +121,13 @@ def detect_mode():
 
 
 def append_file_type(value):
-    file_type.append(value)
-    return value
-
-
-def get_file_type():
     if len(file_type) == 1:
-        return str(file_type)[2:-2]
-    else:
-        ft_copy = file_type.copy()
         file_type.clear()
-        ft_copy.pop(0)
-        file_type.append(str(ft_copy)[2:-2])
-        return str(file_type)[2:-2]
+    else:
+        pass
+    file_type.append(value)
+    translate_filetype()
+    return value
 
 
 class FileMover():
@@ -122,40 +140,40 @@ class FileMover():
                 raise SystemExit()
             elif sortby is None:
                 for file in os.listdir(get_path('src')):
-                    file_ending = get_file_type()
+                    #file_ending = get_file_type()
                     is_file_in_curr_dir = os.path.isfile(get_path('dst') + "/" + file)
-                    if file.endswith(file_ending):
-                        result = None
-                        if is_file_in_curr_dir is False:
-                            if operation == "Copy":
-                                result = shutil.copy(get_path('src') + "/" + file, get_path('dst') + "/" + file)
-                            else:
-                                result = shutil.move(get_path('src') + "/" + file, get_path('dst') + "/" + file)
+                    for value in file_type:
+                        if file.endswith(value):
+                            result = None
+                            if is_file_in_curr_dir is False:
+                                if operation == "Copy":
+                                    result = shutil.copy(get_path('src') + "/" + file, get_path('dst') + "/" + file)
+                                else:
+                                    result = shutil.move(get_path('src') + "/" + file, get_path('dst') + "/" + file)
                         #if file not in current_dir:
                         #    file_type.pop()
 
             elif sortby == 'Sort by Type':
                 for file in os.listdir(get_path('src')):
                     sc = SortCriteria()
-                    file_ending = get_file_type()
                     is_file_in_dst_dir = os.path.isfile(get_path('dst') + "/" + file)
                     get_subdir()
-                    #is_file_in_subdir = os.path.isfile(get_subdir()) + "/" + file
-                    if file.endswith(file_ending):
-                        if is_file_in_dst_dir is False and get_subdir() is False:
-                            result = None
-                            if operation == "Copy":
-                                result = shutil.copy(get_path('src') + "/" + file, sc.sortbytype(file_ending) + "/" + file)
+                    for value in file_type:
+                        if file.endswith(value):
+                            if is_file_in_dst_dir is False and get_subdir() is False:
+                                result = None
+                                if operation == "Copy":
+                                    result = shutil.copy(get_path('src') + "/" + file, sc.sortbytype(value) + "/" + file)
+                                else:
+                                    result = shutil.move(get_path('src') + "/" + file, sc.sortbytype(value) + "/" + file)
+                            elif is_file_in_dst_dir is False and get_subdir() is True:
+                                result = None
+                                if operation == 'Copy':
+                                    result = shutil.copy(get_path('src') + "/" + file, sc.sortbytype(value) + "/" + file)
+                                else:
+                                    result = shutil.move(get_path('src') + "/" + file, sc.sortbytype(value) + "/" + file)
                             else:
-                                result = shutil.move(get_path('src') + "/" + file, sc.sortbytype(file_ending) + "/" + file)
-                        elif is_file_in_dst_dir is False and get_subdir() is True:
-                            result = None
-                            if operation == 'Copy':
-                                result = shutil.copy(get_path('src') + "/" + file, sc.sortbytype(file_ending) + "/" + file)
-                            else:
-                                result = shutil.move(get_path('src') + "/" + file, sc.sortbytype(file_ending) + "/" + file)
-                        else:
-                            pass
+                                pass
 
             return sg.PopupOK(f"File transfer successful!\nFile(s) moved to '{get_path('dst')}'")
 
@@ -185,9 +203,6 @@ class SortCriteria():
 
     def sortbytype(self, ftype):
         type_list = [ftype]
-        image_list = ['.png', '.jpg', '.jpeg', '.gif']
-        archive_list = ['.zip', '.rar', '.7z']
-        textf_list = ['.txt', '.md']
 
         # For image files
         for type in type_list:
@@ -217,31 +232,6 @@ class SortCriteria():
             else:
                 sg.PopupError("File type not found!")
                 raise SystemExit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 main_gui = fmGUI()
