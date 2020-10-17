@@ -223,6 +223,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Mr-Mishraji",
+      "name": "Amit Mishra",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/71146681?v=4",
+      "profile": "https://github.com/Mr-Mishraji",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
