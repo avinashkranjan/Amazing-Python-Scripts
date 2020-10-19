@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -79,6 +79,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
     <td align="center"><a href="https://github.com/ragreenburg"><img src="https://avatars0.githubusercontent.com/u/24358100?v=4" width="100px;" alt=""/><br /><sub><b>ragreenburg</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=ragreenburg" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=ragreenburg" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Mr-Mishraji"><img src="https://avatars1.githubusercontent.com/u/71146681?v=4" width="100px;" alt=""/><br /><sub><b>Amit Mishra</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Mr-Mishraji" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jatinsaini137"><img src="https://avatars3.githubusercontent.com/u/49195216?v=4" width="100px;" alt=""/><br /><sub><b>Jatin Saini</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=jatinsaini137" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/kah-gene-leong-73500b196/"><img src="https://avatars0.githubusercontent.com/u/56114448?v=4" width="100px;" alt=""/><br /><sub><b>Kah Gene Leong</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=KGene1901" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=KGene1901" title="Documentation">📖</a></td>
   </tr>
 </table>
 

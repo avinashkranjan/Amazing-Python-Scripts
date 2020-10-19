@@ -241,6 +241,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "KGene1901",
+      "name": "Kah Gene Leong",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/56114448?v=4",
+      "profile": "https://www.linkedin.com/in/kah-gene-leong-73500b196/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
