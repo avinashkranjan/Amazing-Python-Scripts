@@ -1,7 +1,7 @@
-<h1 align="center"> News Voice Assistant </h1>
+<h1> News Voice Assistant </h1>
 Hear your favourite news in your computer!
 
-<h2 align="center"> How-To </h2>
+<h2> How-To </h2>
 <h4> Get API key </h4>
 
 * Go to https://newsapi.org/register and sign up to get an API key
@@ -21,4 +21,4 @@ Hear your favourite news in your computer!
 * Et voilà!
 
 <h2> Troubleshooting </h2>
-* You may see a lot of output related to the playback. If this happens, make sure you have installed ` simpleaudio `
+* You may see a lot of output related to the playback. If this happens, make sure you have installed the package "SimpleAudio"
