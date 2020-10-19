@@ -18,6 +18,7 @@ Hear your favourite news in your computer!
     `python news_assistant.py`
 
 * Set a topic...
+![example](https://raw.githubusercontent.com/Yagueteiro/Amazing-Python-Scripts/master/News%20Voice%20Assistant/example.png)
 * Et voilà!
 
 <h2> Troubleshooting </h2>
