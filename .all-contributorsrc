@@ -251,6 +251,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Yagueteiro",
+      "name": "Yagueteiro",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/48566793?v=4",
+      "profile": "https://github.com/Yagueteiro",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
