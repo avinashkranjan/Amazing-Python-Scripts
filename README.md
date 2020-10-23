@@ -92,7 +92,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
 
 |                                     <a href="https://github.com/avinashkranjan"><img src="https://avatars1.githubusercontent.com/u/55796944?s=460&u=e6985588320978737a51ac23c8a624005fce5e18&v=4" width=150px height=150px /></a>                                      |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                      **[Avinash Kr. Ranjan](https://www.linkedin.com/in/avinashkranjan//)**                                                                                       |
+|                                                                                      **[Avinash Kr. Ranjan](https://www.linkedin.com/in/avinashkranjan/)**                                                                                       |
 
 
 ## Scripts Available 
