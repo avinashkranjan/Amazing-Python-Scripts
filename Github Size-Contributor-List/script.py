@@ -17,12 +17,10 @@ def main(args):
         text.write(response_text + "\n" + "List of contributors is as follows: " + str(list_of_contributors)) 
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser("This script displays the size and list of contributors for a specific repo")
-    parser.add_argument("-o", help="The name of the user", type=str, required=True)
-    parser.add_argument("-n", help="The name of the repo", type=str, required=True)
+parser = argparse.ArgumentParser("This script displays the size and list of contributors for a specific repo")
+parser.add_argument("-o", help="The name of the user", type=str, required=True)
+parser.add_argument("-n", help="The name of the repo", type=str, required=True)
     
-    args = parser.parse_args()
+args = parser.parse_args()
 
-    main(args)
-    
+main(args)
