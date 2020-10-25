@@ -261,6 +261,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "funbeedev",
+      "name": "Fum",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/66768334?v=4",
+      "profile": "https://inspirezone.tech",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
