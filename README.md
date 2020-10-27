@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -82,6 +82,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:
     <td align="center"><a href="https://www.linkedin.com/in/kah-gene-leong-73500b196/"><img src="https://avatars0.githubusercontent.com/u/56114448?v=4" width="100px;" alt=""/><br /><sub><b>Kah Gene Leong</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=KGene1901" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=KGene1901" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Yagueteiro"><img src="https://avatars1.githubusercontent.com/u/48566793?v=4" width="100px;" alt=""/><br /><sub><b>Yagueteiro</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Yagueteiro" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Yagueteiro" title="Documentation">📖</a></td>
     <td align="center"><a href="https://inspirezone.tech"><img src="https://avatars2.githubusercontent.com/u/66768334?v=4" width="100px;" alt=""/><br /><sub><b>Fum</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=funbeedev" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=funbeedev" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/HyperTHD"><img src="https://avatars0.githubusercontent.com/u/16841702?v=4" width="100px;" alt=""/><br /><sub><b>Abdulbasid Guled</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=HyperTHD" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=HyperTHD" title="Documentation">📖</a></td>
   </tr>
 </table>
 

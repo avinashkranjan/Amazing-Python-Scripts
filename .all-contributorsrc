@@ -271,6 +271,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "HyperTHD",
+      "name": "Abdulbasid Guled",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16841702?v=4",
+      "profile": "https://github.com/HyperTHD",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
