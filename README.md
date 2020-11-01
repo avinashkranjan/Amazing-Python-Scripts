@@ -1,4 +1,4 @@
-<h1 align=center> 🚀 Amazing-Python-Scripts </h1>
+![Amazing-Python-Scripts](https://socialify.git.ci/avinashkranjan/Amazing-Python-Scripts/image?description=1&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Light)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -12,7 +12,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+is%3Aclosed) ![GitHub repo size](https://img.shields.io/github/repo-size/avinashkranjan/Amazing-Python-Scripts?color=yellow)
 
 <h2 align=center> 📑 Introduction </h2>
 
