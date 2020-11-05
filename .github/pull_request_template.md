@@ -33,6 +33,6 @@ _Please delete options that are not relevant._
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have created a helpful and easy to understand `README.md`
-- [ ] I have made corresponding changes to the documentation
+- [ ] My code follows [`Template for README.md`](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Template%20for%20README.md)
 - [ ] My changes generate no new warnings
 - [ ] I have added tests/screenshots(if any) that prove my fix is effective or that my feature works.
