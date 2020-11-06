@@ -290,6 +290,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Siddhant-K-code",
+      "name": "Siddhant Khare",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/55068936?v=4",
+      "profile": "https://www.linkedin.com/in/siddhantkhare24/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
