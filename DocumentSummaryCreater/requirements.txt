@@ -1,0 +1,3 @@
+sumy==0.8.1
+spacy==2.3.2
+neologdn==0.4
