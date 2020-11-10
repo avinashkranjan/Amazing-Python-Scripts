@@ -1,5 +1,5 @@
 # Document-Summary-Creater
-A python script to 
+A python script to create a sentence summary
 
 ## Prerequisites
 ##### This script needs Python 3.*
