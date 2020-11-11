@@ -310,6 +310,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "YashIndane",
+      "name": "Yash Indane",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/53041219?v=4",
+      "profile": "http://linkedin.com/in/yash-indane-aa6534179",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
