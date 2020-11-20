@@ -19,6 +19,12 @@
 A curated collection of **Amazing Python scripts** from **_Basics to Advance with automation task scripts_**. This is your Personal space to find or add any new script
 that can make Life Easier for you, as a **_Developer_**, and find a utility of coding to burst out of boredom. Get started with coding exhilarating scripts that you can use to **_download PDFs from an Online Source or just to randomly like everyone's Instagram Post_**.
 
+<h2 align=center> 📃 Scripts Available </h2>
+  <p align="center">
+  <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/SCRIPTS.md">
+    <img src="https://forthebadge.com/images/badges/check-it-out.svg">
+  </a>
+
 <h2 align=center> 👨🏻‍💻 How to get started? </h2> 
 
 You can refer to the following articles on **_basics of Git and Github and also contact the Project Mentors, in case you are stuck_**:
