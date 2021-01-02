@@ -1,3 +1,8 @@
+# Facebook-AutoLogin
+
+## About This Project
+This is a python script that automates the facebook login process
+
 ## How To Run
 
 To run the script use following commands
