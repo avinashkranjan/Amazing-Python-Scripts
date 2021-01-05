@@ -10,6 +10,7 @@ try:
 except ImportError:
     print('Some modules are not installed! ')
 
+# mainly bs4 lib is used for extracting html from web pages
 
 def details(soup):
 
@@ -18,7 +19,7 @@ def details(soup):
 
     total_episodes = soup.find('div', {'class': 'pure-1 md-1-5'})
     print("\nTotal number of episodes :\t",
-          re.sub("[^0-9]", "", total_episodes.find('span').getText()))
+          re.sub("[^0-9]", "", total_episodes.find('span').getText()))      # usimg regex for only selecting numbers
 
     Active_years = soup.find('span', {'class': 'iconYear'})
     print("\n Years Active (From-To)\t:\t",
