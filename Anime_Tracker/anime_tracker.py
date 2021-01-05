@@ -14,8 +14,8 @@ except ImportError:
 
 def details(soup):
 
-    info = soup.find('div', {'class': 'pure-1 md-3-5'})
-    print("\nAbout  the Anime : \n", "\t\t", info.find('p').getText(), "\n")
+    info = soup.find('div', {'class': 'pure-1 md-3-5'})                                                 # selecting div with class pure...
+    print("\nAbout  the Anime : \n", "\t\t", info.find('p').getText(), "\n")                              # now extracting the text for p tag of the div 
 
     total_episodes = soup.find('div', {'class': 'pure-1 md-1-5'})
     print("\nTotal number of episodes :\t",
@@ -51,7 +51,7 @@ def entry():
     source_code = requests.get(search_url)
     content = source_code.content
     global soup
-    soup = BeautifulSoup(content, features="html.parser")
+    soup = BeautifulSoup(content, features="html.parser")    # to parse the selectd HTML
     # print(soup.prettify)
 
     try:
