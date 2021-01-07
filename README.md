@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-34-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-35-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -95,6 +95,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
     <td align="center"><a href="http://linkedin.com/in/yash-indane-aa6534179"><img src="https://avatars2.githubusercontent.com/u/53041219?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Indane</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=YashIndane" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/shahidshakil"><img src="https://avatars1.githubusercontent.com/u/49884272?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shahidshakil</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=shahidshakil" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/AnandD007"><img src="https://avatars0.githubusercontent.com/u/64485733?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anand-Dev</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=AnandD007" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/saiharsha-22"><img src="https://avatars1.githubusercontent.com/u/61947484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>saiharsha-22</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=saiharsha-22" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=saiharsha-22" title="Documentation">📖</a></td>
   </tr>
 </table>
 
