@@ -367,6 +367,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "antrikshmisri",
+      "name": "Antriksh Misri",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/54466356?v=4",
+      "profile": "http://antrikshmisri.netlify.app/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
