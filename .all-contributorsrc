@@ -386,6 +386,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "pritamp17",
+      "name": "Pritam Pawar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/65030567?v=4",
+      "profile": "https://www.linkedin.com/in/pritam-pawar-070788197/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
