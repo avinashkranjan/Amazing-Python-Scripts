@@ -13,14 +13,10 @@ for word in misspelled:
 	print(spell.candidates(word))
 
 /*Output: 
- 
-
-
-
 computer
 {'caput', 'caputs', 'compute', 'computor', 'impute', 'computer'}
 water
 {'water', 'watt', 'warr', 'wart', 'war', 'wath', 'wat'}
 write
-{'wroe', 'arte', 'wre', 'rte', 'wrote', 'write'}
-*/
+{'wroe', 'arte', 'wre', 'rte', 'wrote', 'write'} */
+
