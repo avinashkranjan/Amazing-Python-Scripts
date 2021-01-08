@@ -396,6 +396,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "adviksinghania",
+      "name": "Advik Singhania",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/72959852?v=4",
+      "profile": "https://www.hackster.io/adviksinghania",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
