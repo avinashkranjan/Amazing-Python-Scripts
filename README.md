@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -105,6 +105,9 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
     <td align="center"><a href="https://www.linkedin.com/in/pritam-pawar-070788197/"><img src="https://avatars1.githubusercontent.com/u/65030567?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pritam Pawar</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=pritamp17" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=pritamp17" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.hackster.io/adviksinghania"><img src="https://avatars0.githubusercontent.com/u/72959852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Advik Singhania</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/issues?q=author%3Aadviksinghania" title="Bug reports">🐛</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=adviksinghania" title="Code">💻</a></td>
     <td align="center"><a href="https://ayush7614.github.io/ayushportfolio.github.io/"><img src="https://avatars2.githubusercontent.com/u/67006255?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ayush kumar</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Ayush7614" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/sejalsksagar"><img src="https://avatars2.githubusercontent.com/u/65088302?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sejal Kshirsagar</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sejalsksagar" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=sejalsksagar" title="Documentation">📖</a></td>
   </tr>
 </table>
 

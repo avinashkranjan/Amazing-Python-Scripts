@@ -415,6 +415,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "sejalsksagar",
+      "name": "Sejal Kshirsagar",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/65088302?v=4",
+      "profile": "https://github.com/sejalsksagar",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
