@@ -23,11 +23,15 @@ def whatsapp(to, message):
         user.click()
         text_box = driver.find_element_by_xpath(
             '//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
-        text_box.send_keys(string)
-        sendbutton = driver.find_elements_by_xpath(
-            '//*[@id="main"]/footer/div[1]/div[3]/button')[0]
-        sendbutton.click()
-        sleep(10)
+        try:
+            text_box.send_keys(string)
+            sendbutton = driver.find_elements_by_xpath(
+                '//*[@id="main"]/footer/div[1]/div[3]/button')[0]
+            sendbutton.click()
+            sleep(10)
+            print('Message Sent!!')
+        except:
+            print('Error occured....')
 
 
 if __name__ == "__main__":
