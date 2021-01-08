@@ -7,10 +7,4 @@ print spell('mussage')
 print spell('survice')
 print spell('hte')
 
-/* 
-Output:
-caesar
-message
-service
-the
-*/
+
