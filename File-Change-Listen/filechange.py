@@ -35,7 +35,6 @@ def ischanged():
                 print('loop :-' , i)
                 changedfile.append(onlyfiles[current.index(changeditem[i])])
             print('Changed file is:-' , changedfile)
-            changedfile.pop()
             # print('changed lines are:- ' ,prevDiff,' -> ',changedDiff)
             initial = current
 
