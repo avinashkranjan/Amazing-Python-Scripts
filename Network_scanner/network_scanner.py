@@ -1,5 +1,10 @@
-import scapy.all as scapy
-import optparse
+try:
+    import scapy.all as scapy
+    import optparse
+except ImportError:
+    print("[+] packages not installed ")
+    print("try-> pip install scapy")
+    print("pip install optparse-pretty")
 
 
 def get_arguments():      # function to pass input in console
