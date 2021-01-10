@@ -5,11 +5,11 @@ def init():
 # git add <filename>
 def createReadme():
     if _platform == "linux" or _platform == "linux2":
-        print('touch README.md')
+        call('touch README.md')
     elif _platform == "darwin":
-        print('touch README.md')
+        call('touch README.md')
     elif _platform == "win32":
-        print('type nul>README.md')
+        call('type nul>README.md')
 
 
 # Windows
@@ -17,7 +17,7 @@ def add(filelist):
     for file in filelist:
         # perform git add on file
         print("Adding" , file)
-        print(('git add ' + file))
+        call(('git add ' + file))
 
 # git commit -m "passed message"
 def commit(filelist):
@@ -38,5 +38,5 @@ def commit(filelist):
             call('cls' , shell=True)
 # git push
 def push(url , branch):
-    print('git push -u ' + url + ' ' + branch)
+    call('git push -u ' + url + ' ' + branch)
     #added a comment
