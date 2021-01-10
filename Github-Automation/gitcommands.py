@@ -36,6 +36,13 @@ def commit(filelist):
             filelist.remove(file)
             call('git commit -m "' + msg + '"')
             call('cls' , shell=True)
+            
+def setremote(url):
+    call('git remote add origin ' + url)
+    
+def setBranch(branch):
+    call('git branch -M ' + branch)
+    
 # git push
 def push(url , branch):
     call('git push -u ' + url + ' ' + branch)
