@@ -446,6 +446,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "PrajjwalDatir",
+      "name": "Prajjwal Datir",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/46681482?v=4",
+      "profile": "https://www.linkedin.com/in/prajjwal-datir-coep/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
