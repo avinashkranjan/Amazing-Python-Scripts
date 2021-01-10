@@ -1,7 +1,7 @@
 from subprocess import call
 from sys import platform as _platform
 def init():
-    print('git init')
+    call('git init')
 # git add <filename>
 def createReadme():
     if _platform == "linux" or _platform == "linux2":
@@ -34,7 +34,7 @@ def commit(filelist):
         #added a comment
         else:
             filelist.remove(file)
-            print('git commit -m "' + msg + '"')
+            call('git commit -m "' + msg + '"')
             call('cls' , shell=True)
 # git push
 def push(url , branch):
