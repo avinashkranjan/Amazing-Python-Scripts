@@ -12,11 +12,13 @@ Before executing the file, install the python package `requests` for the script 
 ## Output
 
 Code execution for a single website's social media links scraping
+
 ![single website code execution image](images/single-website.png)
 
 Code execution for a csv file with several links. Post execution of code, a new `output.csv` file is generated with the required links.
+
 ![url csv](images/url-csv.png)
 
-## Author(s)
+## Author
 
 [twilight-warlock](https://github.com/twilight-warlock)
