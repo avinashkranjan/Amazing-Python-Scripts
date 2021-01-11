@@ -53,7 +53,7 @@ class PageSpeed(object):
 
     def save(self, response, path='./'):
         json_data = response._json
-        with open(path+"json_data2.json", 'w+') as f:
+        with open(path+"json_data.json", 'w+') as f:
             json.dump(json_data, f, indent=2)   
 
 
