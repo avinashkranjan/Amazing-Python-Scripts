@@ -1,4 +1,4 @@
-# Package/Script Name
+# PageSpeed
 
 This script generates the PageSpeed API results for a website.
 
