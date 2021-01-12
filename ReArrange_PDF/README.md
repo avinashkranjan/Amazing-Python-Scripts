@@ -61,6 +61,6 @@ Voila! the pages are in the right order now.
 
 [Mohta Rahul Suresh](https://github.com/Rahul555-droid/)
 
-###Note:
+### Note:
 
 I have also added wrong.pdf file for testing purposes in this directory.
