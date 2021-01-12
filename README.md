@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-49-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-50-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -114,6 +114,9 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
     <td align="center"><a href="https://github.com/twilight-warlock"><img src="https://avatars2.githubusercontent.com/u/63138859?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Devansh Shah</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=twilight-warlock" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=twilight-warlock" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Rahul555-droid"><img src="https://avatars2.githubusercontent.com/u/60074958?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mohta Rahul Suresh</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Rahul555-droid" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Rahul555-droid" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/keshavbansal015"><img src="https://avatars1.githubusercontent.com/u/42906619?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Keshav Bansal</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=keshavbansal015" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=keshavbansal015" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/gargnityansh"><img src="https://avatars3.githubusercontent.com/u/45964420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gargnityansh</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=gargnityansh" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=gargnityansh" title="Documentation">📖</a></td>
   </tr>
 </table>
 
