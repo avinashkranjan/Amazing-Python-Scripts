@@ -13,14 +13,14 @@
 
 ## Output
 
-![img1]("https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/script-to-organise-files-according-to-their-extensions/img/1.png")
+![img1](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/script-to-organise-files-according-to-their-extensions/img/1.png)
 
 
-![img2]("https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/script-to-organise-files-according-to-their-extensions/img/2.png")
+![img2](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/script-to-organise-files-according-to-their-extensions/img/2.png)
 
 
 
-![img3]("https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/script-to-organise-files-according-to-their-extensions/img/2.png")
+![img3](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/script-to-organise-files-according-to-their-extensions/img/3.png)
 
 ## Author(s)
 
