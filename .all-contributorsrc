@@ -456,6 +456,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "twilight-warlock",
+      "name": "Devansh Shah",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/63138859?v=4",
+      "profile": "https://github.com/twilight-warlock",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
