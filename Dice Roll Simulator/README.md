@@ -5,6 +5,3 @@
 ### Below is the implementation.
 [Implementation](https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Dice%20Roll%20Simulator/program.py)
 
-
-
-
