@@ -1,5 +1,13 @@
 # Document Word Detection
 
+Detect a word present in the document (pages) using OpenCV
+
+## Package
+
+1. **OpenCV :** `$ pip install opencv-python`
+2. **Numpy  :** `$ pip install numpy`
+3. **Imutils :** `$ pip install imutils` 
+
 <table>
   <tr>
     <td align="center"><b>Input image</b></td>
@@ -11,8 +19,3 @@
   </tr>
  </table>
 
-## Prerequisite
-
-1. **OpenCV :** `$ pip install opencv-python`
-2. **Numpy  :** `$ pip install numpy`
-3. **Imutils :** `$ pip install imutils` 
