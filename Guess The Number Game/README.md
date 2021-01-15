@@ -2,4 +2,4 @@
 
 Hint: To generate a number user random number and using a loop gives the user only three chances to guess and according to the user's guess print a satisfactory output.
 
-  <img align="right" alt="PDF" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Guess%20The%20Number%20Game/Guess%20the%20Number.pdf?raw=true" width="500" height="320" />
+<img align="right" alt="GIF" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Guess%20The%20Number%20Game/Guess%20the%20Number.pdf?raw=true" width="500" height="320" />
