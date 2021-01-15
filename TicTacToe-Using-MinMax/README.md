@@ -19,7 +19,7 @@ No package needs to install
 
 ## Output
 
-<p align="center"><img src="output.gif"></p>
+<p align="center"><img src="Output.gif"></p>
 
 ## Author(s)
 
