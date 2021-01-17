@@ -506,6 +506,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "NChechulin",
+      "name": "Nikolay Chechulin",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/38015818?v=4",
+      "profile": "http://nchechulin.github.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
