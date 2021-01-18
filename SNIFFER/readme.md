@@ -6,5 +6,16 @@ script will only  run on HTTP pages.
 
 ### Requirements:
 1. python3
+
 2. scapy.all
+
 3. scapy_http
+```bash
+$ sudo pip install scapy_http
+```
+
+### Usage:
+
+```bash
+$ python sniffer.py
+```
