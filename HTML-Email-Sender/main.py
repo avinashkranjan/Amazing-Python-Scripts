@@ -7,8 +7,8 @@ import time
 
 # Variable Declarations
 excelFile = "DemoExcelFile.xlsx"  # Email Data
-emailID = "codingpotterofficial@gmail.com" # MailID
-pwd = "BeastDc@7" # PASSWORD
+emailID = "abc@gmail.com" # Add MailID
+pwd = "abc@7" # Add PASSWORD
 subject = "We're Back!, Walk With World KITCOEK" # EMAIL SUBJECT
 htmlfile_loc = "camp1.html" # YOUR HTML FILE
 
