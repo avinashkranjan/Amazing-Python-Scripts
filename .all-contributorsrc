@@ -525,6 +525,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "a-k-r-a-k-r",
+      "name": "akr",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/61563686?v=4",
+      "profile": "https://github.com/a-k-r-a-k-r",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
