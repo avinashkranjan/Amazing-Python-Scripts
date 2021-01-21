@@ -5,7 +5,20 @@ import gitcommands as git
 import time
 import diffcalc
 mypath = os.getcwd()
-onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+nestfiles = []
+# add folders that you don't want to listen to
+ignoredirs = ['.git' , '.idea' , '__pycache__' , 'node_modules']
+# gets the list of all nested files
+def getNestedFiles(rootDir):
+    for path , subdirs , files in os.walk(rootDir):
+        if(all(ele not in path for ele in ignoredirs)):
+            for name in files:
+                nestfiles.append(join(path , name))
+    return nestfiles
+        
+onlyfiles = getNestedFiles(mypath)
+
+# Reads and appends the contents of each file
 def read_file():
     filecontent = []
     for file in onlyfiles:
@@ -49,7 +62,4 @@ def ischanged(url , branch):
             elif(len(changedfile) == 0):
                 git.push(url , branch)
             initial = current
-
-
-
 
