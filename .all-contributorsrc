@@ -515,6 +515,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dhanrajdc7",
+      "name": "Dc7",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/39642060?v=4",
+      "profile": "https://www.youtube.com/codingpotter",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
