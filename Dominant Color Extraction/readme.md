@@ -26,6 +26,10 @@ make a good precursor for object recognition.
     pip install sklearn
     pip install pandas
     pip install matplotlib
+    
+    OR 
+    
+    pip3 install -r requirements.txt
 ```
 3. Run all the cells of Dominant color Extraction.ipynb
 4. Output :Analyse the Dominant color in Image<br>
