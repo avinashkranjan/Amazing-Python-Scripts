@@ -22,10 +22,12 @@
      height:100%;
  }
  #loadmore{
-    /* visibility: collapse; */
     display: none;
 }
 .button{
     text-align: center;
     margin: 5%;
+}
+.card-body p a{
+    text-decoration: none;
 }
