@@ -6,7 +6,7 @@
 Kmeans and
 giving appropriate colors to the pixel/data points
 of the image.
-2.) Analysis different K in K-means : Different Ks can
+2.) Analyse different K in K-means : Different Ks can
 give totally different results, and usually, there is
 one K which is consistent with the data points,
 the actual K.
