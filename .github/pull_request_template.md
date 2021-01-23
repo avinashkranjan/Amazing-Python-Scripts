@@ -12,7 +12,7 @@ Please include a summary of the change and which issue is fixed. List any depend
 
 Replace `issue_no` with the issue number which is fixed in this PR
 
-## Have you read the [Contributing Guidelines on Pull Requests](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/CONTRIBUTING.md)?
+## Have you read the [Contributing Guidelines on Pull Requests](https://github.com/dscciem/Pentesting-and-Hacking-Scripts/blob/master/CONTRIBUTING.md)?
 
 - [ ] Yes
 - [ ] No
@@ -32,7 +32,8 @@ _Please delete options that are not relevant._
 - [ ] My code follows the style guidelines(Clean Code) of this project
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I've edited the [`README.md`](https://github.com/dscciem/Pentesting-and-Hacking-Scripts/blob/master/README.md) and link to my code.
 - [ ] I have created a helpful and easy to understand `README.md`
-- [ ] My documentation follows [`Template for README.md`](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Template%20for%20README.md)
+- [ ] My documentation follows [`Template for README.md`](https://github.com/dscciem/Pentesting-and-Hacking-Scripts/blob/master/Template%20for%20README.md)
 - [ ] My changes generate no new warnings
 - [ ] I have added tests/screenshots(if any) that prove my fix is effective or that my feature works.
