@@ -9,5 +9,4 @@ first install time package in your system open your terminal and write `pip inst
 Make sure you have installed the **necessary packages** listed in **`requirements.txt`**, then simply run **`program.py`**.
 
 # Screenshots
-[Output](https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Hangman%20Game/Output.pdf)
-
+[Output](https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Hangman%20Game/Output.jpeg)
