@@ -34,8 +34,7 @@ make a good precursor for object recognition.
 3. Run all the cells of Dominant color Extraction.ipynb
 4. Output :Analyse the Dominant color in Image<br>
 ## Output:
-![output](https://user-images.githubusercontent.com/42711978/105338192-45c20d00-5c01-11eb-991b-a8822be225c5.jpg)
-
+![output](./images/output.jpg)
 
 ![built with love](https://forthebadge.com/images/badges/built-with-love.svg)
 
