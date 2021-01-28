@@ -8,7 +8,7 @@ Just run script and you are good to go.
 
 ## Output
 
-![GitHub Logo](/simplenotepad.png)
+![simplenotepad](/simplenotepad.png)
 
 ## Author
 
