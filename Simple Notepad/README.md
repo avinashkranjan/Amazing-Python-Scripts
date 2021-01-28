@@ -7,8 +7,7 @@ Using Tkinter GUI of simplenotepad is made.
 Just run script and you are good to go.
 
 ## Output
-
-![simplenotepad]https://github.com/Bug-007/Amazing-Python-Scripts/blob/notepad/Simple%20Notepad/simplenotepad.png?raw=true
+![simplenotepad](https://cdn1.bbcode0.com/uploads/2021/1/28/8c8c0aad51d75a5b6cb9db6a2a775118-full.png)
 
 ## Author
 
