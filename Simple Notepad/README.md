@@ -8,7 +8,7 @@ Just run script and you are good to go.
 
 ## Output
 
-![simplenotepad](/simplenotepad.png)
+![simplenotepad]https://github.com/Bug-007/Amazing-Python-Scripts/blob/notepad/Simple%20Notepad/simplenotepad.png?raw=true
 
 ## Author
 
