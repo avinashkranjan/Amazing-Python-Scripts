@@ -8,7 +8,7 @@ Just run script and you are good to go.
 
 ## Output
 
-![simplenotepad](/Simple Notepad/simplenotepad.png)
+![simplenotepad](/simplenotepad.png)
 
 ## Author
 
