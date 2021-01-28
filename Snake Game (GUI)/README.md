@@ -16,4 +16,4 @@ In order to run this script, You just need the following 3 modules -
 
 ## Author
 
-(CharvyJain)[https://github.com/CharvyJain]
+[Charvy Jain](https://github.com/CharvyJain)
