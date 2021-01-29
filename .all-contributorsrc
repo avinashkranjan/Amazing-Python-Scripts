@@ -546,6 +546,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "fatmab2809",
+      "name": "Fatma Sheikh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61155773?v=4",
+      "profile": "https://fatmasheikh.netlify.app/",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
