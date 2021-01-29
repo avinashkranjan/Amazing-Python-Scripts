@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-56-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-57-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -123,6 +123,9 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
     <td align="center"><a href="https://github.com/a-k-r-a-k-r"><img src="https://avatars2.githubusercontent.com/u/61563686?v=4?s=100" width="100px;" alt=""/><br /><sub><b>akr</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=a-k-r-a-k-r" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=a-k-r-a-k-r" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/aryangulati"><img src="https://avatars.githubusercontent.com/u/42711978?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aryangulati</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=aryangulati" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=aryangulati" title="Documentation">📖</a></td>
     <td align="center"><a href="https://fatmasheikh.netlify.app/"><img src="https://avatars.githubusercontent.com/u/61155773?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fatma Sheikh</b></sub></a><br /><a href="#design-fatmab2809" title="Design">🎨</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Bug-007"><img src="https://avatars.githubusercontent.com/u/28038902?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Summer</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Bug-007" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Bug-007" title="Documentation">📖</a></td>
   </tr>
 </table>
 

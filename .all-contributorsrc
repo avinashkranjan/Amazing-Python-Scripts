@@ -555,6 +555,16 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "Bug-007",
+      "name": "Summer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28038902?v=4",
+      "profile": "https://github.com/Bug-007",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
