@@ -20,3 +20,12 @@ and run the `program.py` file . Sit relax and enjoy Data Visualization Process
 ## Output Scatter Plotting
 
   <img align="center" alt="JPEG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Scatter%20Plotting.jpeg" width="500" height="500" />
+
+## Output Histogram Plotting
+
+  <img align="center" alt="PNG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Histo.png" width="500" height="500" />
+  
+## Output PieChart Plotting
+
+  <img align="center" alt="PNG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Pie.png" width="500" height="500" />
+
