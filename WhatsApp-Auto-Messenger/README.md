@@ -6,7 +6,7 @@ Send and schedule a message in WhatsApp by only seven lines of Python Script.
 ## Modules Used
 - pywhatkit
 
-pip install [requirements.txt]()
+pip install [requirements.txt](https://github.com/AnandD007/Amazing-Python-Scripts/blob/patch-2/WhatsApp-Auto-Messenger/requirements.txt)
 <hr>
 
 ## How it works
