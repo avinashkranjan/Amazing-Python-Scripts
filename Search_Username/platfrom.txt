@@ -1,3 +1,5 @@
+Supported Platforms
+
 "instagram": f'https://www.instagram.com/{username}',
 "facebook": f'https://www.facebook.com/{username}',
 "twitter": f'https://twitter.com/{username}',
