@@ -8,10 +8,8 @@ This script takes a movie name as input and returns the information about that m
 
 Just type the following in your command prompt:
 
-python imdb_scrapper.py -l <movie_name>
+python imdb_scrapper.py -1 <movie_name>
 
 ## Sample of the script in action:
 
-<p align = "center">
-	<img src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/IMDB_scrapper/Image.png" alt="movies">
-</p>
+  <img align="right" alt="GIF" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/IMDB_scrapper/Image.png" width="500" height="320" />
