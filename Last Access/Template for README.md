@@ -9,7 +9,7 @@ And press Enter
 
 ## Output
 
-![Last Access](relative/path/to/img.jpg?raw=true "Title")
+![Last Access](/Last%20Access/Last%20Access.png)
 
 ## Author(s)
 
