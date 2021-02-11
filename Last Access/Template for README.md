@@ -1,26 +1,17 @@
-# Package/Script Name
+# Last Access
 
-Short description of package/script
-
-- If package, list of functionalities/scripts it can perform
-- If standalone script, short description of script explaining what it achieves
+It prints out when was the last the file in folder was accessed.
 
 ## Setup instructions
 
-Explain how to setup and run your package/script in user's system
-
-## Detailed explanation of script, if needed
-
-If code is not explainable using comments, use this sections to explain your script
+Just run the script and Enter the path of folder
+And press Enter
 
 ## Output
 
-Display images/gifs/videos of output/result of your script so that users can visualize it
+![Last Access](relative/path/to/img.jpg?raw=true "Title")
 
 ## Author(s)
 
-Name(s) of author(s)
+Vijay Chaurasia
 
-## Disclaimers, if any
-
-Use this section to mention if any particular disclaimer is required
