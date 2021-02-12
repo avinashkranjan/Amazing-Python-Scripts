@@ -1,1 +1,0 @@
-# The above script is capable of sending bulk custom congratulation emails which are listed in the .xlsx or .csv format. The following table names are mentioned in the code and the code is properly commented.

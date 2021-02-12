@@ -1,0 +1,8 @@
+venv/
+.idea/
+*.csv
+Test/
+reddit_tokens.json
+scriptcopy.py
+*.jpg
+*.jpeg
