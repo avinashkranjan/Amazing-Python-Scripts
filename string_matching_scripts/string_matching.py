@@ -1,6 +1,7 @@
+
 #String matching can be useful for a variety of situations, for example, joining two tables by an athlete’s name when it is spelled or punctuated differently in both tables. 
 #Installing FuzzyWuzzy
-pip install fuzzywuzzy
+
 #Import
 import fuzzywuzzy
 from fuzzywuzzy import fuzz
