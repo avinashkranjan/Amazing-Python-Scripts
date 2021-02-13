@@ -6,14 +6,11 @@ pip install pypng
 import pyqrcode
 import png
 
-# Importing QRCode from pyqrcode.
-from pyqrcode import QRCode
-
 # Link Which represents the QR Code.
 link = "www.google.com"
 
 # Generating QR Code.
-url = pyqrcode.create(s)
+url = pyqrcode.create(link)
 
 # Creating and Saving the file as SVG.
 url.svg("my_qr.svg", scale=10)
