@@ -615,6 +615,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Sloth-Panda",
+      "name": "Achyut Kumar Panda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70213384?v=4",
+      "profile": "https://github.com/Sloth-Panda",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
