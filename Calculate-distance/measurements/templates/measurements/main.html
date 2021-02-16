@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+calculate distance
+{% endblock title %}
+
+{% block content %}
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Distance to {{ destination }} is:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ distance }} km
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ map|safe }}
+
+<form action="" method="POST" autocomplete="off">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-primary">confirm</button>
+</form>
+<br>
+
+<br>
+<br>
+<div>built with 🧡 by <a href="https://github.com/pritamp17">Pritam Pawar </a>  </div>
+
+{% if request.POST and distance is not None %}
+    <script>
+        $(window).on('load', function(){
+            $('#exampleModal').modal('show')
+        })
+    </script>
+{% endif %}
+
+{% endblock content %}
