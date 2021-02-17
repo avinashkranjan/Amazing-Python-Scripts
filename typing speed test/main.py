@@ -25,7 +25,7 @@ class Test:
         self.accuracy = '0%'
 
         pygame.init()
-        self.image_open = pygame.image.load('type-speed-open.png')
+        self.image_open = pygame.image.load('typing_speed.png')
         self.image_open = pygame.transform.scale(
             self.image_open, (self.w, self.h))
 
