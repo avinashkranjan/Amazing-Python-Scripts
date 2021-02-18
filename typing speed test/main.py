@@ -4,20 +4,6 @@ import time
 import random
 import pygame
 from pygame.locals import *
-'''
-PyLint score checker. Returns 0 if the pylint score is greater than the one
-specified below. This script allows us to use pylint normally with all the
-standard paramaters.
-'''
-from re import findall
-from sys import exit as sysexit
-
-MIN_SCORE = 7.0
-
-with open('.pylint.log') as plfh:
-    score_line = plfh.readlines()[-2]
-    score = float(findall(r'([0-9\.]+)/10', score_line)[0])
-    sysexit(0 if score > MIN_SCORE else 1)
 
 class Test:
 

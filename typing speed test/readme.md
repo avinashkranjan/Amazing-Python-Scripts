@@ -24,5 +24,5 @@ Abhishek Jaiswal
 github@abhishek-iiit
 
 ## Disclaimers, if any
-
+[![GitHub Super-Linter](https://github.com/abhishek-iiit/Amazing-Python-Scripts/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 Free to use it anywhere.
