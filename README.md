@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-64-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-65-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -135,6 +135,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
   </tr>
   <tr>
     <td align="center"><a href="https://kota.iiitiansnetwork.com"><img src="https://avatars.githubusercontent.com/u/57138750?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Achalesh Lakhotiya</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=achalesh27022003" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=achalesh27022003" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mudit-mhjn"><img src="https://avatars.githubusercontent.com/u/48855259?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mudit</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=mudit-mhjn" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=mudit-mhjn" title="Documentation">📖</a></td>
   </tr>
 </table>
 
