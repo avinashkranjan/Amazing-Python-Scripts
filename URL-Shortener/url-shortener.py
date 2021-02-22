@@ -1,5 +1,9 @@
 import pyshorteners
 
-url = input("Enter URL: ")
 
-print ("URL after Shortening : ", pyshorteners.Shortener().tinyurl.short(url))
+def shorten_url(url):
+    return pyshorteners.Shortener().tinyurl.short(url)
+
+
+url = input("Enter URL: ")
+print ("URL after Shortening : ", shorten_url(url))
