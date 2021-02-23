@@ -1,21 +1,22 @@
-import repoInfo,filechange
-import gitcommands as git
+import repoInfo
+from filechange import ischanged
+from colors import logcolors
+import pyfiglet
+import logger
+from utils import initCommands
 def init():
     info = repoInfo.checkinfoInDir()
+    url, branch = info
+    logger.checkdata(url , branch)
     if('n' in info):
-        info.remove('n')
-        git.init()
-        git.createReadme()
-        git.add(['.'])
-        git.commit(['README.md'])
-        git.setBranch(info[1])
-        git.setremote(info[0])
-        git.push(info[0] , info[1])
-        print('initial setup done :)')
-        filechange.ischanged(info[0] , info[1])
+        initCommands(info)
     else:
-        print('Retrieving info from git directory')
-        filechange.ischanged(info[0] , info[1])
+        print(f'{logcolors.BOLD}Retrieving info from git directory{logcolors.ENDC}')
+        print(f'{logcolors.CYAN}URL:{logcolors.ENDC} {url} , {logcolors.CYAN}Branch:{logcolors.ENDC} {branch}')
+        ischanged(url,branch)
+
 
 if __name__ == '__main__':
+    f = pyfiglet.figlet_format('G - AUTO', font='5lineoblique')
+    print(f"{logcolors.BOLD}{f}{logcolors.ENDC}")
     init()
