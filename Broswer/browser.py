@@ -14,7 +14,6 @@ class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs): 
         super(MainWindow, self).__init__(*args, **kwargs) 
   
-  
         # creating a QWebEngineView 
         self.browser = QWebEngineView() 
   
@@ -104,12 +103,10 @@ class MainWindow(QMainWindow):
         # showing all the components 
         self.show() 
   
-  
     # method for updating the title of the window 
     def update_title(self): 
         title = self.browser.page().title() 
         self.setWindowTitle("% s - Epic Browser" % title) 
-  
   
     # method called by the home action 
     def navigate_home(self): 
@@ -140,7 +137,6 @@ class MainWindow(QMainWindow):
   
         # setting cursor position of the url bar 
         self.urlbar.setCursorPosition(0) 
-  
   
 # creating a pyQt5 application 
 app = QApplication(sys.argv) 
