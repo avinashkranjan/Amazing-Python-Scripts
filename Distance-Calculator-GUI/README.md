@@ -1,3 +1,6 @@
+# Distance Calculating App
+This app calculates distance between two geo-locations.
+
 # Quick Start:
 - Clone this repository.
 
@@ -18,3 +21,6 @@
 # Screenshot
 
 ![](screenshot/capp.png)
+
+# Author
+[Aayush Garg](https://github.com/Aayush-hub)
