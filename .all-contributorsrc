@@ -655,6 +655,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Aayush-hub",
+      "name": "Aayush Garg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65889104?v=4",
+      "profile": "https://aayush-hub.github.io/Sketch-site/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
