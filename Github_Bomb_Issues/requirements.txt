@@ -1,0 +1,4 @@
+PyGithub
+requests
+os
+getpass
