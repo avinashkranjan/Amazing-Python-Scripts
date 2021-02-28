@@ -18,7 +18,7 @@
 ## Architecture
 
 <div align="center" style="height:400px">
-    <a href="https://towardsdatascience.com/word2vec-skip-gram-model-part-1-intuition-78614e4d6e0b"><img src='./assets/2.png'></a>
+<img src="https://i.ibb.co/tX5dCbx/2.png" alt="2" border="0">
 </div>
 
 
@@ -33,7 +33,7 @@ Install python package required is present [Here](https://gist.github.com/hritik
 ## Output 
 
 <div align="center" style="height:400px">
-    <img src='./assets/3.JPG'>
+<img src="https://i.ibb.co/KrBqhBT/3.jpg" alt="3" border="0">
 </div>
 
 ## Author(s)
