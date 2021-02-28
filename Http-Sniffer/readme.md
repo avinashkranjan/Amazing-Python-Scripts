@@ -19,3 +19,7 @@ $ sudo pip install scapy_http
 ```bash
 $ python sniffer.py
 ```
+
+### Output
+
+[![sniffer.png](https://i.postimg.cc/hjDQ7HbS/sniffer.png)](https://postimg.cc/LqW8cQb7)

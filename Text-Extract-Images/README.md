@@ -39,15 +39,15 @@ Enter your desired output location: <Name of Folder>
 
 Output
 
-![Output](img/Output.PNG)
+![Output](https://i.postimg.cc/0Q6Q1P9H/Output.png)
 
 Image containing Text
 
-![Before Compression](img/Sample.PNG)
+![Before Compression](https://i.postimg.cc/vTfZDhgr/Sample.png)
 
 After Extraction
 
-![After Backup](img/TextFile.PNG)
+![After Backup](https://i.postimg.cc/sXt2VqXf/TextFile.png)
 
 
 ## Author(s)

@@ -35,27 +35,27 @@ A short demo of how the script works
 
 Here We have a pdf file wrong.pdf which has pages in wrong order.
 
-![Image 1](img/1.png)
+![Image 1](https://i.postimg.cc/zB7VCcMt/1.png)
 
 We can see in the below two images that in the PDF file contents of page 5 are on page 1.
 Similar error exists throughout the pdf file
 
-![Image 2](img/2.png)
+![Image 2](https://i.postimg.cc/T1H1SWTn/2.png)
 
 After entering the required input like the path of the file and the current page which is in the wrong order and the right page no. it should be on seperated by commas ','.
 The script runs and a modified file is created.
 
-![Image 3](img/3.png)
+![Image 3](https://i.postimg.cc/BbvtMCfq/3.png)
 
 We can see the contents of the directory and the modified file will be present there.
 
-![Image 4](img/4.png)
+![Image 4](https://i.postimg.cc/8ky7sxLs/4.png)
 
 Voila! the pages are in the right order now.
 
-![Image 5](img/5.png)
+![Image 5](https://i.postimg.cc/zXVVhpk7/5.png)
 
-![image 6](img/6.png)
+![image 6](https://i.postimg.cc/VLp5WMG8/6.png)
 
 ## Author:
 

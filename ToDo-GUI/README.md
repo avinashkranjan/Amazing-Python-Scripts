@@ -23,7 +23,7 @@ python3 todo.py
 depending upon the python version. Make sure that you are running the command from the same virtual environment in which the required modules are installed.
 
 
-![Illustration pic for ToDo App](image/todo.jpg)
+![Illustration pic for ToDo App](https://i.postimg.cc/jSgtxm3V/todo.jpg)
 
 Now you are all set to explore the ToDo App. Happy Hacking!!!!!!
 

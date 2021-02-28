@@ -27,6 +27,10 @@ Do remember to install the dependencies in the requirements.txt file!
 - requests_html
 - BeautifulSoup
 
+## Output
+
+![](https://i.postimg.cc/2ScYTnr4/screenshot.png)
+
 ## Development Status
 
 This scrapper is complete. A future version may have emails sent via a server.

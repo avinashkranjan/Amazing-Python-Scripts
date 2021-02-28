@@ -12,7 +12,7 @@ In order to run this script, You just need the following 3 modules -
 
 ## Output
 
-![Snake Game](game.png)
+[![game.png](https://i.postimg.cc/R0548KNy/game.png)](https://postimg.cc/RWRkJ31L)
 
 ## Author
 

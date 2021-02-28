@@ -10,5 +10,6 @@ To use this on your local machine follow the [Readme](https://github.com/avinash
 
 ## Screenshots
 
-<img src="b1.png">
-<img src="b2.png">
+![](https://i.postimg.cc/G91D7HnC/b1.png)
+
+![](https://i.postimg.cc/vDLVpbG6/b2.png)

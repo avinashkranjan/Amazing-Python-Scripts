@@ -1,5 +1,6 @@
-# Script to organise files according to their extensions
+# Organise Files According to Extension
 
+Script to organise files according to their extensions
 
 - The script on running would ask for a Path directory
 - If no Path is entered then it will take current working directory as the path.
@@ -10,17 +11,13 @@
 - The script doesn't require any installations and is not dependent on any OS.
 - Just running the script and giving the desired input will do.
 
-
 ## Output
 
-![img1](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/script-to-organise-files-according-to-their-extensions/img/1.png)
+![img1](https://i.postimg.cc/6pJ1ZbXx/1.png)
 
+![img2](https://i.postimg.cc/Nj6Ck8s9/2.png)
 
-![img2](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/script-to-organise-files-according-to-their-extensions/img/2.png)
-
-
-
-![img3](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/script-to-organise-files-according-to-their-extensions/img/3.png)
+[img3](https://i.postimg.cc/N0QJJyFN/3.png)
 
 ## Author(s)
 

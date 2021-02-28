@@ -11,21 +11,21 @@ and run the `program.py` file . Sit relax and enjoy Data Visualization Process
 
 ## Output Line Plotting
   
-  <img align="center" alt="JPEG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Line%20Plotting.jpeg" width="500" height="500" />
+<a href="https://postimg.cc/NKPTpDBJ" target="_blank"><img src="https://i.postimg.cc/NKPTpDBJ/Line-Plotting.jpg" alt="Line-Plotting"/></a><br/><br/>
 
 ## Output Bar Plotting
 
-  <img align="center" alt="JPEG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Bar%20Plotting.jpeg" width="500" height="500" />
+<a href="https://postimg.cc/TyzbXPyn" target="_blank"><img src="https://i.postimg.cc/TyzbXPyn/Bar-Plotting.jpg" alt="Bar-Plotting"/></a><br/><br/>
 
 ## Output Scatter Plotting
 
-  <img align="center" alt="JPEG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Scatter%20Plotting.jpeg" width="500" height="500" />
+<a href="https://postimg.cc/0M7w5qmF" target="_blank"><img src="https://i.postimg.cc/0M7w5qmF/Scatter-Plotting.jpg" alt="Scatter-Plotting"/></a><br/><br/>
 
 ## Output Histogram Plotting
 
-  <img align="center" alt="PNG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Histo.png" width="500" height="500" />
+<a href="https://postimg.cc/Pvh8PFQx" target="_blank"><img src="https://i.postimg.cc/Pvh8PFQx/Histo.png" alt="Histo"/></a><br/><br/>
   
 ## Output PieChart Plotting
 
-  <img align="center" alt="PNG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Data%20Visualization/Pie.png" width="500" height="500" />
+<a href="https://postimg.cc/4K7cMc3J" target="_blank"><img src="https://i.postimg.cc/4K7cMc3J/Pie.png" alt="Pie"/></a><br/><br/>
 

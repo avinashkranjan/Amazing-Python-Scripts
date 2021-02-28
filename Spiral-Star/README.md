@@ -4,11 +4,12 @@
 ### First Method Simple Spiral Method
 `pip install turtles` this will install turtle module in you system then right program [program 1](https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Creating%20a%20spiral%20star%20using%20Python/program1.py)then it succesfully runs.
 
-  <img align="center" alt="JPEG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Creating%20a%20spiral%20star%20using%20Python/Spiral%20Star.jpeg?raw=true" width="400" height="420" />
+<a href="https://postimg.cc/TpQ0rnS1" target="_blank"><img src="https://i.postimg.cc/TpQ0rnS1/Spiral-Star.jpg" alt="Spiral-Star"/></a><br/><br/>
   
-  
+
 
 ### Second Method Colourful Spiral Method
-`pip install turtles` this will install turtle module in you system then right program [program 2](https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Creating%20a%20spiral%20star%20using%20Python/program2.py)then it succesfully runs.
+`pip install turtles` this will install turtle module in your system then
+use [program 2](https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Creating%20a%20spiral%20star%20using%20Python/program2.py) to run it successfully.
 
-  <img align="center" alt="JPEG" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Creating%20a%20spiral%20star%20using%20Python/WhatsApp%20Image%202021-01-10%20at%2019.00.31.jpeg?raw=true" width="400" height="420" />
+<a href="https://postimg.cc/rKqg0ff7" target="_blank"><img src="https://i.postimg.cc/rKqg0ff7/Whats-App-Image-2021-01-10-at-19-00-31.jpg" alt="Whats-App-Image-2021-01-10-at-19-00-31"/></a><br/><br/>

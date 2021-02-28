@@ -27,20 +27,19 @@ python Auto_backup.py -t ./MIREX_Backup -s ./MIREX_Dataset -c 100000
 
 Command line Input
 
-![Command Line Input](img/Command.PNG)
+![Command Line Input](https://i.postimg.cc/Ny1LhkRk/Command.png)
 
 Directory Before Backup
 
-![Before Compression](img/Before.PNG)
+![Before Compression](https://i.postimg.cc/06grHBKN/Before.png)
 
 Directory After Backup
 
-![After Backup](img/After.PNG)
+![After Backup](https://i.postimg.cc/hzsjv4yJ/After.png)
 
 Size Comparison after and before - 
 
-![CLI2](img/size.PNG)
-
+![CLI2](https://i.postimg.cc/2bryCLwR/size.png)
 
 ## Author(s)
 

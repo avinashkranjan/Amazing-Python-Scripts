@@ -91,21 +91,3 @@ cv2.imwrite('output.jpg', frame)
 # destroy all window
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
