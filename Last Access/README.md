@@ -9,8 +9,7 @@ And press Enter
 
 ## Output
 
-![Last Access](/Last%20Access/Last%20Access.png)
-
+[![Last-Access.png](https://i.postimg.cc/W4nhj5Rx/Last-Access.png)](https://postimg.cc/8F71mBzb)
 ## Author(s)
 
 Vijay Chaurasia

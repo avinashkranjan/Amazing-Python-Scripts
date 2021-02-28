@@ -18,8 +18,7 @@ Hear your favourite news in your computer!
     `python news_assistant.py`
 
 * Set a topic...
-![example](https://raw.githubusercontent.com/Yagueteiro/Amazing-Python-Scripts/master/News%20Voice%20Assistant/example.png)
-* Et voilà!
+[![example.png](https://i.postimg.cc/vBGz02MB/example.png)](https://postimg.cc/TyHgw9KM)* Et voilà!
 
 <h2> Troubleshooting </h2>
 * You may see a lot of output related to the playback. If this happens, make sure you have installed the package "SimpleAudio"

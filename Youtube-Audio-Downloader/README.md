@@ -25,7 +25,7 @@ ex: `url = "https://www.youtube.com/watch?v=ZSXN_dpG5jk"`
 
 7. Run YouTubeAudioDownloader.py
 
-![YouTubeAudioDownloader.py Output](https://github.com/sejalsksagar/Amazing-Python-Scripts/blob/youtube_audio/YouTube%20Audio%20Downloader/Output.PNG)
+![YouTubeAudioDownloader.py Output](https://i.postimg.cc/htwd362f/Output.png)
 
 You will find file of .webm format downloaded in the same folder.
 
@@ -45,4 +45,4 @@ ex: `clip.write_audiofile("C:/Users/sejal/Desktop/YouTube Audio Downloader/rainb
 
 4. Run WebmToMp3.py
 
-![YouTube Audio Downloader Folder](https://github.com/sejalsksagar/Amazing-Python-Scripts/blob/youtube_audio/YouTube%20Audio%20Downloader/Folders.PNG)
+![YouTube Audio Downloader Folder](https://i.postimg.cc/zG3h78Ss/Folders.png)

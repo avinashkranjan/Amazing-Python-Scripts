@@ -30,16 +30,16 @@ This bot joins your classes for you on time automatically using your google clas
    >```
 3. Download geckodriver from [here](https://github.com/mozilla/geckodriver/releases) and place it in the folder
 4.  Create a profile in Firefox and block the camera and microphone access for google meet.  
-   <img src="docs/images/Firefox_permissions.png" align="center" >
-   
+   ![](https://i.postimg.cc/vm1NwN6Z/Firefox-permissions.png)
+    
 5. Get the path for the created profile using `about:profiles` in the firefox browser
    and include it here.
    ```
    def login(self):    
         profile = webdriver.FirefoxProfile('/path/to/the/created/profile')
    ```
-6. Get the Course Names from your classroom  
-   <img src="docs/images/CourseName.png" align="center">
+6. Get the Course Names from your classroom.
+   ![](https://i.postimg.cc/RZpD8BhY/Course-Name.png)
 
 7. Insert the Course Name at the appropriate position in `schedule.csv`</br>
    Example:

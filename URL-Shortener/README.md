@@ -20,7 +20,7 @@ Long URLs are not easy to handle, they are more manageable. Your URLs should be 
  
 Here's a demo of how to use the url-shortener.py script:
 
-![alt text](working.JPG)
+[![working.jpg](https://i.postimg.cc/1XHbWVLx/working.jpg)](https://postimg.cc/JHsT00rK)
 
 #### By [Avinash Kr. Ranjan](https://github.com/avinashkranjan)
 

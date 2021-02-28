@@ -16,16 +16,15 @@ A short demo of how the script works
 
 Here We have a pdf file MyPDF.pdf from which we have to delete pages.
 
-![Image 1](img/1.png)
+![Image 1](https://i.postimg.cc/RFy2DMjN/1.png)
 
 Running the script and entering path of the file and the page numbers to be deleted seperated by "," .
 
-![Image 2](img/2.png)
+![Image 2](https://i.postimg.cc/4ycjCDgw/2.png)
 
 The pages in the PDF file has been deleted
 
-![Image 3](img/3.png)
-
+![Image 3](https://i.postimg.cc/7PJFT227/3.png)
 
 ## Author
 

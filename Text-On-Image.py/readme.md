@@ -9,10 +9,13 @@ install pillow in your system by running pip install pillow in terminal or comma
 
 ## Output
 
-the ouput is in capture.png image attached in this folder.
-link to collab file:
-https://colab.research.google.com/drive/1N-3d7AthbpvcGmdWSG6Pl_HhkzN2ldo1?authuser=3#scrollTo=FZkDaQnbOIDt
+The output 
+
+[![text-on-image-ouput.png](https://i.postimg.cc/3xnJydRc/text-on-image-ouput.png)](https://postimg.cc/k2RdzMWQ)
+
+Link to 
+[colab file](https://colab.research.google.com/drive/1N-3d7AthbpvcGmdWSG6Pl_HhkzN2ldo1?authuser=3#scrollTo=FZkDaQnbOIDt)
 
 ## Author(s)
 
-vaishnavi jha
+Vaishnavi Jha
