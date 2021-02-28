@@ -10,7 +10,7 @@ This app calculates distance between two geo-locations.
 
       cd .\Distance-Calculator-GUI\
       
-- Install requirememnts
+- Install requirements
 
       pip install requirements.txt
       
@@ -20,7 +20,7 @@ This app calculates distance between two geo-locations.
       
 # Screenshot
 
-![](screenshot/capp.png)
+[![capp.jpg](https://i.postimg.cc/QtqDWCSL/capp.jpg)](https://postimg.cc/dkDpbqzn)
 
 # Author
 [Aayush Garg](https://github.com/Aayush-hub)

@@ -20,4 +20,4 @@ This python script bombs specified number of issues on a Github Repository.
 
 ***A demo:***
 
-  <img align="center" alt="GIF" src="https://github.com/Ayush7614/Amazing-Python-Scripts/blob/master/Github_Bomb_Issues/Output.jpeg"  />
+[![Output.jpg](https://i.postimg.cc/wBWPZ4cw/Output.jpg)](https://postimg.cc/947Jqpk9)
