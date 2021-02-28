@@ -6,4 +6,4 @@ def shorten_url(url):
 
 
 url = input("Enter URL: ")
-print ("URL after Shortening : ", shorten_url(url))
+print("URL after Shortening : ", shorten_url(url))

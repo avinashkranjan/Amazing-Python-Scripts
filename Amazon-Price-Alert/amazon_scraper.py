@@ -43,11 +43,11 @@ class Scraper:
     # Stores the price of the product after filtering the string and
     # converting it to an integer
     def get_price(self):
-        price_raw = self.soup.find(
-            'span', id='priceblock_ourprice').text.strip()
+        price_raw = self.soup.find('span',
+                                   id='priceblock_ourprice').text.strip()
         price_filtered = price_raw[2:len(price_raw) - 3]
-        self.product_price = int(
-            ''.join([x for x in price_filtered if x != ',']))
+        self.product_price = int(''.join(
+            [x for x in price_filtered if x != ',']))
         return
 
     # Prints product title
@@ -116,8 +116,7 @@ class Scraper:
 
 
 def main():
-    url = input(
-        "Paste the link of the Amazon product:")
+    url = input("Paste the link of the Amazon product:")
     budget = int(input("Enter you budget price:"))
     u_email = input("Enter your email:")
     inp_str = ("How frequuently would you like to check the price?"
@@ -130,16 +129,15 @@ def main():
         time_delay = 3 * 60 * 60
     else:
         time_delay = 6 * 60 * 60
-    msg = (
-        "Great! Now just sit back and relax."
-        "Minimize this program and be sure "
-        "that it is running.\nAdditionally, ensure that there"
-        "is stable internet connection "
-        "during the time this program runs.\nIf the price of the "
-        "product falls within your budget, "
-        "you will recieve an email regarding the same and this"
-        "program will auto-close.\nThank you for using "
-        "C3PO scraper! Beep-bop bop-beep.")
+    msg = ("Great! Now just sit back and relax."
+           "Minimize this program and be sure "
+           "that it is running.\nAdditionally, ensure that there"
+           "is stable internet connection "
+           "during the time this program runs.\nIf the price of the "
+           "product falls within your budget, "
+           "you will recieve an email regarding the same and this"
+           "program will auto-close.\nThank you for using "
+           "C3PO scraper! Beep-bop bop-beep.")
     print(msg)
     c3po = Scraper(url, budget, u_email)
     while True:

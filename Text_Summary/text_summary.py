@@ -12,6 +12,7 @@ file_name = input("Enter the Source File: ")
 print("This script requires 'stopwords' from NLTK, see README"
       "Quick Download Command: ```python -m nltk.downloader stopwords```")
 
+
 def read_article(file_name):
     """
     Reads the Text file, and coverts them into sentences.
@@ -80,7 +81,8 @@ def build_similarity_matrix(sentences, stop_words):
         for idx2 in range(len(sentences)):
             if idx1 == idx2:  # ignore if both are same sentences
                 continue
-            similarity_matrix[idx1][idx2] = sentence_similarity(sentences[idx1], sentences[idx2], stop_words)
+            similarity_matrix[idx1][idx2] = sentence_similarity(
+                sentences[idx1], sentences[idx2], stop_words)
 
     return similarity_matrix
 
@@ -106,7 +108,8 @@ def generate_summary(file_name, top_n=5):
     scores = nx.pagerank(sentence_similarity_graph)
 
     # Step 4 - Sort the rank and pick top sentences
-    ranked_sentence = sorted(((scores[i], s) for i, s in enumerate(sentences)), reverse=True)
+    ranked_sentence = sorted(((scores[i], s) for i, s in enumerate(sentences)),
+                             reverse=True)
 
     # Print the index of the statements
     # print("Indexes of top ranked_sentence order are ", ranked_sentence)
@@ -116,11 +119,11 @@ def generate_summary(file_name, top_n=5):
 
     # Step 5 - Output of the text file
     filepath_index = file_name.find('.txt')
-    outputpath = file_name[:filepath_index]+'_textRank.txt'
+    outputpath = file_name[:filepath_index] + '_textRank.txt'
 
     with open(outputpath, 'w') as w:
         for sentence in summarize_text:
-            w.write(str(sentence)+'\n')
+            w.write(str(sentence) + '\n')
 
 
 generate_summary(file_name, 5)

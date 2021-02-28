@@ -68,8 +68,7 @@ def add_encryption():
     for page_num in range(pdf_file_reader.getNumPages()):
         pdf_file_writer.addPage(pdf_file_reader.getPage(page_num))
     # Encrypt using the password
-    pdf_file_writer.encrypt(user_pwd=password, owner_pwd=None,
-                            use_128bit=True)
+    pdf_file_writer.encrypt(user_pwd=password, owner_pwd=None, use_128bit=True)
 
     with open('encrypted.pdf', 'wb') as fh:
         pdf_file_writer.write(fh)
@@ -84,11 +83,11 @@ def rotate_pages():
     orient = input("Specify orientation: clockwise or counterclockwise ")
 
     # Rotate each page one by one accordingly
-    if(orient == "clockwise"):
+    if (orient == "clockwise"):
         for page_num in range(pdf_file_reader.getNumPages()):
             rot_page = pdf_file_reader.getPage(page_num).rotateClockwise(90)
             pdf_file_writer.addPage(rot_page)
-    elif(orient == "counterclockwise"):
+    elif (orient == "counterclockwise"):
         for page_num in range(pdf_file_reader.getNumPages()):
             rot_page = pdf_file_reader.getPage(
                 page_num).rotateCounterClockwise(90)
@@ -107,19 +106,23 @@ def menu():
     dname = os.path.dirname(abspath)
     os.chdir(dname)
 
-    print("\n Welcome to PDF-Tools \n Store the PDF's in the folder of the script \n Choose from the given options\n")
-    print(" 1.Merge PDF\n 2.Split PDF\n 3.Rotate PDF\n 4.Add Watermark\n 5.Encrypt PDF\n")
+    print(
+        "\n Welcome to PDF-Tools \n Store the PDF's in the folder of the script \n Choose from the given options\n"
+    )
+    print(
+        " 1.Merge PDF\n 2.Split PDF\n 3.Rotate PDF\n 4.Add Watermark\n 5.Encrypt PDF\n"
+    )
     # Call the necessary function according to the choice provided by the user
     z = int(input())
-    if(z == 1):
+    if (z == 1):
         merge_pdfs()
-    elif(z == 2):
+    elif (z == 2):
         split_pdfs()
-    elif(z == 3):
+    elif (z == 3):
         rotate_pages()
-    elif(z == 4):
+    elif (z == 4):
         add_watermark()
-    elif(z == 5):
+    elif (z == 5):
         add_encryption()
     else:
         print("Please select valid choice\n")

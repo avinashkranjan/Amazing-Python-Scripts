@@ -6,7 +6,6 @@ import random
 import sys
 
 
-
 def generateNames():
 
     # a list with random names to use for username
@@ -38,20 +37,27 @@ def generatePassword(length):
 def generateEmailIdAndLink():
 
     # providing header for beautiful soup
-    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'}
+    headers = {
+        'user-agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'
+    }
 
     # using request.get on https://10minutemail.net/ site, and pass header as extra data
     response = requests.get('https://10minutemail.net/', headers=headers)
-    ses = str(response.cookies).split(",")[2].split(" ")[2]     # the response has session Id required to retrieve email and link
+    # the response has session Id required to retrieve email and link
+    ses = str(response.cookies).split(",")[2].split(" ")[2]
 
-    response = requests.get('https://10minutemail.net/address.api.php?' + ses)      # we then pass this session id to get JSON data for the email
-    page_soup = soup(response.content, "html.parser")       # saving the json
-
+    # we then pass this session id to get JSON data for the email
+    response = requests.get('https://10minutemail.net/address.api.php?' + ses)
+    page_soup = soup(response.content, "html.parser")  # saving the json
 
     # selecting the needed data from the json, cleaning the data
     cookies = str(page_soup).split('"')
-    permalink = cookies[cookies.index("url") + 2]       # url for the given email
-    permalink = permalink.replace('\/', "/") + "?key=" + cookies[cookies.index("key") + 2]      # to access the mail page an extra key data is required [mentioned in json object]
+    # url for the given email
+    permalink = cookies[cookies.index("url") + 2]
+    # to access the mail page an extra key data is required [mentioned in json object]
+    permalink = permalink.replace(
+        '\/', "/") + "?key=" + cookies[cookies.index("key") + 2]
 
     temp_email_id = cookies[cookies.index("mail_get_mail") + 2]
     return temp_email_id, permalink
@@ -61,7 +67,8 @@ def getResult(name, password, email, link):
 
     # Different ways to get the data from the script (different UI methods)
 
-    getResultInChromeTab(name, password, email, link)     # opens a new tab in chrome with the temporary data
+    # opens a new tab in chrome with the temporary data
+    getResultInChromeTab(name, password, email, link)
     # getResultInNotepad(name, password, email, link)       # open a new notepad with the temporary data
     # getResultInClipboard(name, password, email, link)     # stores data in clipboard (multiple clipboard items) [--coming soon--]
 

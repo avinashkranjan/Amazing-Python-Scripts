@@ -6,8 +6,8 @@ spell = SpellChecker()
 misspelled = spell.unknown(["cmputr", "watr", "study", "wrte"])
 
 for word in misspelled:
-	# Get the one `most likely` answer
-	print(spell.correction(word))
+    # Get the one `most likely` answer
+    print(spell.correction(word))
 
-	# Get a list of `likely` options
-	print(spell.candidates(word))
+    # Get a list of `likely` options
+    print(spell.candidates(word))

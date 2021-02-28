@@ -23,19 +23,24 @@ def add(filelist):
               file.split('\\')[-1])
         call(('git add ' + file))
 
+
 # git commit -m "passed message"
 
 
-def commit(filelist,*args,**kwargs):
-    diffarr = kwargs.get('diffarr' , -1)
+def commit(filelist, *args, **kwargs):
+    diffarr = kwargs.get('diffarr', -1)
     for file in filelist:
         # ask user for commit message
-        msg = str(input(f'{logcolors.BOLD}Enter the commit message for{logcolors.ENDC} ' +
-                        file.split('\\')[-1] + f' {logcolors.BOLD}or enter {logcolors.ERROR}-r{logcolors.ENDC} to reject commit{logcolors.ENDC}'))
+        msg = str(
+            input(
+                f'{logcolors.BOLD}Enter the commit message for{logcolors.ENDC} '
+                + file.split('\\')[-1] +
+                f' {logcolors.BOLD}or enter {logcolors.ERROR}-r{logcolors.ENDC} to reject commit{logcolors.ENDC}'
+            ))
         # if msg == -r reject commit
-        if(msg == '-r'):
+        if (msg == '-r'):
             print(f'{logcolors.ERROR}commit rejected{logcolors.ENDC}')
-            if(diffarr != -1):
+            if (diffarr != -1):
                 diffarr.remove(diffarr[filelist.index(file)])
             filelist.remove(file)
             call('cls', shell=True)
@@ -46,7 +51,8 @@ def commit(filelist,*args,**kwargs):
             call('git commit -m "' + msg + '"')
             call('cls', shell=True)
             print(
-                f'Commited {logcolors.CYAN}{file}{logcolors.ENDC} with msg: {logcolors.BOLD}{msg}{logcolors.ENDC}')
+                f'Commited {logcolors.CYAN}{file}{logcolors.ENDC} with msg: {logcolors.BOLD}{msg}{logcolors.ENDC}'
+            )
 
 
 def setremote(url):
@@ -55,6 +61,7 @@ def setremote(url):
 
 def setBranch(branch):
     call('git branch -M ' + branch)
+
 
 # git push
 

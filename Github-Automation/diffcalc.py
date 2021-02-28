@@ -3,7 +3,6 @@ from difflib import ndiff
 from utils import getMaxSpaces
 
 
-
 def calcDiff(firstFile, secondFile):
     # calculate raw diff
     diff = ndiff(firstFile, secondFile)
@@ -18,6 +17,6 @@ def calcDiff(firstFile, secondFile):
     for ele in deltainit:
         print(f'{logcolors.SUCCESS} {str(ele.strip())} {logcolors.ENDC}',
               ' ' * (maxspacesinit - len(ele.strip())), '+')
-              
+
     print('', f'{logcolors.BOLD}-{logcolors.ENDC}' * maxspacesinit)
     return deltainit

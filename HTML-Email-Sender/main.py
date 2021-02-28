@@ -7,18 +7,18 @@ import time
 
 # Variable Declarations
 excelFile = "DemoExcelFile.xlsx"  # Email Data
-emailID = "abc@gmail.com" # Add MailID
-pwd = "abc@7" # Add PASSWORD
-subject = "We're Back!, Walk With World KITCOEK" # EMAIL SUBJECT
-htmlfile_loc = "camp1.html" # YOUR HTML FILE
+emailID = "abc@gmail.com"  # Add MailID
+pwd = "abc@7"  # Add PASSWORD
+subject = "We're Back!, Walk With World KITCOEK"  # EMAIL SUBJECT
+htmlfile_loc = "camp1.html"  # YOUR HTML FILE
 
 # Reading File
-file = pd.ExcelFile(excelFile,engine='openpyxl')
+file = pd.ExcelFile(excelFile, engine='openpyxl')
 
 # Email Setup
 s = smtplib.SMTP("smtp.gmail.com", 587)
 s.starttls()  # Traffic encryption
-s.login(emailID, pwd) # SMTP Login
+s.login(emailID, pwd)  # SMTP Login
 count = 0
 
 for sheet in file.sheet_names:
@@ -36,7 +36,7 @@ for sheet in file.sheet_names:
         s.send_message(msg)
         count += 1
         print(">>> ", df1['SRNO'][i], ": ", df1['EMAIL'][i], " : Sent")
-        if(count%60 == 0):
+        if (count % 60 == 0):
             print("\n\n <<>> Server CoolDown for 60 seconds <<>>\n\n")
             time.sleep(10)
 

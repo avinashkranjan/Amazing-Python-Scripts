@@ -31,10 +31,10 @@ def result_flame(x, y):
         split_index = (count % len(result) - 1)
         if (split_index >= 0):
             right = result[split_index + 1:]
-            left = result[: split_index]
+            left = result[:split_index]
             result = right + left
         else:
-            result = result[: len(result) - 1]
+            result = result[:len(result) - 1]
     return result
 
 
@@ -73,13 +73,19 @@ if __name__ == "__main__":
     Status_field.grid(row=4, column=1, ipadx="50")
     # Create a Submit Button and attached
     # to tell_status function
-    button1 = Button(root, text="Flame", bg="#FF7F50",
-                     fg="black", command=tell_status)
+    button1 = Button(root,
+                     text="Flame",
+                     bg="#FF7F50",
+                     fg="black",
+                     command=tell_status)
 
     # Create a Clear Button and attached
     # to clear_all function
-    button2 = Button(root, text="Clear", bg="#CD5C5C",
-                     fg="black", command=clear_all)
+    button2 = Button(root,
+                     text="Clear",
+                     bg="#CD5C5C",
+                     fg="black",
+                     command=clear_all)
 
     # grid method is used for placing
     # the widgets at respective positions
