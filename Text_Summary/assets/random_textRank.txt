@@ -1,0 +1,5 @@
+MIR systems perform various functionalities such as music recommendation and music recognition
+MIR applications such as Shazam, SoundHound, and Gracenote have already been developed for the iPhone, iPad, and other such mobile devices.To develop a music retrieval system, first, it is necessary to create an audio fingerprint that can be matched against those stored in a music database
+Music retrieval involves searching for music that is played over loudspeakers in public places such as a coffee shop or shopping mall, or even on the street
+However, in such environments, the music is accompanied by background noise such as people’s voices, vehicular noises, or the sound of machinery.Recently, content-based music information retrieval (MIR) systems for mobile devices have attracted great interest
+This increases the probability of correct music identification
