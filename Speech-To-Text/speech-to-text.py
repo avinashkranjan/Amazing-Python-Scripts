@@ -1,6 +1,7 @@
 import pyttsx3
 import speech_recognition as sr
 
+
 def get():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -10,9 +11,10 @@ def get():
 
     try:
         text = r.recognize_google(audio)
-        print("You Said, "+ text)
-    
+        print("You Said, " + text)
+
     except Exception as e:
         print(e)
+
 
 get()

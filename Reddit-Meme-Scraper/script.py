@@ -6,13 +6,17 @@ import datetime as dt
 import json
 import os
 
-destination_folder = sg.popup_get_folder('Choose where to download files:\n\n'
-                                         'NOTE: A folder to store the files will be created within the directory!',
-                                         default_path='', title='Choose destination')
+destination_folder = sg.popup_get_folder(
+    'Choose where to download files:\n\n'
+    'NOTE: A folder to store the files will be created within the directory!',
+    default_path='',
+    title='Choose destination')
 folder_lst = [destination_folder]
 if folder_lst[0] is None:
-    sg.Popup('Destination not specified!\nProgram terminated!', title='ERROR: No destination!',
-                  custom_text='Close', button_type=0)
+    sg.Popup('Destination not specified!\nProgram terminated!',
+             title='ERROR: No destination!',
+             custom_text='Close',
+             button_type=0)
     raise SystemExit()
 
 
@@ -20,7 +24,9 @@ class RedditCred:
     def __init__(self):
         self.text_file = 'reddit_tokens.json'
 
+
 # Functions made to read the reddit app id and secret from file
+
     def read_id(self):
         file = self.text_file
         with open(file, 'r') as f:
@@ -35,7 +41,6 @@ class RedditCred:
             value = data.values()
             return str(*value)
 
-
 red_cred = RedditCred()
 u_agent = 'Script that downloads memes from various subreddits'
 
@@ -43,7 +48,9 @@ reddit = praw.Reddit(client_id=red_cred.read_id(),
                      client_secret=red_cred.read_secret(),
                      user_agent=u_agent)
 
-subreddit = reddit.subreddit('deepfriedmemes+surrealmemes+nukedmemes+bigbangedmemes+wackytictacs+bonehurtingjuice')
+subreddit = reddit.subreddit(
+    'deepfriedmemes+surrealmemes+nukedmemes+bigbangedmemes+wackytictacs+bonehurtingjuice'
+)
 posts = subreddit.hot(limit=25)
 
 # Empty lists to hold data
@@ -67,8 +74,8 @@ for post in posts:
 # This creates a GUI window with a progress bar to keep track of the download
 
 layout = [[sg.Text(f"Downloading files...", key='textkey')],
-         [sg.ProgressBar(25, orientation='h', size=(20, 20), key='progbar')],
-         [sg.Cancel()]]
+          [sg.ProgressBar(25, orientation='h', size=(20, 20), key='progbar')],
+          [sg.Cancel()]]
 
 window = sg.Window('Download in Progress', layout)
 
@@ -90,15 +97,20 @@ for index, url in enumerate(image_urls):
 
             destination = str(folder_lst[0]) + '/' + 'Downloaded Images' + '/'
             window['progbar'].update_bar(index + 1)
-            print(f"Downloading '{str(image_titles[index])[2:-1]}' to '{path}' from '{str(image_urls[index])[2:-1]}'")
-            download = wget.download(str(image_urls[index])[2:-1], out=destination)
+            print(
+                f"Downloading '{str(image_titles[index])[2:-1]}' to '{path}' from '{str(image_urls[index])[2:-1]}'"
+            )
+            download = wget.download(str(image_urls[index])[2:-1],
+                                     out=destination)
         except:
-            print(f"Something went wrong while downloading '{str(image_urls[index])[2:-1]}'\n")
+            print(
+                f"Something went wrong while downloading '{str(image_urls[index])[2:-1]}'\n"
+            )
 else:
     print("\nDownload complete!")
     window.close()
-    sg.Popup(f"Files downloaded into:\n\n'{path}/Downloaded Images'", title='Download complete!')
-
+    sg.Popup(f"Files downloaded into:\n\n'{path}/Downloaded Images'",
+             title='Download complete!')
 
 # Optional saving of collected data to .csv file
 

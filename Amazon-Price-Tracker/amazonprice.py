@@ -11,15 +11,11 @@ import smtplib
 
 # get your browser information by searching "my user agent"
 user_agent = input("Enter your User-Agent string here\n")
-headers = {
-    "User-Agent": f'{user_agent}'
-
-}
+headers = {"User-Agent": f'{user_agent}'}
 Url = input("Drop the Url of product you wish to buy...!\n")
 
 page = requests.get(Url, headers=headers)
 soup = BeautifulSoup(page.content, "html.parser")
-
 
 # print(soup)
 
@@ -41,26 +37,39 @@ def mail_sending(mail_id, title, password):
 def check_price():
     title = soup.find(id="productTitle").get_text().strip()
     try:
-        price = soup.find(id="priceblock_ourprice_row").get_text().strip()[:20].replace('₹', '').replace(' ',
-                                                                                                         '').replace(
-            'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+        price = soup.find(
+            id="priceblock_ourprice_row").get_text().strip()[:20].replace(
+                '₹', '').replace(' ', '').replace('Price:', '').replace(
+                    '\n', '').replace('\xa0',
+                                      '').replace(',', '').replace('Fu', '')
 
     except:
         try:
-            price = soup.find(id="priceblock_dealprice").get_text().strip()[:20].replace('₹', '').replace(' ',
-                                                                                                          '').replace(
-                'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+            price = soup.find(
+                id="priceblock_dealprice").get_text().strip()[:20].replace(
+                    '₹', '').replace(' ', '').replace('Price:', '').replace(
+                        '\n', '').replace('\xa0',
+                                          '').replace(',',
+                                                      '').replace('Fu', '')
 
         except:
             try:
-                price = soup.find(id="priceblock_ourprice").get_text().strip()[:20].replace('₹', '').replace(' ',
-                                                                                                             '').replace(
-                    'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+                price = soup.find(
+                    id="priceblock_ourprice").get_text().strip()[:20].replace(
+                        '₹',
+                        '').replace(' ', '').replace('Price:', '').replace(
+                            '\n',
+                            '').replace('\xa0',
+                                        '').replace(',', '').replace('Fu', '')
 
             except:
-                price = soup.find(id="priceblock_ourprice_lbl").get_text().strip()[:20].replace('₹', '').replace(' ',
-                                                                                                                 '').replace(
-                    'Price:', '').replace('\n', '').replace('\xa0', '').replace(',', '').replace('Fu', '')
+                price = soup.find(id="priceblock_ourprice_lbl").get_text(
+                ).strip()[:20].replace('₹', '').replace(' ', '').replace(
+                    'Price:',
+                    '').replace('\n',
+                                '').replace('\xa0',
+                                            '').replace(',',
+                                                        '').replace('Fu', '')
 
     fixed_price = float(price)
     print(title)
@@ -69,7 +78,9 @@ def check_price():
     your_price = y_price.replace(',', '')
     mail_id = input("Please enter your email id: ")
     password = input("Enter your app password here: ")
-    print("Thank You! You'll receive an email as soon as the price of product drops...!")
+    print(
+        "Thank You! You'll receive an email as soon as the price of product drops...!"
+    )
     # print(price)
     if fixed_price <= float(your_price):
         mail_sending(mail_id, title, password)

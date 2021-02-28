@@ -14,12 +14,14 @@ def takeInfo():
 
 def checkinfoInDir():
     if (os.path.exists(infofile)):
-        url = subprocess.Popen('git config --get remote.origin.url',
-                               stdout=subprocess.PIPE).stdout.read().decode('utf-8')
+        url = subprocess.Popen(
+            'git config --get remote.origin.url',
+            stdout=subprocess.PIPE).stdout.read().decode('utf-8')
 
-        branch = subprocess.Popen('git rev-parse --symbolic-full-name HEAD',
-                                  stdout=subprocess.PIPE).stdout.read().decode('utf-8')
-                                  
+        branch = subprocess.Popen(
+            'git rev-parse --symbolic-full-name HEAD',
+            stdout=subprocess.PIPE).stdout.read().decode('utf-8')
+
         url, branch = url.split('\n')[0], branch.split('\n')[0].split('/')[2]
         info = [url, branch]
     else:

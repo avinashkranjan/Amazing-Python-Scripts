@@ -1,6 +1,7 @@
 import string
 import random
 
+
 def gen():
     s1 = string.ascii_uppercase
     s2 = string.ascii_lowercase
@@ -18,5 +19,6 @@ def gen():
     random.shuffle(s)
     pas = ("".join(s[0:passlen]))
     print(pas)
-    
+
+
 gen()

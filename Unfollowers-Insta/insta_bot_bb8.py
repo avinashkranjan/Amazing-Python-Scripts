@@ -90,7 +90,8 @@ class InstaBot:
         while last_ht != ht:
             last_ht = ht
             time.sleep(1)
-            ht = self.driver.execute_script("""
+            ht = self.driver.execute_script(
+                """
                 arguments[0].scrollTo(0, arguments[0].scrollHeight);
                 return arguments[0].scrollHeight;
                 """, scroll_box)
@@ -111,7 +112,8 @@ class InstaBot:
     def get_unfollowers(self):
 
         self.unfollowers = [
-            x for x in self.following if x not in self.followers]
+            x for x in self.following if x not in self.followers
+        ]
         for name in self.unfollowers:
             print(name)
         return

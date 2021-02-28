@@ -277,10 +277,12 @@ class Ui_guiVersion(object):
 
     def retranslateUi(self, guiVersion):
         _translate = QtCore.QCoreApplication.translate
-        guiVersion.setWindowTitle(_translate(
-            "guiVersion", "Cryptocurrency Converter"))
-        self.label.setText(_translate(
-            "guiVersion", "<html><head/><body><p><span >To</span></p></body></html>"))
+        guiVersion.setWindowTitle(
+            _translate("guiVersion", "Cryptocurrency Converter"))
+        self.label.setText(
+            _translate(
+                "guiVersion",
+                "<html><head/><body><p><span >To</span></p></body></html>"))
         self.pushButton_n1.setText(_translate("guiVersion", "1"))
         self.pushButton_convert.setText(_translate("guiVersion", "Convert"))
         self.pushButton_del.setText(_translate("guiVersion", "del"))
@@ -293,8 +295,8 @@ class Ui_guiVersion(object):
         self.pushButton_n5.setText(_translate("guiVersion", "5"))
         self.pushButton_n4.setText(_translate("guiVersion", "4"))
         self.pushButton_n0.setText(_translate("guiVersion", "0"))
-        self.label_1.setToolTip(_translate(
-            "guiVersion", "Enter a value to Convert it."))
+        self.label_1.setToolTip(
+            _translate("guiVersion", "Enter a value to Convert it."))
         self.label_1.setText(_translate("guiVersion", "0"))
         self.label_2.setToolTip(_translate("guiVersion", "Converted value"))
         self.label_2.setText(_translate("guiVersion", "0"))

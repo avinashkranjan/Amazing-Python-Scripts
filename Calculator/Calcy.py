@@ -13,8 +13,9 @@ print("Type 'quit' to exit\n")
 previous = 0
 run = True
 
+
 def performMath():
-    global run 
+    global run
     global previous
     equation = ""
     if previous == 0:
@@ -25,14 +26,15 @@ def performMath():
     if equation == 'quit':
         print("GoodBye, Human..!")
         run = False
-        
+
     else:
         equation = re.sub('[a-zA-Z,:()"{}"]', '', equation)
-        
+
         if previous == 0:
             previous = eval(equation)
         else:
-            previous = eval(str(equation) + equation) 
-      
+            previous = eval(str(equation) + equation)
+
+
 while run:
     performMath()

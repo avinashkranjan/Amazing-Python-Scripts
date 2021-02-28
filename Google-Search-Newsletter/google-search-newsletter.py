@@ -2,10 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options as Options_firefox
 from selenium.webdriver.chrome.options import Options as Options_chrome
-from email.mime.text import  MIMEText
+from email.mime.text import MIMEText
 from configparser import ConfigParser
 import smtplib
-
 
 newsletter_file = 'newsletter.txt'
 config_file = 'config.ini'
@@ -32,7 +31,9 @@ def scrape_news():
         firefox_pref = webdriver.FirefoxProfile()
         firefox_pref.set_preference("network.cookie.cookieBehavior", 2)
 
-        browser = webdriver.Firefox(executable_path=PATH_TO_DRIVER, options=firefox_options, firefox_profile=firefox_pref)
+        browser = webdriver.Firefox(executable_path=PATH_TO_DRIVER,
+                                    options=firefox_options,
+                                    firefox_profile=firefox_pref)
 
     elif driver == 'chromedriver':
         chrome_options = Options_chrome()
@@ -41,16 +42,18 @@ def scrape_news():
         chrome_options.add_argument('--headless')
 
         # disable cookies to prevent popups
-        chrome_options.add_experimental_option('prefs', {'profile.default_content_setting_values.cookies': 2})
+        chrome_options.add_experimental_option(
+            'prefs', {'profile.default_content_setting_values.cookies': 2})
 
-        browser = webdriver.Chrome(executable_path=PATH_TO_DRIVER, options=chrome_options)
+        browser = webdriver.Chrome(executable_path=PATH_TO_DRIVER,
+                                   options=chrome_options)
 
     else:
         print('ERROR: driver not supported')
 
     print('Getting search results...')
 
-    # open URL        
+    # open URL
     browser.get('https://google.com')
 
     # select google search bar
@@ -60,19 +63,20 @@ def scrape_news():
     google_search.send_keys(search_topic)
     google_search.send_keys(Keys.ENTER)
 
-    browser.implicitly_wait(5) 
+    browser.implicitly_wait(5)
 
     browser.find_element_by_css_selector('a[data-sc="N"]').click()
 
-    browser.implicitly_wait(5) 
+    browser.implicitly_wait(5)
 
     # get all elements containing news title
-    all_headings = browser.find_elements_by_xpath('//div[contains(@role, "heading") and contains(@aria-level, "2")]')
-    
+    all_headings = browser.find_elements_by_xpath(
+        '//div[contains(@role, "heading") and contains(@aria-level, "2")]')
+
     # get all elements containing links for each news title
     all_links = browser.find_elements_by_xpath('//g-card/div/div/div[2]/a')
-    
-    #open file for writing
+
+    # open file for writing
     file = open(newsletter_file, 'w')
 
     # loop over each title and link, print each to the file
@@ -97,7 +101,8 @@ def send_email():
     email_smtp = config.get('your_settings', 'email_smtp')
     sender_email_address = config.get('your_settings', 'sender_email_address')
     email_password = config.get('your_settings', 'email_password')
-    receiver_email_address = config.get('your_settings', 'receiver_email_address')
+    receiver_email_address = config.get('your_settings',
+                                        'receiver_email_address')
 
     # newsletter file will be sent by email
     with open(newsletter_file, 'r') as file:
