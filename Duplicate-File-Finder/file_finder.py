@@ -91,7 +91,9 @@ if __name__ == '__main__':
         print_results(duplicate)
         # Delete Duplicate Images
         # Comment if not required
-        print("Do you want to delete the Duplicate Images (If Any)? Press [y] for Yes.")
+        print(
+            "Do you want to delete the Duplicate Images (If Any)? Press [y] for Yes."
+        )
         while True:
             if keyboard.read_key() == "y":
                 print("Deleting Duplicate Files\n")

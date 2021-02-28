@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
     headlines = fetch_news()
     while more_news:
-        article_number +=1
+        article_number += 1
         try:
             print()
             article = headlines["articles"][article_number]
@@ -43,7 +43,9 @@ if __name__ == '__main__':
             speak(article["description"])
             print("Continue reading on this URL:", article["source"]["name"])
         except IndexError:
-            speak("It looks as there are no more news on this topic. Why not search something else? ")
+            speak(
+                "It looks as there are no more news on this topic. Why not search something else? "
+            )
         except KeyboardInterrupt:
             break
         if article_number == 10:

@@ -17,12 +17,22 @@ def parse_input():
 
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--target', nargs=1, required=True,
+    parser.add_argument('-t',
+                        '--target',
+                        nargs=1,
+                        required=True,
                         help='Target Backup folder')
-    parser.add_argument('-s', '--source', nargs='+', required=True,
+    parser.add_argument('-s',
+                        '--source',
+                        nargs='+',
+                        required=True,
                         help='Source Files to be added')
-    parser.add_argument('-c', '--compress', nargs=1, type=int,
-                        help='Gzip threshold in bytes, Deafault 1024KB', default=[1024000])
+    parser.add_argument('-c',
+                        '--compress',
+                        nargs=1,
+                        type=int,
+                        help='Gzip threshold in bytes, Deafault 1024KB',
+                        default=[1024000])
     # Default Threshold is 1024KB
 
     # Help is triggered when there is no Input Provided
@@ -127,8 +137,8 @@ def sync_root(root, arg):
     for path, _, files in os.walk(root):
         for source in files:
             source = path + '/' + source
-            threads.append(threaded_sync_file(source,
-                                              target + source, compress))
+            threads.append(
+                threaded_sync_file(source, target + source, compress))
     #            sync_file(source, target + source, compress)
     for thread in threads:
         thread.join()
@@ -142,7 +152,6 @@ if __name__ == '__main__':
         sync_root(root, arg)
     print('______________________________________________________________')
     print('------------------------- Done Done! -------------------------')
-
 """
 Example Usage-
 > python Auto_Backup.py --target ./Backup_Folder --source ./Source_Folder

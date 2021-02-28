@@ -1,24 +1,24 @@
 from socket import *
-import datetime 
+import datetime
 import os
 import time
 import random
 import threading
 from _thread import *
-import shutil		            		 # to implement delete method
-import csv          					 # used in put and post method to insert data
-import base64		            		 # used for decoding autherization header in delete method
+import shutil  # to implement delete method
+import csv  # used in put and post method to insert data
+import base64  # used for decoding autherization header in delete method
 import sys
 import logging
-from config import *                    # import variables
-import signal                           # signal to handle Ctrl+C and other SIGNALS
-from supplement.breakdown import *      # to breakdown entity
+from config import *  # import variables
+import signal  # signal to handle Ctrl+C and other SIGNALS
+from supplement.breakdown import *  # to breakdown entity
 from supplement.last_modified import *  # last_modified for condi get
 
 
 class http_methods:
-
-    def response_get_head(self,connectionsocket, entity, switcher, query, method, glob):
+    def response_get_head(self, connectionsocket, entity, switcher, query,
+                          method, glob):
         serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY, client_thread = glob
         isItFile = os.path.isfile(entity)
         isItDir = os.path.isdir(entity)
@@ -30,17 +30,20 @@ class http_methods:
                 if (os.access(entity, os.W_OK)):
                     pass
                 else:
-                    glob = status(connectionsocket, 403,[ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
             else:
-                glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                glob = status(connectionsocket, 403,
+                              [ip, client_thread, scode])
                 ip, client_thread, scode = glob
             try:
                 size = os.path.getsize(entity)
                 f = open(entity, "rb")
                 data = f.read(size)
             except:
-                glob = status(connectionsocket, 500, [ip, client_thread, scode])
+                glob = status(connectionsocket, 500,
+                              [ip, client_thread, scode])
                 ip, client_thread, scode = glob
         elif isItDir:
             dir_list = os.listdir(entity)
@@ -51,10 +54,12 @@ class http_methods:
                 if (os.access(entity, os.W_OK)):
                     pass
                 else:
-                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
             else:
-                glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                glob = status(connectionsocket, 403,
+                              [ip, client_thread, scode])
                 ip, client_thread, scode = glob
             for i in dir_list:
                 if i.startswith('.'):
@@ -74,10 +79,12 @@ class http_methods:
                     if (os.access(entity, os.R_OK)):
                         pass
                     else:
-                        glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                        glob = status(connectionsocket, 403,
+                                      [ip, client_thread, scode])
                         ip, client_thread, scode = glob
                 else:
-                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
                 for i in dir_list:
                     if i.startswith('.'):
@@ -91,7 +98,8 @@ class http_methods:
                     if (os.access(entity, os.W_OK)):
                         pass
                 else:
-                    glob = status(connectionsocket, 403,[ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
                 try:
                     size = os.path.getsize(entity)
@@ -99,13 +107,15 @@ class http_methods:
                     data = f.read(size)
                 except:
                     # error while accesing the file
-                    glob = status(connectionsocket, 500, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 500,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
-            else:	
-                glob = status(connectionsocket, 404, [ip, client_thread, scode])
+            else:
+                glob = status(connectionsocket, 404,
+                              [ip, client_thread, scode])
                 ip, client_thread, scode = glob
         show_response += '\r\n' + COOKIE + str(IDENTITY) + MAXAGE
-        IDENTITY += random.randint(1,10)
+        IDENTITY += random.randint(1, 10)
         for state in switcher:
             if state == 'User-Agent':
                 if isItDir:
@@ -132,10 +142,11 @@ class http_methods:
                         else:
                             conversation = 'text/plain'
                             temp = 1
-                        conversation = '\r\nContent-Type: '+ conversation
+                        conversation = '\r\nContent-Type: ' + conversation
                         show_response += conversation
                     except:
-                        glob = status(connectionsocket, 415, [ip, client_thread, scode])
+                        glob = status(connectionsocket, 415,
+                                      [ip, client_thread, scode])
                         ip, client_thread, scode = glob
                         # scode = 415
                 elif isItDir:
@@ -174,12 +185,14 @@ class http_methods:
             show_response += '\r\n<body><h1>Directory listing..</h1><ul>'
             for line in dir_list:
                 if entity == '/':
-                    link = 'http://' + ip + ':' + str(serverport) + entity + line
-                    l = '\r\n<li><a href ="'+link+'">'+line+'</a></li>'
+                    link = 'http://' + ip + ':' + \
+                        str(serverport) + entity + line
+                    l = '\r\n<li><a href ="' + link + '">' + line + '</a></li>'
                     show_response += l
                 else:
-                    link = 'http://' + ip + ':' + str(serverport) + entity + '/'+ line
-                    l = '\r\n<li><a href ="'+link+'">'+line+'</a></li>'
+                    link = 'http://' + ip + ':' + \
+                        str(serverport) + entity + '/' + line
+                    l = '\r\n<li><a href ="' + link + '">' + line + '</a></li>'
                     show_response += l
             show_response += '\r\n</ul></body></html>'
             encoded = show_response.encode()
@@ -199,7 +212,7 @@ class http_methods:
                 scode = 200
                 show_response += 'HTTP/1.1 200 OK'
                 fi = open(entity, "a")
-                row = list(row.split(",")) 
+                row = list(row.split(","))
                 csvwriter = csv.writer(fi)
                 csvwriter.writerow(row)
             else:
@@ -212,14 +225,14 @@ class http_methods:
                 csvwriter.writerow(row)
             fi.close()
             show_response += '\r\nServer: ' + ip
-            show_response += '\r\n'+ date()
+            show_response += '\r\n' + date()
             f = open(WORKFILE, "rb")
             show_response += '\r\nContent-Language: en-US,en'
             size = os.path.getsize(WORKFILE)
             conversation = '\r\nContent-Length: ' + str(size)
             show_response += '\r\nContent-Type: text/html'
             show_response += conversation
-            show_response += '\r\n' +last_modified(entity)
+            show_response += '\r\n' + last_modified(entity)
             show_response += '\r\n\r\n'
             encoded = show_response.encode()
             connectionsocket.send(encoded)
@@ -233,15 +246,19 @@ class http_methods:
             elif conditional_get == False and method == 'HEAD':
                 encoded = show_response.encode()
                 connectionsocket.send(encoded)
-            elif conditional_get == True and (method == 'GET' or method == 'HEAD'):
+            elif conditional_get == True and (method == 'GET'
+                                              or method == 'HEAD'):
                 status_304(connectionsocket, entity, [ip, scode])
         else:
             glob = status(connectionsocket, 400, [ip, client_thread, scode])
             ip, client_thread, scode = glob
-        return [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY]
-        
-    def response_post(self,ent_body, connectionsocket, switcher, glob):
-        ip, serverport,scode = glob
+        return [
+            serversocket, file_extension, conditional_get, conn, ip,
+            serverport, scode, IDENTITY
+        ]
+
+    def response_post(self, ent_body, connectionsocket, switcher, glob):
+        ip, serverport, scode = glob
         show_response = ''
         entity = CSVFILE
         query = parse_qs(ent_body)
@@ -286,7 +303,8 @@ class http_methods:
         connectionsocket.sendfile(f)
         return [ip, serverport, scode]
 
-    def response_put(self,connectionsocket, addr, ent_body, filedata, entity, switcher, f_flag, scode, glob):
+    def response_put(self, connectionsocket, addr, ent_body, filedata, entity,
+                     switcher, f_flag, scode, glob):
         ip, client_thread, scode = glob
         try:
             length = int(switcher['Content-Length'])
@@ -331,14 +349,15 @@ class http_methods:
                     else:
                         pass
                 else:
-                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
                 # writing File mode ON
                 mode_f = True
                 if f_flag == 1:
                     f = open(entity, "wb")
-                    f.write(filedata)                    
-                elif f_flag == 0:	
+                    f.write(filedata)
+                elif f_flag == 0:
                     f = open(entity, "w")
                     f.write(filedata.decode())
                 else:
@@ -355,37 +374,42 @@ class http_methods:
                     else:
                         pass
                 else:
-                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
                 try:
-                    loc = loc + file_type[switcher['Content-Type'].split(';')[0]]
+                    loc = loc + \
+                        file_type[switcher['Content-Type'].split(';')[0]]
                 except:
-                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
                 if f_flag == 1:
                     f = open(loc, "wb")
-                    f.write(filedata)                    
-                elif f_flag == 0:	
+                    f.write(filedata)
+                elif f_flag == 0:
                     f = open(loc, "w")
                     f.write(filedata.decode())
                 else:
                     f = open(loc, "wb")
                     f.write(filedata)
                 f.close()
-            
+
             else:
                 if ROOT in entity:
                     entity = ROOT + '/' + str(addr[1])
                     try:
-                        entity = entity + file_type[switcher['Content-Type'].split(';')[0]]
+                        entity = entity + \
+                            file_type[switcher['Content-Type'].split(';')[0]]
                     except:
                         # error in header
-                        glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                        glob = status(connectionsocket, 403,
+                                      [ip, client_thread, scode])
                         ip, client_thread, scode = glob
                     if f_flag:
                         f = open(entity, "wb")
-                        f.write(filedata)                        
-                    elif f_flag == 0:	
+                        f.write(filedata)
+                    elif f_flag == 0:
                         # open the file in write mode
                         f = open(entity, "w")
                         f.write(filedata.decode())
@@ -403,9 +427,10 @@ class http_methods:
             try:
                 loc = loc + file_type[switcher['Content-Type']]
             except:
-                glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                glob = status(connectionsocket, 403,
+                              [ip, client_thread, scode])
                 ip, client_thread, scode = glob
-            if f_flag == 0:	
+            if f_flag == 0:
                 f = open(loc, "w")
             else:
                 f = open(loc, "wb")
@@ -433,8 +458,9 @@ class http_methods:
         connectionsocket.close()
         return None
 
-    def response_delete(self,entity, connectionsocket, ent_body, switcher, glob):
-        ip, serverport,scode, client_thread = glob
+    def response_delete(self, entity, connectionsocket, ent_body, switcher,
+                        glob):
+        ip, serverport, scode, client_thread = glob
         isItDir = os.path.isdir(entity)
         isItFile = os.path.isfile(entity)
         # print(f"deleting {entity} ")
@@ -446,7 +472,8 @@ class http_methods:
             # print("Auth process started:")
             if conversation:
                 conversation = conversation.split(' ')
-                conversation = base64.decodebytes(conversation[1].encode()).decode()
+                conversation = base64.decodebytes(
+                    conversation[1].encode()).decode()
                 conversation = conversation.split(':')
             else:
                 scode = 401
@@ -456,7 +483,6 @@ class http_methods:
                 encoded = show_response.encode()
                 connectionsocket.send(encoded)
                 return [ip, serverport, scode]
-
 
             if conversation[0] == USERNAME:
                 if conversation[1] == PASSWORD:
@@ -497,10 +523,12 @@ class http_methods:
                     if (os.access(entity, os.R_OK)):
                         pass
                     else:
-                        glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                        glob = status(connectionsocket, 403,
+                                      [ip, client_thread, scode])
                         ip, client_thread, scode = glob
                 else:
-                    glob = status(connectionsocket, 403, [ip, client_thread, scode])
+                    glob = status(connectionsocket, 403,
+                                  [ip, client_thread, scode])
                     ip, client_thread, scode = glob
                 shutil.move(entity, DELETE)
             except shutil.Error:
@@ -516,9 +544,12 @@ class http_methods:
         connectionsocket.send(encoded)
         return [ip, serverport, scode]
 
+
 m = http_methods()
 
-#function to check if the resource has been modified or not since the date in HTTP request 
+# function to check if the resource has been modified or not since the date in HTTP request
+
+
 def if_modify(state, entity):
     global conditional_get, month
     valid = False
@@ -540,7 +571,10 @@ def if_modify(state, entity):
             conditional_get = False
     return conditional_get
 
-#function to return current date
+
+# function to return current date
+
+
 def date():
     #  Sun, 06 Nov 1994 08:49:37 GMT  ; RFC 822, updated by RFC 1123
     # Sunday, 06-Nov-94 08:49:37 GMT ; RFC 850, obsoleted by RFC 1036
@@ -551,7 +585,10 @@ def date():
     conversation = 'Date: ' + datenow
     return conversation
 
-#function to give response if server is busy
+
+# function to give response if server is busy
+
+
 def status(connectionsocket, code, glob):
     ip, client_thread, scode = glob
     scode = code
@@ -583,11 +620,14 @@ def status(connectionsocket, code, glob):
         connectionsocket.close()
     except:
         pass
-    server([serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport])
+    server([
+        serversocket, file_extension, conditional_get, conn, SIZE,
+        client_thread, scode, ip, IDENTITY, serverport
+    ])
     return [ip, client_thread, scode]
 
 
-#function for conditional get implementation
+# function for conditional get implementation
 def status_304(connectionsocket, entity, glob):
     ip, scode = glob
     scode = 304
@@ -601,7 +641,7 @@ def status_304(connectionsocket, entity, glob):
     connectionsocket.send(encoded)
 
 
-#function which operates between response and requests
+# function which operates between response and requests
 def bridgeFunction(connectionsocket, addr, start, glob):
     serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport = glob
     conditional_get = False
@@ -630,7 +670,7 @@ def bridgeFunction(connectionsocket, addr, start, glob):
             f_flag = 1
             # if you're using non UTF-8 chars
             req_list = message.split(b'\r\n\r\n')
-            req_list[0] = req_list[0].decode(errors = 'ignore')
+            req_list[0] = req_list[0].decode(errors='ignore')
             # print(req_list)
         if len(req_list) == 1:
             status(connectionsocket, 505, [ip, client_thread, scode])
@@ -660,7 +700,9 @@ def bridgeFunction(connectionsocket, addr, start, glob):
         method = request_line[0]
         if entity == '/':
             entity = os.getcwd()
-        elif (entity == favicon) or (entity == 'favicon') or (entity == 'favicon.ico'):
+        elif (entity == favicon) or (entity
+                                     == 'favicon') or (entity
+                                                       == 'favicon.ico'):
             entity = FAVICON
         entity, query = breakdown(entity)
         if (len(entity) > MAX_URL and urlflag == 0):
@@ -692,75 +734,96 @@ def bridgeFunction(connectionsocket, addr, start, glob):
             line_list = line.split(': ')
             switcher[line_list[0]] = line_list[1]
             i += 1
-        if  (method == 'HEAD') or (method == 'GET'):
+        if (method == 'HEAD') or (method == 'GET'):
             # connectionsocket, entity, switcher, query, method, glob
-            glob = m.response_get_head(connectionsocket, entity, switcher, query, method, 
-            [serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY, client_thread])
+            glob = m.response_get_head(
+                connectionsocket, entity, switcher, query, method, [
+                    serversocket, file_extension, conditional_get, conn, ip,
+                    serverport, scode, IDENTITY, client_thread
+                ])
 
             serversocket, file_extension, conditional_get, conn, ip, serverport, scode, IDENTITY = glob
         elif method == 'POST':
-            glob = m.response_post(ent_body, connectionsocket, switcher, [ip,serverport, scode])
-            ip,serverport, scode = glob
+            glob = m.response_post(ent_body, connectionsocket, switcher,
+                                   [ip, serverport, scode])
+            ip, serverport, scode = glob
         elif method == 'DELETE':
-            glob = m.response_delete(entity, connectionsocket, ent_body, switcher, [ip,serverport, scode, client_thread])
+            glob = m.response_delete(entity, connectionsocket, ent_body,
+                                     switcher,
+                                     [ip, serverport, scode, client_thread])
             ip, serverport, scode = glob
             conn = False
             connectionsocket.close()
         elif method == 'PUT':
-            m.response_put(connectionsocket, addr, ent_body, filedata, entity, switcher, f_flag, scode, [ip, client_thread, scode])
+            m.response_put(connectionsocket, addr, ent_body, filedata, entity,
+                           switcher, f_flag, scode, [ip, client_thread, scode])
         else:
             method = 'Not Defined'
             break
         # use the logging formatting
-        logging.info('	{}	{}	{}	{}	{}\n'.format(addr[0], addr[1], request_line, entity, scode))
+        logging.info('	{}	{}	{}	{}	{}\n'.format(addr[0], addr[1], request_line,
+                                                entity, scode))
     try:
         connectionsocket.close()
         client_thread.remove(connectionsocket)
     except:
         pass
 
-#function handling multiple requests
+
+# function handling multiple requests
+
+
 def server(glob):
     serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport = glob
     for _ in iter(int, 1):
-        connectionsocket, addr = serversocket.accept() # connectionsocket = request, addr = port,ip
+        # connectionsocket = request, addr = port,ip
+        connectionsocket, addr = serversocket.accept()
         start = 0
         client_thread.append(connectionsocket)  # add connections
         if not (len(client_thread) < MAX_REQUEST):
             status(connectionsocket, 503, [ip, client_thread, scode])
             connectionsocket.close()
         else:
-            start_new_thread(bridgeFunction, (connectionsocket, addr, start, [serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport]))
+            start_new_thread(bridgeFunction, (connectionsocket, addr, start, [
+                serversocket, file_extension, conditional_get, conn, SIZE,
+                client_thread, scode, ip, IDENTITY, serverport
+            ]))
     serversocket.close()
+
 
 '''
 Function to handle the exit ( Ctrl+C and other signals )
 '''
 sig_rec = False
+
+
 def signal_handler(sig, frame):
     print('You pressed Ctrl+C!')
     print("q for quit\n r for restart")
     sys.exit(0)
 
 
-
 if __name__ == '__main__':
-    ip = None                    # IP 
-    conn = True					 # to receive requests continuously in client's thread
-    scode = 0                    # Status code initialization
+    ip = None  # IP
+    conn = True  # to receive requests continuously in client's thread
+    scode = 0  # Status code initialization
 
-    IDENTITY = 0                 # Cookie ID . This project Increments it by 1   
-    conditional_get = False    	 # check : is it conditional get method?
+    IDENTITY = 0  # Cookie ID . This project Increments it by 1
+    conditional_get = False  # check : is it conditional get method?
     month = MONTH
 
-    file_type = FORMAT2          # Dictionary to convert content types into the file extentions eg. text/html to .html
-    file_extension = FORMAT      # Dictionary to convert file extentions into the content types eg. .html to text/html
+    # Dictionary to convert content types into the file extentions eg. text/html to .html
+    file_type = FORMAT2
+    # Dictionary to convert file extentions into the content types eg. .html to text/html
+    file_extension = FORMAT
 
-    client_thread = []		     # list to work with the threads
+    client_thread = []  # list to work with the threads
 
     serversocket = socket(AF_INET, SOCK_STREAM)
     s = socket(AF_INET, SOCK_DGRAM)
-    logging.basicConfig(filename = LOG, level = logging.INFO, format = '%(asctime)s:%(filename)s:%(message)s')
+    logging.basicConfig(filename=LOG,
+                        level=logging.INFO,
+                        format='%(asctime)s:%(filename)s:%(message)s')
 
     # To run it on the localhost if you dont want google DNS
     ip = '127.0.0.1'
@@ -768,7 +831,9 @@ if __name__ == '__main__':
     try:
         serverport = int(sys.argv[1])
     except:
-        print("Port Number missing\n\nTO RUN\nType: python3 httpserver.py port_number")
+        print(
+            "Port Number missing\n\nTO RUN\nType: python3 httpserver.py port_number"
+        )
         sys.exit()
     try:
         serversocket.bind(('', serverport))
@@ -776,6 +841,11 @@ if __name__ == '__main__':
         print('\nTO RUN:python3 httpserver.py port_number')
         sys.exit()
     serversocket.listen(5)
-    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) + '\nGo to this in the browser: (http://' + ip + ':' + str(serverport) + '/)')
-    server([serversocket, file_extension, conditional_get, conn, SIZE, client_thread, scode, ip, IDENTITY, serverport])            # IMP calling the main server Function
+    print('HTTP server running on ip: ' + ip + ' port: ' + str(serverport) +
+          '\nGo to this in the browser: (http://' + ip + ':' +
+          str(serverport) + '/)')
+    server([
+        serversocket, file_extension, conditional_get, conn, SIZE,
+        client_thread, scode, ip, IDENTITY, serverport
+    ])  # IMP calling the main server Function
     sys.exit()

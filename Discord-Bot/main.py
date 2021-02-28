@@ -3,17 +3,12 @@ import random
 import discord
 from discord.ext import commands
 
-
 # your token here, inside the ""
 TOKEN = ""
 # channel to send welcome messages to
 WELCOME_CHANNEL = "welcome"
 # all the nicknames for the random_nickname command
-NICKS = [
-        "example1",
-        "example2",
-        "example3"
-        ]
+NICKS = ["example1", "example2", "example3"]
 
 # you can change the prefix here
 bot = commands.Bot(command_prefix="!")
@@ -26,12 +21,12 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    welcome_channel = discord.utils.get(
-            member.guild.channels,
-            name=WELCOME_CHANNEL
-            )
+    welcome_channel = discord.utils.get(member.guild.channels,
+                                        name=WELCOME_CHANNEL)
     # feel free to change this message!
-    await welcome_channel.send(f"welcome {member.mention}, please read our rules and have a great time!")
+    await welcome_channel.send(
+        f"welcome {member.mention}, please read our rules and have a great time!"
+    )
 
 
 @commands.has_permissions(ban_members=True)

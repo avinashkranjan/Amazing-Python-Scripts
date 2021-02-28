@@ -14,7 +14,6 @@ pdf = PdfFileReader(pdf_File)
 # Object for writing the file
 write_Obj = PdfFileWriter()
 
-
 # Getting the number of pages and writing each page in the writer object
 for i in range(pdf.getNumPages()):
     page = pdf.getPage(i)
@@ -23,7 +22,9 @@ for i in range(pdf.getNumPages()):
 # Encrypting by the password
 owner_Password = input("Enter Password for OWNER: ")
 user_Password = input("Enter Password for USER: ")
-write_Obj.encrypt(user_pwd=user_Password, owner_pwd=owner_Password, use_128bit=True)
+write_Obj.encrypt(user_pwd=user_Password,
+                  owner_pwd=owner_Password,
+                  use_128bit=True)
 
 # Naming and creating the encrypted PDF
 new_PDF_Name_Input = input("Enter new ENCRYPTED PDF name: ")

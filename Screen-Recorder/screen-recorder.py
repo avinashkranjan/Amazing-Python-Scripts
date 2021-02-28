@@ -3,11 +3,12 @@ import numpy as np
 from PIL import ImageGrab
 import time
 
+
 def screenrecorder():
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     name = int(round(time.time() * 1000))
     name = '{}.avi'.format(name)
-    out = cv2.VideoWriter(name, fourcc, 5.0, (1920,1080))
+    out = cv2.VideoWriter(name, fourcc, 5.0, (1920, 1080))
 
     while True:
         img = ImageGrab.grab()
@@ -22,5 +23,5 @@ def screenrecorder():
     out.release()
     cv2.destroyAllWindows()
 
-screenrecorder()
 
+screenrecorder()

@@ -21,8 +21,10 @@ class Pass:
             with os.popen(f'netsh wlan show profiles "{ssid}" key=clear') as f:
                 output = f.read()
             lines = output.split('\n')
-            line = [element.split(':')
-                    for element in lines if "Key Content" in element]
+            line = [
+                element.split(':') for element in lines
+                if "Key Content" in element
+            ]
             passwords.append(line[0][1].lstrip())
         with open('passwords.txt', 'w') as fh:
             for i in range(0, len(ssidList)):

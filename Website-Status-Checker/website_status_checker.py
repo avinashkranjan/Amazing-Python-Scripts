@@ -4,7 +4,7 @@ import urllib.request
 def check_website_status():
     prompt = "Enter the Website URL:  "
     while True:
-        url = str(input(prompt)) #prompt
+        url = str(input(prompt))  # prompt
         if url.startswith('https://'):
             pass
         elif url.startswith('http://'):
@@ -13,7 +13,8 @@ def check_website_status():
             url = 'https://' + url
         try:
             headers = {}
-            headers['User-Agent'] = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
+            headers['User-Agent'] = (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
             (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36")
             req = urllib.request.Request(url, headers=headers)
             page = urllib.request.urlopen(req)

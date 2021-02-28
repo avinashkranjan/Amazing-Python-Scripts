@@ -1,5 +1,25 @@
 # -*- coding: utf-8 -*-
 
+import os
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Dropout
+from tensorflow.keras.layers import Flatten
+from tensorflow.keras.layers import Activation
+from tensorflow.keras.layers import MaxPooling2D
+from tensorflow.keras.layers import Conv2D
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.models import Sequential
+from tensorflow import keras
+import tensorflow as tf
+from imgaug import augmenters as iaa
+import matplotlib.pyplot as plt
+from skimage.color import rgb2gray
+import numpy as np
+import cv2 as cv
+import csv
+import random
 PATH = '/content/Dataset'
 TESTING_PATH = '/content/Dataset/Test'
 
@@ -12,29 +32,7 @@ INIT_LR = 0.001
 BATCH_SIZE = 256
 SET_DECAY = True
 
-### Imports
-
-
-import random
-import csv
-import cv2 as cv
-import numpy as np
-from skimage.color import rgb2gray
-import matplotlib.pyplot as plt
-from imgaug import augmenters as iaa
-
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.layers import Activation
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.regularizers import l2
+# Imports
 
 # images and corresponding labels
 images = []
@@ -104,7 +102,7 @@ def preview(images, labels):
     """
     plt.figure(figsize=(16, 16))
     for c in range(len(np.unique(labels))):
-        i = random.choice(np.where(labels==c)[0])
+        i = random.choice(np.where(labels == c)[0])
         plt.subplot(10, 10, c + 1)
         plt.axis('off')
         plt.title('class: {}'.format(c))
@@ -121,14 +119,24 @@ def augment_imgs(imgs, p, imgaug=None):
     :param p: Probability for augmentation
     """
     from imgaug import augmenters as iaa
-    augs = iaa.SomeOf((2, 4),
-                      [
-                          iaa.Crop(px=(0, 4)),  # crop images from each side by 0 to 4px (randomly chosen)
-                          iaa.Affine(scale={"x":(0.8, 1.2), "y":(0.8, 1.2)}),
-                          iaa.Affine(translate_percent={"x":(-0.2, 0.2), "y":(-0.2, 0.2)}),
-                          iaa.Affine(rotate=(-45, 45)),  # rotate by -45 to +45 degrees)
-                          iaa.Affine(shear=(-10, 10))  # shear by -10 to +10 degrees
-                      ])
+    augs = iaa.SomeOf(
+        (2, 4),
+        [
+            # crop images from each side by 0 to 4px (randomly chosen)
+            iaa.Crop(px=(0, 4)),
+            iaa.Affine(scale={
+                "x": (0.8, 1.2),
+                "y": (0.8, 1.2)
+            }),
+            iaa.Affine(translate_percent={
+                "x": (-0.2, 0.2),
+                "y": (-0.2, 0.2)
+            }),
+            # rotate by -45 to +45 degrees)
+            iaa.Affine(rotate=(-45, 45)),
+            # shear by -10 to +10 degrees
+            iaa.Affine(shear=(-10, 10))
+        ])
 
     seq = iaa.Sequential([iaa.Sometimes(p, augs)])
     res = seq.augment_images(imgs)
@@ -149,7 +157,7 @@ def augmentation(imgs, lbls):
             imgs_for_augm = []
             lbls_for_augm = []
             for j in range(add_num):
-                im_index = random.choice(np.where(lbls==i)[0])
+                im_index = random.choice(np.where(lbls == i)[0])
                 imgs_for_augm.append(imgs[im_index])
                 lbls_for_augm.append(lbls[im_index])
             augmented_class = augment_imgs(imgs_for_augm, 1)
@@ -232,12 +240,13 @@ def build(width, height, depth, classes):
 
 model = build(28, 28, 1, 43)
 
-
 if SET_DECAY:
     opt = Adam(lr=INIT_LR, decay=INIT_LR / (EPOCHS * 0.5))
 else:
     opt = Adam(lr=INIT_LR)
-model.compile(loss="sparse_categorical_crossentropy", optimizer=opt, metrics=["accuracy"])
+model.compile(loss="sparse_categorical_crossentropy",
+              optimizer=opt,
+              metrics=["accuracy"])
 
 test_images = []
 test_labels = []
@@ -268,8 +277,6 @@ print(train_X_ext.shape)
 print(train_Y.shape)
 train_Y_ext = np.expand_dims(train_Y, axis=1)
 print(train_Y_ext.shape)
-
-import os
 
 with tf.device('/device:GPU:0'):
     os.mkdir("models_Xception")

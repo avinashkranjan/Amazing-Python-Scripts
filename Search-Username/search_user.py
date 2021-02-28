@@ -10,13 +10,16 @@ def parser_input():
     :return: parser.parse_args()  Parsed Arguments
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("-u", "--usernames",
+    parser.add_argument("-u",
+                        "--usernames",
                         help="Enter the username.",
                         type=str,
                         required=True)
-    parser.add_argument("-t", "--targets",
+    parser.add_argument("-t",
+                        "--targets",
                         help="Enter the website(s). Use Lowercase only",
-                        type=str, required=True,
+                        type=str,
+                        required=True,
                         nargs='+')
 
     if len(sys.argv) == 1:
@@ -70,19 +73,22 @@ def search_web(username, target_website):
     if r.status_code == 200:
         print('Got it ' + username + ' in ' + target_website)
     elif r.status_code == 400:
-        print('Error 400, Bad Request for ' + username + ' at ' + target_website + ' check the Syntax of the URL')
+        print('Error 400, Bad Request for ' + username + ' at ' +
+              target_website + ' check the Syntax of the URL')
     elif r.status_code == 404:
         print('Error 404, Not Found ' + username + ' at ' + target_website)
     else:
-        print('There seems to be a issue ' + username + ' at ' + target_website + ' is not responding. Check the'
-                                                                                  ' syntax of the URL.')
+        print('There seems to be a issue ' + username + ' at ' +
+              target_website + ' is not responding. Check the'
+              ' syntax of the URL.')
 
 
 if __name__ == '__main__':
-    print("Hello User, Using this script, yu can search for usernames across social media networks.\n" 
-          "Important, enter only one username at once.\n"
-          "Enter as many as required supported platforms (SEE README).\n"
-          "Enter the platform in lower case. ONLY.\n")
+    print(
+        "Hello User, Using this script, yu can search for usernames across social media networks.\n"
+        "Important, enter only one username at once.\n"
+        "Enter as many as required supported platforms (SEE README).\n"
+        "Enter the platform in lower case. ONLY.\n")
     arg = parser_input()
     for i in range(len(arg.targets)):
         inputs(arg.usernames, arg.targets[i])

@@ -18,8 +18,8 @@ class guiVersion(QMainWindow, Ui_guiVersion):
         self.result = ''
         # Connect buttons
         for n in range(0, 10):
-            getattr(self, 'pushButton_n%s' %
-                    n).clicked.connect(self.digit_pressed)
+            getattr(self,
+                    'pushButton_n%s' % n).clicked.connect(self.digit_pressed)
         self.pushButton_n10.clicked.connect(self.decimal_point)
         self.pushButton_del.clicked.connect(self.del_digit)
         self.pushButton_convert.clicked.connect(self.convert_fun)

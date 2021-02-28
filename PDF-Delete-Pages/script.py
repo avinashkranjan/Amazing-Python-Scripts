@@ -24,12 +24,13 @@ def delete(path, del_page):
     writer = PdfWriter()
 
     # Adding only those pages that we need to this list excluding del_page
-    page_list = [page for page in range(
-        1, total_pages+1) if page not in del_page]
+    page_list = [
+        page for page in range(1, total_pages + 1) if page not in del_page
+    ]
 
     # Index of pdf_obj.pages starts from 0.
     for page in page_list:
-        writer.addpage(pdf_obj.pages[page-1])
+        writer.addpage(pdf_obj.pages[page - 1])
 
     # removing the original pdf
     os.remove(path)

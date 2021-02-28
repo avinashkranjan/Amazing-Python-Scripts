@@ -7,9 +7,11 @@ except ImportError:
     print("pip install optparse-pretty")
 
 
-def get_arguments():      # function to pass input in console
+def get_arguments():  # function to pass input in console
     parser = optparse.OptionParser()
-    parser.add_option("-t", "--target", dest="target",
+    parser.add_option("-t",
+                      "--target",
+                      dest="target",
                       help="Target IP / IP range.")
     options, arguments = parser.parse_args()
     return options
@@ -18,11 +20,11 @@ def get_arguments():      # function to pass input in console
 def scan(ip):
     arp_request = scapy.ARP(pdst=ip)  # destinationn ip
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
-    arp_request_broadcast = broadcast/arp_request
+    arp_request_broadcast = broadcast / arp_request
     # print(arp_request_broadcast.summary())
     # arp_request_broadcast.show()
-    answered_list = scapy.srp(arp_request_broadcast,
-                              timeout=1, verbose=False)[0]
+    answered_list = scapy.srp(arp_request_broadcast, timeout=1,
+                              verbose=False)[0]
     # print(answered_list.summary())
     # print(unanswered.summary())
 
@@ -32,13 +34,15 @@ def scan(ip):
         clients_list.append(clients_dict)
         # print(element[1].psrc +"\t\t"+element[1].hwsrc)
 
-    return(clients_list)
+    return (clients_list)
 
 
 def print_result(result_list):
-    print("IP\t\t\tMAC ADDRESS\n..........................................................................")
+    print(
+        "IP\t\t\tMAC ADDRESS\n.........................................................................."
+    )
     for client in result_list:
-        print(client["ip"]+"\t\t"+client["mac"])
+        print(client["ip"] + "\t\t" + client["mac"])
 
 
 options = get_arguments()
