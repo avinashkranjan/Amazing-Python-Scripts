@@ -666,6 +666,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "rmoyano",
+      "name": "Rafa Moyano",
+      "avatar_url": "https://avatars.githubusercontent.com/u/806608?v=4",
+      "profile": "https://github.com/rmoyano",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
