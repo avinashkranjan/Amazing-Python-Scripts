@@ -14,11 +14,11 @@ The script uses [Genius API](https://docs.genius.com/). It is a dedicated platfo
 
 Lyrics of Top 3 Songs by coldplay - 
 
-![](img/lyrics.PNG)
+![](https://i.postimg.cc/kGkb6Tfh/lyrics.png)
 
 Resulting Text File - 
 
-![](img/result.PNG)
+![](https://i.postimg.cc/HWK5hLd4/result.png)
 
 ## Author(s)  
   

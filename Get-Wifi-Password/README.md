@@ -19,10 +19,12 @@ cd Amazing-Python-Scripts/python/Get-Wifi-Password
 ```bash
 python finder.py
 ```
-![](https://github.com/pritamp17/Amazing-Python-Scripts/blob/wifi1/Get-Wifi-Password/ss/final-1.jpg?raw=true)
+
+![](https://i.postimg.cc/tTBfjx2g/final-1.jpg)
 
 # And here you go
-![](https://github.com/pritamp17/Amazing-Python-Scripts/blob/wifi1/Get-Wifi-Password/ss/final-2.jpg?raw=true)
+
+![](https://i.postimg.cc/wM3rTjGQ/final-2.jpg)
 
 # Author
 [Pritam Pawar](https://github.com/pritamp17)

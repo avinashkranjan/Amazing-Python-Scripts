@@ -1,4 +1,3 @@
-
 ### JetBrains template
 
 # User-specific stuff
@@ -668,5 +667,15 @@ pip-selfcheck.json
 
 ### JupyterNotebooks template
 
-
 */.ipynb_checkpoints/*
+
+### User Added Files
+
+geoip/
+/venv
+/__pycache__
+.idea/
+test.py
+Test/
+reddit_tokens.json
+scriptcopy.py
