@@ -2,7 +2,7 @@
 from zipfile import ZipFile 
 
 # specifying the zip file name 
-file_name = "Enter your zip file here"
+file_name = "Enter file path here"
 
 # opening the zip file in READ mode 
 with ZipFile(file_name, 'r') as zip: 
