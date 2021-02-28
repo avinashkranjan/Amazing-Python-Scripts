@@ -1,6 +1,6 @@
 # Covid-19-Updater
 
-Get hourly updates of Covid19 cases, deaths and recovered from coronavirus-19-api.herokuapp.com.
+Get hourly updates of Covid19 cases, deaths and recovered from coronavirus-19-api.herokuapp.com using a desktop app in Windows.
 
 ## Setup instructions
 
