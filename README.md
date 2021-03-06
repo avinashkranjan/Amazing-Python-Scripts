@@ -147,7 +147,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-<h2 align=center> Stargazers Over Time 🌟 </h2>
+<h2 align=center> 🌟 Stargazers Over Time 🌟 </h2>
 
 [![Stargazers over time](https://starchart.cc/avinashkranjan/Amazing-Python-Scripts.svg)](https://starchart.cc/avinashkranjan/Amazing-Python-Scripts)
 
