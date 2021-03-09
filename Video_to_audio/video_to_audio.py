@@ -1,8 +1,6 @@
-# importing libraries
 import moviepy.editor as pyeditor
 import argparse
 
-# Setting up the Command Line Arguments.
 arg_parser = argparse.ArgumentParser()
 
 arg_parser.add_argument("-v", "--videoFile", required=True,
