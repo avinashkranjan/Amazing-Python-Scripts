@@ -23,4 +23,8 @@ Collects the information given on IMDB for the given title
 - python scraper.py --t movie-name-here
 - sample : python scraper.py --t red
 
+## Screenshots
+
+!(Screenshot of the scraped data)[".ss1.PNG"]
+
 #### By [Priyanshu Sharma](https://github.com/priyanshu20)
