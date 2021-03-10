@@ -25,6 +25,6 @@ Collects the information given on IMDB for the given title
 
 ## Screenshots
 
-!(Screenshot of the scraped data)[".ss1.PNG"]
+!(Screenshot of the scraped data[https://raw.githubusercontent.com/priyanshu20/Amazing-Python-Scripts/imdb-scraper/IMDB-Scraper/ss1.PNG]
 
 #### By [Priyanshu Sharma](https://github.com/priyanshu20)
