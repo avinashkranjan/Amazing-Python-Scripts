@@ -12,8 +12,8 @@ def toWav(vidName):
     return audio
 
 if __name__ == "__main__":
-    """Accepts user input, handles exception and bad input, converts *.mp4 to audio file and write it in the folder."""
-    vid = input("\nEnter the name of the video along with the \".mp4\" extension : ")
+    """Accepts user input, handles exception and bad input, converts video file to audio file and write it in the folder."""
+    vid = input("\nEnter the name of the video along with the file extension.\nEg. \"abc.flv\" : ")
 
     try: vidName, vidFormat = vid[:vid.index(".")], vid[vid.index(".")+1:]
     except:
@@ -25,10 +25,6 @@ if __name__ == "__main__":
         sys.exit(0)
     
     print(f"Video Name : {vidName}\nVideo Format : {vidFormat}")
-
-    if vidFormat != "mp4" and vidFormat != "MP4":
-        print("\nPlease input a video with \".mp4\" format.\n")
-        sys.exit(0)
 
     try: videoClip = VideoFileClip(vid)
     except:
