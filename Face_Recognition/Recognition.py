@@ -13,7 +13,7 @@ face_recognizer = cv.face.LBPHFaceRecognizer_create()
 # We are using the trained yml file.
 face_recognizer.read('face_trained.yml')
 
-img = cv.imread(r'images\henry\13.jpg')
+# img = cv.imread(r'images\henry\13.jpg')
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Person', gray)

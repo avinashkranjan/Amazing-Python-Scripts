@@ -52,7 +52,8 @@ face_recognizer.train(features,labels)
 # we can easily access this trained model
 face_recognizer.save('face_trained.yml')
 
-# save the features and labels into the numpy file
-np.save('features.npy', features) 
-np.save('labels.npy',labels)
-
+####  save the features and labels into the numpy file 
+# simply remove the comments of the below 2 line
+#
+# np.save('features.npy', features) 
+# np.save('labels.npy',labels)
