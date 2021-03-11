@@ -26,10 +26,9 @@ for i in range(7):
 
 #game variables
 hangman_status = 0 
-my_file = open("words.txt", "r")
-content = my_file.read()
+with open("words.txt", 'r') as f:
+    content = f.read()
 list_of_words = content.split(",")
-list_of_words= ["abruptly","avenue","awkward","azure","galaxy","gossip","icebox","injury","ivory","ivy","jackpot","jaundice","joyful","juicy","jukebox","jumbo","kiwifruit","matrix","microwave","nightclub","nowadays","oxidize","oxygen","peekaboo","pixel","pneumonia","puppy","puzzling","queue","quizzes","quorum","rhythm","rickshaw","scratch","staff","strengths","stretch","subway","syndrome","thumbscrew","transcript","transplant","twelfth","unknown","unworthy","unzip","uptown","vodka","vortex","walkway","wave","wavy","whiskey","whizzing","wizard","wristwatch","xylophone","yachtsman", "youthful","yummy","zigzag" ,"zodiac" ,"zombie"]
 word = random.choice(list_of_words).upper()
 guessed = [] 
 
