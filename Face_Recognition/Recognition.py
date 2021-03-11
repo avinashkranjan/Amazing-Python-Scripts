@@ -4,7 +4,7 @@ import os
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
 people = []
-DIR = r' ' ## DIR - path of the folder containing images
+DIR = r'images' ## DIR - path of the folder containing images
 for i in os.listdir(DIR):
     people.append(i)
 
@@ -13,7 +13,7 @@ face_recognizer = cv.face.LBPHFaceRecognizer_create()
 # We are using the trained yml file.
 face_recognizer.read('face_trained.yml')
 
-img = cv.imread(r' ')
+img = cv.imread(r'images\henry\13.jpg')
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Person', gray)

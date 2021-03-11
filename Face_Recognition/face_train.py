@@ -8,7 +8,7 @@ import cv2 as cv
 import numpy as np
 
 people = []
-DIR = r' ' # DIR - path of the folder containing images
+DIR = r'images' # DIR - path of the folder containing images
 for i in os.listdir(DIR): # Will append the names of the person in the people list 
     people.append(i)
 
