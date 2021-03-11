@@ -6,22 +6,17 @@ WIDTH, HEIGHT= 800,500
 win = pygame.display.set_mode((WIDTH,HEIGHT)) 
 pygame.display.set_caption("Hangman Game") 
 
-
 #button variables
 radius = 20
 gap= 15
 letters = []
 startx= round((WIDTH - (radius * 2 + gap) * 13) / 2) 
 starty= 400 
-
 A= 65
-
 for i in range(26): 
   x= startx + gap * 2+ ((radius * 2 + gap)* (i%13))
   y= starty + ((i//13) * (gap + radius * 2))
   letters.append([x, y, chr(A+i), True]) 
-
-
 
 #load images
 images = []
@@ -29,17 +24,14 @@ for i in range(7):
   img = pygame.image.load("hangman" + str(i) + ".png")
   images.append(img)
 
-
-
-
 #game variables
 hangman_status = 0 
+my_file = open("words.txt", "r")
+content = my_file.read()
+list_of_words = content.split(",")
 list_of_words= ["abruptly","avenue","awkward","azure","galaxy","gossip","icebox","injury","ivory","ivy","jackpot","jaundice","joyful","juicy","jukebox","jumbo","kiwifruit","matrix","microwave","nightclub","nowadays","oxidize","oxygen","peekaboo","pixel","pneumonia","puppy","puzzling","queue","quizzes","quorum","rhythm","rickshaw","scratch","staff","strengths","stretch","subway","syndrome","thumbscrew","transcript","transplant","twelfth","unknown","unworthy","unzip","uptown","vodka","vortex","walkway","wave","wavy","whiskey","whizzing","wizard","wristwatch","xylophone","yachtsman", "youthful","yummy","zigzag" ,"zodiac" ,"zombie"]
 word = random.choice(list_of_words).upper()
-print(word)
 guessed = [] 
-
-
 
 #colors
 white = (255,255,255)
@@ -52,15 +44,11 @@ LETTER_FONTS= pygame.font.SysFont('comicsans', 40)
 WORD_FONTS = pygame.font.SysFont('comicsans', 60)
 TITLE_FONTS = pygame.font.SysFont('comicsans', 70)
 
-
-
 def draw():
   win.fill(BLUE) 
-
   #draw title
   text = TITLE_FONTS.render("HANGMAN GAME", 1, BLACK)
   win.blit(text, (WIDTH/2 - text.get_width()/2, 20)) 
-
   #draw word
   display_word= "" 
   for i in word:
@@ -71,22 +59,15 @@ def draw():
 
   text = WORD_FONTS.render(display_word, 1, BLACK) 
   win.blit(text, (400, 200)) 
-
-
-
   #draw buttons
   for i in letters:
     x, y, ltr, visible = i 
     if visible:
       pygame.draw.circle(win, BLACK, (x, y) , radius, 3)
       text = LETTER_FONTS.render(ltr,1,BLACK) 
-      
       win.blit(text, (x - text.get_width()/2, y - text.get_height()/2) ) 
-
-
   win.blit(images[hangman_status],(150,100)) 
   pygame.display.update() 
-
 
 #win/loose msg printing msg on screen
 def display_message(message):
@@ -97,17 +78,13 @@ def display_message(message):
   pygame.display.update()
   pygame.time.delay(3000) 
 
-
 #setup game loop
 FPS = 60 
 clock= pygame.time.Clock() 
 run = True 
-
 while run:
   clock.tick(FPS) 
-
   draw()
-
   for i in pygame.event.get(): 
     if i.type == pygame.QUIT:
       run = False
@@ -117,33 +94,24 @@ while run:
         x, y, ltr, visible = i 
         if visible: 
           dis= math.sqrt((x - m_x)**2 + (y- m_y)**2) 
-      
           if dis< radius:
             i[3] = False 
             guessed.append(ltr)
             if ltr not in word:
               hangman_status += 1
-
-
   draw() 
-
-      
   #checking for winner
   won = True
   for i in word:
     if i not in guessed:
       won = False
       break
-
   if won:
     display_message("Wohooo...!! You Won!")
     break
-
   if hangman_status == 6:
     display_message(f"Oopss..!! It was {word} You Lost!")
     break
-
-
 pygame.quit()
 
 
