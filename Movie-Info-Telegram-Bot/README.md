@@ -32,3 +32,7 @@
 
 ![alt text](genre.png)
 
+## Author
+
+Aishwarya  
+[@aish2002](https://github.com/aish2002)
