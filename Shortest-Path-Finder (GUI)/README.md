@@ -22,17 +22,17 @@ pip install pygame
 <p align="center">
     <img src="https://github.com/SpecTEviL/Amazing-Python-Scripts/blob/Shortest-Path-finder-GSSoC'21/Shortest-Path-Finder%20(GUI)/1.%20Marked%20Start%20and%20End%20Point.png" alt="1. Marked Start and End Point.png"/>
     <br>
-    1. Marked Start and End Point   
+    1. Marked Start and End Point
 </p>
 <p align="center">
     <img src="https://github.com/SpecTEviL/Amazing-Python-Scripts/blob/Shortest-Path-finder-GSSoC'21/Shortest-Path-Finder%20(GUI)/2.%20Made%20Obstacles.png" alt="2. Made Obstacles.png"/>
     <br>
-    2. Made Obstacles.png    
+    2. Made the Obstacles
 </p>
 <p align="center">
     <img src="https://github.com/SpecTEviL/Amazing-Python-Scripts/blob/Shortest-Path-finder-GSSoC'21/Shortest-Path-Finder%20(GUI)/3.%20Shortest%20Path%20marked%20in%20Purple%20by%20the%20Algorithm.png" alt="3. Shortest Path marked in Purple by the Algorithm.png"/>
     <br>
-    3. Shortest Path marked in Purple by the Algorithm.png
+    3. Shortest Path marked in Purple by the Algorithm
 </p>
 
 ## Author
