@@ -12,6 +12,6 @@ args = vars(arg_parser.parse_args())
 
 try:
     Video_clip = pyeditor.VideoFileClip(r"{}".format(args['videoFile']))
-    video_clip.audio.write_audiofile(r"{}".format(args['path']))
+    Video_clip.audio.write_audiofile(r"{}".format(args['path']))
 except Exception:
     print("Error!!! Something is worng.")
