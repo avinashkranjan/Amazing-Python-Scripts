@@ -25,17 +25,18 @@ def train_face():
         label = people.index(person)
 
         for img in os.listdir(path):
-            img_path = os.path.join(path, img)
+            img_path = os.path.join(path,img)
 
-            img_arr = cv.imread(img_path)
+            img_arr = cv.imread(img_path, flags=None)
+            if img_arr is None:
+                continue
             gray = cv.cvtColor(img_arr, cv.COLOR_BGR2GRAY)
 
-            face_rect = haar_cascade.detectMultiScale(
-                gray, scaleFactor=1.1, minNeighbors=4)
+            face_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
 
             for (x, y, w, h) in face_rect:
-                face_roi = gray[y:y+h, x:x+w]
-                features.append(face_roi)
+                face = gray[y:y+h, x:x+w]
+                features.append(face)
                 labels.append(label)
 
 
