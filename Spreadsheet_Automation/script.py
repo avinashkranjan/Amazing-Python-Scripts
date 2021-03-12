@@ -16,11 +16,10 @@ data_home_1 = pd.read_excel(book_relative_path)
 item = input("What is the basis of merging? ")
 data_total = data_home_1.merge(data_prices, on=item)
 
-data_total['Total Price'] = data_total['PURCHASED AMOUNT'] * data_total['Price']
 
 #print​(df_total)
-material=input("Enter criteria 1")
-price=input("Enter criteria 2")
-fig = px.pie(data_total[[material, price]], values=price, names=material)
+criteria_1=input("Enter criteria 1")
+criteria_2=input("Enter criteria 2")
+fig = px.pie(data_total[[criteria_1, criteria_2]], values=criteria_2, names=criteria_1)
 fig.show()
 
