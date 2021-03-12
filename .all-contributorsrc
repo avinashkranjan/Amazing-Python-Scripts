@@ -695,6 +695,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "deephunt3r",
+      "name": "Rakesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60481830?v=4",
+      "profile": "https://github.com/deephunt3r",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

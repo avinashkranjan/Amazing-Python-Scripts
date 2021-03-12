@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-70-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-71-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -141,6 +141,9 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
     <td align="center"><a href="https://github.com/rmoyano"><img src="https://avatars.githubusercontent.com/u/806608?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rafa Moyano</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=rmoyano" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Dhanush2612"><img src="https://avatars.githubusercontent.com/u/52505100?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dhanush V</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Dhanush2612" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Dhanush2612" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/xzanatol/"><img src="https://avatars.githubusercontent.com/u/64689436?v=4?s=100" width="100px;" alt=""/><br /><sub><b>XZANATOL</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=XZANATOL" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=XZANATOL" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/deephunt3r"><img src="https://avatars.githubusercontent.com/u/60481830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rakesh</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=deephunt3r" title="Documentation">📖</a></td>
   </tr>
 </table>
 
