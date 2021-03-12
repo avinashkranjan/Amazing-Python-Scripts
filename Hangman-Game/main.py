@@ -21,12 +21,12 @@ for i in range(26):
 #load images
 images = []
 for i in range(7):
-  img = pygame.image.load("hangman" + str(i) + ".png")
+  img = pygame.image.load("./Hangman-Game/hangman" + str(i) + ".png")
   images.append(img)
 
 #game variables
 hangman_status = 0 
-with open("words.txt", 'r') as f:
+with open("./Hangman-Game/words.txt", 'r') as f:
     content = f.read()
 list_of_words = content.split(",")
 word = random.choice(list_of_words).upper()
