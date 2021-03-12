@@ -20,8 +20,8 @@ Collects the information given on IMDB for the given title
 ## Usage
 
 - Install dependencies
-- python scraper.py --t movie-name-here
-- sample : python scraper.py --t red
+- python scraper.py --t movie-name-here(in double quotes)
+- sample : python scraper.py --t "red"
 
 ## Screenshots
 
