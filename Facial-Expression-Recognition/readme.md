@@ -1,11 +1,11 @@
-__Facial Expression Recognition__
+# Facial Expression Recognition
 ***
 
 
 Facial expression recognition is a technology which detects emotions in human faces. More precisely, this technology is a sentiment analysis tool and is able to automatically detect the basic or universal expressions: happiness, sadness, anger, surprise, fear, and disgust etc.
 
 
-__Dependencies__
+## Dependencies
 
 
 <code>
@@ -14,7 +14,7 @@ __Dependencies__
 </code>
 
 
-__Implementation of OpenCV HAAR CASCADES__
+## Implementation of OpenCV HAAR CASCADES
 
 
 Here "Frontal Face Alt" Classifier is used for detecting the presence of Face in the WebCam.
@@ -26,7 +26,7 @@ then, load this file which can be found in the label.py
 </code>
 
 
-__ReTraining the Network - Tensorflow Image Classifier__
+## ReTraining the Network - Tensorflow Image Classifier
 
 
 Create an Image classifier that identifies whether a person is sad, happy and so on and then show this text on the OpenCV Window.
@@ -42,7 +42,7 @@ Create an Image classifier that identifies whether a person is sad, happy and so
 </code>
 
 
-__Importing the ReTrained Model and Setting Everything Up__
+## Importing the ReTrained Model and Setting Everything Up
 
 
 Now run the "label.py" program by typing the following in Terminal:
@@ -57,3 +57,7 @@ It will open a new window of OpenCV and then identifies your Facial Expression. 
 
 
 [![Facial-Expression-Recognition](https://i1.wp.com/sefiks.com/wp-content/uploads/2018/01/kid-expressions-cover.png?resize=560%2C9999&ssl=1)]
+
+## Author
+
+[Debashish kumar sahoo](https://github.com/Debashish-hub)
