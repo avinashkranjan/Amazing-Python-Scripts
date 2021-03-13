@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # Music-Player
 =======
 # Music Player App Using Pygame and Mutagen
->>>>>>> 43dc955546e3f6763f9482ff2d0d82132119c09e
+
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/downloads/release/python-360/)
 
@@ -29,7 +28,7 @@ Rockerz Music Player written in Python using [PyGame Module](https://www.pygame.
  python main.py
 ```
 # Screenshot
-![Rockerzz Music Player](https://github.com/robin025/Amazing-Python-Scripts/blob/music-player-robin/Music-Player-App/Screenshot.png)
+![Rockerzz Music Player](https://github.com/robin025/Amazing-Python-Scripts/blob/music-player-robin/Music-Player-App/assests/screenshot/Screenshot.png)
 
 
 # ScreenShot
