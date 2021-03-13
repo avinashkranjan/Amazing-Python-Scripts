@@ -1,5 +1,5 @@
 # import libraries
-
+import os
 from tkinter import *
 from gtts import gTTS
 from playsound import playsound
@@ -32,6 +32,7 @@ def Text_to_speech():
     speech = gTTS(text = Message)
     speech.save('Data.mp3')
     playsound('Data.mp3')
+    os.remove('Data.mp3')
 
 def Exit():
     root.destroy()
