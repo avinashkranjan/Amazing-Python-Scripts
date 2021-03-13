@@ -1,7 +1,7 @@
-# Flipkart Price Alert
+## Flipkart Price Alert
 Checks for the price of a desired product periodically.
 If the price drops below the desired amount, notifies the user via email.
-# Requirements
+## Setup Instructions
 Type the following to install requirements: (make sure you have python installed)
 `pip install -r requirements.txt`
 # How to get app password
@@ -12,8 +12,14 @@ Type the following to install requirements: (make sure you have python installed
 
 ![](https://devanswers.co/wp-content/uploads/2017/02/my-google-app-passwords.png)
 
-
 # Usage
 1) Edit the config vars in the track.py script.
 2) Run the track.py script. `python track.py`
 3) Hope the price drops :).
+
+## Author(s)
+Ea (github.com/jade9ja)
+
+## Disclaimers
+Make sure to keep the app passwords that you generate safe.
+Do not spam other people's emails with this.
