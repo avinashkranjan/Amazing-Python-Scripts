@@ -12,25 +12,25 @@ pip install plotly
 # Outputs
 
 ## 1. Bar Chart
-![Bar Chart](Data-Visualization\BarChart\BarChart.png)
+[![BarChart.png](https://i.postimg.cc/7hp2zLxm/BarChart.png)](https://postimg.cc/1VrXhsVq)
 
 ## 2. Bubble Chart
-![Bubble Chart](Data-Visualization\BubbleChart\BubbleChart.png)
+[![Bubble-Chart.png](https://i.postimg.cc/6QLg17g4/Bubble-Chart.png)](https://postimg.cc/2qy015zC)
 
 ## 3. Heat Map
-![Heat Map](Data-Visualization\HeatMap\HeatMap.png)
+[![HeatMap.png](https://i.postimg.cc/pLVsX06r/HeatMap.png)](https://postimg.cc/yk5mLTBC)
 
 ## 4. Histogram Plot
-![Heat Map](Data-Visualization\HistogramPlot\Histogram.png)
+[![Histogram.png](https://i.postimg.cc/BQpCyTn0/Histogram.png)](https://postimg.cc/2VqvLBWc)
 
 ## 5. Line Chart
-![Line Chart](Data-Visualization\LineChart\LineChart.png)
+[![Line-Chart.png](https://i.postimg.cc/2SPLXyhY/Line-Chart.png)](https://postimg.cc/RWL0WMgp)
 
 ## 6. Pie Chart
-![Pie Chart](Data-Visualization\PieChart\PieChart.png)
+[![PieChart.png](https://i.postimg.cc/gJ4Jd2Xn/PieChart.png)](https://postimg.cc/1nnPrPKQ)
 
 ## 7. Scatter Plot
-![Scatter Plot](Data-Visualization\ScatterPlot\ScatterPlot.png)
+[![Scatter-Plot.png](https://i.postimg.cc/Pqjrww1C/Scatter-Plot.png)](https://postimg.cc/0zVsgrWv)
 
 # Author
 [Elita Menezes](https://github.com/ELITA04/) 
