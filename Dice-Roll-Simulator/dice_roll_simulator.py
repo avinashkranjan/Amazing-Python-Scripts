@@ -18,7 +18,7 @@ l1 = tkinter.Label(root, text="Dice Rolling Simulator", fg = "white",
 l1.pack()
 
 # images
-dice = ['die1.png', 'die2.png', 'die3.png', 'die4.png', 'die5.png', 'die6.png']
+dice = ['./Dice-Roll-Simulator/imgs/die1.png', './Dice-Roll-Simulator/imgs/die2.png', './Dice-Roll-Simulator/imgs/die3.png', './Dice-Roll-Simulator/imgs/die4.png', './Dice-Roll-Simulator/imgs/die5.png', './Dice-Roll-Simulator/imgs/die6.png']
 # simulating the dice with random numbers between 0 to 6 and generating image
 image1 = ImageTk.PhotoImage(Image.open(random.choice(dice)))
 
