@@ -12,26 +12,26 @@ pip install plotly
 # Outputs
 
 ## 1. Bar Chart
-![Bar Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/BarChart/BarChart.png)
+![Bar Chart](Data-Visualization\BarChart\BarChart.png)
 
 ## 2. Bubble Chart
-![Bubble Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/BubbleChart/BubbleChart.png)
+![Bubble Chart](Data-Visualization\BubbleChart\BubbleChart.png)
 
 ## 3. Heat Map
-![Heat Map](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/HeatMap/HeatMap.png)
+![Heat Map](Data-Visualization\HeatMap\HeatMap.png)
 
 ## 4. Histogram Plot
-![Heat Map](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/HistogramPlot/Histogram.png)
+![Heat Map](Data-Visualization\HistogramPlot\Histogram.png)
 
 ## 5. Line Chart
-![Line Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/LineChart/LineChart.png)
+![Line Chart](Data-Visualization\LineChart\LineChart.png)
 
 ## 6. Pie Chart
-![Pie Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/PieChart/PieChart.png)
+![Pie Chart](Data-Visualization\PieChart\PieChart.png)
 
 ## 7. Scatter Plot
-![Scatter Plot](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/ScatterPlot/ScatterPlot.png)
+![Scatter Plot](Data-Visualization\ScatterPlot\ScatterPlot.png)
 
 # Author
-![Elita Menezes](https://github.com/ELITA04/) 
+[Elita Menezes](https://github.com/ELITA04/) 
 
