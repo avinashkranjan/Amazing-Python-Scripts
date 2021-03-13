@@ -6,7 +6,7 @@ import math
 from queue import PriorityQueue
 
 
-WIDTH = 600
+WIDTH = 595
 WIN = pg.display.set_mode((WIDTH, WIDTH))
 pg.display.set_caption("Shortest Path Finder")
 
