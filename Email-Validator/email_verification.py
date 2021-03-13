@@ -49,8 +49,7 @@ def check_response(email, domain, mxRecord):
     except socket.error as socketerror:
         print("Check 3 HALTED! The domain",domain,", either does not have an SMTP or have restricted access through external scripts")
 
-#email = input()
-email = "mdsaaalik@gmail.com"
+email = input()
 domain = email.split("@")[-1]
 check_syntax(email)#CHECK1
 mxRecord = check_dns(email,domain)#CHECK2
