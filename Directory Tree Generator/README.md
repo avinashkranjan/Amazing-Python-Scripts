@@ -25,6 +25,6 @@ As an example
 ```
 python tree.py C:\Users\kumar\Documents
 ```
-Finally it will display you the tree of directory starting from the current directory.
+Finally it will display the tree starting from the current directory given by user.
 
 Then press enter to exit.
