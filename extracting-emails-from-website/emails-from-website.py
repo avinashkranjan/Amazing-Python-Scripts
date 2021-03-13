@@ -10,9 +10,12 @@ val=""
 for i in x: 
     val+=i+"\n"                                                  #this adds all the email data found in val variable  
 
-filename= input("Enter the file Name you want (without extension):")                
-with open(f"{filename}.txt","w") as file:
-    file.write(val)
-    print("Your File has been Saved")
-    print("Email(s) found:\n")
-    print(val)
+if val=="":
+    print("No emails found in the website")
+else:
+    filename= input("Enter the file Name you want (without extension):")                
+    with open(f"{filename}.txt","w") as file:
+        file.write(val)
+        print("Your File has been Saved")
+        print("Email(s) found:\n")
+        print(val)
