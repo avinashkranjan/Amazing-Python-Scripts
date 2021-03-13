@@ -20,7 +20,7 @@ def show_Details(play_it):
     else:  # to handle .wav,.ogg music file extensions
         a = mixer.Sound(play_it)
         total_lenth = a.get_length()
-    # divmod fucntion is calculation div = total_lenth/60,mod = total_lenth%60
+
     m, s = divmod(total_lenth, 60)
     m = round(m)
     s = round(s)
@@ -64,11 +64,10 @@ def Play_music():
         paused = FALSE
     else:
         try:
-            Stop_music()  # whenever we are switiching from one song to another song then the program will start 2 threads at a time which will lead to display both songs Remaining  time so to over come this problem we will first stop the music and then we will satrt a buffer time of 1 sec to overcome this problem
+            Stop_music()
             time.sleep(1)
-            song = play_list.curselection()  # for selecting song from play list box
+            song = play_list.curselection()
             song = int(song[0])
-            # music list is a list of paths of all songs we have added
             play_it = music_list[song]
 
             mixer.music.load(play_it)
@@ -194,7 +193,7 @@ mixer.init()
 
 # main_window.geometry("600x300")
 main_window.title("Rockerz")
-
+main_window.iconbitmap(r"assests/rockerz.ico")
 
 left_frame = Frame(main_window)
 left_frame.pack(side=RIGHT, padx=30, pady=20)
@@ -229,26 +228,26 @@ playlist_box = Listbox(main_window)
 canvas = Frame(right_frame)
 canvas.pack(pady=5)
 
-pic = PhotoImage(file="play.png")
+pic = PhotoImage(file="assests/images/play.png")
 play_button1 = ttk.Button(canvas, image=pic, command=Play_music)
 play_button1.grid(row=0, column=0, padx=5)
 
-pic1 = PhotoImage(file="stop.png")
+pic1 = PhotoImage(file="assests/images/stop.png")
 stop_button1 = ttk.Button(canvas, image=pic1, command=Stop_music)
 stop_button1.grid(row=0, column=1, padx=5)
 
-pic2 = PhotoImage(file="pause.png")
+pic2 = PhotoImage(file="assests/images/pause.png")
 pause_button1 = ttk.Button(canvas, image=pic2, command=pause_music)
 pause_button1.grid(row=0, column=2, padx=5)
 
 bottom_canvas = Frame(right_frame)
 bottom_canvas.pack(padx=30, pady=30)
-pic3 = PhotoImage(file="rewind.png")
+pic3 = PhotoImage(file="assests/images/rewind.png")
 rewind_button1 = ttk.Button(bottom_canvas, image=pic3, command=rewind_music)
 rewind_button1.grid(row=0, column=0, pady=10)
 
-pic4 = PhotoImage(file="002-mute.png")
-pic5 = PhotoImage(file="001-volume.png")
+pic4 = PhotoImage(file="assests/images/002-mute.png")
+pic5 = PhotoImage(file="assests/images/001-volume.png")
 vol_button1 = ttk.Button(bottom_canvas, image=pic5, command=mute_music)
 vol_button1.grid(row=0, column=1)
 
