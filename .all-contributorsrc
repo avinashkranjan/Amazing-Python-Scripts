@@ -675,6 +675,35 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Dhanush2612",
+      "name": "Dhanush V",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52505100?v=4",
+      "profile": "https://github.com/Dhanush2612",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "XZANATOL",
+      "name": "XZANATOL",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64689436?v=4",
+      "profile": "https://www.linkedin.com/in/xzanatol/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "deephunt3r",
+      "name": "Rakesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60481830?v=4",
+      "profile": "https://github.com/deephunt3r",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
