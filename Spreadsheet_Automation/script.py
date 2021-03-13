@@ -4,17 +4,17 @@ import pandas as pd
 import plotly.express as px
 
 # storing the dataset
-book_relative_path = input("Enter first dataset")
-book_prices = input("Enter second dataset")
+data1 = input("Enter first dataset")
+data2 = input("Enter second dataset")
 
 # reading the data
-data_prices = pd.read_excel(book_prices)
-data_home_1 = pd.read_excel(book_relative_path)
+data_read_1 = pd.read_excel(data1)
+data_read_2 = pd.read_excel(data2)
 
 #print​(df_prices, df_home_1)
 
-item = input("What is the basis of merging? ")
-data_total = data_home_1.merge(data_prices, on=item)
+reference = input("What is the basis of merging? ")
+data_total = data_read_2.merge(data_read_1, on=reference)
 
 
 #print​(df_total)
