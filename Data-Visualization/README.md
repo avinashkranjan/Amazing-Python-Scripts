@@ -1,31 +1,37 @@
-## Data Visulization
+# Data Visualizations
 
-Data Visualization is the presentation of data in graphical format. It helps people understand the significance of data by summarizing and 
-presenting huge amount of data in a simple and easy-to-understand format and helps communicate information clearly and effectively.
+Data Visualization is the presentation of data in graphical format. It helps people understand the significance of data by summarizing and presenting huge amount of data in a simple and easy-to-understand format and helps communicate information clearly and effectively.
 
-## Setup Instruction
+# Setup Instructions
+For the visualizations, we require plotly and you can install it with the following command
 
-First Open the terminal and write `pip install matplotlib` this will install required package then after make file `program.py` and take any one program out of three and write it 
-and run the `program.py` file . Sit relax and enjoy Data Visualization Process
+```
+pip install plotly
+```
 
+# Outputs
 
-## Output Line Plotting
-  
-<a href="https://postimg.cc/NKPTpDBJ" target="_blank"><img src="https://i.postimg.cc/NKPTpDBJ/Line-Plotting.jpg" alt="Line-Plotting"/></a><br/><br/>
+## 1. Bar Chart
+![Bar Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/BarChart/BarChart.png)
 
-## Output Bar Plotting
+## 2. Bubble Chart
+![Bubble Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/BubbleChart/BubbleChart.png)
 
-<a href="https://postimg.cc/TyzbXPyn" target="_blank"><img src="https://i.postimg.cc/TyzbXPyn/Bar-Plotting.jpg" alt="Bar-Plotting"/></a><br/><br/>
+## 3. Heat Map
+![Heat Map](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/HeatMap/HeatMap.png)
 
-## Output Scatter Plotting
+## 4. Histogram Plot
+![Heat Map](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/HistogramPlot/Histogram.png)
 
-<a href="https://postimg.cc/0M7w5qmF" target="_blank"><img src="https://i.postimg.cc/0M7w5qmF/Scatter-Plotting.jpg" alt="Scatter-Plotting"/></a><br/><br/>
+## 5. Line Chart
+![Line Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/LineChart/LineChart.png)
 
-## Output Histogram Plotting
+## 6. Pie Chart
+![Pie Chart](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/PieChart/PieChart.png)
 
-<a href="https://postimg.cc/Pvh8PFQx" target="_blank"><img src="https://i.postimg.cc/Pvh8PFQx/Histo.png" alt="Histo"/></a><br/><br/>
-  
-## Output PieChart Plotting
+## 7. Scatter Plot
+![Scatter Plot](https://github.com/ELITA04/Amazing-Python-Scripts/tree/master/Data-Visualization/ScatterPlot/ScatterPlot.png)
 
-<a href="https://postimg.cc/4K7cMc3J" target="_blank"><img src="https://i.postimg.cc/4K7cMc3J/Pie.png" alt="Pie"/></a><br/><br/>
+# Author
+![Elita Menezes](https://github.com/ELITA04/) 
 
