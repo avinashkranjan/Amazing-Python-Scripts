@@ -36,8 +36,9 @@ def train_face():
 
             for (x, y, w, h) in face_rect:
                 face = gray[y:y+h, x:x+w]
-                features.append(face)
-                labels.append(label)
+                # remove below 2 lines comment
+                #features.append(face)
+                #labels.append(label)
 
 
 train_face()
