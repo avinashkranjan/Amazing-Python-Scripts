@@ -3,8 +3,6 @@
 ### About this feature:
 
 This is purely a python script to the get profile photos rather download profile photos of all the contacts in our whatsapp contact list.
-- Here we use logger
-- Target the contacts
-- Then, use url of the photos to download the photos.
+
 
 ### This, is a gist of this project..!!
