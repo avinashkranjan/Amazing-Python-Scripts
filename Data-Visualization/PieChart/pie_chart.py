@@ -14,6 +14,8 @@ fig = go.Figure(data=[go.Pie(labels=x, values=y)])
 
 # Adjusting width and height of the image
 fig.layout.template = 'plotly_dark'
+# To display labels with the percentage
+fig.update_traces(textposition = 'inside', textinfo = 'percent+label')
 fig.update_layout(
                 title = 'Pie Chart',
                 xaxis_title = 'X Axis Title',
