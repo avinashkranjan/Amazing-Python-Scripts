@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-79-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-80-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -154,6 +154,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
   <tr>
     <td align="center"><a href="https://elita04.github.io/website/"><img src="https://avatars.githubusercontent.com/u/46682884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elita Menezes</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=ELITA04" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=ELITA04" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Debashish-hub"><img src="https://avatars.githubusercontent.com/u/56837936?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Debashish kumar sahoo</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Debashish-hub" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=Debashish-hub" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/smriti1313"><img src="https://avatars.githubusercontent.com/u/52624997?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Smriti</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=smriti1313" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=smriti1313" title="Documentation">📖</a></td>
   </tr>
 </table>
 
