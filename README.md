@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-85-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-86-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
@@ -162,6 +162,7 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
   </tr>
   <tr>
     <td align="center"><a href="https://ankurgupta.study"><img src="https://avatars.githubusercontent.com/u/31045221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ankur Gupta</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=ankurg132" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=ankurg132" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/soumyavemuri/"><img src="https://avatars.githubusercontent.com/u/60005707?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Soumya Vemuri</b></sub></a><br /><a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=soumyavemuri" title="Code">💻</a> <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/commits?author=soumyavemuri" title="Documentation">📖</a></td>
   </tr>
 </table>
 
