@@ -13,6 +13,7 @@ def realname(path, root=None):
 
 def ptree(startpath, depth=-1):
     prefix=0
+    assert os.path.isdir(startpath),"Directory not valid"
     if startpath != '/':
         if startpath.endswith('/'): startpath=startpath[:-1]
         prefix=len(startpath)
