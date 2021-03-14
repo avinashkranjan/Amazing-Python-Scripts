@@ -834,6 +834,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "ankurg132",
+      "name": "Ankur Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31045221?v=4",
+      "profile": "https://ankurgupta.study",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
