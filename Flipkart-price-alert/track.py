@@ -43,7 +43,7 @@ def priceCheck():
 PRODUCT_URL = input('Enter the product url:')
 THRESHHOLD = float(input('Enter the desired price:'))
 MY_EMAIL = input('Enter the email address that will be used to send alerts:')
-MY_APP_PASSWORD = input('Enter the app password (Check readme for steps to generate app passwords):')
+MY_APP_PASSWORD = input('Enter password:')
 RECEIVER_EMAIL = input('Enter the receiver email:')
 CHECK_AGAIN = int(input('Enter the time between checks in minutes:'))
 
