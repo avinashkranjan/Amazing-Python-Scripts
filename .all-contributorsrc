@@ -704,6 +704,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "vikashkumar2020",
+      "name": "Vikash Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54088750?v=4",
+      "profile": "https://vikashkumar2020.github.io/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
