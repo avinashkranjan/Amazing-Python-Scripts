@@ -18,16 +18,17 @@ r = g = b = xpos = ypos = 0
 
 #function to calculate minimum distance from all colors and get the most matching color
 def get_color_name(R,G,B):
-    minimum = 1000
+    minimum = 10000
     for i in range(len(df)):
         d = abs(R - int(df.loc[i, 'R'])) + abs(G - int(df.loc[i, 'G'])) + abs(B - int(df.loc[i, 'B']))
         if d <= minimum:
+            minimum = d
             cname = df.loc[i, 'color_name']
 
     return cname
 
 #function to get x,y coordinates of mouse double click
-def draw_function(event, x, y, flags, params):
+def draw_function(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDBLCLK:
         global clicked, r, g, b, xpos, ypos
         clicked = True
@@ -54,8 +55,9 @@ while True:
         cv2.putText(img, text, (50,50), 2, 0.8, (255, 255, 255), 2, cv2.LINE_AA)
 
         # For very light colours we will display text in black colour
-        if r+ g+ b>= 600:
+        if (r+ g+ b>= 600):
             cv2.putText(img, text, (50, 50), 2, 0.8, (0, 0, 0), 2, cv2.LINE_AA)
+            clicked = False
 
     # Break the loop when user hits 'esc' key
     if cv2.waitKey(20) & 0xFF == 27:
