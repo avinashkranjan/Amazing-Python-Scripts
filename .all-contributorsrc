@@ -764,6 +764,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "ELITA04",
+      "name": "Elita Menezes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46682884?v=4",
+      "profile": "https://elita04.github.io/website/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
