@@ -10,9 +10,9 @@
 <b>Photo of folder before script was run.
   
   
-  ![](images/before.png)
+  ![](before.png)
 
 <b>Photo of folder after script was run.
   
   
-  ![](images/after.png)
+  ![](after.png)
