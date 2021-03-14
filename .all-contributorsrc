@@ -844,6 +844,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "soumyavemuri",
+      "name": "Soumya Vemuri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60005707?v=4",
+      "profile": "https://www.linkedin.com/in/soumyavemuri/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
