@@ -814,6 +814,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "saaalik",
+      "name": "Md Salik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65087495?v=4",
+      "profile": "https://github.com/saaalik",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
