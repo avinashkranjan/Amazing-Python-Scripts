@@ -1,6 +1,7 @@
 #Directory Tree Generator
 
 import os
+import argparse
 
 def realname(path, root=None):
     if root is not None:
@@ -33,7 +34,7 @@ def ptree(startpath, depth=-1):
             print('{}{}'.format(subindent, realname(f, root=root)))
 
 if __name__ == '__main__':
-    import argparse
+    
 
     print("\nDirectory tree \n")
 

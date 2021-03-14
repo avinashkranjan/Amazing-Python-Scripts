@@ -4,10 +4,10 @@
 A Script useful for visualizing the relationship between files and directories and making their positioning easy.
 - This can be used for implementations as one of the features. 
 
-### Language
+## Language
 - [X] Python
   
-### Instructions to run this application
+## Instructions to run this application
 
   1. Python 3 must be installed in your system.
 
