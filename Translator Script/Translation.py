@@ -1,4 +1,3 @@
-# First Step : Go to cmd and type: pip install googletrans==3.1.0a0
 # Using the Translator Class
 from googletrans import Translator
 # Making Object of Translator Class
