@@ -754,6 +754,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Amit366",
+      "name": "Amit Kumar Mishra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60662775?v=4",
+      "profile": "https://the-awesome-profile-site.netlify.app/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
