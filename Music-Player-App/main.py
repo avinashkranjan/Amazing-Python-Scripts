@@ -193,7 +193,7 @@ mixer.init()
 
 # main_window.geometry("600x300")
 main_window.title("Rockerz")
-main_window.iconbitmap(r"assests/rockerz.ico")
+main_window.iconbitmap("./Music-Player-App/assests/rockerz.ico")
 
 left_frame = Frame(main_window)
 left_frame.pack(side=RIGHT, padx=30, pady=20)
@@ -228,26 +228,26 @@ playlist_box = Listbox(main_window)
 canvas = Frame(right_frame)
 canvas.pack(pady=5)
 
-pic = PhotoImage(file="assests/images/play.png")
+pic = PhotoImage(file="./Music-Player-App/assests/images/play.png")
 play_button1 = ttk.Button(canvas, image=pic, command=Play_music)
 play_button1.grid(row=0, column=0, padx=5)
 
-pic1 = PhotoImage(file="assests/images/stop.png")
+pic1 = PhotoImage(file="./Music-Player-App/assests/images/stop.png")
 stop_button1 = ttk.Button(canvas, image=pic1, command=Stop_music)
 stop_button1.grid(row=0, column=1, padx=5)
 
-pic2 = PhotoImage(file="assests/images/pause.png")
+pic2 = PhotoImage(file="./Music-Player-App/assests/images/pause.png")
 pause_button1 = ttk.Button(canvas, image=pic2, command=pause_music)
 pause_button1.grid(row=0, column=2, padx=5)
 
 bottom_canvas = Frame(right_frame)
 bottom_canvas.pack(padx=30, pady=30)
-pic3 = PhotoImage(file="assests/images/rewind.png")
+pic3 = PhotoImage(file="./Music-Player-App/assests/images/rewind.png")
 rewind_button1 = ttk.Button(bottom_canvas, image=pic3, command=rewind_music)
 rewind_button1.grid(row=0, column=0, pady=10)
 
-pic4 = PhotoImage(file="assests/images/002-mute.png")
-pic5 = PhotoImage(file="assests/images/001-volume.png")
+pic4 = PhotoImage(file="./Music-Player-App/assests/images/002-mute.png")
+pic5 = PhotoImage(file="./Music-Player-App/assests/images/001-volume.png")
 vol_button1 = ttk.Button(bottom_canvas, image=pic5, command=mute_music)
 vol_button1.grid(row=0, column=1)
 
