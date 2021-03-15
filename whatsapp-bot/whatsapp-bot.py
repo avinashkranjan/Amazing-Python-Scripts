@@ -3,7 +3,7 @@ from time import sleep
 
 from pandas import read_csv
 from selenium import webdriver
-from Voice_control_Module.py import *
+from Voice_control_Module import *
 
 
 def loadText():
