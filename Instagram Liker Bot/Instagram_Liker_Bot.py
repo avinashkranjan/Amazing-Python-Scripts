@@ -25,7 +25,7 @@ search_bar.send_keys(Keys.ENTER)
 
 time.sleep(2)
 
-post = chrome.find_element_by_xpath('/html/body/div[1]/section/main/div/div[2]/article/div[1]/div/div[1]/div[1]/a/div[1]/div[2]')
+post = chrome.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div[3]/article/div[1]/div/div[1]/div[1]/a/div[1]/div[2]')
 post.click()
 time.sleep(2)
 like_button= chrome.find_element_by_xpath('/html/body/div[5]/div[2]/div/article/div[3]/section[1]/span[1]/button')
