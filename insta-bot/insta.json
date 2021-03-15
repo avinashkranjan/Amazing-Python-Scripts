@@ -1,18 +1,18 @@
 {
     "user_data": {
-        "user_name": "user_name_main",
-        "user_password": "user_password_main"
+        "user_name": "sample-username",
+        "user_password": "password"
     },
 
     "target_data": {
         "user_1": {
-            "user_name_1": "user_name_1",
-            "user_actual_name_1": "user_actual_name_1"
+            "user_name_1": "chitra_grapher",
+            "user_actual_name_1": "adfh"
         },
 
         "user_2": {
-            "user_name_2": "user_name_2",
-            "user_actual_name_2": "user_actual_name_2"
+            "user_name_2": "zendaya",
+            "user_actual_name_2": "sngs"
         }
     } 
 }
