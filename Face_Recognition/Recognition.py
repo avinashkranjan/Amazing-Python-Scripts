@@ -13,7 +13,7 @@ face_recognizer = cv.face.LBPHFaceRecognizer_create()
 # We are using the trained yml file.
 face_recognizer.read('face_trained.yml')
 
-# img = cv.imread(r'images\henry\13.jpg')
+img = cv.imread(r'images\henry\13.jpg')
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Person', gray)
@@ -24,8 +24,9 @@ for (x, y, w, h) in faces_rect:
     faces = gray[y:y+h, x:x+h]
 
     label, confidence = face_recognizer.predict(faces)
-    cv.putText(img, str(people[label]), (20, 20), cv.FONT_HERSHEY_COMPLEX, 1.0,
-               (0, 255, 0), thickness=2)
+    print(f'Label = {people[label]} with a confidence of {confidence}')
+    
+    cv.putText(img, str(people[label]), (20, 20), cv.FONT_HERSHEY_COMPLEX, 1.0,(0, 255, 0), thickness=2)
     cv.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), thickness=2)
 
 cv.imshow('detected face', img)

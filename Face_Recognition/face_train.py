@@ -18,31 +18,25 @@ haar_cascade = cv.CascadeClassifier('haar_face.xml')
 features = []
 labels = []
 
-
-def train_face():
+def train_face(features):
     for person in people:
         path = os.path.join(DIR, person)
         label = people.index(person)
 
         for img in os.listdir(path):
             img_path = os.path.join(path,img)
-
+            
             img_arr = cv.imread(img_path, flags=None)
-            if img_arr is None:
-                continue
-            gray = cv.cvtColor(img_arr, cv.COLOR_BGR2GRAY)
+            img_arr = np.array(img_arr)
+            gray = cv.cvtColor(np.float32(img_arr), cv.COLOR_BGR2GRAY)
 
             face_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
 
             for (x, y, w, h) in face_rect:
                 face = gray[y:y+h, x:x+w]
-                # remove below 2 lines comment
-                #features.append(face)
-                #labels.append(label)
-
-
-train_face()
-
+                features.append(face)
+                labels.append(label)
+train_face(features)
 # Feature and labels numpy array
 features = np.array(features, dtype='object')
 labels = np.array(labels)
@@ -51,7 +45,7 @@ labels = np.array(labels)
 face_recognizer = cv.face.LBPHFaceRecognizer_create()
 
 # Trained on features and the labels list
-face_recognizer.train(features, labels)
+face_recognizer.train(features,labels)
 
 # Just like haar cascade yml file, we can save this file in yml format so that
 # we can easily access this trained model
@@ -59,6 +53,5 @@ face_recognizer.save('face_trained.yml')
 
 # save the features and labels into the numpy file
 # simply remove the comments of the below 2 line
-#
-# np.save('features.npy', features)
-# np.save('labels.npy',labels)
+np.save('features.npy', features)
+np.save('labels.npy',labels)
