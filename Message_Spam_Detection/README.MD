@@ -26,10 +26,10 @@ NA
 ## Output
 
 - Model Accuracy:
- - Multinomial: 0.965
- - Decision Tree: 0.977
- - Random Forest: 0.982
- - Random Forest(with KFfold cross validation): 0.994
+    - Multinomial: 0.965
+    - Decision Tree: 0.977
+    - Random Forest: 0.982
+    - Random Forest(with KFfold cross validation): 0.994
 
 ## Author(s)
 
