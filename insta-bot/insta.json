@@ -1,0 +1,18 @@
+{
+    "user_data": {
+        "user_name": "user_name_main",
+        "user_password": "user_password_main"
+    },
+
+    "target_data": {
+        "user_1": {
+            "user_name_1": "user_name_1",
+            "user_actual_name_1": "user_actual_name_1"
+        },
+
+        "user_2": {
+            "user_name_2": "user_name_2",
+            "user_actual_name_2": "user_actual_name_2"
+        }
+    } 
+}
