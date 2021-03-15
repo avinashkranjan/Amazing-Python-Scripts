@@ -19,7 +19,7 @@ for stock in df[stocks]:
             stock_info = yf.Ticker(stock)
             
             hist = stock_info.history(period=days)
-            previous_averaged_volume = hist['Volume'].iloc[1:period-1:1].mean()
+            previous_averaged_volume = hist['Volume'].iloc[1:days-1:1].mean()
             todays_volume = hist['Volume'][-1]
             
             if todays_volume > previous_averaged_volume * timesincrease:
