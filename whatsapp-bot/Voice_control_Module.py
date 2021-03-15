@@ -31,4 +31,3 @@ def takeCommand():
         # print(e)
         print("Say that again please...")
         return "None"
-      
