@@ -3,8 +3,8 @@ import pandas  as pd
 import pickle
 
 # Function to let user choose from various options
-def let_user_pick(options):
-    print("Enter the Sector of Work:")
+def let_user_pick(options, str):
+    print(f"Enter the {str}")
     for idx, element in enumerate(options):
         print("{}) {}".format(idx+1,element))
     i = input("Enter number: ")
@@ -28,12 +28,12 @@ df = pd.DataFrame(data, columns = ['Sector','python_yn','job_sim','R_yn','tablea
 
 # Take Sector as an input from user
 sectors = ['Information Technology','Business Services','Education','Business Services','Finance', 'Government','Travel & Tourism']
-sect = let_user_pick(sectors)
+sect = let_user_pick(sectors, 'Sector')
 df['Sector'][0] = sect 
 
 # Take job role as an input from user 
 job_role = ['Software Enginner', 'data scientist', 'data engineer', 'analyst', 'Machine Learnig Engineer', 'director', 'manager']
-job_simp = let_user_pick(job_role)
+job_simp = let_user_pick(job_role, 'Job Role')
 if job_simp == 'Software Engineer':
 	job_simp = 'na'
 elif job_simp == 'Machine Learnig Engineer':
@@ -60,17 +60,17 @@ Deep_Learning = know_language(input('Do you know Deep Learning?(Y/N)'))
 df['dl'][0] = Deep_Learning
 
 #Load the model 
-with open('models/random_forest2_model.sav', 'rb') as f:
-   regressor = pickle.load(f)
+with open('../Salary Predictor/models/random_forest2_model.sav', 'rb') as f:
+   random_forest_model = pickle.load(f)
 
 # load the columns file 
-with open('models/model_columns1.pkl', 'rb') as f:
+with open('../Salary Predictor/models/model_columns1.pkl', 'rb') as f:
    model_columns = pickle.load(f)
  
 # Query into the model to fet results
 query_ = pd.get_dummies(pd.DataFrame(df, index = [0]), prefix=['Sector','job_sim'], columns=['Sector','job_sim'])
 query = query_.reindex(columns = model_columns, fill_value= 0)
-prediction = list(regressor.predict(query))
+prediction = list(random_forest_model.predict(query))
 final_val = round(prediction[0],2)
 
 print(f'Your Estimated Annual Salary will be {final_val}K Dollars')
