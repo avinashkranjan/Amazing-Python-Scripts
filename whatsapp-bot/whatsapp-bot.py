@@ -71,7 +71,7 @@ xpaths = {
 if __name__ == "__main__":
     speak("Schedule the message ? say y or n")
     response = takeCommand()
-    respond.upper()
+    response.upper()
     if response.upper() == "Y":
         scheduler()
     # Initialize Drivers
