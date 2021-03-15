@@ -43,21 +43,21 @@ def sendMessage(userNums, message):
 def scheduler():
     """[Schedule the message]"""
     speak("say year")
-    year = takecommand()
+    year = takeCommand()
 
     speak("say month")
-    month = takecommand()
+    month = takeCommand()
 
     speak("say day")
-    day = takecommand()
+    day = takeCommand()
 
     speak("say hours")
-    hours = takecommand()
+    hours = takeCommand()
 
     speak("say minute")
-    minute = takecommand()
+    minute = takeCommand()
 
-    scheduleDateTime = datetime(year, month, day, hour, minute)
+    scheduleDateTime = datetime(year, month, day, hours, minute)
     timeDiff = scheduleDateTime - datetime.now()
     sleep(timeDiff.total_seconds())
 
@@ -70,8 +70,8 @@ xpaths = {
 
 if __name__ == "__main__":
     speak("Schedule the message ? say y or n")
-    response = takecommand()
-    resopnd.upper()
+    response = takeCommand()
+    respond.upper()
     if response.upper() == "Y":
         scheduler()
     # Initialize Drivers
@@ -82,10 +82,10 @@ if __name__ == "__main__":
     print("Scan the QR code to authenticate")
     sleep(15)
     speak("say user name")
-    userNums = takecommand()
+    userNums = takeCommand()
 
     speak("say message")
-    message = takecommand()
+    message = takeCommand()
 
     sendMessage(userNums, message)
     driver.close()
