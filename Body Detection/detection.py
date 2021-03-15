@@ -18,7 +18,7 @@ while True:
     gray_img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
      
     # Detect the full body
-    faces = body_cascade.detectMultiScale(gray_img, 1.5, 1)
+    faces = body_cascade.detectMultiScale(gray_img, 1.1, 1)
      
     #display rectangle
     for (x, y, w, h) in faces:
