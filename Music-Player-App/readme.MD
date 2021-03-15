@@ -1,5 +1,4 @@
-# Music-Player
-=======
+
 # Music Player App Using Pygame and Mutagen
 
 
@@ -27,14 +26,14 @@ Rockerz Music Player written in Python using [PyGame Module](https://www.pygame.
  ```
  python main.py
 ```
-# Screenshot
+## Screenshot
 ![Rockerzz Music Player](https://github.com/robin025/Amazing-Python-Scripts/blob/music-player-robin/Music-Player-App/assests/screenshot/Screenshot.png)
 
 
-# ScreenShot
 
 
-# Features
+
+## Features
 1. Next song
 2. Previous song
 3. Pause/Stop any song
