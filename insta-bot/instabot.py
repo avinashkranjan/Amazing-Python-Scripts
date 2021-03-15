@@ -7,10 +7,10 @@ from time import sleep
 
 def getCredentials():
     cred = []
-    with open('insta-bot/username.txt', 'r') as text_file:
+    with open('insta-bot/insta.json', 'r') as text_file:
         userName = text_file.readline()
         cred.append(userName)
-    with open('insta-bot/password.txt', 'r') as text_file:
+    with open('insta-bot/insta.json', 'r') as text_file:
         password = text_file.readline()
         cred.append(password)
     return cred
@@ -45,9 +45,9 @@ def unfollow(userNames):
 
 
 def getUserNames():
-    """[gets a list of usernames from 'people.csv' file]
+    """[gets a list of usernames from 'insta.json' file]
     """
-    data = read_csv('insta-bot/people.csv')
+    data = read_csv('insta-bot/insta.json')
     userNames = []
     for names in data['Username']:
         userNames.append(names)
