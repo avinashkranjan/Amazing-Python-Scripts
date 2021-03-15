@@ -16,6 +16,6 @@ If you are using some other web browser, replace ‘chrome’ by the name of tha
 Modules and tools used:
 Selenium, getpass and time
 
-Development status: This is a complete version and the future version might function in adding auto-comments as w
+Development status: This is a complete version and the future version might function in adding auto-comments as well
 
 BY SAYANTANI SAHA
