@@ -60,11 +60,11 @@ Deep_Learning = know_language(input('Do you know Deep Learning?(Y/N)'))
 df['dl'][0] = Deep_Learning
 
 #Load the model 
-with open('../Salary Predictor/models/random_forest2_model.sav', 'rb') as f:
+with open('./Salary Predictor/models/random_forest2_model.sav', 'rb') as f:
    random_forest_model = pickle.load(f)
 
 # load the columns file 
-with open('../Salary Predictor/models/model_columns1.pkl', 'rb') as f:
+with open('./Salary Predictor/models/model_columns1.pkl', 'rb') as f:
    model_columns = pickle.load(f)
  
 # Query into the model to fet results
