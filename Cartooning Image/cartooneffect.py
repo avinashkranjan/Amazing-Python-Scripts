@@ -1,8 +1,11 @@
 import cv2 
 import numpy as np 
-  
+import Image
+
+imageFileName = raw_input("enter the image name with absolute path ")
+
 # reading image  
-img = cv2.imread("koala.jpeg") 
+img = cv2.imread("imageFileName") 
    
 # Edges 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
