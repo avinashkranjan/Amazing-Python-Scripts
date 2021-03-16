@@ -24,9 +24,9 @@ if __name__ == '__main__':
     resulthreads = ezgmail.search(newquery) # search functions accepts all the operators described at https://support.google.com/mail/answer/7190?hl=en
 
     if len(resulthreads) == 0:
-        print("Result has no attachments")  # Executed if results don't have attachment
+        print("Result has no attachments:")  # Executed if results don't have attachment
     else:
-        print("Result(s): ")
+        print("Result(s) with attachments:")
         for threads in resulthreads:
             print(f"Email Subject: {threads.messages[0].subject}")  # prints the subject line of email thread in results
         try:
