@@ -8,9 +8,6 @@ playing = True
 # CLASSES
 
 class Card:  # Creates all the cards
-          
-    suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
-    ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
 
     def __init__(self, suit, rank):
         self.suit = suit
@@ -21,11 +18,14 @@ class Card:  # Creates all the cards
 
 
 class Deck:  # creates a deck of cards
-
+          
+    suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
+    ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
+  
     def __init__(self):
         self.deck = []  # haven't created a deck yet
-        for suit in suits:
-            for rank in ranks:
+        for suit in Deck.suits:
+            for rank in Deck.ranks:
                 self.deck.append(Card(suit, rank))
 
     def __str__(self):
