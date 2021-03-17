@@ -4,7 +4,7 @@
 import cv2
 
 #read the  image
-img = cv2.imread('default.jpg')
+img = cv2.imread('Desktop/Pictures/default.jpg') #Read the img from its location relative to py file
 
 #preparation for CLAHE
 clahe= cv2.createCLAHE()
