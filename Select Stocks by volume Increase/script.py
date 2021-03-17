@@ -1,9 +1,12 @@
 import yfinance as yf
 import pandas as pd
+from alpha_vantage.timeseries import TimeSeries
+import time
+import os
 
 print("1) Dataset comparison of stocks")
 print("2) Real time comparison of stocks")
-ch = input("Enter choice: ")
+ch = int(input("Enter choice: "))
 if(ch==1):
   data = input("Enter file path: ")
   df = pd.read_csv(data)
@@ -34,21 +37,13 @@ if(ch==1):
   print(increased_stocks)
 
 
-else:
-  import pandas as pd
-  from alpha_vantage.timeseries import TimeSeries
-  import time
+elif(ch==2):
 
-  api_key = 'IJP88YSA0WASY3X0'
+  api_key = os.environ['api_key']
   stocks=input("Name of the stock: ")
-  period=input("Interval for comparison with units: ")
   
   ts = TimeSeries(key=api_key, output_format='pandas')
-  data, meta_data = ts.get_intraday(symbol=stocks, interval = period, outputsize = "full")
-  print(data)
-
-  i = 1
-
+  data, meta_data = ts.get_intraday(symbol=stocks, interval = '5min', outputsize = "full")
 
   close_data = data['4. close']
   percentage_change = close_data.pct_change()
@@ -59,4 +54,7 @@ else:
 
   if abs(last_change) > 0.0004:
      print("Stock Alert:" + str(last_change))
+
+else:
+    print("Invalid choice")
 

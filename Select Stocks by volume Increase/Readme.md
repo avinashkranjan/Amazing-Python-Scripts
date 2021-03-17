@@ -31,7 +31,9 @@
 
     - pandas
     - yfinance
-
+    - alpha_vantage.timeseries
+    - time
+    
 ## Author
    
    Amit Kumar Mishra
