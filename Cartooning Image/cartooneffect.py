@@ -1,25 +1,23 @@
-import cv2 
-import numpy as np 
-import Image
+  
+import cv2
+import numpy as np
+from tkinter.filedialog import *
 
-imageFileName = raw_input("enter the image name with absolute path ")
+photo = askopenfilename()
+img = cv2.imread(photo)
 
-# reading image  
-img = cv2.imread("imageFileName") 
-   
-# Edges 
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
-gray = cv2.medianBlur(gray, 5) 
-edges = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C,  
-                                         cv2.THRESH_BINARY, 9, 9) 
-   
-# Cartoonization 
-color = cv2.bilateralFilter(img, 9, 250, 250) 
-cartoon = cv2.bitwise_and(color, color, mask=edges) 
-   
-   
-cv2.imshow("Image", img) 
-cv2.imshow("edges", edges) 
-cv2.imshow("Cartoon", cartoon) 
-cv2.waitKey(0) 
-cv2.destroyAllWindows() 
+grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+grey = cv2.medianBlur(grey, 5)
+edges = cv2.adaptiveThreshold(grey, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)
+
+#cartoonize
+color = cv2.bilateralFilter(img, 9, 250, 250)
+cartoon = cv2.bitwise_and(color, color, mask = edges)
+
+cv2.imshow("Image", img)
+cv2.imshow("Cartoon", cartoon)
+
+#save
+cv2.imwrite("cartoon.jpg", cartoon)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
