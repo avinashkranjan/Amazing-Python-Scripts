@@ -12,7 +12,7 @@ Label(root,text = 'Copy the link of the video you want to download from YouTube'
 link = StringVar()
 
 Label(root, text = 'Paste Link Here:', font = 'arial 15 bold').place(x = 270 , y = 60)
-link_enter = Entry(root, width = 80,textvariable = link).place(x = 32, y = 90)
+Entry(root, width = 80,textvariable = link).place(x = 32, y = 90)
 
 #function to download video
 
