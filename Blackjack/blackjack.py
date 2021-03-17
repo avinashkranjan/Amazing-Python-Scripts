@@ -54,7 +54,7 @@ class Hand:   # show all the cards that the dealer and player have
 
     def add_card(self, card):  # add a card to the player's or dealer's hand
         self.cards.append(card)
-        self.value += values[card.rank]
+        self.value += Hand.values[card.rank]
         if card.rank == 'Ace':
             self.aces += 1
 
