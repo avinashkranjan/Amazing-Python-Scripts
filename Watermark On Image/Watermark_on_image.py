@@ -1,13 +1,16 @@
 #Import required Image library
 from PIL import Image, ImageDraw, ImageFont
 
-#Create an Image Object from an Image
-im = Image.open('test_image.jpg')
+
+path = input("Input the path of the image: ")
+path = path.strip('""')
+im = Image.open(path)
 width, height = im.size
 
 draw = ImageDraw.Draw(im)
-text = "Amazing Python Scripts"
 
+#input the text that needs to be printed
+text = input('Enter the text for the watermark: ' )
 font = ImageFont.truetype('arial.ttf', 60 )
 textwidth, textheight = draw.textsize(text, font )
 
