@@ -47,12 +47,6 @@ def winning_move(board, piece):
             if board[r][c]==piece and board[r+1][c+1]==piece and board[r+2][c+2]==piece and board[r+3][c+3]==piece:
                 return True
 
-
-
-
-
-
-
     #CHECK NEGATIVE DIAGONALS
     for c in range(COLUMN_COUNT-3):
         for r in range(3,ROW_COUNT):
@@ -69,9 +63,6 @@ def draw_board(board):
         for r in range(ROW_COUNT):
             if board[r][c]==1:
                 pygame.draw.circle(screen,RED,(int(c*SQUARESIZE+SQUARESIZE/2),height-int(r*SQUARESIZE+SQUARESIZE/2)),RADIUS)
-
-
-
 
             elif board[r][c]==2:
                 pygame.draw.circle(screen,YELLOW,(int(c*SQUARESIZE+SQUARESIZE/2),height-int(r*SQUARESIZE+SQUARESIZE/2)),RADIUS)
@@ -120,23 +111,9 @@ while not game_over:
             #print(event.pos)
             pygame.draw.rect(screen,BLACK,(0,0,width,SQUARESIZE))
 
-
-
-
-
-
-
-
-
-
-
             if turn==0:
                 posx=event.pos[0]
                 col=int(math.floor(posx/SQUARESIZE))
-
-
-
-
 
                 if is_valid_location(board,col):
                     row=get_next_open_row(board,col)
@@ -149,19 +126,9 @@ while not game_over:
                         screen.blit(label,(40,10))
                         game_over=True
 
-
-
-
-
-
             else:
                 posx=event.pos[0]
                 col=int(math.floor(posx/SQUARESIZE))
-
-
-
-
-
 
                 if is_valid_location(board,col):
                     row=get_next_open_row(board,col)
@@ -172,10 +139,6 @@ while not game_over:
                         label=myfont.render("Player 2 wins!!",1,YELLOW)
                         screen.blit(label,(40,10))
                         game_over=True
-
-
-
-
 
             print_board(board)
             draw_board(board)
