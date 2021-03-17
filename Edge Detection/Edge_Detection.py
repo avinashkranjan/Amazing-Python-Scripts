@@ -19,3 +19,4 @@ final=cv.Canny(gray,100,200)
 print('Number of edges'+ '=' +str(len(final)))     #printing Number of edges
 cv.imshow('Final',final)
 cv.waitKey(0)
+cv.destroyAllWindows()
