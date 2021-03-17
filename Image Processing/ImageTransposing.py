@@ -4,7 +4,7 @@
 from PIL import Image
 
 #opening the image
-img = Image.open('default.jpg')
+img = Image.open('Home/Pictures/default.jpg')
 
 #transpose of the matrix
 transposed_img=img.transpose(Image.FLIP_LEFT_RIGHT)
