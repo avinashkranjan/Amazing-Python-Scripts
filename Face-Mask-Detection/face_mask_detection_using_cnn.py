@@ -9,6 +9,9 @@ from keras.preprocessing.image import img_to_array
 from tensorflow.keras import backend
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
+from sklearn.metrics import classification_report
+import sklearn.metrics as metrics
+import itertools
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
@@ -48,9 +51,9 @@ def data_set(dir_data):
     data = np.array(data, dtype="float") / 255.0
     target = tf.keras.utils.to_categorical(np.array(target), num_classes=2)
     return data, target
-training_data, training_target=data_set('/kaggle/input/face-mask-detection/train/')
-testing_data, testing_target=data_set('/kaggle/input/face-mask-detection/test/')
-valid_data, valid_target=data_set('/kaggle/input/face-mask-detection/valid/')
+training_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/train/')
+testing_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/test/')
+valid_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/valid/')
 plt.figure(0, figsize=(100,100))
 for i in range(1,10):
     plt.subplot(10,5,i)
@@ -105,9 +108,6 @@ print('accuracy= ',loss," loss= ",loss)
 yhat = model.predict(testing_data)
 test_pred=np.argmax(yhat,axis=1)
 testing_target=np.argmax(testing_target,axis=1)
-from sklearn.metrics import classification_report
-import sklearn.metrics as metrics
-import itertools
 report = classification_report(testing_target, test_pred)
 print(report)
 def plot_confusion_matrix(cm, classes,
