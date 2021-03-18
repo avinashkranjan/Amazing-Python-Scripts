@@ -1,7 +1,7 @@
 # Air pollution Prediction
 _______________________________________________________________________
 
-##What is it?
+## What is it?
 
 This helps you find the levels of Air pollution plotted graphically with a provided dataset.
 
