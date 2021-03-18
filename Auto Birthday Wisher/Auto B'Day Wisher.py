@@ -7,8 +7,8 @@ current_path = os.getcwd()
 print(current_path)
 os.chdir(current_path)                                                  # Changing the Path of the directory in which you are currently working
 
-GMAIL_ID = '</ Enter your email here />'                                # Give your mail here from which you want to send the wishes
-GMAIL_PSWD = '</ Enter password for your email here />'                  # Give your mail password
+GMAIL_ID = input("Enter your email: ")                                  # Give your mail here from which you want to send the wishes
+GMAIL_PSWD = input("Enter password for your email mentioned above: ")   # Give your mail password
 
 
 def sendEmail(to, sub, msg):
@@ -22,7 +22,6 @@ def sendEmail(to, sub, msg):
 
 if __name__ == "__main__":
     df = pd.read_excel("data.xlsx")                                     # the datasheet where the data of the friends is stored
-    print(df)
     today = datetime.datetime.now().strftime("%d-%m")
     yearNow = datetime.datetime.now().strftime("%Y")
 
@@ -31,7 +30,6 @@ if __name__ == "__main__":
         bday = item['Birthday']
         bday = datetime.datetime.strptime(bday, "%d-%m-%Y")
         bday = bday.strftime("%d-%m")
-        print(bday)
         if(today == bday) and yearNow not in str(item['LastWishedYear']):
             sendEmail(item['Email'], "Happy Birthday", item['Dialogue'])    # calling the sendmail function
             writeInd.append(index)
