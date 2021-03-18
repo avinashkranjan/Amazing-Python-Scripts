@@ -51,9 +51,9 @@ def data_set(dir_data):
     data = np.array(data, dtype="float") / 255.0
     target = tf.keras.utils.to_categorical(np.array(target), num_classes=2)
     return data, target
-training_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/train/')
-testing_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/test/')
-valid_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/valid/')
+training_data,training_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/train/')
+testing_data,testing_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/test/')
+valid_data,valid_target=data_set('./Face-Mask-Detection/kaggle/input/face-mask-detection/valid/')
 plt.figure(0, figsize=(100,100))
 for i in range(1,10):
     plt.subplot(10,5,i)
