@@ -14,7 +14,7 @@ if(ch==1):
   stocks = input("Enter column heading of stocks: ")
   days = input("Enter number of days for comparision: ")
   timesincrease = input("Enter number of times increase in volume required: ")
-  print(df[stocks])
+
   increased_stocks = []
 
   for stock in df[stocks]:
@@ -48,7 +48,7 @@ elif(ch==2):
   close_data = data['4. close']
   percentage_change = close_data.pct_change()
 
-  print(percentage_change)
+  print("Percentage Change: " + str(percentage_change))
 
   last_change = percentage_change[-1]
 
