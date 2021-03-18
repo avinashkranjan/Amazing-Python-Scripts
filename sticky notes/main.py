@@ -13,12 +13,13 @@ def display():
     root = tk.Tk()
     root.title("Sticky notes")
     root.geometry("400x400")
-    # changes the width and height of the GUI.
+    # changes size of the GUI.
     tk.Label(root, text=current_time).pack()
-    # prints out the current time.
     tk.Label(root, text=note).pack()
     # prints the inputed text by user.
     root.mainloop()
     # keeps the sticky notes open and display text until the program is closed.
 
 display()
+
+
