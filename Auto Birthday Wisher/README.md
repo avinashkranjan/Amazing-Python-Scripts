@@ -12,12 +12,7 @@ built on top of the Python programming language.
 pip install pandas
 ```
 
-- **OpenPyxl** is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
-```bash
-pip install openpyxl
-```
-
-- **datetime** is a module used for Encapsulation of date/time values.
+- **Datetime** is a module used for Encapsulation of date/time values.
 ```bash
 pip install DateTime
 ```
