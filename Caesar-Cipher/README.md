@@ -13,5 +13,3 @@ python3 caesar_cipher.py
 ### Output:
 
 ![](output.png)
-
-> Learn more about this [here.](https://www.youtube.com/watch?v=fR8rVR72a6o)
