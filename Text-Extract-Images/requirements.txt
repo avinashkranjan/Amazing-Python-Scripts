@@ -1,2 +1,2 @@
 pytesseract==0.3.6
-Pillow==8.0.1
+Pillow==8.1.1
