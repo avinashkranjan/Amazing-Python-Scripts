@@ -28,7 +28,7 @@ def webhook_handle():
             },
             'message': {"text": "hello, world!"}
         }
-        response = requests.post('https://graph.facebook.com/v5.0/me/messages?access_token=EAALWPZAiZB5dwBABbi98woPPOROy7F0HnmO4kdIehvTy4q2XeQnmhxZATCAr1M0cMV54lUkZAFzaeAYbBKklfS9aOgruZAau0Nv04SpU8EQxOhkLcZCVdxDqLxQBZAnRlZCM6TDGSfZAwcAFqykfHzFosHo0l5Ol5osHFMR4QkLnh0LMZArBarydXb0qJoZBdGgqcYZD',
+        response = requests.post('https://graph.facebook.com/v5.0/me/messages?access_token=',
                                 json=request_body).json()
     return 'ok'
 
