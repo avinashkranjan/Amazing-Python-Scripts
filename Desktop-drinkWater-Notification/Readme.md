@@ -15,4 +15,4 @@ This python script helps user to drink more water in a day as per her body neede
 ![Output](output.jpg)
 
 ## Author
-Prathamesh Borse [(viraldevpb)](https://github.com/viraldevpb)
+Prathamesh Borse [viraldevpb](https://github.com/viraldevpb)
