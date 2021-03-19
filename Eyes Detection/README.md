@@ -5,7 +5,7 @@ It is going to detect your eyes and count the number of eyes
 ---------------------------------------------------------------------
 
 ## Modules Used
--opencv
+- opencv
 
 
 ## How it works
