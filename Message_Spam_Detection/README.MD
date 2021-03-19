@@ -21,11 +21,8 @@ Short description of package/script
 NA
 
 ## Output
-
-- Model Accuracy:
-    - Multinomial Model:  0.9245647969052224
-    - Decision Tree:  0.9729206963249516
-    - Random Forest:  0.9816247582205029
+>> Hello, I am James Bond: Not Spam
+>> Winner! Winner! Winner! Congrats! Call at xyz or email us at james@gmail.com to claim your prize! Limited Time Offer!: Spam
 ## Author(s)
 
 Nisarg Kapkar
