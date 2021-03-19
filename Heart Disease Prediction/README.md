@@ -1,7 +1,7 @@
-# Heart disease prediction
+## Heart disease prediction
 This python script uses a machine learning model to predict whether a person has heart disease or not.
 
-# How to run program
+## How to run program
 **1.**  Fork [this](https://github.com/avinashkranjan/Amazing-Python-Scripts) repository.
 
 **2.**  Clone your forked copy of the project.
