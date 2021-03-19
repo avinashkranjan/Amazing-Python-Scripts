@@ -26,4 +26,6 @@ This project uses the following API for getting the stats
   ACCESS_TOKEN = "random token"
 ''' 
 Now send a message from messenger from your facebook page and get corresponding stats
-  
+ ![messenger-1](https://user-images.githubusercontent.com/73653978/111796544-4a97fa00-88ee-11eb-9e8a-e22031a6d665.PNG)
+![messenger-2](https://user-images.githubusercontent.com/73653978/111796445-318f4900-88ee-11eb-9db0-07bc8c765bae.PNG)
+![messenger-3](https://user-images.githubusercontent.com/73653978/111796633-5e436080-88ee-11eb-9f2e-f8e257bf43fb.PNG)
