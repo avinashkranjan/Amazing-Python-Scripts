@@ -10,7 +10,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #reading the dataset 
-msg=pd.read_csv("final.csv",encoding='latin-1')
+msg=pd.read_csv("Cleaned_Dataset.csv",encoding='latin-1')
 msg.drop(['Unnamed: 0'],axis=1,inplace=True)
 
 #seperating target and features
