@@ -15,7 +15,7 @@ USERNAME='enter username'
 PASSWORD='enter password'
 
 browser = webdriver.Chrome(
-    executable_path='C:/Users/VIVEK/Desktop/chromedriver.exe')
+    executable_path='chromedriver.exe')
 
 browser.get('https://www.instagram.com/')
 wait = WebDriverWait(browser, 120)
