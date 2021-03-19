@@ -37,7 +37,7 @@ def convert(now):
     # To create the folder in sketches of that filename
     # And this folder will contain all images as transition to sketch
 
-    parent_dir = f'C:\\Users\\Hp\\Programming\\Python\\sketch\\sketches'
+    parent_dir = f'.\\ImageToSketch\\sketches'
     path = os.path.join(parent_dir, directory)
     try:
         os.mkdir(path)

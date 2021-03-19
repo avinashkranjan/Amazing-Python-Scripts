@@ -21,14 +21,7 @@ Menu driven script- takes either the path of the image from the user or captures
 ![](https://i.postimg.cc/XqN6sGZb/Hulk-Final-Sketch.jpg)
 - Hulk folder
 ![](https://i.postimg.cc/Wz9LCNrJ/Hulk-Folder.jpg)
-- Running the script
-![](https://i.postimg.cc/qv6VDd7z/Runningof-Script.jpg)
-- Vaishnavi Shah sketch
-![](https://i.postimg.cc/BZN0XgyQ/Vaishnavi-Shah-Final-Sketch.jpg)
-- Vaishnavi Shah folder
-![](https://i.postimg.cc/ZKRh3NtP/Vaishnavi-Shah-Folder.jpg)
-- Webcam capture
-![](https://i.postimg.cc/YqsBxSM5/Webcam-Capture.jpg)
 
-#### By [Vaishnavi Shah](https://github.com/vaishnavirshah)
+
+## By [Vaishnavi Shah](https://github.com/vaishnavirshah)
  
