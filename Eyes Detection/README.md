@@ -1,6 +1,6 @@
 
 <h1 align="center"> Body Detection</h1>
-It is going to detect your eyes and count the number os eyes
+It is going to detect your eyes and count the number of eyes
 
 ---------------------------------------------------------------------
 
