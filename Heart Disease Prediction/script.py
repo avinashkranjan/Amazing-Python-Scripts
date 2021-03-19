@@ -36,7 +36,7 @@ print("[+] Enter number of major vessels (0-3) colored by flourosopy")
 data["ca"] = int(input())
 print("[+] Enter 3 = normal, 6 = fixed defect, 7 = reversable defect")
 data["thal"] = int(input())
-model = pickle.load(open("./heart_model.pkl", "rb"))
+model = pickle.load(open("./Heart Disease Prediction/heart_model.pkl", "rb"))
 arr = pd.DataFrame(
     [
         [
