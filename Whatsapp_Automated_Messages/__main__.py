@@ -29,7 +29,7 @@ def get_message():             # it will help us to fetch the messages
 
 def post_response(message):               # to post our desire response
     global x, y
-    postion= pt.locateOnScreen("Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
+    position= pt.locateOnScreen("Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
     x=position[0]
     y=position[1]
     pt.moveTo(x+200, y+20)
@@ -63,7 +63,7 @@ def process_responses(message):        # to check what is the response sutaible 
         if random_no==0:
             return "Talk to you later"
 
-        elif randm_no==1:
+        elif random_no==1:
             return "Will catch you in sometime"
 
         else:
@@ -87,7 +87,7 @@ def new_message_check():       # to keep checking if new message is received
 
         if pt.pixelMatchesColor(int(x+50),int(y-35),(255,255,255), tolerance=10):
             print("is white")
-            processed_message= process_response(get_message())
+            processed_message= process_responses(get_message())
             post_response(processed_message)
 
         else:
