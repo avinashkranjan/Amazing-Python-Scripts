@@ -1,4 +1,4 @@
-# Package/Script Name
+# News Scrapper (India Today)
 
 This Script is used to get top 10 headlines from India Today based on the category entered by user and stores it in a CSV file.  
 
