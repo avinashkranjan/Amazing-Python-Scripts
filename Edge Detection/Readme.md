@@ -13,7 +13,7 @@ This script uses `OpenCV` for taking input and output for the image. In this we 
 * **OpenCV**
 * **Google Colab**
 ## Sample Input/Output
-<img src ="https://github.com/ShubhamGupta577/Testing/blob/main/Sample_Input.jpg" width=400/> <img src ="https://github.com/ShubhamGupta577/Testing/blob/main/Sample_Output.png" width=400/>
+<img src ="https://github.com/ShubhamGupta577/Amazing-Python-Scripts/blob/Edge-Detection-Using-OpenCV/Edge%20Detection/Sample_Input.jpg" width=400/> <img src ="https://github.com/ShubhamGupta577/Amazing-Python-Scripts/blob/Edge-Detection-Using-OpenCV/Edge%20Detection/Sample_Output.png" width=400/>
 
 
 ## Author
