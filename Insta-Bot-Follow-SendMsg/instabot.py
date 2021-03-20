@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-import pandas as pd
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
@@ -8,14 +8,12 @@ from selenium.webdriver.common.by import By
 from openpyxl import load_workbook
 from selenium.webdriver.common.action_chains import ActionChains
 
-
-users=['lit_perception']
-
-USERNAME='enter username'
-PASSWORD='enter password'
-
-browser = webdriver.Chrome(
-    executable_path='chromedriver.exe')
+browser = webdriver.Chrome(ChromeDriverManager().install())
+time.sleep(10)
+users=[]
+users.append(input("Enter Users Username Whom You Want to Follow and Send Msg "))
+USERNAME=input("Enter Your Username ")
+PASSWORD=input("Enter Your password ")
 
 browser.get('https://www.instagram.com/')
 wait = WebDriverWait(browser, 120)
@@ -29,11 +27,8 @@ password_field.send_keys(PASSWORD)
 
 login_btn = browser.find_element_by_css_selector('button[type="submit"]')
 login_btn.click()
-#loginForm > div > div:nth-child(3) > button > div
-#msg =//*[@id="react-root"]/section/main/div/header/section/div[2]/div/div/div[1]/div/button
-# name msg
-
-time.sleep(2)
+print(users)
+time.sleep(5)
 for user in users:
     browser.get(f"https://www.instagram.com/{user}/")
     time.sleep(3)
@@ -50,7 +45,7 @@ for user in users:
         browser.find_element_by_class_name('mt3GC').click()
         time.sleep(5)
         mbox = browser.find_element_by_tag_name('textarea')
-        mbox.send_keys('HELLO')
+        mbox.send_keys(input("Write Msg you Want to Send "))
         mbox.send_keys(Keys.RETURN)
         time.sleep(5)
     except:
