@@ -2,6 +2,6 @@
 
 <h3>Requirements</h3>
 <ul>
-  <li>Run the command
+  <li>Run the command: 
     pip install better_profanity</li>
 </ul>
