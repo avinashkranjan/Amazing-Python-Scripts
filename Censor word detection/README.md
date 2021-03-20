@@ -18,8 +18,7 @@
   <li>Check for the censored data using method profanity.censor() </li>
   <li>Print the output on terminal. 
     <ul>
-      <li>It will print **** if profanity.censor(text) is used.</li>
-      <li>It will print #### if profanity.censor(text,'#') is used and like wise for all other symbols</li>
+      <li>It will print #### if censor word is detected. Otherwise, it will print the input text you have entered</li>
     </ul>
   </li>
  </ol>
