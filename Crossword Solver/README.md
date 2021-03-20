@@ -1,5 +1,5 @@
 # Crossword Solver
-A python AI based on constraint satisfaction algorithm that solves crossword puzzles using a given crossword structure and words dataset using backtrack search algorithm.
+A python AI based on constraint satisfaction algorithm that solves crossword puzzles using a given crossword structure and words dataset.
 
 ## Quick Start:
 - Clone this repository.
