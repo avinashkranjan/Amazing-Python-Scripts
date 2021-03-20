@@ -12,7 +12,7 @@ A python AI based on constraint satisfaction algorithm that solves crossword puz
       
 - Install requirements
 
-      python 3+
+      python3+
       
 - Run python file
 
