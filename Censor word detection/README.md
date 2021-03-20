@@ -10,3 +10,8 @@
   <li>Run the command: 
     pip install better_profanity</li>
 </ul>
+
+<h3> Approach </h3>
+<ol>
+  <li>Import the module profanity from better_profanity</li>
+ </ol>
