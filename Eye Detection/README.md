@@ -1,5 +1,5 @@
 
-<h1 align="center"> Body Detection</h1>
+<h1 align="center"> Eye Detection</h1>
 It is going to detect your eyes and count the number of eyes
 
 ---------------------------------------------------------------------
