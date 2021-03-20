@@ -28,6 +28,7 @@ def detect():
             break
 
     cap.release()
+    cv2.destroyAllWindows()
 
 
 detect()
