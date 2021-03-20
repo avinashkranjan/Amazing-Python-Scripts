@@ -14,4 +14,7 @@
 <h3> Approach </h3>
 <ol>
   <li>Import the module profanity from better_profanity</li>
+  <li>Take user input </li>
+  <li>Check for the censored data using method profanity.censor() </li>
+  <li>Print the output</li>
  </ol>
