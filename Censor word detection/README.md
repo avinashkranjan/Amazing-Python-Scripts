@@ -16,5 +16,10 @@
   <li>Import the module profanity from better_profanity</li>
   <li>Take user input </li>
   <li>Check for the censored data using method profanity.censor() </li>
-  <li>Print the output on terminal. It will print **** if profanity.censor(text) is used. It will print #### if profanity.censor(text,'$') is used and like wise for all other symbols</li>
+  <li>Print the output on terminal. 
+    <ul>
+      <li>It will print **** if profanity.censor(text) is used.</li>
+      <li>It will print #### if profanity.censor(text,'$') is used and like wise for all other symbols</li>
+    </ul>
+  </li>
  </ol>
