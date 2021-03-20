@@ -35,6 +35,5 @@ To run the script type:
 
 ![excel-csv.png](https://i.postimg.cc/ZKmH0L2t/excel-csv.png)
 
-## Author
 
-#### By [Paulami Bhattacharya](https://github.com/paulamib123)
+## By [Paulami Bhattacharya](https://github.com/paulamib123)
