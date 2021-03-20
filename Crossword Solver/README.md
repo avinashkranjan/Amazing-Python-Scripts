@@ -20,4 +20,4 @@ A python AI based on constraint satisfaction algorithm that solves crossword puz
       
       
       
-    ![Img](https://github.com/aliya-rahmani/Amazing-Python-Scripts/blob/master/Crossword%20Solver/Screenshot%20from%202021-03-20%2016-35-22.pngg)
+    ![Img](https://github.com/aliya-rahmani/Amazing-Python-Scripts/blob/master/Crossword%20Solver/Screenshot%20from%202021-03-20%2016-35-22.png)
