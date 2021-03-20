@@ -14,7 +14,7 @@ nltk.download('wordnet')
 
 #reading the dataset 
 #dataset: https://www.kaggle.com/uciml/sms-spam-collection-dataset
-msg=pd.read_csv("dataset.csv",encoding='latin-1')
+msg=pd.read_csv("./Message_Spam_Detection/dataset.csv",encoding='latin-1')
 msg.drop(['Unnamed: 2','Unnamed: 3','Unnamed: 4'],axis=1,inplace=True)
 msg.rename(columns={"v1":"label","v2":"text"},inplace=True)
 
@@ -74,4 +74,4 @@ for i in msg.index:
 msg.drop(['cleaned_text','lem_text'],axis=1,inplace=True)
 
 #cleaned dataset
-msg.to_csv('final.csv')
+msg.to_csv('Cleaned_Dataset.csv')

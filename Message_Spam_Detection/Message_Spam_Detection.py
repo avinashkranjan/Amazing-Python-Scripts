@@ -10,7 +10,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #reading the dataset 
-msg=pd.read_csv("Cleaned_Dataset.csv",encoding='latin-1')
+msg=pd.read_csv("./Message_Spam_Detection/Cleaned_Dataset.csv",encoding='latin-1')
 msg.drop(['Unnamed: 0'],axis=1,inplace=True)
 
 #seperating target and features
@@ -41,7 +41,7 @@ pickle.dump(model,open(filename,"wb"))
 text=input("Enter text: ")
 text=cv.transform([text])
 text=tf.transform(text)
-model=pickle.load(open("randomforest.sav","rb"))
+model=pickle.load(open("./Message_Spam_Detection/randomforest.sav","rb"))
 pred=model.predict(text)
 if pred==0:
   print("Not Spam")
