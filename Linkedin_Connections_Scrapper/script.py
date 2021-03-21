@@ -1,6 +1,7 @@
 # Linkedin My_Connections Scrapper
 # Written by XZANATOL
 # Mentored by avinashkranjan & kaustubhgupta / GSSOC'21
+from selenium.webdriver.common.action_chains import ActionChains
 from optparse import OptionParser
 from selenium import webdriver
 import pandas as pd
