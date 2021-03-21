@@ -1,0 +1,92 @@
+.navbar {
+    width: 100%;
+    height: 100%;
+    background: url(https://socialify.git.ci/avinashkranjan/Amazing-Python-Scripts/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fuser-images.githubusercontent.com%2F55796944%2F104455539-7258a200-55cd-11eb-90dc-7c9981e73d72.png&owner=1&pulls=1&stargazers=1&theme=Light)
+      no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+    padding-top: 0;
+    /* background: url(https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif); */
+  }
+  body{
+      margin-bottom: 3%;
+      
+  }
+  .container{
+      display: flex;
+  }
+ .col-md-3{
+     margin-top: 5%;
+ }
+ .img-fluid{
+     max-height: 100%;
+ }
+ .card{
+     height:100%;
+ }
+ #loadmore{
+    display: none;
+}
+.button{
+    text-align: center;
+    margin: 5%;
+}
+.card-body p a{
+    text-decoration: none;
+}
+.container-fluid{
+    background-color: rgb(74, 80, 75);
+  }
+  .nav-link{
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 20px;
+    /* text-decoration: underline; */
+    color: aliceblue!important;
+  }
+  
+  .nav-link:hover{
+    font-size: 22px;
+    font-weight: 600;
+    /* font-size: 24px; */
+    color: rgb(225, 250, 86)!important;
+  }
+  
+  .btn-danger,.btn-success{
+    height: 34px;
+    font-size: 16px;
+    margin-right: 20px;
+    padding: 0 15px;
+    color: rgb(247, 243, 238);
+    font-weight: 500;
+    vertical-align: middle;
+   
+    
+  }
+
+  .navbar-light .navbar-toggler{
+    background-color: aliceblue;
+    
+ 
+  }
+  a.nav-link{
+    font-size: x-large;
+  }
+
+  .navbar>.container, .navbar>.container-fluid{
+    padding-top: 15px;
+
+  }
+
+  .d-flex{
+    margin-bottom: 20px;
+  }
+  .navbar-toggler{
+    margin-bottom: 10px;
+    margin-top: 3px;
+    width:52px;
+  }
+  .fa-python:before {
+    content: "\f3e2";
+    font-size: x-large;
+}
