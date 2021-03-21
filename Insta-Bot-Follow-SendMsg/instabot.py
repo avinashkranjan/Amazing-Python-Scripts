@@ -10,8 +10,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 browser = webdriver.Chrome(ChromeDriverManager().install())
 time.sleep(10)
-users=[]
-users.append(input("Enter Users Username Whom You Want to Follow and Send Msg "))
+users=list(map(str,input("Enter Users Username Comma-Separated Whom You Want to Follow and Send Msg ").split(",")))
 USERNAME=input("Enter Your Username ")
 PASSWORD=input("Enter Your password ")
 

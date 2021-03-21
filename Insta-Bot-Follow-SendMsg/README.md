@@ -1,4 +1,4 @@
-# Level2
+# instabot.py
 What is the use:
 Given a username if the Instagram account is public , will auto-follow and send msg.
 Instructions to use:
