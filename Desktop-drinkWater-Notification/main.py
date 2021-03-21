@@ -9,4 +9,4 @@ if __name__ == "__main__":
             app_icon = "./Desktop-drinkWater-Notification/icon.ico",
             timeout = 12
         )
-        time.sleep(1800*1800)
+        time.sleep(1800)
