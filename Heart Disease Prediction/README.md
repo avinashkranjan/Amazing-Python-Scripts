@@ -20,4 +20,4 @@ pip install -r requirements.txt
 ```bash
 python script.py
 ```
-#### By [Adithya Kurien Peter]("https://github.com/aaadddiii")
+## By [Adithya Kurien Peter]("https://github.com/aaadddiii")
