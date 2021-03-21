@@ -1,9 +1,10 @@
 from tkinter import *
+from playsound import playsound
 import datetime
 import time
-import winsound
 from threading import *
-# Create Object 
+
+
 root = Tk() 
   
 # Set geometry 
@@ -17,7 +18,7 @@ def Threading():
 def alarm(): 
     # Infintite Loop 
     while True: 
-        # Set the Alarm  
+        # Set Alarm  
         set_time = f"{hour.get()}:{minute.get()}:{second.get()}"
   
         # Wait for one seconds 
@@ -29,57 +30,30 @@ def alarm():
   
         # Check whether set alarm is equal to current time or not 
         if current_time == set_time: 
-            print("Wake up!!Wake up!!") 
-            # Play sound 
-            winsound.PlaySound("sound.wav",winsound.SND_ASYNC) 
+            print("Time to Wake up") 
+            # Playing sound 
+            playsound('alarm.wav') 
   
-# Add Labels, Frame, Button
-Label(root,text="Alarm Clock",font=("Arial 20 bold"),fg="blue").pack(pady=10) 
-Label(root,text="Set Time",font=("Arial 15 bold")).pack() 
+    
+  
+# Add Labels, Frame, Button, Optionmenus 
+Label(root,text="Alarm Clock",font=("Helvetica 20 bold"),fg="red").pack(pady=10) 
+time_format=Label(root, text= "Enter time in 24 hour format!", fg="red",bg="black",font="Arial").place(x=60,y=120)
+addTime = Label(root,text = "Hour  Min   Sec",font=60).place(x = 110,y=40)
+setYourAlarm = Label(root,text = "When to wake you up",fg="blue",relief = "solid",font=("Helevetica",7,"bold")).place(x=0, y=80)
   
 frame = Frame(root) 
 frame.pack() 
   
-hour = StringVar(root) 
-hours = ('00', '01', '02', '03', '04', '05', '06', '07', 
-         '08', '09', '10', '11', '12', '13', '14', '15', 
-         '16', '17', '18', '19', '20', '21', '22', '23', '24'
-        ) 
-hour.set(hours[0]) 
-  
-hrs = OptionMenu(frame, hour, *hours) 
-hrs.pack(side=LEFT) 
-  
-minute = StringVar(root) 
-minutes = ('00', '01', '02', '03', '04', '05', '06', '07', 
-           '08', '09', '10', '11', '12', '13', '14', '15', 
-           '16', '17', '18', '19', '20', '21', '22', '23', 
-           '24', '25', '26', '27', '28', '29', '30', '31', 
-           '32', '33', '34', '35', '36', '37', '38', '39', 
-           '40', '41', '42', '43', '44', '45', '46', '47', 
-           '48', '49', '50', '51', '52', '53', '54', '55', 
-           '56', '57', '58', '59', '60') 
-minute.set(minutes[0]) 
-  
-mins = OptionMenu(frame, minute, *minutes) 
-mins.pack(side=LEFT) 
-  
-second = StringVar(root) 
-seconds = ('00', '01', '02', '03', '04', '05', '06', '07', 
-           '08', '09', '10', '11', '12', '13', '14', '15', 
-           '16', '17', '18', '19', '20', '21', '22', '23', 
-           '24', '25', '26', '27', '28', '29', '30', '31', 
-           '32', '33', '34', '35', '36', '37', '38', '39', 
-           '40', '41', '42', '43', '44', '45', '46', '47', 
-           '48', '49', '50', '51', '52', '53', '54', '55', 
-           '56', '57', '58', '59', '60') 
-second.set(seconds[0]) 
-  
-secs = OptionMenu(frame, second, *seconds) 
-secs.pack(side=LEFT)
-##Creating button for setting the alarm
-  
-Button(root,text="Set Alarm",font=("Arial 15"),command=Threading).pack(pady=20) 
-  
+hour = StringVar()
+minute = StringVar()
+second = StringVar()
+hourTime= Entry(root,textvariable = hour,bg = "white",width = 15).place(x=110,y=80)
+minTime= Entry(root,textvariable = minute,bg = "white",width = 15).place(x=150,y=80)
+secTime = Entry(root,textvariable = second,bg = "white",width = 15).place(x=200,y=80)
 
+  
+Button(root,text="Set Alarm",font=("Helvetica 15"),command=Threading).pack(pady=120) 
+  
+# Execution
 root.mainloop()
