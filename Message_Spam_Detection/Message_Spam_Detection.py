@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 import warnings
+import re
 warnings.filterwarnings("ignore")
 
 #reading the dataset 
@@ -39,6 +40,36 @@ pickle.dump(model,open(filename,"wb"))
 
 #User input
 text=input("Enter text: ")
+
+#data cleaning/preprocessing - removing punctuation and digits 
+updated_text=''
+for i in range(len(text)):
+  if text[i] not in string.punctuation:
+    if text[i].isdigit()==False:
+      updated_text=updated_text+text[i]
+text=updated_text
+
+#data clearning/preprocessing - tokenization and convert to lower case 
+text=re.split("\W+",text.lower())
+
+#data cleaning/preprocessing - stopwords
+updated_list=[]
+stopwords=nltk.corpus.stopwords.words('english')
+for i in range(len(text)):
+  if text[i] not in stopwords:
+    updated_list.append(text[i])
+text=updated_list
+
+#data cleaning/preprocessing - lemmentizing
+updated_list=[]
+wordlem=nltk.WordNetLemmatizer()
+for i in range(len(text)):
+  updated_list.append(wordlem.lemmatize(text[i])) 
+text=updated_list
+
+#data cleaning/preprocessing - mergining token
+text=" ".join(text)
+
 text=cv.transform([text])
 text=tf.transform(text)
 model=pickle.load(open("./Message_Spam_Detection/randomforest.sav","rb"))
