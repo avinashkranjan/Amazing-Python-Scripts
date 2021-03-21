@@ -10,7 +10,7 @@ class Window(QMainWindow):
 		super().__init__() 
 
 		# setting application window up 
-		self.setWindowTitle("Paint with PyQt5")
+		self.setWindowTitle("Paint Application")
 		self.setGeometry(100, 100, 800, 600) 
 
 		# setting up image object 
