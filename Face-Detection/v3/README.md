@@ -16,3 +16,4 @@ Detect your face and count the number of faces
 - Then you could see green rectangle boxes appearing which is detecting your face
 - The number of live faces are also showing
 
+#### By [Avishake Maji](https://github.com/Avishake007) 
