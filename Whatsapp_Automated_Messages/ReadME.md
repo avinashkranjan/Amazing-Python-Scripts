@@ -1,4 +1,4 @@
-# WHATSAPP AUTOMATED MESSAGE --- LEVEL 2
+## WHATSAPP AUTOMATED MESSAGE --- LEVEL 2
 
 # AIM    
 To keep looking for unread or new WhatsApp messages and send a automated text to the concerned person in certain cases.
