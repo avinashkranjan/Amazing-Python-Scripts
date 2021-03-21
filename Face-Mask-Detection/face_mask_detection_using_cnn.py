@@ -35,7 +35,7 @@ def data_set(dir_data):
         ymin=int(df1['ymin'][i])
         xmax=int(df1['xmax'][i])
         ymax=int(df1['ymax'][i])
-        image=image[ymin:ymax,  xmin:xmax]
+        #image=image[ymin:ymax,  xmin:xmax]
         try:
                 # resizing to (70 x 70)
                 image = cv2.resize(image,(70,70))
