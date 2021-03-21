@@ -1,8 +1,11 @@
-
+"""
+    Contribution to Amazing-Python-SCripts , gssoc '21 by Swaroop "lachenlama" Lama. 
+"""
 import pygame, random, sys
 
 
 class Color:
+    """Class which contains all the colors tuples for the shapes."""
     colors = [
         (0, 0, 0),
         (120, 37, 179),
@@ -20,8 +23,15 @@ class Color:
 
 
 class Shapes:
+    """The class contains all the Shapes of the game"""
     x = 0
     y = 0
+
+    # The shapes here are represented by numbers of a matrix i.e [  0,  1,  2, 3 
+    #                                                               4,  5,  6, 7
+    #                                                               8,  9, 10, 11
+    #                                                              12, 13, 14, 15]
+    # So here [1,5,9,13] represents I shape of Tetris and [4,5,6,7] represents its rotated state.
 
     shapes = [
         [[1, 5, 9, 13], [4, 5, 6, 7]],
@@ -135,7 +145,7 @@ class Tetris:
             self.Shapes.rotation = old_rotation
 
 class Main:
-
+    """ The main class which contains the game loop.""""
     pygame.init()
 
     size = (400, 500)
