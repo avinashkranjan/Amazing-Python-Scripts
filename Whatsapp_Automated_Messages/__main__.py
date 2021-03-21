@@ -13,7 +13,7 @@ y= position1[1]
 def get_message():             # it will help us to fetch the messages
     global x, y
 
-    position = pt.locateOnScreen("Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
+    position = pt.locateOnScreen("./Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
     x=position[0]
     y=position[1]
     pt.moveTo(x,y)   # add duration for mac: pt.moveTO(x,y, duration=.05)
@@ -29,7 +29,7 @@ def get_message():             # it will help us to fetch the messages
 
 def post_response(message):               # to post our desire response
     global x, y
-    position= pt.locateOnScreen("Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
+    position= pt.locateOnScreen("./Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
     x=position[0]
     y=position[1]
     pt.moveTo(x+200, y+20)
@@ -74,7 +74,7 @@ def new_message_check():       # to keep checking if new message is received
 
     while True:
         try:
-            position= pt.locateOnScreen("Whatsapp_Automated_Messsages/green_mark.png", confidence=.6)
+            position= pt.locateOnScreen("./Whatsapp_Automated_Messsages/green_mark.png", confidence=.6)
 
             if position is not None:
                 pt.moveTo(position)
