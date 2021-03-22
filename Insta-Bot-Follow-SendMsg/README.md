@@ -1,5 +1,5 @@
 # instabot.py
-What is the use:
+## What is the use:
 Given a username if the Instagram account is public , will auto-follow and send msg.
 Instructions to use:
 1.	Once we run the program, web driver will start the default browser under automated software (here we use chrome).
@@ -14,10 +14,10 @@ Instructions to use:
 
 5.	Once done, it will Show the Msg.
 
-Note:
+## Note:
 If you are using some other web browser, replace ‘chrome’ by the name of that browser
 Modules and tools used:
 Selenium, getpass and time
 
 
-BY Vivek Kumar Patel
+## By Vivek Kumar Patel
