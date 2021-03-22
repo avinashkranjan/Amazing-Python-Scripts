@@ -1,14 +1,17 @@
 from tkinter import Tk, Frame, Toplevel, Entry, Button, Text, Scrollbar, END, INSERT 
-from tkinter.messagebox import showerror 
-from wikipedia import summary 
+from tkinter.messagebox import showerror  
+from mediawiki import MediaWiki
+wikipedia = MediaWiki()
 
 # Function to get summary using wikipedia module and display it 
-def get_summary():  
+def get_summary():
 	try: 
 		# clear text area 
 		answer.delete(1.0, END) 		
 		# show summary in text area 
-		answer.insert(INSERT, summary(keyword_entry.get())) 		
+		topic = keyword_entry.get()
+		p = wikipedia.page(topic)
+		answer.insert(INSERT, p.summary) 		
 	except Exception as error: 
 		showerror("Error", error) 
 
