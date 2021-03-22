@@ -17,7 +17,7 @@ Rock and Scissor =>Rock win<br>
 Paper and Rock =>Paper win<br><br><br>
 ### Below is what the GUI looks like 👇
 
-![Image](https://media.geeksforgeeks.org/wp-content/uploads/20210118125240/Screenshot255.png)
+![Image](https://i.ibb.co/Hq84YbH/rock.png)
 
 <h6>Author : <a href="https://github.com/Lakhankumawat">Lakhan Kumawat</a></h6>
 </div>
