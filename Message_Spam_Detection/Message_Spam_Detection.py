@@ -35,8 +35,6 @@ y=y.astype(int)
 #randomforstclassifier model
 model=RandomForestClassifier(n_estimators=100,random_state=0)
 model.fit(x,y)
-filename="randomforest.sav"
-pickle.dump(model,open(filename,"wb"))
 
 #User input
 text=input("Enter text: ")
@@ -72,7 +70,6 @@ text=" ".join(text)
 
 text=cv.transform([text])
 text=tf.transform(text)
-model=pickle.load(open("./Message_Spam_Detection/randomforest.sav","rb"))
 pred=model.predict(text)
 if pred==0:
   print("Not Spam")
