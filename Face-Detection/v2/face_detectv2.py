@@ -2,8 +2,8 @@
 import cv2
 
 #PATH of the FILE
-CLASSIFIER_PATH = "./Facedetection/haarcascade_frontalface_default.xml"   
-EYEDETECTION_PATH = "./Facedetection/haarcascade_eye.xml"
+CLASSIFIER_PATH = "./Facedetection/v2/haarcascade_frontalface_default.xml"   
+EYEDETECTION_PATH = "./Facedetection/v2/haarcascade_eye.xml"
 
 # Live video capturing
 cam = cv2.VideoCapture(0)
