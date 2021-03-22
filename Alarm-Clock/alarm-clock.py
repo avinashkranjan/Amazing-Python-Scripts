@@ -38,9 +38,9 @@ def alarm():
   
 # Add Labels, Frame, Button, Optionmenus 
 Label(root,text="Alarm Clock",font=("Helvetica 20 bold"),fg="red").pack(pady=10) 
-time_format=Label(root, text= "Enter time in 24 hour format!", fg="red",bg="black",font="Arial").place(x=60,y=120)
-addTime = Label(root,text = "Hour  Min   Sec",font=60).place(x = 110,y=40)
-setYourAlarm = Label(root,text = "When to wake you up",fg="blue",relief = "solid",font=("Helevetica",7,"bold")).place(x=0, y=80)
+Label(root, text= "Enter time in 24 hour format!", fg="red",bg="black",font="Arial").place(x=60,y=120)
+Label(root,text = "Hour  Min   Sec",font=60).place(x = 110,y=40)
+Label(root,text = "When to wake you up",fg="blue",relief = "solid",font=("Helevetica",7,"bold")).place(x=0, y=80)
   
 frame = Frame(root) 
 frame.pack() 
@@ -48,9 +48,9 @@ frame.pack()
 hour = StringVar()
 minute = StringVar()
 second = StringVar()
-hourTime= Entry(root,textvariable = hour,bg = "white",width = 15).place(x=110,y=80)
-minTime= Entry(root,textvariable = minute,bg = "white",width = 15).place(x=150,y=80)
-secTime = Entry(root,textvariable = second,bg = "white",width = 15).place(x=200,y=80)
+Entry(root,textvariable = hour,bg = "white",width = 15).place(x=110,y=80)
+Entry(root,textvariable = minute,bg = "white",width = 15).place(x=150,y=80)
+Entry(root,textvariable = second,bg = "white",width = 15).place(x=200,y=80)
 
   
 Button(root,text="Set Alarm",font=("Helvetica 15"),command=Threading).pack(pady=120) 
