@@ -1,7 +1,7 @@
-# Description: PDF2text
+## Description: PDF2text
 This is a small script to make a extract text from pdf file.  
 
-### Dependencies:
+## Dependencies:
 1- [pdftotext](https://pypi.org/project/pdftotext/)
 
 ## Usage
