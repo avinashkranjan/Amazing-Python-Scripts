@@ -1,6 +1,5 @@
 # Linkedin My_Connections Scrapper
 # Written by XZANATOL
-# Mentored by avinashkranjan & kaustubhgupta / GSSOC'21
 from selenium.webdriver.common.action_chains import ActionChains
 from optparse import OptionParser
 from selenium import webdriver
@@ -20,6 +19,13 @@ usage = """
     -e, --email       Enter login email
     -p, --password    Enter login password
     -s, --skills      Flag to scrap each profile, and look at its skill set
+
+Operation Modes:
+> Basic mode
+    This will scrap all LinkedIn connections list with there corresponding Name, Headline, and Profile link.
+> Skills scrapper mode (-s/--skills)
+    (Time Consuming mode)
+    This will do the same job of basic mode but along with visiting each profile and extracting the skills of each.
 """
 
 # Load args

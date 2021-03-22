@@ -26,13 +26,15 @@ For scrapping skills:
 - The scripts prints out a couple of messages to explain in which phase it is.
 - efficieny is also affected by Internet speed.
 
+# Output
+
+Basic use will output a \"scrap.csv\" file that will contain columns of Name, Headline, & Link. There will be a skills column but it will be empty.
+
+Using the skills scrapper mode will add the skills of each profile to that column, each skill will be " -- " separated.
+
 # Authors
 
 Written by [XZANATOL](https://www.github.com/XZANATOL).
-
-Mentored by [Avinash Kr. Ranjan](https://github.com/avinashkranjan).
-
-Reviewed by [Kaustubh Gupta](https://github.com/kaustubhgupta).
 
 The project was built as a contribution during [GSSOC'21](https://gssoc.girlscript.tech/).
 
