@@ -17,7 +17,7 @@ class Color:
     ]
     word_color = [
         (0, 0, 0),
-        (255, 255, 255),
+        (155, 155, 155),
         (128, 128, 128),
     ]
 
@@ -31,7 +31,7 @@ class Shapes:
     #                                                               4,  5,  6, 7
     #                                                               8,  9, 10, 11
     #                                                              12, 13, 14, 15]
-    # So here [1,5,9,13] represents I shape of Tetris and [4,5,6,7] represents its rotated state.
+    # So here [1,5,9,13] represents I shape of Tetris and [4,5,6,7] represents its rotated status.
 
     shapes = [
         [[1, 5, 9, 13], [4, 5, 6, 7]],
@@ -57,10 +57,11 @@ class Shapes:
         self.rotation = (self.rotation + 1) % len(self.shapes[self.type])
 
 
-class Tetris:     
+class Tetris:
+    """This class contains all the game functions"""     
     Stage = 2
     score = 0
-    state = "start"
+    status = "start"
     field = []
     height = 0
     width = 0
@@ -74,7 +75,7 @@ class Tetris:
         self.width = width
         self.field = []
         self.score = 0
-        self.state = "start"
+        self.status = "start"
         for i in range(height):
             new_line = []
             for j in range(width):
@@ -130,7 +131,7 @@ class Tetris:
         self.break_lines()
         self.new_Shapes()
         if self.intersects():
-            self.state = "gameover"
+            self.status = "gameover"
 
     def go_side(self, dx):
         old_x = self.Shapes.x
@@ -145,7 +146,7 @@ class Tetris:
             self.Shapes.rotation = old_rotation
 
 class Main:
-    """ The main class which contains the game loop.""""
+    """ The main class which contains the game loop."""
     pygame.init()
 
     size = (400, 500)
@@ -169,7 +170,7 @@ class Main:
             counter = 0
 
         if counter % (fps // game.Stage // 2) == 0 or pressing_down:
-            if game.state == "start":
+            if game.status == "start":
                 game.go_down()
 
         for event in pygame.event.get():
@@ -221,7 +222,7 @@ class Main:
         text_game_over1 = font1.render("Press r to restart", True, (255, 215, 0))
 
         screen.blit(text, [0, 0])
-        if game.state == "gameover":
+        if game.status == "gameover":
             screen.blit(text_game_over, [20, 200])
             screen.blit(text_game_over1, [25, 265])
 

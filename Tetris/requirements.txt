@@ -1,0 +1,5 @@
+Package    Version
+---------- -------
+pip        20.2.3
+pygame     2.0.1
+setuptools 49.2.1
