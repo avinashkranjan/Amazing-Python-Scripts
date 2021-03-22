@@ -8,6 +8,7 @@ assert os.path.exists(pdf_path), "this pdf file doesn't exist"
 
 with open(f"./PDF2text/pages/{i}.txt", "w") as f:
     f.write(page)
+    pdf_pages = pdftotext.PDF(f)
 
 for i, page in enumerate(pdf_pages):
     print('Page {}'.format(i))
