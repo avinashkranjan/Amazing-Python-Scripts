@@ -10,7 +10,7 @@ while(capture.isOpened()):
 
         # Load trained cascade classifier
     ret,color_image=capture.read()
-    eye_cascade=cv2.CascadeClassifier('../Eye Detection/haarcascade_eye.xml')
+    eye_cascade=cv2.CascadeClassifier('./Eye Detection/haarcascade_eye.xml')
     
     
         # Convert color image into grayscale
