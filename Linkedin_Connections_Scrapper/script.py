@@ -5,6 +5,7 @@ from optparse import OptionParser
 from selenium import webdriver
 import pandas as pd
 import time
+import sys
 import re
 
 pattern_name = "\\n(.+)\\n"  # Used to extract names
@@ -49,6 +50,11 @@ def login(email, password):
     # Locate Submit button and click it
     submit = driver.find_element_by_class_name("sign-in-form__submit-button")
     submit.click()
+    # Check credentials output
+    if driver.title != "LinkedIn":
+        print("Provided E-mail/Password is wrong!")
+        driver.quit()
+        sys.exit()
     # Return session
     return driver
 
