@@ -5,15 +5,16 @@ import random
 
 time.sleep(4)
 
-global x,y
-
-position = pt.locateOnScreen("Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
+position1 = pt.locateOnScreen("Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
 x= position1[0]
 y= position1[1]
 
 
 def get_message():             # it will help us to fetch the messages
+    global x y
     position = pt.locateOnScreen("./Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
+    x= position1[0]
+    y= position1[1]
     pt.moveTo(x,y)   # add duration for mac: pt.moveTO(x,y, duration=.05)
     pt.moveTo(x+70, y-40)
     pt.tripleClick()
@@ -26,7 +27,11 @@ def get_message():             # it will help us to fetch the messages
     return whatsapp_message
 
 def post_response(message):               # to post our desire response
+
+    global x y 
     position = pt.locateOnScreen("./Whatsapp_Automated_Messsages/smilie_paperclip.png", confidence=.6)
+    x= position1[0]
+    y= position1[1]
     pt.moveTo(x+200, y+20)
     pt.click()
     pt.typewrite(message, interval= .01)
