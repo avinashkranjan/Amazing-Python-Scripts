@@ -1,1 +1,1 @@
-wikipedia
+pymediawiki
