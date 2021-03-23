@@ -1,6 +1,77 @@
 from tkinter import *
-import sqlite3
 from tkinter import messagebox
+import sqlite3
+from sqlite3 import Error
+
+# Function to connect to the SQL Database
+def sql_connection():
+    try:
+        con = sqlite3.connect('passwordManager.db')
+        return con
+    except Error:
+        print(Error)
+
+# Function to create table 
+def sql_table(con):
+    cursorObj = con.cursor()
+    cursorObj.execute("CREATE TABLE IF NOT EXISTS passwordStore(website text, username text, pass text,test text)")
+    con.commit()
+
+# Call functions to connect to database and create table
+con = sql_connection()
+sql_table(con)
+
+#Create submit function for database
+def submit(con):
+    cursor = con.cursor()
+    #Insert Into Table
+    if website.get()!="" and username.get()!="" and password.get()!="":
+        cursor.execute("INSERT INTO passwordStore VALUES (:website, :username, :password)",
+            {
+                'website': website.get(),
+                'username': username.get(),
+                'password': password.get()
+            }
+        )
+        con.commit()
+        # Message box
+        messagebox.showinfo("Info", "Record Added in Database!")
+
+        # After data entry clear the text boxes
+        website.delete(0, END)
+        username.delete(0, END)
+        password.delete(0, END)
+
+    else:
+        messagebox.showinfo("Alert", "Please fill all details!")
+
+# Create Query Function
+def query(con):
+
+    #set button text
+    query_btn.configure(text="Hide Records", command=hide)
+    
+    cursor = con.cursor()
+
+    #Query the database
+    cursor.execute("SELECT *, oid FROM passwordStore")
+    records = cursor.fetchall()
+    #print(records)
+
+    p_records = " Id \t\t Website \t\t Username \t\t Password\n"
+    for record in records:
+            p_records += str(record[3])+ "\t\t" +str(record[0])+  "\t\t" + str(record[1])+  "\t\t" + str(record[2]) + "\n"
+        #print(record)
+
+    query_label['text'] = p_records
+    # Commit changes
+    con.commit()
+
+#Create Function to Hide Records
+def hide():
+    query_label['text'] = ""
+    query_btn.configure(text="Show Records", command=lambda:query(con))
+
 
 root = Tk()
 root.title("Password Manager")
@@ -29,9 +100,9 @@ password_label.grid(row=3, column=0)
 
 
 #Create Buttons
-submit_btn = Button(root, text = "Add Password")
+submit_btn = Button(root, text = "Add Password",command = lambda: submit(con))
 submit_btn.grid(row = 5, column=1, pady=5, padx=15, ipadx=35)
-query_btn = Button(root, text = "Show All")
+query_btn = Button(root, text = "Show All",command = lambda: query(con))
 query_btn.grid(row=6, column=1, pady=5, padx=5, ipadx=35)
 
 #Create a Label to show stored passwords
