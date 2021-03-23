@@ -14,7 +14,7 @@ def sql_connection():
 # Function to create table 
 def sql_table(con):
     cursorObj = con.cursor()
-    cursorObj.execute("CREATE TABLE IF NOT EXISTS passwordStore(website text, username text, pass text,test text)")
+    cursorObj.execute("CREATE TABLE IF NOT EXISTS passwords(website text, username text, pass text)")
     con.commit()
 
 # Call functions to connect to database and create table
@@ -26,7 +26,7 @@ def submit(con):
     cursor = con.cursor()
     #Insert Into Table
     if website.get()!="" and username.get()!="" and password.get()!="":
-        cursor.execute("INSERT INTO passwordStore VALUES (:website, :username, :password)",
+        cursor.execute("INSERT INTO passwords VALUES (:website, :username, :password)",
             {
                 'website': website.get(),
                 'username': username.get(),
@@ -54,7 +54,7 @@ def query(con):
     cursor = con.cursor()
 
     #Query the database
-    cursor.execute("SELECT *, oid FROM passwordStore")
+    cursor.execute("SELECT *, oid FROM passwords")
     records = cursor.fetchall()
     #print(records)
 
