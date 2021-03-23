@@ -16,17 +16,64 @@ pip install -r requirements.txt
 pip3 install -r requirements.txt 
 ```
 # Usage
-To download a song run,
+## Usage (Instructions for v3)
 
-    python3 spotify.py $trackUrl
-    python3 spotify.py https://open.spotify.com/track/08mG3Y1vljYA6bvDt4Wqkj?si=SxezdxmlTx-CaVoucHmrUA
+- To download a song, run:
 
-To download an album run,
-    
-    python3 spotify.py $albumUrl
-    python3 spotify.py https://open.spotify.com/album/2YMWspDGtbDgYULXvVQFM6?si=gF5dOQm8QUSo-NdZVsFjAQ
+  ```
+  $ spotdl [trackUrl]
+  ```
 
-To download a playlist run,
-    
-    python3 spotify.py $playlistUrl
-    python3 spotify.py https://open.spotify.com/playlist/37i9dQZF1DWXhcuQw7KIeM?si=xubKHEBESM27RqGkqoXzgQ
+  ex. `spotdl https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=1stnMF5GSdClnIEARnJiiQ`
+
+
+- To download an album, run:
+
+  ```
+  $ spotdl [albumUrl]
+  ```
+
+  ex. `spotdl https://open.spotify.com/album/4yP0hdKOZPNshxUOjY0cZj?si=AssgQQrVTJqptFe7X92jNg`
+
+
+- To download a playlist, run:
+
+  ```
+  $ spotdl [playlistUrl]
+  ```
+
+  ex. `spotdl https://open.spotify.com/playlist/37i9dQZF1E8UXBoz02kGID?si=oGd5ctlyQ0qblj_bL6WWow`
+
+
+- To search for and download a song, run, __with quotation marks__:  
+  _Note: This is not accurate and often causes errors._
+
+  ```
+  $ spotdl '[songQuery]'
+  ```
+
+  ex. `spotdl 'The Weeknd - Blinding Lights'`
+
+
+- To resume a failed/incomplete download, run:
+
+  ```
+  $ spotdl [pathToTrackingFile]
+  ```
+
+  ex. `spotdl 'The Weeknd - Blinding Lights.spotdlTrackingFile'`
+
+  _`.spotdlTrackingFile`s are automatically created when a download starts and deleted on completion_
+
+
+You can queue up multiple download tasks by separating the arguments with spaces:
+
+```
+$ spotdl [songQuery1] [albumUrl] [songQuery2] ... (order does not matter)
+```
+
+ex. `spotdl 'The Weeknd - Blinding Lights' https://open.spotify.com/playlist/37i9dQZF1E8UXBoz02kGID?si=oGd5ctlyQ0qblj_bL6WWow ...`
+
+
+
+_spotDL downloads up to 4 songs in parallel, so for a faster experience, download albums and playlist, rather than tracks._
