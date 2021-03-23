@@ -111,7 +111,7 @@ def edited_image_preview(image_name):
 
     print("=======Do you want to preview the edited image ?=======")
 
-    preview_choice = input("Type 1 for yes and 2 for no : ")
+    preview_choice = input("Type 1 for YES and 2 for NO : ")
 
     if preview_choice in ('1', '2'):
 
