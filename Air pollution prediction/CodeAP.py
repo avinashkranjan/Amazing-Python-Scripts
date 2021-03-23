@@ -1,8 +1,8 @@
 import requests
 import matplotlib.pyplot as plt
-city = input("Enter your city name")
+city = input("Enter you city :  ")
 url = 'http://api.waqi.info/feed/' + city + '/?token='
-api_key = input("Enter you API key here")
+api_key = input("Enter your API key: ")
 
 main_url = url + api_key
 r = requests.get(main_url)
@@ -10,7 +10,7 @@ data = r.json()['data']
 aqi = data['aqi']
 iaqi = data['iaqi']
 
-del iaqi['p']
+
 
 for i in iaqi.items():
     print(i[0],':',i[1]['v'])
@@ -29,7 +29,6 @@ print('Ozone :',o3)
 print('sulphur :',so2)
 print('pm10 :',so2)
 print('pm25 :',pm25)
-
 pollutants = [i for i in iaqi]
 values = [i['v'] for i in iaqi.values()]
 
