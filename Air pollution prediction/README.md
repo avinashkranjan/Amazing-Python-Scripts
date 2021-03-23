@@ -19,3 +19,8 @@ You can clone the repository directly from
 
 ```https://github.com/Pranjal-2001/Amazing-Python-Scripts.git```
 
+## To get your API
+ 
+ 
+[Click here to get your API](http://api.waqi.info/)
+[Click here to get your API key](https://aqicn.org/data-platform/token/#/)
