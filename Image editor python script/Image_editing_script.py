@@ -4,7 +4,7 @@ IMAGE EDITOR USING PILLOW LIBRARY.
 
 # Importing the image module from pillow library.
 
-# Imorting ImageFilter, ImageEnhance modules from pillow library.
+# Importing ImageFilter, ImageEnhance modules from pillow library.
 
 from PIL import Image, ImageFilter, ImageEnhance
 
