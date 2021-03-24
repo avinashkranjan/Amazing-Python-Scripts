@@ -9,8 +9,8 @@ from selenium.webdriver.chrome.options import Options
 
 #joining Credentials
 
-username="email@gmail.com"          #enter your mail id
-password="This is my password"      #enter your password
+username = str(input('Your Username:' ))   # asking for mail id
+password = str(input('Your Password:' ))   #asking for password
 
 #Providing camera and microphone access to the meeting
 
