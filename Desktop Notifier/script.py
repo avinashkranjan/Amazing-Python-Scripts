@@ -1,20 +1,25 @@
 import time
 from plyer import notification
+import requests
+import json
 
-    
-heading = input("Enter the title: ")
 
-description = input("Enter the message: ")
-timer = int(input("Enter the timeer: "))
-notification.notify(
-    title = heading,
-    message= description ,
-    app_icon = None,
-    # displaying time
-    timeout=2 ,
-    toast=False)
 
- # waiting time
-time.sleep(7)
+news = requests.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=51606761f68a4b20b4296e61814dbd1a')
+
+data = json.loads(news.content)
+
+for i in range(10):
+
+    notification.notify(
+       title = data['articles'][i]['title'],
+       message= data['articles'][i]['description'] ,
+       app_icon = data['articles'][i]['urlToImage'] ,
+       # displaying time
+       timeout=2 ,
+       toast=False)
+
+    # waiting time
+    time.sleep(7)
 
 
