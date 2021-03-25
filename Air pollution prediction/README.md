@@ -7,10 +7,7 @@ This helps you find the levels of Air pollution plotted graphically with a provi
 
 ## TechStack
 
-1. Modules used
-       * numpy
-       * sklearn
-       * pandas
+1. Module used:
        * matplotlib
 
 ## How to use?
@@ -22,7 +19,7 @@ You can clone the repository directly from
 ## To get your API
  
  
-[Click here to get your API](http://api.waqi.info/)
+[Click here to get your API](https://waqi.info/)
 
 
 [Click here to get your API key](https://aqicn.org/data-platform/token/#/)
