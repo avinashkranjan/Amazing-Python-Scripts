@@ -11,6 +11,8 @@ image = cv2.imread('car.jpeg')
 
 image = imutils.resize(image, width=500)
 
+pytesseract.pytesseract.tesseract_cmd = input("Enter the path of tesseract in your local system : ")
+
 # displaying it
 cv2.imshow("Original Image", image)
 
