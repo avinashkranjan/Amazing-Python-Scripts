@@ -87,7 +87,7 @@ def getResultInChromeTab(name, password, email, link):
     f.write('<p> Username: ' + name + "</p>")
     f.write('<p> Password: ' + password + "</p>")
     f.write('<p> Email Id: ' + email + "</p>")
-    f.write('<a href = "url"> Link: ' + link + "</a>")
+    f.write(f'<a href = {link}> Link: ' + link + "</a>")
     f.close()
     webbrowser.open("tempRegistration.html")
 
