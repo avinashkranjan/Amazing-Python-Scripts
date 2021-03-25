@@ -8,7 +8,8 @@ This helps you find the levels of Air pollution plotted graphically with a provi
 ## TechStack
 
 1. Module used:
-       * matplotlib
+
+       - matplotlib
 
 ## How to use?
 
