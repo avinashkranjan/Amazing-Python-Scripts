@@ -12,5 +12,5 @@
 - datetime: The main focus of datetime is to form it simpler to access attributes of the thing associated with dates, times, and time zones.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic1.PNG" width="50%" align="left" >
-<img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic2.PNG" width="50%" align="left" >
+<img src="https://raw.githubusercontent.com/Anupreetadas/Alarm/main/assets/pic1.PNG" width="50%" align="left" >
+<img src="https://raw.githubusercontent.com/Anupreetadas/Alarm/main/assets/pic2.PNG" width="50%" align="left" >
