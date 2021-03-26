@@ -6,7 +6,7 @@ Converting an image into ghost/negative image using OpenCv, Matplotlib and Numpy
 * Firstly imported the required libraries which are Numpy, Matplotlib and Cv2.
 * Read the input image/Real image using cv2
 
-## Methods Used
+### Methods Used
 * Used Bilateral Filter
 * Followed by Median Blur
 * Followed by Adaptive Threshold
@@ -18,5 +18,5 @@ Converting an image into ghost/negative image using OpenCv, Matplotlib and Numpy
 <img src="Images/Real Photo.jpg" height="300px">
 
 ## Ghost Filter Image
-<img src="Images/Ghost Filtered Image.jpg" height="300px">
+<img src="Images/Ghost Filtered Image_.jpg" height="300px">
 
