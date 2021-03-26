@@ -1,4 +1,4 @@
-# Welcome
+# Video to Audio Converter with GUI
 
 This is a video to audio converter created with python. The script extracts the audio from video files.
 
