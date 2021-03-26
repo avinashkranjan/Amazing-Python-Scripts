@@ -2,9 +2,9 @@
 
 ## Requirements
 
-## For this script to run you need to have psutil and plyer packages installed 
+For this script to run you need to have psutil and plyer packages installed 
 
-## Run the command in terminal to install package
+Run the command in terminal to install package
 
 ```
 $ pip install psutil
