@@ -1,5 +1,5 @@
 from tkinter import *
-from moviepy.editor import *
+from moviepy.editor import VideoFileClip
 from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import ttk
@@ -33,26 +33,22 @@ def save_audio_file():
     
     """
     global audio_filepath, audio_file
-    
-    audio_filepath.set(filedialog.asksaveasfilename(defaultextension='.mp3', title="Select your audio file directory", filetypes=[
-        ('MP3 File','*.mp3'), ('Wave File','*.wav')]))
-    
+    audio_filepath.set(filedialog.asksaveasfilename(defaultextension='.mp3', 
+        title="Select your audio file directory", filetypes=[
+        ('MP3 File','*.mp3'), ('Wave File','*.wav')]))   
     try:
         audio_file = video_file.audio
         audio_file.write_audiofile(str(audio_filepath.get()))
         video_file.close()
         audio_file.close()
         messagebox.showinfo(message="File converted successfully")
-    except:
-        messagebox.showerror(message="File could not be converted", title="File Error")
-    
+    except AssertionError:
+        messagebox.showerror(message="File could not be converted", title="File Error")   
     # Resetting the video and audio paths
     video_filepath.set('')
     audio_filepath.set('')
 
 
-      
-    
 # Intializing main program settings
 main_prog = Tk()
 main_prog.title("Video to Audio Converter")
