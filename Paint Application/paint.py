@@ -20,8 +20,12 @@ class Window(QMainWindow):
 		# variables 
 		# drawing flag - shows if currently drawing 
 		self.drawing = False
+
+		# brush specifications 
 		self.brushSize = 2
 		self.brushColor = Qt.black 
+		self.brushStyle = Qt.SolidLine
+
 		# QPoint object to track the point of cursor release
 		self.lastPoint = QPoint() 
 
@@ -30,7 +34,8 @@ class Window(QMainWindow):
 		fileMenu = mainMenu.addMenu("File")
 		brush_size = mainMenu.addMenu("Brush Size")
 		brush_color = mainMenu.addMenu("Brush Color")
-		canvas_color = mainMenu.addMenu("Canvas Color") 
+		canvas_color = mainMenu.addMenu("Canvas Color")
+		brush_style = mainMenu.addMenu("Brush Style") 
 
 		# creating save action 
 		saveAction = QAction("Save", self)
@@ -101,7 +106,24 @@ class Window(QMainWindow):
 
 		white_canvas = QAction("White", self) 
 		canvas_color.addAction(white_canvas) 
-		white_canvas.triggered.connect(self.whiteCanvas) 
+		white_canvas.triggered.connect(self.whiteCanvas)
+
+		# Creating Brush styles
+		solid_brush = QAction("Solid", self) 
+		brush_style.addAction(solid_brush) 
+		solid_brush.triggered.connect(self.solidBrush)
+		
+		dot_brush = QAction("Dot", self) 
+		brush_style.addAction(dot_brush) 
+		dot_brush.triggered.connect(self.dotBrush)
+
+		dash_brush = QAction("Dash", self) 
+		brush_style.addAction(dash_brush) 
+		dash_brush.triggered.connect(self.dashBrush)
+
+		dashDot_brush = QAction("Dash Dot", self) 
+		brush_style.addAction(dashDot_brush) 
+		dashDot_brush.triggered.connect(self.dashDotBrush) 
 
 	# method for checking mouse clicks 
 	def mousePressEvent(self, event): 
@@ -123,8 +145,9 @@ class Window(QMainWindow):
 			painter = QPainter(self.image) 			
 			# set the pen of the painter 
 			painter.setPen(QPen(self.brushColor, self.brushSize, 
-							Qt.SolidLine, Qt.RoundCap, Qt.RoundJoin)) 			
-			# draw line from the last point of cursor to the current point 
+							self.brushStyle, Qt.RoundCap, Qt.RoundJoin)) 			
+			# draw line from the last point 
+			# of cursor to the current point 
 			painter.drawLine(self.lastPoint, event.pos())
 			self.lastPoint = event.pos()
 			self.update() 
@@ -215,6 +238,19 @@ class Window(QMainWindow):
 		white_msg = QMessageBox()
 		white_msg.setText("Canvas color changed to white!")
 		x = white_msg.exec_()
+
+	# methods to change brush style
+	def solidBrush(self): 
+		self.brushStyle = Qt.SolidLine 
+
+	def dotBrush(self): 
+		self.brushStyle = Qt.DotLine 
+
+	def dashBrush(self): 
+		self.brushStyle = Qt.DashLine
+	
+	def dashDotBrush(self): 
+		self.brushStyle = Qt.DashDotLine
 
 # create pyqt5 app 
 App = QApplication(sys.argv) 
