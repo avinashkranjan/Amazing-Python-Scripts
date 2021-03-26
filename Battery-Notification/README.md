@@ -12,8 +12,8 @@ $ pip install psutil
 ```
 $ pip install plyer
 ```
-## Run the program using command
+Run the program using command
 
 ``` 
-$ python battery_notification.py
+$ python Battery-Notification.py
 ```
