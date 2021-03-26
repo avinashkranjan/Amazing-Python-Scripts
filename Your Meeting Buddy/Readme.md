@@ -8,7 +8,7 @@ Inorder to automate the meeting process you are required to install the followin
 <ul>Chrome Driver:<a href="https://chromedriver.chromium.org/downloads" target="_blank" >Download</a></ul>
 <ul>Firefox Driver:<a href="https://github.com/mozilla/geckodriver/releases" target="_blank">Download</a></ul>
 
-### How to wake my buddy?
+## How to wake my buddy?
 
 Download the chrome driver from the above link.
 <p>Enter the chrome driver path in the code</p>
