@@ -7,4 +7,4 @@
 
 ## Screenshots
 <img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic1.PNG" width="50%" align="left" >
-<img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic2.PNG" width="50%" align="left" >
+<img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic2.PNG" width="50%" height="100%" align="left" >
