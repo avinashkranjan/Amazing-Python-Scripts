@@ -1,6 +1,6 @@
 # Number plate detection
 
-### Methodology:
+## Methodology:
 
 License plate of the vehicle is detected using various features of image processing library openCV and recognizing the text on the license plate using python tool named as tesseract.
 
