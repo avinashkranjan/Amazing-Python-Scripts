@@ -217,7 +217,7 @@ class Window(QMainWindow):
 
 	def blackCanvas(self):
 		self.image.fill(Qt.black)
-		black = QMessageBox()
+		black_msg = QMessageBox()
 		black_msg.setText("Canvas color changed to Black!")
 		x = black_msg.exec_()
 
