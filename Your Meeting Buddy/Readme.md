@@ -4,7 +4,7 @@ This buddy will help you to attain any online meetings scheduled on google meet 
 
 ## Required Setup
 Inorder to automate the meeting process you are required to install the following drivers
-### Quick links to the driver:
+## Quick links to the driver:
 <ul>Chrome Driver:<a href="https://chromedriver.chromium.org/downloads" target="_blank" >Download</a></ul>
 <ul>Firefox Driver:<a href="https://github.com/mozilla/geckodriver/releases" target="_blank">Download</a></ul>
 
