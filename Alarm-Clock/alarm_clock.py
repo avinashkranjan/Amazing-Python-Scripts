@@ -7,7 +7,7 @@ import sys
 from threading import Thread
 
 pygame.mixer.init(42050, -16, 2, 2048)
-alarm_sound = pygame.mixer.Sound("alarm.wav")
+alarm_sound = pygame.mixer.Sound("./Alarm-Clock/alarm.wav")
 
 def Threading():
     t1=Thread(target=actual_time) 
