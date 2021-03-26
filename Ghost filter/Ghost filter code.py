@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import cv2
-img = cv2.imread('Real Photo.jpg')
+img = cv2.imread('Real Photo.jpg') #name of the image
 #plt.imshow(img)
 #plt.show()
 image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
