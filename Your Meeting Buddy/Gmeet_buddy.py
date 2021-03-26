@@ -11,6 +11,7 @@ from selenium.webdriver.chrome.options import Options
 
 username = str(input('Your Username:' ))   # asking for mail id
 password = str(input('Your Password:' ))   #asking for password
+Driver_path = str(input('Enter your path where the chrome drive is installed:' )) #Saving the path of chrome driver
 
 #Providing camera and microphone access to the meeting
 
@@ -26,7 +27,7 @@ opt.add_experimental_option("prefs", { \
     "profile.default_content_setting_values.media_stream_camera": 1, 
     "profile.default_content_setting_values.notifications": 1 
       })
-browser =webdriver.Chrome(chrome_options=opt,executable_path="C:\\Users\\path where your chrome driver is saved")   #Enter the path of your chrome driver
+browser =webdriver.Chrome(chrome_options=opt,executable_path=Driver_path)   #Entering the path of  chrome driver
 browser.maximize_window() 
 action=ActionChains(browser)
 
