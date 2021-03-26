@@ -28,8 +28,9 @@ class Window(QMainWindow):
 		# creating menu bar 
 		mainMenu = self.menuBar()
 		fileMenu = mainMenu.addMenu("File")
-		b_size = mainMenu.addMenu("Brush Size")
-		b_color = mainMenu.addMenu("Brush Color") 
+		brush_size = mainMenu.addMenu("Brush Size")
+		brush_color = mainMenu.addMenu("Brush Color")
+		canvas_color = mainMenu.addMenu("Canvas Color") 
 
 		# creating save action 
 		saveAction = QAction("Save", self)
@@ -41,46 +42,66 @@ class Window(QMainWindow):
 		clearAction = QAction("Clear", self)
 		clearAction.setShortcut("Ctrl + C")
 		fileMenu.addAction(clearAction)
-		clearAction.triggered.connect(self.clear) 
+		clearAction.triggered.connect(self.clear)
 
 		# creating options for brush sizes 
 		pix_4 = QAction("4px", self)
-		b_size.addAction(pix_4)
+		brush_size.addAction(pix_4)
 		pix_4.triggered.connect(self.Pixel_4) 
 
 		pix_7 = QAction("7px", self) 
-		b_size.addAction(pix_7) 
+		brush_size.addAction(pix_7) 
 		pix_7.triggered.connect(self.Pixel_7) 
 
 		pix_9 = QAction("9px", self) 
-		b_size.addAction(pix_9) 
+		brush_size.addAction(pix_9) 
 		pix_9.triggered.connect(self.Pixel_9) 
 
 		pix_12 = QAction("12px", self) 
-		b_size.addAction(pix_12) 
+		brush_size.addAction(pix_12) 
 		pix_12.triggered.connect(self.Pixel_12) 
 
 		# creating options for brush color
 		black = QAction("Black", self)  
-		b_color.addAction(black) 
+		brush_color.addAction(black) 
 		black.triggered.connect(self.blackColor) 
 
 		white = QAction("White", self) 
-		b_color.addAction(white) 
+		brush_color.addAction(white) 
 		white.triggered.connect(self.whiteColor) 
 
 		green = QAction("Green", self) 
-		b_color.addAction(green) 
+		brush_color.addAction(green) 
 		green.triggered.connect(self.greenColor) 
 
 		yellow = QAction("Yellow", self) 
-		b_color.addAction(yellow) 
+		brush_color.addAction(yellow) 
 		yellow.triggered.connect(self.yellowColor) 
 
 		red = QAction("Red", self) 
-		b_color.addAction(red) 
+		brush_color.addAction(red) 
 		red.triggered.connect(self.redColor) 
 
+		# Creating Canvas colors
+		red_canvas = QAction("Red", self) 
+		canvas_color.addAction(red_canvas) 
+		red_canvas.triggered.connect(self.redCanvas)
+
+		black_canvas = QAction("Black", self)  
+		canvas_color.addAction(black_canvas) 
+		black_canvas.triggered.connect(self.blackCanvas) 
+
+		yellow_canvas = QAction("Yellow", self) 
+		canvas_color.addAction(yellow_canvas) 
+		yellow_canvas.triggered.connect(self.yellowCanvas) 
+
+		green_canvas = QAction("Green", self) 
+		canvas_color.addAction(green_canvas) 
+		green_canvas.triggered.connect(self.greenCanvas)
+
+		white_canvas = QAction("White", self) 
+		canvas_color.addAction(white_canvas) 
+		white_canvas.triggered.connect(self.whiteCanvas) 
 
 	# method for checking mouse clicks 
 	def mousePressEvent(self, event): 
@@ -164,7 +185,36 @@ class Window(QMainWindow):
 	def redColor(self): 
 		self.brushColor = Qt.red 
 
+	# methods for changing canvas color
+	def redCanvas(self):
+		self.image.fill(Qt.red)
+		red_msg = QMessageBox()
+		red_msg.setText("Canvas color changed to Red!")
+		x = red_msg.exec_()
 
+	def blackCanvas(self):
+		self.image.fill(Qt.black)
+		black = QMessageBox()
+		black_msg.setText("Canvas color changed to Black!")
+		x = black_msg.exec_()
+
+	def yellowCanvas(self):
+		self.image.fill(Qt.yellow)
+		yellow_msg = QMessageBox()
+		yellow_msg.setText("Canvas color changed to yellow!")
+		x = yellow_msg.exec_()
+	
+	def greenCanvas(self):
+		self.image.fill(Qt.green)
+		green_msg = QMessageBox()
+		green_msg.setText("Canvas color changed to green!")
+		x = green_msg.exec_()
+	
+	def whiteCanvas(self):
+		self.image.fill(Qt.white)
+		white_msg = QMessageBox()
+		white_msg.setText("Canvas color changed to white!")
+		x = white_msg.exec_()
 
 # create pyqt5 app 
 App = QApplication(sys.argv) 
