@@ -18,6 +18,6 @@ Converting an image into ghost/negative image using OpenCv, Matplotlib and Numpy
 <img src="Images/Real Photo.jpg" height="300px">
 
 ## Ghost Filter Image
-<img src="Images/Ghost Filter Image.jpg" height="300px">
+<img src="Images/Ghost Filtered Image.jpg" height="300px">
 
 
