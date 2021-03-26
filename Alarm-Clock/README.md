@@ -6,5 +6,5 @@
 - We can press the stop button when the alarm needs to be stopped.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/Anupreetadas/Alarm/main/assets/Capture1.PNG" width="50%" align="left" >
-<img src="https://raw.githubusercontent.com/Anupreetadas/Alarm/main/assets/Capture2.PNG" width="50%" align="left" >
+<img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic1.PNG" width="50%" align="left" >
+<img src="https://raw.githubusercontent.com/Anupreetadas/Amazing-Python-Scripts/branch_name/Alarm-Clock/assets/pic2.PNG" width="50%" align="left" >
