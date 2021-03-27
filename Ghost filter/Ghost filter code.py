@@ -1,7 +1,10 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import cv2
-img = cv2.imread('Real Photo.jpg') #name of the image
+
+img_path = r"C:\Users\akrit\OneDrive\Desktop\GSSOC'21\ghost_image\Images\hehe.jpg"  #path of the image
+img = cv2.imread(img_path)
+
 #plt.imshow(img)
 #plt.show()
 image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
