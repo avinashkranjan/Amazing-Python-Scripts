@@ -7,12 +7,8 @@ There is a previous button and a next button in the GUI. When the next button is
 When the previous button is pressed, the previous image will be displayed.
 
 ## Modules Used:
+tkinter</br>
+ImageTk</br>
+Image</br>
 
-`
-from tkinter import *
-`
-</br>
-`
-from PIL import ImageTk, Image
-`
 ## This code is contributed by Anurag Mukherjee. Thank you.
