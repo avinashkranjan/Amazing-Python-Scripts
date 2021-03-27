@@ -32,7 +32,6 @@ _OR_ Just point the location on the map .
     37.766227, -122.460213
     37.764028, -122.510347
 
- # Author 
- [Lakhan Kumawat](https://github.com/Lakhankumawat)
+### Author : [Lakhan Kumawat](https://github.com/Lakhankumawat)
     
     
