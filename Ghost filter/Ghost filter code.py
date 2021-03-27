@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import cv2
 
-img_path = r"C:\Users\akrit\OneDrive\Desktop\GSSOC'21\ghost_image\Images\hehe.jpg"  #path of the image
+img_path = r"path/of/the/image"  #path of the image
 img = cv2.imread(img_path)
 
 #plt.imshow(img)
