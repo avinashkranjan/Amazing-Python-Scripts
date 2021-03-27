@@ -1,8 +1,8 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import cv2
-
-img_path = r"path/of/the/image"  #path of the image
+# take path of the image as input
+img_path = input()  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg  
 img = cv2.imread(img_path)
 
 #plt.imshow(img)
