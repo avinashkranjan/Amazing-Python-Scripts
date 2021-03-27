@@ -10,7 +10,7 @@ After running  `Watermark_maker.py` you will be asked
 
  1. Specify the path of the image . 
  2. Input the Text for the The Watermark.
- 3. Choose option (1-5) based on desired position of image .
+ 3. Choose option (1-5) based on desired position of text on image .
 ## Sample Output 
 
 #### ORIGINAL IMAGE
