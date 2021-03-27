@@ -16,8 +16,7 @@ def get_video_file():
     """
     Function that gets the video file that needs to be converted
     """
-    global video_filepath, video_file
-    
+    global video_filepath, video_file   
     video_filepath.set(filedialog.askopenfilename(title="Select your video file", filetypes=[
     ('MP4 (mp4, m4a, m4v, f4v, f4a, m4b, m4r, f4b, mov)','*.mp4 *.m4a *.m4v *.f4v *.f4a *.m4b *.m4r *.f4b *.mov'),
     ('3GP (3gp, 3gp2, 3g2, 3gpp, 3gpp2)','*.3gp *.3gp2 *.3g2 *.3gpp *.3gpp2'),
@@ -26,17 +25,13 @@ def get_video_file():
     ('FLV','*.flv'), ('AVI','*.avi'), ('MPEG-1 (mpg, mp2, mpeg, mpe, mpv )','*.mpg *.mp2 *.mpeg *.mpe *.mpv'),
     ('MPEG-2','*.mpg *.mpeg *.m2v')]))
     video_file = VideoFileClip(str(video_filepath.get()))
-    
-
-   
 
 def save_audio_file():
     """
     Function that converts video file into audio file in a path that the user chooses
-    
     """
     global audio_filepath, audio_file, progress_bar
-    audio_filepath.set(filedialog.asksaveasfilename(defaultextension='.mp3', 
+    audio_filepath.set(filedialog.asksaveasfilename(defaultextension='.mp3',
         title="Select your audio file directory", filetypes=[
         ('MP3 File','*.mp3'), ('Wave File','*.wav')]))
     try:
@@ -47,11 +42,9 @@ def save_audio_file():
         messagebox.showinfo(message="File converted successfully")
     except:
         messagebox.showerror(message="File could not be converted", title="File Error")
-        
     # Resetting the video and audio paths
     video_filepath.set('')
     audio_filepath.set('')
-    
     # Resetting the progressbar after function execution
     progress_bar['value'] = 0
     progress_bar.stop()
@@ -59,14 +52,12 @@ def save_audio_file():
 def run_program():
     """
     Function that runs the process of conversion and loading bar concurrently
-    
     """
     global progress_bar
     t1 = threading.Thread(target=progress_bar.start)
     t2 = threading.Thread(target=save_audio_file)
     t2.start()
     t1.start()
-    
 
 # Intializing main program settings
 main_prog = Tk()
