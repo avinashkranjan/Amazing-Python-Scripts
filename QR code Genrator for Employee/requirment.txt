@@ -1,3 +1,0 @@
-qrcode = pip install qrcode
-Pillow = pip install Pillow
-python image resizeable = pip install python-resize-image
