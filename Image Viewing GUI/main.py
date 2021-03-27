@@ -8,15 +8,13 @@ root.title('Image viewer')
 root.resizable(0, 0)
 
 # opening the images from the image folder
-
-img1 = Image.open("images/img1.jpg")
-img2 = Image.open("images/img2.jpg")
-img3 = Image.open("images/img3.jpg")
-img4 = Image.open("images/img4.jpg")
-img5 = Image.open("images/img5.jpg")
+img1 = Image.open("./Image Viewing GUI/images/img1.jpg")
+img2 = Image.open("./Image Viewing GUI/images/img2.jpg")
+img3 = Image.open("./Image Viewing GUI/images/img3.jpg")
+img4 = Image.open("./Image Viewing GUI/images/img4.jpg")
+img5 = Image.open("./Image Viewing GUI/images/img5.jpg")
 
 # resizing the images
-
 resized_img1 = img1.resize((500, 500), Image.ANTIALIAS)
 resized_img2 = img2.resize((500, 500), Image.ANTIALIAS)
 resized_img3 = img3.resize((500, 500), Image.ANTIALIAS)
@@ -30,14 +28,12 @@ new_pic4 = ImageTk.PhotoImage(resized_img4)
 new_pic5 = ImageTk.PhotoImage(resized_img5)
 
 # creating a list of all the images
-
 image_list = [new_pic1,new_pic2,new_pic3,new_pic4,new_pic5]
 
 my_label = Label(image = new_pic1)
 my_label.grid(row = 0, column = 0, columnspan = 3)
 
 # defining a function to show the previous image
-
 def back(image_num):
     global my_label
     global back_btn
@@ -58,7 +54,6 @@ def back(image_num):
     next_btn.grid(row = 1, column = 2)
 
 # defining a function to show the next image
-
 def next(image_num):
     global my_label
     global back_btn
@@ -84,5 +79,4 @@ back_btn.grid(row = 1, column = 0)
 next_btn.grid(row = 1, column = 2)
 
 # creating the mainloop
-
 root.mainloop()
