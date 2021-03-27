@@ -1,26 +1,27 @@
 # Color-Game-using-Tkinter
 
+This game is an interesting one, and it will trick the player’s mind a lot. In this game, the player has to enter the color of the word that appears on the screen. The score increases by one, and the total time to play this game is 30 seconds.
 
+The game uses a variety of colors such as Red, Blue, Green, Pink, Black, Yellow, Orange, White, Purple, and Brown. These colors are interchangeably displayed to trick the player’s mind.
 
-- If package, list of functionalities/scripts it can perform
-- If standalone script, short description of script explaining what it achieves
+The graphical user interface (GUI) will display the name of different colors in different colors. The player has to identify the color and enter the correct color name to win the game.
+
+This app is a fun game, and anyone will enjoy playing it a lot.
+
 
 ## Setup instructions
 
-Explain how to setup and run your package/script in user's system
+There are two ways to run it on your pc or mac:
 
-## Detailed explanation of script, if needed
-
-If code is not explainable using comments, use this sections to explain your script
+- Run the executable(.exe) file 
+- Run the program in your IDE or terminal/command line.
 
 ## Output
 
-Display images/gifs/videos of output/result of your script so that users can visualize it
+Click on the below image to see the Game in play on YouTube.
+
+[![Color-Game-using-Tkinter](https://i.imgur.com/aKB0PN7.png)](https://youtu.be/-ohxdtQWCFQ)
 
 ## Author(s)
 
-Name(s) of author(s)
-
-## Disclaimers, if any
-
-Use this section to mention if any particular disclaimer is required
+Priyanshu Chatterjee(PriyanshuChatterjee)

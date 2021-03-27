@@ -1,3 +1,7 @@
+# Author: PriyanshuChatterjee
+# Colour Game using Tkinter
+# See the readme.md for how to play and which file to run to play.
+
 # importing the modules
 import tkinter
 import random
