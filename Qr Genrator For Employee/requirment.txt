@@ -1,4 +1,0 @@
-If you run this project in your machine then you have to required 
-qrcode = pip install qrcode
-Pillow = pip install Pillow
-python image resizeable = pip install python-resize-image
