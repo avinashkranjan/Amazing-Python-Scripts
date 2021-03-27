@@ -15,4 +15,4 @@ from tkinter import *
 `
 from PIL import ImageTk, Image
 `
-### This code is contributed by Anurag Mukherjee. Thank you.
+## This code is contributed by Anurag Mukherjee. Thank you.
