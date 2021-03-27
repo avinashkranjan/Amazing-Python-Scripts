@@ -1,4 +1,4 @@
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 # take path of the image as input
@@ -31,4 +31,5 @@ array = cv2.bitwise_xor(image, image_edge)     #taking xor between image and ima
 plt.figure(figsize= (10,10))
 plt.imshow(array)
 plt.axis('off')
+plt.savefig("squares.png")
 plt.show()  #real ghost filtered photo
