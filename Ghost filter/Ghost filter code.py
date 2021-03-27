@@ -30,5 +30,5 @@ image_edge = cv2.cvtColor(image_edge, cv2.COLOR_GRAY2RGB)
 array = cv2.bitwise_xor(image, image_edge)     #taking xor between image and image_edge to get ghost filter
 plt.figure(figsize= (10,10))
 plt.imshow(array)
-
+plt.axis('off')
 plt.show()  #real ghost filtered photo
