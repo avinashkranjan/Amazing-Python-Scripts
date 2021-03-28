@@ -7,3 +7,6 @@
 ```bash
 pip install tkintertable
 ```
+```bash
+pip install subprocess.run
+```
