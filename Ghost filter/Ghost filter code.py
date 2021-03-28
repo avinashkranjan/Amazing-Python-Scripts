@@ -1,8 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
+import os.path
+
 # take path of the image as input
-img_path = input()  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg  
+img_path = input("Enter the path here:")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg  
 img = cv2.imread(img_path)
 
 #plt.imshow(img)
@@ -31,5 +33,9 @@ array = cv2.bitwise_xor(image, image_edge)     #taking xor between image and ima
 plt.figure(figsize= (10,10))
 plt.imshow(array)
 plt.axis('off')
-plt.savefig("squares.png")
+
+filename = os.path.basename(img_path)
+#print(filename)
+
+plt.savefig(filename+"(Filtered).jpg")
 plt.show()  #real ghost filtered photo
