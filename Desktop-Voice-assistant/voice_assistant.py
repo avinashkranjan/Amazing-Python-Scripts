@@ -7,7 +7,6 @@ import webbrowser
 import smtplib
 import pywhatkit
 import pyjokes
-import PyPDF2
 import time
 import sys
 
@@ -66,17 +65,6 @@ def mailSent(to, content):
     
     server.close()
     
-def reader():
-    file= open('enter the pdf name','rb')   #for example: open('abc.pdf','rb')
-    pdfReader=pyPDF2.Pdffilereader(file)
-    pages=pdfReader.numPages
-    speak(f"There are {pages} pages in this book")
-    speak("which page you want me to read")
-    pg=int(input("Enter the page number: "))
-    page=pdfReader.getPage(pg)
-    text=page.extractText()
-    speak(text)
-
 if __name__=='__main__':
 
     wish_user()
@@ -135,9 +123,6 @@ if __name__=='__main__':
             joke=pyjokes.get_joke()
             speak(joke)
             
-        elif 'read for me' in query:       #this basically acts as an audiobook
-            reader()
-        
         elif 'no thanks' in query:
             speak("thanks for using me! Have a good day")
             sys.exit()

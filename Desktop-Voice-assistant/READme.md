@@ -10,7 +10,7 @@ It would be great to have a desktop voice assistant who could perform tasks like
     2. It can search wikipedia and read the first few lines for you.
     3. It can open youtube, google, facebook and spotify.
     4. Send messages in whatsapp on your behalf.
-    5. Tell you jokes or read pdf for you.
+    5. Tell you jokes.
     6. Tell date and time for you.
     7. Open apps on your device. (other.txt)
     
