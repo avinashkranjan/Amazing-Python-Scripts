@@ -29,7 +29,6 @@
     - plyer
     - requests
     - json
-    - time
     
 ## Author
    

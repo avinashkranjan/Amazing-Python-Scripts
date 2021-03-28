@@ -1,4 +1,4 @@
-import time
+
 from plyer import notification
 import requests
 import json
@@ -13,13 +13,12 @@ data = json.loads(news.content)
 for i in range(10):
 
     notification.notify(
-       title = data['articles'][i]['title'],
-       message= data['articles'][i]['description'] ,
+       title = data['articles'][i]['title'][:20],
+       message= data['articles'][i]['description'][:44] ,
        # displaying time
-       timeout=2 ,
+       timeout=5 ,
        toast=False)
 
-    # waiting time
-    time.sleep(7)
+    
 
 
