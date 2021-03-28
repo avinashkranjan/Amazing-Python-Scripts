@@ -1,0 +1,14 @@
+#Following modules are being used here:
+pyttsx3
+datetime
+speech_recognition
+pyaudio
+wikipedia
+webbrowser
+smtplib
+pywhatkit
+pyjokes
+PyPDF2s
+time
+sys
+
