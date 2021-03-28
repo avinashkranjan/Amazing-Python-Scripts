@@ -8,11 +8,12 @@ im = Image.open(path)
 width, height = im.size
 
 #Taking input for the text
-text = input('Enter the text for the  watermark:' )
+text = input('Enter the text for the watermark: ' )
 font = ImageFont.truetype('arial.ttf', 20 )
 
 #Taking Input For the Position of the text
-print("Where you want to input the text . Pls enter\n 1 - Top Left \n 2 - Top Right \n 3 - Bottom Left \n 4 - Bottom Right \n 5 - Center")
+print("To Specify the position of the text , enter a number between 1 to 5.\n")
+print("Enter\n 1 for Top Left \n 2 for Top Right \n 3 for Bottom Left \n 4 for Bottom Right \n 5 for Center")
 pos = int(input())
 
     
