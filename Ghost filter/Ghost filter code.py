@@ -36,6 +36,5 @@ plt.axis('off')
 
 filename = os.path.basename(img_path)
 #print(filename)
-
-plt.savefig(filename+"(Filtered).jpg")
+plt.savefig("(Filtered)"+filename)
 plt.show()  #real ghost filtered photo
