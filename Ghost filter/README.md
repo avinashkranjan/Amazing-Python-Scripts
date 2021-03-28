@@ -3,7 +3,7 @@
 Converting an image into ghost/negative image using OpenCv, Matplotlib and Numpy.
 
 ## Steps:
-* Firstly imported the required libraries which are Numpy, Matplotlib and Cv2.
+* Firstly imported the required libraries which are Numpy, Matplotlib, Os and Cv2.
 * Read the input image/Real image using cv2
 
 ## Methods Used
