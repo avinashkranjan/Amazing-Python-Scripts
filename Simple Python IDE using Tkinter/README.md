@@ -17,3 +17,8 @@ pip install tkintertable
 ```bash
 pip install subprocess.run
 ```
+# Output
+
+# Author(s)
+
+Priyadarshan Ghosh (Priyadarshan2000)
