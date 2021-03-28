@@ -5,4 +5,4 @@ Here is the code you can use:
 import os
 elif 'Open <App name>' in query:
      path= "Location of the application"
-     os.startfile(path) 
+     os.startfile(path)

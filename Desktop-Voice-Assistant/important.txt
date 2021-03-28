@@ -5,8 +5,6 @@ For the function to work:
    2. Select "Control access to less secure apps"
    3. Here enable the less secure apps for the account you will be using to send emails
 
-
-
 Now its a concern of security if we have to write our password this way
     for no privacy breach we can use the following steps:
     1. Go to goole and search "App passwords google"
