@@ -94,8 +94,7 @@ if __name__=='__main__':
             webbrowser.open("youtube.com")
 
         elif 'search google' in query:
-            search=user_command.lower()
-            webbrowser.open(f"{search}")
+            webbrowser.open("google.com")
 
         elif 'play music' in query:
             webbrowser.open("spotify.com")
@@ -105,9 +104,9 @@ if __name__=='__main__':
             time= datetime.datetime.now().strftime("%H:%M")
             speak(f"Its {time} now")
 
-        elif 'date' in query:
-            date=datetime.datetime.today().strftime("%DD-%MM")
-            speak(f"Today's is {date}")
+        elif 'date today' in query:
+            date=datetime.datetime.today().strftime("%dd-%mm-%yy")
+            speak(f"Today is {date}")
 
         elif 'send email' in query:
             try:
@@ -144,4 +143,6 @@ if __name__=='__main__':
             sys.exit()
             
         time.sleep(5)
-        speak("do you have any other work?") 
+        speak("do you have any other work?")
+        
+        
