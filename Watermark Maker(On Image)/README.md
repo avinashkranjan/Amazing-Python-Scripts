@@ -20,10 +20,8 @@ After running  `Watermark_maker.py` you will be asked
 [![Test-Image2.png](https://i.postimg.cc/LsDcBY73/Test-Image2.png)](https://postimg.cc/Z99sJRJW)
 
 [![Centre-Text.png](https://i.postimg.cc/X7Wthgbk/Centre-Text.png)](https://postimg.cc/MXssfVXn)
-
-
 ## Author
-Aishwarya Chand @aishwaryachand
+[Aishwarya Chand](https://github.com/aishwaryachand)
 
 
 
