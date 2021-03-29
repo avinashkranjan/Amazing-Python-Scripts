@@ -13,6 +13,8 @@ With the turtle library of Python, we can draw several shapes and figures. Here'
 
 ### 1. Animated Robot
 This is a simple figure we can create to understand basics of turtle graphics.
-[]{}
+![]()
 
 ### 2. Kaleido Spiral
+In this, we will draw circles and squares in continuation. Everytime we will change the radius of circle and side dimension of square to make it look like a expanding squares and circles.
+![]()
