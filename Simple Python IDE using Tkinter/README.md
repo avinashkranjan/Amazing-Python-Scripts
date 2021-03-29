@@ -9,7 +9,7 @@ There are two ways to run it on your Linux,MAC or Windows
 - Run the program in your IDE or terminal/command line.
 
 ### Requirements:
-1. python3
+**Python3**
 
 ```bash
 pip install tkintertable
