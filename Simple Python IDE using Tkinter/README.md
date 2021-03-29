@@ -21,7 +21,7 @@ pip install tkintertable
 ```bash
 pip install subprocess.run
 ```
-Click on the ** Click here** to see the Simple Python IDE using Tkinter Demo on YouTube.
+Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on YouTube.
 
 | Name of Script | YouTube Link |  Author | Tools Used |
 | --- | --- | --- | --- 
