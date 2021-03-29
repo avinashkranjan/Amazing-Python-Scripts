@@ -116,8 +116,8 @@ if __name__=='__main__':
             message=user_command()
             speak("At what time should I send?")
             speak("At what time? (24 hours system)")
-            hr=input("Hours: ")
-            mins=input("Minutes: ")
+            hr=int(input("Hours: "))
+            mins=int(input("Minutes: "))
             kit.sendwhatmsg(number,message,hr,mins)
             # this should be in the format ("+91xxxxxxxxxx","This is message", 15, 20) 
             
