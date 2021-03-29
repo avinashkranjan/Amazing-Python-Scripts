@@ -119,6 +119,7 @@ if __name__=='__main__':
             hr=input("Hours: ")
             mins=input("Minutes: ")
             kit.sendwhatmsg(number,message,hr,mins)
+            # this should be in the format ("+91xxxxxxxxxx","This is message", 15, 20)
             
         elif 'open facebook' in query:
             webbrowser.open("facebook.com")
