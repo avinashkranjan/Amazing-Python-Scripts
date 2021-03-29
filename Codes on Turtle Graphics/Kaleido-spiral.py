@@ -2,21 +2,21 @@ import turtle as t
 import time as ti
 from itertools import cycle
 
-colors = cycle(['red','orange','yellow','blue','green','purple'])
+colors = cycle(['red','orange','yellow','blue','green','purple'])   # color of different circles 
 
 def draw_circle(size,angle,shift,shape):
     t.pencolor(next(colors))
     next_shape = ''
     if shape == 'circle':
         t.circle(size)
-        next_shape = 'square'
+        next_shape = 'square'   # draw square after circle
     elif shape == 'square':
         for i in range(4):
             t.forward(size * 2)
             t.left(90)
         next_shape = 'circle'
     t.right(angle)
-    t.forward(shift)
+    t.forward(shift)    #to shift center of different circles
     draw_circle(size + 5,angle+1,shift+1,next_shape)
 
 t.bgcolor('black')
