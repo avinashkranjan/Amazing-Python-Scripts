@@ -5,7 +5,6 @@ This Python IDE develops using Tkintertable & subprocess. run module.
 After your code will run successfully, to exit from the IDE go to File and click the Exit Button.
 
 
-
 # Setup instructions
 There are two ways to run it on your Linux,MAC or Windows
 
