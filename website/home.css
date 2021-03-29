@@ -1,9 +1,10 @@
 header {
-  width: 100%;
+  max-width: 98%;
   height: 100vh;
   background: url(https://socialify.git.ci/avinashkranjan/Amazing-Python-Scripts/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fuser-images.githubusercontent.com%2F55796944%2F104455539-7258a200-55cd-11eb-90dc-7c9981e73d72.png&owner=1&pulls=1&stargazers=1&theme=Light)
     no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+
   /* background: url(https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif); */
 }
 .block {
@@ -93,4 +94,58 @@ header {
   color: whitesmoke;
   font-weight: 100;
   text-align: center;
+}
+
+.container-fluid{
+  background-color: rgb(74, 80, 75);
+}
+.nav-link{
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 20px;
+  /* text-decoration: underline; */
+  color: aliceblue!important;
+}
+
+.nav-link:hover{
+
+  font-weight: 600;
+  color: rgb(119, 241, 63)!important;
+}
+
+
+.navbar-toggler-icon{
+  background-color: white;
+}
+
+.navbar-light .navbar-toggler{
+  background-color: aliceblue;
+  
+
+}
+a.nav-link{
+  font-size: x-large;
+}
+
+.navbar>.container, .navbar>.container-fluid{
+  padding-top: 15px;
+  padding: 0 10px;
+  padding-top: 2px;
+
+}
+
+.d-flex{
+  margin-bottom: 20px;
+}
+.navbar-toggler{
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 52px;
+}
+.fa-python:before {
+  content: "\f3e2";
+  font-size: x-large;
+}
+.navbar{
+  padding-left: 10px;
 }
