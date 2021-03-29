@@ -17,6 +17,10 @@ pip install tkintertable
 ```bash
 pip install subprocess.run
 ```
+
+S. No | Name of Script | Directory Link |  Author | Tools Used |
+--- | --- | --- | --- | --- 
+1 | All Github Repos | [Click Here](/Python/All_GitHub_Repos) | [Priyadarshan Ghosh](https://github.com/Priyadarshan2000) | tkintertable, subprocess.run
 # Output
 ![image](https://user-images.githubusercontent.com/62868878/112800376-32ae3c00-908d-11eb-96ac-38b7d1f2fb76.png)
 
