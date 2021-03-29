@@ -13,4 +13,4 @@ Now its a concern of security if we have to write our password this way
     4.Under "select the app and device you want generate password for"
          i> Select App= Mail   Select Device= Windows 10
          ii>Click on generate
-    5. Copy the app password and use it here.
+    5. Copy the app password and use it here. 

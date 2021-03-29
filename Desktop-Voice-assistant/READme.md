@@ -13,7 +13,7 @@ It would be great to have a desktop voice assistant who could perform tasks like
     5. Tell you jokes.
     6. Tell date and time for you.
     7. Open apps on your device. (other.txt)
-    
+
 # How to use #
 
     1. Start the assistant.

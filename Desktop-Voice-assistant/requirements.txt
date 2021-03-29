@@ -7,6 +7,6 @@ wikipedia
 webbrowser
 smtplib
 pywhatkit
-pyjokes
+pyjokes 
 time
 sys
