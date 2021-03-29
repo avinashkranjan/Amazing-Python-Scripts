@@ -1,4 +1,7 @@
 # Simple Python IDE using Tkinter
+This is a Simple Python IDE using Tkinter. We can Run our Python Code here. we open our saved code in this IDE. 
+when you can't save your code and run it an error message show **"Please save your code"**. 
+This Python IDE develops using Tkintertable & subprocess. run module. 
 
 
 
