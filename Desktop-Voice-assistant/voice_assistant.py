@@ -5,7 +5,7 @@ import pyaudio
 import wikipedia
 import webbrowser
 import smtplib
-import pywhatkit
+import pywhatkit as kit
 import pyjokes
 import time
 import sys
@@ -93,7 +93,7 @@ if __name__=='__main__':
             speak(f"Its {time} now")
 
         elif 'date today' in query:
-            date=datetime.datetime.today().strftime("%dd-%mm-%yy")
+            date=datetime.datetime.today()
             speak(f"Today is {date}")
 
         elif 'send email' in query:
@@ -105,7 +105,7 @@ if __name__=='__main__':
                 speak(to)
                 mailSent(to, content)
                 speak(f"successfully sent the email to {to}")
-            except exception as e:
+            except Exception as e:
                 print(e)
                 speak("sorry! i was unable to send the mail")
                 
@@ -114,7 +114,11 @@ if __name__=='__main__':
             number=int(input())
             speak("Tell me the message please")
             message=user_command()
-            kit.sndwhatmsg(number,message)
+            speak("At what time should I send?")
+            speak("At what time? (24 hours system)")
+            hr=input("Hours: ")
+            mins=input("Minutes: ")
+            kit.sendwhatmsg(number,message,hr,mins)
             
         elif 'open facebook' in query:
             webbrowser.open("facebook.com")
