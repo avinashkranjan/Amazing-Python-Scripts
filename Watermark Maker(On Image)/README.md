@@ -22,18 +22,3 @@ After running  `Watermark_maker.py` you will be asked
 [![Centre-Text.png](https://i.postimg.cc/X7Wthgbk/Centre-Text.png)](https://postimg.cc/MXssfVXn)
 ## Author
 [Aishwarya Chand](https://github.com/aishwaryachand)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
