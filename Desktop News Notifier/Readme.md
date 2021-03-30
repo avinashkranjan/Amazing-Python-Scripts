@@ -6,7 +6,7 @@
 
 - On running the script it gives a notification of top 10 news
 
-## Select Stocks by volume Increase Instructions: 👨🏻‍💻
+## Desktop Notifier Instructions: 👨🏻‍💻
 
 ### Step 1:
 
