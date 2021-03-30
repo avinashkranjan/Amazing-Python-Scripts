@@ -47,7 +47,7 @@ $ git add .
 - To commit give a descriptive message for the convenience of reveiwer by:
 ```
 # This message get associated with all files you have changed
-$ git commit -m 'message
+$ git commit -m "message"
 ```
 - **NOTE**: A PR should have only one commit. Multiple commits should be squashed.
 ## Step 6 : Work Remotely
