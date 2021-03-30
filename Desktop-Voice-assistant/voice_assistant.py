@@ -60,7 +60,7 @@ def mailSent(to, content):
     server.ehlo()
     server.starttls()
     server.login('your email', 'your app password')  # when you start working with the assistant, save this on your device
-    #check important.txt for creating an app password
+    #check READme.md for creating an app password
     server.sendmail('Your email',to,content)
     
     server.close()

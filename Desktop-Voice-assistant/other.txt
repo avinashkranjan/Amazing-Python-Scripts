@@ -1,8 +1,0 @@
-You can use it to open apps on your device like word, one note, notepad, VS code etc
-The path will vary from user to user 
-Here is the code you can use:
-
-import os
-elif 'Open <App name>' in query:
-     path= "Location of the application"
-     os.startfile(path)

@@ -1,4 +1,3 @@
-#Following modules are being used here:
 pyttsx3
 datetime
 speech_recognition
