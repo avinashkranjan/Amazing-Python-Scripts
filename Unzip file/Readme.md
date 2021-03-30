@@ -4,10 +4,8 @@
 
 ## Unzip File Functionalities : 🚀
 
-- First upload the stocks dataset
-- Then enter the number of days for comparison and also the number of times the volume
-   should increase
-- Then the script will return the stocks of the choice entered by user
+- Upload the zip file which is to be unzipped
+- Then the script will return all the unzipped files into the Unzip files folder
 
 ## Unzip File Instructions: 👨🏻‍💻
 
