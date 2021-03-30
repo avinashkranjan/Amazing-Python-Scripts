@@ -1,13 +1,11 @@
 
-import csv  #csv - Comma Separated Values
-from gmplot import gmplot
+import csv
+from gmplot import gmplot #importing
 
+gmap = gmplot.GoogleMapPlotter(37.771260, -122.511011,17) #17 is here zoom level
 
-gmap = gmplot.GoogleMapPlotter(20.613456, 72.9431185,17) #Plotting data on map
-
-Path = input("Enter the csv file path")
-
-with open(Path,'r') as f:  #give the address of csv file with respect to your folder containing .py file
+Path=input("Enter the path of your csv file , with filename and extension : ")
+with open(Path,'r') as f:
     reader=csv.reader(f)
     k=0
     for row in reader:
@@ -15,10 +13,11 @@ with open(Path,'r') as f:  #give the address of csv file with respect to your fo
         long=float(row[1])
         
         if k==0:
-            gmap.marker(lat, long, 'green')  #PLotting Markers
+            gmap.marker(lat, long, 'green')
             k=1
         else:
-            gmap.marker(lat,long,'blue')    #plotting Markers
+            gmap.marker(lat,long,'blue')
         
 gmap.marker(lat,long,'red')
-gmap.draw("Output.html") #Taking output in the form of html file 
+print("Done! Check file Output.html")
+gmap.draw("Output.html")
