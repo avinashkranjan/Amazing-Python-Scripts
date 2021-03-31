@@ -20,7 +20,7 @@ There are two ways to run it on your pc or mac:
 
 Click on the below image to see the Game in play on YouTube.
 
-[![Color-Game-using-Tkinter](https://i.imgur.com/aKB0PN7.png)](https://youtu.be/-ohxdtQWCFQ)
+[![Color-Game-using-Tkinter](https://i.imgur.com/aKB0PN7.png)](https://youtu.be/V_5S_2v0H4c)
 
 ## Author(s)
 
