@@ -21,8 +21,7 @@ It would be great to have a desktop voice assistant who could perform tasks like
 # Side note
   Make sure you set Master as your name. (line 21)
   Enter the email and app password. (line 63)
-  Also before making it read any pdf, enter the name of the pdf. (line 70)
-  You need to be logged into whatsapp for using the assistant to send whatsapp messages.
+  You need to be logged into whatsapp for using the assistant to send whatsapp messages. (While using 'Send Whatsapp message' option
 
 
 # Additional features:
