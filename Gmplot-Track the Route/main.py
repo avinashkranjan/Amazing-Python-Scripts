@@ -1,10 +1,24 @@
-
 import csv
 from gmplot import gmplot #importing
 
-gmap = gmplot.GoogleMapPlotter(37.771260, -122.511011,17) #17 is here zoom level
-
 Path=input("Enter the path of your csv file , with filename and extension : ")
+Zoom=int(input("Enter your zoom level (less value zoom out , large value zoom in ) : "))
+
+x=0 #for central coordinates x and y 
+y=0
+
+with open(Path,'r') as f:
+    reader=csv.reader(f)
+    k=0
+    for row in reader:
+        lat=float(row[0])
+        long=float(row[1])
+        x+=lat
+        y+=long
+        
+gmap = gmplot.GoogleMapPlotter(x/(100), y/(100),Zoom) #Zoom level and here total number of coordinates we're taking average 
+
+
 with open(Path,'r') as f:
     reader=csv.reader(f)
     k=0
@@ -17,6 +31,7 @@ with open(Path,'r') as f:
             k=1
         else:
             gmap.marker(lat,long,'blue')
+            k=0
         
 gmap.marker(lat,long,'red')
 print("Done! Check file Output.html")
