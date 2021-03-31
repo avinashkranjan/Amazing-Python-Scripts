@@ -17,7 +17,7 @@ voices= engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 190)
 
-Master="Your Name"  # when you start using the assistant enter your name here
+Master=input("Enter your name: ")  # when you start using the assistant enter your name here
 
 def speak(audio):
     engine.say(audio)
