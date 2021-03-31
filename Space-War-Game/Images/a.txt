@@ -1,0 +1,21 @@
+Link of the png logo which are used...
+
+Link of the Logo which is used in our game
+
+<a target="_blank" href="https://icons8.com/icons/set/controller">Game Controller icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+Link of the Spaceship Which is used in our game
+
+<a target="_blank" href="https://icons8.com/icons/set/space-shuttle">Space Shuttle icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+Link of the enemy used in our game
+
+<a target="_blank" href="https://icons8.com/icons/set/alien">Alien icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+This is the link for our backgroung Image
+
+<a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a>
+
+This is the link for our bullet used in the game
+
+Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
