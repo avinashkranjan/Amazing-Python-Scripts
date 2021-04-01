@@ -2,7 +2,7 @@ import pytesseract
 from PIL import Image
 
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
+pytesseract.pytesseract.tesseract_cmd = (r'Enter the path: ')
 
 img = input(r"Enter image: ")
 target = Image.open(img)
