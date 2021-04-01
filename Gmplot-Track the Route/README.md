@@ -33,7 +33,8 @@ _OR_ Just point the location on the map .
     37.764028, -122.510347
 
 # Outcome 
-<a href="https://ibb.co/5sFHX2z"><img src="https://i.ibb.co/wpsmZYb/Screenshot-40.png" alt="Screenshot-40" border="0"></a>
+![Screenshot (41)](https://user-images.githubusercontent.com/55774240/113260040-6dadab00-92eb-11eb-97ef-ee2772e22a3f.png)
+
 
 ## Author : [Lakhan Kumawat](https://github.com/Lakhankumawat)
     
