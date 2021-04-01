@@ -1,0 +1,5 @@
+pytest==5.1.2
+Flask==1.1.1
+pubnub==4.1.6
+requests==2.22.0
+cryptography==3.4.5
