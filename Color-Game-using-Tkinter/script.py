@@ -82,7 +82,7 @@ def vp_start_gui():
     root.title("COLOR GAME")
 
     # setting the size
-    root.geometry("375x250")
+    root.geometry("375x300")
 
     # adding the instruction label
     instructions = tkinter.Label(root, text="Type in the colour"
@@ -114,8 +114,13 @@ def vp_start_gui():
 
     # Adding the Restarting Button
     R_b = tkinter.Button(root, text="Restart Game", command = restartGame)
-    R_b.pack(side = 'bottom')
+    R_b.pack(side = "bottom")
     R_b.pack(pady = 15)
+
+    # Adding the Game Exiting Button
+    E_b = tkinter.Button(root, text="Exit Game", command=exitGame)
+    E_b.pack(side = "bottom")
+    E_b.pack(pady=15)
 
     # calling the 'startGame' function when the entry key is pressed
     root.bind('<Return>', startGame)
@@ -129,11 +134,17 @@ def vp_start_gui():
 
 # Game Restarting function defined inside main.
 if __name__ == '__main__':
+    #Function to Restart the Game
     def restartGame():
         # Destroying the Root Window
         root.destroy()
         # Calling the GUI Starting Function
         vp_start_gui()
+
+    #Function to exit the Game
+    def exitGame():
+        #Destroying the root window
+        root.destroy()
 
     # Calling the GUI Starting Function
     vp_start_gui()
