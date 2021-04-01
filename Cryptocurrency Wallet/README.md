@@ -19,7 +19,7 @@ There are two ways to run it on your Linux, MAC or Windows
 Click on the Click Here to see the Cryptocurrency Wallet  on YouTube.
 
 | Name of Script | YouTube Link |  Author |
-| --- | --- | --- | --- 
+| --- | --- | ---  
 | Cryptocurrency Wallet | [Click Here](https://youtu.be/BU7nVBDtDpM)| [Arnab Ray](https://github.com/Arnab11917676) | 
 ## Output
 
@@ -29,9 +29,6 @@ Click on the Click Here to see the Cryptocurrency Wallet  on YouTube.
 
 
 
-## Demo
-
-![]()
 
 
 ## Author(s)
