@@ -12,9 +12,9 @@ def hangman():
                           "avengers",
                           "savewater",
                           "earth",
-                          "annable"]) # Word list we would like to play with.
-    validLetters = 'abcdefghijklmnopqrstuvwxyz'
-    turns = 10                        #Total number of chance given to the user
+                          "annable"])                        # Word list we would like to play with.
+    validLetters = 'abcdefghijklmnopqrstuvwxyz'              # All the characters defined in the word list
+    turns = 10                                               #Total number of chance given to the user
     guessmade = ''
 
     while len(word) > 0:
