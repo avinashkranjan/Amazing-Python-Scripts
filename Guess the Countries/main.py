@@ -1,5 +1,6 @@
 import turtle
 import pandas
+import pylint
 import random
 screen=turtle.Screen()
 
@@ -13,7 +14,6 @@ turtle.shape(image)
 
 data=pandas.read_csv("country_names.csv")
 countries= data.country.to_list()
-guess=0
 color = ['red','green','brown','orange','blue']
 random_color= random.randint(0,4)
 guessed=[]
@@ -26,7 +26,15 @@ while True:
         country_turtle.write("ALL CORRECT GUESSES", align="center", font=("Courrier", 35, "bold"))
     else:
         answer=screen.textinput(str(correct)+"/196 Correct Guesses", "Name the Country:")
-        guess += 1
+        if answer is not None:
+            answer=answer.lower()
+        else:
+            country_turtle = turtle.Turtle()
+            country_turtle.hideturtle()
+            country_turtle.goto(0, 0)
+            country_turtle.color('black')
+            country_turtle.write(str(correct)+" CORRECT GUESSES", align="center", font=("Courrier", 35, "bold"))
+            break
 
         if answer in guessed:
             print(guessed)
@@ -34,7 +42,7 @@ while True:
             country_turtle=turtle.Turtle()
             for i in range(0,len(countries)):
                 country_name=countries[i]
-                if answer.lower()==country_name.lower():
+                if answer==country_name.lower():
                     print(country_name)
                     guessed.append(answer)
                     x_list = data['x'].to_list()
