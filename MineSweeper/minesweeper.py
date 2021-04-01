@@ -1,6 +1,6 @@
 # Importing required libraries
 from tkinter import *
-from tkinter.messagebox import showinfo
+from tkinter import messagebox as mb
 from tkinter import ttk
 import random
 
@@ -96,10 +96,13 @@ def bomb_clicked(b,tk):
     b['relief']=SUNKEN;
     b['bg']="orange"
     global value,total
-    # displaying message
-    showinfo("GAME OVER", "YOUR SCORE : " + str(total))
-    # exiting game
-    tk.destroy()
+    # displaying message and asking for replay
+    a=mb.askquestion("YOU LOSE","       Your score : " +str(total) +"\nDo you want to play again??")
+    
+    tk.destroy()# exiting current board
+    if a=='yes' :
+        board()
+    
 def number_clicked(b,n,tk):
     global value,total
     if n!=0 and b['text']=="":
@@ -112,8 +115,12 @@ def number_clicked(b,n,tk):
             b['text']="\U0001f600"
             b['relief']=SUNKEN;
             b['bg']="orange"
-            showinfo("YOU WON", "YOUR SCORE : " + str(total))
+            # displaying message and asking for replay
+            a=mb.askquestion("YOU WON","       Your score : " +str(total) +"\nDo you want to play again??")
+            tk.destroy()# exiting current board
+            if a=='yes' :
+                board()
+            # showinfo("YOU WON", "YOUR SCORE : " + str(total))
             tk.destroy()
 
-# Starting game
 board()
