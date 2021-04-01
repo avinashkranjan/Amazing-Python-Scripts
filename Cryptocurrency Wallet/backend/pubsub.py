@@ -18,6 +18,7 @@ CHANNELS = {
 }
 
 class Listener(SubscribeCallback):
+    # pylint: disable-msg=no-value-for-parameter
     def __init__(self, blockchain, transaction_pool):
         self.blockchain = blockchain
         self.transaction_pool = transaction_pool
