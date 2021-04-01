@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+from fpdf import FPDF
   
 # Get input for category and number of articles
 category = input("Enter category: ")
@@ -50,14 +51,29 @@ for article in articles :
     article_content_div = article_content.find('div',class_='crayons-article__main')
     article_content_body = article_content_div.find('div',class_='crayons-article__body')
     p_tags =  article_content_body.find_all('p')
-    article_content=""
+
+    title_string = (title_content.text.strip()).encode('latin-1', 'replace').decode('latin-1')
+    author_string = ("By - {}".format(author_name.text.strip())).encode('latin-1', 'replace').decode('latin-1')
+
+    # Add a page
+    pdf = FPDF()
+    pdf.add_page()
+    # set style and size of font 
+    pdf.set_font("Arial", size = 12)
+  
+    # Title cell
+    pdf.cell(200, 5, txt = title_string,ln = 1, align = 'C')
+    # Author cell
+    pdf.cell(200, 10, txt = author_string,ln = 2, align = 'C')
+
     for p_tag in p_tags:
-        article_content += (p_tag.text.strip()+'\n')
-
-
-    print("Title : " + title_content.text.strip())
-    print("Author : "+ author_name.text.strip())
-    print("Body : "+ article_content)
+        article_part = (p_tag.text.strip()).encode('latin-1', 'replace').decode('latin-1')
+        # Add part of article to pdf
+        pdf.multi_cell(0, 5, txt = article_part, align = 'L')
+   
+    # save the pdf with name .pdf
+    pdf_title = ''.join(e for e in title_string if e.isalnum())
+    pdf.output("{}.pdf".format(pdf_title))
 
     count = count + 1
     if(count == number_articles) :
