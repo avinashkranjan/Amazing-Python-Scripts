@@ -72,12 +72,4 @@ class PubSub():
         """
         self.publish(CHANNELS['TRANSACTION'], transaction.to_json())
 
-def main():
-    pubsub = PubSub()
 
-    time.sleep(1)
-
-    pubsub.publish(CHANNELS['TEST'], { 'foo': 'bar' })
-
-if __name__ == '__main__':
-    main()
