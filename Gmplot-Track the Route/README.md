@@ -18,19 +18,6 @@ _OR_ Just point the location on the map .
 | ------ | ------ |
 | `pip install gmplot` | [Gmplot/PyPI](https://pypi.org/project/gmplot/) |
 
-# CSV File Data
-   | Latitude |  Longitude |
-   | ------ | ------ |
-    37.771269, -122.511015
-    37.773495, -122.464830
-    37.774797, -122.454538
-    37.771988, -122.454018
-    37.773646, -122.440979
-    37.772742, -122.440797
-    37.771096, -122.453889
-    37.768669, -122.453518
-    37.766227, -122.460213
-    37.764028, -122.510347
 
 # Outcome 
 ![Screenshot (41)](https://user-images.githubusercontent.com/55774240/113260040-6dadab00-92eb-11eb-97ef-ee2772e22a3f.png)
