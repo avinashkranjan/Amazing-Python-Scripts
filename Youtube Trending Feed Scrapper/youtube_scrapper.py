@@ -23,6 +23,9 @@ parser = OptionParser()
 parser.add_option("-c", "--csv", action="store_true", dest="csv", help="Saves extracted contents to a CSV file.")
 parser.add_option("-m", "--mongo", action="store_true", dest="mongo", help="Saves extracted contents to a MongoDB.")
 
+# Defined DataFrame to avoid check errors
+df = pd.DataFrame()
+
 # MongoDB Collection (Table) Template
 class Trending(mongoengine.Document):
     section = mongoengine.StringField(required=True)
@@ -132,8 +135,6 @@ if __name__ == "__main__":
 
     if mongo:
         mongoengine.connect("Youtube")
-    if csv:
-        df = pd.DataFrame()
         
     driver = load_driver()  # load driver
     page_scrap(driver)  # start scrapping
