@@ -19,12 +19,13 @@ random_color= random.randint(0,4)
 guessed=[]
 while True:
     if correct==196:
+        country_turtle = turtle.Turtle()
         country_turtle.hideturtle()
         country_turtle.goto(0, 0)
         country_turtle.color('black')
         country_turtle.write("ALL CORRECT GUESSES", align="center", font=("Courrier", 35, "bold"))
     else:
-        answer=screen.textinput(str(correct)+"/196 Correct Guesses", "Name the Country:").lower()
+        answer=screen.textinput(str(correct)+"/196 Correct Guesses", "Name the Country:")
         guess += 1
 
         if answer in guessed:
@@ -33,7 +34,7 @@ while True:
             country_turtle=turtle.Turtle()
             for i in range(0,len(countries)):
                 country_name=countries[i]
-                if answer==country_name.lower():
+                if answer.lower()==country_name.lower():
                     print(country_name)
                     guessed.append(answer)
                     x_list = data['x'].to_list()
@@ -50,4 +51,4 @@ while True:
 
 
 
-turtle.exitonclick()
+screen.exitonclick()
