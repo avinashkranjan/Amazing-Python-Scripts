@@ -7,7 +7,7 @@ start_time = 0
 def get_sentence():
     global sentence,sentence_length,sentence_words
     Reset()
-    with open("sentences.txt","r") as f:
+    with open("./Typing-Speed-Test/sentences.txt","r") as f:
         sentences = f.readlines()
         sentence = random.choice(sentences).rstrip()
         sentence_label.config(text = sentence)
