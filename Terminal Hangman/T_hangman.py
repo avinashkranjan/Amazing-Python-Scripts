@@ -1,19 +1,21 @@
 import random
 
+def Mywordlist():
+    '''
+    This function will fetch random words from my custom word list by opening file in read mode
+    '''
+    with open("data.txt", "r") as file:
+        alldata = file.read()
+        words = list(map(str, alldata.split()))
+    
+    return words
 
 def hangman():
+    '''
+    This is the main fuction behind the logic.
+    '''
 
-    word = random.choice(["python",
-                          "spiderman",
-                          "tiger",
-                          "superman",
-                          "thor",
-                          "pokemon",
-                          "avengers",
-                          "savewater",
-                          "earth",
-                          "annable"])                        # Word list we would like to play with.
-    validLetters = 'abcdefghijklmnopqrstuvwxyz'              # All the characters defined in the word list
+    word = random.choice(Mywordlist())                       #Fetching Word list we would like to play with.
     turns = 10                                               #Total number of chance given to the user
     guessmade = ''
 
@@ -33,11 +35,12 @@ def hangman():
 
         print("Guess the word:", main)
         guess = input()
+        validLetters = guess.isalpha()
 
-        if guess in validLetters:
+        if validLetters is True:
             guessmade = guessmade + guess
         else:
-            print("Enter a valid character")
+            print("Enter a valid single character")
             guess = input()
 
         if guess not in word:
