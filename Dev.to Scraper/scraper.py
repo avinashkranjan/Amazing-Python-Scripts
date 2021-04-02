@@ -8,11 +8,12 @@ from fpdf import FPDF
 # Get input for category and number of articles
 category = input("Enter category: ")
 number_articles = int(input("Enter number of articles: "))
+driver_path = input("Enter chrome driver path: ")
 
 url = 'https://dev.to/search?q={}'.format(category)
 
 # initiating the webdriver. Parameter includes the path of the webdriver.
-driver = webdriver.Chrome('C:\Webdrivers\chromedriver') 
+driver = webdriver.Chrome(driver_path) 
 driver.get(url) 
   
 # this is just to ensure that the page is loaded

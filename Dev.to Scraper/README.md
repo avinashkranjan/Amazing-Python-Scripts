@@ -8,11 +8,6 @@ pip install -r requirements.txt
 ```
 As this script uses selenium, you will need to install the chrome webdriver from [this link](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
-Once the installation is complete, you need to add the webdriver in the path in the following line:
-```
-driver = webdriver.Chrome('<Path to chrome webdriver >') 
-```
-
 After satisfying all the requirements for the project, Open the terminal in the project folder and run
 ```
 python scraper.py
