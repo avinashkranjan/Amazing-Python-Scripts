@@ -1,35 +1,51 @@
 import pyautogui
 import time
+import webbrowser
+from selenium import webdriver
+from time import sleep
+from webdriver_manager.chrome import ChromeDriverManager
+from getpass import getpass
 
-number = int(input("Enter number of groups: "))
+usr=input('Enter Email Id:') 
+pwd= getpass('Enter Password:') 
+num = str (input ("Enter comma separated integers: "))
+lists = num.split (",")
 groupid = []
-print("Enter group ids: ")
-for i in range(number):
-    ele = input()
-    groupid.append(ele) 
+for i in lists:
+	groupid.append(i)
+
+message=input("Enter your message: ")
+  
+driver = webdriver.Chrome(ChromeDriverManager().install())
+driver.get('https://www.facebook.com/')
+
+  
+username_box = driver.find_element_by_id('email')
+username_box.send_keys(usr)
+
+  
+password_box = driver.find_element_by_id('pass')
+password_box.send_keys(pwd)
+
+  
+login_box = driver.find_element_by_id('u_0_d')
+login_box.submit()
+
 
 time.sleep(5)
-pyautogui.keyDown('ctrl')
-pyautogui.keyDown('t')
-pyautogui.keyUp('t')
 
-pyautogui.keyUp('ctrl')
-
-for i in range(number):
+for i in range(len(groupid)):
     link = 'https://facebook.com/groups/'+groupid[i]
-    pyautogui.typewrite(link)
-    pyautogui.typewrite('\n')
+    webbrowser.get('chrome').open_new(link)
     print("Waiting for few seconds .......")
     time.sleep(45)
-    pyautogui.typewrite('p')
+    pyautogui.hotkey('ctrl','f')
+    pyautogui.typewrite("Create a public post")
+    pyautogui.press('enter')
+    pyautogui.press('escape')
+    pyautogui.press('enter')
     time.sleep(2)
-    pyautogui.typewrite('Hello! I am facebook bot')
-    time.sleep(4)
-    pyautogui.keyDown('ctrl')
-    pyautogui.keyDown('enter')
-    pyautogui.keyUp('enter')
-    pyautogui.keyUp('ctrl')
-    time.sleep(3)
-    pyautogui.write(['f6'])
-    time.sleep(1)
+    pyautogui.typewrite(message)
+    pyautogui.click(677,520)
 
+    time.sleep(10)
