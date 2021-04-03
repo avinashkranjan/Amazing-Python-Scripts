@@ -1,3 +1,5 @@
+#dependancies-> pip3 install pycryptodome pypiwin32
+
 import os
 import json
 import base64
