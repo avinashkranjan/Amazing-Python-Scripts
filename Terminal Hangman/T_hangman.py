@@ -4,7 +4,7 @@ def Mywordlist():
     '''
     This function will fetch random words from my custom word list by opening file in read mode
     '''
-    with open("data.txt", "r") as file:
+    with open("./Terminal Hangman/data.txt", "r") as file:
         alldata = file.read()
         words = list(map(str, alldata.split()))
     
