@@ -19,7 +19,21 @@ This script is a graphical chat programme for machines on the same network. On a
 
 ## Output
 
+- server  
 
+![server](https://user-images.githubusercontent.com/43489758/113488953-f2144f80-94de-11eb-97b4-ebb2d8fcb587.png)
+
+- Client_1 : Bob   
+
+![image](https://user-images.githubusercontent.com/43489758/113488992-1d973a00-94df-11eb-8483-f79fa84832ce.png)
+
+- Client_2: Alice  
+
+![image](https://user-images.githubusercontent.com/43489758/113489023-428bad00-94df-11eb-817c-0fa58c839dd1.png)
+
+> - Client -> Server -> Client   
+
+![image](https://user-images.githubusercontent.com/43489758/113488938-d4df8100-94de-11eb-9544-9da226bb399f.png)
 
 ## Author
 
