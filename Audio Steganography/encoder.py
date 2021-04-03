@@ -1,6 +1,5 @@
-#importing libraries
 import wave
-from os import path 
+from os import path
 from pydub import AudioSegment
 
 #asking user to enter file name
@@ -26,21 +25,26 @@ audio_byte_arr = bytearray(list(arr_read_nframe))
 #asking user to enter the secret message
 secret_message = input("Enter the message you want to hide : ")
 
-#Total frame we have devided by eight we have total number of 8-byte segment and from each 8-byte we have to replace LSB by secret message.
-#for that we need a secret message length of (total bytes/8). so we are appending the special chars in secret message. 
+#Total frame we have devided by eight we have total number of 8-byte segment
+#from each 8-byte we have to replace LSB by secret message.
+#for that we need a secret message length of (total bytes/8).
+#so we are appending the special chars in secret message.
 secret_message = secret_message + '~' * int((len(audio_byte_arr)-(len(secret_message)*8*8))/8)
 
 #convert secret message to corresponding bits.
-secret_message_bits = list(map(int, ''.join([bin(ord(c)).lstrip('0b').rjust(8,'0') for c in secret_message])))
+sb = list(map(int, ''.join([bin(ord(c)).lstrip('0b').rjust(8,'0') for c in secret_message])))
 
 #replacing the last bit of all frames with secret message bit
-for index,c_bit in enumerate(secret_message_bits):
+for index,c_bit in enumerate(sb):
     audio_byte_arr[index] = (audio_byte_arr[index] & 254) | c_bit
 
 #wrinting into .wav file
-with wave.open('modified.wav', 'wb') as f:
-    f.setparams(audio_file.getparams())
-    f.writeframes(bytes(audio_byte_arr))
+f = wave.open('modified.wav', 'wb')
+par = audio_file.getparams()
+f.setparams(par)
+f.writeframes(bytes(audio_byte_arr))
 
 audio_file.close()
-print("Your text is hidden in audio file successfully.")
+f.close()
+
+print("\nYour text is hidden in audio file successfully.\n")
