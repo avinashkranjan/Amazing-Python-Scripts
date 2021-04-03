@@ -5,14 +5,14 @@ import random
 screen=turtle.Screen()
 
 screen.title('Name the Countries')
-image='world_map.gif'
+image='./Guess the Countries/world_map.gif'
 correct=0
 
 screen.setup(width=800,height=500)
 screen.addshape(image)
 turtle.shape(image)
 
-data=pandas.read_csv("country_names.csv")
+data=pandas.read_csv("./Guess the Countries/country_names.csv")
 countries= data.country.to_list()
 color = ['red','green','brown','orange','blue']
 random_color= random.randint(0,4)
