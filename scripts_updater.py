@@ -47,7 +47,7 @@ if(len(sys.argv) >  1):
             
             # removing files to be excluded from the repo_contents
             for key in files_to_be_excluded:
-                repo_contents.pop(key)
+                repo_contents.pop(key,None)
             
             # writing to the SCRIPTS.md file
             start = len(projects_listed)
