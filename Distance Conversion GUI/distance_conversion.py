@@ -7,7 +7,7 @@ root = tk.Tk()
 #window size (width x height)
 root.geometry("600x350")
 #title of window
-root.title("Distance Unit Convertor")
+root.title("Distance Unit Converter")
 #disabling resizing of window
 root.resizable(0, 0)
 #background colour of window
@@ -45,7 +45,7 @@ op_opt = StringVar()
 op_opt.set("Select Unit")
 
 #Adding Widgets
-greeting = Label(text="Welcome to Distance Unit Convertor !!", bg="lavender", width=40, height=2, bd=2, relief="ridge", font = ("Lucida Console", 10, "italic"))
+greeting = Label(text="Welcome to Distance Unit Converter !!", bg="lavender", width=40, height=2, bd=2, relief="ridge", font = ("Lucida Console", 10, "italic"))
 greeting.grid(row = 0, column = 1, pady=20, padx=12)
 
 #---input row---
