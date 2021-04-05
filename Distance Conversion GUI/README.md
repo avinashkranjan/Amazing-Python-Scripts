@@ -1,7 +1,7 @@
-# DISTANCE UNIT CONVERTOR
+# DISTANCE UNIT CONVERTER or LENGTH UNIT CONVERTER
 
 ## Description
-This is a distance unit convertor using which we can convert the distance from one unit to other.
+This is a distance unit converter using which we can convert the distance from one unit to other.
 
 Ex. cm to miles, feet to inches, etc.
 
