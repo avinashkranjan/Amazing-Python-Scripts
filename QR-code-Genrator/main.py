@@ -13,7 +13,7 @@ class Qr_Genrator():
         self.root.geometry('900x500+200+50')
         self.root.resizable(False, False)
         
-        title = Label(self.root,text="  QR COde Genrator", font=("time new roman",40), bg="#F96900", fg="white", anchor="w").place(x=0,y=0,relwidth=1)
+        title = Label(self.root,text="  QR Code Genrator", font=("time new roman",40), bg="#F96900", fg="white", anchor="w").place(x=0,y=0,relwidth=1)
 
         # Variable
         self.var_emp_code=StringVar()
@@ -75,7 +75,7 @@ class Qr_Genrator():
                 qr_code=qrcode.make(qr_data)
                 # print(qr_code)
                 qr_code=resizeimage.resize_cover(qr_code,[180,180])
-                qr_code.save('employee_qr/emp_'+str(self.var_emp_code.get()+'.png'))
+                qr_code.save('../QR-code-Genrator/employee_qr/emp_'+str(self.var_emp_code.get()+'.png'))
                 # qr code img update
                 self.im=ImageTk.PhotoImage(file='../QR-code-Genrator/employee_qr/emp_'+str(self.var_emp_code.get()+'.png'))
                 self.qr_code.config(image=self.im)
