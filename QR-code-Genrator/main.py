@@ -13,7 +13,7 @@ class Qr_Genrator():
         self.root.geometry('900x500+200+50')
         self.root.resizable(False, False)
         
-        title = Label(self.root,text="  QR COde Genrator", font=("time new roman",40), bg="#F96900", fg="white", anchor="w").place(x=0,y=0,relwidth=1)
+        title = Label(self.root,text="  QR Code Genrator", font=("time new roman",40), bg="#F96900", fg="white", anchor="w").place(x=0,y=0,relwidth=1)
 
         # Variable
         self.var_emp_code=StringVar()
