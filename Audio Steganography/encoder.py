@@ -4,7 +4,7 @@ from pydub import AudioSegment
 
 #asking user to enter file name
 file_name_mp3 = input("Enter the .mp3 file name : ")
-destination = "generated_wav.wav"
+destination = "./Audio_Steganographygenerated_wav.wav"
 
 #convet .mp3 file to the .wav file
 ss = AudioSegment.from_mp3(file_name_mp3)
@@ -39,7 +39,8 @@ for index,c_bit in enumerate(sb):
     audio_byte_arr[index] = (audio_byte_arr[index] & 254) | c_bit
 
 #wrinting into .wav file
-f = wave.open('modified.wav', 'wb')
+modified_file_name = file_name_mp3[:-4] + '(encrypted).wav'
+f = wave.open(modified_file_name, 'wb')
 par = audio_file.getparams()
 f.setparams(par)
 f.writeframes(bytes(audio_byte_arr))
