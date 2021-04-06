@@ -4,9 +4,9 @@ from gtts import gTTS
 import os
 
 
-pytesseract.pytesseract.tesseract_cmd = input(r'Enter the path: ')
+pytesseract.pytesseract.tesseract_cmd = input(r'Enter the path for pytesseract: ')
 
-img = input(r"Enter image: ")
+img = input(r"Enter the path for image: ")
 target = Image.open(img)
 text = pytesseract.image_to_string(target, config='')
 
