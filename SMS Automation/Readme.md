@@ -12,7 +12,7 @@
 - First register on Twilio.
 - Then verify your phone number from which you want to send the message.
 - Now add the phone number of the receiver and verify it.
-- Also allow the geo-location permission.
+- Also allow the geo-location [permission](https://www.twilio.com/console/sms/settings/geo-permissions).
 
 ## Automation Instructions: 👨🏻‍💻
 
