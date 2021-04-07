@@ -21,7 +21,7 @@
 
 ## Output
 
-[Image](https://i.postimg.cc/pLQq8Vdc/output.png)
+![Image](https://i.postimg.cc/pLQq8Vdc/output.png)
 
 ## Author(s)
 
