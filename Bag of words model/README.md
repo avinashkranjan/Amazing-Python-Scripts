@@ -25,7 +25,7 @@
 
 ## Author(s)
 
-- This code is written by Sanya Devansh Zaveri. [https://github.com/zaverisanya]
+- This code is written by [Sanya Devansh Zaveri](https://github.com/zaverisanya)
 
 ## Disclaimers, if any
 
