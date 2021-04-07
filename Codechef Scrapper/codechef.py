@@ -1,4 +1,5 @@
 from selenium import webdriver
+import os
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -6,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
 from fpdf import FPDF
 
 
@@ -14,7 +16,7 @@ capa["pageLoadStrategy"] = "none"
 
 driver = webdriver.Chrome(desired_capabilities=capa,options=options)
 baseurl="https://www.codechef.com/problems"
-wait = WebDriverWait(driver, 20)
+wait = WebDriverWait(driver, 15)
 
 # map to get url from its problem difficulty
 problem_difficulty = {"Beginner": "school", "Easy": "easy", "Medium": "medium", "Hard": "hard", "Challenge": "challenge"}
@@ -24,9 +26,15 @@ def get_problems(category, no_of_problems):
 
 # A map to store problem name and problem url
     problem_info = {}
-    driver.get(baseurl + '/' + category)
-    # wait till the  first element is loaded
-    wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='primary-content']/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/div/a/b")))
+    try:
+        driver.get(baseurl + '/' + category)
+        # wait till the  first element is loaded
+        wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='primary-content']/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/div/a/b")))
+    except TimeoutException as exception:
+        print("Couldn't fetch problem. Network issue or page slow to render. Try again")
+        os._exit(-1)
+
+
     
     for problem_index in range(1, no_of_problems + 1):
         problem_name = driver.find_element_by_xpath("//*[@id='primary-content']/div/div[2]/div/div[2]/table/tbody/tr[{}]/td[1]/div/a/b".format(problem_index)).text
@@ -55,13 +63,17 @@ def get_problem_description(problem_url,problem_name):
             
             
             driver.execute_script("window.stop();")
-        problem={'title':problem_title,'statement':problem_statement,'test_case':problem_test_cases}
+        problem={'title':problem_title,'statement':problem_statement,'test_case':problem_test_cases,'url':problem_url}
         return problem
     
     #Handling exceptions
     except NoSuchElementException as e:
-        print("Couldn't scrap the element, Unable to locate it",e)
+        print("Couldn't scrap the element, Unable to locate it")
         problem=None
+    except TimeoutException as exception:
+        print("Couldn't scrap the element, Unable to locate it")
+        problem=None
+        
 
 
 
@@ -71,10 +83,20 @@ def convert_to_pdf(problem):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size = 15)
-    pdf.cell(200, 10, txt = problem["title"], ln = 1, align = 'C')
-    pdf.multi_cell(200, 10, txt =problem["statement"], align = 'L')
-    pdf.multi_cell(200, 10, txt =problem["test_case"], align = 'L')
-    pdf.output(problem["title"]+".pdf")   
+    # Replace character that aren't in latin-1 character set
+    title=problem["title"].encode('latin-1', 'replace').decode('latin-1')
+    statement=problem["statement"].encode('latin-1', 'replace').decode('latin-1')
+    test_case=problem["test_case"].encode('latin-1', 'replace').decode('latin-1')
+    url=problem["url"]
+    # add sections to pdf
+    pdf.cell(200, 10, txt =title, ln = 1, align = 'C')
+    pdf.multi_cell(200, 10, txt =statement, align = 'L')
+    pdf.multi_cell(200, 10, txt =test_case, align = 'L')
+    pdf.write(5, 'Problem_Link: ')
+    pdf.write(5,url,url)
+
+    
+    pdf.output(title+".pdf")   
     
     
 #main function
