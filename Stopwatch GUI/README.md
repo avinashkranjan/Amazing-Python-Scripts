@@ -1,6 +1,6 @@
 # Stopwatch GUI
 
-This is a Stopwatch GUI using which user can measure the time elapsed using the start and stop button. User can also use the reset button to reset the stopwatch.
+This is a Stopwatch GUI using which user can measure the time elapsed using the start and pause button. User can also use the reset button to reset the stopwatch and exit button to close the window.
 
 ## Dependencies
 You will use `Tkinter` and `time` python module .
@@ -8,10 +8,10 @@ You will use `Tkinter` and `time` python module .
 ## Sample Output 
 On running `Stopwatch_gui.py`.
 
-[![stopwatch1.png](https://i.postimg.cc/7Pdqq2WB/stopwatch1.png)](https://postimg.cc/z3CsjV5W)
+[![stopwatch-gui1.png](https://i.postimg.cc/2yYGVSY0/stopwatch-gui1.png)](https://postimg.cc/1nWwdPfF)
 
 ### After using Start button
-[![stopwatch2.png](https://i.postimg.cc/zB31rzSZ/stopwatch2.png)](https://postimg.cc/tZ0cdHM2)
+[![Capture.png](https://i.postimg.cc/76gbwzLD/Capture.png)](https://postimg.cc/S2xmGJ8t)
 
 ## Author
 [Aishwarya Chand](https://github.com/aishwaryachand)
