@@ -49,7 +49,7 @@ greeting = Label(text="Welcome to Distance Unit Converter !!", bg="lavender", wi
 greeting.grid(row = 0, column = 1, pady=20, padx=12)
 
 #---input row---
-fromlabel = Label(root, text="From", bd=2, relief="solid", width=10, height = 2)
+fromlabel = Label(root, text="From", width=10, height = 2)
 fromlabel.grid(row = 2, column = 0, padx = 20, pady=20)
 
 input = Entry(root, justify="center")
@@ -60,7 +60,7 @@ ipmenu = OptionMenu(root, ip_opt, "cm", "m", "km", "feet", "miles", "inches", "y
 ipmenu.grid(row = 2, column = 2)
 
 #---output row---
-tolabel = Label(root, text="To", bd=2, relief="solid", width=10, height = 2)
+tolabel = Label(root, text="To", width=10, height = 2)
 tolabel.grid(row = 4, column = 0, padx = 20, pady=20)
 
 output = Entry(root, justify="center")
