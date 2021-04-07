@@ -32,9 +32,9 @@ python3 codechef.py
 ## Output:
 This script will generate 'n' number of different PDFs in a folder to store the problem information (problem title,problem statement,test cases,problem link) separately.
 
-![image]https://user-images.githubusercontent.com/30191221/113629602-46a4ff80-9684-11eb-8938-c6e8f934d3ae.png
+![image](https://user-images.githubusercontent.com/30191221/113629602-46a4ff80-9684-11eb-8938-c6e8f934d3ae.png)
 
-![image]https://user-images.githubusercontent.com/30191221/113629697-64726480-9684-11eb-9d14-3b1ac515d40e.png
+![image](https://user-images.githubusercontent.com/30191221/113629697-64726480-9684-11eb-9d14-3b1ac515d40e.png)
 
 Author:
 [Smriti Raina](https://github.com/smriti26raina)
