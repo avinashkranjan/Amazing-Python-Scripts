@@ -77,7 +77,7 @@ class Qr_Genrator():
                 qr_code=resizeimage.resize_cover(qr_code,[180,180])
                 qr_code.save('./QR-code-Genrator/employee_qr/emp_'+str(self.var_emp_code.get()+'.png'))
                 # qr code img update
-                self.im=ImageTk.PhotoImage(file='../QR-code-Genrator/employee_qr/emp_'+str(self.var_emp_code.get()+'.png'))
+                self.im=ImageTk.PhotoImage(file='./QR-code-Genrator/employee_qr/emp_'+str(self.var_emp_code.get()+'.png'))
                 self.qr_code.config(image=self.im)
 
                 # updating noti
