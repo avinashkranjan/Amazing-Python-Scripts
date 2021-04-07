@@ -30,4 +30,4 @@ print("BOW ",bow)
 cv_dataframe=pd.DataFrame(bow,columns=countVectorizer.get_feature_names())
 
 print("cv_dataframe is below\n",cv_dataframe)
-cv_dataframe.to_excel('bowp.xlsx', sheet_name='data')
+cv_dataframe.to_excel('./Bag of words model/bowp.xlsx', sheet_name='data')
