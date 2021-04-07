@@ -53,7 +53,7 @@ if __name__ == "__main__" :
     work = False
     
     root = tk.Tk()
-    root.geometry("500x400") #width x height
+    root.geometry("500x221") #width x height
     root.title("My StopWatch")
     
     txt_var = tk.StringVar()
