@@ -119,6 +119,7 @@ def number_clicked(b,n,tk):
             a=mb.askquestion("YOU WON","       Your score : " +str(total) +"\nDo you want to play again??")
             tk.destroy()# exiting current board
             if a=='yes' :
+                total=0
                 board()
             # showinfo("YOU WON", "YOUR SCORE : " + str(total))
             tk.destroy()
