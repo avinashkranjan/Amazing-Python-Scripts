@@ -8,11 +8,12 @@ from getpass import getpass
 
 
 LOGIN_URL = 'https://www.facebook.com/login.php'
-num = str (input ("Enter comma separated integers: "))
+num = str (input ("Enter group ids separated by commas: "))
 lists = num.split (",")
 groupid = []
 for i in lists:
 	groupid.append(i)
+
 
 message=input("Enter your message: ")
  
@@ -27,25 +28,7 @@ class FacebookLogin():
         self.driver.get(LOGIN_URL)
         time.sleep(1) # Wait for some time to load
 
-        for i in range(len(groupid)):
-            link = 'https://facebook.com/groups/'+groupid[i]
-            self.driver.get(link)
-            print("Waiting for few seconds .......")
-            time.sleep(45)
-            pyautogui.hotkey('ctrl','f')
-            pyautogui.typewrite("Create a public post")
-            pyautogui.press('enter')
-            pyautogui.press('escape')
-            pyautogui.press('enter')
-            time.sleep(2)
-            pyautogui.typewrite(message)
-            pyautogui.click(677,520)
-
-            time.sleep(10)
-
- 
- 
- 
+        
     def login(self):
         email_element = self.driver.find_element_by_id('email')
         email_element.send_keys(self.email) # Give keyboard input
@@ -57,7 +40,21 @@ class FacebookLogin():
         login_button.click() # Send mouse click
  
         time.sleep(2) # Wait for 2 seconds for the page to show up
- 
+
+        for i in range(len(groupid)):
+            link = 'https://facebook.com/groups/'+groupid[i]
+            self.driver.get(link)
+            print("Waiting for few seconds .......")
+            time.sleep(45)
+            self.driver.find_element_by_class_name('a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7').click()
+            time.sleep(7)
+
+            self.driver.switch_to.active_element.send_keys("message")
+            time.sleep(7)
+
+            self.driver.find_element_by_class_name('a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5').click()
+            time.sleep(7)
+
  
 if __name__ == '__main__':
     # Enter your login credentials here
@@ -67,4 +64,5 @@ if __name__ == '__main__':
     fb_login.login()
 
 #time.sleep(5)
+
 
