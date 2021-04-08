@@ -2,7 +2,8 @@
 
 This is a python script MINESWEEPER game 
 
-$--- tkinter
+## Modules Used
+- tkinter
 
 $--- random (for randomness in game)
 
