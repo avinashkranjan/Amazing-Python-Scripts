@@ -5,7 +5,7 @@ Convert your photo to ascii with it
 ---------------------------------------------------------------------
 
 ## Modules Used
--pillow
+- pillow
 
 
 ## How it works
