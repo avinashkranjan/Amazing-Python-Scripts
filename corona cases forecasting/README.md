@@ -1,4 +1,4 @@
-# Corona Case Forecasting
+# corona Cases Forecasting
 
 This is a python script capable of Predicting number of covid 19 cases for next 21 days
 
