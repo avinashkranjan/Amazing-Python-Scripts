@@ -101,6 +101,7 @@ def bomb_clicked(b,tk):
     
     tk.destroy()# exiting current board
     if a=='yes' :
+        total = 0
         board()
     
 def number_clicked(b,n,tk):
