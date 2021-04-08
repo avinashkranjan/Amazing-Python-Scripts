@@ -1,95 +1,118 @@
-import urllib3
-from bs4 import BeautifulSoup
-import urllib.request
-from urllib.request import Request, urlopen
+from selenium import webdriver
+import os
+options = webdriver.ChromeOptions()
+options.add_argument("--headless")
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
+from fpdf import FPDF
 
-class AppURLopener(urllib.request.FancyURLopener):
-    version = "Chrome"
 
-def getLinks():
-	f = open('links','r')
-	lst = []
-	count = 0
-	for line in f:
-		if not '&hearts' in line:
-			string = ''
-			start = False
-			name = ''
-			# removing name
-			ind = 0
-			for x in line:
-				if x == ']':
-					ind +=1
-					break
-				ind += 1
-			line = line[ind:]
-			for i in line:
-				if i == ')':
-					break
-				elif i == '(':
-					start = True
-					continue
-				if start == True:
-					string +=i
-			lst.append(string)
-		else:
-			count +=1
-	print("Premium = ",count)
-	return lst
+capa = DesiredCapabilities.CHROME
+capa["pageLoadStrategy"] = "none"
 
+driver = webdriver.Chrome("C:/Softwares/chromedriver_win32/chromedriver") 
+#driver = webdriver.Chrome(desired_capabilities=capa,options=options)
+baseurl="https://leetcode.com/problemset/all"
+wait = WebDriverWait(driver, 15)
+
+# map to get url from its problem difficulty
+problem_difficulty = {"Easy": "?difficulty=Easy", "Medium": "?difficulty=Medium", "Hard": "?difficulty=hard"}
+
+# get_problems returns the name and links of the problems
+def get_problems(category, no_of_problems):
+
+# A map to store problem name and problem url
+    problem_info = {}
+    try:
+        driver.get(baseurl + '/' + category)
+        # wait till the  first element is loaded
+        wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='question-app']/div/div[2]/div[2]/div[2]/table/tbody[1]/tr[1]")))
+    except TimeoutException as exception:
+        print("Couldn't fetch problem. Network issue or page slow to render. Try again")
+        os._exit(-1)
+
+
+    
+    for problem_index in range(1, no_of_problems + 1):
+        problem_name = driver.find_element_by_xpath("//*[@id='question-app']/div/div[2]/div[2]/div[2]/table/tbody[1]/tr[{}]/td[3]".format(problem_index)).text
+        problem_url = driver.find_element_by_xpath("//*[@id='question-app']/div/div[2]/div[2]/div[2]/table/tbody[1]/tr[{}]/td[3]/div/a".format(problem_index)).get_attribute('href')
+        print(problem_name," ",problem_url)
+        problem_info[problem_name] = problem_url
+    return problem_info
+    
+# get_problem_desciption returns content of the problem
+def get_problem_description(problem_url,problem_name):
+    try:
+        driver.get(problem_url)
+        wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='app']/div/div[2]/div/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[2]/div/p[1]")))
+        problem_title= problem_name
+        problem_statement = driver.find_element_by_xpath("//*[@id='app']/div/div[2]/div/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[2]/div/p[1]").text
+        problem_test_cases = driver.find_element_by_xpath("//*[@id='app']/div/div[2]/div/div/div[1]/div/div[1]/div[1]/div/div[2]/div/div[2]/div/pre[1]").text
+
+    
+        if (problem_test_cases.find("Output") == -1):
+            problem_test_cases = "Input\n" + problem_test_cases
+            problem_test_cases+="\nOutput\n"
+            problem_test_cases +=  driver.find_element_by_xpath("//*[@id='problem-statement']/pre[2]").text
+            
+        
+        else:
+            
+            
+            driver.execute_script("window.stop();")
+        problem={'title':problem_title,'statement':problem_statement,'test_case':problem_test_cases,'url':problem_url}
+        return problem
+    
+    #Handling exceptions
+    except NoSuchElementException as e:
+        print("Couldn't scrap the element, Unable to locate it")
+        problem=None
+    except TimeoutException as exception:
+        print("Couldn't scrap the element, Unable to locate it")
+        problem=None
+        
+
+
+
+
+#storing the information in the pdf
+def convert_to_pdf(problem):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size = 15)
+    # Replace character that aren't in latin-1 character set
+    title=problem["title"].encode('latin-1', 'replace').decode('latin-1')
+    statement=problem["statement"].encode('latin-1', 'replace').decode('latin-1')
+    test_case=problem["test_case"].encode('latin-1', 'replace').decode('latin-1')
+    url=problem["url"]
+    # add sections to pdf
+    pdf.cell(200, 10, txt =title, ln = 1, align = 'C')
+    pdf.multi_cell(200, 10, txt =statement, align = 'L')
+    pdf.multi_cell(200, 10, txt =test_case, align = 'L')
+    pdf.write(5, 'Problem_Link: ')
+    pdf.write(5,url,url)
+
+    title = title.rstrip()
+    pdf.output(title+".pdf")   
+    
+    
+#main function
+def main():
+    category=input("Enter the difficulty level from the following \n Easy \n Medium \n Hard \n\n")
+    no_of_problems=int(input("\n Enter the number of problems to be scrapped: \n"))
+    info = get_problems(problem_difficulty[category],no_of_problems)
+    for name, url in info.items():
+        problem=get_problem_description(url,name)
+        if(problem is not None ):
+            convert_to_pdf(problem)
+        else:
+            pass
+            
 if __name__ == '__main__':
-	links = getLinks()
-	print( len(links) )
-	for l in links:
-		print( l )
-	print('\n')
-	total = len(links)
-	ind = 296
-	links = links[296:]
-	files = {}
-	files['Easy'] = open('easy','a')
-	files['Medium'] = open('medium','a')
-	files['Hard'] = open('hard','a')
-	files['not found'] = open('not found','a')
+    main()
 
-	count = {}
-	count['Easy'] = 1
-	count['Medium'] = 1
-	count['Hard'] = 1
-	count['not found'] = 1
-
-	for link in links:
-		print("ind = ",ind," left = ",total-ind," Scrapping ",link)
-		print("Opening")
-		opener = AppURLopener()
-		link = opener.open(link)
-		page=BeautifulSoup(link)
-		print("Opened")
-		#finding difficulty of problem
-		allli = page.find_all('li')
-		diff = 'not found'
-		for li in allli:
-			if "Medium" in str(li):
-				diff = 'Medium'
-				break;
-			elif "Hard" in  str(li):
-				diff = 'Hard'
-				break
-			elif "Easy" in str(li):
-				diff = 'Easy'
-				break
-		print(page.title)
-		name = page.title.string
-		print('problem name: ',name)
-		allmeta = page.find_all('meta')
-		for meta in allmeta:
-			if meta.get('name') == 'description':
-				ques = meta.get('content')
-				ques = ques.encode('utf-8')
-				files[diff].write(str(count[diff]) + ') ' + name + '\n')
-				files[diff].write(ques.decode("utf-8"))
-				count[diff] += 1
-				break
-		ind +=1
-
-	print("done: ",ind)		
+driver.close()
