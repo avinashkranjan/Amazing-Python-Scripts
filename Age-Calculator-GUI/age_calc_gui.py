@@ -7,12 +7,17 @@ root = Tk()
 root.geometry('280x300')
 root.resizable(0,0)
 root.title('Age Calculator')
+statement = Label(root)
 
 # defining the function for calculating age
 def ageCalc():
+    global statement
+    statement.destroy()
     today = date.today()
     birthDate = date(int(yearEntry.get()), int(monthEntry.get()), int(dayEntry.get()))
-    age = today.year - birthDate.year - ((today.day, today.month) < (birthDate.day, birthDate.month))
+    age = today.year - birthDate.year
+    if today.month < birthDate.month or today.month == birthDate.month and today.day < birthDate.day:
+        age -= 1
     statement = Label(text=f"{nameValue.get()}'s age is {age}.")
     statement.grid(row=6, column=1, pady=15)
 
