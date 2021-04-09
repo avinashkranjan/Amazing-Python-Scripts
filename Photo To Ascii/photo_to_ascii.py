@@ -38,7 +38,7 @@ def photoascii():
     
     
     # save result to "ascii_image.txt"
-    with open("ascii_image.txt", "w") as f:
+     with open("./Photo To Ascii/ascii_image.txt", "w") as f:
         f.write(ascii_image)
 # run program
 if __name__=='__main__':
