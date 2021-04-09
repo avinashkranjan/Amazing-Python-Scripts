@@ -9,6 +9,10 @@ This script will help the user to maintain his/her health, as it is keeping a da
 ### Modules Used:-
 
 1) datetime
+2) sqlite3
+3) tkinter
+4) messagebox
 
-### Images of the script:-
-<img src = "https://user-images.githubusercontent.com/62845847/113548479-3998f980-960d-11eb-806b-4321cec05a98.png" width = "400" height = "300">
+### Image of the GUI:-
+![Screenshot from 2021-04-09 12-52-27](https://user-images.githubusercontent.com/62845847/114144009-7a0cb600-9932-11eb-8f47-8fcc541229e7.png)
+
