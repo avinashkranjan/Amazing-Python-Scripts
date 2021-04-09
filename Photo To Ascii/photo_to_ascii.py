@@ -22,7 +22,17 @@ def photoascii():
     except Exception:
         print("Invalid path")
         return
-     
+    #Fetching the name of the image
+    image_name=""
+    flag=0
+    for i in path[::-1]:
+        if i=="/":
+            break
+        if flag==1:
+            image_name=i+image_name
+        if i=='.':
+            flag=1
+
     #Resizing of image
     new_width=100
     width, height = image.size
@@ -38,7 +48,7 @@ def photoascii():
     
     
     # save result to "ascii_image.txt"
-    with open("./Photo To Ascii/ascii_image.txt", "w") as f:
+    with open("./Photo To Ascii/{}(ASCII).txt".format(image_name), "w") as f:
         f.write(ascii_image)
 # run program
 if __name__=='__main__':
