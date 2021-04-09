@@ -1,46 +1,110 @@
-# It is a health management system
-# Consists of food and exercise log table
-# Has the fascility both to enter a log and to retrieve the log
-# Helps the user to inspect his/her health
-
 # importing the modules
+import tkinter as tk
+from tkinter import messagebox
 import datetime
+import database
+
 
 # creating a function to return date and time
 def getdate():
     return datetime.datetime.now()
 
-# defining a function to take the inputs from the user and store the input data in a text file    
-def take():
-        x = int(input("enter 1 for exercise and 2 for food"))
-        if x==1:
-            val = input("enter each exersise separated with commas\n")
-            with open("user-exercise.txt","a") as f:
-                f.write(str([str(getdate())]) + ":- " + val + "\n")
-            print("successfully written")
-        elif x==2:
-            val = input("enter each food separated with commas\n")
-            with open("user-food.txt", "a") as f:
-                f.write(str([str(getdate())]) + ":- " + val + "\n")
-            print("successfully written")
 
-# defining a function to retrieve the data from the text file
-def retrieve():
-        x = int(input("enter 1 for exercise and 2 for food"))
-        if x == 1:
-            with open("user-exercise.txt") as f:
-               for i in f:
-                   print(i,end=" ")
-        elif x == 2:
-            with open("user-food.txt") as f:
-                for i in f:
-                    print(i, end=" ")
+# Creating the connection
+connection = database.connect()
+database.create_table1(connection)
+database.create_table2(connection)
 
-# Testing code
-print("Health log book: ")
-a = int(input("press 1 for log and 2 for retrieve"))
 
-if a==1:
-    take()
-else:
-    retrieve()
+def store_exercise():
+    date = getdate()
+    data = exercise_entry.get("1.0", 'end-1c')
+    if data != "":
+        exercise_entry.delete("1.0", "end")
+        database.add_exercise(connection, date, data)
+        messagebox.showinfo("Success", "Log is inserted")
+    else:
+        messagebox.showerror("Error", "Enter Something")
+
+
+def store_food():
+    date = getdate()
+    data = food_entry.get("1.0", "end-1c")
+    if data != "":
+        food_entry.delete("1.0", "end")
+        database.add_food(connection, date, data)
+        messagebox.showinfo("Success", "Log is inserted")
+    else:
+        messagebox.showerror("Error", "Enter Something")
+
+
+def show_exercise():
+    con = database.connect()
+    cor = con.cursor()
+    cor.execute('''SELECT * from exercise''')
+    rows = cor.fetchall()
+
+    for row in rows:
+        print(row)
+
+
+def show_food():
+    con = database.connect()
+    cor = con.cursor()
+    cor.execute('''SELECT * from food''')
+    rows = cor.fetchall()
+
+    for row in rows:
+        print(row)
+
+
+def delete_exercise_log():
+    messagebox.showinfo("Delete", "The Exercise Log is deleted")
+    database.delete_exercise(connection)
+
+
+def delete_food_log():
+    messagebox.showinfo("Delete", "The Food Log is deleted")
+    database.delete_food(connection)
+
+
+# Making the GUI
+root = tk.Tk()
+
+root.title("main")
+root.geometry("500x500")
+
+heading = tk.Label(root, text="Health Log book", font=('Helvetica', 18, 'bold'))
+heading.pack()
+
+exercise_heading = tk.Label(root, text=" 1) Enter each exercise separated with commas", font=('Helvetica', 11, 'bold'))
+exercise_heading.place(x=30, y=40)
+
+exercise_entry = tk.Text(root, height=5, width=42)
+exercise_entry.pack(pady=30)
+
+exercise_submit = tk.Button(root, text="Submit", command=store_exercise)
+exercise_submit.place(x=210, y=160)
+
+food_heading = tk.Label(root, text="2) Enter each food separated with commas", font=('Helvetica', 11, 'bold'))
+food_heading.place(x=30, y=200)
+
+food_entry = tk.Text(root, height=5, width=42)
+food_entry.pack(pady=40)
+
+food_submit = tk.Button(root, text="Submit", command=store_food)
+food_submit.place(x=210, y=330)
+
+retrieve_exercise = tk.Button(root, text="Show Exercise Log", command=show_exercise)
+retrieve_exercise.place(x=50, y=400)
+
+retrieve_food = tk.Button(root, text="Show food Log", command=show_food)
+retrieve_food.place(x=300, y=400)
+
+delete_exercise = tk.Button(root, text="Delete Exercise Log", command=delete_exercise_log)
+delete_exercise.place(x=50, y=450)
+
+delete_food = tk.Button(root, text="Delete food Log", command=delete_food_log)
+delete_food.place(x=300, y=450)
+
+root.mainloop()
