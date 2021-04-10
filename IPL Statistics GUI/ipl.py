@@ -49,13 +49,16 @@ def scrape_results():
     for player in table_data[:51]:
         single_record = ""
         for cell in player:
-            format_cell = "{:<40}"
-            single_record += format_cell.format(cell[:40])
+            format_cell = "{:<20}"
+            single_record += format_cell.format(cell[:20])
         single_record += "\n"
         p_records += single_record
 
     # Adding the formatted data into tkinter GUI
-    query_label['text'] = p_records
+    query_label.config(state=tk.NORMAL)
+    query_label.delete(1.0,"end")
+    query_label.insert(1.0,p_records)
+    query_label.config(state=tk.DISABLED)
 
 
 # Creating tkinter window
@@ -99,8 +102,7 @@ submit_btn.grid(row=5, column=3, pady=5, padx=15, ipadx=5)
 frame = ttk.Frame(window)
 frame.place(relx=0.50, rely=0.12, relwidth=0.98, relheight=0.90, anchor="n")
 
-query_label = ttk.Label(
-    frame, anchor="nw", justify="left", text="")
+query_label = tk.Text( frame,height="52",width="500")
 query_label.grid(row=7,  columnspan=2)
 
 window.mainloop()
