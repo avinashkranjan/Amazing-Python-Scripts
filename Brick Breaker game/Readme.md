@@ -8,7 +8,7 @@ Run `python/python3 brick_breaker.py`
 
 ## Output
 
-
+![image](https://user-images.githubusercontent.com/43489758/114232380-68122e00-9999-11eb-93c2-6de9af43804a.png)
 
 ## Author
 
