@@ -4,7 +4,7 @@ from pygame.locals import *
 pygame.init()
 
 '''
-Defining gaming window size
+Defining gaming window size and font
 '''
 Window_height = 500
 Window_width = 500
@@ -12,6 +12,7 @@ Window_width = 500
 window = pygame.display.set_mode((Window_height, Window_width))
 pygame.display.set_caption('Brickstroy')  # game title
 
+font = pygame.font.SysFont('Arial', 30)
 '''
 Defining Bricks colour
 '''
@@ -20,10 +21,13 @@ w_brick = (255, 255, 255)
 g_brick = (0, 255, 0)
 black = (0, 0, 0)
 
+my_ball = False
 game_rows = 6
 game_coloumns = 6
 clock = pygame.time.Clock()  # clock speed
 frame_rate = 60
+game_over = 0
+
 
 
 class Ball():
@@ -73,7 +77,7 @@ class Ball():
                         block_object[count_row][count_item][1] -= 1
                     else:
                         block_object[count_row][count_item][0] = (0, 0, 0, 0)
-
+                
                 if block_object[count_row][count_item][0] != (0, 0, 0, 0):
                     brick_destroyed = 0
                 count_item += 1
@@ -133,6 +137,18 @@ class Ball():
             self.radius,
             1)
 
+    def reset(self,x,y):
+        self.radius = 10
+        self.x = x - self.radius
+        self.y = y - 50
+        self.rect = Rect(self.x, self.y, self.radius * 2, self.radius * 2)
+        self.x_speed = 4
+        self.y_speed = -4
+        self.max_speed = 5
+        self.game_over = 0
+
+
+
 
 class Blocks():
     '''
@@ -165,6 +181,7 @@ class Blocks():
             self.brick.append(brick_row)
 
     def draw_brick(self):
+
         for row in self.brick:
             for brick in row:
                 if brick[1] == 3:
@@ -175,7 +192,7 @@ class Blocks():
                     brick_colour = g_brick
                 pygame.draw.rect(window, brick_colour, brick[0])
                 pygame.draw.rect(window, (0, 0, 0), (brick[0]), 1)
-
+            
 
 class base():
     '''
@@ -216,6 +233,10 @@ class base():
             self.rect.right = Window_width
 
 
+def draw_text(text,font, w_brick,x,y):
+    image = font.render(text, True, w_brick)
+    window.blit(image, (x,y))
+
 # calling all classes an functions here
 
 Blocks = Blocks()
@@ -246,6 +267,26 @@ while game:
     ball.draw()
     ball.motion()
 
+    if my_ball:
+        score = score + 1 
+        game_over = ball.motion()
+
+        if game_over != 0:
+            my_ball = False
+
+    if not my_ball:
+        if game_over == 0:
+            draw_text('Click Anywhere to start', font, w_brick, 150, Window_height // 2 + 100)
+        '''
+        elif game_over == 1:
+            draw_text('YOU WON !!', font, w_brick, 240, Window_height // 2 + 50)
+            draw_text('Click Anywhere to start', font, w_brick, 100, Window_height // 2 + 100)
+        elif game_over == -1:
+            draw_text('YOU LOST !!', font, w_brick, 240, Window_height // 2 + 50)
+            draw_text('Click Anywhere to start', font, w_brick, 100, Window_height // 2 + 100)
+        '''
+            
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game = False
@@ -259,6 +300,12 @@ while game:
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 user_basepad.movement[0] = 0
+ 
+        if event.type == pygame.MOUSEBUTTONDOWN and my_ball == False:
+            my_ball == True
+            ball.reset(user_basepad.x + (user_basepad.width // 2),user_basepad.y + user_basepad.height)
+            Blocks.make_brick()
+
 
     # added for any updates that we make to the gaming window to become
     # visible.
