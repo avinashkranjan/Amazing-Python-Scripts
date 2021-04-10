@@ -20,7 +20,7 @@ depending upon the python version. Make sure that you are running the command fr
 
 The user can choose the statistics they want to analyse as shown in the sample screenshot below
 
-![IPL Statistics GUI](https://i.postimg.cc/d3YBQWL5/ipl-Stats.png)
+![IPL Statistics GUI](https://i.postimg.cc/nLdgKhWQ/ipl-stats.png)
 
 ## Author
 [Ayush Jain](https://github.com/Ayushjain2205)
