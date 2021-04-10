@@ -4,7 +4,7 @@ Brick Breaker (The game) is a Breakout clonewhich the player must smash a wall o
 
 ## Setup instructions
 
-Run `brick_breaker.py`
+Run `python/python3 brick_breaker.py`
 
 ## Output
 
