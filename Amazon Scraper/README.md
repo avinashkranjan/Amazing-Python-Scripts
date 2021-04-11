@@ -3,3 +3,7 @@ The scraper is deployed in the cloud where it can be run for as many time as req
 
  
 Demo Link: https://www.youtube.com/watch?v=DTR9-uBqxtY
+
+# Output
+
+![image](https://user-images.githubusercontent.com/59610398/114304345-42e40380-9af0-11eb-95f2-d24d791cebc4.png)
