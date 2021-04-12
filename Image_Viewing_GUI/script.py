@@ -62,3 +62,4 @@ btn1 = Button(root,text="prev",width=5,height=10,command=previous)
 btn1.place(x=0,y=150)
 
 root.mainloop()
+
