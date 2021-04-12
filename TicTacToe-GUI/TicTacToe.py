@@ -4,10 +4,12 @@ Tic Toe Using pygame , numpy and sys with Graphical User Interface
 
 """
 
+
+
 import pygame, sys
 from pygame.locals import *
 import numpy as np
-
+#import WorkingModal as Wp
 #------
 #constants
 #-------
@@ -48,10 +50,16 @@ font = pygame.font.Font('freesansbold.ttf', 25)
 # on which text is drawn on it.
 text = font.render('Press R to restart', True, green, blue)
  
+Won= font.render(" Won", True ,blue,green)
+leave=font.render("Press X to Exit" ,True, white, red)
 # create a rectangular object for the
 # text surface object
+leaveRect=text.get_rect()
 textRect = text.get_rect()
-textRect.center = (width-150, height-13)
+winRect=Won.get_rect()
+winRect.center=(100,30)
+textRect.center = (width-400, 30)
+leaveRect.center=(width-120,30)
 
 board=np.zeros( (board_rows,board_columns))
 #print(board)
@@ -184,7 +192,10 @@ while True: # main game loop
                 mark_square(clicked_row,clicked_column, player)
                 if(check_win(player)):
                     game_over=True
+                    Won= font.render("Player"+str(player)+" Won", True ,blue,green)
+                    screen.blit(Won, winRect)
                     screen.blit(text, textRect) 
+                    screen.blit(leave,leaveRect)
                 player=player%2 +1
             
                 
@@ -195,6 +206,9 @@ while True: # main game loop
             if event.key==pygame.K_r:
                 restart()
                 game_over=False
+            elif event.key==pygame.K_x:
+                pygame.quit()
+                sys.exit()
                 #print(board)
     pygame.display.update()    
             
