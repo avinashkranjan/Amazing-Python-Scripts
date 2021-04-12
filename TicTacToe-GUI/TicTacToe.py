@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 """
+Created on Sat Apr 10 19:44:45 2021
+
+@author: Lakhan Kumawat
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Tic Toe Using pygame , numpy and sys with Graphical User Interface
 
 """
-
-
 
 import pygame, sys
 from pygame.locals import *
@@ -95,12 +100,14 @@ def available_square(row,col):
 
 #check board full or not
 def is_board_full():
+    k=False
     for row in range(board_rows):
         for col in range(board_columns):
             if board[row][col]==0:
-                return False
+                k=False
             else:
-                return True
+                k=True
+    return k
 
 
 def check_win(player):
@@ -197,10 +204,21 @@ while True: # main game loop
                     screen.blit(text, textRect) 
                     screen.blit(leave,leaveRect)
                 player=player%2 +1
-            
-                
-                
+                if not game_over :
+                    Won= font.render("Player"+str(player)+" Turn", True ,blue,green)
+                    screen.blit(Won, winRect)
                 draw_figures()
+        
+        """
+        if is_board_full():
+           Won= font.render(" It's a Tie ", True ,blue,green)
+           screen.blit(Won, winRect)
+           screen.blit(text, textRect) 
+           screen.blit(leave,leaveRect)
+          """    
+                
+                
+        
         #to restart the game
         if event.type==pygame.KEYDOWN:
             if event.key==pygame.K_r:
