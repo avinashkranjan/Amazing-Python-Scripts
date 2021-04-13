@@ -67,6 +67,14 @@ def getImage(soup, url):
     return res
 
 
+# print dictionary
+def printData(data):
+    print("\nTitle : ", data["title"])
+    print("Description : ", data["description"])
+    print("URL : ", data["url"])
+    print("Image link : ", data["image"])
+
+
 # start
 print("\n======================")
 print("- Link Preview -")
@@ -91,25 +99,31 @@ if not os.path.exists('Link-Preview/db.json'):
     f.write("{}")
     f.close()
 
+# read db
 with open('Link-Preview/db.json', 'r') as file:
     db = json.loads(file.read())
-db["mj"] = {
-    "name": "madhav"
-}
-print(db)
 
-# parse file
-with open('Link-Preview/db.json', 'w') as file:
-    json.dump(db, file)
+# check if it exists
+if (url in db):
+    print(db[url])
+else:
+    # if not in db get via request
 
-# if not in db get via request
+    # getting the html
+    r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
 
-# getting the html
-# r = requests.get(url)
-# soup = BeautifulSoup(r.text, "html.parser")
+    # printing data
+    newData = {
+        "title": getTitle(soup),
+        "description": getDesc(soup),
+        "url": url,
+        "image": getImage(soup, url)
+    }
+    printData(newData)
+    # parse file
+    db[url] = newData
+    with open('Link-Preview/db.json', 'w') as file:
+        json.dump(db, file)
 
-# print("\nTitle : ", getTitle(soup))
-# print("Description : ", getDesc(soup))
-# print("URL : ", url)
-# print("Image link : ", getImage(soup, url))
-# print("\n--END--\n")
+print("\n--END--\n")
