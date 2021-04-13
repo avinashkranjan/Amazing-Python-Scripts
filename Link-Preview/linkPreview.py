@@ -114,7 +114,7 @@ with open('Link-Preview/db.json', 'r+') as file:
 
 # check if it exists
 if (url in db):
-    print(db[url])
+    printData(db[url])
 else:
     # if not in db get via request
 
