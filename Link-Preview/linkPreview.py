@@ -1,4 +1,6 @@
 import requests
+import json
+import os
 from bs4 import BeautifulSoup
 
 # to scrape title
@@ -79,13 +81,35 @@ if (url == ""):
 if ((not "http://" in url) or (not "https://" in url)):
     url = "https://" + url
 
-# getting the html
-r = requests.get(url)
-soup = BeautifulSoup(r.text, "html.parser")
-
 # printing values
-print("\nTitle : ", getTitle(soup))
-print("Description : ", getDesc(soup))
-print("URL : ", url)
-print("Image link : ", getImage(soup, url))
-print("\n--END--\n")
+
+# first check in the DB
+db = {}
+# create file if it doesn't exist
+if not os.path.exists('Link-Preview/db.json'):
+    f = open('Link-Preview/db.json', 'w')
+    f.write("{}")
+    f.close()
+
+with open('Link-Preview/db.json', 'r') as file:
+    db = json.loads(file.read())
+db["mj"] = {
+    "name": "madhav"
+}
+print(db)
+
+# parse file
+with open('Link-Preview/db.json', 'w') as file:
+    json.dump(db, file)
+
+# if not in db get via request
+
+# getting the html
+# r = requests.get(url)
+# soup = BeautifulSoup(r.text, "html.parser")
+
+# print("\nTitle : ", getTitle(soup))
+# print("Description : ", getDesc(soup))
+# print("URL : ", url)
+# print("Image link : ", getImage(soup, url))
+# print("\n--END--\n")
