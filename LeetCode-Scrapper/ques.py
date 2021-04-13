@@ -14,6 +14,8 @@ from fpdf import FPDF
 capa = DesiredCapabilities.CHROME
 capa["pageLoadStrategy"] = "none"
 
+# Input for chrome driver path
+chromeDriverPath=  "C:\chromedriver_win32\chromedriver.exe";
 driver = webdriver.Chrome(desired_capabilities=capa,options=options)
 baseurl="https://leetcode.com/problemset/all"
 wait = WebDriverWait(driver, 15)
