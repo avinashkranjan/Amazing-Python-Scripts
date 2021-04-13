@@ -56,18 +56,23 @@ def getImage(soup, url):
     res = ogImg or twitterImg or metaImg or img
     res = res.get("content", None) or res.get_text() or res.get("src", None)
 
+    count = 0
+    for i in range(0, len(res)):
+        if (res[i] == "." or res[i] == "/"):
+            count += 1
+        else:
+            break
+    res = res[count::]
     if ((not res == None) and ((not "https://" in res) or (not "https://" in res))):
-        res.replace(".", "")
-        if (not res[0] == "/"):
-            res = "/" + res
-        res = url + res
+        res = url + "/" + res
     if (res == None):
         res = "Not available"
 
     return res
 
-
 # print dictionary
+
+
 def printData(data):
     print("\nTitle : ", data["title"])
     print("Description : ", data["description"])
@@ -95,13 +100,17 @@ if ((not "http://" in url) or (not "https://" in url)):
 db = {}
 # create file if it doesn't exist
 if not os.path.exists('Link-Preview/db.json'):
-    f = open('Link-Preview/db.json', 'w')
+    f = open('Link-Preview/db.json', "w")
     f.write("{}")
     f.close()
 
 # read db
-with open('Link-Preview/db.json', 'r') as file:
-    db = json.loads(file.read())
+with open('Link-Preview/db.json', 'r+') as file:
+    data = file.read()
+    if (len(data) == 0):
+        data = "{}"
+        file.write(data)
+    db = json.loads(data)
 
 # check if it exists
 if (url in db):
