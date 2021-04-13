@@ -8,7 +8,7 @@
 
 ## Output
 
-<img src="https://github.com/ShubhamGupta577/Amazing-Python-Scripts/blob/Fast-Algorithm/Fast%20Algorithm/input.jpg" width=500/> <img src="https://github.com/ShubhamGupta577/Amazing-Python-Scripts/blob/Fast-Algorithm/Fast%20Algorithm/Output.png" width=500/>
+<img src="./input.jpg" width=500/> <img src="./Output.png" width=500/>
 ## Author
 
 [Shubham Gupta](https://github.com/ShubhamGupta577)
