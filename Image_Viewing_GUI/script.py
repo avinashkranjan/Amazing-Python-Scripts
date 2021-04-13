@@ -18,7 +18,7 @@ def next():
     global itemslist
     n=(n+1)%len(itemslist)
     img1 = itemslist[n]
-    print(img1)
+
     image = Image.open(path+"/"+img1)
     copy_image=image.copy()
     photo=ImageTk.PhotoImage(image)
@@ -32,7 +32,7 @@ def previous():
     global itemslist
     n=(n-1)%len(itemslist)
     img1 = itemslist[n]
-    print(img1)
+
     image = Image.open(path+"/"+img1)
     copy_image=image.copy()
     photo=ImageTk.PhotoImage(image)
