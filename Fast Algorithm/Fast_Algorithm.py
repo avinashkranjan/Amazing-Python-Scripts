@@ -5,7 +5,7 @@
 import cv2 as cv
 
 #Taking path of input from the user
-path=input("Enter the path of uploaded image: ")
+path=input("Enter the path of image: ")
 img=cv.imread(path)
 img=cv.resize(img,(640,640))  #resizing the image
 
