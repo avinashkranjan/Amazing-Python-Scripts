@@ -679,3 +679,4 @@ test.py
 Test/
 reddit_tokens.json
 scriptcopy.py
+.vscode
