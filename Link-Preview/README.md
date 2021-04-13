@@ -20,7 +20,6 @@ After installing all the requirements,run this command in your terminal.
 
 ```
 python3 linkPreview.py
-
 ```
 
 ## Output
@@ -30,5 +29,5 @@ The script will provide you with Title, Description, Image Link and URL.
 ![demo gif](https://i.imgur.com/uoIG2io.gif)
 
 ## Author(s) 
-Hi I'm [Madhav Jha](https://github.com/jhamadhav) author of this script 🙋‍♂️
+Hi, I'm [Madhav Jha](https://github.com/jhamadhav) author of this script 🙋‍♂️
 
