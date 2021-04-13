@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import time
 from bs4 import BeautifulSoup
 
 # to scrape title
@@ -113,7 +114,7 @@ with open('Link-Preview/db.json', 'r+') as file:
     db = json.loads(data)
 
 # check if it exists
-if (url in db):
+if (url in db and db[url]["time"] < round(time.time())):
     printData(db[url])
 else:
     # if not in db get via request
@@ -122,12 +123,14 @@ else:
     r = requests.get(url)
     soup = BeautifulSoup(r.text, "html.parser")
 
+    sevenDaysInSec = 7*24*60*60
     # printing data
     newData = {
         "title": getTitle(soup),
         "description": getDesc(soup),
         "url": url,
-        "image": getImage(soup, url)
+        "image": getImage(soup, url),
+        "time": round(time.time() * 1000) + sevenDaysInSec
     }
     printData(newData)
     # parse file

@@ -5,7 +5,7 @@ A script to provide the user with a preview of the link entered.
 - When entered a link, the script will provide with title, description, and link of the website that the URL points to.
 - The script will do so by fetching the Html file for the link and analyzing the data from there.
 - The data will be saved in a `JSON` file named `db.json` for further reference
-- Every entry will have a time limit after which it will be updated
+- Every entry will have a time limit after which it will be updated (*Data expires after 7 days*)
 
 ## Setup instructions
 
