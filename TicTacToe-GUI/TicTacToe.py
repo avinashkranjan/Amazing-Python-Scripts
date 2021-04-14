@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 10 19:44:45 2021
 
-@author: Lakhan Kumawat
-"""
 
 # -*- coding: utf-8 -*-
 """
@@ -14,7 +9,7 @@ Tic Toe Using pygame , numpy and sys with Graphical User Interface
 import pygame, sys
 from pygame.locals import *
 import numpy as np
-#import WorkingModal as Wp
+
 #------
 #constants
 #-------
@@ -186,6 +181,13 @@ while True: # main game loop
         if event.type == pygame.QUIT: #if user clicks exit pygame.QUIT and sys exits
             pygame.quit()
             sys.exit()
+            
+        board_full=is_board_full()
+        if board_full and not game_over:
+           Won= font.render("    It's a Tie    ", True ,blue,green)
+           screen.blit(Won, winRect)
+           screen.blit(text, textRect) 
+           screen.blit(leave,leaveRect)
         
         if event.type==pygame.MOUSEBUTTONDOWN and not game_over:
             mouseX= event.pos[0] #x
@@ -199,25 +201,21 @@ while True: # main game loop
                 mark_square(clicked_row,clicked_column, player)
                 if(check_win(player)):
                     game_over=True
-                    Won= font.render("Player"+str(player)+" Won", True ,blue,green)
+                    Won= font.render("Player"+str(player)+" Won ", True ,blue,green)
                     screen.blit(Won, winRect)
                     screen.blit(text, textRect) 
                     screen.blit(leave,leaveRect)
                 player=player%2 +1
-                if not game_over :
-                    Won= font.render("Player"+str(player)+" Turn", True ,blue,green)
+                if not game_over and not board_full:
+                    Won= font.render("Player"+str(player)+" Turn ", True ,blue,green)
                     screen.blit(Won, winRect)
                 draw_figures()
         
-        """
-        if is_board_full():
-           Won= font.render(" It's a Tie ", True ,blue,green)
-           screen.blit(Won, winRect)
-           screen.blit(text, textRect) 
-           screen.blit(leave,leaveRect)
-          """    
-                
-                
+        
+        
+        
+           
+           
         
         #to restart the game
         if event.type==pygame.KEYDOWN:
