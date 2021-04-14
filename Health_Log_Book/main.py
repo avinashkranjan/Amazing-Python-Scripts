@@ -1,6 +1,7 @@
 # importing the modules
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import ttk
 import datetime
 import database
 
@@ -41,21 +42,85 @@ def store_food():
 def show_exercise():
     con = database.connect()
     cor = con.cursor()
-    cor.execute('''SELECT * from exercise''')
-    rows = cor.fetchall()
+    try:
+        cor.execute('''SELECT * from exercise''')
+        rows = cor.fetchall()
+        new = tk.Tk()
+        new.title("Exercise Log")
+        new.geometry("650x500")
 
-    for row in rows:
-        print(row)
+        frm = tk.Frame(new)
+        frm.pack(side=tk.LEFT, padx=20)
+
+        tv = ttk.Treeview(frm, selectmode='browse')
+        tv.pack()
+        verscrlbar = ttk.Scrollbar(new,
+                                   orient="vertical",
+                                   command=tv.yview)
+
+        verscrlbar.pack(side='right', fill='x')
+
+        tv.configure(xscrollcommand=verscrlbar.set)
+
+        tv["columns"] = ("1", "2", "3")
+        tv['show'] = 'headings'
+
+        tv.column("1", width=50, anchor='c')
+        tv.column("2", width=250, anchor='c')
+        tv.column("3", width=400, anchor='w')
+
+        tv.heading("1", text="Sl.No")
+        tv.heading("2", text="Time")
+        tv.heading("3", text="Data")
+
+        for i in rows:
+            tv.insert("", "end", values=i)
+
+        new.mainloop()
+    except:
+        messagebox.showerror("Error", "Some Error Occurred")
 
 
 def show_food():
     con = database.connect()
     cor = con.cursor()
-    cor.execute('''SELECT * from food''')
-    rows = cor.fetchall()
+    try:
+        cor.execute('''SELECT * from food''')
+        rows = cor.fetchall()
+        new = tk.Tk()
+        new.title("Food Log")
+        new.geometry("650x500")
 
-    for row in rows:
-        print(row)
+        frm = tk.Frame(new)
+        frm.pack(side=tk.LEFT, padx=20)
+
+        tv = ttk.Treeview(frm, selectmode='browse')
+        tv.pack()
+        verscrlbar = ttk.Scrollbar(new,
+                                   orient="vertical",
+                                   command=tv.yview)
+
+        verscrlbar.pack(side='right', fill='x')
+
+        tv.configure(xscrollcommand=verscrlbar.set)
+
+        tv["columns"] = ("1", "2", "3")
+        tv['show'] = 'headings'
+
+        tv.column("1", width=50, anchor='c')
+        tv.column("2", width=250, anchor='c')
+        tv.column("3", width=400, anchor='w')
+
+        tv.heading("1", text="Sl.No")
+        tv.heading("2", text="Time")
+        tv.heading("3", text="Data")
+
+        for i in rows:
+            tv.insert("", "end", values=i)
+
+        new.mainloop()
+    except:
+        messagebox.showerror("Error", "Some Error Occurred")
 
 
 def delete_exercise_log():
