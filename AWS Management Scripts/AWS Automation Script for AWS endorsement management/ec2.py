@@ -47,7 +47,7 @@ class Ec2Instances(object):
                     print(e)
         return delete_snapshots_num
 
-    def get_nimesa_created_snapshots(self):
+    def get_user_created_snapshots(self):
         snapshots = self.ec2.describe_snapshots(
             Filters=[{
                 'Name': 'owner-id', 'Values': ['your owner id'],
