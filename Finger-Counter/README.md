@@ -10,7 +10,7 @@ A system which detects a human hand, segments the hand, counts the number of fin
 
 <br>
 
-### Hand tracking in real time
+## Hand tracking in real time
 
 We will first write the bare minimum code to run and then learn how to convert it into a module.
 The framework we will be using is called the `media pipe` which is developed by google, they created these amazing models that allow us to quickly get started with some of the very fundamental problems such as face detection, facial landmarks hand tracking object detection and quite a bit more of these as well.
@@ -51,7 +51,7 @@ To check if something is detected or not we can write `if self.results.multi_han
 
 <br>
 
-### Finger counter
+## Finger counter
 
 Firstly, there is folder here you can see that it says `FingerImages` so basically what this isthat we have the images of different fingers so when it is one, two, three, four, five, and one it is zero so for simplicity we are just going to
 use these six scenarios but if you want to add more later on you can do that and it will pretty much use the same code and you can keep adding on to it.
