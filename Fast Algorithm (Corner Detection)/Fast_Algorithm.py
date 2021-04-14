@@ -32,8 +32,13 @@ kp = fast.detect(img,None)
 print( "Total Keypoints without nonmaxSuppression: {}".format(len(kp)) )
 final = cv.drawKeypoints(img, kp, None, color=(255,0,0))
 
+#Naming the output image
+image_name = path.split(r'/')
+image = image_name[-1].split('.')
+output  = r".\\"+ image[0] + "(_detected).jpg" 
+
 #Saving the image
-cv.imwrite('./folder-name/image_name (detected).jpg',final)
+cv.imwrite(output,final) 
 
 #Printing the final output image
 cv.imshow('Final',final)
