@@ -51,66 +51,65 @@ class Ball():
 		self.game_over = 0
 
 	def motion(self):
-        
-        collision_threshold = 5
-        block_object = Block.bricks
-        brick_destroyed = 1
-        count_row = 0
-        for row in block_object:
-            count_item = 0
-            for item in row:
+		collision_threshold = 5
+		block_object = Block.bricks
+		brick_destroyed = 1
+		count_row = 0
+		for row in block_object:
+			count_item = 0
+			for item in row:
 				# check collision with gaming window
-                if self.rect.colliderect(item[0]):
-                    if abs(self.rect.bottom - item[0].top) < collision_threshold and self.y_speed > 0:
-                        self.y_speed *= -1
+				if self.rect.colliderect(item[0]):
+					if abs(self.rect.bottom - item[0].top) < collision_threshold and self.y_speed > 0:
+						self.y_speed *= -1
                     
-                    if abs(self.rect.top - item[0].bottom) < collision_threshold and self.y_speed < 0:
-                        self.y_speed *= -1
-                    if abs(self.rect.right -item[0].left) < collision_threshold and self.x_speed > 0:
-                        self.x_speed *= -1
-                    if abs(self.rect.left - item[0].right) < collision_threshold and self.x_speed < 0:
-                        self.x_speed *= -1
+					if abs(self.rect.top - item[0].bottom) < collision_threshold and self.y_speed < 0:
+						self.y_speed *= -1
+					if abs(self.rect.right -item[0].left) < collision_threshold and self.x_speed > 0:
+						self.x_speed *= -1
+					if abs(self.rect.left - item[0].right) < collision_threshold and self.x_speed < 0:
+						self.x_speed *= -1
                         
-                    if block_object[count_row][count_item][1] > 1:
-                        block_object[count_row][count_item][1] -= 1
-                    else:
-                        block_object[count_row][count_item][0] = (0, 0, 0, 0)
+					if block_object[count_row][count_item][1] > 1:
+						block_object[count_row][count_item][1] -= 1
+					else:
+						block_object[count_row][count_item][0] = (0, 0, 0, 0)
                 
-                if block_object[count_row][count_item][0] != (0, 0, 0, 0):
-                    brick_destroyed = 0
-                count_item += 1
-            count_row += 1
+				if block_object[count_row][count_item][0] != (0, 0, 0, 0):
+					brick_destroyed = 0
+				count_item += 1
+			count_row += 1
     
-        if brick_destroyed == 1:
-            self.game_over = 1
+		if brick_destroyed == 1:
+			self.game_over = 1
             
 
 		# check for collision with bricks
-        if self.rect.left < 0 or self.rect.right > Window_width:
-            self.x_speed *= -1
+		if self.rect.left < 0 or self.rect.right > Window_width:
+			self.x_speed *= -1
         
-        if self.rect.top < 0:
-            self.y_speed *= -1
-        if self.rect.bottom > Window_height:
-            self.game_over = -1
+		if self.rect.top < 0:
+			self.y_speed *= -1
+		if self.rect.bottom > Window_height:
+			self.game_over = -1
 
 
 		# check for collission with base
-        if self.rect.colliderect(user_basepad):
-            if abs(self.rect.bottom - user_basepad.rect.top) < collision_threshold and self.y_speed > 0:
-                self.y_speed *= -1
-                self.x_speed += user_basepad.direction
-                if self.x_speed > self.max_speed:
-                    self.x_speed = self.max_speed
-                elif self.x_speed < 0 and self.x_speed < -self.max_speed:
-                    self.x_speed = -self.max_speed
-                else:
-                    self.x_speed *= -1
+		if self.rect.colliderect(user_basepad):
+			if abs(self.rect.bottom - user_basepad.rect.top) < collision_threshold and self.y_speed > 0:
+				self.y_speed *= -1
+				self.x_speed += user_basepad.direction
+				if self.x_speed > self.max_speed:
+					self.x_speed = self.max_speed
+				elif self.x_speed < 0 and self.x_speed < -self.max_speed:
+					self.x_speed = -self.max_speed
+				else:
+					self.x_speed *= -1
 
-        self.rect.x += self.x_speed
-        self.rect.y += self.y_speed
+		self.rect.x += self.x_speed
+		self.rect.y += self.y_speed
 
-        return self.game_over
+		return self.game_over
 
 
 	def draw(self):
@@ -251,10 +250,10 @@ while game:
 	ball.draw()                                  # Drawing gaming ball
 
 	if my_ball:
-        user_basepad.slide()                     # Moving user basepad
-        game_over = ball.motion()
-        if game_over != 0:
-            my_ball = False
+		user_basepad.slide()
+		game_over = ball.motion()
+		if game_over != 0:
+			my_ball = False
 
 
 	# Game Info on the gaming window
