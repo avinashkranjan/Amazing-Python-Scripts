@@ -1,3 +1,4 @@
+
 import pygame
 from pygame.locals import *
 
@@ -6,13 +7,15 @@ pygame.init()
 '''
 Defining gaming window size and font
 '''
-Window_height = 500
 Window_width = 500
+Window_height = 500
 
-window = pygame.display.set_mode((Window_height, Window_width))
-pygame.display.set_caption('Brickstroy')  # game title
+window = pygame.display.set_mode((Window_width, Window_height))
+pygame.display.set_caption('Brickstroy')
+
 
 font = pygame.font.SysFont('Arial', 30)
+
 '''
 Defining Bricks colour
 '''
@@ -21,58 +24,53 @@ w_brick = (255, 255, 255)
 g_brick = (0, 255, 0)
 black = (0, 0, 0)
 
-my_ball = False
+
 game_rows = 6
 game_coloumns = 6
-clock = pygame.time.Clock()  # clock speed
+clock = pygame.time.Clock()
 frame_rate = 60
+my_ball = False
 game_over = 0
-
+score = 0
 
 
 class Ball():
-    '''
+	'''
     Creating ball for the game
     '''
 
-    def __init__(self, x, y):
-        self.radius = 10
-        self.x = x - self.radius
-        self.y = y - 50
-        self.rect = Rect(self.x, self.y, self.radius * 2, self.radius * 2)
-        self.x_speed = 4
-        self.y_speed = -4
-        self.max_speed = 5
-        self.game_over = 0
+	def __init__(self, x, y):
 
-    def motion(self):
+		self.radius = 10
+		self.x = x - self.radius
+		self.y = y - 50
+		self.rect = Rect(self.x, self.y, self.radius * 2, self.radius * 2)
+		self.x_speed = 4
+		self.y_speed = -4
+		self.max_speed = 5
+		self.game_over = 0
 
+	def motion(self):
+        
         collision_threshold = 5
-        block_object = Blocks.brick
-        brick_destroyed = 1  # flag set to 1
+        block_object = Block.bricks
+        brick_destroyed = 1
         count_row = 0
         for row in block_object:
             count_item = 0
             for item in row:
-                if self.rect.colliderect(
-                        item[0]):  # checks for each collission
-                    if abs(
-                            self.rect.bottom -
-                            item[0].top) < collision_threshold and self.y_speed > 0:
+				# check collision with gaming window
+                if self.rect.colliderect(item[0]):
+                    if abs(self.rect.bottom - item[0].top) < collision_threshold and self.y_speed > 0:
                         self.y_speed *= -1
-                    if abs(
-                            self.rect.top -
-                            item[0].bottom) < collision_threshold and self.y_speed < 0:
+                    
+                    if abs(self.rect.top - item[0].bottom) < collision_threshold and self.y_speed < 0:
                         self.y_speed *= -1
-                    if abs(
-                            self.rect.right -
-                            item[0].left) < collision_threshold and self.x_speed > 0:
+                    if abs(self.rect.right -item[0].left) < collision_threshold and self.x_speed > 0:
                         self.x_speed *= -1
-                    if abs(
-                            self.rect.left -
-                            item[0].right) < collision_threshold and self.x_speed < 0:
+                    if abs(self.rect.left - item[0].right) < collision_threshold and self.x_speed < 0:
                         self.x_speed *= -1
-
+                        
                     if block_object[count_row][count_item][1] > 1:
                         block_object[count_row][count_item][1] -= 1
                     else:
@@ -82,24 +80,24 @@ class Ball():
                     brick_destroyed = 0
                 count_item += 1
             count_row += 1
+    
         if brick_destroyed == 1:
             self.game_over = 1
+            
 
-        # collision check for game window
+		# check for collision with bricks
         if self.rect.left < 0 or self.rect.right > Window_width:
             self.x_speed *= -1
-
+        
         if self.rect.top < 0:
             self.y_speed *= -1
-
         if self.rect.bottom > Window_height:
             self.game_over = -1
 
-        # collision check for base
+
+		# check for collission with base
         if self.rect.colliderect(user_basepad):
-            if abs(
-                    self.rect.bottom -
-                    user_basepad.rect.top) < collision_threshold and self.y_speed > 0:
+            if abs(self.rect.bottom - user_basepad.rect.top) < collision_threshold and self.y_speed > 0:
                 self.y_speed *= -1
                 self.x_speed += user_basepad.direction
                 if self.x_speed > self.max_speed:
@@ -114,201 +112,174 @@ class Ball():
 
         return self.game_over
 
-    def draw(self):
-        pygame.draw.circle(
-            window,
-            (0,
-             0,
-             255),
-            (self.rect.x +
-             self.radius,
-             self.rect.y +
-             self.radius),
-            self.radius)
-        pygame.draw.circle(
-            window,
-            (255,
-             255,
-             255),
-            (self.rect.x +
-             self.radius,
-             self.rect.y +
-             self.radius),
-            self.radius,
-            1)
 
-    def reset(self,x,y):
-        self.radius = 10
-        self.x = x - self.radius
-        self.y = y - 50
-        self.rect = Rect(self.x, self.y, self.radius * 2, self.radius * 2)
-        self.x_speed = 4
-        self.y_speed = -4
-        self.max_speed = 5
-        self.game_over = 0
+	def draw(self):
+		pygame.draw.circle(window, (0, 0, 255), (self.rect.x + self.radius, self.rect.y + self.radius), self.radius)
+		pygame.draw.circle(window, (255, 255, 255), (self.rect.x + self.radius, self.rect.y + self.radius), self.radius, 1)
 
 
 
+	def reset(self, x, y):
 
-class Blocks():
+		self.radius = 10
+		self.x = x - self.radius
+		self.y = y - 50
+		self.rect = Rect(self.x, self.y, self.radius * 2, self.radius * 2)
+		self.x_speed = 4
+		self.y_speed = -4
+		self.max_speed = 5
+		self.game_over = 0
+
+
+
+class Block():
+	'''
+    This class will help me create Blocks/bricks of the game
     '''
-    This class will help me create blocks/bricks of the game
-    '''
+	def __init__(self):
+		self.width = Window_width // game_coloumns
+		self.height = 40
 
-    def __init__(self):
-        self.width = Window_width // game_coloumns
-        self.height = 40
+	def make_brick(self):
+		self.bricks = []
+		single_brick = []
+		for row in range(game_rows):
+			
+			brick_row = []
+			
+			for coloumn in range(game_coloumns):
+				
+				x_brick = coloumn * self.width
+				y_brick = row * self.height
+				rect = pygame.Rect(x_brick, y_brick, self.width, self.height)
+				# assign power to the bricks based on row
+				if row < 2:
+					power = 3
+				elif row < 4:
+					power = 2
+				elif row < 6:
+					power = 1
+				
+				single_brick = [rect, power]
+				
+				brick_row.append(single_brick)
+			
+			self.bricks.append(brick_row)
 
-    def make_brick(self):
-        self.brick = []
-        single_brick = []
-        for row in range(game_rows):
-            brick_row = []
-            for coloumn in range(game_coloumns):
-                x_brick = coloumn * self.width
-                y_brick = row * self.height
-                Reactangle = pygame.Rect(
-                    x_brick, y_brick, self.width, self.height)
-                if row < 2:
-                    power = 3
-                elif row < 4:
-                    power = 2
-                elif row < 6:
-                    power = 1
 
-                single_brick = [Reactangle, power]
-                brick_row.append(single_brick)
-            self.brick.append(brick_row)
+	def draw_brick(self):
+		for row in self.bricks:
+			for brick in row:
+				
+				if brick[1] == 3:
+					brick_colour = O_brick
+				elif brick[1] == 2:
+					brick_colour = w_brick
+				elif brick[1] == 1:
+					brick_colour = g_brick
+				pygame.draw.rect(window, brick_colour, brick[0])
+				pygame.draw.rect(window, black, (brick[0]), 1)
 
-    def draw_brick(self):
 
-        for row in self.brick:
-            for brick in row:
-                if brick[1] == 3:
-                    brick_colour = O_brick
-                elif brick[1] == 2:
-                    brick_colour = w_brick
-                elif brick[1] == 1:
-                    brick_colour = g_brick
-                pygame.draw.rect(window, brick_colour, brick[0])
-                pygame.draw.rect(window, (0, 0, 0), (brick[0]), 1)
-            
+
+
 
 class base():
-    '''
+	'''
     This class is to create the base pad of the game
     '''
-
-    def __init__(self, x, y, size_x, size_y, color):
-        self.image = pygame.Surface((size_x, size_y), 32)
-        self.rect = self.image.get_rect()
-        self.rect.left = x
-        self.rect.top = y  # X,Y coordinates for our base
-
-        self.image.fill(w_brick)
-
-        self.movement = [0, 0]  # pixelsto be moved in (x,y) format
-        self.speed = 8
-
-        self.height = 20
-        self.width = int(Window_width / game_coloumns)
-        self.x = int((Window_width / 2) - (self.width / 2))
-        self.y = Window_height - (self.height * 2)
-
-        self.direction = 0
-
-    def draw_base(self):
-        pygame.draw.rect(window, (0, 0, 255), self.rect)
-        pygame.draw.rect(window, (255, 255, 255), self.rect, 1)
-
-    def update(self):
-        self.rect = self.rect.move(self.movement)
-        self.checkbounds()
-
-    def checkbounds(self):
-        if self.rect.left < 0:
-            self.rect.left = 0
-
-        if self.rect.right > Window_width:
-            self.rect.right = Window_width
+	def __init__(self):
+		
+		self.height = 20
+		self.width = int(Window_width / game_coloumns)
+		self.x = int((Window_width / 2) - (self.width / 2))
+		self.y = Window_height - (self.height * 2)
+		self.speed = 8
+		self.rect = Rect(self.x, self.y, self.width, self.height)
+		self.direction = 0
 
 
-def draw_text(text,font, w_brick,x,y):
+	def slide(self):
+		
+		self.direction = 0
+		key = pygame.key.get_pressed()
+		if key[pygame.K_LEFT] and self.rect.left > 0:
+			self.rect.x -= self.speed
+			self.direction = -1
+		if key[pygame.K_RIGHT] and self.rect.right < Window_width:
+			self.rect.x += self.speed
+			self.direction = 1
+
+	def draw(self):
+		pygame.draw.rect(window,(0, 0, 255), self.rect)
+		pygame.draw.rect(window, (255, 255, 255), self.rect, 1)
+
+
+	def reset(self):
+
+		self.height = 20
+		self.width = int(Window_width / game_coloumns)
+		self.x = int((Window_width / 2) - (self.width / 2))
+		self.y = Window_height - (self.height * 2)
+		self.speed = 8
+		self.rect = Rect(self.x, self.y, self.width, self.height)
+		self.direction = 0
+
+
+
+def draw_text(text, font, w_brick, x, y):
+    '''
+    Funtion for showing text in gaming window
+    '''
     image = font.render(text, True, w_brick)
-    window.blit(image, (x,y))
+    window.blit(image, (x, y))
 
-# calling all classes an functions here
 
-Blocks = Blocks()
-Blocks.make_brick()
 
-user_basepad = base(
-    Window_width /
-    2,
-    Window_height -
-    Window_height /
-    10,
-    80,
-    10,
-    w_brick)
-
-ball = Ball(user_basepad.x + (user_basepad.width // 2),
-            user_basepad.y + user_basepad.height)
-
+Block = Block()
+Block.make_brick()                                                                              # Creating Brick
+user_basepad = base()                                                                           # Defining base pad
+ball = Ball(user_basepad.x + (user_basepad.width // 2), user_basepad.y - user_basepad.height)   # Defining ball
 
 game = True
 while game:
 
-    clock.tick(frame_rate)
-    window.fill(black)
-    user_basepad.update()
-    user_basepad.draw_base()
-    Blocks.draw_brick()
-    ball.draw()
-    ball.motion()
+	clock.tick(frame_rate)                                                                       
+	window.fill(black)                           # Gaming window Background
+	Block.draw_brick()                           # Drawing bricks
+	user_basepad.draw()                          # Drawing user basepad
+	ball.draw()                                  # Drawing gaming ball
 
-    if my_ball:
-        score = score + 1 
+	if my_ball:
+        user_basepad.slide()                     # Moving user basepad
         game_over = ball.motion()
-
         if game_over != 0:
             my_ball = False
 
-    if not my_ball:
-        if game_over == 0:
-            draw_text('Click Anywhere to start', font, w_brick, 150, Window_height // 2 + 100)
-        '''
-        elif game_over == 1:
-            draw_text('YOU WON !!', font, w_brick, 240, Window_height // 2 + 50)
-            draw_text('Click Anywhere to start', font, w_brick, 100, Window_height // 2 + 100)
-        elif game_over == -1:
-            draw_text('YOU LOST !!', font, w_brick, 240, Window_height // 2 + 50)
-            draw_text('Click Anywhere to start', font, w_brick, 100, Window_height // 2 + 100)
-        '''
-            
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            game = False
-
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                user_basepad.movement[0] = -1 * user_basepad.speed
-            if event.key == pygame.K_RIGHT:
-                user_basepad.movement[0] = user_basepad.speed
-
-        if event.type == pygame.KEYUP:
-            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
-                user_basepad.movement[0] = 0
- 
-        if event.type == pygame.MOUSEBUTTONDOWN and my_ball == False:
-            my_ball == True
-            ball.reset(user_basepad.x + (user_basepad.width // 2),user_basepad.y + user_basepad.height)
-            Blocks.make_brick()
+	# Game Info on the gaming window
+	if not my_ball:
+		if game_over == 0:
+			draw_text('CLICK ANYWHERE TO START', font, w_brick, 90, Window_height // 2 + 100)
+		elif game_over == 1:
+			draw_text('YOU WON!', font, w_brick, 180, Window_height // 2 + 50)
+			draw_text('CLICK ANYWHERE TO RESTART', font, w_brick, 90, Window_height // 2 + 100)
+		elif game_over == -1:
+			draw_text('GAME OVER!', font, w_brick, 180, Window_height // 2 + 50)
+			draw_text('CLICK ANYWHERE TO RESTART', font, w_brick, 90, Window_height // 2 + 100)
 
 
-    # added for any updates that we make to the gaming window to become
-    # visible.
-    pygame.display.update()
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			game = False
+		if event.type == pygame.MOUSEBUTTONDOWN and my_ball == False:
+			my_ball = True
+			ball.reset(user_basepad.x + (user_basepad.width // 2), user_basepad.y - user_basepad.height)
+			user_basepad.reset()
+			Block.make_brick()
+
+
+
+	pygame.display.update()
 
 pygame.quit()
