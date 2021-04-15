@@ -25,14 +25,21 @@ def show():
     for row in cursor.fetchall():
         print(row)
 
-
+def delete():
+    with db:
+        c = db.cursor()
+        c.execute("DROP table expense")
+        db.commit()
 
 db = sqlite3.connect('expense.db')
 c = db.cursor()
 
+# uncomment this when running the script for the first time or when deleting it
+# and when once the table is created comment it out
+
 #c.execute("""CREATE TABLE expense(
  #   Dates varchar,
- #   Items varchar,
+  #  Items varchar,
   #  Expense integer
 #)""")
 db.commit()
@@ -56,7 +63,7 @@ ldate.grid(row=0, column=0, padx=5, pady=5, sticky='w')
 Edate = DateEntry(F1, width=19, background = 'blue', foreground='white', font=(None,18))
 Edate.grid(row=0, column=1, padx=5,pady=5, sticky='w')
 
-ltitle = ttk.Label(F1, text="Title",font=(None,18))
+ltitle = ttk.Label(F1, text="Items",font=(None,18))
 ltitle.grid(row=1, column=0, padx=5, pady=5, sticky='w')
 
 Title = StringVar()
@@ -74,6 +81,9 @@ Eexpense.grid(row=2, column=1, padx=5, pady=5, sticky='w')
 
 btn = ttk.Button(F1,text='Add', command=Addexpense)
 btn.grid(row=3, column=1, padx=5, pady=5, sticky='w', ipadx=10, ipady=10)
+
+btn2 = ttk.Button(F1,text='Delete', command=delete)
+btn2.grid(row=3, column=0, padx=5, pady=5, sticky='w', ipadx=10, ipady=10)
 
 btn1 = ttk.Button(F1,text='Show', command=show)
 btn1.grid(row=3, column=2, padx=5, pady=5, sticky='w', ipadx=10, ipady=10)
