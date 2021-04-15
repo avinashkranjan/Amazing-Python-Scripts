@@ -4,7 +4,7 @@ from sqlite3 import Error
 # Function to connect to the SQL Database
 def sql_connection():
     try:
-        con = sqlite3.connect('udemyDatabase.db')
+        con = sqlite3.connect('./Udemy Scraper/udemyDatabase.db')
         return con
     except Error:
         print(Error)
