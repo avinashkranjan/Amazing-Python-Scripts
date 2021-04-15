@@ -2,7 +2,7 @@
 
 This python script can be used to manage a AWS endorsement.
 
-this provides features like :
+This provides features like :
 
 EC2 :
 
@@ -35,5 +35,4 @@ You can find me at:-
 [Linkedin](https://www.linkedin.com/in/shantam-sultania-737084175/) or [Github](https://github.com/shantamsultania) .
 
 Happy coding ❤️ .
-
 
