@@ -7,7 +7,7 @@ def sql_connection():
     Establishes a connection to the SQL file database
     :return connection object:
     """
-    path = os.path.abspath('TwitterDatabase.db')
+    path = os.path.abspath('./Twitter_Scraper_without_API/TwitterDatabase.db')
     con = sqlite3.connect(path)
     return con
 
