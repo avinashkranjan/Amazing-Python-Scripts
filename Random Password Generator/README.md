@@ -1,4 +1,4 @@
-## RANDOM PASSWORD GENERATOR
+# RANDOM PASSWORD GENERATOR
 
 ## Description
 This is a random password generator.
