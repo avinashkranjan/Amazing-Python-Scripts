@@ -22,6 +22,8 @@ def getTitle(soup):
 
     if (len(res) > 60):
         res = res[0:60]
+    if (res == None or len(res.split()) == 0):
+        res = "Not available"
     return res.strip()
 
 # to scrape page description
@@ -40,6 +42,8 @@ def getDesc(soup):
     res = res.get_text() or res.get("content", None)
     if (len(res) > 60):
         res = res[0:60]
+    if (res == None or len(res.split()) == 0):
+        res = "Not available"
     return res.strip()
 
 # to scrape image link
@@ -66,7 +70,7 @@ def getImage(soup, url):
     res = res[count::]
     if ((not res == None) and ((not "https://" in res) or (not "https://" in res))):
         res = url + "/" + res
-    if (res == None):
+    if (res == None or len(res.split()) == 0):
         res = "Not available"
 
     return res
