@@ -4,7 +4,7 @@ This python script can be used to manage a AWS endorsement.
 
 This provides features like :
 
-EC2 :
+### EC2 :
 
 1. Create your own Key based SnapShots 
 2. Delete SnapShots 
