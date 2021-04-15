@@ -2,7 +2,7 @@ import random
 
 
 # get tarot deck of 78 cards and 'predictions' from tarot.txt
-file_handle = open("tarot.txt", "r")
+file_handle = open("./Tarot Reader/tarot.txt", "r")
 cards = file_handle.readlines()
 tarot_deck = []
 for card in cards:
