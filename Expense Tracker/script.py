@@ -3,6 +3,7 @@ from tkinter import messagebox
 from tkinter import *
 from tkinter.ttk import Notebook
 from tkcalendar import DateEntry
+import sqlite3
 
 
 def Addexpense():
@@ -11,6 +12,30 @@ def Addexpense():
     z = Eexpense.get()
     data = [x,y,z]
     TVExpense.insert('','end',values=data)
+    with db:
+        c = db.cursor()
+        c.execute("INSERT INTO expense(Dates, Items, Expense) VALUES(?,?,?)",(x,y,z))
+       
+
+
+def show():
+    connt=sqlite3.connect('expense.db')
+    cursor=connt.cursor()
+    cursor.execute("SELECT * FROM expense")
+    for row in cursor.fetchall():
+        print(row)
+
+
+
+db = sqlite3.connect('expense.db')
+c = db.cursor()
+
+#c.execute("""CREATE TABLE expense(
+ #   Dates varchar,
+ #   Items varchar,
+  #  Expense integer
+#)""")
+db.commit()
 
 gui = Tk()
 gui.title('Expense Tracker')
@@ -50,6 +75,9 @@ Eexpense.grid(row=2, column=1, padx=5, pady=5, sticky='w')
 btn = ttk.Button(F1,text='Add', command=Addexpense)
 btn.grid(row=3, column=1, padx=5, pady=5, sticky='w', ipadx=10, ipady=10)
 
+btn1 = ttk.Button(F1,text='Show', command=show)
+btn1.grid(row=3, column=2, padx=5, pady=5, sticky='w', ipadx=10, ipady=10)
+
 TVList = ['Date','Item','Expense']
 TVExpense = ttk.Treeview(F1, column=TVList, show='headings', height=5)
 
@@ -59,3 +87,4 @@ for i in TVList:
 TVExpense.grid(row=4, column=0, padx=5, pady=5, sticky='w', columnspan=3)
 
 gui.mainloop()
+db.close()

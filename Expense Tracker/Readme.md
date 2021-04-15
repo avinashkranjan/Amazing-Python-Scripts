@@ -4,8 +4,9 @@
 
 ## Expense Tracker Functionalities : 🚀
 
-- Enter the directory for the images.
-- Now run the script to see all the images one by one.
+- This is used to store the daily expenses.
+- The daily expenses are stored in a format of date, items, and amount spent.
+- This also has a database which shows already stored expenses.
 
 ## Expense Tracker Instructions: 👨🏻‍💻
 
