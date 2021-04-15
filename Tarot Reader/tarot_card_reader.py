@@ -8,7 +8,10 @@ tarot_deck = []
 for card in cards:
     tarot_deck.append(card)
 
+    
+# Close file, display outro text
 def fin():
+    file_handle.close()
     print("Whichever your choice was...")
     input(">> press enter")
     print("May the cards ever be in your favour")
@@ -18,6 +21,7 @@ def fin():
     print("*"*72)
 
 
+# Display when 'Y' or 'y' is entered
 def youve_chosen_yes():
     print("I see that you've chosen to divine your future....")
     input(">> press enter")
@@ -46,6 +50,7 @@ def youve_chosen_yes():
     fin()
 
 
+# Display when 'N' or 'n' is entered
 def youve_chosen_no():
     print("Are you wise...")
     input(">> press enter")
@@ -56,6 +61,7 @@ def youve_chosen_no():
     fin()
 
 
+# Handles other cases
 def youve_chosen_neither():
     print("*le sigh*")
     input(">> press enter")
@@ -71,7 +77,7 @@ def youve_chosen_neither():
     fin()
 
 
-# Introductory lines
+# Intro text
 print("In this black box, you read white words")
 input(">> press enter")
 print("Words that might warn you of danger...")
@@ -82,13 +88,16 @@ print("Or words that might make you laugh")
 input(">> press enter")
 print()
 
-# Choice to be made here
+
+# Choice made here
 print("Do you dare draw a card?")
-ch = input(">> enter Y/N: ")
+ch = input(">> enter Y/n: ")
 print("\nInteresting...")
+
 
 # Driver code
 if ch.lower() == 'y':
+    print()
     youve_chosen_yes()
 
 elif ch.lower()=='n':
