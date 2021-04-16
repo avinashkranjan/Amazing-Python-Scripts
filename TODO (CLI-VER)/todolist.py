@@ -7,17 +7,14 @@ try:
         p+=1
     no_of_items=p-2
 except:
-    f=open("todolist.txt",'w')
+    f=open("./TODO (CLI-VER)/todolist.txt",'w')
     f.write("_________TODO LIST__________\n")
     f.write("    TIME                   WORK")
 finally:
     f.close()
 #Todo list
-
 print("Press 1: Add Item \nPress 2: Delete Item \nPress 3: Update item \nPress 4: Display Items\nPress 5: Exit")
 n=int(input())
-
-
 while n==1 or n==2 or n==3 or n==4:
     if n==1:
         todo=[]
@@ -26,7 +23,7 @@ while n==1 or n==2 or n==3 or n==4:
         print("Enter your Work")
         work=input()
         no_of_items+=1
-        with open('todolist.txt','a') as f:
+        with open('./TODO (CLI-VER)/todolist.txt','a') as f:
             f.write("\n"+str(no_of_items)+"    "+time+"                   "+work)
     elif n==2:
         if(no_of_items<=0):
@@ -35,7 +32,7 @@ while n==1 or n==2 or n==3 or n==4:
             print("____________________________________________________________")
             print("Your Current List: ")
             todo=[]
-            with open('todolist.txt') as f:
+            with open('./TODO (CLI-VER)/todolist.txt') as f:
                 for i in f.readlines():
                     print(i)
                     todo.append(i)
@@ -49,12 +46,11 @@ while n==1 or n==2 or n==3 or n==4:
             else:
                
                 todo.pop(pos+1)
-            
                 no_of_items-=1
                 if(no_of_items<=0):
                     print("Congratulations your todo list is empty!")
 
-                with open('todolist.txt','w') as f:
+                with open('./TODO (CLI-VER)/todolist.txt','w') as f:
                     for i in range(len(todo)):
                         if i>=(pos+1):
                             f.write(str(pos)+todo[i][1:])
@@ -66,7 +62,7 @@ while n==1 or n==2 or n==3 or n==4:
         print("____________________________________________________________")
         print("Your Current List: ")
         todo=[]
-        with open('todolist.txt') as f:
+        with open('./TODO (CLI-VER)/todolist.txt') as f:
             for i in f.readlines():
                 print(i)
                 todo.append(i)
@@ -86,7 +82,7 @@ while n==1 or n==2 or n==3 or n==4:
                 time=input()
                 p=todo[pos+1].index(":")
                 y=0
-                with open('todolist.txt','w') as f:
+                with open('./TODO (CLI-VER)/todolist.txt','w') as f:
                     for i in range(len(todo)):
                         if i==pos+1:
                             f.write(str(pos)+"    "+time+""+''.join(todo[pos+1][p+3:]))
@@ -97,7 +93,7 @@ while n==1 or n==2 or n==3 or n==4:
                 work=input()
                 p=todo[pos+1].index(":")
                 y=0
-                with open('todolist.txt','w') as f:
+                with open('./TODO (CLI-VER)/todolist.txt','w') as f:
                     for i in range(len(todo)):
                         if i==pos+1:
                             f.write(str(pos)+"    "+''.join(todo[pos+1][p-2:p+3])+"                   "+work)
@@ -107,7 +103,7 @@ while n==1 or n==2 or n==3 or n==4:
         print("Your Current List: ")
         todo=[]
         print("____________________________________________________________")
-        with open('todolist.txt') as f:
+        with open('./TODO (CLI-VER)/todolist.txt') as f:
             for i in f.readlines():
                 print(i)
                 todo.append(i)
