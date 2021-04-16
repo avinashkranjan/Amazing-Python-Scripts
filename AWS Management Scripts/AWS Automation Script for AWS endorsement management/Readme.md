@@ -2,16 +2,16 @@
 
 This python script can be used to manage a AWS endorsement.
 
-this provides features like :
+This provides features like :
 
-EC2 :
+### EC2 :
 
 1. Create your own Key based SnapShots 
 2. Delete SnapShots 
 3. Delete/ Terminate any EC2 instance which does not have a user/ any specific tag 
 4. stop any useless Running Ec2 instance
 
-RDS : 
+### RDS : 
 
 1. delete RDS Instance
 2. Delete RDS Cluster
@@ -35,5 +35,3 @@ You can find me at:-
 [Linkedin](https://www.linkedin.com/in/shantam-sultania-737084175/) or [Github](https://github.com/shantamsultania) .
 
 Happy coding ❤️ .
-
-
