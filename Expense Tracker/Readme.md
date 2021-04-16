@@ -30,6 +30,7 @@
 
     - tkinter
     - tkcalendar
+    - sqlite3
 
 ## Author
    
