@@ -109,8 +109,5 @@ while n==1 or n==2 or n==3 or n==4:
                 todo.append(i)
         print("____________________________________________________________")
     print("Press 1: Add Item \nPress 2: Delete the Item\nPress 3: Update item\nPress 4:Display Items\nPress 5:Exit")
-    n=int(input())
-        
-
-        
+    n=int(input())        
 print("Thank you for using our application")
