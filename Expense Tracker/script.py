@@ -34,14 +34,11 @@ def delete():
 db = sqlite3.connect('expense.db')
 c = db.cursor()
 
-# uncomment this when running the script for the first time or when deleting it
-# and when once the table is created comment it out
-
-#c.execute("""CREATE TABLE expense(
- #   Dates varchar,
-  #  Items varchar,
-  #  Expense integer
-#)""")
+c.execute("""CREATE TABLE IF NOT EXISTS expense(
+    Dates varchar,
+    Items varchar,
+    Expense integer
+)""")
 db.commit()
 
 gui = Tk()
