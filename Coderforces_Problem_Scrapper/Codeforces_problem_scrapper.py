@@ -2,7 +2,7 @@ import os
 from selenium import webdriver  # Automated webdriver
 from PIL import Image
 from fpdf import FPDF  # For converting images to pdf
-
+DRIVER_PATH = ''
 
 def getproblem():
     """
@@ -25,7 +25,7 @@ def getproblem():
 
     # Headless = True for taking a scrolling snapshot
     options.headless = True
-    driver = webdriver.Chrome(r"chromedriver_win32\chromedriver.exe", options=options)
+    driver = webdriver.Chrome(DRIVER_PATH, options=options)
     driver.get(url)
     # Deciding height by tag
     required_height = driver.execute_script(
@@ -49,5 +49,6 @@ def getproblem():
 
 
 if __name__ == "__main__":
+    DRIVER_PATH = input("Enter DRIVER PATH location: ")
     getproblem()
     os.remove('image.png')
