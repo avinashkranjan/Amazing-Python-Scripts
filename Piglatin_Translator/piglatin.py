@@ -1,24 +1,22 @@
-original = input("Enter a Sentence: ").strip().lower()
-words = original.split()
-new_words = []
-for word in words:
-    if word[0] in "aeiou":
-        new_word = word + "yay"
-        new_words.append(new_word)
-    else:
-        vow_pos = 0
-        for letter in word:
-            if letter not in "aeiou":
-                vow_pos = vow_pos + 1
-            else:
-                break
-        cons = word[:vow_pos]
-        rest = word[vow_pos:]
-        new_word = rest + cons +"ay"
-        new_words.append(new_word)
-output = " ".join(new_words).capitalize()
-print(output)
+def main():
+        lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl']
+        sentence = input('ENTER THE SENTENCE: ')
+        sentence = sentence.split()
+        for k in range(len(sentence)):
+                i = sentence[k]
+                if i[0] in ['a', 'e', 'i', 'o', 'u']:
+                        sentence[k] = i+'yay'
+                elif t(i) in lst:
+                        sentence[k] = i[2:]+i[:2]+'ay'
+                elif i.isalpha() == False:
+                        sentence[k] = i
+                else:
+                        sentence[k] = i[1:]+i[0]+'ay'
+        return ' '.join(sentence)
 
+def t(str):
+        return str[0]+str[1]
 
-
-
+if __name__ == "__main__":
+        x = main()
+        print(x)
