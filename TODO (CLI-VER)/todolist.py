@@ -1,7 +1,7 @@
 #Check for the existence of file
 no_of_items=0
 try:
-    f=open("todolist.txt")
+    f=open("./TODO (CLI-VER)/todolist.txt")
     p=0
     for i in f.readlines():#Counting the number of items if the file exists already 
         p+=1
