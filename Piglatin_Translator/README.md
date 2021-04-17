@@ -10,10 +10,11 @@ A secret language formed from English by transferring the initial consonant or c
  - Run the script ```piglatin.py```
  - Enter a Sentence you need to translate to pig latin
   
- Example sentence: Hello fellas, My name is Archana
+ Example sentence: hello fellas my name is Archana
    
  # Output
- ![pigoutput](https://user-images.githubusercontent.com/74424757/115099688-23683300-9f55-11eb-92e4-3e5b6b791629.PNG)
+![pigoutput](https://user-images.githubusercontent.com/74424757/115106340-dfd7ee00-9f81-11eb-8412-ad344823be1d.PNG)
+
 
 ## [Author](https://github.com/archanagandhi)
 Archana Gandhi 
