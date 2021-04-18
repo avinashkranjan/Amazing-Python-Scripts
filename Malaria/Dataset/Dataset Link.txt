@@ -1,0 +1,7 @@
+
+Due to large size of the dataset and better gpu performance, the model,generation was done on google colalab and then downloaded as ipynb
+
+
+DataSet link
+
+https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
