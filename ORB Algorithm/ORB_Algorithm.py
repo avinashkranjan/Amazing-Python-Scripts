@@ -4,17 +4,15 @@ import numpy as np
 # Load the image
 path=input('Enter the path of the image')
 image = cv2.imread(path)
+path2=input('Enter the path for testing image')
+test_image=cv2.imread(path2)
+
 #Resizing the image
 image=cv2.resize(image,(600,600))
+test_image=cv2.resize(test_image,(600,600))
+
 # Convert the image to gray scale
 gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-
-# Create test image by adding Scale Invariance and Rotational Invariance
-test_image = cv2.pyrDown(image)
-test_image = cv2.pyrDown(test_image)
-num_rows, num_cols = test_image.shape[:2]
-rotation_matrix = cv2.getRotationMatrix2D((num_cols/2, num_rows/2), 30, 1)
-test_image = cv2.warpAffine(test_image, rotation_matrix, (num_cols, num_rows))
 test_gray = cv2.cvtColor(test_image, cv2.COLOR_RGB2GRAY)
 
 #Display the given and test image
@@ -45,7 +43,7 @@ matches = bf.match(train_descriptor, test_descriptor)
 # The matches with shorter distance are the ones we want.
 matches = sorted(matches, key = lambda x : x.distance)
 
-result = cv2.drawMatches(image, train_keypoints, test_gray, test_keypoints, matches, test_gray, flags = 2)
+result = cv2.drawMatches(image, train_keypoints, test_image, test_keypoints, matches, test_gray, flags = 2)
 
 # Display the best matching points
 cv2.imshow('result',result)
