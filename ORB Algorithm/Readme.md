@@ -10,7 +10,7 @@ the features, so this is where BRIEF comes in the role.
 
 ## Output
 <img src="https://i.ibb.co/6Y8Z04s/Robert-input.png" width=400/> <img src="https://i.ibb.co/J7z8nqT/Robert-feature.png" width=400/>
-<img src="https://i.ibb.co/Kmfj2nL/Robert-Feaure-Matching.png"/>
+<img src="https://i.ibb.co/XCJjYYW/output-ORB.png"/>
 
 ## Author
 [Shubham Gupta](https://github.com/ShubhamGupta577)
