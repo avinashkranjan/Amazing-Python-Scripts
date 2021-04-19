@@ -30,10 +30,10 @@ Parasitized = os.listdir("../input/cell-images-for-detecting-malaria/cell_images
 
 for a in Parasitized:
     try:
-        image = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Parasitized/" + a)
-        image_from_array = Image.fromarray(image, 'RGB')
-        size_image = image_from_array.resize((36, 36))
-        data.append(np.array(size_image))
+        imageP = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Parasitized/" + a)
+        image_from_arrayP = Image.fromarray(imageP, 'RGB')
+        size_imageP = image_from_arrayP.resize((36, 36))
+        data.append(np.array(size_imageP))
         labels.append(0)
     except AttributeError:
         print("")
@@ -42,14 +42,14 @@ Uninfected = os.listdir("../input/cell-images-for-detecting-malaria/cell_images/
 
 for b in Uninfected:
     try:
-        image = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Uninfected/" + b)
-        image_from_array = Image.fromarray(image, 'RGB')
-        size_image = image_from_array.resize((36, 36))
-        data.append(np.array(size_image))
+        imageU = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Uninfected/" + b)
+        image_from_arrayU = Image.fromarray(imageU, 'RGB')
+        size_imageU = image_from_arrayU.resize((36, 36))
+        data.append(np.array(size_imageU))
         labels.append(1)
     except AttributeError:
         print("")
-
+        
 # Creating single numpy array of all the images and labels
 data1 = np.array(data)
 labels1 = np.array(labels)
@@ -71,7 +71,6 @@ X_valid = X_valid.astype('float32')
 # One Hot Encoding 
 y_train = to_categorical(y_trainPre)
 y_valid = to_categorical(y_validPre)
-
 
 classifier = Sequential()
 # CNN layers
