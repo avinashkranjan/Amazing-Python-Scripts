@@ -7,7 +7,7 @@ A secret language formed from English by transferring the initial consonant or c
   
 ## How to run?
  
- - Run the script ```piglatin.py```
+ - Run the script ```python piglatin.py```
  - Enter a Sentence you need to translate to pig latin
   
  Example sentence: hello fellas my name is Archana
