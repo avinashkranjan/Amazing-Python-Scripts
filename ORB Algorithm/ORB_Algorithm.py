@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 # Load the image
-path=input('Enter the path of the image')
+path=input('Enter the path of the image: ')
 image = cv2.imread(path)
-path2=input('Enter the path for testing image')
+path2=input('Enter the path for testing image: ')
 test_image=cv2.imread(path2)
 
 #Resizing the image
@@ -47,7 +47,12 @@ result = cv2.drawMatches(image, train_keypoints, test_image, test_keypoints, mat
 
 # Display the best matching points
 cv2.imshow('result',result)
-cv2.imwrite('./feature_matched.jpg',result)
+
+#Naming the output image
+image_name = path.split(r'/')
+image_path = image_name[-1].split('.')
+output  = r"./ORB Algorithm/"+ image_path[0] + "(featureMatched).jpg"
+cv2.imwrite(output,result)
 
 # Print total number of matching points between the training and query images
 print("\nNumber of Matching Keypoints Between The input image and Test Image: ", len(matches))
