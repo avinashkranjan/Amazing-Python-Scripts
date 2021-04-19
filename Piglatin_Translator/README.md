@@ -12,7 +12,7 @@ A secret language formed from English by transferring the initial consonant or c
   
  Example sentence: hello fellas my name is Archana
    
- # Output
+## Output
 ![pigoutput](https://user-images.githubusercontent.com/74424757/115106340-dfd7ee00-9f81-11eb-8412-ad344823be1d.PNG)
 
 
