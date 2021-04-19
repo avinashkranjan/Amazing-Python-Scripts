@@ -26,5 +26,5 @@ fig.update_layout({
     'showlegend': False
 })
 
-
+fig.layout.template = 'plotly_dark'
 fig.show()

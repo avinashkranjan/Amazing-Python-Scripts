@@ -36,14 +36,14 @@ pip install plotly
 [Elita Menezes](https://github.com/ELITA04/) 
 
 ## 8. Contour Plot
-[![contourplot.png](https://i.postimg.cc/q7w2RdBT/contourplot.png)](https://postimg.cc/v114qk6q)
+[![contourplot.png](https://i.postimg.cc/DyCHL12x/contourplot.png)](https://postimg.cc/1fqvZnVF)
 
 ## 9. Ternary Plot 
-[![ternaryplot.png](https://i.postimg.cc/2SpQ9w9P/ternaryplot.png)](https://postimg.cc/crmtrQSm)
+[![ternaryplot.png](https://i.postimg.cc/Xv5zRh9P/ternaryplot.png)](https://postimg.cc/8F14WZKd)
 ## 10. Waterfall Chart 
-[![Water-Fall.png](https://i.postimg.cc/nznTRkrH/Water-Fall.png)](https://postimg.cc/mc6Qh77q)
+[![Water-Fall.png](https://i.postimg.cc/KvspRFNV/Water-Fall.png)](https://postimg.cc/TpgJ4zBq)
 ## 11. Funnel Chart
-[![Funnel-Chart.png](https://i.postimg.cc/bvhRrTQQ/Funnel-Chart.png)](https://postimg.cc/FYTSn0CR)
+[![Funnel-Chart.png](https://i.postimg.cc/503n1Mys/Funnel-Chart.png)](https://postimg.cc/YGv1fZ1F)
 
 
 # Author

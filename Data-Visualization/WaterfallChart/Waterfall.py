@@ -20,5 +20,5 @@ fig.update_layout(
         xaxis_title='X Axis Title',
         yaxis_title='Y Axis Title',
 )
-
+fig.layout.template = 'plotly_dark'
 fig.show()

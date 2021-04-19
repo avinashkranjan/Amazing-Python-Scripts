@@ -29,4 +29,5 @@ fig.update_layout(
         title = "Funnel Chart for Food Sales in Asian Countries",
         showlegend = True 
 )
+fig.layout.template = 'plotly_dark'
 fig.show()
