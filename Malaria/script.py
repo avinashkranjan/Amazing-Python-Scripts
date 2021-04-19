@@ -45,11 +45,11 @@ for b in Uninfected:
         imageU = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Uninfected/" + b)
         image_from_arrayU = Image.fromarray(imageU, 'RGB')
         size_imageU = image_from_arrayU.resize((36, 36))
-        data.append(np.array(size_imageU))
+        data.append(np.array(size_image))
         labels.append(1)
     except AttributeError:
         print("")
-        
+
 # Creating single numpy array of all the images and labels
 data1 = np.array(data)
 labels1 = np.array(labels)
@@ -57,42 +57,47 @@ labels1 = np.array(labels)
 print('Cells : {} and labels : {}'.format(data1.shape , labels1.shape))
 
 # lets shuffle the data and labels before splitting them into training and testing sets
-n = np.arange(data.shape[0])
+n = np.arange(data1.shape[0])
 np.random.shuffle(n)
 data2 = data1[n]
 labels2 = labels1[n]
 
 
 ### Splitting the dataset into the Training set and Test set
-
-X_train, X_valid, y_trainPre, y_validPre = train_test_split(data2, labels2, test_size = 0.2, random_state = 0)
-X_train = X_train.astype('float32')  
-X_valid = X_valid.astype('float32')
+def traning():
+    X_train, X_valid, y_train, y_valid = train_test_split(data2, labels2, test_size = 0.2, random_state = 0)
+    X_trainF = X_train.astype('float32')  
+    X_validF = X_valid.astype('float32')
 # One Hot Encoding 
-y_train = to_categorical(y_trainPre)
-y_valid = to_categorical(y_validPre)
+    y_trainF = to_categorical(y_train)
+    y_validF = to_categorical(y_valid)
 
-classifier = Sequential()
-# CNN layers
-classifier.add(Conv2D(32, kernel_size=(3, 3), input_shape = (36, 36, 3), activation = 'relu'))
-classifier.add(MaxPooling2D(pool_size = (2, 2)))
-classifier.add(BatchNormalization(axis = -1))
-classifier.add(Dropout(0.5))   # Dropout prevents overfitting
-classifier.add(Conv2D(32, kernel_size=(3, 3), input_shape = (36, 36, 3), activation = 'relu'))
-classifier.add(MaxPooling2D(pool_size = (2, 2)))
-classifier.add(BatchNormalization(axis = -1))
-classifier.add(Dropout(0.5))
-classifier.add(Flatten())
-classifier.add(Dense(units=128, activation='relu'))
-classifier.add(BatchNormalization(axis = -1))
-classifier.add(Dropout(0.5))
-classifier.add(Dense(units=2, activation='softmax'))
-classifier.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
-history = classifier.fit(X_train, y_train, batch_size=120, epochs=15, verbose=1, validation_data=(X_valid, y_valid))
-classifier.summary()
+traning()
 
-y_pred = classifier.predict(X_valid)
+def CNN_model():
+    classifier = Sequential()
+    # CNN layers
+    classifier.add(Conv2D(32, kernel_size=(3, 3), input_shape = (36, 36, 3), activation = 'relu'))
+    classifier.add(MaxPooling2D(pool_size = (2, 2)))
+    classifier.add(BatchNormalization(axis = -1))
+    classifier.add(Dropout(0.5))   # Dropout prevents overfitting
+    classifier.add(Conv2D(32, kernel_size=(3, 3), input_shape = (36, 36, 3), activation = 'relu'))
+    classifier.add(MaxPooling2D(pool_size = (2, 2)))
+    classifier.add(BatchNormalization(axis = -1))
+    classifier.add(Dropout(0.5))
+    classifier.add(Flatten())
+    classifier.add(Dense(units=128, activation='relu'))
+    classifier.add(BatchNormalization(axis = -1))
+    classifier.add(Dropout(0.5))
+    classifier.add(Dense(units=2, activation='softmax'))
+    classifier.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
+    history = classifier.fit(X_trainF, y_trainF, batch_size=120, epochs=15, verbose=1, validation_data=(X_validF, y_validF))
+    classifier.summary()
+
+CNN_model()
+
+y_pred = classifier.predict(X_validF)
 # Convert back to categorical values 
-y_predf = np.argmax(y_pred, axis=1)
-y_validf = np.argmax(y_valid, axis=1)
+y_predF = np.argmax(y_pred, axis=1)
+y_valid_one = np.argmax(y_validF, axis=1)
 classifier.save("./Malaria/Models/malaria.h5")
