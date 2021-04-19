@@ -1,5 +1,4 @@
-
-# importing the libraries for loading data and visualisation
+# importing the libraries for loading data 
 import os
 import cv2
 import pandas as pd
@@ -60,21 +59,21 @@ for b in Uninfected:
         print("")
 
 # Creating single numpy array of all the images and labels
-data = np.array(data)
-labels = np.array(labels)
+data1 = np.array(data)
+labels1 = np.array(labels)
 
-print('Cells : {} and labels : {}'.format(data.shape , labels.shape))
+print('Cells : {} and labels : {}'.format(data1.shape , labels1.shape))
 
 # lets shuffle the data and labels before splitting them into training and testing sets
 n = np.arange(data.shape[0])
 np.random.shuffle(n)
-data = data[n]
-labels = labels[n]
+data2 = data1[n]
+labels2 = labels1[n]
 
 
 ### Splitting the dataset into the Training set and Test set
 
-X_train, X_valid, y_train, y_valid = train_test_split(data, labels, test_size = 0.2, random_state = 0)
+X_train, X_valid, y_train, y_valid = train_test_split(data2, labels2, test_size = 0.2, random_state = 0)
 
 X_train = X_train.astype('float32')  
 X_valid = X_valid.astype('float32')
@@ -113,14 +112,3 @@ y_pred = classifier.predict(X_valid)
 y_pred = np.argmax(y_pred, axis=1)
 y_valid = np.argmax(y_valid, axis=1)
 classifier.save("./Malaria/Models/malaria.h5")
-
-
-
-
-
-
-
-
-
-
-
