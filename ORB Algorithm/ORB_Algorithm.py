@@ -16,7 +16,8 @@ gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 test_gray = cv2.cvtColor(test_image, cv2.COLOR_RGB2GRAY)
 
 #Display the given and test image
-cv2.imshow('output',image)
+image_stack = np.concatenate((image, test_image), axis=1)
+cv2.imshow('image VS test_image', image_stack)
 cv2.imshow('test image',test_image)
 
 #Implementing the ORB alogorithm
