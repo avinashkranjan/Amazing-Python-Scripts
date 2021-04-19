@@ -16,7 +16,7 @@ img = img.resize((36, 36))
 img = np.asarray(img)
 img = img.reshape((1, 36, 36, 3))
 img = img.astype(np.float64)
-model_path = "Models/malaria.h5"
+model_path = "./Malaria/Models/malaria.h5"
 model = tf.keras.models.load_model(model_path)
 pred = np.argmax(model.predict(img)[0])
 if pred == 1:
