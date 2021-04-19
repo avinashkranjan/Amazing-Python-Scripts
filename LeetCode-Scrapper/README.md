@@ -1,5 +1,5 @@
 # LeetCode Scraper
-This python script will let the user to scrape 'n' number of LeetCode problems from any category/difficulty in [Leetcode](https://leetcode.com/problemset/all) ,as provided by the user. The functionality of the script is to gain the information regarding particular codechef problem in different PDFs.
+This python script will let the user to scrape 'n' number of LeetCode problems from any category/difficulty in [Leetcode](https://leetcode.com/problemset/all), as provided by the user. The functionality of the script is to gain the information regarding particular leetcode problem in different PDFs.
 
 ## Prerequisites:
 Download the required packages from the following command in you terminal.(Make sure you're in the same project directory)
@@ -10,7 +10,7 @@ To run this script, you need to have selenium installed and configure webdriver 
 
 ` driver = webdriver.Chrome('/path/to/chromedriver') ` 
 
-## To Run the script:
+## Running the script:
 After installing all the requirements,run this command in your terminal.
 
 ` python3 ques.py `
