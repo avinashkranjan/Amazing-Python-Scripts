@@ -4,7 +4,12 @@
 
 ## Flappy Bird Game : 🚀
 
-- 
+- The ground
+The Sprite that will give the impression of horizontal scrolling with the pipes
+The numbers used to display the score
+The different Sprites of the bird, the pipes
+The Sprites used at the end of the game for example to display the rewards
+
 
 ## Flappy Bird Game Instructions: 👨🏻‍💻
 
