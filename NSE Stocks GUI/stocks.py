@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-driver_path = 'C:\Webdrivers\chromedriver'
+driver_path = input('Enter path for chromedriver: ')
 
 # Categories and their URL slugs
 most_active = {'Most Active equities - Main Board':'mae_mainboard_tableC','Most Active equities - SME':'mae_sme_tableC','Most Active equities - ETFs':'mae_etf_tableC',
