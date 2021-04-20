@@ -85,7 +85,6 @@ def bubble_sort(data, speed):
     data => array to be sorted
     speed => speed of the simulation
     """
-
     for i in range(len(data)-1):
         for j in range(len(data) - i - 1):
             if data[j] > data[j+1]:

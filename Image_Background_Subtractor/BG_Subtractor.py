@@ -27,7 +27,6 @@ def draw_rectangle(event, x, y, flags, params):
     any event is happened on the image that is clicking any button on
     mouse or keyboard.
     """
-
     global ix, iy, drawn, rectangle
     if event == cv2.EVENT_LBUTTONDOWN:
         # When you click DOWN with left mouse button
@@ -58,8 +57,6 @@ def background_sub(image):
     :param image: Image on which Background subtraction is to be performed.
     :return:
     """
-
-    # To check if ROI has been selected or not
     global drawn
 
     # This names the window so we can reference it

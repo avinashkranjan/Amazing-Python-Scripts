@@ -684,7 +684,6 @@ def add_input_distortions(flip_left_right, random_crop, random_scale,
     Returns:
       The jpeg input layer and the distorted result tensor.
     """
-
     jpeg_data = tf.placeholder(tf.string, name='DistortJPGInput')
     decoded_image = tf.image.decode_jpeg(jpeg_data, channels=input_depth)
     decoded_image_as_float = tf.cast(decoded_image, dtype=tf.float32)
