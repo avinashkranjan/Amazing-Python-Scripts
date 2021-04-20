@@ -9,7 +9,7 @@ root.geometry('500x300')
 root.resizable(0,0)
 
 #title of the window
-root.title("DataFlair - Message Encode and Decode")
+root.title("Cryptography World")
 
 
 
