@@ -4,21 +4,23 @@ import math
 import argparse
 
 parser = argparse.ArgumentParser(description="Steganography of text in image")
-parser.add_argument("image",type=str,metavar="",help="Path of Image File")
+parser.add_argument("image", type=str, metavar="", help="Path of Image File")
 group1 = parser.add_mutually_exclusive_group()
 group2 = parser.add_mutually_exclusive_group()
-group1.add_argument("-e","--encode",action="store_true",help="Encode Image")
-group2.add_argument("-d","--decode",action="store_true",help="Decode Image")
-group2.add_argument("-o",help="Encoded Image Nmae",default="Encoded_image.png")
-group1.add_argument("-t",help="Output in Text File",default=False)
+group1.add_argument("-e", "--encode", action="store_true", help="Encode Image")
+group2.add_argument("-d", "--decode", action="store_true", help="Decode Image")
+group2.add_argument("-o", help="Encoded Image Nmae",
+                    default="Encoded_image.png")
+group1.add_argument("-t", help="Output in Text File", default=False)
 
-def encode(path_image,data):
+
+def encode(path_image, data):
     img = cv2.imread(path_image)
     data = [format(ord(i), '08b') for i in data]
     _, width, _ = img.shape
-    
+
     Pixal = len(data) * 3
-    print("[*] Required pixels are ",Pixal)
+    print("[*] Required pixels are ", Pixal)
 
     Row = Pixal/width
     Row = math.ceil(Row)
@@ -44,6 +46,7 @@ def encode(path_image,data):
         count = 0
 
     return img
+
 
 def decode(path_image):
     img = cv2.imread(path_image)
@@ -72,29 +75,32 @@ def decode(path_image):
     message = ''.join(message)
     return message
 
-def encode_image(image_path,message, Output):
-    img = encode(image_path,message)
-    cv2.imwrite(Output,img)
-    print("[*] Data Encoded in ",Output)
 
-def decode_image(image_path,textfile):
+def encode_image(image_path, message, Output):
+    img = encode(image_path, message)
+    cv2.imwrite(Output, img)
+    print("[*] Data Encoded in ", Output)
+
+
+def decode_image(image_path, textfile):
     print("[*] Decoding Message...... ")
     msg = decode(image_path)
     print("[*] Message decoded ..")
     if textfile:
-        with open(textfile,"w") as f:
+        with open(textfile, "w") as f:
             f.write(msg)
     else:
         print(msg)
 
-if __name__ =="__main__":
+
+if __name__ == "__main__":
     args = parser.parse_args()
     if not (args.encode or args.decode):
-         parser.error('No action requested, add --encode or --decode')
+        parser.error('No action requested, add --encode or --decode')
 
     if args.encode:
         msg = input("[*] Input Message: ")
-        encode_image(args.image,msg,args.o)
-    
+        encode_image(args.image, msg, args.o)
+
     elif args.decode:
-        decode_image(args.image,args.t)
+        decode_image(args.image, args.t)

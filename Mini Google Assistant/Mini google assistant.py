@@ -9,11 +9,14 @@ import cv2
 listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty("voices")
-engine.setProperty("voice",voices[1].id)   #use [1]->female voice and [0]-> male voice
+# use [1]->female voice and [0]-> male voice
+engine.setProperty("voice", voices[1].id)
+
 
 def talk(text):
     engine.say(text)
     engine.runAndWait()
+
 
 def take_command():
     try:
@@ -21,7 +24,7 @@ def take_command():
             print("Listening.....(speak now)")
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
-            command=command.lower()
+            command = command.lower()
             if "google" in command:
                 command = command.replace("google", '')
                 print(command)
@@ -31,13 +34,14 @@ def take_command():
         pass
     return command
 
+
 def run_mini_google_assistant():
 
     command = take_command()
     print(command)
 
     if "play" in command:
-        song = command.replace("play","")
+        song = command.replace("play", "")
         talk("playing the song" + song)
         print(song)
         pywhatkit.playonyt(song)
@@ -52,8 +56,8 @@ def run_mini_google_assistant():
     elif 'date' in command:
         date = datetime.date.today()
         print(date)
-        talk( "Today is")
-        talk (date)
+        talk("Today is")
+        talk(date)
     elif 'how are you' in command:
         talk('I am good. Nice to see you here!')
     elif "capture" or "camera" in command:
@@ -68,7 +72,6 @@ def run_mini_google_assistant():
 
             # Display the resulting frame
             cv2.imshow('frame', frame)
-
 
             if "photo" in command:
                 if cv2.waitKey(0) & 0xFF == ord('s'):  # used 's' as quitting button

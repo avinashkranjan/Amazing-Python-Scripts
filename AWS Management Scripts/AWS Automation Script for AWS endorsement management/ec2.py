@@ -5,14 +5,15 @@ import boto3
 
 def get_delete_data(older_days):
     delete_time = datetime.now(tz=timezone.utc) - timedelta(days=older_days)
-    return delete_time;
+    return delete_time
 
 
 def is_ignore_shutdown(tags):
     for tag in tags:
         print("K " + str(tag['Key']) + " is " + str(tag['Value']))
         if str(tag['Key']) == 'excludepower' and str(tag['Value']) == 'true':
-            print("Not stopping K " + str(tag['Key']) + " is " + str(tag['Value']))
+            print("Not stopping K " +
+                  str(tag['Key']) + " is " + str(tag['Value']))
             return True
     return False
 

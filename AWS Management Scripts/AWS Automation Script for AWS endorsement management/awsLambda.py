@@ -8,7 +8,8 @@ def lambda_handler(event, context):
         instances = Ec2Instances(region_name)
         deleted_counts = instances.delete_snapshots(1)
         instances.delete_available_volumes()
-        print("deleted_counts for region " + str(region_name) + " is " + str(deleted_counts))
+        print("deleted_counts for region " +
+              str(region_name) + " is " + str(deleted_counts))
         instances.shutdown()
         print("For RDS")
         rds = Rds(region_name)

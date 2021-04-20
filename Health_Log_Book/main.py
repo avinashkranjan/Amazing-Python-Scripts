@@ -139,10 +139,12 @@ root = tk.Tk()
 root.title("main")
 root.geometry("500x500")
 
-heading = tk.Label(root, text="Health Log book", font=('Helvetica', 18, 'bold'))
+heading = tk.Label(root, text="Health Log book",
+                   font=('Helvetica', 18, 'bold'))
 heading.pack()
 
-exercise_heading = tk.Label(root, text=" 1) Enter each exercise separated with commas", font=('Helvetica', 11, 'bold'))
+exercise_heading = tk.Label(
+    root, text=" 1) Enter each exercise separated with commas", font=('Helvetica', 11, 'bold'))
 exercise_heading.place(x=30, y=40)
 
 exercise_entry = tk.Text(root, height=5, width=42)
@@ -151,7 +153,8 @@ exercise_entry.pack(pady=30)
 exercise_submit = tk.Button(root, text="Submit", command=store_exercise)
 exercise_submit.place(x=210, y=160)
 
-food_heading = tk.Label(root, text="2) Enter each food separated with commas", font=('Helvetica', 11, 'bold'))
+food_heading = tk.Label(root, text="2) Enter each food separated with commas", font=(
+    'Helvetica', 11, 'bold'))
 food_heading.place(x=30, y=200)
 
 food_entry = tk.Text(root, height=5, width=42)
@@ -160,13 +163,15 @@ food_entry.pack(pady=40)
 food_submit = tk.Button(root, text="Submit", command=store_food)
 food_submit.place(x=210, y=330)
 
-retrieve_exercise = tk.Button(root, text="Show Exercise Log", command=show_exercise)
+retrieve_exercise = tk.Button(
+    root, text="Show Exercise Log", command=show_exercise)
 retrieve_exercise.place(x=50, y=400)
 
 retrieve_food = tk.Button(root, text="Show food Log", command=show_food)
 retrieve_food.place(x=300, y=400)
 
-delete_exercise = tk.Button(root, text="Delete Exercise Log", command=delete_exercise_log)
+delete_exercise = tk.Button(
+    root, text="Delete Exercise Log", command=delete_exercise_log)
 delete_exercise.place(x=50, y=450)
 
 delete_food = tk.Button(root, text="Delete food Log", command=delete_food_log)

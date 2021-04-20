@@ -316,7 +316,6 @@ def filter_options():
 
 
 def black_n_white(r, g, b):
-
     """
     changing r, g, b values according to filter
     and storing them in new_red, new_green, new_blue

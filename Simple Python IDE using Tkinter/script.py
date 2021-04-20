@@ -16,6 +16,7 @@ def set_file_path(path):
     global file_path
     file_path = path
 
+
 def open_file():
     path = askopenfilename(filetypes=[('Python Files', '*.py')])
     with open(path, 'r') as file:
@@ -43,7 +44,8 @@ def run():
         text.pack()
         return
     command = f'python {file_path}'
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    process = subprocess.Popen(
+        command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     output, error = process.communicate()
     code_output.insert('1.0', output)
     code_output.insert('1.0',  error)

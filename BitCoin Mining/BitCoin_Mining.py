@@ -8,7 +8,7 @@
 # Import the sha256 function
 from hashlib import sha256
 
-# Nonce value 
+# Nonce value
 MAX_NONCE = 10000
 
 
@@ -23,7 +23,7 @@ def mine(block_number, transactions, previous_hash, prefix_zeros):
     # string with difficulty zeroes
     prefix_str = '0'*prefix_zeros
 
-    # nonce is the value we want 
+    # nonce is the value we want
     for nonce in range(MAX_NONCE):
 
         # concatinating the string and encoding it
@@ -36,28 +36,28 @@ def mine(block_number, transactions, previous_hash, prefix_zeros):
             return new_hash
 
     # might raise exception due to hardware issues etc
-    raise BaseException(f"Couldn't find correct has after trying {MAX_NONCE} times")
+    raise BaseException(
+        f"Couldn't find correct has after trying {MAX_NONCE} times")
 
 
 # Driver Code
-if __name__=='__main__':
-    
+if __name__ == '__main__':
+
     # Transactions string
-    transactions=input('Enter Transactions : ')
-    
+    transactions = input('Enter Transactions : ')
+
     # Number of prefix zeroes
-    difficulty=int(input('Enter Difficulty level : '))
+    difficulty = int(input('Enter Difficulty level : '))
 
     # For knowing time taken for mining
     import time
     start = time.time()
     print("start mining")
 
-    previous_hash=input('Enter Previous has value : ')
-
+    previous_hash = input('Enter Previous has value : ')
 
     # Calling mine function with all required parameters
-    new_hash = mine(5,transactions,previous_hash, difficulty)
+    new_hash = mine(5, transactions, previous_hash, difficulty)
 
     # total time for refrence
     total_time = str((time.time() - start))

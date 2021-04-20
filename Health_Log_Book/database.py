@@ -43,6 +43,7 @@ delete_food_table = """
 
 # defining functions for different queries
 
+
 def connect():
     connection = sqlite3.connect("data.db")
     return connection
