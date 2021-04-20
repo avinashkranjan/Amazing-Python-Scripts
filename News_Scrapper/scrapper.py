@@ -4,12 +4,15 @@ import csv
 
 URL = "https://www.indiatoday.in/"
 
+
 def writeToCSV(topTenNews, category):
     with open("topTen" + category + "News.csv", "w") as file:
         writer = csv.writer(file)
         writer.writerow(["Date", "Link", "Headline"])
         for news in topTenNews:
-            writer.writerow([news[2], "https://www.indiatoday.in/" + news[1], news[0]])
+            writer.writerow(
+                [news[2], "https://www.indiatoday.in/" + news[1], news[0]])
+
 
 def getTopTenFromDivTag(category):
     topTenNews = []
@@ -25,12 +28,13 @@ def getTopTenFromDivTag(category):
         count += 1
         if count > 10:
             break
-        headline  = div.find("h2").text
+        headline = div.find("h2").text
         link = div.find("a").attrs["href"]
         date = div.find("a").attrs["href"][-10:]
         topTenNews.append([headline, link, date])
 
     return topTenNews
+
 
 def getTopTenFromLiTag(category):
     topTenNews = []
@@ -42,7 +46,7 @@ def getTopTenFromLiTag(category):
 
     ul_tag = soup.find_all(class_="itg-listing")
     ul_tag = str(ul_tag)[25:-6]
-    li_tags =ul_tag.split("</li>")
+    li_tags = ul_tag.split("</li>")
 
     for li in li_tags:
         count += 1
@@ -53,13 +57,14 @@ def getTopTenFromLiTag(category):
         headline = ele[2][:-3]
         date = link[-10:]
         topTenNews.append([headline, link, date])
-    
+
     return topTenNews
-        
+
+
 def main():
-    
+
     categories = ["india", "world", "cities", "business", "health", "technology", "sports",
-                 "education", "lifestyle"]
+                  "education", "lifestyle"]
 
     print("Please Choose a Category from the following list")
 
@@ -84,5 +89,6 @@ def main():
     writeToCSV(topTenNews, category)
 
     print("Created CSV File Successfully!")
+
 
 main()

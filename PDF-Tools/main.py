@@ -136,7 +136,8 @@ def reorder_pages():
 
         ans_2 = True
         while ans_2:
-            expected_location = int(input("Enter the location you want to reorder: "))
+            expected_location = int(
+                input("Enter the location you want to reorder: "))
             ans_2 = ifPageExists(total_pages, expected_location)
             if ans_2:  # if location is in invalid
                 print("Invalid Page No. ")
@@ -158,7 +159,8 @@ def reorder_pages():
         pdf_writer.addPage(pdf_reader.getPage(page - 1))
 
     # Saving the PDF with the specified name
-    output_file = input("Enter the filename in which you want to save (without .pdf extension): ") + '.pdf'
+    output_file = input(
+        "Enter the filename in which you want to save (without .pdf extension): ") + '.pdf'
     with open(output_file, 'wb') as fh:
         pdf_writer.write(fh)
 

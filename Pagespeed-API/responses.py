@@ -10,6 +10,7 @@ class Response(object):
         self._request (str): URL of
         self._response (`requests.models.Response` object): Response object from requests module
     """
+
     def __init__(self, response):
         response.raise_for_status()
 

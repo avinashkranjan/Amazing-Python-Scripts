@@ -30,7 +30,7 @@ class Spot:
         self.y = col * width
         self.color = WHITE
         self.neighbour = []
-        self.width = width 
+        self.width = width
         self.total_rows = total_rows
 
     def get_pos(self):
@@ -77,29 +77,31 @@ class Spot:
 
     def update_neighbour(self, grid):
         self.neighbours = []
-        if self.row < self.total_rows - 1 and not grid[self.row + 1][self.col].is_barrier():        # down
+        # down
+        if self.row < self.total_rows - 1 and not grid[self.row + 1][self.col].is_barrier():
             self.neighbours.append(grid[self.row + 1][self.col])
 
-        if self.row > 0 and not grid[self.row - 1][self.col].is_barrier():                          # up
+        # up
+        if self.row > 0 and not grid[self.row - 1][self.col].is_barrier():
             self.neighbours.append(grid[self.row - 1][self.col])
-        
-        if self.col < self.total_rows - 1 and not grid[self.row][self.col + 1].is_barrier():        # right
+
+        # right
+        if self.col < self.total_rows - 1 and not grid[self.row][self.col + 1].is_barrier():
             self.neighbours.append(grid[self.row][self.col + 1])
 
-        if self.col > 0 and not grid[self.row][self.col - 1].is_barrier():                          # left
+        # left
+        if self.col > 0 and not grid[self.row][self.col - 1].is_barrier():
             self.neighbours.append(grid[self.row][self.col - 1])
-
-
 
     def __lt__(self, other):
         return False
 
-    
+
 def h(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
     return abs(x1 - x2) + abs(y1 - y2)
-    
+
 
 def reconstruct_path(came_from, current, draw):
     while current in came_from:
@@ -117,7 +119,7 @@ def algorithm(draw, grid, start, end):
     g_score[start] = 0
     f_score = {spot: float("inf") for row in grid for spot in row}
     f_score[start] = h(start.get_pos(), end.get_pos())
-    
+
     open_set_hash = {start}
 
     while not open_set.empty():
@@ -139,7 +141,8 @@ def algorithm(draw, grid, start, end):
             if temp_g_score < g_score[neighbour]:
                 came_from[neighbour] = current
                 g_score[neighbour] = temp_g_score
-                f_score[neighbour] = temp_g_score + h(neighbour.get_pos(), end.get_pos())
+                f_score[neighbour] = temp_g_score + \
+                    h(neighbour.get_pos(), end.get_pos())
                 if neighbour not in open_set_hash:
                     count += 1
                     open_set.put((f_score[neighbour], count, neighbour))
@@ -214,13 +217,13 @@ def main(win, width):
                 row, col = get_clicked_pos(pos, ROWS, width)
                 spot = grid[row][col]
                 if not start and spot != end:
-                    start = spot 
+                    start = spot
                     start.make_start()
 
                 elif not end and spot != start:
                     end = spot
                     end.make_end()
-                
+
                 elif spot != end and spot != start:
                     spot.make_barrier()
 
@@ -240,7 +243,8 @@ def main(win, width):
                         for spot in row:
                             spot.update_neighbour(grid)
 
-                    algorithm(lambda: draw(win, grid, ROWS, width), grid, start, end)
+                    algorithm(lambda: draw(win, grid, ROWS, width),
+                              grid, start, end)
 
                 if event.key == pg.K_c:
                     start = None
@@ -248,5 +252,6 @@ def main(win, width):
                     grid = make_grid(ROWS, width)
 
     pg.quit()
+
 
 main(WIN, WIDTH)

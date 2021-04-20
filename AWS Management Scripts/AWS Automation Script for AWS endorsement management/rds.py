@@ -36,7 +36,8 @@ class Rds(object):
         self.rds.delete_db_snapshot(DBSnapshotIdentifier=identifier)
 
     def _delete_cluster_snapshot(self, identifier):
-        self.rds.delete_db_cluster_snapshot(DBClusterSnapshotIdentifier=identifier)
+        self.rds.delete_db_cluster_snapshot(
+            DBClusterSnapshotIdentifier=identifier)
 
     @staticmethod
     def _can_delete_instance(tags):
@@ -88,7 +89,8 @@ class Rds(object):
             if self._can_delete_snapshot(tags) and self._is_older_snapshot(
                     str(snapshot['SnapshotCreateTime']).split(" ")):
                 try:
-                    self._delete_cluster_snapshot(snapshot['DBClusterSnapshotIdentifier'])
+                    self._delete_cluster_snapshot(
+                        snapshot['DBClusterSnapshotIdentifier'])
                 except Exception as e:
                     print(str(e))
 
@@ -99,14 +101,16 @@ class Rds(object):
             if self._can_delete_snapshot(tags) and self._is_older_snapshot(
                     str(snapshot['SnapshotCreateTime']).split(" ")):
                 try:
-                    self._delete_instance_snapshot(snapshot['DBSnapshotIdentifier'])
+                    self._delete_instance_snapshot(
+                        snapshot['DBSnapshotIdentifier'])
                 except Exception as e:
                     print(str(e))
 
     @staticmethod
     def _is_older_snapshot(snapshot_datetime):
         snapshot_date = snapshot_datetime[0].split("-")
-        snapshot_date = datetime.date(int(snapshot_date[0]), int(snapshot_date[1]), int(snapshot_date[2]))
+        snapshot_date = datetime.date(int(snapshot_date[0]), int(
+            snapshot_date[1]), int(snapshot_date[2]))
         today = datetime.date.today()
         if abs(today - snapshot_date).days > 2:
             return True

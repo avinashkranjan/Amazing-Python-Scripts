@@ -8,7 +8,7 @@ tarot_deck = []
 for card in cards:
     tarot_deck.append(card)
 
-    
+
 # Close file, display outro text
 def fin():
     file_handle.close()
@@ -39,12 +39,14 @@ def youve_chosen_yes():
     print()
     print("Your second card is...")
     pick_card2 = random.randint(0, 78)
-    print(tarot_deck[pick_card2] if pick_card2 != pick_card1 else         tarot_deck[random.randint(0, 78)])
+    print(tarot_deck[pick_card2] if pick_card2 !=
+          pick_card1 else tarot_deck[random.randint(0, 78)])
     input(">> press enter")
     print()
     print("And your third and final card is...")
     pick_card3 = random.randint(0, 78)
-    print(tarot_deck[pick_card3] if pick_card3 != pick_card1 and          pick_card3 != pick_card2 else tarot_deck[random.randint(0,      78)])
+    print(tarot_deck[pick_card3] if pick_card3 != pick_card1 and pick_card3 !=
+          pick_card2 else tarot_deck[random.randint(0,      78)])
     input(">> press enter")
     print()
     fin()
@@ -100,11 +102,10 @@ if ch.lower() == 'y':
     print()
     youve_chosen_yes()
 
-elif ch.lower()=='n':
+elif ch.lower() == 'n':
     print()
     youve_chosen_no()
 
 else:
     print()
     youve_chosen_neither()
-    

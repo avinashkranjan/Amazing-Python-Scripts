@@ -2,9 +2,11 @@ import turtle as t
 import time as ti
 from itertools import cycle
 
-colors = cycle(['red','orange','yellow','blue','green','purple'])    # create circles and squares of different colors
+# create circles and squares of different colors
+colors = cycle(['red', 'orange', 'yellow', 'blue', 'green', 'purple'])
 
-def draw_circle(size,angle,shift,shape):
+
+def draw_circle(size, angle, shift, shape):
     t.pencolor(next(colors))
     next_shape = ''
     if shape == 'circle':
@@ -17,13 +19,14 @@ def draw_circle(size,angle,shift,shape):
         next_shape = 'circle'
     t.right(angle)
     t.forward(shift)
-    draw_circle(size + 5,angle+1,shift+1,next_shape)
+    draw_circle(size + 5, angle+1, shift+1, next_shape)
+
 
 t.bgcolor('black')
 t.speed('fast')     # to create the figure fastly
 t.pensize(4)
 
-draw_circle(5,0,1,'circle')
+draw_circle(5, 0, 1, 'circle')
 
 ti.sleep(3)
 t.hideturtle()
