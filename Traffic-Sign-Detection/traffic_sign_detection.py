@@ -187,7 +187,6 @@ def build(width, height, depth, classes):
     """
     Initialize the model and its dimension
     """
-
     model = keras.Sequential()
     inputShape = (height, width, depth)
     chanDim = -1
