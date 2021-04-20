@@ -79,10 +79,8 @@ def getImage(soup, url):
 
 
 def printData(data):
-    print("\nTitle : ", data["title"])
-    print("Description : ", data["description"])
-    print("URL : ", data["url"])
-    print("Image link : ", data["image"])
+    for item in data.items():
+        print(f'{item[0].capitalize()}: {item[1]}')
 
 
 # start
