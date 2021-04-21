@@ -4,9 +4,9 @@ import argparse
 arg_parser = argparse.ArgumentParser()
 
 arg_parser.add_argument("-v", "--videoFile", required=True,
-                    help="Video Filename with the complete path.")
+                        help="Video Filename with the complete path.")
 arg_parser.add_argument('-p', "--path", required=True,
-                    help="Audio Filename with absolute or relative path")
+                        help="Audio Filename with absolute or relative path")
 
 args = vars(arg_parser.parse_args())
 

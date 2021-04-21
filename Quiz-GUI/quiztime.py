@@ -7,7 +7,6 @@ import urllib.parse
 import json
 
 
-
 class quiz(tk.Tk):
     def __init__(self):
 
@@ -22,13 +21,14 @@ class quiz(tk.Tk):
         self.geometry("900x300+200+200")
 
         # Welcome message
-        self.label_1 = tk.Label(self, text="Welcome to the Quiz!", width=30, font=("bold", 15))
+        self.label_1 = tk.Label(
+            self, text="Welcome to the Quiz!", width=30, font=("bold", 15))
         self.label_1.pack(padx=10, pady=30)
 
         # Start Quiz button
-        self.btn_1 = ttk.Button(self, text="Start Quiz", command=lambda: self.label_1.destroy() or self.btn_1.destroy() or self.choices(),)
+        self.btn_1 = ttk.Button(self, text="Start Quiz", command=lambda: self.label_1.destroy(
+        ) or self.btn_1.destroy() or self.choices(),)
         self.btn_1.pack()
-
 
     def choices(self):
         # user's category and difficulty level preference are taken here
@@ -38,8 +38,10 @@ class quiz(tk.Tk):
         # play again gets redirected to this window
 
         # label for category preference
-        self.label_1 = tk.Label(self, text="Choose a Category", width=20, font=("bold", 10))
-        self.label_1.place(x=250, y=50) # widget is placed in fixed coordinates using 'place'
+        self.label_1 = tk.Label(
+            self, text="Choose a Category", width=20, font=("bold", 10))
+        # widget is placed in fixed coordinates using 'place'
+        self.label_1.place(x=250, y=50)
 
         # combobox/drop down menu for category preference
         self.category_choice = ttk.Combobox(self, values=["Random Category", "General Knowledge", "Books", "Movies", "Music", "Television", "Video Games",
@@ -47,28 +49,35 @@ class quiz(tk.Tk):
                                                           "Geography", "History", "Animals", "Celebrities", "Anime and Manga",
                                                           "Cartoons and Animations", "Comics"])
 
-        self.category_choice.place(x=480, y=50) # widget is placed in fixed coordinates
+        # widget is placed in fixed coordinates
+        self.category_choice.place(x=480, y=50)
 
         # sets the default choice that's initially displayed
         self.category_choice.current(0)
 
         # label for difficulty preference
-        self.label_2 = tk.Label(self, text="Choose a Difficulty Level", width=20, font=("bold", 10))
-        self.label_2.place(x=265, y=100) # widget is placed in fixed coordinates
+        self.label_2 = tk.Label(
+            self, text="Choose a Difficulty Level", width=20, font=("bold", 10))
+        # widget is placed in fixed coordinates
+        self.label_2.place(x=265, y=100)
 
         # combobox/drop down menu for difficulty preference
-        self.difficulty_choice = ttk.Combobox(self, values=["Easy", "Medium", "Hard"])
-        self.difficulty_choice.place(x=480, y=100) # widget is placed in fixed coordinates
+        self.difficulty_choice = ttk.Combobox(
+            self, values=["Easy", "Medium", "Hard"])
+        # widget is placed in fixed coordinates
+        self.difficulty_choice.place(x=480, y=100)
 
         # sets the default choice that's initially displayed
         self.difficulty_choice.current(1)
 
         # button to go to next window
-        self.btn_1 = ttk.Button(self, text="Go", width=10,command=lambda: destroy_widgets() or self.getQuestions())
-        self.btn_1.place(x=450, y=160, anchor='center') # widget is placed in fixed coordinates
+        self.btn_1 = ttk.Button(
+            self, text="Go", width=10, command=lambda: destroy_widgets() or self.getQuestions())
+        # widget is placed in fixed coordinates
+        self.btn_1.place(x=450, y=160, anchor='center')
 
         def destroy_widgets():
-            # user's category choice and difficulty choice are saved 
+            # user's category choice and difficulty choice are saved
             self.category = self.category_choice.get()
             self.difficulty = self.difficulty_choice.get()
 
@@ -79,7 +88,6 @@ class quiz(tk.Tk):
             self.label_1.destroy()
             self.label_2.destroy()
 
-            
     def getQuestions(self):
         # Chosen Category and Difficulty level are displayed here for confirmation
         # The user is also allowed to go back and change their preference
@@ -88,19 +96,26 @@ class quiz(tk.Tk):
         self.questionsapi(self.category, self.difficulty)
 
         # displays the category chosen by the user
-        self.label_1 = tk.Label(self, text="Category: " + self.category, font=('italics', 13))
-        self.label_1.place(x=450, y=50, anchor="center")  # widget is placed in fixed coordinates and centered
+        self.label_1 = tk.Label(
+            self, text="Category: " + self.category, font=('italics', 13))
+        # widget is placed in fixed coordinates and centered
+        self.label_1.place(x=450, y=50, anchor="center")
 
         # displays the difficulty level chosen by the user
-        self.label_2 = tk.Label(self, text="Difficulty: "+self.difficulty, font=('italics', 12))
-        self.label_2.place(x=450, y=100, anchor="center") # widget is placed in fixed coordinates and centered
+        self.label_2 = tk.Label(
+            self, text="Difficulty: "+self.difficulty, font=('italics', 12))
+        # widget is placed in fixed coordinates and centered
+        self.label_2.place(x=450, y=100, anchor="center")
 
         # button redirects the user back to previous window to change their preference
-        self.btn_1 = ttk.Button(self, text="Change Choice", command=lambda: destroy_widgets() or self.choices(), width=20)
-        self.btn_1.place(x=400, y=150, anchor="e") # widget is placed in fixed coordinates
+        self.btn_1 = ttk.Button(
+            self, text="Change Choice", command=lambda: destroy_widgets() or self.choices(), width=20)
+        # widget is placed in fixed coordinates
+        self.btn_1.place(x=400, y=150, anchor="e")
 
         # button to go to next window, to start playing
-        self.btn_2 = ttk.Button(self, text="Next", command=lambda: destroy_widgets() or self.printQuestion(0), width=20)
+        self.btn_2 = ttk.Button(self, text="Next", command=lambda: destroy_widgets(
+        ) or self.printQuestion(0), width=20)
         self.btn_2.place(x=500, y=150, anchor="w")
 
         def destroy_widgets():
@@ -109,7 +124,6 @@ class quiz(tk.Tk):
             self.btn_2.destroy()
             self.label_1.destroy()
             self.label_2.destroy()
-            
 
     def printQuestion(self, index):
         # function is recursively called to print each question
@@ -117,12 +131,14 @@ class quiz(tk.Tk):
 
         if index < 10:
             # label to display question number
-            self.label_1 = ttk.Label(self, text="Question "+str(index+1), font=('bold', 11))
+            self.label_1 = ttk.Label(
+                self, text="Question "+str(index+1), font=('bold', 11))
             self.label_1.place(x=450, y=30, anchor="center")
 
             # a label to display the question text
             # wraplength used to make sure the text doesn't flow out of the screen
-            self.label_2 = tk.Label(self, text=self.questions[index], font=('bold', 11), wraplength=700, justify=tk.CENTER)
+            self.label_2 = tk.Label(self, text=self.questions[index], font=(
+                'bold', 11), wraplength=700, justify=tk.CENTER)
             self.label_2.place(x=450, y=70, anchor="center")
 
             # button to display option 1
@@ -148,7 +164,8 @@ class quiz(tk.Tk):
             if index > 0:
                 # button to navigate to previous question
                 # appears from the second question onwards
-                self.btn_2 = ttk.Button(self, text="Go to Previous Question", command=lambda: destroy_widgets() or self.printQuestion(index-1))
+                self.btn_2 = ttk.Button(self, text="Go to Previous Question",
+                                        command=lambda: destroy_widgets() or self.printQuestion(index-1))
                 self.btn_2.place(x=70, y=220)
 
         else:
@@ -156,12 +173,16 @@ class quiz(tk.Tk):
             # a buffer window before we print the score
 
             # a label to notify the user that the quiz is done
-            self.label_1 = tk.Label(self, text="Great Work. Hope you had fun!", font=("bold", 12))
-            self.label_1.place(x=450, y=70, anchor="center") # widget is placed in fixed coordinates
+            self.label_1 = tk.Label(
+                self, text="Great Work. Hope you had fun!", font=("bold", 12))
+            # widget is placed in fixed coordinates
+            self.label_1.place(x=450, y=70, anchor="center")
 
             # button to navigate to the next page to view score
-            self.btn_1 = ttk.Button(self, text="Get Score", command=lambda: self.label_1.destroy() or self.btn_1.destroy() or self.getScore(), width=15)
-            self.btn_1.place(x=450, y=130, anchor="center") # widget is placed in fixed coordinates
+            self.btn_1 = ttk.Button(self, text="Get Score", command=lambda: self.label_1.destroy(
+            ) or self.btn_1.destroy() or self.getScore(), width=15)
+            # widget is placed in fixed coordinates
+            self.btn_1.place(x=450, y=130, anchor="center")
 
         def destroy_widgets():
             # destroy all widgets from this window
@@ -171,7 +192,7 @@ class quiz(tk.Tk):
             self.option2.destroy()
             self.option3.destroy()
             self.option4.destroy()
-            if index>0:
+            if index > 0:
                 self.btn_2.destroy()
 
     def scoreUpdater(self, question, option):
@@ -193,31 +214,38 @@ class quiz(tk.Tk):
 
         # following if conditions are targeted for a certain score range
         if self.score <= 4:
-            self.label_1 = tk.Label(self, text="Better Luck Next Time!", font=("bold", 12))
-            self.label_2 = tk.Label(self, text="Your Score is: " + str(self.score), font=("bold", 12))
+            self.label_1 = tk.Label(
+                self, text="Better Luck Next Time!", font=("bold", 12))
+            self.label_2 = tk.Label(
+                self, text="Your Score is: " + str(self.score), font=("bold", 12))
 
         elif self.score == 5:
             self.label_1 = tk.Label(self, text="Not Bad!", font=("bold", 12))
-            self.label_2 = tk.Label(self, text="Your Score is: " + str(self.score), font=("bold", 12))
+            self.label_2 = tk.Label(
+                self, text="Your Score is: " + str(self.score), font=("bold", 12))
 
         elif self.score < 10 and self.score > 5:
             self.label_1 = tk.Label(self, text="Good Job!", font=("bold", 12))
-            self.label_2 = tk.Label(self, text="Your Score is: " + str(self.score), font=("bold", 12))
+            self.label_2 = tk.Label(
+                self, text="Your Score is: " + str(self.score), font=("bold", 12))
 
         elif self.score == 10:
             self.label_1 = tk.Label(self, text="Awesome!", font=("bold", 12))
-            self.label_2 = tk.Label(self, text="Your Score is: " + str(self.score), font=("bold", 12))
+            self.label_2 = tk.Label(
+                self, text="Your Score is: " + str(self.score), font=("bold", 12))
 
         # labels are assigned definite coordinates on the window
         self.label_1.place(x=450, y=70, anchor="center")
         self.label_2.place(x=450, y=120, anchor="center")
 
         # Button to navigate the user to the quiz preferences window to play again
-        self.btn_1 = ttk.Button(self, text="Play Again", command=lambda: destroy_widgets() or self.choices())
+        self.btn_1 = ttk.Button(
+            self, text="Play Again", command=lambda: destroy_widgets() or self.choices())
         self.btn_1.place(x=400, y=170, anchor="e")
 
         # button to quit
-        self.btn_2 = ttk.Button(self, text="Quit", command=lambda: destroy_widgets() or self.destroy())
+        self.btn_2 = ttk.Button(
+            self, text="Quit", command=lambda: destroy_widgets() or self.destroy())
         self.btn_2.place(x=500, y=170, anchor="w")
 
         def destroy_widgets():
@@ -256,8 +284,10 @@ class quiz(tk.Tk):
 
         # questions, incorrect answers and the correct answers are extracted fromt he response data
         # urllib.parse is used to decode the response data (%20..etc)
-        self.questions = [urllib.parse.unquote( q['question'], encoding='utf-8', errors='replace') for q in data['results']]
-        self.correct_answers = [urllib.parse.unquote(q['correct_answer'], encoding='utf-8', errors='replace') for q in data['results']]
+        self.questions = [urllib.parse.unquote(
+            q['question'], encoding='utf-8', errors='replace') for q in data['results']]
+        self.correct_answers = [urllib.parse.unquote(
+            q['correct_answer'], encoding='utf-8', errors='replace') for q in data['results']]
 
         incorrect_options = [q['incorrect_answers'] for q in data['results']]
 
@@ -265,12 +295,13 @@ class quiz(tk.Tk):
         # all 4 options are shuffled usind 'random' module's shuffle
         for i in range(len(incorrect_options)):
             for j in range(len(incorrect_options[i])):
-                incorrect_options[i][j] = urllib.parse.unquote(incorrect_options[i][j], encoding='utf-8', errors='replace')
+                incorrect_options[i][j] = urllib.parse.unquote(
+                    incorrect_options[i][j], encoding='utf-8', errors='replace')
             incorrect_options[i].append(self.correct_answers[i])
             random.shuffle(incorrect_options[i])
 
         self.options = []
-        # the 
+        # the
         for i in range(len(incorrect_options)):
             self.options.append(incorrect_options[i])
 

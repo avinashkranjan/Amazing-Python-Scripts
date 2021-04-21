@@ -1,5 +1,6 @@
 import random
 
+
 def Mywordlist():
     '''
     This function will fetch random words from my custom word list by opening file in read mode
@@ -7,16 +8,18 @@ def Mywordlist():
     with open("./Terminal Hangman/data.txt", "r") as file:
         alldata = file.read()
         words = list(map(str, alldata.split()))
-    
+
     return words
+
 
 def hangman():
     '''
     This is the main fuction behind the logic.
     '''
 
-    word = random.choice(Mywordlist())                       #Fetching Word list we would like to play with.
-    turns = 10                                               #Total number of chance given to the user
+    # Fetching Word list we would like to play with.
+    word = random.choice(Mywordlist())
+    turns = 10  # Total number of chance given to the user
     guessmade = ''
 
     while len(word) > 0:

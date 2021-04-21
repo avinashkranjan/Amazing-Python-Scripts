@@ -18,10 +18,11 @@ class Card:  # Creates all the cards
 
 
 class Deck:  # creates a deck of cards
-          
+
     suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
-    ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
-  
+    ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven',
+             'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
+
     def __init__(self):
         self.deck = []  # haven't created a deck yet
         for suit in Deck.suits:
@@ -43,9 +44,9 @@ class Deck:  # creates a deck of cards
 
 
 class Hand:   # show all the cards that the dealer and player have
-          
+
     values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8,
-          'Nine': 9, 'Ten': 10, 'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
+              'Nine': 9, 'Ten': 10, 'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
 
     def __init__(self):
         self.cards = []
@@ -102,7 +103,8 @@ def hit_or_stand(deck, hand):   # hit or stand
     global playing
 
     while True:
-        ask = input("\nWould you like to hit or stand? Please enter 'h' or 's': ")
+        ask = input(
+            "\nWould you like to hit or stand? Please enter 'h' or 's': ")
 
         if ask[0].lower() == 'h':
             hit(deck, hand)
@@ -218,4 +220,3 @@ while True:
     else:
         print("\nThanks for playing!")
         break
-

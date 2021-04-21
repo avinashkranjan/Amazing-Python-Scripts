@@ -11,6 +11,8 @@ categories = {'Most Runs': 'most-runs',
               'Best Bowling Economy': 'best-bowling-economy', 'Best Bowling Strike Rate': 'best-bowling-strike-rate'}
 
 # Function to generate request url based on user choice
+
+
 def generate_url():
     category_choice = category.get()
     year_choice = year.get()
@@ -22,6 +24,8 @@ def generate_url():
     return url
 
 # Function to scrape results based on request url
+
+
 def scrape_results():
     url = generate_url()
     page = requests.get(url)
@@ -56,8 +60,8 @@ def scrape_results():
 
     # Adding the formatted data into tkinter GUI
     query_label.config(state=tk.NORMAL)
-    query_label.delete(1.0,"end")
-    query_label.insert(1.0,p_records)
+    query_label.delete(1.0, "end")
+    query_label.insert(1.0, p_records)
     query_label.config(state=tk.DISABLED)
 
 
@@ -88,7 +92,7 @@ submit_btn = ttk.Button(window, text="Search", command=scrape_results)
 category['values'] = ('Most Runs', 'Most Fours',
                       'Most Sixes', 'Most Fifties', 'Most Centuries', 'Highest Scores', 'Most Wickets', 'Most Maidens', 'Most Dot Balls', 'Best Bowling Average', 'Best Bowling Economy', 'Best Bowling Strike Rate')
 
-year['values'] = ('All time','2021', '2020', '2019',  '2018', '2017',  '2016',
+year['values'] = ('All time', '2021', '2020', '2019',  '2018', '2017',  '2016',
                   '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008')
 
 category.grid(column=1, row=5, padx=10)
@@ -102,7 +106,7 @@ submit_btn.grid(row=5, column=3, pady=5, padx=15, ipadx=5)
 frame = ttk.Frame(window)
 frame.place(relx=0.50, rely=0.12, relwidth=0.98, relheight=0.90, anchor="n")
 
-query_label = tk.Text( frame,height="52",width="500")
+query_label = tk.Text(frame, height="52", width="500")
 query_label.grid(row=7,  columnspan=2)
 
 window.mainloop()

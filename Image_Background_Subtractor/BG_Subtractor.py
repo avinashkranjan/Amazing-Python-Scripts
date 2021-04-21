@@ -27,7 +27,6 @@ def draw_rectangle(event, x, y, flags, params):
     any event is happened on the image that is clicking any button on
     mouse or keyboard.
     """
-
     global ix, iy, drawn, rectangle
     if event == cv2.EVENT_LBUTTONDOWN:
         # When you click DOWN with left mouse button
@@ -58,8 +57,6 @@ def background_sub(image):
     :param image: Image on which Background subtraction is to be performed.
     :return:
     """
-
-    # To check if ROI has been selected or not
     global drawn
 
     # This names the window so we can reference it
@@ -87,7 +84,8 @@ def background_sub(image):
 
             # mask with 1 and 4 denotes foreground
             # mask with 2 and 0 denotes background so converting the bg pixels into black
-            mask2 = np.where((black_mask == 2) | (black_mask == 0), 0, 1).astype('uint8')
+            mask2 = np.where((black_mask == 2) | (
+                black_mask == 0), 0, 1).astype('uint8')
 
             # multiplying mask2 with original image so that we can get our resultant
             image = image * mask2[:, :, np.newaxis]

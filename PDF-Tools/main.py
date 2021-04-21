@@ -4,7 +4,6 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 def merge_pdfs():
     ''' Merge multiple PDF's into one combined PDF '''
-
     input_paths = input(r"Enter comma separated list of paths to the PDFs ")
     paths = input_paths.split(',')
     pdf_file_writer = PdfFileWriter()
@@ -22,7 +21,6 @@ def merge_pdfs():
 
 def split_pdfs():
     '''Split PDF to multiple PDF's of 1 Page each'''
-
     input_pdf = input(r"Enter I/P PDF path ")
     pdf = PdfFileReader(input_pdf)
     for page in range(pdf.getNumPages()):
@@ -38,7 +36,6 @@ def split_pdfs():
 def add_watermark():
     ''' Adds watermark to given PDF. 
     Note: The watermark PDF should be a image with transparent background '''
-
     input_pdf = input(r"Enter I/P PDF path ")
     watermark = input(r"Enter watermark PDF path ")
     watermark_obj = PdfFileReader(watermark)
@@ -59,7 +56,6 @@ def add_watermark():
 
 def add_encryption():
     ''' Encrypts the given PDF with the provided password '''
-
     input_pdf = input(r"Enter I/P PDF path ")
     password = input(r"Enter password ")
     pdf_file_writer = PdfFileWriter()
@@ -76,7 +72,6 @@ def add_encryption():
 
 def rotate_pages():
     '''Rotate the given PDF left or right by 90 degrees.'''
-
     input_pdf = input(r"Enter I/P PDF path ")
     pdf_file_writer = PdfFileWriter()
     pdf_file_reader = PdfFileReader(input_pdf)
@@ -136,7 +131,8 @@ def reorder_pages():
 
         ans_2 = True
         while ans_2:
-            expected_location = int(input("Enter the location you want to reorder: "))
+            expected_location = int(
+                input("Enter the location you want to reorder: "))
             ans_2 = ifPageExists(total_pages, expected_location)
             if ans_2:  # if location is in invalid
                 print("Invalid Page No. ")
@@ -158,7 +154,8 @@ def reorder_pages():
         pdf_writer.addPage(pdf_reader.getPage(page - 1))
 
     # Saving the PDF with the specified name
-    output_file = input("Enter the filename in which you want to save (without .pdf extension): ") + '.pdf'
+    output_file = input(
+        "Enter the filename in which you want to save (without .pdf extension): ") + '.pdf'
     with open(output_file, 'wb') as fh:
         pdf_writer.write(fh)
 
@@ -167,9 +164,6 @@ def reorder_pages():
 
 def menu():
     '''Menu for the various functionalities offered'''
-
-    # Change Current working directory to where the script is located.
-    # This is done to enable use of relative paths from base folder.
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)

@@ -12,6 +12,8 @@ root.maxsize(530, 330)
 root.minsize(530, 330)
 
 # Function to translate using the translator package
+
+
 def translate():
     language_1 = t1.get("1.0", "end-1c")
     cl = choose_langauge.get()
@@ -29,6 +31,7 @@ def translate():
 def clear():
     t1.delete(1.0, 'end')
     t2.delete(1.0, 'end')
+
 
 # SelectBox 1 for auto detected language
 auto_detect_language = tk.StringVar()

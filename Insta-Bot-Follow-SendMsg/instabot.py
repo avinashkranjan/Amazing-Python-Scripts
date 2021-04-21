@@ -10,9 +10,10 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 browser = webdriver.Chrome(ChromeDriverManager().install())
 time.sleep(10)
-users=list(map(str,input("Enter Users Username Comma-Separated Whom You Want to Follow and Send Msg ").split(",")))
-USERNAME=input("Enter Your Username ")
-PASSWORD=input("Enter Your password ")
+users = list(map(str, input(
+    "Enter Users Username Comma-Separated Whom You Want to Follow and Send Msg ").split(",")))
+USERNAME = input("Enter Your Username ")
+PASSWORD = input("Enter Your password ")
 
 browser.get('https://www.instagram.com/')
 wait = WebDriverWait(browser, 120)
@@ -32,7 +33,8 @@ for user in users:
     browser.get(f"https://www.instagram.com/{user}/")
     time.sleep(3)
     try:
-        follow = wait.until(EC.presence_of_element_located((By.XPATH,'//*[@id="react-root"]/section/main/div/header/section/div[1]/div[1]/div/div/div/span/span[1]/button')))
+        follow = wait.until(EC.presence_of_element_located(
+            (By.XPATH, '//*[@id="react-root"]/section/main/div/header/section/div[1]/div[1]/div/div/div/span/span[1]/button')))
         follow.click()
         time.sleep(3)
     except:
@@ -49,5 +51,3 @@ for user in users:
         time.sleep(5)
     except:
         pass
-
-

@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import messagebox,simpledialog
+from tkinter import messagebox, simpledialog
 import sqlite3
 from sqlite3 import Error
 import sys
@@ -8,6 +8,8 @@ import sys
 master_password = sys.argv[1]
 
 # Function to connect to the SQL Database
+
+
 def sql_connection():
     try:
         con = sqlite3.connect('passwordManager.db')
@@ -16,17 +18,22 @@ def sql_connection():
         print(Error)
 
 # Function to create table
+
+
 def sql_table(con):
     cursorObj = con.cursor()
     cursorObj.execute(
         "CREATE TABLE IF NOT EXISTS passwords(website text, username text, pass text)")
     con.commit()
 
+
 # Call functions to connect to database and create table
 con = sql_connection()
 sql_table(con)
 
 # Create submit function for database
+
+
 def submit(con):
     cursor = con.cursor()
     # Insert Into Table
@@ -51,9 +58,11 @@ def submit(con):
         messagebox.showinfo("Alert", "Please fill all details!")
 
 # Create Query Function
+
+
 def query(con):
 
-    password = simpledialog.askstring("Password","Enter Master Password")
+    password = simpledialog.askstring("Password", "Enter Master Password")
     if(password == master_password):
         # set button text
         query_btn.configure(text="Hide Records", command=hide)
@@ -62,24 +71,27 @@ def query(con):
         cursor.execute("SELECT *, oid FROM passwords")
         records = cursor.fetchall()
 
-        p_records = 'ID'.ljust(10)+ 'Website'.ljust(40)+'Username'.ljust(70)+'Password'.ljust(100)+'\n'
+        p_records = 'ID'.ljust(10) + 'Website'.ljust(40) + \
+            'Username'.ljust(70)+'Password'.ljust(100)+'\n'
 
         for record in records:
             single_record = ""
             single_record += (str(record[3]).ljust(10) +
-                          str(record[0]).ljust(40)+str(record[1]).ljust(70)+str(record[2]).ljust(100))
+                              str(record[0]).ljust(40)+str(record[1]).ljust(70)+str(record[2]).ljust(100))
             single_record += '\n'
-            # print(single_record) 
+            # print(single_record)
             p_records += single_record
         query_label['text'] = p_records
         # Commit changes
         con.commit()
         p_records = ""
-        
+
     else:
         messagebox.showinfo("Failed!", "Authentication failed!")
 
 # Create Function to Hide Records
+
+
 def hide():
     query_label['text'] = ""
     query_btn.configure(text="Show Records", command=lambda: query(con))
@@ -121,6 +133,7 @@ query_btn.grid(row=6, column=1, pady=5, padx=5, ipadx=35)
 global query_label
 query_label = Label(frame, anchor="nw", justify="left")
 query_label.place(relwidth=1, relheight=1)
+
 
 def main():
     root.mainloop()

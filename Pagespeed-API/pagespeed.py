@@ -11,6 +11,7 @@ class PageSpeed(object):
         api_key (str): Optional API key for client account.
         endpoint (str): Endpoint for HTTP request
     """
+
     def __init__(self, api_key=None):
         self.api_key = api_key
         self.endpoint = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'

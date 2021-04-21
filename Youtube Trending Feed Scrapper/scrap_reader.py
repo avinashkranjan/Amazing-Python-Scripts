@@ -17,8 +17,11 @@ usage = """
 
 # Load args
 parser = OptionParser()
-parser.add_option("-c", "--csv", action="store_true", dest="csv", help="Saves extracted contents to a CSV file.")
-parser.add_option("-m", "--mongo", action="store_true", dest="mongo", help="Saves extracted contents to a MongoDB.")
+parser.add_option("-c", "--csv", action="store_true", dest="csv",
+                  help="Saves extracted contents to a CSV file.")
+parser.add_option("-m", "--mongo", action="store_true",
+                  dest="mongo", help="Saves extracted contents to a MongoDB.")
+
 
 def read_mongo():
     # Connect to service
@@ -38,10 +41,10 @@ def read_csv():
 
 
 def display(data):
-    i=0
+    i = 0
     for card in data:
         # For every 10 cards print section
-        if i%10 ==0:
+        if i % 10 == 0:
             c = input("Show Section? [y/n] > ")
             if c.lower() == "y":
                 print("***********************************")
@@ -49,7 +52,7 @@ def display(data):
                 print("***********************************")
             else:
                 sys.exit()  # If had enough of reading
-        i+=1  # Increament
+        i += 1  # Increament
         print("Title:", card["title"])
         print("Link:",  card["link"])
         print("Channel:", card["channel"])
