@@ -1,6 +1,6 @@
-# Save any Problem Statement you like from Codeforces as a PDF.
+# Save any number of Problem Statement you like from Codeforces as a PDF.
 
-This python script will let you download Problem Statements from Codeforces and save them as a pdf file. The script uses Selenium Webdriver and fpdf library. Selenium is used with Chrome Webdriver, so having Chrome browser is a requirement.
+This python script will let you download any number of Problem Statements from Codeforces and save them as a pdf file. The script uses Selenium Webdriver and fpdf library. Selenium is used with Chrome Webdriver, so having Chrome browser is a requirement.
 
 ## Setting up:
 
@@ -15,22 +15,21 @@ This python script will let you download Problem Statements from Codeforces and 
 ## Running the script:
 
 ```sh
-  $ python Codeforces_problem_scrapper.py
+  $ python Codeforces_Problem_Scrapper.py
 ```
 
 ## Terminal Screenshot:
 
-![Imgur](https://i.imgur.com/Qr0AwMG.png)
+![Imgur](https://i.imgur.com/gqHMxMz.png)
 
 The program will ask you to enter:
-1.  Valid Problem ID.
-2.  Valid Difficulty Level.
-3. filename(without '.pdf'). The pdf will be created in the same folder.
+1.  DRIVER PATH
+2.  VALID Difficulty Range of PROBLEMS.
+3.  Number of Questions to Scrape.
 
 ## PDF Output:
-![Imgur](https://i.imgur.com/GpSxCRZ.png)
-![Imgur](https://i.imgur.com/c5mCNWM.png)
+![Imgur](https://i.imgur.com/1iMC7PE.png)
+![GIF](https://media.giphy.com/media/lQ95K1IzUGB2tiqlmZ/giphy.gif)
 
 ## Author
-[Akhil Bhalerao](https://github.com/iamakkkhil)
-
+[ Akhil Bhalerao ](https://github.com/iamakkkhil)
