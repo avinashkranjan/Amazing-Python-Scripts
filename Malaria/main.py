@@ -1,6 +1,5 @@
 # import important libraries
 import os
-from tensorflow.keras.models import load_model
 from PIL import Image
 import tensorflow as tf
 import numpy as np
