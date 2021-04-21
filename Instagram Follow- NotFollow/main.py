@@ -6,6 +6,9 @@ start = datetime.datetime.now()
 
 
 class InstaBot:
+    """ for login
+        """
+
     def __init__(self, username, pw):
         self.driver = webdriver.Chrome()
         self.username = username
@@ -31,6 +34,8 @@ class InstaBot:
             sleep(1)
 
     def get_unfollowers(self):
+        """ names of unfollowers
+        """
         self.driver.find_element_by_xpath(
             "//a[contains(@href,'/{}')]".format(self.username)).click()
         sleep(2)
@@ -48,6 +53,8 @@ class InstaBot:
         print(notfollowingback)
 
     def _get_names(self):
+        """ names of unfollowers
+        """
 
         sleep(2)
         scroll_box = self.driver.find_element_by_xpath(
