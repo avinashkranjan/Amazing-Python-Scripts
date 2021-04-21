@@ -38,26 +38,52 @@ class InstaBot:
         sleep(2)
         self.driver.find_element_by_xpath(
             "//a[contains(@href,'/following')]").click()
+        following = self._get_names()
         sleep(2)
-        # sug = self.driver.find_element_by_xpath(
-        #     '//h4[contains(text(), Suggestions)]')
-        # self.driver.execute_script('arguments[0].scrollIntoView()', sug)
-        # sleep(2)
+        self.driver.find_element_by_xpath(
+            "//a[contains(@href,'/followers')]").click()
+        sleep(2)
+        followers = self._get_names()
 
+        notfollowingback = [
+            user for user in following if user not in followers]
+        print(notfollowingback)
+
+    def _get_names(self):
+
+        sleep(2)
         scroll_box = self.driver.find_element_by_xpath(
-            "/html/body/div[5]/div/div/div[2]")
+            '/html/body/div[5]/div/div/div[2]')
         last_ht, ht = 0, 1
+
+        # Keep scrolling till you can't go down any further
         while last_ht != ht:
             last_ht = ht
             sleep(1)
-            ht = self.driver.execute_script(""""
-                arguments[0].scrollTo(0,arguments[0].scrollHeigth);
-                return arguments[0],scrollHeight;
+            ht = self.driver.execute_script(
+                """
+                arguments[0].scrollTo(0, arguments[0].scrollHeight);
+                return arguments[0].scrollHeight;
                 """, scroll_box)
 
+        # Gets the list of accounts
+        links = scroll_box.find_elements_by_tag_name('a')
+        names = [name.text for name in links if name.text != '']
 
-usr_name = input("Enter Username : ")
-password = input("Enter Password : ")
+        sleep(1)
+
+        # Closes the box
+        close_btn = self.driver.find_element_by_xpath(
+            '/html/body/div[5]/div/div/div[1]/div/div[2]')
+        close_btn.click()
+
+        return names
+
+
+# usr_name = input("Enter Username : ")
+# password = input("Enter Password : ")
+usr_name = "nidhi_vanjare"
+password = "Instanidhi1307"
 
 
 my_bot = InstaBot(usr_name, password)
