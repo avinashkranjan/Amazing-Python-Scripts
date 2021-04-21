@@ -16,11 +16,11 @@ from tensorflow.keras.layers import Dense, Flatten, Dropout, BatchNormalization
 data = []
 labels = []
 
-Parasitized = os.listdir("../input/cell-images-for-detecting-malaria/cell_images/Parasitized/")
+Parasitized = os.listdir("../input/malaria/cell_images/Parasitized/")
 
 for a in Parasitized:
     try:
-        imageP = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Parasitized/" + a)
+        imageP = cv2.imread("../input/malaria/cell_images/Parasitized/" + a)
         image_from_arrayP = Image.fromarray(imageP, 'RGB')
         size_imageP = image_from_arrayP.resize((36, 36))
         data.append(np.array(size_imageP))
@@ -28,11 +28,11 @@ for a in Parasitized:
     except AttributeError:
         print("")
 
-Uninfected = os.listdir("../input/cell-images-for-detecting-malaria/cell_images/Uninfected/")
+Uninfected = os.listdir("../input/malaria/cell_images/Uninfected/")
 
 for b in Uninfected:
     try:
-        imageU = cv2.imread("../input/cell-images-for-detecting-malaria/cell_images/Uninfected/" + b)
+        imageU = cv2.imread("../input/malaria/cell_images/Uninfected/" + b)
         image_from_arrayU = Image.fromarray(imageU, 'RGB')
         size_imageU = image_from_arrayU.resize((36, 36))
         data.append(np.array(size_imageU))
@@ -54,8 +54,7 @@ labels2 = labels1[n]
 # Splitting the dataset into the Training set and Test set
 X_train, X_valid, y_train, y_valid = train_test_split(data2, labels2, test_size=0.2, random_state=0)
 X_trainF = X_train.astype('float32')
-X_validF = X_valid.astype('float32')
-# One Hot Encoding 
+X_validF = X_valid.astype('float32') 
 y_trainF = to_categorical(y_train)
 y_validF = to_categorical(y_valid)
 
@@ -78,9 +77,7 @@ classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['
 history = classifier.fit(X_trainF, y_trainF, batch_size=120, epochs=15, verbose=1, validation_data=(X_validF, y_validF))
 classifier.summary()
 
-
 y_pred = classifier.predict(X_validF)
-# Convert back to categorical values 
 y_predF = np.argmax(y_pred, axis=1)
 y_valid_one = np.argmax(y_validF, axis=1)
 classifier.save("./Malaria/Models/malaria.h5")
