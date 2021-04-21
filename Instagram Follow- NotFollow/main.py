@@ -1,7 +1,5 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from time import sleep
-import re
 import datetime
 
 start = datetime.datetime.now()
