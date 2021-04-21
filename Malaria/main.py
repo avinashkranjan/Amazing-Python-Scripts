@@ -10,7 +10,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['TF_XLA_FLAGS'] = '--tf_xla_enable_xla_devices'
 
 # reading image
-val_path = input("Enter image path name eg. Images/cell1.jpg")
+val_path = input("Enter image path name eg. Images/cell1.jpg: ")
 img = Image.open(val_path)
 # confiiguring input image according to the model's requirement
 img = img.resize((36, 36))
