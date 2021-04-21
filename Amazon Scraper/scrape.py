@@ -8,8 +8,9 @@ import requests
 import time
 
 
-#main Scraper Function
+
 def scraper():
+
 
 
     #the csv file deceared
