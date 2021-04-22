@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 17 15:41:18 2021
 
-@author: Lakhan Kumawat
-"""
 
 import pygame as pg 
 
@@ -78,15 +74,15 @@ game_is_going=True
 enter_screen=False
 
 input_box1 = pg.Rect(140, 170, 170, 50)
-color_inactive = pg.Color('dodgerblue2')
-color_active = pg.Color('lightskyblue3')
+color_inactive = pg.Color((2, 0, 93))
+color_active = pg.Color((33, 224, 239))
 color1 = color_inactive
         
 active1 = False
         
 text1 = ''
 font = pg.font.SysFont('comicsans', 60)
-p1 = font.render('Enter Your Name ', True,"navyblue")
+p1 = font.render('Enter Your Name ', True,(14, 43, 103))
         
 textRectp1 = p1.get_rect()
    
