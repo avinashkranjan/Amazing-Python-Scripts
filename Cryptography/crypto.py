@@ -71,7 +71,7 @@ def Reset():
     mode.set("")
     Result.set("")
 
-# Message
+
 Label(
     root, font='arial 12 bold', text='MESSAGE'
 ).place(x=60, y=60)
@@ -79,7 +79,8 @@ Entry(
     root, font='arial 10', textvariable=Text, bg='ghost white'
 ).place(x=290, y=60)
 
-# key
+
+#key
 Label(root, font='arial 12 bold', text='KEY').place(x=60, y=90)
 Entry(
     root, font='arial 10', textvariable=private_key , bg='ghost white'
