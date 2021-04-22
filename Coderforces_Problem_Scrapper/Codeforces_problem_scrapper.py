@@ -3,8 +3,6 @@ from selenium import webdriver  # Automated webdriver
 from PIL import Image
 from fpdf import FPDF  # For converting images to pdf
 
-DRIVER_PATH = ''
-
 
 def select_difficulty():
     """
@@ -12,7 +10,7 @@ def select_difficulty():
     :return: difficulty_level[]
     """
     difficulty_level = []
-    print("\nEnter the Range between 800 to 3500: ")
+    print("\nEnter the Range of difficulty  between 800 to 3500: ")
     difficulty_level.append(int(input("Min: ")))
     difficulty_level.append(int(input("Max: ")))
 
@@ -110,7 +108,7 @@ def getproblem(URLs):
     path = 'image.png'
 
     # Creating a Target Output Folder
-    target_folder = './problems_pdf'
+    target_folder = './Coderforces_Problem_Scrapper/problems_pdf'
     if not os.path.exists(target_folder):
         os.makedirs(target_folder)
 
