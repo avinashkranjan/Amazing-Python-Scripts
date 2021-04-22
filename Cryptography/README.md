@@ -15,7 +15,8 @@ To build this project we will use the basic concept of python, Tkinter, and base
 
 ### PROJECT STRUCTURE- These are the step to build message encode – decode python project-
 ### -Import module
-### -Create display window
+- Create display window
+
 ### -Define function
 ### -Define labels and buttons
 
