@@ -19,7 +19,8 @@ To build this project we will use the basic concept of python, Tkinter, and base
 ### -Import module
 - Create display window
 
-### -Define function
+- Define function
+
 - Define labels and buttons
 
 
