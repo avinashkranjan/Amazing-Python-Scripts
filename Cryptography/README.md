@@ -26,5 +26,7 @@ To build this project we will use the basic concept of python, Tkinter, and base
 
 
 
-### AUTHOR NAME- ANUSHKA CHITRANSHI
+## AUTHOR NAME
+[ANUSHKA CHITRANSHI](https://github.com/codebuzzer01)
+
 ### GITHUB PROFILE- https://github.com/codebuzzer01
