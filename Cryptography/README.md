@@ -1,7 +1,9 @@
 # CRYPTOGRAPHY
 
 
-### DESCRIPTION- This objective of this project is to encode and decode messages using a common key. In this project, users have to enter the message to encode or decode. Users have to select the mode to choose the encoding and decoding process. The same key must be used to process the encoding and decoding for the same message.
+## DESCRIPTION
+The objective of this project is to encode and decode messages using a common key. In this project, users have to enter the message to encode or decode. Users have to select the mode to choose the encoding and decoding process. The same key must be used to process the encoding and decoding for the same message.
+
 
 ### PROJECT REQUISITES- To build this project we will use basic concept of python, Tkinter, and base64 library.
 ### -Tkinter is a standard GUI python library.
