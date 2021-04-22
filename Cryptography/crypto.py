@@ -56,10 +56,12 @@ def Mode():
     else:
         Result.set('Invalid Mode')
 
- # Function to exit window
+
+# Function to exit window
 def Exit():
     """Exit the window."""
     root.destroy()
+
 
 # Function to reset
 def Reset():
@@ -69,7 +71,6 @@ def Reset():
     mode.set("")
     Result.set("")
 
-    
 # Message
 Label(
     root, font='arial 12 bold', text='MESSAGE'
@@ -93,22 +94,22 @@ Entry(
 ).place(x=290, y=120)
 
 # result
-Entry(root, 
-      font='arial 10 bold', textvariable=Result, bg='ghost white'
+Entry(
+     root, font='arial 10 bold', textvariable=Result, bg='ghost white'
 ).place(x=290, y=150)
 
 # result button
 Button(
-    root, font='arial 10 bold', text='RESULT' , padx=2, bg='LightGray' , command=Mode
+    root, font='arial 10 bold', text='RESULT', padx=2, bg='LightGray', command=Mode
 ).place(x=60, y=150)
 
 # reset button
 Button(
-    root, font='arial 10 bold' , text='RESET' , width=6,command=Reset, bg='LimeGreen', padx=2
+    root, font='anson', text='RESET', width=6, command=Reset, bg='Green', padx=2
 ).place(x=80, y=190)
 
 # exit button
 Button(
-    root, font='arial 10 bold', text='EXIT' , width=6, command=Exit, bg='OrangeRed', padx=2, pady=2
+    root, font='anson', text='EXIT', width=6, command=Exit, bg='Red', padx=2, pady=2
 ).place(x=180, y=190)
 root.mainloop()
