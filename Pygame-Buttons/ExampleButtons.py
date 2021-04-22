@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 17 21:58:00 2021
 
-@author: Lakhan Kumawat
-"""
 import pygame
 import os,sys
 
@@ -20,9 +16,9 @@ class Button(object):
         ]
 
         # fill images with color - red, gree, blue
-        self._images[0].fill((255,0,0))
-        self._images[1].fill((0,255,0))
-        self._images[2].fill((0,0,255))
+        self._images[0].fill((255, 226, 39))
+        self._images[1].fill((235, 89, 110))
+        self._images[2].fill((77, 55, 93))
 
         # get image size and position
         self._rect = pygame.Rect(position, size)
@@ -49,16 +45,16 @@ pygame.init()
 w, h = 800, 800
 screen = pygame.display.set_mode((w, h))
 GREEN = (0, 255, 0)
-GRAY= (150, 155, 150)
+GRAY= (174, 150, 255)
 font = pygame.font.Font('freesansbold.ttf', 22)
 
 # =============================================================================
 # Rendring texts23564
 # =============================================================================
 
-p1 = font.render("A PNG button , Click it ", True,"yellow")
-p2= font.render("A color img buttons", True,"blue")
-p0 = font.render('Go Back', True,"black")
+p1 = font.render("A PNG button , Click it ", True,(233, 248, 103))
+p2= font.render("A color img buttons", True,(254, 32, 107))
+p0 = font.render('Go Back', True,(15, 28, 2))
 textRectp0 = p0.get_rect()
 textRectp1 = p1.get_rect()
 textRectp2 = p2.get_rect()
