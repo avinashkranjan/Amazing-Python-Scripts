@@ -1,8 +1,13 @@
 from selenium import webdriver
 from time import sleep
 import datetime
+from prettytable import PrettyTable
 
 start = datetime.datetime.now()
+
+
+table = PrettyTable()
+column_names = ["Non-Followers"]
 
 
 class InstaBot:
@@ -50,7 +55,10 @@ class InstaBot:
 
         notfollowingback = [
             user for user in following if user not in followers]
-        print(notfollowingback)
+
+        table.add_column(column_names[0], notfollowingback)
+
+        print(table)
 
     def _get_names(self):
         """ names of unfollowers
