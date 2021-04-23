@@ -6,9 +6,7 @@ Download the required packages from the following command in you terminal.(Make 
 
 ` pip3 install -r requirements.txt `
 
-To run this script, you need to have selenium installed and configure webdriver to use chrome browser in your$PATH. You can directly download chrome driver from the link below- https://chromedriver.chromium.org/downloads. Further, if this argument is not specified, it will search path, otherwise you can set the path to chromedriver using
-
-` driver = webdriver.Chrome('/path/to/chromedriver') ` 
+To run this script, you need to have selenium installed and configure webdriver to use chrome browser in your$PATH. You can directly download chrome driver from the link below- https://chromedriver.chromium.org/downloads.  Then, just enter the chrome driver path as asked in the prompt.
 
 ## Running the script:
 After installing all the requirements,run this command in your terminal.
