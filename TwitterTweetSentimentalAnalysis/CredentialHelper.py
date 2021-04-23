@@ -1,10 +1,10 @@
 import os
-from dotenv import load_dotenv
 from pathlib import Path
 
-dotenv_path = Path('./credsVaraibles.env')
-load_dotenv(dotenv_path=dotenv_path)
+from dotenv import load_dotenv
 
+dotenv_path = Path('./credential_variables.env')
+load_dotenv(dotenv_path=dotenv_path)
 
 # candidate for Twitter Api
 candidate_key = os.getenv("candidate_key")
