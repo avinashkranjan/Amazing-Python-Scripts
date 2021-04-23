@@ -1,5 +1,5 @@
 # Instagram Unfollowers Bot
-Install Chrome Driver
+## Install Chrome Driver
 - https://chromedriver.storage.googleapis.com/index.html?path=90.0.4430.24/
 - save it in usr/local/bin
 
