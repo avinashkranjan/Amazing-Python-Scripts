@@ -1,6 +1,6 @@
 ## Twitter Sentimental Analysis Script
 
-This python script can be used to access or manage different features of firebase database by google.
+This python script can be used to scrap twitter for a specific tweets according to there hashTags and then classify these tweets according to there sentiments example the tweet is positive, negative or neutral tweet 
 
 This provides features like :
 
