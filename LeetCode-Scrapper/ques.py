@@ -90,7 +90,7 @@ def to_pdf(problem):
     pdf.write(5, 'Problem_Link: ')
     pdf.write(5,url,url)
     title = title.rstrip()
-    pdf.output(title+".pdf")   
+    pdf.output("./LeetCode-Scrapper/"+title+".pdf")   
     
     
 def main():
