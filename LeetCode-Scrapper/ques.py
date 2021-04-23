@@ -15,7 +15,7 @@ options.add_argument("--headless")
 capa = DesiredCapabilities.CHROME
 capa["pageLoadStrategy"] = "none"
 
-print("Enter Chrome Driver path")
+print("Enter Chrome Driver path: ")
 inp = input()
 driver = webdriver.Chrome(inp)
 #the base url of leetcode problem set page
