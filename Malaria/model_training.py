@@ -52,19 +52,22 @@ data2 = data1[n]
 labels2 = labels1[n]
 
 # Splitting the dataset into the Training set and Test set
-X_train, X_valid, y_train, y_valid = train_test_split(data2, labels2, test_size=0.2, random_state=0)
+X_train, X_valid, y_train,y_valid = train_test_split(data2,
+                                                      labels2, test_size=0.2, random_state=0)
 X_trainF = X_train.astype('float32')
-X_validF = X_valid.astype('float32') 
+X_validF = X_valid.astype('float32')
 y_trainF = to_categorical(y_train)
 y_validF = to_categorical(y_valid)
 
 classifier = Sequential()
 # CNN layers
-classifier.add(Conv2D(32, kernel_size=(3, 3), input_shape=(36, 36, 3), activation='relu'))
+classifier.add(Conv2D(32, kernel_size=(3, 3),
+                      input_shape=(36, 36, 3), activation='relu'))
 classifier.add(MaxPooling2D(pool_size=(2, 2)))
 classifier.add(BatchNormalization(axis=-1))
 classifier.add(Dropout(0.5))   # Dropout prevents overfitting
-classifier.add(Conv2D(32, kernel_size=(3, 3), input_shape=(36, 36, 3), activation='relu'))
+classifier.add(Conv2D(32, kernel_size=(3, 3),
+                      input_shape=(36, 36, 3), activation='relu'))
 classifier.add(MaxPooling2D(pool_size=(2, 2)))
 classifier.add(BatchNormalization(axis=-1))
 classifier.add(Dropout(0.5))
@@ -73,8 +76,11 @@ classifier.add(Dense(units=128, activation='relu'))
 classifier.add(BatchNormalization(axis=-1))
 classifier.add(Dropout(0.5))
 classifier.add(Dense(units=2, activation='softmax'))
-classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-history = classifier.fit(X_trainF, y_trainF, batch_size=120, epochs=15, verbose=1, validation_data=(X_validF, y_validF))
+classifier.compile(optimizer='adam',
+                   loss='categorical_crossentropy', metrics=['accuracy'])
+history = classifier.fit(X_trainF, y_trainF,
+                         batch_size=120, epochs=15,
+                         verbose=1, validation_data=(X_validF, y_validF))
 classifier.summary()
 
 y_pred = classifier.predict(X_validF)
