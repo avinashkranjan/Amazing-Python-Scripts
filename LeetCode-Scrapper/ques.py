@@ -16,8 +16,8 @@ capa = DesiredCapabilities.CHROME
 capa["pageLoadStrategy"] = "none"
 
 print("Enter Chrome Driver path: ")
-inp = input()
-driver = webdriver.Chrome(inp)
+input_driver_path = input()
+driver = webdriver.Chrome(input_driver_path)
 #the base url of leetcode problem set page
 baseurl="https://leetcode.com/problemset/all"
 wait = WebDriverWait(driver, 15)
