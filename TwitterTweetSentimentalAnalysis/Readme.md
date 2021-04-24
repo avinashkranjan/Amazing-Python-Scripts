@@ -19,7 +19,7 @@ You need to create your own Credentials, these credentials are four text strings
 3. Access token
 4. Access secret
 
-### Steps to Create your Credentials :
+## Steps to Create your Credentials :
 
 1. Apply for a Twitter Developer Account  here [Developers site](https://developer.twitter.com/en)
 2. Create an Application a new Application 

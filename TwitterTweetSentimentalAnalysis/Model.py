@@ -1,13 +1,8 @@
-# this is a local Credential Helper
 import tweepy
 from nltk.sentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
 import TwitterTweetSentimentalAnalysis.CredentialHelper as twitterCredential
-
-
-# Tweepy is a lib that can be used to connect to twitter api
-# helps us to make sentimental analysis on the given data on bases of text
 
 
 class model(object):
@@ -33,10 +28,6 @@ class model(object):
         # Demo of getting text from twitter
 
         tweet_live = api.search(text, tweet_mode='extended')
-        # for tweet in tweet_live:
-        #     tweet_is = tweet.text
-        #     for demo added a print statement
-        #     print(tweet_is)
         return tweet_live
 
     def analysis_live_tweet_data(self, text):
@@ -62,11 +53,6 @@ class model(object):
             polarity = TextBlob(tweet.full_text).sentiment.polarity
             subjectivity = TextBlob(tweet.full_text).sentiment.subjectivity
             score = SentimentIntensityAnalyzer().polarity_scores(tweet.full_text)
-            # print("polarity =", polarity)
-            # print('*' * 20)
-            # print("subjectivity =", subjectivity)
-            # print('*' * 20)
-            # print('*' * 30)
 
             if polarity < 0 or subjectivity < 0 and score['neg'] > score['pos']:
                 result.append([tweet.full_text, polarity, subjectivity, score, "negative"])
@@ -76,12 +62,3 @@ class model(object):
                 result.append([tweet.full_text, polarity, subjectivity, score, "neutral"])
 
         return result
-
-
-if __name__ == "__main__":
-    ob = model()
-    text = "black lives matter"
-    ob.get_live_tweets_from_Twitter(text)
-    res = ob.detailed_analysis_tweet_data(text)
-    for i in res:
-        print(i)
