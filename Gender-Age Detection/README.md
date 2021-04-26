@@ -6,7 +6,7 @@ The objective of this project is to identify the gender and approximate age of a
 
 ## PROJECT REQUISITES
 
-To build this project we will use
+To build this project we will use-
 
 - Deep Learning to accurately identify the gender and age of a person from a single image of a face.
 - We will use this [dataset](https://www.kaggle.com/ttungl/adience-benchmark-gender-and-age-classification)
@@ -14,7 +14,7 @@ To build this project we will use
 
 ## PROJECT STRUCTURE
 
-These are the step to build Gender-Age Detection python project-
+These are the steps to build Gender-Age Detection python project-
 
 - Detect faces
 - Classify into Male/Female
