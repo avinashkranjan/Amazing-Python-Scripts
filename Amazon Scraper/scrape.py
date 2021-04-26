@@ -1,20 +1,14 @@
 #libraries used
-
-
 import csv
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 import time
 
-
-
 def scraper():
 
-
-
     #the csv file deceared
-    f=open('amazon.csv','w',newline='')
+    f=open('amazon_report.csv','w',newline='',encoding='utf-8')
     data=csv.writer(f)
     main = []
     headers = (
@@ -25,12 +19,11 @@ def scraper():
     preq=requests.get(url_name,headers)
     soup=BeautifulSoup(preq.content,features="html.parser")
 
-
     #scraping the details
-    product_author_name=[i.text for i in soup.findAll("span",{"class":"a-size-small a-color-base"})]
+    product_author_name=[i.text for i in soup.findAll("a",{"class":"a-size-base a-link-normal"})]
     data.writerow(product_author_name)
     main.append(product_author_name)
-    product_rating=[ratings.text for ratings in soup.findAll("a",{"class":"a-size-small a-link-normal"})]
+    product_rating=[ratings.text for ratings in soup.findAll("span",{"class":"a-size-base"})]
     data.writerow(product_rating)
     main.append(product_rating)
 
