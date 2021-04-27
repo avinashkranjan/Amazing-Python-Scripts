@@ -2,14 +2,11 @@
 
 
 ## Setup instructions
+ pip install turtle||pip install pygame
 
-## Requirements:
+## Description
 
-Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on YouTube.
-
-## Output
-
-![image]()
+This is a simple potrait of Sinchan build using Python Turtle and Geometry and a song is used for which pygame library is used.
 
 
 ## Demo
