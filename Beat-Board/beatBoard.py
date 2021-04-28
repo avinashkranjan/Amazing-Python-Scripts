@@ -191,6 +191,7 @@ def create_layout():
 
 
 main_window = Tk()
+main_window.resizable(False,False)
 main_window.title('Sound Board')
 create_layout()
 main_window.mainloop()
