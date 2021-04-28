@@ -17,9 +17,10 @@ Plyer
 requests
 bs4
 time
+englisttohindi
 
 # Development Status
 
 This script is at present complete. A future version may include a display of data of various states and also compare the new cases to cured cases, give updates on the vaccine distribution, etc.
 
-# Developed by  [Sayantani Saha]  (https://github.com/sayantani11)
+# Developed by  [Sayantani Saha](https://github.com/sayantani11)
