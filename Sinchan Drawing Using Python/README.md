@@ -26,6 +26,7 @@ Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on Y
 |Sinchan Drawing Using Python| [Click Here](https://www.youtube.com/watch?v=3RdlOUVnTzU) | [Arnab Ray](https://github.com/Arnab11917676)| Turtle
 
 ## Output
+![image](https://user-images.githubusercontent.com/59610398/116415470-130a5f00-a857-11eb-8b69-65939d9c1ef0.png)
 
 
 ## Author(s)
