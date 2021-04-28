@@ -4,7 +4,7 @@
 
 ## GST Calculator Functionalities : 🚀
 
-- This is a GST Calculator where the user enters the original price and net price and the script returns the GST percentage
+- This is a GST Calculator where the user enters the original price and net price and the script returns the GST percentage.
 
 ## GST Calculator Instructions: 👨🏻‍💻
 
