@@ -6,7 +6,7 @@ from threading import Thread
 # ============ KICK ==================
 
 def kick_sound():
-    playsound('Sounds/Kick_Muffled.wav')
+    playsound('Beat-Board/Sounds/Kick_Muffled.wav')
 
 
 def play_kick(event):
@@ -19,7 +19,7 @@ def play_kick(event):
 # ============ HI-HAT ==================
 
 def hihat_sound():
-    playsound('Sounds/Hi-Hat-Closed-Hit-A1-www.fesliyanstudios.com.wav')
+    playsound('Beat-Board/Sounds/Hi-Hat-Closed-Hit-A1-www.fesliyanstudios.com.wav')
 
 
 def play_hat(event):
@@ -32,7 +32,7 @@ def play_hat(event):
 # ============ SNARE ==================
 
 def snare_sound():
-    playsound('Sounds/SnareToTape.wav')
+    playsound('Beat-Board/Sounds/SnareToTape.wav')
 
 
 def play_snare(event):
@@ -45,7 +45,7 @@ def play_snare(event):
 # ============ PAD 1 ==================
 
 def pad1_sound():
-    playsound('Sounds/Back_Home_Am_01.wav')
+    playsound('Beat-Board/Sounds/Pad1.wav')
 
 
 def play_pad1(event):
@@ -58,7 +58,7 @@ def play_pad1(event):
 # ============ PAD 2 ==================
 
 def pad2_sound():
-    playsound('Sounds/Back_Home_Fm_01.wav')
+    playsound('Beat-Board/Sounds/Pad2.wav')
 
 
 def play_pad2(event):
@@ -71,7 +71,7 @@ def play_pad2(event):
 # ============ PAD 3 ==================
 
 def pad3_sound():
-    playsound('Sounds/Back_Home_Gm_01.wav')
+    playsound('Beat-Board/Sounds/Pad3.wav')
 
 
 def play_pad3(event):
@@ -84,7 +84,7 @@ def play_pad3(event):
 # ============ PAD 4 ==================
 
 def pad4_sound():
-    playsound('Sounds/Wild_Mushroom_Bm_01.wav')
+    playsound('Beat-Board/Sounds/Pad4.wav')
 
 
 def play_pad4(event):
@@ -97,7 +97,7 @@ def play_pad4(event):
 # ============ PAD 5 ==================
 
 def pad5_sound():
-    playsound('Sounds/Wild_Mushroom_Cm_01.wav')
+    playsound('Beat-Board/Sounds/Pad5.wav')
 
 
 def play_pad5(event):
@@ -109,7 +109,7 @@ def play_pad5(event):
 
 # ============ PAD 6 ==================
 def pad6_sound():
-    playsound('Sounds/Wild_Mushroom_Dm_01.wav')
+    playsound('Beat-Board/Sounds/Pad6.wav')
 
 
 def play_pad6(event):
