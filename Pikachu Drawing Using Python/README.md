@@ -29,7 +29,6 @@ Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on Y
 
 ![20210428_161115](https://user-images.githubusercontent.com/62868878/116391249-89e62e80-a83c-11eb-9be6-fcb7cf052096.gif)
 
-
 ## Author(s)
 
 - Priyadarshan Ghosh (Priyadarshan2000)
