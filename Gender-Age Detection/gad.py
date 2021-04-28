@@ -36,7 +36,7 @@ genderProto="gender_deploy.prototxt"
 genderModel="gender_net.caffemodel"
 
 MODEL_MEAN_VALUES=(78.4263377603, 87.7689143744, 114.895847746)
-ageList=['(0-2)', '(4-6)', '(7-12)', '(12-20)', '(21-32)', '(33-43)', '(44-53)', '(54-100)']
+ageList=['(0-2)', '(3-6)', '(7-12)', '(12-20)', '(21-32)', '(33-43)', '(44-53)', '(54-100)']
 genderList=['Male','Female']
 
 faceNet=cv2.dnn.readNet(faceModel,faceProto)
