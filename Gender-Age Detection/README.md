@@ -21,6 +21,9 @@ These are the steps to build Gender-Age Detection python project-
 - Classify into one of the 8 age ranges
 - Put the results on the image and display it
 
+![detector](https://user-images.githubusercontent.com/52864294/116354231-bdfa2900-a815-11eb-8a18-72060cb7b7af.gif)
+
+
 ## AUTHOR NAME
 
 [ANUSHKA CHITRANSHI](https://github.com/codebuzzer01)
