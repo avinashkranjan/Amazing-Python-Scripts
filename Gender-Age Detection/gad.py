@@ -24,8 +24,6 @@ def highlightFace(net, frame, conf_threshold=0.7):
 
 
 parser=argparse.ArgumentParser()
-
-
 args=parser.parse_args()
 
 faceProto="opencv_face_detector.pbtxt"
