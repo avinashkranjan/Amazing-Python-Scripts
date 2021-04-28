@@ -3,27 +3,68 @@ from playsound import playsound
 from threading import Thread
 
 
+class padSound:
+    def __init__(self, soundLocation):
+        self.soundLocation = soundLocation
+
+    def given_sound(self):
+        playsound(self.soundLocation)
+
+    # def play_sound(event):
+    #     sound = Thread(target=given_sound)
+    #     sound.start()
+
+kickLocation  = 'Beat-Board/Sounds/Kick_Muffled.wav'
+hiHatLocation = 'Beat-Board/Sounds/Hi-Hat-Closed-Hit-A1-www.fesliyanstudios.com.wav'
+snareLocation = 'Beat-Board/Sounds/SnareToTape.wav'
+pad1Location  = 'Beat-Board/Sounds/Pad1.wav'
+pad2Location  = 'Beat-Board/Sounds/Pad2.wav'
+pad3Location  = 'Beat-Board/Sounds/Pad3.wav'
+pad4Location  = 'Beat-Board/Sounds/Pad4.wav'
+pad5Location  = 'Beat-Board/Sounds/Pad5.wav'
+pad6Location  = 'Beat-Board/Sounds/Pad6.wav'
+
+kickDrum  = padSound(kickLocation)
+hiHatDrum = padSound(hiHatLocation)
+snareDrum = padSound(snareLocation)
+
+pad1 = padSound(pad1Location)
+pad2 = padSound(pad2Location)
+pad3 = padSound(pad3Location)
+pad4 = padSound(pad4Location)
+pad5 = padSound(pad5Location)
+pad6 = padSound(pad6Location)
+
+
 # ============ KICK ==================
 
-def kick_sound():
-    playsound('Beat-Board/Sounds/Kick_Muffled.wav')
+# def kick_sound():
+#     playsound('Beat-Board/Sounds/Kick_Muffled.wav')
 
+
+# def play_kick(event):
+#     sound1 = Thread(target=kick_sound)
+#     sound1.start()
 
 def play_kick(event):
-    sound1 = Thread(target=kick_sound)
-    sound1.start()
+    sound = Thread(target=kickDrum.given_sound)
+    sound.start()
 
 
 # ======================================
 
 # ============ HI-HAT ==================
 
-def hihat_sound():
-    playsound('Beat-Board/Sounds/Hi-Hat-Closed-Hit-A1-www.fesliyanstudios.com.wav')
+# def hihat_sound():
+#     playsound('Beat-Board/Sounds/Hi-Hat-Closed-Hit-A1-www.fesliyanstudios.com.wav')
 
+
+# def play_hat(event):
+#     sound2 = Thread(target=hihat_sound)
+#     sound2.start()
 
 def play_hat(event):
-    sound2 = Thread(target=hihat_sound)
+    sound2 = Thread(target=hiHatDrum.given_sound)
     sound2.start()
 
 
@@ -31,12 +72,16 @@ def play_hat(event):
 
 # ============ SNARE ==================
 
-def snare_sound():
-    playsound('Beat-Board/Sounds/SnareToTape.wav')
+# def snare_sound():
+#     playsound('Beat-Board/Sounds/SnareToTape.wav')
 
+
+# def play_snare(event):
+#     sound3 = Thread(target=snare_sound)
+#     sound3.start()
 
 def play_snare(event):
-    sound3 = Thread(target=snare_sound)
+    sound3 = Thread(target=snareDrum.given_sound)
     sound3.start()
 
 
@@ -44,12 +89,16 @@ def play_snare(event):
 
 # ============ PAD 1 ==================
 
-def pad1_sound():
-    playsound('Beat-Board/Sounds/Pad1.wav')
+# def pad1_sound():
+#     playsound('Beat-Board/Sounds/Pad1.wav')
 
+
+# def play_pad1(event):
+#     sound4 = Thread(target=pad1_sound)
+#     sound4.start()
 
 def play_pad1(event):
-    sound4 = Thread(target=pad1_sound)
+    sound4 = Thread(target=pad1.given_sound)
     sound4.start()
 
 
@@ -57,12 +106,16 @@ def play_pad1(event):
 
 # ============ PAD 2 ==================
 
-def pad2_sound():
-    playsound('Beat-Board/Sounds/Pad2.wav')
+# def pad2_sound():
+#     playsound('Beat-Board/Sounds/Pad2.wav')
 
+
+# def play_pad2(event):
+#     sound5 = Thread(target=pad2_sound)
+#     sound5.start()
 
 def play_pad2(event):
-    sound5 = Thread(target=pad2_sound)
+    sound5 = Thread(target=pad2.given_sound)
     sound5.start()
 
 
@@ -70,12 +123,16 @@ def play_pad2(event):
 
 # ============ PAD 3 ==================
 
-def pad3_sound():
-    playsound('Beat-Board/Sounds/Pad3.wav')
+# def pad3_sound():
+#     playsound('Beat-Board/Sounds/Pad3.wav')
 
+
+# def play_pad3(event):
+#     sound6 = Thread(target=pad3_sound)
+#     sound6.start()
 
 def play_pad3(event):
-    sound6 = Thread(target=pad3_sound)
+    sound6 = Thread(target=pad3.given_sound)
     sound6.start()
 
 
@@ -83,37 +140,48 @@ def play_pad3(event):
 
 # ============ PAD 4 ==================
 
-def pad4_sound():
-    playsound('Beat-Board/Sounds/Pad4.wav')
+# def pad4_sound():
+#     playsound('Beat-Board/Sounds/Pad4.wav')
 
+
+# def play_pad4(event):
+#     sound7 = Thread(target=pad4_sound)
+#     sound7.start()
 
 def play_pad4(event):
-    sound7 = Thread(target=pad4_sound)
+    sound7 = Thread(target=pad4.given_sound)
     sound7.start()
-
 
 # =====================================
 
 # ============ PAD 5 ==================
 
-def pad5_sound():
-    playsound('Beat-Board/Sounds/Pad5.wav')
+# def pad5_sound():
+#     playsound('Beat-Board/Sounds/Pad5.wav')
 
+
+# def play_pad5(event):
+#     sound8 = Thread(target=pad5_sound)
+#     sound8.start()
 
 def play_pad5(event):
-    sound8 = Thread(target=pad5_sound)
+    sound8 = Thread(target=pad5.given_sound)
     sound8.start()
 
 
 # =====================================
 
 # ============ PAD 6 ==================
-def pad6_sound():
-    playsound('Beat-Board/Sounds/Pad6.wav')
+# def pad6_sound():
+#     playsound('Beat-Board/Sounds/Pad6.wav')
 
+
+# def play_pad6(event):
+#     sound9 = Thread(target=pad6_sound)
+#     sound9.start()
 
 def play_pad6(event):
-    sound9 = Thread(target=pad6_sound)
+    sound9 = Thread(target=pad6.given_sound)
     sound9.start()
 
 
@@ -131,6 +199,9 @@ def create_layout():
     kick = Button(text="Kick", height=5, width=10)
     frame_a.bind('q', play_kick)
     kick.bind("<Button-1>", play_kick)
+
+    # frame_a.bind('q', kickDrum.play_sound)
+    # kick.bind("<Button-1>", kickDrum.play_sound)
 
     # Hi-hat Button
     hihat = Button(text="Hi-Hat", height=5, width=10)
