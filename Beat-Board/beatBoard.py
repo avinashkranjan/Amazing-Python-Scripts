@@ -16,9 +16,9 @@ class padSound:
 
 
 # All the locations of the sounds
-kickLocation  = 'Sounds/Kick_Muffled.wav'
-hiHatLocation = 'Sounds/Hi-Hat-Closed-Hit-A1-www.fesliyanstudios.com.wav'
-snareLocation = 'Sounds/SnareToTape.wav'
+kickLocation  = 'Sounds/Kick.wav'
+hiHatLocation = 'Sounds/hiHat.wav'
+snareLocation = 'Sounds/snare.wav'
 pad1Location  = 'Sounds/Pad1.wav'
 pad2Location  = 'Sounds/Pad2.wav'
 pad3Location  = 'Sounds/Pad3.wav'

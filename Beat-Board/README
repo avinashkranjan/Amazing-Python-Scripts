@@ -14,6 +14,7 @@ About:
 Modules Used:
 	1. tkinter
 	2. playsound
+		a. To install module run following command: pip install playsound
 	3. Thread from threading
 	
 *******************************************************************
