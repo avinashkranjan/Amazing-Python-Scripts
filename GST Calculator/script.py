@@ -2,6 +2,8 @@ from tkinter import *
 
 # Function for finding GST rate
 def GST_Calc() :
+    
+    gst_percentField.delete(0, END)
 
     org_cost= int(original_priceField.get())
     
