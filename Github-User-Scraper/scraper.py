@@ -3,10 +3,72 @@ from bs4 import BeautifulSoup
 import tkinter as tk
 from tkinter import ttk
 from tkinter import font as tkFont
-import time
+from tkinter import messagebox, simpledialog
+import sqlite3
+from sqlite3 import Error
 
 # Dictionary for date values
 dates = {'Today':'daily','This week':'weekly','This month':'monthly'}
+
+# Function to connect to the SQL Database
+def sql_connection():
+    try:
+        con = sqlite3.connect('./Github-User-Scraper/githubUsers.db')
+        return con
+    except Error:
+        print(Error)
+
+# Function to create table
+def sql_table(con):
+    cursorObj = con.cursor()
+    cursorObj.execute(
+        "CREATE TABLE IF NOT EXISTS users(name text UNIQUE, profile_link text, repo text,repo_link text)")
+    con.commit()
+
+# Call functions to connect to database and create table
+con = sql_connection()
+sql_table(con)
+
+# Function to insert into table
+def sql_insert(con, entities):
+    cursorObj = con.cursor()
+    cursorObj.execute(
+        'INSERT INTO users(name, profile_link, repo,repo_link) VALUES(?, ?, ?, ?)', entities)
+    con.commit()
+
+# Function to fetch data from DB
+def sql_fetch(con):
+    cursorObj = con.cursor()
+    try:
+        cursorObj.execute('SELECT DISTINCT * FROM users')  # SQL search query
+    except Error:
+        print("Database empty... Fetch courses using fetcher script")
+        return
+
+    rows = cursorObj.fetchall()
+    display_text = ""
+
+    # Show messagebox incase of empty DB
+    if len(rows) == 0 :
+        messagebox.showinfo("Alert", "No users scraped yet!")
+        return " "
+
+    first_row = "{:^30}".format("Name") + "{:^40}".format("Profile Link") + "{:^40}".format("Top Repo") + "{:^30}".format("Repo Link") + '\n'
+    display_text += first_row
+
+    # Format rows
+    for row in rows:
+        name = "{:<30}".format(row[0])
+        profile_link = "{:<40}".format(
+            row[1] if len(row[1]) < 30 else row[1][:26]+"...")
+        repo = "{:<30}".format(
+            row[2] if len(row[2]) < 30 else row[2][:26]+"...")
+        repo_link = "{:<40}".format(
+            row[3] if len(row[3]) < 30 else row[3][:26]+"...")
+        display_text += (name + profile_link + repo + repo_link + '\n')
+    
+    return display_text
+    
 
 # Function to generate URL based on choice
 def get_URL():
@@ -27,7 +89,16 @@ def scrape_users():
         profile_link =  'https://github.com{}'.format(user.find('h1', {'class': 'h3 lh-condensed'}).find('a')['href'])
         repo = user.find('h1', {'class': 'h4 lh-condensed'}).text.strip()
         repo_link = 'https://github.com{}'.format(user.find('h1', {'class': 'h4 lh-condensed'}).find('a')['href'])
-        print(repo_link)
+        entities = (name, profile_link, repo, repo_link)
+        sql_insert(con, entities)
+    messagebox.showinfo("Success!", "Users scrapped successfully!")
+
+def show_results():
+    display_text = sql_fetch(con)
+    query_label.config(state=tk.NORMAL)
+    query_label.delete(1.0, "end")
+    query_label.insert(1.0, display_text)
+    query_label.config(state=tk.DISABLED)
 
 # Creating tkinter window
 window = tk.Tk()
@@ -59,9 +130,9 @@ date = ttk.Combobox(
     window, width=20, state='readonly',font="Helvetica 15")
 
 # Button creation
-submit_btn = ttk.Button(window, text="Scrape Users!", style='my.TButton', command=scrape_users)
+scrape_btn = ttk.Button(window, text="Scrape Users!", style='my.TButton', command = scrape_users)
 
-display_btn = ttk.Button(window, text="Display from DB", style='my.TButton')
+display_btn = ttk.Button(window, text="Display from DB", style='my.TButton', command = show_results)
 
 # Adding combobox drop down list
 language['values'] = ('C++', 'HTML', 'Java', 'Javascript', 'PHP', 'Python', 'Ruby', 'C#', 'C', 'Dockerfile', 'JSON', 'Julia', 'Dart'
@@ -75,7 +146,7 @@ language.current(0)
 date.grid(column=3, row=5, padx=10)
 date.current(0)
 
-submit_btn.grid(row=5, column=4, pady=5, padx=15, ipadx=5)
+scrape_btn.grid(row=5, column=4, pady=5, padx=15, ipadx=5)
 display_btn.grid(row=7, column=2, pady=5, padx=15, ipadx=5)
 
 frame = ttk.Frame(window, style='my.TFrame')
