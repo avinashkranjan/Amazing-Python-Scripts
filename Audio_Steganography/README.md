@@ -35,7 +35,7 @@ This is a package to encrypt a given message into a .wav audio file. It can decr
 - The Encryption and Decryption parts each will produce a directory with a name of your choice as well as file inside it containing the encrypted audio file or decrypted text file.
 - An Example of what you might expect :
   - Before
-    ![Before](Images/Before.png)
+    ![Before](Images/Before.jpg)
   - After 
     ![After](Images/After.jpg)
 
