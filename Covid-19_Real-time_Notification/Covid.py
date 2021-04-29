@@ -37,7 +37,6 @@ if __name__ == '__main__':
                 dataList = item.split('\n')
             
                 if dataList[0] in states:
-                    print(dataList)
                     nTitle = 'Cases of Covid-19'
                     nText = f"State: {dataList[0]}: Total: {dataList[1]}\n Active: {dataList[2]}\n Death: {dataList[3]}"
                     notify_user(nTitle, nText)
