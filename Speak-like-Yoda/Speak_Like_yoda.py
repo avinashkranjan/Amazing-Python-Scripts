@@ -15,10 +15,10 @@ def speak_like_yoda(sentence):
     random.shuffle(words) 
     new_sent = ' '.join(words)
     print()
-    print('Your Yodenglish sentence:')
+    print('Your Yodenglish sentence: ')
     print(new_sent.capitalize())
     
 if __name__ == '__main__':
-    print('Your English sentence:')
+    print('Your English sentence: ')
     sentence = str(input())
     speak_like_yoda(sentence)
