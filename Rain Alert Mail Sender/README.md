@@ -4,6 +4,8 @@
 
 <p>Libraries used : requests, smtp, time, datetime</p>
 
+<img src="https://user-images.githubusercontent.com/68013183/116644886-30901380-a992-11eb-8acd-cf0395a433e4.png" width="550">
+
 
 # Author(s)
 Shubhrima Jana
