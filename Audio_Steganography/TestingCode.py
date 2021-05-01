@@ -4,13 +4,10 @@ from Algos.Decrypt import Decrypt
 """
    [NOTE] Here we demostrate an use of the Encrypt and Decrypt algorithms 
    We also play the audio file as well.
-
-   If you want to play around with this code please add the audio file to AudioSamples and secret
-   message to SecretMessage.
 """
 # You can try with Forest.wav as well
-message_path = "AudioSamples\SeaWaves.wav"
-secret_path = "SecretMessage\secret_message.txt"
+message_path = input("Enter path of Audio file")
+secret_path = input("Enter path of Secret message file")
 
 # Using Encrypt
 en = Encrypt(message_path, secret_path)
