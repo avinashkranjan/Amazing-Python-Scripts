@@ -2,15 +2,23 @@ import requests
 from smtplib import SMTP
 
 #turn off certain security criteria in sender mail address
-MY_MAIL= ENTER_YOUR_MAIL
-MY_PASSWORD= ENTER_YOUR_PASSWORD
-RECIEVER_MAIL = RECIEVER_MAIL
-#get latitude longitude from  "https://www.latlong.net/"
-LAT = 22.572645
-LONG = 88.363892
+MY_MAIL= input('Enter your mail id: ')
+MY_PASSWORD= input('Enter password: ')
+RECIEVER_MAIL = input('Send mail to (mail id): ')
+CITY = input('Enter your City: ')
 
-API_KEY = API
+API_KEY = input('Type in API from OpenWeather: ')
 
+API_END_POINT ='https://nominatim.openstreetmap.org/search.php'
+PARAMETER_LOCATION ={
+    'city' : CITY,
+    'format': 'json',
+}
+
+response_location  = requests.get(url = API_END_POINT, params=PARAMETER_LOCATION)
+data_location = response_location .json()
+LAT = data_location [0]['lat']
+LONG = data_location [0]['lon']
 PARAMETER= {
     "lat": LAT,
     "lon": LONG,
@@ -20,7 +28,6 @@ PARAMETER= {
 api = requests.get(url="http://api.openweathermap.org/data/2.5/onecall",params=PARAMETER)
 
 data =  api.json()
-print(data)
 
 bring_umbrella = False
 
@@ -43,6 +50,3 @@ else:
         connection.sendmail(from_addr=MY_MAIL, to_addrs='shubhrijana@gmail.com',
                             msg=f"Subject: Sunny Day\n\nMay be a sunny day. Carry sunglasses. ")
         print('Mail Sent')
-
-
-
