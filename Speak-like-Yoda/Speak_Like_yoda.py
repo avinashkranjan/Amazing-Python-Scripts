@@ -14,8 +14,7 @@ def speak_like_yoda(sentence):
     words = sentence.split()
     random.shuffle(words) 
     new_sent = ' '.join(words)
-    print()
-    print('Your Yodenglish sentence: ')
+    print('\nYour Yodenglish sentence: ')
     print(new_sent.capitalize())
     
 if __name__ == '__main__':
