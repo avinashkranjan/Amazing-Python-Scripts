@@ -16,8 +16,8 @@
 ```
 
 ## Working:
-![Image](https://i.imgur.com/Gd7ACMh.png)
-![Image](https://i.imgur.com/034082k.png)
+![Image](https://i.imgur.com/w2CHYuM.png)
+![Image](https://i.imgur.com/scVnBPX.png)
 
 
 ## Author:
