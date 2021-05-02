@@ -89,13 +89,30 @@ def submit_info():
 	pass_var.set("")
 
 
+def show_call():
+	"""
+	Call-back function for show_button to show the hidden password
+	"""
+	pass_entry = tk.Entry(root, textvariable = pass_var, font = ('Ubuntu',12, 'bold'), show = '', justify='center')
+	pass_entry.place(x=100, y=25)
+
+
+def hide_call():
+	"""
+	Call-back function for hide_button to hide the password
+	"""
+	pass_entry = tk.Entry(root, textvariable = pass_var, font = ('Ubuntu',12, 'bold'), show = '*', justify='center')
+	pass_entry.place(x=100, y=25)
+
+
 def main():
 	"""
 	Generates the main window using tkinter which takes user's password as input
 	"""
+	global root
 	root = tk.Tk()
 	root.title("Pwned or Not?")
-	root.geometry("400x100")
+	root.geometry("400x150")
 
 	global pass_var
 	pass_var=tk.StringVar()
@@ -103,12 +120,17 @@ def main():
 	pass_label = tk.Label(root, text = 'Enter your password:', font = ('Ubuntu',12, 'bold'))
 	pass_entry = tk.Entry(root, textvariable = pass_var, font = ('Ubuntu',12, 'bold'), show = '*', justify='center')
 
-	sub_btn = tk.Button(root,text = 'Submit', command = submit_info)
+	show_button = tk.Button(root, text="Show", command=show_call) 
+	hide_button = tk.Button(root,text="Hide", command=hide_call) 
+	sub_btn = tk.Button(root,text = 'Submit', font = ('Ubuntu',12, 'bold'), command=submit_info)
 
 	pass_label.place(x=100)
 	pass_entry.place(x=100, y=25)
 
-	sub_btn.place(x=165, y=55)
+	show_button.place(x=115, y=55)
+	hide_button.place(x=235, y=55)
+
+	sub_btn.place(x=160, y=100)
 
 	root.mainloop()
 
