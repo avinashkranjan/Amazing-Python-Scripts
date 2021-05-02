@@ -107,7 +107,7 @@ def Main():
 # <----- GUI Code Beginning ----->
 main_window = Tk()
 main_window.title("Base-N Calculator")
-Icon = PhotoImage(file="data/GSSOC.png")
+Icon = PhotoImage(file="./Base-N_Calc/data/GSSOC.png")
 main_window.iconphoto(False, Icon)
 main_window.geometry("420x250")
 
