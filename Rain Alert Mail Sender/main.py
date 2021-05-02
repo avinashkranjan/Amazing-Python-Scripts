@@ -1,6 +1,5 @@
 import requests
 from smtplib import SMTP
-import time
 
 #turn off certain security criteria in sender mail address
 MY_MAIL= input('Enter your mail id: ')
