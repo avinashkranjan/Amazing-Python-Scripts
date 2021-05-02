@@ -6,7 +6,7 @@ from Algos.Decrypt import Decrypt
    We also play the audio file as well.
 """
 # You can try with Forest.wav as well
-message_path = input("Enter path of Audio file")
+message_path = input("Enter path of Audio file: ")
 secret_path = input("Enter path of Secret message file")
 
 # Using Encrypt
