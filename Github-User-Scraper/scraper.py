@@ -117,7 +117,6 @@ def show_results():
 
 def date_helper():
     date_range_type = dates[date.get()]
-    print(date_range_type)
     today = datetime.date.today()
     if date_range_type == 'daily':
         formatted = today.strftime("%d/%m/%Y")
