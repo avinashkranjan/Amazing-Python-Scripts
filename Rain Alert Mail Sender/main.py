@@ -1,7 +1,11 @@
 import requests
 from smtplib import SMTP
 
-#turn off certain security criteria in sender mail address
+def function():
+    """Go to Manage your Google (or any other sender mail) account, and then headover to Security.\nTurn OFF the options 'Two Step Verification' and 'Use your phone to sign in' in the Signing in to Google section.\nTurn ON the Less secure apps section.
+    """
+    return 0
+print(function.__doc__)
 MY_MAIL= input('Enter your mail id: ')
 MY_PASSWORD= input('Enter password: ')
 RECIEVER_MAIL = input('Send mail to (mail id): ')
