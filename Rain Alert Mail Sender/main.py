@@ -5,7 +5,6 @@ from smtplib import SMTP
 MY_MAIL= input('Enter your mail id: ')
 MY_PASSWORD= input('Enter password: ')
 RECIEVER_MAIL = input('Send mail to (mail id): ')
-#get latitude longitude from  "https://www.latlong.net/"
 CITY = input('Enter your City: ')
 
 API_KEY = input('Type in API key from OpenWeather: ')
