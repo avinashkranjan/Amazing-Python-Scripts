@@ -24,4 +24,4 @@ This is a package to encrypt a given message into a .wav audio file. It can decr
 - Dont worry if your decrypted sentence looks a bit funky-it is to be expected.
 
 ## Author(s)
-[Trisanu Bhar] (https://github.com/Trisanu-007)
+[Trisanu Bhar](https://github.com/Trisanu-007)
