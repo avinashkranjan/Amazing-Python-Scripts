@@ -6,6 +6,8 @@ from tkinter import font as tkFont
 from tkinter import messagebox, simpledialog
 import sqlite3
 from sqlite3 import Error
+import time
+import datetime
 
 # Dictionary for date values
 dates = {'Today':'daily','This week':'weekly','This month':'monthly'}
@@ -17,12 +19,13 @@ def sql_connection():
         return con
     except Error:
         print(Error)
+    
 
 # Function to create table
 def sql_table(con):
     cursorObj = con.cursor()
     cursorObj.execute(
-        "CREATE TABLE IF NOT EXISTS users(name text UNIQUE, profile_link text, repo text,repo_link text)")
+        "CREATE TABLE IF NOT EXISTS users(name text, profile_link text, date_range text, repo text, repo_lang text, repo_link text)")
     con.commit()
 
 # Call functions to connect to database and create table
@@ -33,14 +36,14 @@ sql_table(con)
 def sql_insert(con, entities):
     cursorObj = con.cursor()
     cursorObj.execute(
-        'INSERT INTO users(name, profile_link, repo,repo_link) VALUES(?, ?, ?, ?)', entities)
+        'INSERT INTO users(name, profile_link, date_range, repo, repo_lang, repo_link) VALUES(?, ?, ?, ?, ?, ?)', entities)
     con.commit()
 
 # Function to fetch data from DB
 def sql_fetch(con):
     cursorObj = con.cursor()
     try:
-        cursorObj.execute('SELECT DISTINCT * FROM users')  # SQL search query
+        cursorObj.execute('SELECT DISTINCT * FROM users ORDER BY rowid DESC')  # SQL search query
     except Error:
         print("Database empty... Fetch courses using fetcher script")
         return
@@ -53,7 +56,7 @@ def sql_fetch(con):
         messagebox.showinfo("Alert", "No users scraped yet!")
         return " "
 
-    first_row = "{:^30}".format("Name") + "{:^40}".format("Profile Link") + "{:^40}".format("Top Repo") + "{:^30}".format("Repo Link") + '\n'
+    first_row = "{:^30}".format("Name") + "{:^40}".format("Profile Link") +  "{:^30}".format("Date Range") + "{:^30}".format("Top Repo") + "{:^20}".format("Repo Lang") + "{:^30}".format("Repo Link") + '\n'
     display_text += first_row
 
     # Format rows
@@ -61,11 +64,15 @@ def sql_fetch(con):
         name = "{:<30}".format(row[0])
         profile_link = "{:<40}".format(
             row[1] if len(row[1]) < 30 else row[1][:26]+"...")
-        repo = "{:<30}".format(
+        date_range = "{:<30}".format(
             row[2] if len(row[2]) < 30 else row[2][:26]+"...")
-        repo_link = "{:<40}".format(
+        repo = "{:<30}".format(
             row[3] if len(row[3]) < 30 else row[3][:26]+"...")
-        display_text += (name + profile_link + repo + repo_link + '\n')
+        repo_lang = "{:^20}".format(
+            row[4] if len(row[4]) < 30 else row[4][:26]+"...")
+        repo_link = "{:<30}".format(
+            row[5] if len(row[5]) < 30 else row[5][:26]+"...")
+        display_text += (name + profile_link + date_range + repo + repo_lang + repo_link + '\n')
     
     return display_text
     
@@ -78,6 +85,8 @@ def get_URL():
     return url
 
 def scrape_users():
+    url_lang = language.get()
+    date_range = date_helper()
     url = get_URL()
     page = requests.get(url)
 
@@ -85,12 +94,18 @@ def scrape_users():
     soup = BeautifulSoup(page.content, 'html.parser')
     users = soup.find_all('article', {'class': 'Box-row d-flex'})
     for user in users:
+        progress['value'] += 10
+        window.update_idletasks()
         name = user.find('h1', {'class': 'h3 lh-condensed'}).text.strip()
         profile_link =  'https://github.com{}'.format(user.find('h1', {'class': 'h3 lh-condensed'}).find('a')['href'])
         repo = user.find('h1', {'class': 'h4 lh-condensed'}).text.strip()
         repo_link = 'https://github.com{}'.format(user.find('h1', {'class': 'h4 lh-condensed'}).find('a')['href'])
-        entities = (name, profile_link, repo, repo_link)
+        entities = (name, profile_link, date_range, repo, url_lang, repo_link)
         sql_insert(con, entities)
+    
+    #set progress bar back to 0
+    progress['value'] = 0
+    window.update_idletasks()
     messagebox.showinfo("Success!", "Users scrapped successfully!")
 
 def show_results():
@@ -100,10 +115,27 @@ def show_results():
     query_label.insert(1.0, display_text)
     query_label.config(state=tk.DISABLED)
 
+def date_helper():
+    date_range_type = dates[date.get()]
+    print(date_range_type)
+    today = datetime.date.today()
+    if date_range_type == 'daily':
+        formatted = today.strftime("%d/%m/%Y")
+        return formatted
+    elif date_range_type == 'weekly':
+        from_date = ( datetime.date.today() - datetime.timedelta(days = 7))
+        formatted_today = today.strftime("%d/%m/%Y")
+        formatted_from_date = from_date.strftime("%d/%m/%Y")
+        return "{} - {}".format(formatted_from_date,formatted_today)
+    else:
+        month = today.strftime("%B") 
+        return month
+
+
 # Creating tkinter window
 window = tk.Tk()
 window.title('Github Trending User Fetcher')
-window.geometry('1200x1000')
+window.geometry('1400x1000')
 window.configure(bg='white')
 
 style = ttk.Style()
@@ -139,6 +171,10 @@ language['values'] = ('C++', 'HTML', 'Java', 'Javascript', 'PHP', 'Python', 'Rub
                         'Shell','Solidity','YAML')
 
 date['values'] = ('Today','This week','This month')
+
+# Progress bar
+progress = ttk.Progressbar(window, orient="horizontal", length=200, mode="determinate")
+progress.grid(row=5, column=5, pady=5, padx=15, ipadx=5)
 
 language.grid(column=1, row=5, padx=10)
 language.current(0)
