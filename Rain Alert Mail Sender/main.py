@@ -1,17 +1,21 @@
 import requests
 from smtplib import SMTP
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def function():
-    """Go to Manage your Google (or any other sender mail) account, and then headover to Security.\nTurn OFF the options 'Two Step Verification' and 'Use your phone to sign in' in the Signing in to Google section.\nTurn ON the Less secure apps section.
+    """Go to Manage your Google(or any mail) account, and then headover to Security.\nTurn OFF the options 'Two Step Verification' and 'Use your phone to sign in' in the Signing in to Google section.\nTurn ON the Less secure apps section.
     """
     return 0
 print(function.__doc__)
-MY_MAIL= input('Enter your mail id: ')
-MY_PASSWORD= input('Enter password: ')
+MY_MAIL= os.getenv('MAIL')
+MY_PASSWORD= os.getenv('PASSWORD')
 RECIEVER_MAIL = input('Send mail to (mail id): ')
 CITY = input('Enter your City: ')
 
-API_KEY = input('Type in API key from OpenWeather: ')
+API_KEY = os.getenv('API')
 
 API_END_POINT ='https://nominatim.openstreetmap.org/search.php'
 PARAMETER_LOCATION ={
@@ -29,7 +33,6 @@ PARAMETER= {
     "exclude" : "current,minutely,daily",
 }
 api = requests.get(url="http://api.openweathermap.org/data/2.5/onecall",params=PARAMETER)
-
 data =  api.json()
 
 bring_umbrella = False
