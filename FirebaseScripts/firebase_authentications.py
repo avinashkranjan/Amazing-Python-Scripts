@@ -1,8 +1,8 @@
 import pyrebase
 
-from FirebaseScripts import CredentialsHelper
+import FirebaseScripts.CredentialsHelper as credentials
 
-firebase = pyrebase.initialize_app(CredentialsHelper.firebaseConfig)
+firebase = pyrebase.initialize_app(credentials.get_fireBase_credentials())
 
 auth = firebase.auth()
 
@@ -46,3 +46,8 @@ def password_reset(email):
 def get_user_account_info(user):
     info = auth.get_account_info(user["idToken"])
     print(info)
+    return info
+
+
+if __name__ == "__main__":
+    create_user_with_email("email here ", "password here ")

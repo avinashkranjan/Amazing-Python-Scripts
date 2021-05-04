@@ -41,7 +41,16 @@ First of all install [python]("https://www.python.org/downloads/") on your syste
 pip install pyrebase4
 pip install firebase
 ```
+## Steps to Get your Firebase Credentials 
 
+1. Go to [FireBase Console]("https://console.firebase.google.com/") 
+2. Sign in / Login with your Google Account or any other Account you prefer
+3. after that in your window the option to create a new Project will be there go and create a new project 
+4. after that fill in the basic details like project name, etc 
+5. after that just go and click on add an App icon on the screen 
+6. in that select web app as the option 
+7. after that you will see some credentials that have been allocated by the Firebase Cloud service 
+8. just copy-paste them accordingly in credentials.env and Do
 
 ## Learn more 
 

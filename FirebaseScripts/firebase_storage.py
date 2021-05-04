@@ -1,8 +1,8 @@
 import pyrebase
 
-from FirebaseScripts import CredentialsHelper
+import FirebaseScripts.CredentialsHelper as credentials
 
-firebase = pyrebase.initialize_app(CredentialsHelper.firebaseConfig)
+firebase = pyrebase.initialize_app(credentials.get_fireBase_credentials())
 
 storage = firebase.storage()
 
@@ -23,3 +23,7 @@ def download_file(firebase_path, file_name):
     response = storage.child(firebase_path).download(path="./", filename=file_name)
     print(response)
     return response
+
+
+if __name__ == "__main__":
+    download_file("enter your path here ", "enter your file name here ")

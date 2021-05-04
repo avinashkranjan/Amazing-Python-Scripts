@@ -1,8 +1,8 @@
 import pyrebase
 
-from FirebaseScripts import CredentialsHelper
+import FirebaseScripts.CredentialsHelper as credentials
 
-firebase = pyrebase.initialize_app(CredentialsHelper.firebaseConfig)
+firebase = pyrebase.initialize_app(credentials.get_fireBase_credentials())
 
 database = firebase.database()
 
@@ -49,3 +49,7 @@ def print_all_data():
     for i in retrieve_data().each():
         print(i.key())
         print(i.val())
+
+
+if __name__ == "__main__":
+    print_all_data()
