@@ -7,10 +7,10 @@ from Algos.Decrypt import Decrypt
 """
 # You can try with Forest.wav as well
 message_path = input("Enter path of Audio file: ")
-secret_path = input("Enter path of Secret message file")
+secret = input("Enter secret message: ")
 
 # Using Encrypt
-en = Encrypt(message_path, secret_path)
+en = Encrypt(message_path, secret)
 en.play_audio()
 res, status = en.encrypt_using_lsb("Encrypted", "encrypted.wav")
 
@@ -20,7 +20,7 @@ if status:
 # Using Decrypt
 dec = Decrypt("Encrypted\encrypted.wav")
 dec.play_audio()
-res, status = dec.decrypt_audio("Decrypted", "decrypted.txt")
+res, status = dec.decrypt_audio("Decrypted", "decrypted.txt", False)
 
 if status:
     print(res)

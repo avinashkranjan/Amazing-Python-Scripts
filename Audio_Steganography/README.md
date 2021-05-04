@@ -13,8 +13,8 @@ This is a package to encrypt a given message into a .wav audio file. It can decr
 - The TestingCode.py file has an example implementation. Please refer to it if you face any issue.
 
 ## Output
-- The code in TestingCode.py will produce 2 Directories as well as produce sound that is inside the ```AudiSamples``` folders. The folder also has one more example audio file for you to try out.
-- The Encryption and Decryption parts each will produce a directory with a name of your choice as well as file inside it containing the encrypted audio file or decrypted text file.
+- The code in TestingCode.py will produce 2 Directories as well as produce sound that is inside the .wav files that you have passed as a parameter to ```Encrypt```. 
+- The Encryption and Decryption parts each will produce a directory with a name of your choice as well as file inside it containing the encrypted audio file or decrypted text file .
 - An Example of what you might expect :
   - Before
     ![Before](Images/Before.jpg)

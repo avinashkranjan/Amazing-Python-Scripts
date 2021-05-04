@@ -14,20 +14,19 @@ from scipy.io import wavfile
 
 class Encrypt:
 
-    def __init__(self, message_audio_file_path: str, secret_message_file_path: str):
+    def __init__(self, message_audio_file_path: str, secret_message: str):
         self.message_audio_file_path = message_audio_file_path
-        self.secret_message_file_path = secret_message_file_path
+        self.secret_message = secret_message
 
         # For getting name of the file
         self.message_filename = message_audio_file_path.split(os.sep)[-1]
-        self.secret_filename = secret_message_file_path.split(os.sep)[-1]
 
         # Reading the .wav audio file as a Wave obj - to be used later
         self.message_audio = wave.open(message_audio_file_path)
 
         # Getting the numpy array from the secret string.
         self.secret_as_nparr = self.get_bin_npapp_from_path(
-            secret_message_file_path)
+            secret_message)
 
         self.mess_as_nparr = None
 
@@ -35,10 +34,10 @@ class Encrypt:
       This function is used as a helper function
     """
 
-    def get_bin_npapp_from_path(self, secret_path: str) -> np.ndarray:
-        ftr = open(secret_path)
+    def get_bin_npapp_from_path(self, secret: str) -> np.ndarray:
+
         strings = ' '.join('{0:08b}'.format(ord(word), 'b')
-                           for word in ftr.read())
+                           for word in secret)
         lst = []
         for word in strings.split(" "):
             # arr = np.fromstring(word, dtype="u1")-ord('0')
@@ -47,7 +46,7 @@ class Encrypt:
 
         return np.array(lst)
 
-    """ 
+    """
       This function is there for playing audio.
     """
 

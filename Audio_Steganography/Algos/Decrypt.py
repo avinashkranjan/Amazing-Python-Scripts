@@ -38,14 +38,15 @@ class Decrypt:
       The decryption is done here.
     """
 
-    def decrypt_audio(self, output_dir: str, file_name: str) -> (str, bool):
-        curr_dir_path = os.getcwd()
-        output_dir_path = os.path.join(curr_dir_path, output_dir)
+    def decrypt_audio(self, output_dir: str, file_name: str, gen_file_status: bool) -> (str, bool):
+        if gen_file_status:
+            curr_dir_path = os.getcwd()
+            output_dir_path = os.path.join(curr_dir_path, output_dir)
 
-        try:
-            os.mkdir(output_dir_path)
-        except:
-            pass
+            try:
+                os.mkdir(output_dir_path)
+            except:
+                pass
 
         print(f"This might take some while if your secret message is big and might contain some rubbish data.")
 
@@ -79,13 +80,16 @@ class Decrypt:
         bin_arr = in_bin.to_bytes(byte_num, "big")
         result = bin_arr.decode("utf-8", "ignore")
 
-        # Writing to output file
-        try:
-            with open(os.path.join(output_dir_path, file_name), "w", encoding="utf-8") as f:
-                f.write(result)
-            print("Success !!!")
+        # Writing to output file if status was given true
+        if gen_file_status:
+            try:
+                with open(os.path.join(output_dir_path, file_name), "w", encoding="utf-8") as f:
+                    f.write(result)
+                print("Success !!!")
+                return result, True
+            except:
+                print(("Error !!!"))
+                pass
+                return None, False
+        else:
             return result, True
-        except:
-            print(("Error !!!"))
-            pass
-            return None, False
