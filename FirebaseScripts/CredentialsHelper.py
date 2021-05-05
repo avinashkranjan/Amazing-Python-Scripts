@@ -30,8 +30,9 @@ def get_fireBase_credentials():
         messagingSenderId = os.getenv('messagingSenderId')
         appId = os.getenv('appId')
         measurementId = os.getenv('measurementId')
-
-        if apiKey is None or authDomain is None or databaseURL is None or projectId is None or storageBucket is None or messagingSenderId is None or appId is None or measurementId is None:
+        credentials = [apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, appId,
+                       measurementId]
+        if any(not(credential) for credential in credentials):
             raise ValueError("Value cannot be None ")
         else:
             firebaseConfig["apiKey"] = apiKey
@@ -43,10 +44,10 @@ def get_fireBase_credentials():
             firebaseConfig["appId"] = appId
             firebaseConfig["measurementId"] = measurementId
 
-        print(firebaseConfig)
-
     except:
         print("error while getting the Keys ")
         raise
 
     return firebaseConfig
+
+get_fireBase_credentials()
