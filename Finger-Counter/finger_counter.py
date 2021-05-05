@@ -7,7 +7,7 @@ class fingerCounter():
     def __init__(self):
         self.wCam = 640
         self.hCam = 480
-        self.folderPath = "FingerImages"
+        self.folderPath = "./Finger-Counter/FingerImages"
         self.previousTime = 0
         #self.currentTime = time.time()
         # 4 for thumb, 8 for index, 12 for middle, 16 for ring, 20 for pinky finger
