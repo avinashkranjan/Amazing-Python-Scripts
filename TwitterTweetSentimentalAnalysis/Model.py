@@ -1,26 +1,23 @@
-import tweepy
 from nltk.sentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
-import TwitterTweetSentimentalAnalysis.CredentialHelper as twitterCredential
+import tweepy
 
 
 class model(object):
 
-    def __init__(self):
+    def __init__(self, candidate_key, candidate_sec, access_key, access_sec):
         super().__init__()
+        self.candidate_key = candidate_key
+        self.candidate_sec = candidate_sec
+        self.access_key = access_key
+        self.access_sec = access_sec
 
-    @staticmethod
-    def get_authenticated_api():
-        auth = tweepy.OAuthHandler(twitterCredential.candidate_key, twitterCredential.candidate_sec)
-        auth.set_access_token(twitterCredential.access_key, twitterCredential.access_sec)
+    def get_authenticated_api(self):
+        auth = tweepy.OAuthHandler(self.candidate_key, self.candidate_sec)
+        auth.set_access_token(self.access_key, self.access_sec)
         api = tweepy.API(auth)
         return api
-
-    def get_user_name(self):
-        api = self.get_authenticated_api()
-        user = api.me()
-        return user.name
 
     def get_live_tweets_from_Twitter(self, text):
         api = self.get_authenticated_api()
@@ -40,7 +37,6 @@ class model(object):
         for tweet in tweet_live:
             tweet_is = tweet.text
             analysis = TextBlob(tweet_is)
-            # print(analysis.sentiment)
 
     def detailed_analysis_tweet_data(self, text):
         # if polarity is in negative then the tweet is negative

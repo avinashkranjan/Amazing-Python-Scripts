@@ -10,14 +10,6 @@ This provides features like :
 4. SentimentIntensityAnalyzer on the tweet
 5. based on these scores it differentiate them in different categories like Positive , Negative and more.
 
-## Credentials [Important] : 
-
-You need to create your own Credentials, these credentials are four text strings:
-
-1. Consumer key
-2. Consumer secret
-3. Access token
-4. Access secret
 
 ## Steps to Create your Credentials :
 
