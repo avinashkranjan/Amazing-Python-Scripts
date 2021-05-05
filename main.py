@@ -2,6 +2,7 @@ import sys
 from os import chdir
 from os.path import abspath, join
 from json import load
+from subprocess import run
 
 # Used join() method here to build paths for different OS
 PATH_TO_DATASTORE = join("Master Script","datastore.json")
@@ -36,6 +37,17 @@ def print_menu(script_ob, level):
     # Base case
     return script_ob[keys[choice-1]]
 
+def install_requirements(path):
+    """Installs the necessary packages for a particular script"""
+    version = sys.version.split(' ')[0][0]
+    interpretor = "pip3" if version == "3" else "pip"
+    try:
+        print("Installing necessary packages\n")
+        res = run(f"{interpretor} install -r {path}", shell=True)
+    except Exception as e:
+        print(f"Erro: There was a problem in installing the packages from {abspath(join('.', path))} file")
+        print(f"Error: {str(e)}")
+        sys.exit(1)
 
 def main():
     """Loads the script data, and runs the selected script"""
@@ -61,6 +73,11 @@ def main():
     else:
         sys.path.append(abspath(script_arr[INDEX["PATH"]]))
         chdir(script_arr[INDEX["PATH"]])
+
+        # Install packages form requirements.txt if any
+        if script_arr[INDEX["REQUIREMENTS"]] != "none":
+            install_requirements(split(script_arr[INDEX["REQUIREMENTS"]])[-1])
+            print("\nPackages installed!!\n")
 
         with open(script_arr[INDEX["SCRIPT"]], 'r') as file:
             exec(file.read(), globals(), globals())
