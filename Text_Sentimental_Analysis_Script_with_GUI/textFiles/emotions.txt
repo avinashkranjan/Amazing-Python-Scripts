@@ -3,6 +3,7 @@
  'acquitted': 'singled out',
  'adorable': 'loved',
  'adored': 'loved',
+ 'love':'attracted',
  'affected': 'attracted',
  'afflicted': 'sad',
  'aghast': 'fearful',
@@ -514,4 +515,5 @@
  'underestimated': 'belittled',
  'unhappy': 'sad',
  'vindicated': 'singled out',
- 'worked up': 'angry'
+ 'worked up': 'angry',
+ 'suicide':'sad'

@@ -1,14 +1,14 @@
-import textSentimentalAnalysisWebApp.Model
-
 from tkinter import *
 from tkinter import messagebox
+from Text_Sentimental_Analysis_Script_with_GUI import Model
 
 
 def search():
     word = enterWordEntry.get()
 
     text = word.strip()
-    model_object = textSentimentalAnalysisWebApp.Model.model()
+    messagebox.showinfo("Input", " Input = "+text)
+    model_object = Model.model()
 
     if word != "" and word != " " and word is not None:
         sentiment = model_object.get_sentimental_analysis(text)
@@ -27,7 +27,7 @@ root.title("Text Sentimental Analysis")
 
 root.resizable(False, False)
 
-image = PhotoImage(file="images/background.png")
+image = PhotoImage(file="./Text_Sentimental_Analysis_Script_with_GUI/images/background.png")
 image_label = Label(root, image=image)
 image_label.place(x=0, y=0)
 
@@ -39,7 +39,7 @@ enterWordEntry.place(x=100, y=70)
 
 enterWordEntry.focus_set()
 
-searchImage = PhotoImage(file='images/search.png')
+searchImage = PhotoImage(file='./Text_Sentimental_Analysis_Script_with_GUI/images/search.png')
 searchButton = Button(root, image=searchImage, bd=0, bg='whitesmoke', activebackground='whitesmoke', cursor='hand2',
                       command=search)
 searchButton.place(x=450, y=50)

@@ -34,7 +34,7 @@ class model(object):
                       "again",
                       "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both",
                       "each",
-                      "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so",
+                      "few", "more", "most", "other", "some", "such", "no", "nor", "only", "own", "same", "so",
                       "than",
                       "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
 
@@ -45,7 +45,7 @@ class model(object):
                 final_words.append(word)
 
         emotion_list = []
-        with open('textFiles/emotions.txt', 'r') as file:
+        with open('./Text_Sentimental_Analysis_Script_with_GUI/textFiles/emotions.txt', 'r') as file:
             for line in file:
                 clear_line = line.replace("\n", '').replace(",", '').replace("'", '').strip()
                 word, emotion = clear_line.split(':')
@@ -53,5 +53,9 @@ class model(object):
                 if word in final_words:
                     emotion_list.append(emotion)
 
-        final_emotion = max(Counter(emotion_list), key=Counter(emotion_list).get)
+        if emotion_list is None or len(emotion_list) == 0:
+            final_emotion = "Sorry the entered text was not enough for making a Sentiment Analysis please try again "
+        else:
+            final_emotion = "Your Sentimental Analysis says that your emotion is" + max(Counter(emotion_list),
+                                                                                        key=Counter(emotion_list).get)
         return final_emotion
