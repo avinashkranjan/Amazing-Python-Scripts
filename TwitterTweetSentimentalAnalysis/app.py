@@ -18,8 +18,9 @@ class app(object):
             model_object = Model.model(candidate_key, candidate_sec, access_key, access_sec)
             print(model_object.get_authenticated_api())
             text = input(" Enter the tag you want to perform sentimental analysis on :  ")
-            model_object.detailed_analysis_tweet_data(text)
-
+            result = model_object.detailed_analysis_tweet_data(text)
+            for i in result:
+                print(i)
 
 if __name__ == "__main__":
     object = app()
