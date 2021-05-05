@@ -22,6 +22,7 @@ class app(object):
             for i in result:
                 print(i)
 
+
 if __name__ == "__main__":
     object = app()
     object.run_app()
