@@ -26,7 +26,7 @@ class fingerCounter():
         print(len(self.overlayList))
 
     def process(self, tipIds, overlayList):
-        cap = cv2.VideoCapture(1)
+        cap = cv2.VideoCapture(0)
         cap.set(3, self.wCam)
         cap.set(4, self.hCam)
         detector = htm.handDetector(detectionCon=0.75)
@@ -66,6 +66,7 @@ class fingerCounter():
             cv2.putText(img, f'FPS: {int(fps)}', (400,70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
             cv2.imshow("Image", img)
+            
             if cv2.waitKey(1) == ord('q') : 
                 break
                 
