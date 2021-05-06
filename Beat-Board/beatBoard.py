@@ -16,15 +16,15 @@ class padSound:
 
 
 # All the locations of the sounds
-kickLocation  = 'Sounds/Kick.wav'
-hiHatLocation = 'Sounds/hiHat.wav'
-snareLocation = 'Sounds/snare.wav'
-pad1Location  = 'Sounds/Pad1.wav'
-pad2Location  = 'Sounds/Pad2.wav'
-pad3Location  = 'Sounds/Pad3.wav'
-pad4Location  = 'Sounds/Pad4.wav'
-pad5Location  = 'Sounds/Pad5.wav'
-pad6Location  = 'Sounds/Pad6.wav'
+kickLocation  = './Beat-Board/Sounds/Kick.wav'
+hiHatLocation = './Beat-Board/Sounds/hiHat.wav'
+snareLocation = './Beat-Board/Sounds/snare.wav'
+pad1Location  = './Beat-Board/Sounds/Pad1.wav'
+pad2Location  = './Beat-Board/Sounds/Pad2.wav'
+pad3Location  = './Beat-Board/Sounds/Pad3.wav'
+pad4Location  = './Beat-Board/Sounds/Pad4.wav'
+pad5Location  = './Beat-Board/Sounds/Pad5.wav'
+pad6Location  = './Beat-Board/Sounds/Pad6.wav'
 
 # Create drum objects
 kickDrum  = padSound(kickLocation)
