@@ -1,5 +1,5 @@
 # QR-code-based-Excel-Attendace
-* Freelancing Project
+
 
 ## How to generate QR code?
 
@@ -48,3 +48,6 @@ To decode the excel sheet , just download the file and save it with `.xls` exten
 That's it you got your required file.
 
 ![decoded](./Reference/decoded.jpg)
+
+
+>> Hope you like it :)
