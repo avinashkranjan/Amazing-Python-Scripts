@@ -1,12 +1,15 @@
 import sys
 from os import chdir
-from os.path import abspath, join
+from os.path import abspath, join, split
 from json import load
 from subprocess import run
 
 # Used join() method here to build paths for different OS
 PATH_TO_DATASTORE = join("Master Script","datastore.json")
-INDEX = {"PATH" : 0, "SCRIPT" : 1, "ARGUMENT" : 2, "CONTRIBUTOR": 4, "DESCRIPTION" : 5}
+INDEX = {"PATH" : 0, "SCRIPT" : 1, "ARGUMENT" : 2, "REQUIREMENTS":3, "CONTRIBUTOR": 4, "DESCRIPTION" : 5}
+
+version = sys.version.split(' ')[0][0]
+interpretor = "3" if version == "3" else ""
 
 def print_menu(script_ob, level):
     """Prints a menu based on the available choices present in the script_ob dict object"""
@@ -39,11 +42,9 @@ def print_menu(script_ob, level):
 
 def install_requirements(path):
     """Installs the necessary packages for a particular script"""
-    version = sys.version.split(' ')[0][0]
-    interpretor = "pip3" if version == "3" else "pip"
     try:
         print("Installing necessary packages\n")
-        res = run(f"{interpretor} install -r {path}", shell=True)
+        res = run(f"pip{interpretor} install -r {path}", shell=True)
     except Exception as e:
         print(f"Erro: There was a problem in installing the packages from {abspath(join('.', path))} file")
         print(f"Error: {str(e)}")
@@ -54,6 +55,7 @@ def main():
 
     # Load data from "datastore.json" file
     SCRIPTS = None
+    ARGUMENTS = []
     with open(PATH_TO_DATASTORE, "r") as f:
         SCRIPTS = load(f)
 
@@ -79,8 +81,19 @@ def main():
             install_requirements(split(script_arr[INDEX["REQUIREMENTS"]])[-1])
             print("\nPackages installed!!\n")
 
-        with open(script_arr[INDEX["SCRIPT"]], 'r') as file:
-            exec(file.read(), globals(), globals())
+        script_name = script_arr[INDEX["SCRIPT"]]
+
+        if script_name == "manage.py":
+            ARGUMENTS.append("runserver")
+
+        output = run(f"python{interpretor} {script_name} {' '.join(ARGUMENTS)}", shell=True, capture_output=True)
+        if output.returncode != 0:
+            error = output.stderr.decode("utf-8")
+            print(f"There occurred an error while processing your request:\n\n{error}")
+            if "No module named" in error:
+                print("One or more modules are missing. Make sure the following:\n"
+                "1. There exists a requirements.txt file in your project.\n"
+                "2. All the necessary external modules are listed in the requirements.txt file.")
 
 
 if __name__ == '__main__':
