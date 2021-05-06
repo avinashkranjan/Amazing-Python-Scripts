@@ -4,6 +4,7 @@ import smtplib
 import time
 headers = {'User-Agent': 'Mozilla/5.0 Chrome/86.0.4240.75'}
 
+
 def sendMail(title):
     '''Send Email'''
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -37,9 +38,8 @@ def priceCheck():
     # If the price falls below threshold, send an email
     if(price < THRESHHOLD):
         sendMail(title)
-        
-        
-        
+
+
 PRODUCT_URL = input('Enter the product url:')
 THRESHHOLD = float(input('Enter the desired price:'))
 MY_EMAIL = input('Enter the email address that will be used to send alerts:')

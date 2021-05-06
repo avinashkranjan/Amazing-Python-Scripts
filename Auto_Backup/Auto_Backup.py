@@ -53,7 +53,6 @@ def size_if_newer(source, target):
     Returns: The Size difference
 
     """
-
     src_stat = os.stat(source)
     try:
         target_ts = os.stat(target).st_mtime
@@ -110,7 +109,6 @@ def transfer_file(source, target, compress):
         target: Target for ZIP file
         compress: The compression threshold
     """
-
     try:
         if compress:
             with gzip.open(target + '.gz', 'wb') as target_fid:

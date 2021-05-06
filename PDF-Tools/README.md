@@ -5,6 +5,7 @@
 - Add watermark
 - Rotate clockwise and counterclocwise
 - Encrypt PDFs
+- Reorder PDF pages
 
 ## Why is this tool required?
 

@@ -1,27 +1,37 @@
-import pandas as pd                                                     # Pandas library is used for importing and reading the data
-import datetime                                                         # datetime module is used for fetching the dates
+# Pandas library is used for importing and reading the data
+import pandas as pd
+# datetime module is used for fetching the dates
+import datetime
 import smtplib															# smtp library used for sending mail
 import os
 
 current_path = os.getcwd()
 print(current_path)
-os.chdir(current_path)                                                  # Changing the Path of the directory in which you are currently working
+# Changing the Path of the directory in which you are currently working
+os.chdir(current_path)
 
-GMAIL_ID = input("Enter your email: ")                                  # Give your mail here from which you want to send the wishes
-GMAIL_PSWD = input("Enter password for your email mentioned above: ")   # Give your mail password
+# Give your mail here from which you want to send the wishes
+GMAIL_ID = input("Enter your email: ")
+# Give your mail password
+GMAIL_PSWD = input("Enter password for your email mentioned above: ")
 
 
 def sendEmail(to, sub, msg):
     print(f"Email to {to} sent: \nSubject: {sub} ,\nMessage: {msg}")
-    s = smtplib.SMTP('smtp.gmail.com', 587)                             # creating server to send mail
-    s.starttls()                                                        # start a TLS session
-    s.login(GMAIL_ID, GMAIL_PSWD)                                       # the function will login with your Gmail credentials
-    s.sendmail(GMAIL_ID, to, f"Subject: {sub} \n\n {msg}")              # sending the mail
+    # creating server to send mail
+    s = smtplib.SMTP('smtp.gmail.com', 587)
+    # start a TLS session
+    s.starttls()
+    # the function will login with your Gmail credentials
+    s.login(GMAIL_ID, GMAIL_PSWD)
+    # sending the mail
+    s.sendmail(GMAIL_ID, to, f"Subject: {sub} \n\n {msg}")
     s.quit()
 
 
 if __name__ == "__main__":
-    df = pd.read_excel("data.xlsx")                                     # the datasheet where the data of the friends is stored
+    # the datasheet where the data of the friends is stored
+    df = pd.read_excel("data.xlsx")
     today = datetime.datetime.now().strftime("%d-%m")
     yearNow = datetime.datetime.now().strftime("%Y")
 
@@ -31,7 +41,8 @@ if __name__ == "__main__":
         bday = datetime.datetime.strptime(bday, "%d-%m-%Y")
         bday = bday.strftime("%d-%m")
         if(today == bday) and yearNow not in str(item['LastWishedYear']):
-            sendEmail(item['Email'], "Happy Birthday", item['Dialogue'])    # calling the sendmail function
+            # calling the sendmail function
+            sendEmail(item['Email'], "Happy Birthday", item['Dialogue'])
             writeInd.append(index)
 
     if writeInd != None:

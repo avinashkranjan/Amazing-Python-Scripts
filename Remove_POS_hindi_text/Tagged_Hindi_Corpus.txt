@@ -1,0 +1,857 @@
+कश्मीर|कश्मीर.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o तत्कालीन|तत्कालीन.|JJ.adj.any.any..any गवर्नर|गवर्नर.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... इस|इस.|DEM.pn.any.sg.3.o हस्तांतरण|हस्तांतरण.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d विरोध|विरोध.0|NN.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. ,|,.|SYM.punc.... लेकिन|लेकिन.|CC.avy.... अंग्रेजों|अंग्रेज.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d सहायता|सहायता.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. उनकी|उनकी.|PRP.unk.... आवाज|आवाज.0|NN.n.f.sg.3.d दबा|दबा.0|VM.v.any.any.any. दी|दे.या|VAUX.v.f.sg.any. गयी|गयी.|VAUX.unk.... .|..|SYM.punc....
+
+
+कृपया|कृपया.|RB.adv.... यह|यह.0|PRP.pn.any.sg.3.d सुनिश्चित|सुनिश्चित.0|JJ.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. लें|ले.एं|VAUX.v.any.pl.1. कि|कि.|CC.avy.... आप|आप.0|PRP.pn.any.any.any.o सही|सही.|JJ.adv.... फॉर्म|फॉर्म.|NN.unk.... का|का.का|PSP.psp.m.sg..d प्रयोग|प्रयोग.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. रहें|रह.एं|VAUX.v.any.pl.1. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+पहले|पहले.|NST.adv.... दो|दो.0|QC.n.m.sg.3.d को|को.|PSP.psp.... अविश्वसनीय|अविश्वसनीय.|JJ.adj.any.any..any मानकर|मान.कर|VM.v.any.any.any. बाकी|बाकी.|JJ.adj.f.any..any पांच|पांच.|QC.unk.... मुखबिरों|मुखबिर.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o आधार|आधार.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... मुकदमा|मुकदमा.0|NN.n.m.sg.3.d चलाया|चला.या|VM.v.m.sg.any. गया|गया.|VAUX.unk.... .|..|SYM.punc....
+
+
+हाल|हाल.0|NN.n.m.sg.3.d में|में.|PSP.psp.... नेपाल|नेपाल.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o हस्पताल|हस्पताल.|NN.unk.... सामन्यतया|सामन्यतया.|RB.unk.... आयुर्वेद|आयुर्वेद.|NN.unk.... ,|,.|SYM.punc.... प्राकृतिक|प्राकृतिक.|JJ.adj.any.any..any चिकित्सा|चिकित्सा.0|NN.n.f.sg.3.d तथा|तथा.|CC.adv.... आधुनिक|आधुनिक.|JJ.adj.any.any..any चिकीत्सा|चिकीत्सा.|NN.unk.... करके|कर.कर|VM.v.any.any.any. सरकारी|सरकारी.0|JJ.n.f.sg.3.d सेवा|सेवा.0|NN.n.f.sg.3.d विद्यमान|विद्यमान.0|JJ.n.m.sg.3.d हे|हे.|VM.avy.... ।|।.|SYM.punc....
+
+रजिस्टर|रजिस्टर.0|NN.n.m.sg.3.d न्यायालय|न्यायालय.0|NN.n.m.sg.3.d जिन्हें|जो.को|PRP.pn.any.pl.3.o न्यायाधीश|न्यायाधीश.0|NN.n.m.sg.3.d द्वारा|द्वारा.|PSP.psp.... प्राधिकृत|प्राधिकृत.|JJ.adj.any.any..any किए|कर.या|VM.v.m.pl.any. जाने|जान.एं|VAUX.v.any.sg.2. पर|पर.|PSP.psp.... 200|200.|QC.num.... रु|रु.0|NN.n.m.sg.3.d .|..|SYM.punc.... तक|तक.|RP.avy.... के|का.का|PSP.psp.m.sg..o वादों|वादा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d निर्णय|निर्णय.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d अधिकार|अधिकार.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+एक|एक.|QC.adj.any.any..any ही|ही.|RP.adv.... जीन|जीन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o उत्परिवर्तन|उत्परिवर्तन.|NN.unk.... के|का.का|PSP.psp.m.sg..o कारण|कारण.0|NN.n.m.sg.3.d होने|हो.ना|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d आनुवंशिक|आनुवंशिक.|JJ.adj.any.any..any रोग|रोग.0|NN.n.m.sg.3.d इन|इन.|DEM.pn.any.pl.3.o सभी|सभी.0|QF.n.m.sg.3.d रोगों|रोग.0|NN.n.m.pl.3.o से|से.|PSP.v.any.any.any. अधिक|अधिक.|QF.adv.... महत्वपूर्ण|महत्वपूर्ण.|JJ.adj.any.any..any हैं|है.है|VM.v.any.pl.1. .|..|SYM.punc.... मेंडेल|मेंडेल.|NNP.unk.... के|का.का|PSP.psp.m.sg..o सरल|सरल.0|JJ.n.m.sg.3.d वितरण|वितरण.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o नियम|नियम.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o अनुसार|अनुसार.|PSP:?.psp.... यह|यह.0|DEM.pn.any.sg.3.d जीन|जीन.0|NN.n.m.sg.3.d संतानों|संतान.0|NN.n.m.pl.3.o में|में.|PSP.psp.... प्रकट|प्रकट.0|JJ.n.m.sg.3.d होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+नरेंद्र|नरेंद्र.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... कौंसिल|कौंसिल.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. तीन|तीन.0|QC.n.m.sg.3.d या|या.|CC.avy.... चार|चार.|QC.adj.any.any..any मुलाकातें|मुलाकात.0|NN.n.f.pl.3.d की|कर.या|VM.v.f.sg.any. किंतु|किंतु.|CC.adv.... उन्होनें|उन्होनें.|PRP.unk.... महसूस|महसूस.0|JJ.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. कि|कि.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d किसी|किसी.|PRP.unk.... भी|भी.|RP.adv.... प्रकार|प्रकार.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बात|बात.0|NN.n.f.sg.3.d आगे|आगा.0|NST.n.m.pl.3.d नही|नही.|NEG.unk.... बढ़ा|बढ़ा.|XC.punc.... पा|पा.0|VAUX.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+कुछ|कुछ.|QF.adj.any.any..d मामलों|मामला.0|NN.n.m.pl.3.o में|में.|PSP.psp.... प्रथम|प्रथम.|QO.adj.any.any..any स्तर|स्तर.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o न्यायालय|न्यायालय.0|NN.n.m.sg.3.d होने|हो.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o कारण|कारण.0|NN.n.m.sg.3.d उच्च|उच्च.|JJ.adj.any.any..any न्यायालयों|न्यायालय.0|NN.n.m.pl.3.o को|को.|PSP.psp.... उच्चतम|उच्चतम.0|JJ.n.m.sg.3.d न्यायालय|न्यायालय.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अपेक्षा|अपेक्षा.0|PSP:?.n.f.sg.3.d मामलों|मामला.0|NN.n.m.pl.3.o पर|पर.|PSP.psp.... अधिक|अधिक.|QF.adv.... कारगर|कारगर.|JJ.adj.any.any..any ढंग|ढंग.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. कार्रवाई|कार्रवाई.|NN.unk.... करने|कर.|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d अधिकारिता|अधिकारिता.|NN.unk.... है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+अधिनियम|अधिनियम.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o अधीन|अधीन.|JJ.adj.any.any..any एक|एक.|QC.adj.any.any..any से|से.|PSP.v.any.any.any. अधिक|अधिक.|QF.adv.... दावा|दावा.0|NN.n.m.sg.3.d अधिकरण|अधिकरण.0|NN.n.m.sg.3.d स्थापित|स्थापित.0|JJ.n.m.sg.3.d किए|कर.या|VM.v.m.pl.any. जा|जा.0|VAUX.v.any.any.any. सकते|सक.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... उनकी|उनकी.|PRP.unk.... अधिकारिता|अधिकारिता.|NN.unk.... को|को.|PSP.psp.... अधिकरणों|अधिकरणों.|NN.unk.... के|का.का|PSP.psp.m.sg..o गठन|गठन.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अधिसूचना|अधिसूचना.0|NN.n.f.sg.3.d में|में.|PSP.psp.... विनिर्दिष्ट|विनिर्दिष्ट.0|JJ.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+इसमें|इसमें.|PRP.pn.any.sg.3.o कानूनी|कानूनी.|JJ.adj.f.any..any रोक|रोक.0|XC.n.f.sg.3.d (|(.|SYM.punc.... इंजक्शन|इंजक्शन.|XC.unk.... )|).|SYM.punc.... शामिल|शामिल.|JJ.adj.any.any..any है|है.है|VM.v.any.sg.2. जो|जो.|PRP.avy.... बहुत|बहुत.|QF.adj.any.any..any ही|ही.|RP.adv.... प्रभावकारी|प्रभावकारी.|JJ.unk.... रोक|रोक.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d उपाय|उपाय.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. जो|जो.|PRP.avy.... पैदा|पैदा.0|JJ.n.m.sg.3.d हुए|हो.या|VM.v.m.pl.any. उपद्रव|उपद्रव.0|NN.n.m.sg.3.d को|को.|PSP.psp.... कम|कम.|QF.adj.any.any..any कर|कर.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... इस|इस.|PRP.pn.any.sg.3.o बीच|बीच.|NST.psp.... लोगों|लोग.0|NN.n.m.pl.3.o को|को.|PSP.psp.... अपने|अपना.0|PRP.n.m.pl.3.d घरों|घर.0|NN.n.m.pl.3.o में|में.|PSP.psp.... रहने|रह.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d अनुमति|अनुमति.0|NN.n.f.sg.3.d भी|भी.|RP.adv.... होती|हो.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+सन्|सन्.0|XC.n.m.sg.3.d 1860|1860.|QC.num.... और|और.|CC.adv.... 1908|1908.|QC.num.... के|का.का|PSP.psp.m.sg..o बीच|बीच.|NST.psp.... के|का.का|PSP.psp.m.sg..o 20|20.|QC.num.... वर्ष|वर्ष.0|NN.n.m.sg.3.d अकाल|अकाल.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o वर्ष|वर्ष.0|NN.n.m.sg.3.d रहे|रह.एं|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+जयेंद्र|जयेंद्र.|XC.unk.... सरस्वती|सरस्वती.0|NNP.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. अध्यात्म|अध्यात्म.0|NN.n.m.sg.3.d कभी|कभी.|PRP.adv.... कोई|कोई.0|PRP.pn.any.sg.3.d स्थिर|स्थिर.0|JJ.n.m.sg.3.d चीज|चीज.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... रही|रह.या|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+जिसे|जो.को|PRP.pn.any.sg.3.o हम|हम.|PRP.unk.... प्रवृत्ति|प्रवृत्ति.0|NN.n.f.sg.3.d कहते|कह.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... जिसे|जो.को|PRP.pn.any.sg.3.o हम|हम.|PRP.unk.... अपने|अपना.0|PRP.n.m.pl.3.d दैनंदिन|दैनंदिन.|NN.unk.... जीवन|जीवन.0|NN.n.m.sg.3.d में|में.|PSP.psp.... बहुत|बहुत.|QF.adj.any.any..any तुच्छ|तुच्छ.|NN.adj.any.any..any समझ|समझ.0|VM.v.any.any.any. कर|कर.0|VAUX.v.any.any.any. नकार|नकार.0|NN.v.any.any.any. दिया|दे.या|VM.v.m.sg.any. करते|कर.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. -|-.|SYM.punc.... यही|यही.|DEM.avy.... वह|वह.0|PRP.pn.any.sg.3.d चीज|चीज.0|NN.n.f.sg.3.d है|है.है|VM.v.any.sg.2. जो|जो.|PRP.avy.... हमें|हमें.|PRP.unk.... सदगुणों|सदगुणों.|NN.unk.... या|या.|CC.avy.... दुर्गुणों|दुर्गुण.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o अरण्य|अरण्य.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बाहर|बाहर.|NST.psp.... निकालने|निकाल.ना|VM.v.m.pl.any. में|में.|PSP.psp.... सहायक|सहायक.0|JJ.n.m.sg.3.d बनकर|बन.कर|VM.v.any.any.any. हमारी|हमारी.|PRP.unk.... नियति|नियति.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d असीम|असीम.|JJ.adj.any.any..any संभावनाओं|संभावना.0|NN.n.f.pl.3.o तक|तक.|RP.avy.... और|और.|CC.adv.... हमारी|हमारी.|PRP.unk.... चेतना|चेतना.0|NN.n.f.sg.3.d एवं|एवं.|CC.avy.... उल्लास|उल्लास.0|NN.n.m.sg.3.d तथा|तथा.|CC.adv.... अनुताप|अनुताप.0|NN.n.m.sg.3.d तक|तक.|RP.avy.... ले|ले.0|VM.v.any.any.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+फ्रांस|फ्रांस.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... बेलजियम|बेलजियम.|NNP.unk.... ,|,.|SYM.punc.... जर्मनी|जर्मनी.|NNP.unk.... ,|,.|SYM.punc.... संयुक्त|संयुक्त.|XC.adj.any.any..any राज्य|राज्य.0|XC.n.m.sg.3.d अमेरिका|अमेरिका.0|NNP.n.m.sg.3.d ,|,.|SYM.punc.... रूस|रूस.0|NN.v.any.any.any. और|और.|CC.adv.... बाद|बाद.|NST.adv.... में|में.|PSP.psp.... जापान|जापान.0|NNP.n.m.sg.3.d ने|ने.|PSP.psp.... अपने|अपना.0|PRP.n.m.pl.3.d यहां|यहाँ.|PRP.adv.... शक्तिशाली|शक्तिशाली.|JJ.adj.f.any..any उद्योगों|उद्योगों.|NN.unk.... का|का.का|PSP.psp.m.sg..d विकास|विकास.0|NN.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. और|और.|CC.adv.... अपने|अपना.0|PRP.n.m.pl.3.d माल|माल.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d खपत|खपत.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. विदेशी|विदेशी.|JJ.adj.any.any..any बाजार|बाजार.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d खोज|खोज.0|NN.n.f.sg.3.d शुरू|शुरू.|NN.avy.... की|का.का|PSP.psp.f.sg..d .|..|SYM.punc....
+
+पर|पर.|PSP.psp.... अगर|अगर.|CC.adv.... आप|आप.0|PRP.pn.any.any.any.o व्यापारी|व्यापारी.0|NN.n.m.sg.3.d को|को.|PSP.psp.... अधिक|अधिक.|QF.adv.... समय|समय.0|NN.n.m.sg.3.d देना|दे.ना|VM.v.m.sg.any. स्वीकार|स्वीकार.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. ,|,.|SYM.punc.... तो|तो.|CC.avy.... आप|आप.0|PRP.pn.any.any.any.o इस|इस.|DEM.pn.any.sg.3.o समय|समय.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o बीत|बीत.0|VM.v.any.any.any. जाने|जान.एं|VAUX.v.any.sg.2. के|का.का|PSP.psp.m.sg..o पहले|पहले.|NST.adv.... अपना|अपना.0|PRP.n.m.sg.3.d आर्डर|आर्डर.0|NN.n.m.sg.3.d रद्द|रद्द.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... कर|कर.0|VM.v.any.any.any. सकते|सक.ता|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+वे|वह.0|PRP.pn.any.pl.3.d बहुधा|बहुधा.0|QF.n.m.sg.3.d उनसे|उनसे.|PRP.unk.... मिलने|मिल.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d तीव्र|तीव्र.|JJ.adv.... इच्छा|इच्छा.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... भी|भी.|RP.adv.... हमें|हमें.|PRP.unk.... बताया|बता.या|VM.v.m.sg.any. करते|कर.ता|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+इस|इस.|DEM.pn.any.sg.3.o सकारात्मक|सकारात्मक.|JJ.adj.any.any..any अर्थबोध|अर्थबोध.|NN.unk.... में|में.|PSP.psp.... स्वतंत्रता|स्वतन्त्रता.0|NN.n.f.sg..d का|का.का|PSP.psp.m.sg..d अर्थ|अर्थ.0|NN.n.m.sg.3.d होगा|हो.गा|VM.v.m.sg.2. किसी|किसी.|PRP.unk.... व्यक्ति|व्यक्ति.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अपनी|अपनी.0|PRP.n.f.sg.3.d इच्छा|इच्छा.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o अनुसार|अनुसार.|PSP:?.psp.... कार्य|कार्य.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d स्वतंत्रता|स्वतन्त्रता.0|NN.n.f.sg..d .|..|SYM.punc....
+
+
+
+जहाँ|जहाँ.|PRP.adv.... भी|भी.|RP.adv.... स्कूलों|स्कूल.0|NN.n.m.pl.3.o में|में.|PSP.psp.... बगैर|बगैर.0|PSP:?.n.m.sg.3.d छुट्टी|छुट्टी.0|NN.n.f.sg.3.d लिए|ले.या|PSP.v.m.pl.any. हुए|हो.या|VM.v.m.pl.any. विद्यार्थियों|विद्यार्थी.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d अनुपस्थिती|अनुपस्थिती.|NN.unk.... जैसी|जैसी.|PSP.adj.f.any..any समस्याएँ|समस्या.0|NN.n.f.pl.3.d कम|कम.|QF.adj.any.any..any तेजी|तेजी.0|RB.n.f.sg.3.d से|से.|PSP.v.any.any.any. सुधरी|सुधर.या|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. ,|,.|SYM.punc.... वहाँ|वहाँ.|PRP.adv.... सरकार|सरकार.0|NN.n.f.sg.3.d अधिक|अधिक.|QF.adv.... कार्य|कार्य.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. रही|रह.या|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. &pipe;|&pipe;.|SYM.punc.... भाष्|भाष्.|XC.unk.... ;|;.|SYM.punc....
+
+किंतु|किंतु.|CC.adv.... इसी|इसी.|PRP.pn.any.sg.3.o बीच|बीच.|NST.psp.... दूसरे|दूसरा.0|PRP.n.m.pl.3.d प्रदेशों|प्रदेश.0|NN.n.m.pl.3.o से|से.|PSP.v.any.any.any. विशेष|विशेष.0|JJ.n.m.sg.3.d रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. दक्षिण|दक्षिण.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बड़ी|बड़ी.|XC.punc.... संख्या|संख्या.0|NN.n.f.sg.3.d में|में.|PSP.psp.... लोग|लोग.0|NN.n.m.sg.3.d इन|इन.|DEM.pn.any.pl.3.o द्वीपों|द्वीप.0|NN.n.m.pl.3.o में|में.|PSP.psp.... आ|आ.|VM.v.any.any.any. गये|गये.|VAUX.unk.... ,|,.|SYM.punc.... उनमें|उनमें.|PRP.unk.... कुछ|कुछ.|QF.adj.any.any..d अन्य|अन्य.|JJ.adj.any.any..any लोग|लोग.0|NN.n.m.sg.3.d विभिन्न|विभिन्न.0|JJ.n.m.sg.3.d परियोजनाओं|परियोजना.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o आधार|आधार.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... यहां|यहाँ.|PRP.adv.... बसाये|बसा.एं|VM.v.any.sg.2. गए|गए.|VAUX.unk.... .|..|SYM.punc....
+
+
+
+
+
+शायद|शायद.|RB.adv.... कुछ|कुछ.|QF.adj.any.any..d ऐसी|ऐसी.|DEM.adj.f.any..any समस्याएँ|समस्या.0|NN.n.f.pl.3.d हों|ह.0|VM.n.m.pl.3.o ,|,.|SYM.punc.... जिनके|जो.का|PRP.pn.m.pl.3.d बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... आप|आप.0|PRP.pn.any.any.any.o न|न.|NEG.adv.... जानते|जान.ता|VM.v.m.pl.any. हों|ह.0|VAUX.n.m.pl.3.o .|..|SYM.punc....
+
+
+
+
+
+
+
+
+
+
+
+मसलन|मसलन.|XC.adv.... ,|,.|SYM.punc.... कोका|कोका.|XC.unk.... कोल|कोल.0|XC.n.m.sg.3.d कंपनी|कंपनी.0|NNP.n.f.sg.3.d अब|अब.|PRP.adv.... सार्वजनिक|सार्वजनिक.|JJ.adj.any.any..any निर्गम|निर्गम.|NN.unk.... लने|लने.|VM.unk.... से|से.|PSP.v.any.any.any. छूट|छूट.0|VM.v.any.any.any. चाहती|चाह.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+शरद|शरद.0|XC.n.m.sg.3.d जोशी|जोशी.0|NN.n.f.sg.3.d और|और.|CC.adv.... बिपिन|बिपिन.|XC.unk.... देसाई|देसाई.|NNP.unk.... सरीखे|सरीखे.|JJ.unk.... दिग्गज|दिग्गज.|NN.unk.... नेताओं|नेता.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d अगुआई|अगुआई.0|NN.n.f.sg.3.d में|में.|PSP.psp.... किसानों|किसान.0|NN.n.m.pl.3.o ने|ने.|PSP.psp.... सरकार|सरकार.0|NN.n.f.sg.3.d को|को.|PSP.psp.... धमकी|धमकी.0|NN.n.f.sg.3.d दी|दे.या|VM.v.f.sg.any. कि|कि.|CC.avy.... अगर|अगर.|CC.adv.... उसने|उसने.|PRP.unk.... फसल|फसल.0|NN.n.f.sg.3.d नष्ट|नष्ट.0|JJ.n.m.sg.3.d की|कर.या|VM.v.f.sg.any. तो|तो.|CC.avy.... गंभीर|गंभीर.|JJ.adj.any.any..any नतीजे|नतीजा.0|NN.n.m.pl.3.d भुगतने|भुगत.ना|VM.v.m.pl.any. होंगे|हो.गा|VAUX.v.m.pl.1. .|..|SYM.punc....
+
+
+
+
+
+नियमों|नियम.0|NN.n.m.pl.3.o में|में.|PSP.psp.... यह|यह.0|PRP.pn.any.sg.3.d स्पष्ट|स्पष्ट.0|JJ.n.m.sg.3.d उल्लेख|उल्लेख.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. कि|कि.|CC.avy.... राजा|राजा.0|NN.n.m.sg.3.d को|को.|PSP.psp.... बड़ी|बड़ी.|JJ.punc.... सावधानी|सावधानी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o साथ|साथ.|NST.adv.... वादों|वादा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d विचारण|विचारण.0|NN.n.m.sg.3.d करना|कर.ना|VM.v.m.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. और|और.|CC.adv.... न्यायाधीशों|न्यायाधीश.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d राय|राय.0|NN.n.f.sg.3.d मानते|मान.ता|VM.v.m.pl.any. हुए|हो.या|VAUX.v.m.pl.any. विधि|विधि.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o अनुसार|अनुसार.|PSP:?.psp.... निर्णय|निर्णय.0|NN.n.m.sg.3.d देना|दे.ना|VM.v.m.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. .|..|SYM.punc....
+
+गुरु|गुरु.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... जैसे|जैसे.|PRP.adv.... ही|ही.|RP.adv.... एक|एक.|QC.adj.any.any..any कंगन|कंगन.0|NN.n.m.sg.3.d उठाया|उठा.या|VM.v.m.sg.any. ,|,.|SYM.punc.... वह|वह.0|PRP.pn.any.sg.3.d उनके|उनके.|PRP.unk.... हाथ|हाथ.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. फिसलकर|फिसल.कर|VM.v.any.any.any. नीचे|नीचा.0|NST.n.m.pl.3.d नदी|नदी.0|NN.n.f.sg.3.d में|में.|PSP.psp.... गिर|गिर.0|VM.v.any.any.any. पड़ा|पड़ा.|XC.v.m.sg.any. .|..|SYM.punc....
+
+सचाई|सचाई.0|NN.n.f.sg.3.d इसी|इसी.|PRP.pn.any.sg.3.o अति|अति.|INTF.adv.... उदासीनता|उदासीनता.0|NN.n.f.sg.3.d और|और.|CC.adv.... अतिशय|अतिशय.|JJ.adv.... प्रतिक्रिया|प्रतिक्रिया.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बीच|बीच.|NST.psp.... कहीं|कहीं.|PRP.adv.... छिपी|छिप.या|VM.v.f.sg.any. ही|ही.|RP.adv.... है|है.है|VM.v.any.sg.2. और|और.|CC.adv.... उसी|उसी.|PRP.unk.... के|का.का|PSP.psp.m.sg..o ऊपर|ऊपर.|NST.adv.... बंगाल|बंगाल.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o निर्दोष|निर्दोष.0|JJ.n.m.sg.3.d नागरिकों|नागरिक.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d भविष्य|भविष्य.0|NN.n.m.sg.3.d अटका|अटका.0|VM.v.any.any.any. हा|हा.|VAUX.avy.... है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+बकरी|बकरी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o दूध|दूध.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d विशेष|विशेष.0|JJ.n.m.sg.3.d गन्ध|गंध.0|NN.n.m.sg..d के|का.का|PSP.psp.m.sg..o कारण|कारण.0|NN.n.m.sg.3.d अनेक|अनेक.|QF.adj.any.any..d लोगों|लोग.0|NN.n.m.pl.3.o में|में.|PSP.psp.... इसके|इसके.|PRP.pn.m.pl.3.d प्रति|प्रति.|PSP.adv.... अरुचि|अरुचि.0|NN.n.f.sg.3.d होती|हो.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+काफी|काफी.0|QF.n.f.sg.3.d हद|हद.0|NN.n.f.sg.3.d तक|तक.|RP.avy.... उसे|उसे.|PRP.unk.... निष्पक्षता|निष्पक्षता.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d वही|वही.0|DEM.n.f.sg.3.d भूमिका|भूमिका.0|NN.n.f.sg.3.d निभानी|निभा.ना|VM.v.f.sg.any. होती|हो.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. जो|जो.|PRP.avy.... अध्यक्ष|अध्यक्ष.0|NN.n.m.sg.3.d निभाता|निभा.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+इन|इन.|DEM.pn.any.pl.3.o कारीगरों|कारीगर.0|NN.n.m.pl.3.o को|को.|PSP.psp.... अपने|अपना.0|PRP.n.m.pl.3.d काम|काम.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिये|ले.या|PSP.v.m.pl.any. नकद|नकद.0|JJ.n.m.sg.3.d भुगतान|भुगतान.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... होता|हो.ता|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc.... वरन्|वरन्.|CC.avy.... फसल|फसल.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... परंपरागत|परंपरागत.|JJ.adj.any.any..any तरीके|तरीका.0|NN.n.m.pl.3.d से|से.|PSP.v.any.any.any. उत्पादन|उत्पादन.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d एक|एक.|QC.adj.any.any..any निश्चित|निश्चित.0|JJ.n.m.sg.3.d हिस्सा|हिस्सा.0|NN.n.m.sg.3.d मिलता|मिल.ता|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+इस|इस.|DEM.pn.any.sg.3.o संबंध|संबंध.0|NN.n.m.sg.3.d में|में.|PSP.psp.... जब|जब.|PRP.adv.... लार्ड|लार्ड.0|XC.n.m.sg.3.d कर्जन|कर्जन.|NNP.unk.... से|से.|PSP.v.any.any.any. सलाह|सलाह.0|NN.n.f.sg.3.d ली|ले.या|VM.v.f.sg.any. गई|गई.|VAUX.unk.... तो|तो.|CC.avy.... उन्होंने|उन्होंने.|PRP.unk.... बताया|बता.या|VM.v.m.sg.any. कि|कि.|CC.avy.... भारत|भारत.0|NNP.n.m.sg.3.d में|में.|PSP.psp.... ऐसे|ऐसे.|DEM.adv.... कई|कई.|QF.adj.any.any..d लोग|लोग.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. जो|जो.|PRP.avy.... रवीन्द्रनाथ|रवीन्द्रनाथ.|NN.unk.... से|से.|PSP.v.any.any.any. कहीं|कहीं.|PRP.adv.... अधिक|अधिक.|QF.adv.... महत्वपूर्ण|महत्वपूर्ण.|JJ.adj.any.any..any हैं|है.है|VM.v.any.pl.1. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+इस|इस.|DEM.pn.any.sg.3.o अदालत|अदालत.0|NN.n.f.sg.3.d को|को.|PSP.psp.... अधिकार|अधिकार.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. कि|कि.|CC.avy.... वह|वह.0|PRP.pn.any.sg.3.d माता|माता.0|XC.n.f.sg.3.d -|-.|SYM.punc.... पिता|पिता.0|NN.n.m.sg.3.d या|या.|CC.avy.... बच्चे|बच्चा.0|NN.n.m.pl.3.d पर|पर.|PSP.psp.... जुर्माना|जुर्माना.0|VM.n.m.sg.3.d कर|कर.0|VAUX.v.any.any.any. सकती|सक.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. अथवा|अथवा.|CC.avy.... जेल|जेल.0|NN.n.f.sg.3.d में|में.|PSP.psp.... भेजने|भेज.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o विकल्प|विकल्प.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o रूप|रूप.0|NN.n.m.sg.3.d में|में.|PSP.psp.... अपराधी|अपराधी.0|NN.n.m.sg.3.d को|को.|PSP.psp.... अनेक|अनेक.|QF.adj.any.any..d प्रकार|प्रकार.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d संस्थाओं|संस्था.0|NN.n.f.pl.3.o में|में.|PSP.psp.... भेज|भेज.0|VM.v.any.any.any. सकती|सक.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. ।|।.|SYM.punc....
+
+नियमित|नियमित.0|JJ.n.m.sg.3.d शारीरिक|शारीरिक.|JJ.adj.any.any..any कसरतों|कसरत.0|NN.n.f.pl.3.o से|से.|PSP.v.any.any.any. वजन|वजन.0|NN.n.m.sg.3.d नियंत्रण|नियंत्रण.0|NN.n.m.sg.3.d में|में.|PSP.psp.... रहता|रह.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. तथा|तथा.|CC.adv.... रक्त|रक्त.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d संचरण|संचरण.0|NN.n.m.sg.3.d एवं|एवं.|CC.avy.... हृदय|हृदय.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d संचालन|संचालन.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... सुचारु|सुचारु.0|JJ.n.m.sg.3.d रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+ऐसा|ऐसा.|PRP.adj.m.sg..d प्रतीत|प्रतीत.0|JJ.n.m.sg.3.d होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... इन|इन.|DEM.pn.any.pl.3.o घटनाओं|घटना.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o शिकार|शिकार.0|NN.n.m.sg.3.d होने|हो.ना|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d युवा|युवा.|JJ.adj.m.sg..d उत्तेजक|उत्तेजक.|JJ.adj.any.any..any पदार्थों|पदार्थ.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o प्रभावों|प्रभाव.0|NN.n.m.pl.3.o को|को.|PSP.psp.... ज्यादा|ज्यादा.|QF.adj.m.sg..d ग्रहण|ग्रहण.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d रहे|रह.एं|VM.v.any.sg.2. होंगे|हो.गा|VAUX.v.m.pl.1. लेकिन|लेकिन.|CC.avy.... क्यों|क्यों.|WQ.adv.... यह|यह.0|PRP.pn.any.sg.3.d अभी|अभी.|PRP.adv.... तक|तक.|RP.avy.... अस्पष्ट|अस्पष्ट.|JJ.adj.any.any..any है|है.है|VM.v.any.sg.2. ।|।.|SYM.punc....
+
+इन|इन.|DEM.pn.any.pl.3.o व्यक्तियों|व्यक्ति.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d नियुक्ति|नियुक्ति.0|NN.n.f.sg.3.d केंद्र|केंद्र.0|XC.n.m.sg.3.d सरकार|सरकार.0|NNP.n.f.sg.3.d द्वारा|द्वारा.|PSP.psp.... की|कर.या|VM.v.f.sg.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... ये|यह.0|PRP.pn.any.pl.3.d अपने|अपना.0|PRP.n.m.pl.3.d नियुक्ति|नियुक्ति.0|NN.n.f.sg.3.d आदेश|आदेश.0|NN.n.m.sg.3.d में|में.|PSP.psp.... उल्लिखित|उल्लिखित.|JJ.adj.any.any..any अवधि|अवधि.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. पद|पद.0|NN.n.m.sg.3.d धारण|धारण.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. ,|,.|SYM.punc.... पर|पर.|PSP.psp.... यह|यह.0|DEM.pn.any.sg.3.d अवधि|अवधि.0|NN.n.f.sg.3.d पांच|पांच.|QC.unk.... वर्ष|वर्ष.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. अधिक|अधिक.|QF.adv.... नहीं|नहीं.|NEG.adv.... हो|हो.0|VM.v.any.any.any. सकती|सक.ता|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+अपने|अपना.0|PRP.n.m.pl.3.d बच्चे|बच्चा.0|NN.n.m.pl.3.d को|को.|PSP.psp.... अच्छि|अच्छि.|JJ.unk.... तरह|तरह.|NN.adv.... से|से.|PSP.v.any.any.any. पढ़ने|पढ़ने.|NNP.punc.... देने|दे.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. तस्वीरों|तस्वीर.0|NN.n.f.pl.3.o को|को.|PSP.psp.... न|न.|NEG.adv.... ढकें|ढक.एं|VM.v.any.pl.1. ।|।.|SYM.punc....
+
+कुछ|कुछ.|QF.adj.any.any..d ऋण|ऋण.0|NN.n.m.sg.3.d केवल|केवल.|RP.adv.... आपके|आप.का|PRP.pn.m.pl.any.d घर|घर.0|NN.n.m.sg.3.d को|को.|PSP.psp.... सिक्योरिटी|सिक्योरिटी.|NN.unk.... मानकर|मान.कर|VM.v.any.any.any. दिए|दे.या|VAUX.v.m.pl.any. जाते|जा.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. ।|।.|SYM.punc....
+
+
+और|और.|CC.adv.... अंत|अंत.0|NN.n.m.sg.3.d में|में.|PSP.psp.... ,|,.|SYM.punc.... ऊर्जा|ऊर्जा.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o वैकल्पिक|वैकल्पिक.0|JJ.n.m.sg.3.d स्रोतों|स्रोत.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d वास्तविक|वास्तविक.|JJ.adv.... सामाजिक|सामाजिक.|JJ.adj.any.any..any लागत|लागत.0|NN.n.f.sg.3.d को|को.|PSP.psp.... दर्शाते|दर्शाते.|VM.unk.... तर्कसंगत|तर्कसंगत.|JJ.adj.any.any..any ऊर्जा|ऊर्जा.0|XC.n.f.sg.3.d ,|,.|SYM.punc.... मूल्यों|मूल्य.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o निर्धारण|निर्धारण.|NN.unk.... की|का.का|PSP.psp.f.sg..d केवल|केवल.|RP.adv.... बातें|बात.0|NN.n.f.pl.3.d ही|ही.|RP.adv.... होती|हो.ता|VM.v.f.sg.any. रही|रह.या|VAUX.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. काम|काम.0|NN.n.m.sg.3.d कुछ|कुछ.|QF.adj.any.any..d नहीं|नहीं.|NEG.adv.... हुआ|हो.या|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+ऐसे|ऐसे.|DEM.adv.... डीलर|डीलर.|NN.unk.... से|से.|PSP.v.any.any.any. सावधान|सावधान.|NN.adj.any.any..any रहिए|रह.एं|VM.v.any.sg.2h. जो|जो.|PRP.avy.... किसी|किसी.|PRP.unk.... कार|कार.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o इतिहास|इतिहास.0|NN.n.m.sg.3.d को|को.|PSP.psp.... गुप्त|गुप्त.|JJ.adj.any.any..any रखने|रख.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d कोशिश|कोशिश.0|NN.n.f.sg.3.d करता|कर.ता|VM.v.m.sg.any. हुआ|हो.या|VAUX.v.m.sg.any. आए|आ.एं|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+इन्हें|इन्हें.|PRP.pn.any.pl.3.o अपर|अपर.|PRP.adj.any.any..any सत्र|सत्र.0|NN.n.m.sg.3.d न्यायाधीश|न्यायाधीश.0|JJ.n.m.sg.3.d अथवा|अथवा.|CC.avy.... सहायक|सहायक.0|JJ.n.m.sg.3.d सत्र|सत्र.0|NN.n.m.sg.3.d न्यायाधीश|न्यायाधीश.0|NN.n.m.sg.3.d कहा|कह.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. ;|;.|SYM.punc.... ये|यह.0|DEM.pn.any.pl.3.d सब|सब.|QF.adj.any.any..any उसी|उसी.|DEM.unk.... न्यायालय|न्यायालय.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o न्यायाधीश|न्यायाधीश.0|NN.n.m.sg.3.d होते|हो.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+अस्तबल|अस्तबल.0|NN.n.m.sg.3.d इस|इस.|DEM.pn.any.sg.3.o तरीके|तरीका.0|NN.n.m.pl.3.d से|से.|PSP.v.any.any.any. बनाये|बना.एं|VM.v.any.sg.2. जाने|जान.एं|VAUX.v.any.sg.2. चाहिएं|चाहिएं.|VAUX.unk.... कि|कि.|CC.avy.... खराब|खराब.|JJ.adj.any.any..any मौसम|मौसम.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... अत्यधिक|अत्यधिक.|JJ.adj.any.any..any गर्मी|गर्मी.0|NN.n.f.sg.3.d ,|,.|SYM.punc.... ठंड|ठंड.0|NN.n.f.sg.3.d और|और.|CC.adv.... वर्षा|वर्षा.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. उनका|उनका.|PRP.unk.... बचाव|बचाव.0|NN.n.m.sg.3.d हो|हो.0|VM.v.any.any.any. जाये|जा.एं|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+प्राय|प्रायः.|NN.adv.... :|:.|SYM.punc.... अनाज|अनाज.0|NN.n.m.sg.3.d देने|दे.ना|VM.v.m.pl.any. से|से.|PSP.v.any.any.any. पहले|पहले.|NST.adv.... घोड़े|घोड़े.|NN.punc.... को|को.|PSP.psp.... सूखी|सूखी.|JJ.adj.f.any..any घास|घास.0|NN.n.f.sg.3.d खिलायी|खिला.या|VM.v.f.sg.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+दिल्ली|दिल्ली.0|NNP.n.f.sg.3.d खामोशी|खामोशी.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d जामा|जामा.0|NN.n.m.sg.3.d संसद|संसद.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o गहमागहमी|गहमागहमी.|NN.unk.... भरे|भर.एं|VM.v.any.sg.2. मानसून|मानसून.0|NN.n.m.sg.3.d सत्र|सत्र.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o दो|दो.0|QC.n.m.sg.3.d हते|हते.|VAUX.unk.... बाद|बाद.|NST.adv.... भी|भी.|RP.adv.... विपक्ष|विपक्ष.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d नेता|नेता.0|NN.n.m.sg.3.d सोनिया|सोनिया.|XC.unk.... गांधी|गांधी.0|NNP.n.f.sg.3.d अभी|अभी.|PRP.adv.... तक|तक.|RP.avy.... सुर्खियों|सुर्खियों.|NN.unk.... में|में.|PSP.psp.... नहीं|नहीं.|NEG.adv.... आईं|आ.या|VM.v.f.pl.any. .|..|SYM.punc....
+
+
+ध्यान|ध्यान.0|NN.n.m.sg.3.d रखें|रख.एं|VM.v.any.pl.1. कि|कि.|CC.avy.... इन|इन.|DEM.pn.any.pl.3.o मानकों|मानकों.|NN.unk.... को|को.|PSP.psp.... प्राप्त|प्राप्त.|JJ.adj.any.any..any न|न.|NEG.adv.... करने|कर.|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d कनाडा|कनाडा.|NN.unk.... में|में.|PSP.psp.... कोई|कोई.0|PRP.pn.any.sg.3.d महत्व|महत्व.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+उन|उन.|DEM.unk.... रिपोर्टों|रिपोर्ट.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... कहा|कह.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... ये|यह.0|DEM.pn.any.pl.3.d शार्टहैंड|शार्टहैंड.0|XC.n.m.sg.3.d से|से.|PSP.v.any.any.any. ली|ले.या|VM.v.f.sg.any. गयी|गयी.|VAUX.unk.... हैं|है.है|VAUX.v.any.pl.1. ,|,.|SYM.punc.... लेकिन|लेकिन.|CC.avy.... ये|यह.0|DEM.pn.any.pl.3.d रिपोर्टें|रिपोर्ट.0|NN.n.f.pl.3.d मुकम्मिल|मुकम्मिल.|JJ.adj.any.any..any नहीं|नहीं.|NEG.adv.... ,|,.|SYM.punc.... ये|यह.0|PRP.pn.any.pl.3.d अधूरी|अधूरी.|JJ.adj.f.any..any हैं|है.है|VM.v.any.pl.1. ,|,.|SYM.punc.... ये|यह.0|DEM.pn.any.pl.3.d साफ|साफ.0|JJ.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... हैं|है.है|VM.v.any.pl.1. और|और.|CC.adv.... कहीं|कहीं.|PRP.adv.... कहीं|कहीं.|PRP.adv.... से|से.|PSP.v.any.any.any. तो|तो.|RP.avy.... कोई|कोई.0|PRP.pn.any.sg.3.d मायने|मायने.|NN.unk.... भी|भी.|RP.adv.... नहीं|नहीं.|NEG.adv.... निकलते|निकल.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+रवाना|रवाना.|NN.adj.m.sg..d होने|हो.ना|VM.v.m.pl.any. में|में.|PSP.psp.... देरी|देरी.0|NN.n.f.sg.3.d होना|हो.ना|VM.v.m.sg.any. या|या.|CC.avy.... रवाना|रवाना.|NN.adj.m.sg..d न|न.|NEG.adv.... हो|हो.0|VM.v.any.any.any. पाना|पा.ना|VAUX.v.m.sg.any. ;|;.|SYM.punc....
+
+तत्पश्चात|तत्पश्चात.|CC.unk.... उन्हें|उन्हें.|PRP.unk.... उठाकर|उठा.कर|VM.v.any.any.any. घर|घर.0|NN.n.m.sg.3.d में|में.|PSP.psp.... सभी|सभी.0|QF.n.m.sg.3.d स्थानों|स्थान.0|NN.n.m.pl.3.o पर|पर.|PSP.psp.... रखा|रखा.0|VM.v.any.any.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+इसी|इसी.|DEM.pn.any.sg.3.o कारण|कारण.0|NN.n.m.sg.3.d पौधों|पौधा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d विकास|विकास.0|NN.n.m.sg.3.d पृथक|पृथक.|JJ.unk.... रूप|रूप.0|NN.n.m.sg.3.d में|में.|PSP.psp.... होकर|हो.कर|VM.v.any.any.any. उनके|उनके.|PRP.unk.... बाह्य|बाह्य.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d भिन्न|भिन्न.|JJ.adj.any.any..any हो|हो.0|VM.v.any.any.any. जाते|जा.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+वे|वह.0|PRP.pn.any.pl.3.d सुस्थापित|सुस्थापित.|JJ.unk.... रूप|रूप.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. जो|जो.|PRP.avy.... इतनी|इतनी.|QF.adj.f.any..any अच्छी|अच्छी.|JJ.adj.f.any..any तरह|तरह.|NN.adv.... से|से.|PSP.v.any.any.any. अनुकूलित|अनुकूलित.|JJ.adj.any.any..any हो|हो.0|VM.v.any.any.any. गए|गए.|VAUX.unk.... हैं|है.है|VAUX.v.any.pl.1. कि|कि.|CC.avy.... अपने|अपना.0|PRP.n.m.pl.3.d ग्रामीण|ग्रामीण.|JJ.adj.any.any..any संबंधियों|संबंधी.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o पास|पास.|NST.adv.... आकस्मिक|आकस्मिक.0|JJ.n.m.sg.3.d रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. जाने|जान.एं|VM.v.any.sg.2. का|का.का|PSP.psp.m.sg..d न|न.|NEG.adv.... तो|तो.|RP.avy.... प्रयास|प्रयास.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... न|न.|NEG.adv.... जा|जा.0|VAUX.v.any.any.any. ही|ही.|RP.adv.... सकते|सक.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+
+
+लेकिन|लेकिन.|CC.avy.... इससे|इससे.|PRP.pn.any.sg.3.o भी|भी.|RP.adv.... बड़ी|बड़ी.|JJ.punc.... विपत्ति|विपत्ति.0|NN.n.f.sg.3.d इस|इस.|DEM.pn.any.sg.3.o उद्योग|उद्योग.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... अभी|अभी.|PRP.adv.... आने|आ.ना|VM.v.m.pl.any. वाली|वाली.0|VAUX.n.f.sg.3.d थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+सन्|सन्.0|XC.n.m.sg.3.d 1985|1985.|QC.num.... में|में.|PSP.psp.... ,|,.|SYM.punc.... इनका|इनका.|PRP.pn.m.sg.3.d हिस्सा|हिस्सा.0|NN.n.m.sg.3.d 34|34.|QC.num.... प्रतिशत|प्रतिशत.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. जो|जो.|PRP.avy.... अभी|अभी.|PRP.adv.... ठीक|ठीक.|JJ.adj.any.any..any ही|ही.|RP.adv.... था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+
+
+परिणामस्वरूप|परिणामस्वरूप.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... अत्यधिक|अत्यधिक.|JJ.adj.any.any..any उन्नत|उन्नत.0|JJ.n.m.sg.3.d किस्मों|किस्म.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o उत्पादन|उत्पादन.0|NN.n.m.sg.3.d में|में.|PSP.psp.... वृद्धि|वृद्धि.0|NN.n.f.sg.3.d हो|हो.0|VM.v.any.any.any. रही|रह.या|VAUX.v.f.sg.any. थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc.... यद्यपि|यद्यपि.|CC.avy.... भूमि|भूमि.0|NN.n.f.sg.3.d क्षेत्र|क्षेत्र.0|NN.n.m.sg.3.d कम|कम.|QF.adj.any.any..any हो|हो.0|VM.v.any.any.any. रहा|रह.या|VAUX.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+
+अगर|अगर.|CC.adv.... हम|हम.|PRP.unk.... चाहते|चाह.ता|VM.v.m.pl.any. तो|तो.|CC.avy.... अपनी|अपनी.0|PRP.n.f.sg.3.d बात|बात.0|NN.n.f.sg.3.d मनवाकर|मनवा.कर|VM.v.any.any.any. पाकिस्तान|पाकिस्तान.0|NNP.n.m.sg.3.d को|को.|PSP.psp.... उस|उस.|DEM.unk.... पर|पर.|PSP.psp.... राजी|राजी.0|JJ.n.f.sg.3.d करवा|करवा.0|VM.v.any.any.any. सकते|सक.ता|VAUX.v.m.pl.any. थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+नेहरू|नेहरू.0|NNP.n.m.sg.3.d को|को.|PSP.psp.... छोड़कर|छोड़कर.|NNP.n.m.sg.3.d और|और.|CC.adv.... किसी|किसी.|PRP.unk.... भी|भी.|RP.adv.... राष्ट्र|राष्ट्र.0|XC.n.m.sg.3.d नेता|नेता.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o मन|मन.0|NN.n.m.sg.3.d में|में.|PSP.psp.... यह|यह.0|PRP.pn.any.sg.3.d चिंता|चिंता.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... थे|था.था|VM.v.m.pl.any. .|..|SYM.punc....
+
+इनके|इनके.|PRP.pn.m.pl.3.d लिए|ले.या|PSP.v.m.pl.any. साफ|साफ.0|JJ.n.m.sg.3.d और|और.|CC.adv.... ताजे|ताजा.|JJ.adj.m.sg..o जल|जल.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d सदैव|सदैव.|RB.adv.... व्यवस्था|व्यवस्था.0|NN.n.f.sg.3.d होनी|हो.ना|VM.v.f.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. .|..|SYM.punc....
+
+श्री|श्री.0|XC.n.f.sg.3.d हर्ष|हर्ष.0|NN.n.m.sg.3.d और|और.|CC.adv.... विक्रमादित्य|विक्रमादित्य.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o काल|काल.0|NN.n.m.sg.3.d में|में.|PSP.psp.... 400|400.|QC.num.... वर्षों|वर्ष.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d अंतराल|अंतराल.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. और|और.|CC.adv.... यह|यह.0|DEM.pn.any.sg.3.d बात|बात.0|NN.n.f.sg.3.d मुझे|मुझे.|PRP.unk.... उस|उस.|DEM.unk.... क्षेत्र|क्षेत्र.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o निवासियों|निवासियों.|NN.unk.... ही|ही.|RP.adv.... ने|ने.|PSP.psp.... बताई|बता.या|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+सरकार|सरकार.0|NN.n.f.sg.3.d ने|ने.|PSP.psp.... उसके|उसके.|PRP.unk.... उत्पादन|उत्पादन.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d बड़ा|बड़ा.|XC.punc.... अंश|अंश.0|NN.n.m.sg.3.d लगान|लगान.0|NN.n.m.sg.3.d और|और.|CC.adv.... अन्य|अन्य.|JJ.adj.any.any..any करों|कर.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o रूप|रूप.0|NN.n.m.sg.3.d में|में.|PSP.psp.... ले|ले.0|VM.v.any.any.any. लिया|ले.या|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+अपने|अपना.0|PRP.n.m.pl.3.d पुलिस|पुलिस.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o कर्तव्यों|कर्तव्य.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o अतिरिक्त|अतिरिक्त.|PSP:?.adj.any.any..any कोतवाल|कोतवाल.0|NN.n.m.sg.3.d को|को.|PSP.psp.... कुछ|कुछ.|QF.adj.any.any..d न्यायिक|न्यायिक.0|JJ.n.m.sg.3.d शक्तियां|शक्तियां.|NN.unk.... थीं|था.था|VM.v.f.pl.any. .|..|SYM.punc....
+
+परंतु|परंतु.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d वास्तव|वास्तव.|NN.adv.... में|में.|PSP.psp.... समाजवादी|समाजवादी.0|JJ.n.m.sg.3.d कम|कम.|QF.adj.any.any..any और|और.|CC.adv.... अराजकतावादी|अराजकतावादी.|NN.unk.... तथा|तथा.|CC.adv.... श्रमिक|श्रमिक.0|XC.n.m.sg.3.d संघवादी|संघवादी.|NN.unk.... अधिक|अधिक.|QF.adv.... थे|था.था|VM.v.m.pl.any. .|..|SYM.punc....
+
+
+
+
+
+
+कुछ|कुछ.|QF.adj.any.any..d प्रजातियां|प्रजाति.0|NN.n.f.pl..d ताजे|ताजा.|JJ.adj.m.sg..o पानी|पानी.0|NN.n.m.sg.3.d में|में.|PSP.psp.... रहती|रह.ता|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... पशुओं|पशु.0|NN.n.m.pl.3.o को|को.|PSP.psp.... काटती|काट.ता|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. जबकि|जबकि.|CC.avy.... कुछ|कुछ.|QF.adj.any.any..d प्रजातियां|प्रजाति.0|NN.n.f.pl..d अन्य|अन्य.|JJ.adj.any.any..any खारे|खारा.|JJ.adj.m.sg..o पानी|पानी.0|NN.n.m.sg.3.d में|में.|PSP.psp.... रहती|रह.ता|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... मनुष्यों|मनुष्य.0|NN.n.m.pl.3.o को|को.|PSP.psp.... काटती|काट.ता|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+प्राचीन|प्राचीन.0|JJ.n.m.sg.3.d चिकित्सा|चिकित्सा.0|XC.n.f.sg.3.d शास्त्रों|शास्त्र.0|NN.n.m.pl.3.o में|में.|PSP.psp.... यह|यह.0|PRP.pn.any.sg.3.d कहा|कह.या|VM.v.m.sg.any. गया|गया.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... यदि|यदि.|CC.avy.... किसी|किसी.|PRP.unk.... भी|भी.|RP.adv.... प्रकार|प्रकार.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o प्रमेह|प्रमेह.0|NN.n.m.sg.3.d को|को.|PSP.psp.... उपेक्षित|उपेक्षित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. जाये|जा.एं|VAUX.v.any.sg.2. तो|तो.|CC.avy.... अंतत|अंतत.|NN.unk.... :|:.|SYM.punc.... वह|वह.0|PRP.pn.any.sg.3.d मधुमेह|मधुमेह.|NN.unk.... बन|बन.0|VM.v.any.any.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. जो|जो.|PRP.avy.... बाद|बाद.|NST.adv.... में|में.|PSP.psp.... लाइलाज|लाइलाज.|NN.adj.any.any..any हो|हो.0|VM.v.any.any.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+ढाका|ढाका.|NN.unk.... की|का.का|PSP.psp.f.sg..d मलमल|मलमल.0|NN.n.f.sg.3.d लगातार|लगातार.|RB.adv.... शताब्दियों|शताब्दी.0|NN.n.f.pl.3.o तक|तक.|RP.avy.... संसार|संसार.0|NN.n.m.sg.3.d भर|भर.0|RP.v.any.any.any. की|का.का|PSP.psp.f.sg..d ईर्ष्या|ईर्ष्या.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d कारण|कारण.0|NN.n.m.sg.3.d बनी|बन.या|VM.v.f.sg.any. रही|रह.या|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+
+अयोध्या|अयोध्या.0|JJ.n.f.sg.3.d आंदोलन|आंदोलन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o मौजूदा|मौजूदा.|JJ.adj.m.sg..d दौर|दौर.0|NN.n.m.sg.3.d में|में.|PSP.psp.... उन|उन.|PRP.unk.... आ|आ.|VM.v.any.any.any. शहरों|शहर.0|NN.n.m.pl.3.o पर|पर.|PSP.psp.... नजर|नजर.0|NN.n.f.sg.3.d रखना|रख.ना|VM.v.m.sg.any. जरूरी|जरूरी.|JJ.adj.f.any..any है|है.है|VM.v.any.sg.2. ,|,.|SYM.punc.... जिनका|जो.का|PRP.pn.m.sg.3.d उल्लेख|उल्लेख.0|NN.n.m.sg.3.d ऊपर|ऊपर.|NST.adv.... बदतरीन|बदतरीन.|JJ.unk.... शहरों|शहर.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o तौर|तौर.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... किया|कर.या|VM.v.m.sg.any. गया|गया.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+प्रमुख|प्रमुख.0|JJ.n.m.sg.3.d औद्योगिक|औद्योगिक.|JJ.adj.any.any..any मशीन|मशीन.0|NN.n.f.sg.3.d समूहों|समूह.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d प्रगति|प्रगति.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d समीक्षा|समीक्षा.0|NN.n.f.sg.3.d नीचे|नीचा.0|NST.n.m.pl.3.d दी|दे.या|VM.v.f.sg.any. जा|जा.0|VAUX.v.any.any.any. रही|रह.या|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+उनके|उनके.|PRP.unk.... मत|मत.|NN.adv.... में|में.|PSP.psp.... इस|इस.|DEM.pn.any.sg.3.o विकास|विकास.0|NN.n.m.sg.3.d प्रक्रिया|प्रक्रिया.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o छह|छह.|QC.adj.any.any..any चरण|चरण.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. और|और.|CC.adv.... प्रत्येक|प्रत्येक.|QF.adj.any.any..any अवस्था|अवस्था.0|NN.n.f.sg.3.d साधक|साधक.|NN.adj.any.any..any की|का.का|PSP.psp.f.sg..d मनस्थिति|मनस्थिति.|NN.unk.... की|का.का|PSP.psp.f.sg..d द्योतक|द्योतक.|JJ.adj.any.any..any है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+औपचारिक|औपचारिक.|JJ.adj.any.any..any शिकायतों|शिकायत.0|NN.n.f.pl.3.o को|को.|PSP.psp.... उनके|उनके.|PRP.unk.... मिलने|मिल.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... छ|छ.|QC.n.m.sg.3.d महीने|महीना.0|NN.n.m.pl.3.d में|में.|PSP.psp.... सुलझाना|सुलझा.ना|VM.v.m.sg.any. (|(.|SYM.punc.... औपचारिक|औपचारिक.|JJ.adj.any.any..any शिकायत|शिकायत.0|NN.n.f.sg.3.d कायदे|कायदे.|NN.unk.... से|से.|PSP.v.any.any.any. संभाली|संभाली.|VM.unk.... जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. )|).|SYM.punc.... &pipe;|&pipe;.|SYM.punc.... भाष्|भाष्.|XC.unk.... ;|;.|SYM.punc....
+
+
+
+यूरोप|यूरोप.0|NNP.n.m.sg.3.d प्रस्थान|प्रस्थान.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. से|से.|PSP.v.any.any.any. पहले|पहले.|NST.adv.... कुछ|कुछ.|QF.adj.any.any..d समय|समय.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. उन्हें|उन्हें.|PRP.unk.... वापस|वापस.|JJ.adj.any.any..any जबलपुर|जबलपुर.|JJ.unk.... जेल|जेल.0|NN.n.f.sg.3.d भेज|भेज.0|VM.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. गया|गया.|VAUX.unk.... था|था.था|VAUX.v.m.sg.any. ,|,.|SYM.punc.... जहां|जहाँ.|PRP.adv.... उनके|उनके.|PRP.unk.... भैया|भैया.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+इसे|इसे.|PRP.pn.any.sg.3.o बीच|बीच.|NST.psp.... सोविएत|सोविएत.|JJ.unk.... संघ|संघ.0|NN.n.m.sg.3.d और|और.|CC.adv.... जापान|जापान.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o बीच|बीच.|NST.psp.... में|में.|PSP.psp.... छोटा|छोटा.|JJ.adj.m.sg..d युध|युध.|NN.unk.... हुआ|हो.या|VM.v.m.sg.any. पर|पर.|PSP.psp.... वो|वो.|PRP.unk.... लोग|लोग.0|NN.n.m.sg.3.d अपनी|अपनी.0|PRP.n.f.sg.3.d सीमा|सीमा.0|NN.n.f.sg.3.d पर|पर.|PSP.psp.... ज्यादा|ज्यादा.|QF.adj.m.sg..d व्यस्त|व्यस्त.0|JJ.n.m.sg.3.d हो|हो.0|VM.v.any.any.any. गए|गए.|VAUX.unk.... ।|।.|SYM.punc....
+
+
+
+
+ड्रग्स|ड्रग्स.|NN.unk.... के|का.का|PSP.psp.m.sg..o सेवन|सेवन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o बहुत|बहुत.|QF.adj.any.any..any -|-.|SYM.punc.... से|से.|PSP.v.any.any.any. लक्षण|लक्षण.0|NN.n.m.sg.3.d उम्र|उम्र.0|NN.n.f.sg.3.d में|में.|PSP.psp.... बड़ा|बड़ा.|NNP.punc.... होने|हो.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o आम|आम.0|JJ.n.m.sg.3.d लक्षणों|लक्षण.0|NN.n.m.pl.3.o जैसे|जैसे.|PSP.adv.... ही|ही.|RP.adv.... होते|हो.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+इसलिए|इसलिये.|CC.avy.... यह|यह.0|PRP.pn.any.sg.3.d स्वभाविक|स्वभाविक.|JJ.unk.... ही|ही.|RP.adv.... था|था.था|VM.v.m.sg.any. कि|कि.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d साधारण|साधारण.0|JJ.n.m.sg.3.d जन|जन.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d भाषा|भाषा.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d इस्तेमाल|इस्तेमाल.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. .|..|SYM.punc....
+
+ब्रितानी|ब्रितानी.0|JJ.n.f.sg.3.d नीति|नीति.0|NN.n.f.sg.3.d ने|ने.|PSP.psp.... साधनों|साधन.0|NN.n.m.pl.3.o को|को.|PSP.psp.... किसानों|किसान.0|NN.n.m.pl.3.o और|और.|CC.adv.... कारीगरों|कारीगर.0|NN.n.m.pl.3.o से|से.|PSP.v.any.any.any. छीनकर|छीन.कर|VM.v.any.any.any. सौदागरों|सौदागर.0|NN.n.m.pl.3.o ,|,.|SYM.punc.... महाजनों|महाजन.0|NN.n.m.pl.3.o और|और.|CC.adv.... ब्रितानी|ब्रितानी.0|JJ.n.f.sg.3.d पूंजीपतियों|पूंजीपतियों.|NN.unk.... के|का.का|PSP.psp.m.sg..o हाथों|हाथ.0|NN.n.m.pl.3.o में|में.|PSP.psp.... पहुंचाने|पहुंचाने.|VM.unk.... में|में.|PSP.psp.... मदद|मदद.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d .|..|SYM.punc....
+
+
+अगर|अगर.|CC.adv.... आप|आप.0|PRP.pn.any.any.any.o बच्चों|बच्चा.0|NN.n.m.pl.3.o को|को.|PSP.psp.... भावनात्मक|भावनात्मक.0|JJ.n.m.sg.3.d सुरक्षा|सुरक्षा.0|XC.n.f.sg.3.d प्रदान|प्रदान.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. सकते|सक.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. ,|,.|SYM.punc.... तो|तो.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d बाद|बाद.|NST.adv.... में|में.|PSP.psp.... बेहतर|बेहतर.|JJ.adj.any.any..any तरीके|तरीका.0|NN.n.m.pl.3.d से|से.|PSP.v.any.any.any. सीखेंगे|सीख.गा|VM.v.m.pl.1. -|-.|SYM.punc.... और|और.|CC.adv.... उनके|उनके.|PRP.unk.... जीवन|जीवन.0|NN.n.m.sg.3.d में|में.|PSP.psp.... आपका|आप.का|PRP.pn.m.sg.any.d महत्त्वपूर्ण|महत्त्वपूर्ण.|JJ.adj.any.any..any योगदान|योगदान.0|NN.n.m.sg.3.d होगा|हो.गा|VM.v.m.sg.2. &pipe;|&pipe;.|SYM.punc.... भाष्|भाष्.|XC.unk.... ;|;.|SYM.punc....
+
+उनके|उनके.|PRP.unk.... नेतृत्व|नेतृत्व.0|NN.n.m.sg.3.d वाल|वाल.0|PSP.n.m.sg.3.d ग|ग.|QC.n.m.sg.3.d बंधन|बंधन.0|NN.n.m.sg.3.d आकार|आकार.0|NN.n.m.sg.3.d में|में.|PSP.psp.... बड़|बहुत.0|NNP.n.m.sg.3.d जरूर|जरूर.|RB.adv.... है|है.है|VM.v.any.sg.2. ,|,.|SYM.punc.... लेकिन|लेकिन.|CC.avy.... अपेक्षाकृत|अपेक्षाकृत.|JJ.adv.... स्थिर|स्थिर.0|JJ.n.m.sg.3.d है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+थोड़ी|थोड़ी.|JJ.punc.... अवधि|अवधि.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... मुर्गे|मुर्गा.0|NN.n.m.pl.3.d बदलकर|बदल.कर|VM.v.any.any.any. यह|यह.0|DEM.pn.any.sg.3.d दोष|दोष.0|NN.n.m.sg.3.d दूर|दूर.|NST.adv.... किया|कर.या|VM.v.m.sg.any. जा|जा.0|VAUX.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+उसने|उसने.|PRP.unk.... अपनी|अपनी.0|PRP.n.f.sg.3.d सहायक|सहायक.0|JJ.n.m.sg.3.d भारतीय|भारतीय.0|JJ.n.m.sg.3.d कंपनी|कंपनी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o शेयरधारकों|शेयरधारकों.|NN.unk.... से|से.|PSP.v.any.any.any. अपने|अपना.0|PRP.n.m.pl.3.d शेयर|शेयर.0|NN.n.m.sg.3.d खरीदने|खरीद.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d पेशकश|पेशकश.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d ,|,.|SYM.punc.... ताकि|ताकि.|CC.avy.... वह|वह.0|PRP.pn.any.sg.3.d शेयर|शेयर.0|XC.n.m.sg.3.d बाजार|बाजार.0|NNP.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d सूची|सूची.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. बाहर|बाहर.|NST.psp.... हो|हो.0|VM.v.any.any.any. जाए|जा.एं|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+लेकिन|लेकिन.|CC.avy.... उस|उस.|DEM.unk.... पर|पर.|PSP.psp.... पुरुषों|पुरुष.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d वर्चस्व|वर्चस्व.0|NN.n.m.sg.3.d उसका|उसका.0|PRP.v.any.any.any. कमजोर|कमजोर.|JJ.adj.any.any..any पक्ष|पक्ष.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+यहां|यहाँ.|PRP.adv.... पर|पर.|PSP.psp.... अन्य|अन्य.|JJ.adj.any.any..any स्थानीय|स्थानीय.0|JJ.n.m.sg.3.d लोगों|लोग.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d भी|भी.|RP.adv.... सीप|सीप.0|NN.n.f.sg.3.d तथा|तथा.|CC.adv.... काष्ठ|काष्ठ.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अनेक|अनेक.|QF.adj.any.any..d दुकानें|दुकान.0|NN.n.f.pl.3.d हैं|है.है|VM.v.any.pl.1. जहां|जहाँ.|PRP.adv.... पर|पर.|PSP.psp.... दुर्लभ|दुर्लभ.0|JJ.n.m.sg.3.d कलाकृतियां|कलाकृति.0|NN.n.f.pl..d मिलती|मिल.ता|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. जिन्हें|जो.को|PRP.pn.any.pl.3.o स्मृति|स्मृति.0|NN.n.m.sg.3.d चिन्ह|चिन्ह.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o रूप|रूप.0|NN.n.m.sg.3.d में|में.|PSP.psp.... लोग|लोग.0|NN.n.m.sg.3.d खरीदते|खरीद.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+
+
+शोर|शोर.0|XC.n.m.sg.3.d प्रदूषण|प्रदूषण.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d एक|एक.|QC.adj.any.any..any अधिक|अधिक.|QF.adv.... गंभीर|गंभीर.|JJ.adj.any.any..any प्रभाव|प्रभाव.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. आंतरिक|आंतरिक.0|JJ.n.m.sg.3.d कान|कान.0|NN.n.m.sg.3.d में|में.|PSP.psp.... रोम|रोम.0|XC.n.m.sg.3.d कोशिकाओं|कोशिका.0|NN.n.f.pl.3.o को|को.|PSP.psp.... होने|हो.ना|VM.v.m.pl.any. वाली|वाली.0|PSP.n.f.sg.3.d चिरकालिक|चिरकालिक.|JJ.adj.any.any..any क्षति|क्षति.0|NN.n.m.sg.3.d .|..|SYM.punc....
+
+लोगों|लोग.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d कहना|कह.ना|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... उसे|उसे.|PRP.unk.... ऐसे|ऐसे.|DEM.adv.... किसी|किसी.|PRP.unk.... देश|देश.0|NN.n.m.sg.3.d में|में.|PSP.psp.... रहने|रह.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d अनुमति|अनुमति.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... है|है.है|VM.v.any.sg.2. जिसमें|जो.में|PRP.pn.any.sg.3.o वह|वह.0|PRP.pn.any.sg.3.d घास|घास.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... उगती|उग.ता|VM.v.f.sg.any. जिसे|जो.को|PRP.pn.any.sg.3.o वह|वह.0|PRP.pn.any.sg.3.d अनामिका|अनामिका.0|NN.n.f.sg.3.d में|में.|PSP.psp.... पहनता|पहन.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. या|या.|CC.avy.... जहां|जहाँ.|PRP.adv.... काले|काला.|JJ.adj.m.sg..o बालों|बाला.0|NN.n.m.pl.3.o वाले|वाला.0|PSP.n.m.pl.3.d मृग|मृग.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... चरते|चर.ता|VM.v.m.pl.any. .|..|SYM.punc....
+
+
+
+(|(.|SYM.punc.... साक्षरता|साक्षरता.0|NN.n.f.sg.3.d और|और.|CC.adv.... संख्यात्मक|संख्यात्मक.|JJ.unk.... कार्य|कार्य.0|NN.n.m.sg.3.d जैसा|जैसा.|PSP.adj.m.sg..d वर्ष|वर्ष.0|NN.n.m.sg.3.d १|१.|QC.num.... और|और.|CC.adv.... २|२.|QC.num.... के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. और|और.|CC.adv.... साथ|साथ.|NST.adv.... में|में.|PSP.psp.... अन्य|अन्य.|JJ.adj.any.any..any विषयों|विषय.0|NN.n.m.pl.3.o में|में.|PSP.psp.... कभी|कभी.|RB.adv.... -|-.|SYM.punc.... कभार|कभार.|RDP.unk.... दिये|दे.या|VM.v.m.pl.any. जाने|जान.एं|VAUX.v.any.sg.2. वाले|वाला.0|PSP.n.m.pl.3.d नियत|नियत.0|JJ.n.m.sg.3.d कार्य|कार्य.0|NN.n.m.sg.3.d )|).|SYM.punc....
+
+यह|यह.0|DEM.pn.any.sg.3.d भाप|भाप.0|NN.n.f.sg.3.d इंजन|इंजन.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अपेक्षा|अपेक्षा.0|PSP.n.f.sg.3.d अधिक|अधिक.|QF.adv.... सस्ता|सस्ता.|JJ.adj.m.sg..d और|और.|CC.adv.... सक्षम|सक्षम.|JJ.adj.any.any..any है|है.है|VM.v.any.sg.2. और|और.|CC.adv.... इसने|इसने.|PRP.pn.any.sg.3.o भाप|भाप.0|NN.n.f.sg.3.d इंजन|इंजन.0|NN.n.m.sg.3.d को|को.|PSP.psp.... समाप्त|समाप्त.0|JJ.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+थोड़ी|थोड़ी.|JJ.punc.... सी|सी.0|RP.v.any.any.any. उपेक्षा|उपेक्षा.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. भी|भी.|RP.adv.... बहुमूल्य|बहुमूल्य.|JJ.unk.... जानवर|जानवर.0|NN.n.m.sg.3.d खो|खो.0|VM.v.any.any.any. दिये|दे.या|VAUX.v.m.pl.any. जाने|जान.एं|VAUX.v.any.sg.2. की|का.का|PSP.psp.f.sg..d आशंका|आशंका.0|NN.n.f.sg.3.d रहती|रह.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+मद्रास|मद्रास.0|NNP.n.m.sg.3.d में|में.|PSP.psp.... कंपनी|कंपनी.0|NNP.n.f.sg.3.d ने|ने.|PSP.psp.... राजदरबारों|राजदरबारों.|NN.unk.... के|का.का|PSP.psp.m.sg..o समय|समय.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d तरह|तरह.|PSP.adv.... कारीगरों|कारीगर.0|NN.n.m.pl.3.o को|को.|PSP.psp.... अपने|अपना.0|PRP.n.m.pl.3.d कारखानों|कारखाना.0|NN.n.m.pl.3.o में|में.|PSP.psp.... नौकरी|नौकरी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिये|ले.या|PSP.v.m.pl.any. आकर्षित|आकर्षित.|JJ.adj.any.any..any करने|कर.|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d प्रयत्न|प्रयत्न.0|NN.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+वहां|वहाँ.|PRP.adv.... उनके|उनके.|PRP.unk.... पूर्व|पूर्व.|NST.adv.... परिचित|परिचित.0|JJ.n.m.sg.3.d तो|तो.|RP.avy.... मिले|मिल.एं|VM.v.any.sg.2. ही|ही.|RP.adv.... लेकिन|लेकिन.|CC.avy.... कुछ|कुछ.|QF.adj.any.any..d के|का.का|PSP.psp.m.sg..o साथ|साथ.|NST.adv.... नई|नई.|JJ.adj.f.any..any मित्रता|मित्रता.0|NN.n.f.sg.3.d कायम|कायम.|JJ.adj.any.any..any भी|भी.|RP.adv.... हुई|हो.या|VM.v.f.sg.any. -|-.|SYM.punc.... उनमें|उनमें.|PRP.unk.... से|से.|PSP.v.any.any.any. उल्लेखनीय|उल्लेखनीय.|JJ.adj.any.any..any दो|दो.0|QC.n.m.sg.3.d महिलाओं|महिला.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o नाम|नाम.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. -|-.|SYM.punc.... हेलन|हेलन.0|XC.n.f.sg.3.d केलर|केलर.|NNP.unk.... और|और.|CC.adv.... जेन|जेन.|XC.unk.... ऐडम्स|ऐडम्स.|NNP.unk.... .|..|SYM.punc....
+
+
+इस|इस.|DEM.pn.any.sg.3.o अंतिम|अंतिम.0|JJ.n.m.sg.3.d वर्ग|वर्ग.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o मार्गदर्शक|मार्गदर्शक.0|NN.n.m.sg.3.d थे|था.था|VM.v.m.pl.any. ,|,.|SYM.punc.... ए|ए.|SYM.avy.... .|..|SYM.punc.... सी|सी.0|RP.v.any.any.any. .|..|SYM.punc.... एन|एन.|RDP.unk.... .|..|SYM.punc.... नांबियार|नांबियार.|NNP.unk.... ,|,.|SYM.punc.... जिन्होंने|जो.ने|PRP.pn.any.pl.3.o इंडियन|इंडियन.0|XC.n.m.sg.3.d नेशनल|नेशनल.|XC.unk.... कांग्रेस|कांग्रेस.0|NNP.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d ओर|ओर.|NST.adv.... से|से.|PSP.v.any.any.any. बर्लिन|बर्लिन.|NN.unk.... में|में.|PSP.psp.... इंडिया|इज.|XC.unk.... इंफार्मेशन|इंफार्मेशन.|XC.unk.... ब्यूरो|ब्यूरो.|NNP.unk.... की|का.का|PSP.psp.f.sg..d स्थापना|स्थापना.0|NN.n.m.sg.3.d की|कर.या|VM.v.f.sg.any. थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+
+सरकार|सरकार.0|NN.n.f.sg.3.d अभी|अभी.|PRP.adv.... यह|यह.0|PRP.pn.any.sg.3.d तय|तय.0|JJ.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... कर|कर.0|VM.v.any.any.any. पाई|पा.या|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... पुराने|पुराना.|JJ.adj.m.sg..o शहर|शब्द.0|NN.n.m.sg.3.d में|में.|PSP.psp.... रहने|रह.ना|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d कितने|कितना.|WQ.adj.m.sg..o परिवार|परिवार.0|NN.n.m.sg.3.d बाहर|बाहर.|NST.psp.... बसेंगे|बस.गा|VM.v.m.pl.1. .|..|SYM.punc....
+
+
+
+
+कवि|कवि.0|NN.n.m.sg.3.d उसके|उसके.|PRP.unk.... साथ|साथ.|NST.adv.... एक|एक.|QC.adj.any.any..any अनूठा|अनूठा.|JJ.adj.m.sg..d संबंध|संबंध.0|NN.n.m.sg.3.d महसूस|महसूस.0|JJ.n.m.sg.3.d करता|कर.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... इस|इस.|PRP.pn.any.sg.3.o बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... अपनी|अपनी.0|PRP.n.f.sg.3.d कविता|कविता.0|NN.n.f.sg.3.d में|में.|PSP.psp.... विस्तार|विस्तार.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बताता|बता.ता|VM.v.m.sg.any. चलता|चल.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+वे|वह.0|PRP.pn.any.pl.3.d प्रकृति|प्रकृति.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d सभी|सभी.0|QF.n.m.sg.3.d मुद्राओं|मुद्रा.0|NN.n.f.pl.3.o से|से.|PSP.v.any.any.any. प्रेम|प्रेम.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. रहे|रह.एं|VAUX.v.any.sg.2. ,|,.|SYM.punc.... यहां|यहाँ.|PRP.adv.... तक|तक.|RP.avy.... कि|कि.|CC.avy.... प्रचंड|प्रचंड.0|XC.n.m.sg.3.d गर्मी|गर्मी.0|NN.n.f.sg.3.d ,|,.|SYM.punc.... धूल|धूल.0|NN.n.m.sg.3.d भरी|भर.या|VM.v.f.sg.any. आंधी|आँधी.0|NN.n.f.sg..d ने|ने.|PSP.psp.... भी|भी.|RP.adv.... उनकी|उनकी.|PRP.unk.... कविताओं|कविता.0|NN.n.f.pl.3.o और|और.|CC.adv.... गीतों|गीत.0|NN.n.m.pl.3.o में|में.|PSP.psp.... अमरत्व|अमरत्व.0|NN.n.m.sg.3.d प्राप्त|प्राप्त.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+केवल|केवल.|RB.adv.... प्रोपेगंडा|प्रोपेगंडा.|NN.unk.... और|और.|CC.adv.... आंदोलन|आंदोलन.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. हम|हम.|PRP.unk.... बहुत|बहुत.|QF.adj.any.any..any दूर|दूर.|NST.adv.... नहीं|नहीं.|NEG.adv.... जा|जा.0|VM.v.any.any.any. सकते|सक.ता|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+
+
+इस|इस.|DEM.pn.any.sg.3.o अवस्था|अवस्था.0|NN.n.f.sg.3.d में|में.|PSP.psp.... घोड़े|घोड़े.|NN.punc.... को|को.|PSP.psp.... मुलायम|मुलायम.|XC.adj.any.any..any मुंह|मुँह.0|NN.n.m.sg..d वाला|वाला.0|PSP.n.m.sg.3.d कहा|कह.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+इसके|इसके.|PRP.pn.m.pl.3.d तुरंत|तुरंत.|RB.adv.... बाद|बाद.|NST.adv.... ही|ही.|RP.adv.... ,|,.|SYM.punc.... शिकागो|शिकागो.|XC.unk.... विश्वविद्यालय|विश्वविद्यालय.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... उन्हें|उन्हें.|PRP.unk.... अपने|अपना.0|PRP.n.m.pl.3.d यहां|यहाँ.|PRP.adv.... व्याख्यान|व्याख्यान.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. आमंत्रित|आमंत्रित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+अकबर|अकबर.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o शासन|शासन.0|NN.n.m.sg.3.d काल|काल.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. पहले|पहले.|NST.adv.... न्यायिक|न्यायिक.0|JJ.n.m.sg.3.d प्रक्रिया|प्रक्रिया.0|NN.n.f.sg.3.d पर|पर.|PSP.psp.... भी|भी.|RP.adv.... पारंपरिक|पारंपरिक.0|JJ.n.m.sg.3.d मुस्लिम|मुस्लिम.|JJ.unk.... विधि|विधि.0|NN.n.f.sg.3.d लागू|लागू.0|JJ.n.m.sg.3.d की|कर.या|VM.v.f.sg.any. जाती|जा.ता|VAUX.v.f.sg.any. थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+
+
+लेकिन|लेकिन.|CC.avy.... कंपनी|कंपनी.0|NN.n.f.sg.3.d ने|ने.|PSP.psp.... अपना|अपना.0|PRP.n.m.sg.3.d ध्यान|ध्यान.0|NN.n.m.sg.3.d युद्ध|युद्ध.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d आवश्यकताओं|आवश्यकता.0|NN.n.f.pl.3.o की|का.का|PSP.psp.f.sg..d पूर्ति|पूर्ति.0|NN.n.f.sg.3.d पर|पर.|PSP.psp.... लगाया|लगा.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+सदन|सदन.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बाहर|बाहर.|NST.psp.... भी|भी.|RP.adv.... सदस्यों|सदस्य.0|NN.n.m.pl.3.o से|से.|PSP.v.any.any.any. आशा|आशा.0|NN.n.f.sg.3.d की|कर.या|VM.v.f.sg.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d अपने|अपना.0|PRP.n.m.pl.3.d पद|पद.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d गारिमा|गारिमा.|NN.unk.... के|का.का|PSP.psp.m.sg..o अनुकूल|अनुकूल.|JJ.adj.any.any..any आचरण|आचरण.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d स्तर|स्तर.0|NN.n.m.sg.3.d बनाये|बना.एं|VM.v.any.sg.2. रखेंगे|रख.गा|VAUX.v.m.pl.1. .|..|SYM.punc....
+
+
+
+वे|वह.0|PRP.pn.any.pl.3.d खाने|खा.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d मेज|मेज.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... भी|भी.|RP.adv.... खामोश|खामोश.|JJ.adj.any.any..any और|और.|CC.adv.... उदास|उदास.|NN.adj.any.any..any बैठे|बैठ.एं|VM.v.any.sg.2. रहते|रह.ता|VAUX.v.m.pl.any. जिससे|जो.से|PRP.pn.any.sg.3.o कि|कि.|CC.avy.... इस|इस.|DEM.pn.any.sg.3.o परेशान|परेशान.|JJ.adj.any.any..any मेहमान|मेहमान.0|NN.n.m.sg.3.d को|को.|PSP.psp.... और|और.|INTF.adv.... भी|भी.|RP.adv.... उलझन|उलझन.0|NN.n.f.sg.3.d होती|हो.ता|VM.v.f.sg.any. .|..|SYM.punc....
+
+
+
+
+
+>|>.|SYM.punc.... पर|पर.|PSP.psp.... आप|आप.0|PRP.pn.any.any.any.o खुद|खुद.0|PRP.v.any.any.any. ही|ही.|RP.adv.... भारत|भारत.0|NNP.n.m.sg.3.d आने|आ.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d नहीं|नहीं.|NEG.adv.... सोचेंगे|सोच.गा|VM.v.m.pl.1. .|..|SYM.punc....
+
+
+
+
+
+बाद|बाद.|NST.adv.... के|का.का|PSP.psp.m.sg..o दस|दस.0|QC.n.m.sg.3.d वर्षों|वर्ष.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o अंदर|अंदर.0|NST.n.m.sg.3.d अंदर|अंदर.0|NST.n.m.sg.3.d यह|यह.0|DEM.pn.any.sg.3.d 2,74,000|2,74,000.|QC.num.... एकड़|एकड़.|NN.num.... हो|हो.0|VM.v.any.any.any. गयी|गयी.|VAUX.unk.... .|..|SYM.punc....
+
+
+कुछ|कुछ.|QF.adj.any.any..d इसे|इसे.|PRP.pn.any.sg.3.o आर्यों|आर्य.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d पूर्ववर्ती|पूर्ववर्ती.|JJ.unk.... शाखा|शाखा.0|NN.n.f.sg.3.d कहते|कह.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. तो|तो.|CC.avy.... कुछ|कुछ.|QF.adj.any.any..d इसे|इसे.|PRP.pn.any.sg.3.o द्रविड़|द्रविड़.|NNP.n.m.sg.3.d ।|।.|SYM.punc....
+
+
+
+राय|राय.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o कुछ|कुछ.|QF.adj.any.any..d सहयोगी|सहयोगी.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... जो|जो.|PRP.avy.... देश|देश.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o विभिन्न|विभिन्न.0|JJ.n.m.sg.3.d भागों|भागों.|NN.unk.... के|का.का|PSP.psp.m.sg..o थे|था.था|PSP.v.m.pl.any. वहां|वहाँ.|PRP.adv.... उनसे|उनसे.|PRP.unk.... मिलने|मिल.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. तथा|तथा.|CC.adv.... अपने|अपना.0|PRP.n.m.pl.3.d बीच|बीच.|NST.psp.... स्वागत|स्वागत.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. एकत्रित|एकत्रित.|JJ.adj.any.any..any हुए|हो.या|VM.v.m.pl.any. थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+
+
+
+
+उन्होंने|उन्होंने.|PRP.unk.... सरकार|सरकार.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. उनके|उनके.|PRP.unk.... पक्ष|पक्ष.0|NN.n.m.sg.3.d में|में.|PSP.psp.... बाजार|बाजार.0|NN.n.m.sg.3.d में|में.|PSP.psp.... हस्तक्षेप|हस्तक्षेप.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. और|और.|CC.adv.... उनसे|उनसे.|PRP.unk.... कुछ|कुछ.|QF.adj.any.any..d अनिवार्य|अनिवार्य.|JJ.adj.any.any..any खरीद|खरीद.0|NN.v.any.any.any. करने|कर.|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d अनुरोध|अनुरोध.0|NN.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+चलिए|चल.एं|VM.v.any.sg.2h. ,|,.|SYM.punc.... मान|मान.0|VM.v.any.any.any. लिया|ले.या|VAUX.v.m.sg.any. लेकिन|लेकिन.|CC.avy.... ऐसे|ऐसे.|DEM.adv.... आतंकवादी|आतंकवादी.0|JJ.n.m.sg.3.d गुट|गुट.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. क्यों|क्यों.|WQ.adv.... बात|बात.0|NN.n.f.sg.3.d की|कर.या|VM.v.f.sg.any. जा|जा.0|VAUX.v.any.any.any. रही|रह.या|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. जिसे|जो.को|PRP.pn.any.sg.3.o पाकिस्तान|पाकिस्तान.0|NNP.n.m.sg.3.d ने|ने.|PSP.psp.... घाटी|घाटी.0|NNP.n.f.sg.3.d में|में.|PSP.psp.... अपना|अपना.0|PRP.n.m.sg.3.d मकसद|मकसद.0|NN.n.m.sg.3.d साधने|साधने.|VM.unk.... के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. लगाया|लगा.या|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. ?|?.|SYM.punc....
+
+कोई|कोई.0|PRP.pn.any.sg.3.d एक|एक.|QC.adj.any.any..any व्यक्ति|व्यक्ति.0|NN.n.m.sg.3.d इसे|इसे.|PRP.pn.any.sg.3.o समझ|समझ.0|VM.v.any.any.any. पाता|पा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... वह|वह.0|PRP.pn.any.sg.3.d भी|भी.|RP.adv.... (|(.|SYM.punc.... केवल|केवल.|RP.adv.... )|).|SYM.punc.... अंशमात्र|अंशमात्र.|NN.unk.... ,|,.|SYM.punc.... संपूर्ण|संपूर्ण.|JJ.adj.any.any..any नहीं|नहीं.|NEG.adv.... .|..|SYM.punc....
+
+
+
+
+बोर्ड|बोर्ड.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... अनुमान|अनुमान.0|NN.n.m.sg.3.d लगाया|लगा.या|VM.v.m.sg.any. कि|कि.|CC.avy.... जापान|जापान.0|NNP.n.m.sg.3.d से|से.|PSP.v.any.any.any. आयातित|आयातित.0|JJ.n.m.sg.3.d माल|माल.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o 40|40.|QC.num.... प्रतिशत|प्रतिशत.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d भारतीय|भारतीय.0|JJ.n.m.sg.3.d मिलों|मिल.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o द्वारा|द्वारा.|PSP.psp.... उत्पादित|उत्पादित.0|JJ.n.m.sg.3.d माल|माल.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. सीधा|सीधा.0|JJ.n.m.sg.3.d मुकाबला|मुकाबला.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+इसलिए|इसलिये.|CC.avy.... ,|,.|SYM.punc.... कोई|कोई.0|PRP.pn.any.sg.3.d भी|भी.|RP.adv.... राज्य|राज्य.0|XC.n.m.sg.3.d संघ|संघ.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. अलग|अलग.|JJ.adj.any.any..any नहीं|नहीं.|NEG.adv.... हो|हो.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. और|और.|CC.adv.... न|न.|NEG.adv.... ही|ही.|RP.adv.... अपनी|अपनी.0|PRP.n.f.sg.3.d मर्जी|मर्जी.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. संविधान|संविधान.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d प्रथम|प्रथम.|QO.adj.any.any..any अनुसूची|अनुसूची.0|NN.n.f.sg.3.d में|में.|PSP.psp.... निर्धारित|निर्धारित.|JJ.adj.any.any..any अपने|अपना.0|PRP.n.m.pl.3.d राज्य|राज्य.0|XC.n.m.sg.3.d क्षेत्र|क्षेत्र.0|NN.n.m.sg.3.d में|में.|PSP.psp.... परिवर्तन|परिवर्तन.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+संपूर्ण|संपूर्ण.|JJ.adj.any.any..any कार्यकलापों|कार्यकलापों.|NN.unk.... पर|पर.|PSP.psp.... विचार|विचार.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d उत्सुकता|उत्सुकता.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o कारण|कारण.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... संसद|संसद.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d टिप्पणियां|टिप्पणियां.|NN.unk.... ,|,.|SYM.punc.... और|और.|CC.adv.... आलोचना|आलोचना.0|NN.n.f.sg.3.d सामान्य|सामान्य.|JJ.adj.any.any..any और|और.|CC.adv.... औपचारिक|औपचारिक.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d ले|ले.0|VM.v.any.any.any. लेती|ले.ता|VAUX.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... एक|एक.|QC.adj.any.any..any ही|ही.|RP.adv.... बात|बात.0|NN.n.f.sg.3.d को|को.|PSP.psp.... दोहराने|दोहरा.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d प्रवृत्ति|प्रवृत्ति.0|NN.n.f.sg.3.d बन|बन.0|VM.v.any.any.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+वह|वह.0|PRP.pn.any.sg.3.d मुकदमों|मुकदमा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d निर्णय|निर्णय.0|NN.n.m.sg.3.d तभी|तभी.|PRP.adv.... कर|कर.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. जबकि|जबकि.|CC.avy.... प्रतिवादी|प्रतिवादी.0|NN.n.m.sg.3.d आरोप|आरोप.0|NN.n.m.sg.3.d को|को.|PSP.psp.... स्वीकार|स्वीकार.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. ले|ले.0|VAUX.v.any.any.any. .|..|SYM.punc....
+
+
+उन्होंने|उन्होंने.|PRP.unk.... उन्हीं|उन्हीं.|PRP.unk.... लगों|लगों.|NN.unk.... को|को.|PSP.psp.... अपमानित|अपमानित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. या|या.|CC.avy.... पार्टी|पार्टी.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. निकाल|निकाल.0|VM.v.any.any.any. जिन्होंने|जो.ने|PRP.pn.any.pl.3.o उनकी|उनकी.|PRP.unk.... मदद|मदद.0|NN.n.f.sg.3.d की|कर.या|VM.v.f.sg.any. थी|था.था|VAUX.v.f.sg.any. और|और.|CC.adv.... उन्हें|उन्हें.|PRP.unk.... आगे|आगा.0|NST.n.m.pl.3.d बढया|बढया.|VM.unk.... था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+
+वास्तव|वास्तव.|NN.adv.... में|में.|PSP.psp.... हमारा|हमारा.|PRP.unk.... ग्रह|ग्रह.0|NN.n.m.sg.3.d ही|ही.|RP.adv.... एक|एक.|QC.adj.any.any..any ऐसा|ऐसा.|DEM.adj.m.sg..d ग्रह|ग्रह.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. जहां|जहाँ.|PRP.adv.... 70|70.|QC.num.... प्रतिशत|प्रतिशत.0|NN.n.m.sg.3.d पानी|पानी.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. और|और.|CC.adv.... बाकी|बाकी.|JJ.adj.f.any..any धरती|धरती.0|NN.n.f.sg.3.d है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+
+जिस|जो.0|DEM.pn.any.sg.3.o प्रकार|प्रकार.0|NN.n.m.sg.3.d हिन्दू|हिंदू.0|NN.n.m.sg..d इन|इन.|DEM.pn.any.pl.3.o ?|?.|SYM.punc.... तिथियों|तिथि.0|NN.n.f.pl.3.o ?|?.|SYM.punc.... को|को.|PSP.psp.... अहोरात्र|अहोरात्र.|NN.unk.... कहते|कह.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. उसी|उसी.|DEM.unk.... प्रकार|प्रकार.0|NN.n.m.sg.3.d वे|वह.0|PRP.pn.any.pl.3.d तिथि|तिथि.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o पूर्वाध|पूर्वाध.|NN.unk.... के|का.का|PSP.psp.m.sg..o दिन|दिन.0|NN.n.m.sg.3.d और|और.|CC.adv.... उत्तरार्ध|उत्तरार्ध.0|NN.n.m.sg.3.d को|को.|PSP.psp.... रात|रात.0|NN.n.f.sg.3.d कहते|कह.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+
+
+सर्कस|सर्कस.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o हाथी|हाथी.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d औसत|औसत.|JJ.adj.any.any..any उम्र|उम्र.0|NN.n.f.sg.3.d 35|35.|QC.num.... वर्ष|वर्ष.0|NN.n.m.sg.3.d होती|हो.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+इस|इस.|DEM.pn.any.sg.3.o शताब्दी|शताब्दी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o प्रारंभिक|प्रारंभिक.|JJ.adj.any.any..any वर्षों|वर्ष.0|NN.n.m.pl.3.o में|में.|PSP.psp.... कलकत्ता|कलकत्ता.|NN.unk.... '|'.|SYM.punc.... महलों|महल.0|NN.n.m.pl.3.o और|और.|CC.adv.... उद्यानों|उद्यानों.|NN.unk.... का|का.का|PSP.psp.m.sg..d शहर|शब्द.0|NN.n.m.sg.3.d '|'.|SYM.punc.... जाना|जान.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+भूमि|भूमि.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. लोग|लोग.0|NN.n.m.sg.3.d को|को.|PSP.psp.... विशेष|विशेष.0|JJ.n.m.sg.3.d मोह|मोह.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. .|..|SYM.punc.... इसे|इसे.|PRP.pn.any.sg.3.o बेचना|बेच.ना|NN.v.m.sg.any. तथा|तथा.|CC.adv.... चुराना|चुरा.ना|NN.v.m.sg.any. पाप|पाप.0|NN.n.m.sg.3.d समझा|समझा.0|VM.v.any.any.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+इसमें|इसमें.|PRP.pn.any.sg.3.o आश्चर्य|आश्चर्य.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d कोई|कोई.0|PRP.pn.any.sg.3.d बात|बात.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... होनी|हो.ना|VM.v.f.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. कि|कि.|CC.avy.... जब|जब.|PRP.adv.... यह|यह.0|PRP.pn.any.sg.3.d प्रकाशित|प्रकाशित.|JJ.adj.any.any..any हुआ|हो.या|VM.v.m.sg.any. तो|तो.|CC.avy.... उसके|उसके.|PRP.unk.... लेखक|लेखक.0|NN.n.m.sg.3.d को|को.|PSP.psp.... उसी|उसी.|DEM.unk.... प्रसिद्ध|प्रसिद्ध.0|JJ.n.m.sg.3.d दिग्गज|दिग्गज.|NN.unk.... रचनाकार|रचनाकार.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d एक|एक.|QC.adj.any.any..any पत्र|प्रमाण.0|NN.n.m.sg.3.d मिला|मिला.0|VM.v.any.any.any. जिसमें|जो.में|PRP.pn.any.sg.3.o उसे|उसे.|PRP.unk.... इस|इस.|DEM.pn.any.sg.3.o उपलब्धि|उपलब्धि.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. बधाई|बधाई.0|NN.n.f.sg.3.d दी|दे.या|VM.v.f.sg.any. गई|गई.|VAUX.unk.... थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+
+देवर|देवर.0|NN.n.m.sg.3.d भाभी|भाभी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o संबंधों|संबंधों.|NN.unk.... को|को.|PSP.psp.... लेकर|ले.कर|VM.v.any.any.any. भी|भी.|RP.adv.... गीत|गीतकार.0|NN.n.m.sg.3.d परंपरित|परंपरित.|JJ.unk.... है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+पहला|पहला.|QO.adj.m.sg..d दूसरे|दूसरा.0|QO.n.m.pl.3.d को|को.|PSP.psp.... कुछ|कुछ.|QF.adj.any.any..d दही|दही.0|NN.n.f.sg.3.d दे|दे.0|VM.v.any.any.any. दे|दे.0|VAUX.v.any.any.any. ,|,.|SYM.punc.... और|और.|CC.adv.... दूसरा|दूसरा.0|QO.n.m.sg.3.d पहले|पहले.|NST.adv.... को|को.|PSP.psp.... कुछ|कुछ.|QF.adj.any.any..d चावल|चावल.0|NN.n.m.sg.3.d दे|दे.0|VM.v.any.any.any. दे|दे.0|VAUX.v.any.any.any. .|..|SYM.punc....
+
+मुर्गीपालन|मुर्गीपालन.|NN.unk.... पर|पर.|PSP.psp.... होनेवाले|होनेवाले.|VM.unk.... कुल|कुल.|QF.adj.any.any..any खर्चे|खर्चा.0|NN.n.m.pl.3.d का|का.का|PSP.psp.m.sg..d आधा|आधा.0|NN.n.m.sg.3.d तो|तो.|RP.avy.... इनके|इनके.|PRP.pn.m.pl.3.d भोजन|भारतीय.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... ही|ही.|RP.adv.... होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+यह|यह.0|PRP.pn.any.sg.3.d सही|सही.|JJ.adv.... है|है.है|VM.v.any.sg.2. कि|कि.|CC.avy.... न्यायाधीशों|न्यायाधीश.0|NN.n.m.pl.3.o को|को.|PSP.psp.... अभिलेख|अभिलेख.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... उपलब्ध|उपलब्ध.|JJ.adj.any.any..any सामग्री|सामग्री.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o आधार|आधार.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... ही|ही.|RP.adv.... अपने|अपना.0|PRP.n.m.pl.3.d निर्णय|निर्णय.0|NN.n.m.sg.3.d देने|दे.ना|VM.v.m.pl.any. होते|हो.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... कोई|कोई.0|PRP.pn.any.sg.3.d व्यक्ति|व्यक्ति.0|NN.n.m.sg.3.d यह|यह.0|PRP.pn.any.sg.3.d आशा|आशा.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... कर|कर.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. और|और.|CC.adv.... न|न.|NEG.adv.... करनी|कर.ना|VM.v.f.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. कि|कि.|CC.avy.... किसी|किसी.|PRP.unk.... व्यक्ति|व्यक्ति.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o विरुद्ध|विरुद्ध.|NN.psp.... लगाए|लगा.एं|VM.v.any.sg.2. गए|गए.|VAUX.unk.... आरोप|आरोप.0|NN.n.m.sg.3.d को|को.|PSP.psp.... सिद्ध|सिद्ध.0|JJ.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. विश्वसनीय|विश्वसनीय.0|JJ.n.m.sg.3.d साक्ष्य|साक्ष्य.|NN.adj.any.any..any न|न.|NEG.adv.... हो|हो.0|VM.v.any.any.any. तो|तो.|CC.avy.... भी|भी.|RP.adv.... न्यायालय|न्यायालय.0|NN.n.m.sg.3.d उसे|उसे.|PRP.unk.... दोषी|दोषी.0|JJ.n.m.sg.3.d ठहराएगा|ठहरा.गा|VM.v.m.sg.2. .|..|SYM.punc....
+
+
+
+
+भारत|भारत.0|NNP.n.m.sg.3.d शासन|शासन.0|NN.n.m.sg.3.d एक्ट|एक्ट.|XC.unk.... ,|,.|SYM.punc.... 1935|1935.|QC.num.... के|का.का|PSP.psp.m.sg..o अधीन|अधीन.|JJ.adj.any.any..any प्रांतीय|प्रांतीय.|JJ.adj.any.any..any विधानमंडलों|विधानमंडलों.|NN.unk.... के|का.का|PSP.psp.m.sg..o चुनाव|चुनाव.0|NN.n.m.sg.3.d फरवरी|फरवरी.0|NNP.n.f.sg.3.d ,|,.|SYM.punc.... 1937|1937.|QC.num.... में|में.|PSP.psp.... कराए|करा.एं|VM.v.any.sg.2. गए|गए.|VAUX.unk.... .|..|SYM.punc....
+
+
+
+
+यह|यह.0|PRP.pn.any.sg.3.d कहने|कह.ना|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d उद्देश्य|उद्देश्य.0|NN.n.m.sg.3.d कि|कि.|CC.avy.... आत्मा|आत्मा.0|NN.n.f.sg.3.d स्वर्ग|स्वर्ग.0|NN.n.m.sg.3.d में|में.|PSP.psp.... जाती|जा.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. यह|यह.0|PRP.pn.any.sg.3.d होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... आत्मा|आत्मा.0|NN.n.f.sg.3.d को|को.|PSP.psp.... पुण्य|पुण्य.0|NN.n.m.sg.3.d कर्म|कर्म.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d ओर|ओर.|PSP.adv.... प्रवृत्त|प्रवृत्त.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. जाए|जा.एं|VAUX.v.any.sg.2. ताकि|ताकि.|CC.avy.... उसमें|उसमें.|PRP.unk.... यथासंभव|यथासंभव.|RB.adv.... अधिकाधिक|अधिकाधिक.|QF.adj.any.any..any पुण्य|पुण्य.0|NN.n.m.sg.3.d कर्म|कर्म.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d लालसा|लालसा.0|NN.n.f.sg.3.d उत्पन्न|उत्पन्न.0|JJ.n.m.sg.3.d हो|हो.0|VM.v.any.any.any. .|..|SYM.punc....
+
+इसका|इसका.|PRP.pn.m.sg.3.d प्रारम्भ|प्रारंभ.0|NN.n.m.sg..d सीमित|सीमित.|JJ.adj.any.any..any था|था.था|VM.v.m.sg.any. और|और.|CC.adv.... विकास|विकास.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... मंद|मंद.|JJ.adj.any.any..any गति|गति.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+सन्|सन्.0|XC.n.m.sg.3.d 1976-79|1976-79.|QC.num.... के|का.का|PSP.psp.m.sg..o दौरान|दौरान.0|NST.n.m.sg.3.d ,|,.|SYM.punc.... नाइट्रोजनयुक्त|नाइट्रोजनयुक्त.|JJ.unk.... उर्वरकों|उर्वरकों.|NN.unk.... की|का.का|PSP.psp.f.sg..d खपत|खपत.0|NN.n.m.sg.3.d में|में.|PSP.psp.... वृद्धि|वृद्धि.0|NN.n.f.sg.3.d 15|15.|QC.num.... से|से.|PSP.v.any.any.any. 20|20.|QC.num.... प्रतिशत|प्रतिशत.0|NN.n.m.sg.3.d प्रति|प्रति.|RP:?.adv.... वर्ष|वर्ष.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d दर|दर.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. हुई|हो.या|VM.v.f.sg.any. .|..|SYM.punc.... सन्|सन्.0|XC.n.m.sg.3.d 1979-80|1979-80.|QC.num.... का|का.का|PSP.psp.m.sg..d वर्ष|वर्ष.0|NN.n.m.sg.3.d चारों|चार.0|QC.n.m.pl.3.o तरफ|तरफ.|NST.adv.... फैले|फैल.एं|VM.v.any.sg.2. सूखे|सूखा.0|NN.n.m.pl.3.d की|का.का|PSP.psp.f.sg..d स्थिति|स्थिति.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o कारण|कारण.0|NN.n.m.sg.3.d अपवाद|अपवाद.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+गैस|गैस.0|NN.n.f.sg.3.d और|और.|CC.adv.... बिजली|बिजली.0|NN.n.f.sg.3.d बिलों|बिल.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o लिये|ले.या|PSP.v.m.pl.any. बजट|बजट.0|NN.n.m.sg.3.d करना|कर.ना|VM.v.m.sg.any. महत्वपूर्ण|महत्वपूर्ण.|JJ.adj.any.any..any है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+किसी|किसी.|PRP.unk.... गरम|गरम.|JJ.adj.any.any..any और|और.|CC.adv.... उमसभरी|उमसभरी.|JJ.unk.... रात|रात.0|NN.n.f.sg.3.d में|में.|PSP.psp.... आसन्न|आसन्न.|JJ.adj.any.any..any वर्षा|वर्षा.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. पहले|पहले.|NST.adv.... यह|यह.0|DEM.pn.any.sg.3.d झुंडों|झुंड.0|NN.n.m.pl.3.o में|में.|PSP.psp.... उड़ान|उड़ान.|NNP.unk.... भरता|भर.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+अपनी|अपनी.0|PRP.n.f.sg.3.d मां|माँ.0|NN.n.f.sg..d के|का.का|PSP.psp.m.sg..o निधन|निधन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o नौ|नौ.0|QC.n.m.sg.3.d महीने|महीना.0|NN.n.m.pl.3.d के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... 1903|1903.|QC.num.... के|का.का|PSP.psp.m.sg..o सितंबर|सितंबर.0|XC.n.m.sg.3.d माह|माह.|NNP.unk.... मे|मा.0|PSP.n.m.pl.3.d ,|,.|SYM.punc.... केवल|केवल.|RB.adv.... तेरह|तेरह.|QC.adj.any.any..any वर्ष|वर्ष.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d आयु|आयु.0|NN.n.f.sg.3.d में|में.|PSP.psp.... रेणुका|रेणुका.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d मृत्यु|मृत्यु.0|NN.n.f.sg.3.d हो|हो.0|VM.v.any.any.any. गई|गई.|VAUX.unk.... .|..|SYM.punc....
+
+
+संक्षिप्त|संक्षिप्त.0|JJ.n.m.sg.3.d सामान्य|सामान्य.|JJ.adj.any.any..any सेना|सेना.0|NN.n.f.sg.3.d न्यायालय|न्यायालय.0|NN.n.m.sg.3.d में|में.|PSP.psp.... कम|कम.|QF.adj.any.any..any से|से.|PSP.v.any.any.any. कम|कम.|QF.adj.any.any..any तीन|तीन.0|QC.n.m.sg.3.d अधिकारी|अधिकारी.0|NN.n.m.sg.3.d होते|हो.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+उसका|उसका.0|PRP.v.any.any.any. नाम|नाम.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. नलिनी|नलिनी.0|NN.n.f.sg.3.d -|-.|SYM.punc.... एक|एक.|QC.adj.any.any..any ऐसा|ऐसा.|DEM.adj.m.sg..d नाम|नाम.0|NN.n.m.sg.3.d जो|जो.|PRP.avy.... रवीन्द्रनाथ|रवीन्द्रनाथ.|NN.unk.... के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. सदैव|सदैव.|RB.adv.... प्रिय|प्रिय.|JJ.adj.any.any..any बना|बना.0|VM.v.any.any.any. रहा|रह.या|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+
+नागपुर|नागपुर.|NNP.unk.... में|में.|PSP.psp.... सुषमा|सुषमा.0|JJ.n.m.sg.3.d स्वराज|स्वराज.|NN.unk.... का|का.का|PSP.psp.m.sg..d यह|यह.0|DEM.pn.any.sg.3.d कथन|कथन.0|NN.n.m.sg.3.d मूल|मूल.0|JJ.n.m.sg.3.d समस्या|समस्या.0|NN.n.f.sg.3.d को|को.|PSP.psp.... छूता|छू.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... पार्टी|पार्टी.0|NN.n.f.sg.3.d लगों|लगों.|NN.unk.... को|को.|PSP.psp.... जाकर|जा.कर|VM.v.any.any.any. कायल|कायल.|NN.adj.any.any..any करे|कर.एं|VM.v.any.sg.2. ,|,.|SYM.punc.... इससे|इससे.|PRP.pn.any.sg.3.o पहले|पहले.|NST.adv.... सरकार|सरकार.0|NN.n.f.sg.3.d को|को.|PSP.psp.... अपनी|अपनी.0|PRP.n.f.sg.3.d आर्थिक|आर्थिक.|JJ.adj.any.any..any नीति|नीति.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o औचित्य|औचित्य.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... पार्टी|पार्टी.0|NN.n.f.sg.3.d को|को.|PSP.psp.... कायल|कायल.|NN.adj.any.any..any करना|कर.ना|VM.v.m.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. .|..|SYM.punc....
+
+
+यहां|यहाँ.|PRP.adv.... यह|यह.0|PRP.pn.any.sg.3.d पूछना|पूछ.ना|VM.v.m.sg.any. कोई|कोई.0|PRP.pn.any.sg.3.d गलत|गलत.|JJ.adj.any.any..any नहीं|नहीं.|NEG.adv.... होगा|हो.गा|VM.v.m.sg.2. कि|कि.|CC.avy.... क्या|क्या.|WQ.avy.... चार|चार.|QC.adj.any.any..any महीनों|महीना.0|NN.n.m.pl.3.o में|में.|PSP.psp.... कोई|कोई.0|PRP.pn.any.sg.3.d प्रगति|प्रगति.0|NN.n.f.sg.3.d ही|ही.|RP.adv.... है|है.है|VM.v.any.sg.2. ?|?.|SYM.punc....
+
+वे|वह.0|PRP.pn.any.pl.3.d सफल|सफल.0|JJ.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... हुए|हो.या|VM.v.m.pl.any. और|और.|CC.adv.... इसी|इसी.|PRP.pn.any.sg.3.o के|का.का|PSP.psp.m.sg..o साथ|साथ.|NST.adv.... उनका|उनका.|PRP.unk.... कांग्रेस|कांग्रेस.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. संपर्क|संपर्क.0|NN.n.m.sg.3.d समाप्त|समाप्त.0|JJ.n.m.sg.3.d हो|हो.0|VM.v.any.any.any. गया|गया.|VAUX.unk.... .|..|SYM.punc....
+
+यहां|यहाँ.|PRP.adv.... तक|तक.|RP.avy.... कि|कि.|CC.avy.... पिछले|पिछला.|JJ.adj.m.sg..o साल|साल.0|NN.n.m.sg.3.d जनवरी|जनवरी.0|NN.n.f.sg.3.d में|में.|PSP.psp.... जब|जब.|PRP.adv.... वाजपेयी|वाजपेयी.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... एक|एक.|QC.adj.any.any..any चुनावी|चुनावी.|JJ.unk.... सभा|सभा.0|NN.n.f.sg.3.d को|को.|PSP.psp.... संबोधित|संबोधित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. तो|तो.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d मंच|मंच.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... मौजूद|मौजूद.|JJ.adj.any.any..any नहीं|नहीं.|NEG.adv.... थे|था.था|VM.v.m.pl.any. जबकि|जबकि.|CC.avy.... अनंत|अनंत.|XC.adj.any.any..any कुमार|कुमार.0|NNP.n.m.sg.3.d वहां|वहाँ.|PRP.adv.... छाए|छा.एं|VM.v.any.sg.2. रहे|रह.एं|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+इनमें|इनमें.|PRP.pn.any.pl.3.o से|से.|PSP.v.any.any.any. कुछ|कुछ.|QF.adj.any.any..d ने|ने.|PSP.psp.... जर्मन|जर्मन.0|JJ.n.m.sg.3.d विदेश|विदेश.0|XC.n.m.sg.3.d विभाग|विभाग.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o सहयोग|सहयोग.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. भारत|भारत.0|NNP.n.m.sg.3.d में|में.|PSP.psp.... बगावत|बगावत.0|NN.n.m.sg.3.d फैलाने|फैला.ना|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d प्रयास|प्रयास.0|NN.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. और|और.|CC.adv.... प्रथम|प्रथम.|QO.adj.any.any..any विश्वयुद्ध|विश्वयुद्ध.|NN.unk.... के|का.का|PSP.psp.m.sg..o दिनों|दिन.0|NN.n.m.pl.3.o से|से.|PSP.v.any.any.any. ही|ही.|RP.adv.... राजनीतिक|राजनीतिक.|JJ.adj.any.any..any निष्कासन|निष्कासन.0|NN.n.m.sg.3.d भुगत|भुगत.0|VM.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+ये|यह.0|DEM.pn.any.pl.3.d चार|चार.|QC.adj.any.any..any भाग|भाग.0|NN.v.any.any.any. सम्मिलित|सम्मिलित.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. श्रुति|श्रुति.0|NN.n.f.sg.3.d कहे|कह.एं|VM.v.any.sg.2. जाते|जा.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. जो|जो.|PRP.avy.... हिन्दू|हिंदू.0|XC.n.m.sg..d धर्म|धर्म.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o सर्वोच्च|सर्वोच्च.|JJ.adj.any.any..any ग्रन्थ|ग्रंथ.0|NN.n.m.sg..d हैं|है.है|VM.v.any.pl.1. ।|।.|SYM.punc....
+
+
+
+
+
+इसमें|इसमें.|PRP.pn.any.sg.3.o प्रस्तावित|प्रस्तावित.|JJ.adj.any.any..any पहली|पहली.|QO.adj.f.any..any प्रावस्था|प्रावस्था.|NN.unk.... थी|था.था|VM.v.f.sg.any. यूरोप|यूरोप.0|NNP.n.m.sg.3.d में|में.|PSP.psp.... ?|?.|SYM.punc.... फ्री|फ्री.|RDP.adj.f.any..any इंडियन|इंडियन.0|XC.n.m.sg.3.d गवर्नमेंट|गवर्नमेंट.0|NN.n.f.sg.3.d ?|?.|SYM.punc.... ,|,.|SYM.punc.... यानी|यानी.|CC.avy.... स्वाधीन|स्वाधीन.0|XC.n.m.sg.3.d भारत|भारत.0|NNP.n.m.sg.3.d सरकार|सरकार.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d स्थापना|स्थापना.0|NN.n.m.sg.3.d तथा|तथा.|CC.adv.... फ्री|फ्री.|JJ.adj.f.any..any इंडियन|इंडियन.0|XC.n.m.sg.3.d गवर्नमेंट|गवर्नमेंट.0|NNP.n.f.sg.3.d और|और.|CC.adv.... जर्मनी|जर्मनी.|NNP.unk.... एवं|एवं.|CC.avy.... इटली|इटली.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बीच|बीच.|NST.psp.... संधि|संधि.0|NN.n.f.sg.3.d ,|,.|SYM.punc.... जिसके|जो.का|PRP.pn.m.pl.3.d तहत|तहत.0|JJ.n.m.sg.3.d युद्ध|युद्ध.0|NN.n.m.sg.3.d में|में.|PSP.psp.... विजयी|विजयी.0|JJ.n.f.sg.3.d होने|हो.ना|VM.v.m.pl.any. पर|पर.|PSP.psp.... ये|यह.0|DEM.pn.any.pl.3.d दोनों|दोना.0|NN.n.m.pl.3.o भारत|भारत.0|NNP.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d स्वाधीनता|स्वाधीनता.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o जामिन|जामिन.|NNP.unk.... होंगे|हो.गा|VM.v.m.pl.1. .|..|SYM.punc....
+
+वत्स|वत्स.0|NN.n.m.sg.3.d जिस|जो.0|DEM.pn.any.sg.3.o तरह|तरह.|NN.adv.... प्रत्येक|प्रत्येक.|QF.adj.any.any..any आवाज|आवाज.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d प्रतिध्वनि|प्रतिध्वनि.0|NN.n.f.sg.3.d उसी|उसी.|DEM.unk.... आवाज|आवाज.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d ही|ही.|RP.adv.... तरह|तरह.|NN.adv.... होती|हो.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... परछाई|परछाई.0|NN.n.f.sg.3.d अपने|अपना.0|PRP.n.m.pl.3.d पदार्थ|पदार्थ.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d तरह|तरह.|NN.adv.... .|..|SYM.punc.... उसी|उसी.|DEM.unk.... प्रकार|प्रकार.0|NN.n.m.sg.3.d बुरा|बुरा.|JJ.adj.m.sg..d करने|कर.|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d के|का.का|PSP.psp.m.sg..o हाथ|हाथ.0|NN.n.m.sg.3.d बुराई|बुराई.0|NN.n.f.sg.3.d ही|ही.|RP.adv.... आती|आ.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. ,|,.|SYM.punc.... ?|?.|SYM.punc.... ?|?.|SYM.punc.... गौतम|गौतम.0|XC.n.m.sg.3.d बुद्ध|बुद्ध.|NNP.adj.any.any..any ने|ने.|PSP.psp.... समझाया|समझा.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+लेकिन|लेकिन.|CC.avy.... अनुवाद|अनुवाद.0|NN.n.m.sg.3.d में|में.|PSP.psp.... इसे|इसे.|PRP.pn.any.sg.3.o जिस|जो.0|DEM.pn.any.sg.3.o प्रकार|प्रकार.0|NN.n.m.sg.3.d बताया|बता.या|VM.v.m.sg.any. गया|गया.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. उससे|उससे.|PRP.unk.... यह|यह.0|PRP.pn.any.sg.3.d मालूम|मालूम.|JJ.adj.any.any..any होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... वह|वह.0|PRP.pn.any.sg.3.d हिमवंत|हिमवंत.|NNP.unk.... से|से.|PSP.v.any.any.any. एक|एक.|QC.adj.any.any..any योजन|योजन.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. अधिक|अधिक.|QF.adv.... ऊंचा|ऊंचा.|JJ.unk.... नहीं|नहीं.|NEG.adv.... है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+एक|एक.|QC.adj.any.any..any अधिकारी|अधिकारी.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d तरक्की|तरक्की.0|NN.n.f.sg.3.d को|को.|PSP.psp.... दूसरे|दूसरा.0|NN.n.m.pl.3.d का|का.का|PSP.psp.m.sg..d हक|हक.0|NN.n.m.sg.3.d मारना|मार.ना|VM.v.m.sg.any. माना|मान.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+जैसा|जैसा.|CC.adj.m.sg..d कि|कि.|RP.avy.... पिछले|पिछला.|JJ.adj.m.sg..o पैरा|पैरा.0|NN.n.m.sg.3.d में|में.|PSP.psp.... संकेत|संकेत.0|NN.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. जा|जा.0|VAUX.v.any.any.any. चुका|चुका.0|VAUX.v.any.any.any. है|है.है|VAUX.v.any.sg.2. ,|,.|SYM.punc.... कुछ|कुछ.|QF.adj.any.any..d न्यायाधीश|न्यायाधीश.0|XC.n.m.sg.3.d न्याय|न्याय.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o हित|हित.0|NN.n.m.sg.3.d में|में.|PSP.psp.... कभी|कभी.|PRP.adv.... कभी|कभी.|PRP.adv.... साक्षी|साक्षी.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. स्वयं|स्वयं.0|PRP.n.f.sg.3.d कुछ|कुछ.|QF.adj.any.any..d प्रश्न|प्रश्न.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+विशेषाधिकार|विशेषाधिकार.0|NN.n.m.sg.3.d देने|दे.ना|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d उद्देश्य|उद्देश्य.0|NN.n.m.sg.3.d यह|यह.0|PRP.pn.any.sg.3.d है|है.है|VM.v.any.sg.2. कि|कि.|CC.avy.... संसद|संसद.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o सदनों|सदन.0|NN.n.m.pl.3.o ,|,.|SYM.punc.... उनकी|उनकी.|PRP.unk.... समितियों|समिति.0|NN.n.f.pl.3.o तथा|तथा.|CC.adv.... उनके|उनके.|PRP.unk.... सदस्यों|सदस्य.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d गरिमा|गरिमा.0|NN.n.f.sg.3.d एवं|एवं.|CC.avy.... प्रतिष्ठा|प्रतिष्ठा.0|NN.n.f.sg.3.d को|को.|PSP.psp.... तथा|तथा.|CC.adv.... कार्य|कार्य.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d उनकी|उनकी.|PRP.unk.... आजादी|आजादी.0|NN.n.f.sg.3.d को|को.|PSP.psp.... बनाए|बना.एं|VM.v.any.sg.2. रखा|रखा.0|VAUX.v.any.any.any. जा|जा.0|VAUX.v.any.any.any. सके|सक.एं|VAUX.v.any.sg.2. और|और.|CC.adv.... वे|वह.0|PRP.pn.any.pl.3.d बिना|बिन.या|NEG.v.m.sg.any. किसी|किसी.|PRP.unk.... विघ्न|विघ्न.0|NN.n.m.sg.3.d या|या.|CC.avy.... बाधा|बाधा.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o काम|काम.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. सकें|सक.एं|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+प्रदूषण|प्रदूषण.0|NN.n.m.sg.3.d हवा|हवा.0|NN.n.f.sg.3.d को|को.|PSP.psp.... दूषित|दूषित.|JJ.adj.any.any..any करता|कर.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... पानी|पानी.0|NN.n.m.sg.3.d को|को.|PSP.psp.... जहरीला|जहरीला.|JJ.adj.m.sg..d बनाता|बना.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+उनकी|उनकी.|PRP.unk.... गिरफ्तारी|गिरफ्तारी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... लैफ्टिनेंट|लैफ्टिनेंट.|XC.unk.... विलियम|विलियम.|XC.unk.... हडसन|हडसन.|NNP.unk.... द्वारा|द्वारा.|PSP.psp.... उन्हें|उन्हें.|PRP.unk.... लाल|लाल.|JJ.adj.any.any..any किले|किला.0|NN.n.m.pl.3.d में|में.|PSP.psp.... लाया|ला.या|VM.v.m.sg.any. गया|गया.|VAUX.unk.... जिससे|जो.से|PRP.pn.any.sg.3.o 1857|1857.|QC.num.... की|का.का|PSP.psp.f.sg..d धारा|धारा.0|NN.n.f.sg.3.d 14|14.|QC.num.... के|का.का|PSP.psp.m.sg..o अंतर्गत|अंतर्गत.|PSP:?.adj.any.any..any गठित|गठित.0|JJ.n.m.sg.3.d मिलिट्री|मिलिट्री.|XC.unk.... कमीशन|कमीशन.0|NN.n.m.sg.3.d द्वारा|द्वारा.|PSP.psp.... उन|उन.|DEM.unk.... पर|पर.|PSP.psp.... मुकदमा|मुकदमा.0|NN.n.m.sg.3.d चलाया|चला.या|VM.v.m.sg.any. जा|जा.0|VAUX.v.any.any.any. सके|सक.एं|VAUX.v.any.sg.2. .|..|SYM.punc.... यह|यह.0|PRP.pn.any.sg.3.d राष्ट्रीय|राष्ट्रीय.|JJ.adj.any.any..any और|और.|CC.adv.... अंतर्राष्ट्रीय|अंतर्राष्ट्रीय.|JJ.adj.any.any..any कानूनों|कानून.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o सभी|सभी.0|QF.n.m.sg.3.d प्रतिष्ठित|प्रतिष्ठित.|JJ.adj.any.any..any नियमों|नियम.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o विपरीत|विपरीत.|JJ.psp.... था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+इसकी|इसकी.|PRP.pn.f.sg.3.d पिछली|पिछली.|JJ.unk.... दीवार|दीवार.0|NN.n.f.sg.3.d पर|पर.|PSP.psp.... प्रक्षिप्त|प्रक्षिप्त.|JJ.adj.any.any..any मंदिर|मंदिर.0|NN.n.m.sg.3.d वेदी|वेदी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o दोनों|दोना.0|NN.n.m.pl.3.o और|और.|CC.adv.... दो|दो.0|QC.n.m.sg.3.d और|और.|CC.adv.... फलक|फलक.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. जिन|जिन.0|PRP.n.m.sg.3.d पर|पर.|PSP.psp.... गजलक्ष्मी|गजलक्ष्मी.|NN.unk.... और|और.|CC.adv.... दुर्गा|दुर्गा.0|JJ.n.f.sg.3.d हैं|है.है|VM.v.any.pl.1. .|..|SYM.punc....
+
+लेकिन|लेकिन.|CC.avy.... पोर्ट|पोर्ट.|XC.unk.... ब्लेयर|ब्लेयर.|NNP.unk.... में|में.|PSP.psp.... एक|एक.|QC.adj.any.any..any गैर|गैर.|JJ.adj.any.any..any सरकारी|सरकारी.0|JJ.n.f.sg.3.d समिति|समिति.0|NN.n.f.sg.3.d है|है.है|VM.v.any.sg.2. जिसमें|जो.में|PRP.pn.any.sg.3.o सरकारी|सरकारी.0|JJ.n.f.sg.3.d अधिकारियों|अधिकारी.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o अतिरिक्त|अतिरिक्त.|PSP:?.adj.any.any..any उपभोक्ता|उपभोक्ता.0|NN.n.m.sg.3.d तथा|तथा.|CC.adv.... व्यापारियों|व्यापारी.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o प्रतिनिधि|प्रतिनिधि.0|NN.n.m.sg.3.d संयुक्त|संयुक्त.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. आवश्यक|आवश्यक.|JJ.adj.any.any..any वस्तुओं|वस्तु.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o मूल्य|मूल्य.0|NN.n.m.sg.3.d निर्धारित|निर्धारित.|JJ.adj.any.any..any करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+इसलिए|इसलिये.|CC.avy.... स्वाभाविक|स्वाभाविक.0|JJ.n.m.sg.3.d रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. वह|वह.0|PRP.pn.any.sg.3.d हर|हर.|QF.adj.any.any..any दृष्टि|दृष्टि.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. पराजित|पराजित.|JJ.adj.any.any..any था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+कंप्यूटर|कंप्यूटर.|NN.unk.... प्रोग्राम|प्रोग्राम.0|NN.n.m.sg.3.d खरीदने|खरीद.ना|VM.v.m.pl.any. और|और.|CC.adv.... उसे|उसे.|PRP.unk.... पुराने|पुराना.|JJ.adj.m.sg..o टाइपराइटर|टाइपराइटर.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... चलने|चल.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d उमीद|उमीद.|NN.unk.... बेमानी|बेमानी.|JJ.adj.f.any..any है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+महंत|महंत.0|JJ.n.m.sg.3.d रामचंद्र|रामचंद्र.|XC.unk.... दास|दास.0|XC.n.m.sg.3.d परमहंस|परमहंस.0|XC.n.m.sg.3.d सपने|सपना.0|NN.n.m.pl.3.d देखते|देख.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. और|और.|CC.adv.... उन्हें|उन्हें.|PRP.unk.... साकार|साकार.|NN.adj.any.any..any भी|भी.|RP.adv.... करने|कर.|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d कोशिश|कोशिश.0|NN.n.f.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+प्रजनक|प्रजनक.|JJ.adj.any.any..any सूअरों|सूअर.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d खुराक|खुराक.0|NN.n.f.sg.3.d पर|पर.|PSP.psp.... भी|भी.|RP.adv.... विशेष|विशेष.0|JJ.n.m.sg.3.d ध्यान|ध्यान.0|NN.n.m.sg.3.d देने|दे.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d आवश्यकता|आवश्यकता.0|NN.n.f.sg.3.d होती|हो.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc.... इनका|इनका.|PRP.pn.m.sg.3.d अधिकतम|अधिकतम.|JJ.adj.any.any..any उपयोग|उपयोग.0|NN.n.m.sg.3.d तभी|तभी.|PRP.adv.... किया|कर.या|VM.v.m.sg.any. जा|जा.0|VAUX.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+अंबेडकर|अंबेडकर.|NN.unk.... ने|ने.|PSP.psp.... संविधान|संविधान.0|JJ.n.m.sg.3.d सभा|सभा.0|NN.n.f.sg.3.d में|में.|PSP.psp.... कहा|कह.या|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. कि|कि.|CC.avy.... '|'.|SYM.punc.... संसदीय|संसदीय.0|JJ.n.m.sg.3.d प्रणाली|प्रणाली.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. हमारा|हमारा.|PRP.unk.... अभिप्राय|अभिप्राय.0|NN.n.m.sg.3.d '|'.|SYM.punc.... एक|एक.|QC.adj.any.any..any व्यक्ति|व्यक्ति.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... एक|एक.|QC.adj.any.any..any वोट|वोट.0|NN.n.m.sg.3.d '|'.|SYM.punc.... से|से.|PSP.v.any.any.any. है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+सन्|सन्.0|XC.n.m.sg.3.d 1970|1970.|QC.num.... आधार|आधार.0|NN.n.m.sg.3.d वर्ष|वर्ष.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. औद्योगिक|औद्योगिक.|JJ.adj.any.any..any उत्पादन|उत्पादन.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d सामान्य|सामान्य.|JJ.adj.any.any..any सूचकांक|सूचकांक.0|NN.n.m.sg.3.d सन्|सन्.0|XC.n.m.sg.3.d 1979|1979.|QC.num.... में|में.|PSP.psp.... 149.7|149.7.|QC.num.... तक|तक.|RP.avy.... आ|आ.|VM.v.any.any.any. गया|गया.|VAUX.unk.... .|..|SYM.punc....
+
+यह|यह.0|DEM.pn.any.sg.3.d अनुमान|अनुमान.0|NN.n.m.sg.3.d लगाया|लगा.या|VM.v.m.sg.any. गया|गया.|VAUX.unk.... था|था.था|VAUX.v.m.sg.any. कि|कि.|CC.avy.... सन्|सन्.0|XC.n.m.sg.3.d 1951|1951.|QC.num.... में|में.|PSP.psp.... 25,980|25,980.|QC.num.... मिल|मिल.0|VM.v.any.any.any. करघे|करघा.0|VM.n.m.pl.3.d थे|था.था|VAUX.v.m.pl.any. और|और.|CC.adv.... 1,81,278|1,81,278.|QC.num.... हथकरघे|हथकरघा.0|NN.n.m.pl.3.d आर्ट|आर्ट.0|JJ.n.m.sg.3.d सिल्क|सिल्क.0|NN.n.m.sg.3.d रेशे|रेशा.0|NN.n.m.pl.3.d के|का.का|PSP.psp.m.sg..o निर्माण|निर्माण.0|NN.n.m.sg.3.d में|में.|PSP.psp.... लगे|लग.एं|VM.v.any.sg.2. हुए|हो.या|VAUX.v.m.pl.any. थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+इस|इस.|DEM.pn.any.sg.3.o भौतिक|भौतिक.|JJ.adj.any.any..any धमाके|धमाका.0|NN.n.m.pl.3.d से|से.|PSP.v.any.any.any. ऐसी|ऐसी.|DEM.adj.f.any..any परिवर्तन|परिवर्तन.0|NN.n.m.sg.3.d आया|आ.या|VM.v.m.sg.any. कि|कि.|CC.avy.... मानसरोवर|मानसरोवर.0|XC.n.m.sg.3.d स्त्रोत|स्त्रोत.|NN.unk.... दक्षिण|दक्षिण.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d और|और.|CC.adv.... बहना|बह.ना|VM.v.m.sg.any. आरंभ|आरम्भ.0|NN.n.m.sg..d हुआ|हो.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+यदि|यदि.|CC.avy.... एक|एक.|QC.adj.any.any..any से|से.|PSP.v.any.any.any. अधिक|अधिक.|QF.adv.... मध्यस्थ|मध्यस्थ.0|JJ.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. तो|तो.|CC.avy.... विवादी|विवादी.|JJ.unk.... पक्षों|पक्ष.0|NN.n.m.pl.3.o को|को.|PSP.psp.... एक|एक.|QC.adj.any.any..any अधिनिर्णायक|अधिनिर्णायक.|NN.unk.... की|का.का|PSP.psp.f.sg..d नियुक्ति|नियुक्ति.0|NN.n.f.sg.3.d करनी|कर.ना|VM.v.f.sg.any. होती|हो.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. जिसे|जो.को|PRP.pn.any.sg.3.o मध्यस्थों|मध्यस्थ.0|NN.n.m.pl.3.o में|में.|PSP.psp.... असहमति|असहमति.0|NN.n.f.sg.3.d होने|हो.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d स्थिति|स्थिति.0|NN.n.m.sg.3.d में|में.|PSP.psp.... मामला|मामला.0|NN.n.m.sg.3.d प्रेषित|प्रेषित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+जोए|जोए.|NN.unk.... ,|,.|SYM.punc.... जो|जो.|PRP.avy.... तब|तब.|PRP.adv.... १५|१५.|QC.num.... साल|साल.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d था|था.था|VM.v.m.sg.any. ,|,.|SYM.punc.... और|और.|CC.adv.... अपनी|अपनी.0|PRP.n.f.sg.3.d माता|माता.0|NN.n.f.sg.3.d तथा|तथा.|CC.adv.... सौतेले|सौतेला.0|JJ.n.m.pl.3.d पिता|पिता.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... ऐडी|ऐडी.|XC.unk.... ,|,.|SYM.punc.... के|का.का|PSP.psp.m.sg..o साथ|साथ.|NST.adv.... रहता|रह.ता|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. ।|।.|SYM.punc....
+
+
+
+
+
+
+
+लेकिन|लेकिन.|CC.avy.... हर|हर.|QF.adj.any.any..any बार|बार.|RP.adv.... जब|जब.|PRP.adv.... आरक्षण|आरक्षण.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अवधि|अवधि.0|NN.n.f.sg.3.d समाप्त|समाप्त.0|JJ.n.m.sg.3.d हो|हो.0|VM.v.any.any.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. तो|तो.|CC.avy.... सरकार|सरकार.0|NN.n.f.sg.3.d अपने|अपना.0|PRP.n.m.pl.3.d विवेकानुसार|विवेकानुसार.|NN.unk.... उसे|उसे.|PRP.unk.... और|और.|CC.adv.... बढ़ाने|बढ़ाने.|NN.punc.... का|का.का|PSP.psp.m.sg..d निश्चय|निश्चय.0|NN.n.m.sg.3.d करती|कर.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... उसके|उसके.|PRP.unk.... लिए|ले.या|PSP.v.m.pl.any. संविधान|संविधान.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o संबद्ध|संबद्ध.|JJ.adj.any.any..any उपबंध|उपबंध.0|NN.n.m.sg.3.d में|में.|PSP.psp.... संशोधन|संशोधन.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. देती|दे.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. (|(.|SYM.punc.... अनुच्छेद|अनुच्छेद.0|NN.n.m.sg.3.d 334|334.|QC.num.... )|).|SYM.punc.... .|..|SYM.punc....
+
+
+
+सम्राट|सम्राट.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d न्यायालय|न्यायालय.0|NN.n.m.sg.3.d सर्वोच्च|सर्वोच्च.|JJ.adj.any.any..any अपीली|अपीली.|JJ.unk.... न्यायालय|न्यायालय.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. ,|,.|SYM.punc.... वह|वह.0|PRP.pn.any.sg.3.d देश|देश.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d सर्वोच्च|सर्वोच्च.|JJ.adj.any.any..any अधिकरण|अधिकरण.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+जो|जो.|PRP.avy.... लोग|लोग.0|NN.n.m.sg.3.d बच्चा|बच्चा.0|NN.n.m.sg.3.d या|या.|CC.avy.... फिर|फिर.0|RB.v.any.any.any. बच्चों|बच्चा.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d देखबाल|देखबाल.|NN.unk.... करते|कर.ता|VM.v.m.pl.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+ये|यह.0|DEM.pn.any.pl.3.d हालात|हालात.0|NN.n.m.sg.3.d दिखाते|दिखा.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. कि|कि.|CC.avy.... जहाज|जहाज.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... सावरकर|सावरकर.|NN.unk.... की|का.का|PSP.psp.f.sg..d निगरानी|निगरानी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. मौजूद|मौजूद.|JJ.adj.any.any..any व्यक्ति|व्यक्ति.0|NN.n.m.sg.3.d यह|यह.0|PRP.pn.any.sg.3.d सोचने|सोच.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d स्थिति|स्थिति.0|NN.n.m.sg.3.d में|में.|PSP.psp.... थे|था.था|VM.v.m.pl.any. कि|कि.|CC.avy.... उन्हें|उन्हें.|PRP.unk.... फ्रांसिसी|फ्रांसिसी.|JJ.unk.... पुलिस|पुलिस.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d सहायता|सहायता.0|NN.n.f.sg.3.d मिल|मिल.0|VM.v.any.any.any. सकती|सक.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+यह|यह.0|DEM.pn.any.sg.3.d समिति|समिति.0|NN.n.f.sg.3.d संसद|संसद.0|NN.n.m.sg.3.d और|और.|CC.adv.... संसद|संसद.0|JJ.n.m.sg.3.d सदस्यों|सदस्य.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d शक्तियों|शक्तियों.|NN.unk.... और|और.|CC.adv.... उनकी|उनकी.|PRP.unk.... प्रतिष्ठा|प्रतिष्ठा.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d रक्षा|रक्षा.0|NN.n.f.sg.3.d करने|कर.|VM.v.m.pl.any. में|में.|PSP.psp.... महत्वपूर्ण|महत्वपूर्ण.|JJ.adj.any.any..any भूमिका|भूमिका.0|NN.n.f.sg.3.d निभाती|निभा.ता|VM.v.f.sg.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+एक|एक.|QC.adj.any.any..any गुप्त|गुप्त.|JJ.adj.any.any..any योजना|योजना.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o तहत|तहत.0|NN.n.m.sg.3.d इन्होंने|इन्होंने.|PRP.pn.any.pl.3.o पुलिस|पुलिस.0|NN.n.f.sg.3.d सुपरिंटेंडेंट|सुपरिंटेंडेंट.|XC.unk.... सैंडर्स|सैंडर्स.|NNP.unk.... को|को.|PSP.psp.... मारने|मार.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d सोची|सोच.या|VM.v.f.sg.any. ।|।.|SYM.punc....
+
+
+इस|इस.|DEM.pn.any.sg.3.o प्रकार|प्रकार.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o अधिकरणों|अधिकरणों.|NN.unk.... के|का.का|PSP.psp.m.sg..o मुख्य|मुख्य.|JJ.adj.any.any..any कार्य|कार्य.0|NN.n.m.sg.3.d सुलह|सुलह.0|XC.n.f.sg.3.d -|-.|SYM.punc.... सफाई|सफाई.0|NN.n.f.sg.3.d कराने|करा.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o थे|था.था|PSP.v.m.pl.any. और|और.|CC.adv.... स्थानीय|स्थानीय.0|JJ.n.m.sg.3.d शासक|शासक.0|NN.n.m.sg.3.d उनके|उनके.|PRP.unk.... कार्य|कार्य.0|NN.n.m.sg.3.d में|में.|PSP.psp.... हस्तक्षेप|हस्तक्षेप.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... करते|कर.ता|VM.v.m.pl.any. थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+
+मगर|मगर.0|CC.n.m.sg.3.d उनके|उनके.|PRP.unk.... प्रतिद्वंद्वी|प्रतिद्वंद्वी.0|NN.n.m.sg.3.d कहते|कह.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. कि|कि.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d दंभी|दंभी.0|NN.n.f.sg.3.d हैं|है.है|VM.v.any.pl.1. और|और.|CC.adv.... खुद|खुद.0|PRP.v.any.any.any. को|को.|PSP.psp.... आगे|आगा.0|NST.n.m.pl.3.d बढने|बढ.ना|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d कोई|कोई.0|PRP.pn.any.sg.3.d मौका|मौका.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... चूकते|चूक.ता|VM.v.m.pl.any. ,|,.|SYM.punc.... जो|जो.|PRP.avy.... आरएसएस|आरएसएस.|NN.unk.... की|का.का|PSP.psp.f.sg..d शैली|शैली.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o विपरीत|विपरीत.|JJ.psp.... है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+इस|इस.|DEM.pn.any.sg.3.o सामान्य|सामान्य.|JJ.adj.any.any..any उद्देश्य|उद्देश्य.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o साथ|साथ.|NST.adv.... साथ|साथ.|NST.adv.... ,|,.|SYM.punc.... रेलवे|रेलवे.|XC.unk.... विस्तार|विस्तार.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d कार्यक्रम|कार्यक्रम.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... ,|,.|SYM.punc.... समय|समय.0|RDP.n.m.sg.3.d समय|समय.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... होने|हो.ना|VM.v.m.pl.any. वाली|वाली.0|PSP.n.f.sg.3.d विशेष|विशेष.0|JJ.n.m.sg.3.d विकासात्मक|विकासात्मक.|JJ.unk.... समस्याओं|समस्या.0|NN.n.f.pl.3.o से|से.|PSP.v.any.any.any. निबटने|निबट.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o उद्देश्य|उद्देश्य.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. रहा|रह.या|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+
+कार|कार.0|NN.n.f.sg.3.d को|को.|PSP.psp.... दिन|दिन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o उजाले|उजाला.0|NN.n.m.pl.3.d में|में.|PSP.psp.... पूरी|पूरी.0|JJ.n.f.sg.3.d तरह|तरह.|NN.adv.... जाँचिए|जाँच.एं|VM.v.any.sg.2h. और|और.|CC.adv.... चलाकर|चला.कर|VM.v.any.any.any. उसे|उसे.|PRP.unk.... टैस्ट|टैस्ट.|NN.unk.... ड्राईव|ड्राईव.|NN.unk.... कीजिए|कीजिए.|VM.unk.... ।|।.|SYM.punc....
+
+
+
+
+उसके|उसके.|PRP.unk.... लिए|ले.या|PSP.v.m.pl.any. यह|यह.0|PRP.pn.any.sg.3.d बड़ी|बड़ी.|JJ.punc.... यंत्रणा|यंत्रणा.0|NN.n.f.sg.3.d थी|था.था|VM.v.f.sg.any. जिसे|जो.को|PRP.pn.any.sg.3.o उसको|उसको.|PRP.unk.... सहन|सहन.|NN.adj.any.any..any करना|कर.ना|VM.v.m.sg.any. ही|ही.|RP.adv.... गुरू|गुरू.|NN.unk.... के|का.का|PSP.psp.m.sg..o पास|पास.|NST.adv.... शिक्षा|शिक्षा.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. ले|ले.0|VM.v.any.any.any. जाया|जा.या|VAUX.v.m.sg.any. गया|गया.|VAUX.unk.... .|..|SYM.punc....
+
+
+झिल्ली|झिल्ली.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o कसाव|कसाव.|NN.unk.... में|में.|PSP.psp.... यह|यह.0|DEM.pn.any.sg.3.d परिवर्तन|परिवर्तन.0|NN.n.m.sg.3.d उससे|उससे.|PRP.unk.... निकलने|निकल.ना|VM.v.m.pl.any. वाली|वाली.0|PSP.n.f.sg.3.d आवाज|आवाज.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d आवृति|आवृति.0|NN.n.f.sg.3.d को|को.|PSP.psp.... बदल|बदल.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... इस|इस.|DEM.pn.any.sg.3.o तरह|तरह.|NN.adv.... अलग|अलग.|JJ.adj.any.any..any अलग|अलग.|JJ.adj.any.any..any प्रकार|प्रकार.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d मधुर|मधुर.|JJ.adj.any.any..any आवाज|आवाज.0|NN.n.f.sg.3.d निकाली|निकाल.या|VM.v.f.sg.any. जा|जा.0|VAUX.v.any.any.any. सकती|सक.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+यह|यह.0|PRP.pn.any.sg.3.d केवल|केवल.|RP.adv.... इस|इस.|DEM.pn.any.sg.3.o बात|बात.0|NN.n.f.sg.3.d पर|पर.|PSP.psp.... निर्भर|निर्भर.|JJ.adj.any.any..any नही|नही.|NEG.unk.... करता|कर.ता|VM.v.m.sg.any. कि|कि.|CC.avy.... आप|आप.0|PRP.pn.any.any.any.o कितनी|कितनी.|QF.adj.f.any..any मात्रा|मात्रा.0|NN.n.f.sg.3.d में|में.|PSP.psp.... शक्कर|शक्कर.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d सेवन|सेवन.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. है|है.है|VAUX.v.any.sg.2. यह|यह.0|PRP.pn.any.sg.3.d इस|इस.|DEM.pn.any.sg.3.o पर|पर.|PSP.psp.... भी|भी.|RP.adv.... निर्भर|निर्भर.|JJ.adj.any.any..any करता|कर.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... दिन|दिन.0|NN.n.m.sg.3.d भर|भर.0|RP.v.any.any.any. में|में.|PSP.psp.... कितनी|कितनी.|QF.adj.f.any..any बार|बार.|RP.adv.... शक्कर|शक्कर.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d सेवन|सेवन.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+एच|एच.|XC.unk.... .|..|SYM.punc.... ई|ई.|SYM.n.f.sg.3.d .|..|SYM.punc.... सी|सी.0|RP.v.any.any.any. .|..|SYM.punc.... अब|अब.|PRP.adv.... अपने|अपना.0|PRP.n.m.pl.3.d उत्पादों|उत्पाद.0|NN.n.m.pl.3.o में|में.|PSP.psp.... वैविध्यकरण|वैविध्यकरण.|NN.unk.... का|का.का|PSP.psp.m.sg..d कार्य|कार्य.0|NN.n.m.sg.3.d हाथ|हाथ.0|NN.n.m.sg.3.d में|में.|PSP.psp.... ले|ले.0|VM.v.any.any.any. रहा|रह.या|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+इन|इन.|DEM.pn.any.pl.3.o कार्यविधियों|कार्यविधि.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d जानकारी|जानकारी.0|NN.n.f.sg.3.d प्राप्त|प्राप्त.|JJ.adj.any.any..any हो|हो.0|VM.v.any.any.any. जाने|जान.एं|VAUX.v.any.sg.2. तक|तक.|RP.avy.... अपना|अपना.0|PRP.n.m.sg.3.d काम|काम.0|NN.n.m.sg.3.d प्रारंभ|प्रारंभ.0|NN.n.m.sg.3.d न|न.|NEG.adv.... करने|कर.|VM.v.m.pl.any. को|को.|PSP.psp.... एक|एक.|QC.adj.any.any..any मूर्खता|मूर्खता.0|NN.n.f.sg.3.d भरा|भरा.|JJ.adj.m.sg..d कदम|कदम.0|NN.n.m.sg.3.d कहते|कह.ता|VM.v.m.pl.any. .|..|SYM.punc.... उन्होंने|उन्होंने.|PRP.unk.... इसलिए|इसलिये.|CC.avy.... पौधों|पौधा.0|NN.n.m.pl.3.o तथा|तथा.|CC.adv.... प्राणियों|प्राणी.0|NN.n.m.pl.3.o में|में.|PSP.psp.... आनुवंशिक|आनुवंशिक.|JJ.adj.any.any..any परिवर्तन|परिवर्तन.0|NN.n.m.sg.3.d लाने|ला.ना|VM.v.m.pl.any. हेतु|हेतु.|PSP.psp.... परिवेश|परिवेश.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o करकों|करकों.|NN.unk.... की|का.का|PSP.psp.f.sg..d सहायता|सहायता.0|NN.n.f.sg.3.d लेने|ले.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o प्रयास|प्रयास.0|NN.n.m.sg.3.d जारी|जारी.0|JJ.n.f.sg.3.d रखना|रख.ना|VM.v.m.sg.any. उचित|उचित.|JJ.adj.any.any..any समझा|समझा.0|VM.v.any.any.any. .|..|SYM.punc....
+
+वित्त|वित्त.0|JJ.n.m.sg.3.d मंत्री|मंत्री.0|NN.n.f.sg.3.d जानते|जान.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. कि|कि.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d खुद|खुद.0|PRP.v.any.any.any. उस|उस.|DEM.unk.... सरकार|सरकार.0|NN.n.f.sg.3.d में|में.|PSP.psp.... काम|काम.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. हैं|है.है|VAUX.v.any.pl.1. जिसने|जो.ने|PRP.pn.any.sg.3.o आर्थिक|आर्थिक.|JJ.adj.any.any..any सुधारों|सुधार.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d प्रक्रिया|प्रक्रिया.0|NN.n.f.sg.3.d रोक|रोक.0|VM.v.any.any.any. दी|दे.या|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc.... फिर|फिर.0|RB.v.any.any.any. भी|भी.|RP.adv.... वे|वह.0|PRP.pn.any.pl.3.d करिश्मे|करिश्मा.0|NN.n.m.pl.3.d और|और.|CC.adv.... 7|7.|QC.num.... फीसदी|फीसदी.|NN.unk.... विकास|विकास.0|NN.n.m.sg.3.d दर|दर.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d बात|बात.0|NN.n.f.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+
+बकरी|बकरी.0|NN.n.f.sg.3.d को|को.|PSP.psp.... जहां|जहाँ.|PRP.adv.... रखा|रखा.0|VM.v.any.any.any. जाये|जा.एं|VAUX.v.any.sg.2. ,|,.|SYM.punc.... उस|उस.|DEM.unk.... स्थान|स्थान.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. जल|जल.0|XC.v.any.any.any. निकास|निकास.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d भी|भी.|RP.adv.... सदा|सदा.|RB.adv.... ठीक|ठीक.|JJ.adj.any.any..any व्यवस्था|व्यवस्था.0|NN.n.f.sg.3.d होनी|हो.ना|VM.v.f.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. .|..|SYM.punc....
+
+भारत|भारत.0|NNP.n.m.sg.3.d में|में.|PSP.psp.... ,|,.|SYM.punc.... विशेषकर|विशेषकर.|RB.unk.... मुसलमानों|मुसलमान.0|NN.n.m.pl.3.o में|में.|PSP.psp.... ,|,.|SYM.punc.... पुरूषों|पुरूषों.|NN.unk.... और|और.|CC.adv.... महिलाओं|महिला.0|NN.n.f.pl.3.o की|का.का|PSP.psp.f.sg..d दुनिया|दुनिया.0|NN.n.f.sg.3.d अलग|अलग.|JJ.adj.any.any..any -|-.|SYM.punc.... अलग|अलग.|RDP.adv.... थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+वैसे|वैसे.|PRP.adv.... ,|,.|SYM.punc.... यह|यह.0|PRP.pn.any.sg.3.d स्पष्ट|स्पष्ट.0|JJ.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... है|है.है|VM.v.any.sg.2. कि|कि.|CC.avy.... कितनी|कितनी.|QF.adj.f.any..any कंपनियां|कंपनियां.|NN.unk.... अपने|अपना.0|PRP.n.m.pl.3.d वादे|वादा.0|NN.n.m.pl.3.d से|से.|PSP.v.any.any.any. पीछे|पीछा.0|NST.n.m.pl.3.d हटीं|हट.या|VM.v.f.pl.any. .|..|SYM.punc....
+
+वह|वह.0|PRP.pn.any.sg.3.d जानता|जान.ता|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. कि|कि.|CC.avy.... उसका|उसका.0|PRP.v.any.any.any. अन्त|अन्त.0|NN.n.m.sg.3.d समय|समय.0|NN.n.m.sg.3.d आ|आ.|VM.v.any.any.any. गया|गया.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. वह|वह.0|PRP.pn.any.sg.3.d मरना|मर.ना|VM.v.m.sg.any. चाहता|चाह.ता|VAUX.v.m.sg.any. भी|भी.|RP.adv.... था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+वेद|वेद.0|XC.n.m.sg.3.d हिन्दू|हिंदू.0|XC.n.m.sg..d धर्म|धर्म.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o प्राचीन|प्राचीन.0|JJ.n.m.sg.3.d पवित्र|पवित्र.|JJ.adj.any.any..any ग्रंथों|ग्रंथ.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d नाम|नाम.0|NN.n.m.sg.3.d है|है.है|VM.v.any.sg.2. ।|।.|SYM.punc....
+
+हां|हाँ.|INJ.avy.... ,|,.|SYM.punc.... उनके|उनके.|PRP.unk.... हत्यारों|हत्यारा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d पता|पता.0|JJ.n.m.sg.3.d लगाना|लगा.ना|VM.v.m.sg.any. जरूर|जरूर.|RB.adv.... उसकी|उसकी.|PRP.unk.... जिमेदारी|जिमेदारी.|NN.unk.... है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+
+इस|इस.|DEM.pn.any.sg.3.o समूची|समूची.|JJ.unk.... प्रक्रिया|प्रक्रिया.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o पश्चात|पश्चात.|PSP:?.unk.... विधेयक|विधेयक.0|NN.n.m.sg.3.d सदन|सदन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o समक्ष|समक्ष.|JJ.adj.any.any..any लाए|ला.एं|VM.v.any.sg.2. जाने|जान.एं|VAUX.v.any.sg.2. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. तैयार|तैयार.|JJ.adj.any.any..any हो|हो.0|VM.v.any.any.any. जात|जात.0|VAUX.n.m.sg.3.d है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+यव|यव.0|NN.n.m.sg.3.d अथवा|अथवा.|CC.avy.... जौ|जौ.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o आकार|आकार.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o वाद्य|वाद्य.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... ढोल|ढोल.0|NN.n.m.sg.3.d होते|हो.ता|VM.v.m.pl.any. थे|था.था|VAUX.v.m.pl.any. और|और.|CC.adv.... आज|आज.|NN.adv.... के|का.का|PSP.psp.m.sg..o मृदंग|मृदंग.0|NN.n.m.sg.3.d जैसे|जैसे.|RP.adv.... थे|था.था|VAUX.v.m.pl.any. .|..|SYM.punc....
+
+
+
+
+वहां|वहाँ.|PRP.adv.... एक|एक.|QC.adj.any.any..any साल|साल.0|NN.n.m.sg.3.d तक|तक.|RP.avy.... पढ़ने|पढ़ने.|NNP.punc.... के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... मैं|मैं.0|PRP.pn.any.sg.1.d इस|इस.|DEM.pn.any.sg.3.o बात|बात.0|NN.n.f.sg.3.d को|को.|PSP.psp.... स्वीकार|स्वीकार.0|NN.n.m.sg.3.d करके|कर.कर|VM.v.any.any.any. वापिस|वापिस.|XC.unk.... बंगाल|बंगाल.0|NNP.n.m.sg.3.d आया|आ.या|VM.v.m.sg.any. कि|कि.|CC.avy.... विशुद्ध|विशुद्ध.0|JJ.n.m.sg.3.d राजनीतिक|राजनीतिक.|JJ.adj.any.any..any प्रचार|प्रचार.0|NN.n.m.sg.3.d देश|देश.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. अपर्याप्त|अपर्याप्त.|JJ.adj.any.any..any है|है.है|VM.v.any.sg.2. और|और.|CC.adv.... खतरों|खतरा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d सामना|सामना.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. लोगों|लोग.0|NN.n.m.pl.3.o को|को.|PSP.psp.... मानसिक|मानसिक.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. तैयार|तैयार.|JJ.adj.any.any..any करना|कर.ना|VM.v.m.sg.any. जरूरी|जरूरी.|JJ.adj.f.any..any है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+भारतीय|भारतीय.0|JJ.n.m.sg.3.d कोयला|कोयला.0|NN.n.m.sg.3.d सबसे|सबसे.|INTF.adj.any.any..any सस्ता|सस्ता.|JJ.adj.m.sg..d था|था.था|VM.v.m.sg.any. परंतु|परंतु.|CC.avy.... इसकी|इसकी.|PRP.pn.f.sg.3.d गुणवत्ता|गुणवत्ता.0|NN.n.m.sg.3.d को|को.|PSP.psp.... देखते|देख.ता|VM.v.m.pl.any. हुए|हो.या|VAUX.v.m.pl.any. यह|यह.0|PRP.pn.any.sg.3.d अधिक|अधिक.|QF.adv.... लाभप्रद|लाभप्रद.|JJ.unk.... नहीं|नहीं.|NEG.adv.... था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+जबकि|जबकि.|CC.avy.... सबसे|सबसे.|INTF.adj.any.any..any पहली|पहली.|QO.adj.f.any..any मिल|मिल.0|NN.n.f.sg.3.d को|को.|PSP.psp.... कोई|कोई.0|PRP.pn.any.sg.3.d विशेष|विशेष.0|JJ.n.m.sg.3.d सफलता|सफलता.0|NN.n.f.sg.3.d नहीं|नहीं.|NEG.adv.... मिली|मिल.या|VM.v.f.sg.any. ,|,.|SYM.punc.... दूसरी|दूसरी.|QO.unk.... मिल|मिल.0|NN.n.f.sg.3.d ने|ने.|PSP.psp.... 13|13.|QC.num.... वर्षों|वर्ष.0|NN.n.m.pl.3.o में|में.|PSP.psp.... ही|ही.|RP.adv.... अपनी|अपनी.0|PRP.n.f.sg.3.d पूंजी|पूंजी.0|NN.n.f.sg.3.d को|को.|PSP.psp.... दुगुनी|दुगुनी.|JJ.unk.... कर|कर.0|VM.v.any.any.any. लिया|ले.या|VAUX.v.m.sg.any. और|और.|CC.adv.... बाद|बाद.|NST.adv.... की|का.का|PSP.psp.f.sg..d दो|दो.0|QC.n.m.sg.3.d मिलों|मिल.0|NN.n.f.pl.3.o ने|ने.|PSP.psp.... केवल|केवल.|RP.adv.... पैसा|पैसा.0|NN.n.m.sg.3.d ही|ही.|RP.adv.... कमाया|कमा.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+सूची|सूची.0|NN.n.f.sg.3.d 1|1.|QC.num.... अथवा|अथवा.|CC.avy.... संघ|संघ.0|NN.n.m.sg.3.d सूची|सूची.0|NN.n.f.sg.3.d में|में.|PSP.psp.... 97|97.|QC.num.... विषय|विषय.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. जिनके|जो.का|PRP.pn.m.pl.3.d बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... केवल|केवल.|RP.adv.... संसद|संसद.0|NN.n.m.sg.3.d ही|ही.|RP.adv.... विधान|विधान.0|JJ.n.m.sg.3.d बना|बना.0|VM.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+
+
+
+कहा|कह.या|VM.v.m.sg.any. जा|जा.0|VAUX.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... संसदीय|संसदीय.0|JJ.n.m.sg.3.d प्रणाली|प्रणाली.0|NN.n.f.sg.3.d में|में.|PSP.psp.... कार्यपालिका|कार्यपालिका.|NN.unk.... के|का.का|PSP.psp.m.sg..o उत्तरदायित्व|उत्तरदायित्व.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d संकल्पना|संकल्पना.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... अधिक|अधिक.|QF.adv.... बल|बल.0|NN.n.m.sg.3.d दिया|दे.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. जबकि|जबकि.|CC.avy.... राष्ट्रपतीय|राष्ट्रपतीय.|JJ.unk.... प्रणाली|प्रणाली.0|NN.n.f.sg.3.d में|में.|PSP.psp.... स्पष्टतया|स्पष्टतया.|RB.unk.... कार्यपालिका|कार्यपालिका.|NN.unk.... के|का.का|PSP.psp.m.sg..o स्थायित्व|स्थायित्व.0|NN.n.m.sg.3.d को|को.|PSP.psp.... अधिक|अधिक.|QF.adv.... महत्व|महत्व.0|NN.n.m.sg.3.d दिया|दे.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+यह|यह.0|DEM.pn.any.sg.3.d पाबंदी|पाबंदी.0|NN.n.f.sg.3.d जरूरी|जरूरी.|JJ.adj.f.any..any है|है.है|VM.v.any.sg.2. ,|,.|SYM.punc.... नहीं|नहीं.|NEG.adv.... तो|तो.|RP.avy.... जमींदारियां|जमींदारियां.|NN.unk.... दुबारा|दुबारा.|JJ.unk.... बन|बन.0|VM.v.any.any.any. जायेंगी|जा.गा|VAUX.v.f.pl.1. .|..|SYM.punc....
+
+वह|वह.0|PRP.pn.any.sg.3.d समस्या|समस्या.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o समाधान|समाधान.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. गैरसरकारी|गैरसरकारी.|JJ.unk.... संग|संग.|NN.psp.... नों|नों.|NN.unk.... का|का.का|PSP.psp.m.sg..d इंतजार|इंतजार.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. रही|रह.या|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc.... '|'.|SYM.punc.... '|'.|SYM.punc....
+
+
+
+
+
+इस|इस.|DEM.pn.any.sg.3.o संविधान|संविधान.0|NN.n.m.sg.3.d सभा|सभा.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. चुनाव|चुनाव.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d ब्यौरा|ब्यौरा.|NN.unk.... तैयार|तैयार.|JJ.adj.any.any..any करने|कर.|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. जनता|जनता.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o प्रतिनिधियों|प्रतिनिधि.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d एक|एक.|QC.adj.any.any..any कमेटी|कमेटी.0|NN.n.f.sg.3.d बनायी|बना.या|VM.v.f.sg.any. जानी|जान.या|VAUX.v.f.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. .|..|SYM.punc....
+
+
+ताजमहल|ताजमहल.0|NN.n.m.sg.3.d में|में.|PSP.psp.... शिव|शिव.0|NNP.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d पाँचवा|पाँचवा.|JJ.adj.m.sg..d रूप|रूप.0|NN.n.m.sg.3.d अग्रेश्वर|अग्रेश्वर.|XC.unk.... महादेव|महादेव.0|NNP.n.m.sg.3.d नागनाथेश्वर|नागनाथेश्वर.|NN.unk.... विराजित|विराजित.|JJ.unk.... है|है.है|VM.v.any.sg.2. (|(.|SYM.punc.... अति|अति.|INTF.adv.... विस्तृत|विस्तृत.0|JJ.n.m.sg.3.d लेख|लेख.0|NN.n.m.sg.3.d )|).|SYM.punc....
+
+
+
+
+
+अधिकांश|अधिकांश.|JJ.adj.any.any..any पूराण|पूराण.|NN.unk.... विष्णु|विष्णु.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o नाम|नाम.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. हैं|है.है|VM.v.any.pl.1. और|और.|CC.adv.... कुछ|कुछ.|QF.adj.any.any..d ब्रह्मा|ब्रह्मा.0|NN.n.m.sg.3.d या|या.|CC.avy.... शिव|शिव.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o नाम|नाम.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. .|..|SYM.punc....
+
+
+
+कुछ|कुछ.|QF.adj.any.any..d कीट|कीट.0|NN.n.m.sg.3.d ऐसे|ऐसे.|PRP.adv.... भी|भी.|RP.adv.... हैं|है.है|VM.v.any.pl.1. जो|जो.|PRP.avy.... पत्तियों|पत्ती.0|NN.n.f.pl.3.o ,|,.|SYM.punc.... झाडियों|झाडी.0|NN.n.f.pl.3.o ,|,.|SYM.punc.... घास|घास.0|NN.n.f.sg.3.d आदि|आदि.0|RP.n.m.sg.3.d में|में.|PSP.psp.... और|और.|CC.adv.... खुले|खुला.|JJ.adj.m.sg..o मैदान|मैदान.0|NN.n.m.sg.3.d में|में.|PSP.psp.... भी|भी.|RP.adv.... समागम|समागम.0|NN.n.m.sg.3.d करते|कर.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+सेल्युकस|सेल्युकस.|XC.unk.... नेक्टर|नेक्टर.|XC.unk.... सिकन्दर|सिकन्दर.|NNP.unk.... के|का.का|PSP.psp.m.sg..o सबसे|सबसे.|INTF.adj.any.any..any शक्तिशाली|शक्तिशाली.|JJ.adj.f.any..any उत्तराधिकारियों|उत्तराधिकारी.0|NN.n.m.pl.3.o में|में.|PSP.psp.... से|से.|PSP.v.any.any.any. एक|एक.|QC.adj.any.any..any था|था.था|VM.v.m.sg.any. ।|।.|SYM.punc....
+
+
+
+
+आपके|आप.का|PRP.pn.m.pl.any.d स्वास्थ्य|स्वास्थ्य.0|NN.n.m.sg.3.d को|को.|PSP.psp.... हानि|हानि.0|NN.n.f.sg.3.d पहुँचाने|पहुँचा.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d संभावना|संभावना.0|NN.n.f.sg.3.d रखने|रख.ना|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d तत्वों|तत्वों.|NN.unk.... पर|पर.|PSP.psp.... रोक|रोक.0|VM.v.any.any.any. लगाना|लगा.ना|VM.v.m.sg.any. या|या.|CC.avy.... उनके|उनके.|PRP.unk.... सम्पर्क|संपर्क.0|NN.n.m.sg..d में|में.|PSP.psp.... आने|आ.ना|VM.v.m.pl.any. पर|पर.|PSP.psp.... पर्याप्त|पर्याप्त.|JJ.adj.any.any..any नियंत्रण|नियंत्रण.0|NN.n.m.sg.3.d रखना|रख.ना|VM.v.m.sg.any. ,|,.|SYM.punc....
+
+साफ|साफ.0|JJ.n.m.sg.3.d दूध|दूध.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d तुलना|तुल.ना|NN.v.m.sg.any. में|में.|PSP.psp.... बिना|बिन.या|NEG.v.m.sg.any. साफ|साफ.0|JJ.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. दूध|दूध.0|NN.n.m.sg.3.d अधिक|अधिक.|QF.adv.... जल्दी|जल्दी.0|RB.n.f.sg.3.d खट्टा|खट्टा.|VM.adj.m.sg..d हो|हो.0|VAUX.v.any.any.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+किसी|किसी.|PRP.unk.... भी|भी.|RP.adv.... कम्प्यूटर|कम्प्यूटर.|XC.unk.... (|(.|SYM.punc.... विशेष|विशेष.0|JJ.n.m.sg.3.d रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. सर्वर|सर्वर.|NN.unk.... )|).|SYM.punc.... को|को.|PSP.psp.... विभिन्न|विभिन्न.0|JJ.n.m.sg.3.d संकेत|संकेत.0|NN.n.m.sg.3.d लिपियां|लिपि.0|NN.n.f.pl..d संभालनी|संभालनी.|VM.unk.... पड़ती|पड़ती.|NNP.adv.... है|है.है|VM.v.any.sg.2. ;|;.|SYM.punc.... फिर|फिर.0|RB.v.any.any.any. भी|भी.|RP.adv.... जब|जब.|PRP.adv.... दो|दो.0|QC.n.m.sg.3.d विभिन्न|विभिन्न.0|JJ.n.m.sg.3.d संकेत|संकेत.0|NN.n.m.sg.3.d लिपियों|लिपि.0|NN.n.f.pl.3.o अथवा|अथवा.|CC.avy.... प्लैटफॉर्मों|प्लैटफॉर्मों.|NN.unk.... के|का.का|PSP.psp.m.sg..o बीच|बीच.|NST.psp.... डाटा|डाटा.|NN.unk.... भेजा|भेज.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. तो|तो.|CC.avy.... उस|उस.|DEM.unk.... डाटा|डाटा.|NN.unk.... के|का.का|PSP.psp.m.sg..o हमेशा|हमेशा.|RB.adv.... खराब|खराब.|JJ.adj.any.any..any होने|हो.ना|VM.v.m.pl.any. का|का.का|PSP.psp.m.sg..d जोखिम|जोखिम.0|NN.n.m.sg.3.d रहता|रह.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+1949ः|1949ः.|QC.num.... भगवान|भगवान.|XC.unk.... राम|राम.0|NNP.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d एक|एक.|QC.adj.any.any..any प्रतिमा|प्रतिमा.0|NN.n.f.sg.3.d मस्जिद|मस्जिद.0|NN.n.f.sg.3.d में|में.|PSP.psp.... स्थापित|स्थापित.0|JJ.n.m.sg.3.d की|कर.या|VM.v.f.sg.any. गई|गई.|VAUX.unk.... .|..|SYM.punc....
+
+
+
+
+
+
+
+आप|आप.0|PRP.pn.any.any.any.o ने|ने.|PSP.psp.... नयी|नयी.|JJ.adj.f.any..any नौकरी|नौकरी.0|NN.n.f.sg.3.d शुरु|शुरु.|NN.unk.... करने|कर.|VM.v.m.pl.any. से|से.|PSP.v.any.any.any. पहले|पहले.|NST.adv.... 13|13.|QC.num.... हफ्ते|हफ्ता.0|NN.n.m.pl.3.d कोई|कोई.0|PRP.pn.any.sg.3.d भी|भी.|RP.adv.... आमदनी|आमदनी.0|NN.n.f.sg.3.d वाला|वाला.0|PSP.n.m.sg.3.d काम|काम.0|NN.n.m.sg.3.d नही|नही.|NEG.unk.... किया|कर.या|VM.v.m.sg.any. हो|हो.0|VAUX.v.any.any.any. .|..|SYM.punc....
+
+
+लेकिन|लेकिन.|CC.avy.... इसके|इसके.|PRP.pn.m.pl.3.d बावजूद|बावजूद.0|PSP:?.n.m.sg.3.d दूसरे|दूसरा.0|QO.n.m.pl.3.d देश|देश.0|NN.n.m.sg.3.d उन्हे|उन्हे.|PRP.unk.... उच्चकोटि|उच्चकोटि.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d अम्पायर|अम्पायर.|NN.unk.... नहीं|नहीं.|NEG.adv.... मानते|मान.ता|VM.v.m.pl.any. .|..|SYM.punc....
+
+
+शीध्र|शीध्र.|NN.unk.... ही|ही.|RP.adv.... यह|यह.0|PRP.pn.any.sg.3.d ऐसे|ऐसे.|DEM.adv.... गुप्त|गुप्त.|JJ.adj.any.any..any संगठन|स्वास्थ्य.0|NN.n.m.sg.3.d मे|मा.0|PSP.n.m.pl.3.d परिवर्तित|परिवर्तित.|JJ.adj.any.any..any हो|हो.0|VM.v.any.any.any. गई|गई.|VAUX.unk.... जो|जो.|PRP.avy.... सारे|सारा.|QF.adj.m.sg..o बंगाल|बंगाल.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o क्रांतिकारी|क्रांतिकारी.0|JJ.n.m.sg.3.d कार्यकलापों|कार्यकलापों.|NN.unk.... को|को.|PSP.psp.... केंद्र|केंद्र.0|NN.n.m.sg.3.d था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+
+
+नेपाल|नेपाल.0|NNP.n.m.sg.3.d मे|मा.0|PSP.n.m.pl.3.d बहुत|बहुत.|QF.adj.any.any..any पहिले|पहिले.|NN.unk.... से|से.|PSP.v.any.any.any. आयुर्वेद|आयुर्वेद.|NN.unk.... (|(.|SYM.punc.... प्राकृतिक|प्राकृतिक.|JJ.adj.any.any..any चिकित्सा|चिकित्सा.0|XC.n.f.sg.3.d )|).|SYM.punc.... पद्धती|पद्धती.|JJ.unk.... उपयोगमे|उपयोगमे.|NN.unk.... था|था.था|VM.v.m.sg.any. बैध|बैध.|NN.unk.... और|और.|CC.adv.... परंपरागत|परंपरागत.|JJ.adj.any.any..any चिकित्सक|चिकित्सक.0|NN.n.m.sg.3.d गाँवघर|गाँवघर.|NN.unk.... और|और.|CC.adv.... शहरो|शहरो.|NN.unk.... मे|मा.0|PSP.n.m.pl.3.d स्वास्थ्य|स्वास्थ्य.0|XC.n.m.sg.3.d सेवा|सेवा.0|NN.n.f.sg.3.d पहुचाते|पहुचाते.|VM.unk.... थे|था.था|VAUX.v.m.pl.any. ।|।.|SYM.punc....
+
+
+जल्द|जल्द.|NN.adj.any.any..any ही|ही.|RP.adv.... यह|यह.0|DEM.pn.any.sg.3.d खबर|खबर.0|NN.n.f.sg.3.d भारत|भारत.0|NNP.n.m.sg.3.d भी|भी.|RP.adv.... आ|आ.|VM.v.any.any.any. पहुंची|पहुंची.|VAUX.unk.... और|और.|CC.adv.... देश|देश.0|NN.n.m.sg.3.d भर|भर.0|RP.v.any.any.any. में|में.|PSP.psp.... आवेशपूर्ण|आवेशपूर्ण.|JJ.unk.... चर्चा|चर्चा.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d विषय|विषय.0|NN.n.m.sg.3.d बन|बन.0|VM.v.any.any.any. गयी|गयी.|VAUX.unk.... .|..|SYM.punc....
+
+
+
+
+
+मानव|मानव.0|XC.n.m.sg.3.d शिश्न|शिश्न.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d शरीर|शरीर.0|NN.n.m.sg.3.d रचना|रचना.0|NN.n.f.sg.3.d का|का.का|PSP.psp.m.sg..d आरेख|आरेख.|NN.unk.... .|..|SYM.punc.... (|(.|SYM.punc.... आवर्धन|आवर्धन.|NN.unk.... हेतु|हेतु.|PSP.psp.... क्लिक|क्लिक.|JJ.unk.... करें|कर.एं|VM.v.any.pl.1. )|).|SYM.punc....
+
+
+दिल्ली|दिल्ली.0|NNP.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d यात्रा|यात्रा.0|NN.n.f.sg.3.d गांधी|गांधी.0|NNP.n.f.sg.3.d जी|जी.0|RP.v.any.any.any. के|का.का|PSP.psp.m.sg..o उदार|उदार.0|JJ.n.m.sg.3.d मनोभावों|मनोभाव.0|NN.n.m.pl.3.o और|और.|CC.adv.... रवीन्द्रनाथ|रवीन्द्रनाथ.|NN.unk.... के|का.का|PSP.psp.m.sg..o स्वास्थ्य|स्वास्थ्य.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o प्रति|प्रति.|PSP.adv.... उनकी|उनकी.|PRP.unk.... व्यग्रता|व्यग्रता.|NN.unk.... के|का.का|PSP.psp.m.sg..o नाते|नाता.0|NN.n.m.pl.3.d जितना|जितना.|QF.adj.m.sg..d स्मरणीय|स्मरणीय.0|JJ.n.m.sg.3.d रही|रह.या|VM.v.f.sg.any. ,|,.|SYM.punc.... उतनी|उतनी.|QF.adj.f.any..any ही|ही.|RP.adv.... कष्टकर|कष्टकर.|NN.adj.any.any..any भी|भी.|RP.adv.... रही|रह.या|VAUX.v.f.sg.any. -|-.|SYM.punc.... ब्रिटिश|ब्रिटिश.|JJ.adj.any.any..any सरकार|सरकार.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o अनुदार|अनुदार.|JJ.adj.any.any..any घमंडी|घमंडी.|JJ.adj.f.any..any व्यवहार|व्यवहार.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. .|..|SYM.punc....
+
+यह|यह.0|DEM.pn.any.sg.3.d रसायन|रसायन.0|NN.n.m.sg.3.d मिथाइल|मिथाइल.|NN.unk.... आइसोसाइनेट|आइसोसाइनेट.|NN.unk.... (|(.|SYM.punc.... मिक|मिक.|JJ.unk.... )|).|SYM.punc.... से|से.|PSP.v.any.any.any. बनता|बन.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. ,|,.|SYM.punc.... जिसके|जो.का|PRP.pn.m.pl.3.d रिसने|रिस.ना|VM.v.m.pl.any. से|से.|PSP.v.any.any.any. 1984|1984.|QC.num.... की|का.का|PSP.psp.f.sg..d भोपाल|भोपाल.|NN.unk.... गैस|गैस.0|XC.n.f.sg.3.d दुर्घटना|दुर्घटना.0|NN.n.f.sg.3.d में|में.|PSP.psp.... लगभग|लगभग.|RB.adv.... 4000|4000.|QC.num.... लोगों|लोग.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d मृत्यु|मृत्यु.0|NN.n.f.sg.3.d हुई|हो.या|VM.v.f.sg.any. थी|था.था|VAUX.v.f.sg.any. .|..|SYM.punc....
+
+
+ऐसा|ऐसा.|PRP.adj.m.sg..d ज्ञात|ज्ञात.|JJ.adj.any.any..any होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... आधुनिक|आधुनिक.|JJ.adj.any.any..any संसदीय|संसदीय.0|JJ.n.m.sg.3.d लोकमत|लोकमत.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o कुछ|कुछ.|QF.adj.any.any..d महत्वपूर्ण|महत्वपूर्ण.|JJ.adj.any.any..any तत्व|तत्व.|NN.unk.... ,|,.|SYM.punc.... जैसे|जैसे.|PSP.adv.... निर्बाध|निर्बाध.0|JJ.n.m.sg.3.d चर्चा|चर्चा.0|NN.n.f.sg.3.d और|और.|CC.adv.... बहुमत|बहुमत.|NN.unk.... द्वारा|द्वारा.|PSP.psp.... निर्णय|निर्णय.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... तब|तब.|PRP.adv.... भी|भी.|RP.adv.... विद्यमान|विद्यमान.0|JJ.n.m.sg.3.d थे|था.था|VM.v.m.pl.any. .|..|SYM.punc....
+
+
+
+
+
+
+
+वैज्ञानिक|वैज्ञानिक.0|JJ.n.m.sg.3.d निष्कर्ष|निष्कर्ष.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o प्रचार|प्रचार.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o कारन|कारन.|NN.unk.... दुनिया|दुनिया.0|NN.n.f.sg.3.d में|में.|PSP.psp.... राजनीतिक|राजनीतिक.|JJ.adj.any.any..any और|और.|CC.adv.... आर्थिक|आर्थिक.|JJ.adj.any.any..any बहस|बहस.0|NN.n.m.sg.3.d चिद|चिद.|VM.unk.... गई|गई.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc.... गरीब|गरीब.|JJ.adj.any.any..any क्षेत्रों|क्षेत्र.0|NN.n.m.pl.3.o खासकर|खासकर.|VM.adv.... अफ्रीका|अफ्रीका.|NNP.unk.... पर|पर.|PSP.psp.... बडा|बडा.|JJ.adj.m.sg..d जोखिम|जोखिम.0|NN.n.m.sg.3.d दिखाई|दिखा.या|VM.v.f.sg.any. देता|दे.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. जबकि|जबकि.|CC.avy.... उनके|उनके.|PRP.unk.... उत्सर्जन|उत्सर्जन.0|NN.n.m.sg.3.d विकसित|विकसित.|JJ.adj.any.any..any देशों|देश.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d तुलना|तुल.ना|NN.v.m.sg.any. में|में.|PSP.psp.... काफी|काफी.0|INTF.n.f.sg.3.d कम|कम.|QF.adj.any.any..any रहे|रह.एं|VM.v.any.sg.2. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+इसलिए|इसलिये.|CC.avy.... अगर|अगर.|CC.adv.... क्षतिपूर्ति|क्षतिपूर्ति.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o आदेश|आदेश.0|NN.n.m.sg.3.d या|या.|CC.avy.... उसकी|उसकी.|PRP.unk.... अदायगी|अदायगी.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o बारे|बारे.0|PSP.n.m.sg.3.d में|में.|PSP.psp.... आपके|आप.का|PRP.pn.m.pl.any.d कोई|कोई.0|PRP.pn.any.sg.3.d सवाल|सवाल.0|NN.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. ,|,.|SYM.punc.... तो|तो.|CC.avy.... आपको|आप.को|PRP.pn.any.any.any.o अदालत|अदालत.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o क्लर्क|क्लर्क.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. संपर्क|संपर्क.0|NN.n.m.sg.3.d करना|कर.ना|VM.v.m.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. &pipe;|&pipe;.|SYM.punc....
+
+
+
+
+मेरा|मेरा.|PRP.unk.... मानना|मान.ना|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... जनता|जनता.0|NN.n.f.sg.3.d ,|,.|SYM.punc.... देश|देश.0|NN.n.m.sg.3.d और|और.|CC.adv.... सामाजिक|सामाजिक.|JJ.adj.any.any..any सुधारों|सुधार.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o हित|हित.0|NN.n.m.sg.3.d में|में.|PSP.psp.... शांति|शान्ति.0|NN.n.f.sg..d बहाली|बहाली.0|NN.n.f.sg.3.d जरूरी|जरूरी.|JJ.adj.f.any..any है|है.है|VM.v.any.sg.2. .|..|SYM.punc....
+
+
+आपको|आप.को|PRP.pn.any.any.any.o उन|उन.|DEM.unk.... बड़ी|बड़ी.|JJ.punc.... बातों|बात.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. अपने|अपना.0|PRP.n.m.pl.3.d को|को.|PSP.psp.... तैयार|तैयार.|JJ.adj.any.any..any करना|कर.ना|VM.v.m.sg.any. होगा|हो.गा|VAUX.v.m.sg.2. ,|,.|SYM.punc.... जो|जो.|PRP.avy.... आगे|आगा.0|NST.n.m.pl.3.d आयेंगी|आ.गा|VM.v.f.pl.1. .|..|SYM.punc....
+
+
+आपको|आप.को|PRP.pn.any.any.any.o इसके|इसके.|PRP.pn.m.pl.3.d बाद|बाद.|NST.adv.... तय|तय.0|JJ.n.m.sg.3.d करना|कर.ना|VM.v.m.sg.any. चाहिए|चाह.एं|VAUX.v.any.sg.2h. कि|कि.|CC.avy.... क्या|क्या.|WQ.avy.... आपको|आप.को|PRP.pn.any.any.any.o सबसे|सबसे.|INTF.adj.any.any..any उत्तम|उत्तम.|JJ.adj.any.any..any सौदा|सौदा.0|NN.n.m.sg.3.d मिल|मिल.0|VM.v.any.any.any. रहा|रह.या|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. या|या.|CC.avy.... नहीं|नहीं.|NEG.adv.... ।|।.|SYM.punc....
+
+
+ये|यह.0|DEM.pn.any.pl.3.d सवाल|सवाल.0|NN.n.m.sg.3.d इस|इस.|DEM.pn.any.sg.3.o क्षेत्र|क्षेत्र.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. प्रासंगिक|प्रासंगिक.|JJ.adj.any.any..any हैं|है.है|VM.v.any.pl.1. क्योंकि|क्योंकि.|CC.adv.... प्रबंधन|प्रबंधन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o दूसरे|दूसरा.0|QO.n.m.pl.3.d क्षेत्रों|क्षेत्र.0|NN.n.m.pl.3.o में|में.|PSP.psp.... वे|वह.0|PRP.pn.any.pl.3.d अप्रासंगिक|अप्रासंगिक.|JJ.adj.any.any..any हो|हो.0|VM.v.any.any.any. चुके|चुक.एं|VAUX.v.any.sg.2. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+
+
+
+
+लोग|लोग.0|NN.n.m.sg.3.d जो|जो.|PRP.avy.... बच्चे|बच्चा.0|NN.n.m.pl.3.d की|का.का|PSP.psp.f.sg..d देखभाल|देखभाल.0|NN.n.f.sg.3.d कर|कर.0|VM.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. है|है.है|VAUX.v.any.sg.2. क्योंकि|क्योंकि.|CC.adv.... एक|एक.|QC.adj.any.any..any या|या.|CC.avy.... फिर|फिर.0|RB.v.any.any.any. दोनों|दोना.0|JJ.n.m.pl.3.o पालकों|पालक.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d मृत्यु|मृत्यु.0|NN.n.f.sg.3.d हो|हो.0|VM.v.any.any.any. गयी|गयी.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+निम्नलिखित|निम्नलिखित.|JJ.adj.any.any..any पैराग्राफ|पैराग्राफ.0|NN.n.m.sg.3.d इस|इस.|DEM.pn.any.sg.3.o प्रक्रिया|प्रक्रिया.0|NN.n.f.sg.3.d को|को.|PSP.psp.... विस्तार|विस्तार.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बताते|बता.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. ,|,.|SYM.punc.... &pipe;|&pipe;.|SYM.punc.... भाष्|भाष्.|XC.unk.... ;|;.|SYM.punc....
+
+
+अण्डे|अंडा.0|NN.n.m.pl..d देने|दे.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d ?|?.|SYM.punc.... बैट्री|बैट्री.|NN.unk.... ?|?.|SYM.punc.... उन|उन.|DEM.unk.... पिंजरों|पिंजरा.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d संग्रह|संग्रह.0|NN.n.m.sg.3.d होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. जिनका|जो.का|PRP.pn.m.sg.3.d उपयोग|उपयोग.0|NN.n.m.sg.3.d अण्डा|अंडा.0|NN.n.m.sg..d देनेवाली|देनेवाली.|VM.unk.... मुर्गियों|मुर्गी.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o आवास|आवास.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. किया|कर.या|VM.v.m.sg.any. जाता|जा.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+किंतु|किंतु.|CC.adv.... शीघ्र|शीघ्र.|RB.adv.... ही|ही.|RP.adv.... वह|वह.0|PRP.pn.any.sg.3.d जान|जान.0|VM.v.any.any.any. गए|गए.|VAUX.unk.... कि|कि.|CC.avy.... वह|वह.0|PRP.pn.any.sg.3.d समाजवाद|समाजवाद.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o अनुयायी|अनुयायी.0|JJ.n.m.sg.3.d बन|बन.0|VM.v.any.any.any. गए|गए.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+इसलिए|इसलिये.|CC.avy.... सहज|सहज.|JJ.adv.... ज्ञान|ज्ञान.0|XC.n.m.sg.3.d ,|,.|SYM.punc.... सत्य|सत्य.0|NN.n.m.sg.3.d और|और.|CC.adv.... सच्चाई|सच्चाई.0|NN.n.f.sg.3.d को|को.|PSP.psp.... ढूंढने|ढूंढने.|VM.unk.... के|का.का|PSP.psp.m.sg..o अन्य|अन्य.|JJ.adj.any.any..any तरीकों|तरीका.0|NN.n.m.pl.3.o को|को.|PSP.psp.... अलग|अलग.|JJ.adj.any.any..any नहीं|नहीं.|NEG.adv.... रखा|रखा.0|VM.v.any.any.any. जा|जा.0|VAUX.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+इसके|इसके.|PRP.pn.m.pl.3.d अलवा|अलवा.|PSP:?.unk.... ,|,.|SYM.punc.... आदिवासियों|आदिवासियों.|NN.unk.... के|का.का|PSP.psp.m.sg..o पुराने|पुराना.|JJ.adj.m.sg..o तराशे|तराश.एं|NN.v.any.sg.2. हे|हे.|RP.avy.... घरों|घर.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o संरक्षण|संरक्षण.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. सेनापति|सेनापति.0|XC.n.m.sg.3.d जिले|जिला.0|NNP.n.m.pl.3.d के|का.का|PSP.psp.m.sg..o पुरुल|पुरुल.|NN.unk.... गांव|गाँव.0|NN.n.m.sg..d में|में.|PSP.psp.... '|'.|SYM.punc.... सजीव|सजीव.|JJ.adj.any.any..any संग्रहालय|संग्रहालय.0|NN.n.m.sg.3.d '|'.|SYM.punc.... स्थापित|स्थापित.0|JJ.n.m.sg.3.d किया|कर.या|VM.v.m.sg.any. .|..|SYM.punc....
+
+भाजपा|भाजपा.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... राज्य|राज्य.0|NN.n.m.sg.3.d को|को.|PSP.psp.... छह|छह.|QC.adj.any.any..any भागों|भागों.|NN.unk.... में|में.|PSP.psp.... बांटकर|बांटकर.|VM.unk.... प्रत्येक|प्रत्येक.|QF.adj.any.any..any को|को.|PSP.psp.... एक|एक.|QC.adj.any.any..any संग|संग.|NN.psp.... न|न.|NEG.adv.... मंत्री|मंत्री.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o हवाले|हवाला.0|VM.n.m.pl.3.d कर|कर.0|VAUX.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+संविधान|संविधान.0|JJ.n.m.sg.3.d प्रारूप|प्रारूप.0|NN.n.m.sg.3.d समिति|समिति.0|NN.n.f.sg.3.d तथा|तथा.|CC.adv.... सर्वोच्च|सर्वोच्च.|JJ.adj.any.any..any न्यायालय|न्यायालय.0|NN.n.m.sg.3.d ने|ने.|PSP.psp.... इस|इस.|DEM.pn.any.sg.3.o को|को.|PSP.psp.... संघात्मक|संघात्मक.|JJ.unk.... संविधान|संविधान.0|NN.n.m.sg.3.d माना|मान.या|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. परन्तु|परंतु.|CC.avy.... विद्वानों|विद्वान्.0|NN.n.m.pl.3.o मे|मा.0|PSP.n.m.pl.3.d मतभेद|मतभेद.|NN.unk.... है|है.है|VM.v.any.sg.2. ।|।.|SYM.punc....
+
+हम|हम.|PRP.unk.... वहां|वहाँ.|PRP.adv.... कुछ|कुछ.|QF.adj.any.any..d ही|ही.|RP.adv.... प्रजातियों|प्रजाति.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o जीवन|जीवन.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d अपेक्षा|अपेक्षा.0|NN.n.f.sg.3.d कर|कर.0|VM.v.any.any.any. सकते|सक.ता|VAUX.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+एल|एल.0|XC.n.m.sg.3.d .|..|SYM.punc.... ई|ई.|SYM.n.f.sg.3.d .|..|SYM.punc.... ए|ए.|SYM.avy.... मैजिस्ट्रेट|मैजिस्ट्रेट.|NN.unk.... की|का.का|PSP.psp.f.sg..d अदालत|अदालत.0|NN.n.f.sg.3.d में|में.|PSP.psp.... आप|आप.0|PRP.pn.any.any.any.o पर|पर.|PSP.psp.... मुकद्दमा|मुकद्दमा.|NN.unk.... भी|भी.|RP.adv.... कर|कर.0|VM.v.any.any.any. सकती|सक.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. &pipe;|&pipe;.|SYM.punc....
+
+(|(.|SYM.punc.... बाबूलाल|बाबूलाल.|XC.unk.... बनाम|बनाम.|XC.adv.... बंबई|बंबई.|NNP.unk.... राज्य|राज्य.0|NN.n.m.sg.3.d ए|ए.|SYM.avy.... आई|आ.या|RP.v.f.sg.any. आर|आर.0|NN.n.m.sg.3.d 1960|1960.|QC.num.... एस|एस.|NNP.unk.... सी|सी.0|RP.v.any.any.any. 51|51.|QC.num.... )|).|SYM.punc.... अनुच्छेद|अनुच्छेद.0|NN.n.m.sg.3.d 4|4.|QC.num.... में|में.|PSP.psp.... इस|इस.|DEM.pn.any.sg.3.o बात|बात.0|NN.n.f.sg.3.d को|को.|PSP.psp.... स्पष्ट|स्पष्ट.0|JJ.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. गया|गया.|VAUX.unk.... है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... अनुच्छेद|अनुच्छेद.0|NN.n.m.sg.3.d 2|2.|QC.num.... और|और.|CC.adv.... 3|3.|QC.num.... के|का.का|PSP.psp.m.sg..o अधीन|अधीन.|JJ.adj.any.any..any नये|नया.|JJ.adj.m.sg..o राज्यों|राज्य.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d स्थापना|स्थापना.0|NN.n.m.sg.3.d या|या.|CC.avy.... उनके|उनके.|PRP.unk.... प्रवेश|प्रवेश.0|NN.n.m.sg.3.d और|और.|CC.adv.... विद्यमान|विद्यमान.0|JJ.n.m.sg.3.d राज्यों|राज्य.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o नामों|नाम.0|NN.n.m.pl.3.o ,|,.|SYM.punc.... क्षेत्रों|क्षेत्र.0|NN.n.m.pl.3.o और|और.|CC.adv.... उनकी|उनकी.|PRP.unk.... सीमाओं|सीमा.0|NN.n.f.pl.3.o आदि|आदि.0|RP.n.m.sg.3.d में|में.|PSP.psp.... परिवर्तन|परिवर्तन.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. बनाई|बना.या|VM.v.f.sg.any. गई|गई.|VAUX.unk.... विधियां|विधि.0|NN.n.f.pl..d अनुच्छेद|अनुच्छेद.0|NN.n.m.sg.3.d 368|368.|QC.num.... के|का.का|PSP.psp.m.sg..o अधीन|अधीन.|JJ.adj.any.any..any संविधान|संविधान.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o संशोधन|संशोधन.0|NN.n.m.sg.3.d नहीं|नहीं.|NEG.adv.... मानी|मान.या|VM.v.f.sg.any. जाएगी|जा.गा|VAUX.v.f.sg.2. ;|;.|SYM.punc.... अर्थात|अर्थात.|CC.unk.... इन्हें|इन्हें.|PRP.pn.any.pl.3.o बिना|बिन.या|NEG.v.m.sg.any. किसी|किसी.|PRP.unk.... विशेष|विशेष.0|JJ.n.m.sg.3.d प्रक्रिया|प्रक्रिया.0|NN.n.f.sg.3.d के|का.का|PSP.psp.m.sg..o तथा|तथा.|CC.adv.... किसी|किसी.|PRP.unk.... भी|भी.|RP.adv.... अन्य|अन्य.|JJ.adj.any.any..any साधारण|साधारण.0|JJ.n.m.sg.3.d विधान|विधान.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d तरह|तरह.|PSP.adv.... साधारण|साधारण.0|JJ.n.m.sg.3.d बहुमत|बहुमत.|NN.unk.... द्वारा|द्वारा.|PSP.psp.... पारित|पारित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. जा|जा.0|VAUX.v.any.any.any. सकता|सक.ता|VAUX.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+देखने|देख.ना|VM.v.m.pl.any. में|में.|PSP.psp.... सहायक|सहायक.0|JJ.n.m.sg.3.d दृश्य|दृश्य.0|NN.n.m.sg.3.d तंत्रिका|तंत्रिका.0|XC.n.f.sg.3.d तंतुओं|तंतु.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d संख्या|संख्या.0|NN.n.f.sg.3.d लगभग|लगभग.|RB.adv.... उसी|उसी.|DEM.unk.... दर|दर.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. घटने|घट.ना|VM.v.m.pl.any. लगती|लग.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. जिस|जो.0|PRP.pn.any.sg.3.o दर|दर.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. घ्राण|घ्राण.0|XC.n.m.sg.3.d तंत्रिकाओं|तंत्रिका.0|NN.n.f.pl.3.o की|का.का|PSP.psp.f.sg..d घटती|घट.ता|JJ.v.f.sg.any. हो|हो.0|VM.v.any.any.any. जो|जो.|PRP.avy.... जन्म|जन्म.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o समय|समय.0|NN.n.m.sg.3.d मौजूद|मौजूद.|JJ.adj.any.any..any संख्या|संख्या.0|NN.n.f.sg.3.d की|का.का|PSP.psp.f.sg..d लगभग|लगभग.|RB.adv.... 25|25.|QC.num.... प्रतिशत|प्रतिशत.0|NN.n.m.sg.3.d रह|रह.0|VM.v.any.any.any. जाती|जा.ता|VAUX.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+वास्तविक|वास्तविक.|JJ.adv.... निर्माण|निर्माण.0|NN.n.m.sg.3.d मोहक|मोहक.0|JJ.n.m.sg.3.d रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. नियमित|नियमित.0|JJ.n.m.sg.3.d और|और.|CC.adv.... लयबद्ध|लयबद्ध.|JJ.unk.... होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc.... मादा|मादा.0|NN.n.f.sg.3.d अपने|अपना.0|PRP.n.m.pl.3.d शरीर|शरीर.0|NN.n.m.sg.3.d को|को.|PSP.psp.... लोलक|लोलक.|NN.unk.... की|का.का|PSP.psp.f.sg..d तरह|तरह.|PSP.adv.... दांए|दांए.|NN.unk.... और|और.|CC.adv.... बाएं|बाएं.|NN.unk.... घुमाते|घुमा.ता|VM.v.m.pl.any. हुए|हो.या|VAUX.v.m.pl.any. पंक|पंक.0|XC.n.m.sg.3.d गुटिका|गुटिका.|NN.unk.... को|को.|PSP.psp.... पहले|पहले.|NST.adv.... एक|एक.|QC.adj.any.any..any तरफ|तरफ.|NST.adv.... और|और.|CC.adv.... फिर|फिर.0|RB.v.any.any.any. दूसरी|दूसरी.|QO.unk.... तरफ|तरफ.|NST.adv.... लगती|लग.ता|VM.v.f.sg.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+
+
+भोपाल|भोपाल.|NN.unk.... घोषणापत्र|घोषणापत्र.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o पीछे|पीछा.0|NST.n.m.pl.3.d मुय|मुय.|NN.unk.... प्रेरणा|प्रेरणा.0|NN.n.f.sg.3.d दलित|दलित.|JJ.adj.any.any..any लेखक|लेखक.0|NN.n.m.sg.3.d चंद्रभान|चंद्रभान.|NN.unk.... प्रसाद|प्रसाद.0|JJ.n.m.sg.3.d हैं|है.है|VM.v.any.pl.1. .|..|SYM.punc....
+
+
+
+हक्सर|हक्सर.|NN.unk.... ने|ने.|PSP.psp.... इंदिरा|इंदिरा.0|XC.n.m.sg.3.d गांधी|गांधी.0|NNP.n.f.sg.3.d को|को.|PSP.psp.... भुट्टों|भुट्टा.0|NN.n.m.pl.3.o के|का.का|PSP.psp.m.sg..o निजी|निजी.0|JJ.n.f.sg.3.d आश्वासनों|आश्वासन.0|NN.n.m.pl.3.o को|को.|PSP.psp.... ,|,.|SYM.punc.... खासकर|खासकर.|XC.adv.... कश्मीर|कश्मीर.0|NNP.n.m.sg.3.d मामले|मामला.0|NN.n.m.pl.3.d में|में.|PSP.psp.... ,|,.|SYM.punc.... मानने|मान.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d सलह|सलह.|NN.unk.... देने|दे.ना|VM.v.m.pl.any. और|और.|CC.adv.... उसे|उसे.|PRP.unk.... लिखित|लिखित.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d में|में.|PSP.psp.... न|न.|NEG.adv.... मांगने|मांगने.|VM.unk.... की|का.का|PSP.psp.f.sg..d गलती|गलती.0|NN.n.f.sg.3.d कबूल|कबूल.0|NN.v.any.any.any. की|कर.या|VM.v.f.sg.any. .|..|SYM.punc....
+
+
+
+
+
+
+
+बंटवारे|बंटवारे.|NN.unk.... के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... भी|भी.|RP.adv.... उन्होंने|उन्होंने.|PRP.unk.... इसके|इसके.|PRP.pn.m.pl.3.d एवज|एवज.0|NN.n.m.sg.3.d में|में.|PSP.psp.... मुआवजा|मुआवजा.0|NN.n.m.sg.3.d लेने|ले.ना|VM.v.m.pl.any. से|से.|PSP.v.any.any.any. इनकार|इनकार.0|NN.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. और|और.|CC.adv.... यहां|यहाँ.|PRP.adv.... लेटने|लेट.ना|VM.v.m.pl.any. की|का.का|PSP.psp.f.sg..d उमीद|उमीद.|NN.unk.... पाले|पाल.एं|VM.v.any.sg.2. रहे|रह.एं|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+
+
+
+
+
+
+अपील|अपील.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d सुनवाई|सुनवाई.0|NN.n.f.sg.3.d न्यायाधीश|न्यायाधीश.0|JJ.n.m.sg.3.d फोर्ड|फोर्ड.|NN.unk.... और|और.|CC.adv.... न्यायाधीश|न्यायाधीश.0|XC.n.m.sg.3.d एडीसन|एडीसन.|NNP.unk.... ने|ने.|PSP.psp.... की|का.का|PSP.psp.f.sg..d .|..|SYM.punc....
+
+
+
+भारत|भारत.0|NNP.n.m.sg.3.d वर्ष|वर्ष.0|NN.n.m.sg.3.d ,|,.|SYM.punc.... राष्ट्रीय|राष्ट्रीय.|JJ.adj.any.any..any आंदोलन|आंदोलन.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. एक|एक.|QC.adj.any.any..any नये|नया.|JJ.adj.m.sg..o युग|युग.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o प्रारंभ|प्रारंभ.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o पूर्व|पूर्व.|NST.adv.... ,|,.|SYM.punc.... ऐसे|ऐसे.|PRP.adv.... ही|ही.|RP.adv.... समय|समय.0|NN.n.m.sg.3.d में|में.|PSP.psp.... से|से.|PSP.v.any.any.any. गुजर|गुजर.0|VM.v.any.any.any. रहा|रह.या|VAUX.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. .|..|SYM.punc....
+
+हर|हर.|QF.adj.any.any..any आदमी|आम.0|NN.n.m.sg.3.d का|का.का|PSP.psp.m.sg..d अपना|अपना.0|PRP.n.m.sg.3.d व्यक्तित्व|व्यक्तित्व.0|NN.n.m.sg.3.d होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. और|और.|CC.adv.... ड्रग्स|ड्रग्स.|NN.unk.... का|का.का|PSP.psp.m.sg..d इस्तेमाल|इस्तेमाल.0|NN.n.m.sg.3.d करने|कर.|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o उसके|उसके.|PRP.unk.... ख़ास|ख़ास.|XC.punc.... कारण|कारण.0|NN.n.m.sg.3.d भी|भी.|RP.adv.... होते|हो.ता|VM.v.m.pl.any. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+
+हाल|हाल.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o अनुसंधान|अनुसंधान.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. पता|पता.0|JJ.n.m.sg.3.d चल|चल.0|VM.v.any.any.any. है|है.है|VAUX.v.any.sg.2. कि|कि.|CC.avy.... जंतुओं|जंतु.0|NN.n.m.pl.3.o का|का.का|PSP.psp.m.sg..d प्राकृतिक|प्राकृतिक.|JJ.adj.any.any..any इंसुलिन|इंसुलिन.|NN.unk.... बाजार|बाजार.0|NN.n.m.sg.3.d में|में.|PSP.psp.... मानव|मानव.0|XC.n.m.sg.3.d इंसुलिन|इंसुलिन.|NNP.unk.... के|का.का|PSP.psp.m.sg..o नाम|नाम.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. बिकने|बिक.ना|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d संश्लेषित|संश्लेषित.|JJ.adj.any.any..any इंसुलिन|इंसुलिन.|NN.unk.... के|का.का|PSP.psp.m.sg..o मुकाबले|मुकाबला.0|JJ.n.m.pl.3.d ज्यादा|ज्यादा.|QF.adj.m.sg..d प्रभावी|प्रभावी.|JJ.adj.f.any..any है|है.है|VM.v.any.sg.2. .|..|SYM.punc.... हालंकि|हालंकि.|CC.unk.... प्रति|प्रति.|RP:?.adv.... शीशी|शीशी.0|NN.n.f.sg.3.d 200|200.|QC.num.... रु|रु.0|NN.n.m.sg.3.d .|..|SYM.punc.... की|का.का|PSP.psp.f.sg..d दर|दर.0|NN.n.f.sg.3.d से|से.|PSP.v.any.any.any. बिकने|बिक.ना|VM.v.m.pl.any. वाले|वाला.0|PSP.n.m.pl.3.d इस|इस.|DEM.pn.any.sg.3.o इंसुलिन|इंसुलिन.|NN.unk.... ने|ने.|PSP.psp.... 46|46.|QC.num.... प्रतिशत|प्रतिशत.0|NN.n.m.sg.3.d भारतीय|भारतीय.0|JJ.n.m.sg.3.d बाजार|बाजार.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... कजा|कजा.|NN.unk.... कर|कर.0|VM.v.any.any.any. रखा|रखा.0|VAUX.v.any.any.any. है|है.है|VAUX.v.any.sg.2. .|..|SYM.punc....
+
+
+यह|यह.0|PRP.pn.any.sg.3.d किसके|किसके.|WQ.unk.... विषय|विषय.0|NN.n.m.sg.3.d में|में.|PSP.psp.... है|है.है|VM.v.any.sg.2. ?|?.|SYM.punc.... आगे|आगा.0|NST.n.m.pl.3.d क्या|क्या.|WQ.avy.... होता|हो.ता|VM.v.m.sg.any. है|है.है|VAUX.v.any.sg.2. ?|?.|SYM.punc.... -|-.|SYM.punc.... जैसे|जैसे.|RDP.adv.... प्रश्न|प्रश्न.0|NN.n.m.sg.3.d पूछकर|पूछ.कर|VM.v.any.any.any. कहानी|कहानी.0|NN.n.f.sg.3.d को|को.|PSP.psp.... अपने|अपना.0|PRP.n.m.pl.3.d शब्दों|शब्द.0|NN.n.m.pl.3.o में|में.|PSP.psp.... बताने|बता.ना|VM.v.m.pl.any. को|को.|PSP.psp.... कहकर|कह.कर|VM.v.any.any.any. आप|आप.0|PRP.pn.any.any.any.o इस|इस.|DEM.pn.any.sg.3.o की|का.का|PSP.psp.f.sg..d पुष्टि|पुष्टि.0|NN.n.f.sg.3.d करें|कर.एं|VM.v.any.pl.1. कि|कि.|CC.avy.... वे|वह.0|PRP.pn.any.pl.3.d जो|जो.|PRP.avy.... पढ़|पढ़.|NNP.punc.... रहें|रह.एं|VM.v.any.pl.1. हैं|है.है|VAUX.v.any.pl.1. वे|वह.0|PRP.pn.any.pl.3.d वास्तव|वास्तव.|NN.adv.... में|में.|PSP.psp.... उसे|उसे.|PRP.unk.... समझ|समझ.0|VM.v.any.any.any. पा|पा.0|VAUX.v.any.any.any. रहे|रह.एं|VAUX.v.any.sg.2. हैं|है.है|VAUX.v.any.pl.1. या|या.|CC.avy.... नहीं|नहीं.|NEG.adv.... .|..|SYM.punc....
+
+
+
+रवीन्द्रनाथ|रवीन्द्रनाथ.|NN.unk.... अनिवार्य|अनिवार्य.|JJ.adj.any.any..any तौर|तौर.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... आधुनिक|आधुनिक.|JJ.adj.any.any..any हैं|है.है|VM.v.any.pl.1. ;|;.|SYM.punc.... जबकि|जबकि.|CC.avy.... महात्मा|महात्मा.0|XC.n.m.sg.3.d गांधी|गांधी.0|NNP.n.f.sg.3.d वर्तमान|वर्तमान.0|JJ.n.m.sg.3.d समय|समय.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o सेंट|सेंट.0|XC.n.m.sg.3.d फ्रांसिस|फ्रांसिस.|XC.unk.... आव|आव.0|XC.n.m.sg.3.d असीसी|असीसी.|NNP.unk.... हैं|है.है|VM.v.any.pl.1. .|..|SYM.punc.... ?|?.|SYM.punc....
+
+कृपया|कृपया.|RB.adv.... पृष्ठ|पृष्ठ.0|NN.n.m.sg.3.d २०|२०.|QC.num.... पर|पर.|PSP.psp.... दिए|दे.या|VM.v.m.pl.any. वंचित|वंचित.|JJ.adj.any.any..any करने|कर.|VM.v.m.pl.any. वाली|वाली.0|PSP.n.f.sg.3.d शर्तों|शर्त.0|NN.n.f.pl.3.o से|से.|PSP.v.any.any.any. संबंधित|संबंधित.|JJ.unk.... सूचना|सूचना.0|NN.n.f.sg.3.d देखिए|देख.एं|VM.v.any.sg.2h. ।|।.|SYM.punc....
+
+
+
+सन्|सन्.0|XC.n.m.sg.3.d 1934|1934.|QC.num.... के|का.का|PSP.psp.m.sg..o बाद|बाद.|NST.adv.... स्थितियों|स्थिति.0|NN.n.m.pl.3.o में|में.|PSP.psp.... सुधार|सुधार.0|NN.n.m.sg.3.d आया|आ.या|VM.v.m.sg.any. ,|,.|SYM.punc.... लेकिन|लेकिन.|CC.avy.... तकनीकी|तकनीकी.0|JJ.n.f.sg.3.d परिवर्तनों|परिवर्तन.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d समता|समता.0|NN.n.f.sg.3.d कायम|कायम.|JJ.adj.any.any..any रखने|रख.ना|VM.v.m.pl.any. के|का.का|PSP.psp.m.sg..o लिए|ले.या|PSP.v.m.pl.any. टैरिफ|टैरिफ.|XC.unk.... बोर्ड|बोर्ड.0|NN.n.m.sg.3.d को|को.|PSP.psp.... संयंत्र|संयंत्र.0|NN.n.m.sg.3.d में|में.|PSP.psp.... मूलभूत|मूलभूत.|JJ.adj.any.any..any परिवर्तन|परिवर्तन.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d आवश्यकता|आवश्यकता.0|NN.n.f.sg.3.d महसूस|महसूस.0|JJ.n.m.sg.3.d हुई|हो.या|VM.v.f.sg.any. .|..|SYM.punc....
+
+
+मंडप|मंडप.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o भीतर|भीतर.|NST.psp.... के|का.का|PSP.psp.m.sg..o स्तंभ|स्तंभ.0|NN.n.m.sg.3.d उत्कृष्ट|उत्कृष्ट.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. खराद|खराद.|NN.unk.... पर|पर.|PSP.psp.... तराशे|तराश.एं|VM.v.any.sg.2. गए|गए.|VAUX.unk.... हैं|है.है|VAUX.v.any.pl.1. या|या.|CC.avy.... जटिल|जटिल.|JJ.adj.any.any..any रूप|रूप.0|NN.n.m.sg.3.d से|से.|PSP.v.any.any.any. उत्कीर्णित|उत्कीर्णित.|JJ.unk.... हैं|है.है|VM.v.any.pl.1. और|और.|CC.adv.... उनमें|उनमें.|PRP.unk.... से|से.|PSP.v.any.any.any. कुछ|कुछ.|QF.adj.any.any..d पर|पर.|PSP.psp.... बढ़िया|बढ़िया.|VM.psp.... स्पष्ट|स्पष्ट.0|JJ.n.m.sg.3.d आकृति|आकृति.0|NN.n.f.sg.3.d शिल्प|शिल्प.0|NN.n.m.sg.3.d बने|बन.एं|VM.v.any.sg.2. हैं|है.है|VAUX.v.any.pl.1. .|..|SYM.punc....
+
+यह|यह.0|PRP.pn.any.sg.3.d सामरिक|सामरिक.0|JJ.n.m.sg.3.d लक्ष्य|लक्ष्य.0|NN.n.m.sg.3.d जो|जो.|PRP.avy.... कि|कि.|RP.avy.... द्वितीय|द्वितीय.|QO.adj.any.any..any विश्वयुद्ध|विश्वयुद्ध.|NN.unk.... के|का.का|PSP.psp.m.sg..o दौरान|दौरान.0|NST.n.m.sg.3.d सुभाष|सुभाष.|NN.unk.... ने|ने.|PSP.psp.... अपने|अपना.0|PRP.n.m.pl.3.d लिए|ले.या|PSP.v.m.pl.any. निर्धारित|निर्धारित.|JJ.adj.any.any..any किया|कर.या|VM.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. ,|,.|SYM.punc.... ब्रिटिश|ब्रिटिश.|XC.adj.any.any..any भारत|भारत.0|NNP.n.m.sg.3.d में|में.|PSP.psp.... उसकी|उसकी.|PRP.unk.... विशेषताओं|विशेषताओं.|NN.unk.... एवं|एवं.|CC.avy.... त्रुटियों|त्रुटि.0|NN.n.f.pl.3.o तथा|तथा.|CC.adv.... भारतीय|भारतीय.0|JJ.n.m.sg.3.d राष्ट्रीय|राष्ट्रीय.|JJ.adj.any.any..any आंदोलन|आंदोलन.0|NN.n.m.sg.3.d की|का.का|PSP.psp.f.sg..d विशेषताओं|विशेषताओं.|NN.unk.... एवं|एवं.|CC.avy.... त्रुटियों|त्रुटि.0|NN.n.f.pl.3.o के|का.का|PSP.psp.m.sg..o वैज्ञानिक|वैज्ञानिक.0|JJ.n.m.sg.3.d विश्लेषण|विश्लेषण.0|NN.n.m.sg.3.d पर|पर.|PSP.psp.... आधारित|आधारित.|JJ.adj.any.any..any था|था.था|VM.v.m.sg.any. .|..|SYM.punc....
+
+
+श्री|श्री.0|XC.n.f.sg.3.d राम|राम.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o स्वागत|स्वागत.0|NN.n.m.sg.3.d में|में.|PSP.psp.... अयोध्यावासियों|अयोध्यावासियों.|NN.unk.... ने|ने.|PSP.psp.... घी|घी.0|NN.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o दीए|दीया.0|NN.n.m.pl..d जलाए|जला.एं|VM.v.any.sg.2. ।|।.|SYM.punc....
+
+
+
+स्वतंत्रता|स्वतन्त्रता.0|NN.n.f.sg..d की|का.का|PSP.psp.f.sg..d बात|बात.0|NN.n.f.sg.3.d करते|कर.ता|VM.v.m.pl.any. हुए|हो.या|VAUX.v.m.pl.any. कांग्रेस|कांग्रेस.0|NN.n.f.sg.3.d ने|ने.|PSP.psp.... स्पष्ट|स्पष्ट.0|JJ.n.m.sg.3.d कर|कर.0|VM.v.any.any.any. दिया|दे.या|VAUX.v.m.sg.any. था|था.था|VAUX.v.m.sg.any. कि|कि.|CC.avy.... उसका|उसका.0|PRP.v.any.any.any. अंतिम|अंतिम.0|JJ.n.m.sg.3.d लक्ष्य|लक्ष्य.0|NN.n.m.sg.3.d भारत|भारत.0|NNP.n.m.sg.3.d के|का.का|PSP.psp.m.sg..o सभी|सभी.0|QF.n.m.sg.3.d लोगों|लोग.0|NN.n.m.pl.3.o की|का.का|PSP.psp.f.sg..d स्वतंत्रता|स्वतन्त्रता.0|NN.n.f.sg..d है|है.है|VM.v.any.sg.2. और|और.|CC.adv.... उसमें|उसमें.|PRP.unk.... रियासतों|रियासत.0|NN.n.f.pl.3.o की|का.का|PSP.psp.f.sg..d जनता|जनता.0|NN.n.f.sg.3.d भी|भी.|RP.adv.... शामिल|शामिल.|JJ.adj.any.any..any है|है.है|VM.v.any

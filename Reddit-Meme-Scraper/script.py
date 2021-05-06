@@ -27,6 +27,7 @@ class RedditCred:
 
 # Functions made to read the reddit app id and secret from file
 
+
     def read_id(self):
         file = self.text_file
         with open(file, 'r') as f:
@@ -40,6 +41,7 @@ class RedditCred:
             data = json.load(f)
             value = data.values()
             return str(*value)
+
 
 red_cred = RedditCred()
 u_agent = 'Script that downloads memes from various subreddits'

@@ -49,18 +49,18 @@ class fmGUI:
                                               default=True,
                                               key='SBYTD',
                                               enable_events=True)
-                                 ]],
-                         title='Sorting Options',
-                         title_color='red',
-                         relief=sg.RELIEF_SUNKEN)
+                ]],
+                    title='Sorting Options',
+                    title_color='red',
+                    relief=sg.RELIEF_SUNKEN)
             ], [sg.Text("Choose filetype:")],
             [
                 sg.Combo([
                     "Archive ('.zip', '.rar'...)", "Image ('.png', '.jpg'...)",
                     "Text ('.txt', '.docx'...)"
                 ],
-                         key='FILETYPE',
-                         enable_events=True)
+                    key='FILETYPE',
+                    enable_events=True)
             ], [sg.Ok(), sg.Cancel()]
         ]
 

@@ -68,8 +68,7 @@ def hi(update, context):
 def play(update, context):
     context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text=
-        "Let's have fun!Repeat this tongue twister 5 times:She sells seashells by the seashore."
+        text="Let's have fun!Repeat this tongue twister 5 times:She sells seashells by the seashore."
     )
 
 
