@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-from Text_Sentimental_Analysis_Script_with_GUI import Model
+import Model
 
 
 def search():
