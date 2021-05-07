@@ -20,25 +20,21 @@ class model(object):
         return api
 
     def get_live_tweets_from_Twitter(self, text):
+
         api = self.get_authenticated_api()
-        # getting the tweets form twitter using The Twitter aap and tweepy
-        # Demo of getting text from twitter
 
         tweet_live = api.search(text, tweet_mode='extended')
         return tweet_live
 
     def analysis_live_tweet_data(self, text):
-        # Making prediction on the tweet provided by twitter related to this topic
 
-        # lets choose a random topic i choose this as it was in news alot
-
-        # we were abe to get the
         tweet_live = self.get_live_tweets_from_Twitter(text)
         for tweet in tweet_live:
             tweet_is = tweet.text
             analysis = TextBlob(tweet_is)
 
     def detailed_analysis_tweet_data(self, text):
+
         # if polarity is in negative then the tweet is negative
         # if in positive then its a positive tweet
         # if polarity is greater then 0 and less then 5 then tweet is neutral
