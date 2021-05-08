@@ -1,4 +1,4 @@
-# Simple Python IDE using Tkinter
+# Voice Calculator
 This is voice calculator capable enough to do difficult trigonometric probelms and simple arithmatic calculation and also Linear Expression.
 This will run in the terminal and all the instruction will be given while running it.
 
