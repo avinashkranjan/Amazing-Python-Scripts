@@ -14,6 +14,9 @@ usage = """
 parser = OptionParser()
 parser.add_option("-a", "--add", action="store_true", dest="add", help="Goes straight to the add script phase")
 
+
+# The database is automatically updated after the PR is merged.
+# ONLY Use this function if you were asked to, to manually add projects to the database.
 def add_script():
     """ Add a Contributor script through a series of inputs """
     print("Double check inputs before pressing enter. If one input is incorrect press CTRL-C and re-run the script")
