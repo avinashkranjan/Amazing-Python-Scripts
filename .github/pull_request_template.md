@@ -36,3 +36,38 @@ _Please delete options that are not relevant._
 - [ ] My documentation follows [`Template for README.md`](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Template%20for%20README.md)
 - [ ] My changes generate no new warnings
 - [ ] I have added tests/screenshots(if any) that prove my fix is effective or that my feature works.
+
+## Project Metadata
+
+`` If there is nothing to fill with, then type: none ``
+
+Category:
+- [ ] Calculators
+- [ ] AI/ML
+- [ ] Scrappers
+- [ ] Social_Media
+- [ ] PDF
+- [ ] Image_Processing
+- [ ] Video_Processing
+- [ ] Games
+- [ ] Networking
+- [ ] OS_Utilities
+- [ ] Automation
+- [ ] Cryptography
+- [ ] Computer_Vision
+- [ ] Fun
+- [ ] Others
+
+Title: \<write scrip title here\>
+
+Folder: \<type the folder name that contains your script\>
+
+Requirments: \<type the name of text file containing the required to install python packages\>
+
+Script: \<Enter the name of the ``.py`` file\>
+
+Arguments: \<enter any arguments that the script needs but `-` separeted like: h-c-m\>
+
+Contributor: \<Enter your Github handle/username\>
+
+Description: \<Enter a one line description that describes your script\>
