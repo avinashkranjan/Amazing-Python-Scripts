@@ -10,13 +10,6 @@ Please include a summary of the change and which issue is fixed. List any depend
 
 ## Fixes #(issue_no)
 
-Replace `issue_no` with the issue number which is fixed in this PR
-
-## Have you read the [Contributing Guidelines on Pull Requests](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/CONTRIBUTING.md)?
-
-- [ ] Yes
-- [ ] No
-
 ## Type of change
 
 _Please delete options that are not relevant._
@@ -34,8 +27,7 @@ _Please delete options that are not relevant._
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have created a helpful and easy to understand `README.md`
 - [ ] My documentation follows [`Template for README.md`](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Template%20for%20README.md)
-- [ ] My changes generate no new warnings
-- [ ] I have added tests/screenshots(if any) that prove my fix is effective or that my feature works.
+- [ ] I have added the project meta data in the PR template.
 
 ## Project Metadata
 

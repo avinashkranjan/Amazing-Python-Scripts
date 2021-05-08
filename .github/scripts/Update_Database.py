@@ -58,7 +58,13 @@ def extract_from_pr_body(pr_body, pa_token):
     pr_body = pr_body.split("\n")
     for element in pr_body:
         pr_body[pr_body.index(element)] = element.rstrip("\r")
-    pr_body = pr_body[pr_body.index("## Project Metadata"):]
+
+    # A special case for contributors in gh-pages branch
+    try:
+        pr_body = pr_body[pr_body.index("## Project Metadata"):]
+    except:
+        sys.exit()
+    
     category_list = []
     for text in pr_body:
         # <----- Validate Category ----->
