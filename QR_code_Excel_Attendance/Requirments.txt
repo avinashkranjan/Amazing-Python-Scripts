@@ -1,0 +1,17 @@
+---------------------------------
+Python version 
+---------------------------------
+Python 3.6 and above version
+
+---------------------------------
+Required Modules and libraries
+---------------------------------
+MYQR
+base64
+open CV
+numpy
+pyzbar
+tkinter
+decouple
+smtplib
+xlwt
