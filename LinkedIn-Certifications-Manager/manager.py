@@ -63,7 +63,7 @@ if __name__ == "__main__":
     # Chrome environment setup
     opt = webdriver.ChromeOptions()
     opt.add_argument('--disable-gpu')
-    # opt.add_argument('--headless')
+    opt.add_argument('--headless')
     driver = webdriver.Chrome(
         executable_path='LinkedIn-Certifications-Manager/chromedriver', options=opt)
     driver.get('https://linkedin.com')
