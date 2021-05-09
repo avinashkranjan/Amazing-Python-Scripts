@@ -10,6 +10,8 @@ Please include a summary of the change and which issue is fixed. List any depend
 
 ## Fixes #(issue_no)
 
+<!-- Replace `issue_no` with the issue number which is fixed in this PR -->
+
 ## Type of change
 
 _Please delete options that are not relevant._
@@ -28,10 +30,13 @@ _Please delete options that are not relevant._
 - [ ] I have created a helpful and easy to understand `README.md`
 - [ ] My documentation follows [`Template for README.md`](https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/Template%20for%20README.md)
 - [ ] I have added the project meta data in the PR template.
+- [ ] I have created the ``requirements.txt`` file if needed.
 
 ## Project Metadata
 
-`` If there is nothing to fill with, then type: none ``
+`` If there is no-file/nothing to fill the below fields with, then type: none ``
+
+`` Example: `` If no requirements.txt needed/present then type in ``Requirments`` none => ``Requirments: none``
 
 Category:
 - [ ] Calculators
@@ -50,16 +55,16 @@ Category:
 - [ ] Fun
 - [ ] Others
 
-Title: \<write scrip title here\>
+Title: \<write script title here\>
 
 Folder: \<type the folder name that contains your script\>
 
-Requirments: \<type the name of text file containing the required to install python packages\>
+Requirments: \<type the name of text file containing the required to install python packages, type None if no file required\>
 
-Script: \<Enter the name of the ``.py`` file\>
+Script: \<Enter the name of the ``.py`` file (The main entry point of the program)\>
 
 Arguments: \<enter any arguments that the script needs but `-` separeted like: h-c-m\>
 
-Contributor: \<Enter your Github handle/username\>
+Contributor: \<Enter your Github handle/username without url\>
 
-Description: \<Enter a one line description that describes your script\>
+Description: \<Enter a one line description that describes your script. Also, explain the arguments usage here\>

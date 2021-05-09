@@ -59,7 +59,7 @@ def extract_from_pr_body(pr_body, pa_token):
     for element in pr_body:
         pr_body[pr_body.index(element)] = element.rstrip("\r")
 
-    # A special case for contributors in gh-pages branch
+    # A special case for contributors in gh-pages branch and other dependency PRs
     try:
         pr_body = pr_body[pr_body.index("## Project Metadata"):]
     except:
