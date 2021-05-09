@@ -1,4 +1,4 @@
-import argparse
+import getpass
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -56,48 +56,31 @@ class LinkedIn:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Add your certifications to your LinkedIn Profile")
-    group = parser.add_mutually_exclusive_group()
-
-    group.add_argument('-c', '--coursera', type=bool,
-                       help="Coursera certification", action='store_true')
-    group.add_argument('-u', '--udemy', type=bool,
-                       help="Udemy certification", action='store_true')
-
-    args = parser.parse_args()
-
-    # set org according to arguments
-    if args.udemy:
-        org = 'udemy'
-    elif args.coursera:
-        org = 'coursera'
+    # Get LinkedIn credentials
+    email = input('Enter your linkedin email: ')
+    password = getpass.getpass('Password: ')
 
     # Chrome environment setup
     opt = webdriver.ChromeOptions()
     opt.add_argument('--disable-gpu')
-    opt.add_argument('--headless')
+    # opt.add_argument('--headless')
     driver = webdriver.Chrome(
         executable_path='LinkedIn-Certifications-Manager/chromedriver', options=opt)
     driver.get('https://linkedin.com')
 
-    # Get LinkedIn login credentials
-    data = json.load(open('LinkedIn-Certifications-Manager/credentials.json'))
-
-    linkedIn = LinkedIn(data['linkedin']['email'],
-                        data['linkedin']['password'])
+    linkedIn = LinkedIn(email, password)
     linkedIn.login()
 
     # Load course data
     courseData = json.load(open('LinkedIn-Certifications-Manager/data.json'))
-    items = courseData[org]
 
     # Add certifications to linkedin
-    for item in items:
-        name = item['name']
-        credId = item['url'].split('/')[-1]
-        credUrl = item['url']
-        linkedIn.addCertData(name=name, org=org,
-                             credId=credId, credUrl=credUrl)
-        print(f'Added: {name}')
+    for org in courseData:
+        for course in range(len(courseData[org])):
+            name = courseData[org][course]['name']
+            credId = courseData[org][course]['url'].split('/')[-1]
+            credUrl = courseData[org][course]['url']
+            linkedIn.addCertData(name=name, org=org,
+                                 credId=credId, credUrl=credUrl)
+            print(f'Added: {name}')
     print('Completed!')
