@@ -24,5 +24,5 @@ Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on Y
 
 ## Author(s)
 
-- Arnab Ray (https://github.com/Arnab11917676)
+-[Arnab Ray](https://github.com/Arnab11917676)
 
