@@ -4,15 +4,13 @@ import speech_recognition as sr
 import tkinter.messagebox as tmessage
 import wolframalpha
 
-
 from os.path import exists
-
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
-wolfprimeaplahe_app = '9RQ7T2-WKUWLR74WJ'
+wolfprimeaplahe_app = 'USER_TOKEN'
 
 
 def audio(audio):
@@ -23,8 +21,8 @@ def audio(audio):
 def welcomeInst():
     print('Welcome to Calculator :)')
     audio('Welcome to Calculator :)')
-    print('If you want calculate something please tell Calcualte and then your expression')
-    audio('If you want calculate something please tell Calcualte and then your expression')
+    print('If you want calculate something please tell calcualte and then your expression')
+    audio('If you want calculate something please tell calcualte and then your expression')
     print('For example CALCULATE 7 PLUS 8 or CALCULATE sin30 plus cot20')
     audio('For example CALCULATE 7 PLUS 8 or CALCULATE sin30 plus cot20')
 
@@ -36,7 +34,6 @@ def _takeCommand():
         r.pause_threshold = 2
         r.energy_threshold = 3000
         audio = r.listen(source)
-
 
     try:
         print("Recognizing...")
@@ -60,8 +57,8 @@ def _calculate():
     answerr = next(res.results).text
     space = '\n'
     ourQuery = ''.join(query)
-    Question='Your Query was :- '
-    Answer='Your answer was :- '
+    Question = 'Your Query was :- '
+    Answer = 'Your answer was :- '
     finalAnswer = Question + str(ourQuery) + space + Answer + str(answerr) + space
 
     if exists('maths.txt'):
@@ -77,13 +74,13 @@ def _calculate():
 
 
 welcomeInst()
+
 while True:
 
     spech = _takeCommand().lower()
 
     if 'calculate' in spech:
         _calculate()
-
 
 
     elif 'clear' in spech:
@@ -93,8 +90,9 @@ while True:
                 file.truncate(0)
                 file.close()
                 print('done')
+
         else:
-            tmessage.showinfo('Error','No file exists with this name')
+            tmessage.showinfo('Error', 'No file exists with this name')
 
 
     elif 'history' in spech:
@@ -103,5 +101,7 @@ while True:
 
     elif 'quit' in spech or 'exit' in spech:
         quit()
+
+
     else:
         tmessage.showinfo('Opps', "Didn't understand")
