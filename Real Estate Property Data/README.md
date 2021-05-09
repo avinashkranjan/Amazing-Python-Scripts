@@ -28,3 +28,11 @@ ___
 
 ### Step 3
 - Use pandas to convert the list of dictionaries to csv file
+---
+
+## Author
+- Himanshi2997
+
+---
+## Output
+![output](https://user-images.githubusercontent.com/67272318/117584174-0d4f2c00-b129-11eb-9f23-29971f36f852.PNG)
