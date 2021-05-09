@@ -6,24 +6,12 @@ This will run in the terminal and all the instruction will be given while runnin
 ## Setup instructions
 There are two ways to run it on your Linux,MAC or Windows
 
-- Run the executable(.exe) file.
 - Run the program in your IDE or terminal/command line.
 
 ## Requirements:
 - Python3
+Refer the requirments.txt file.
 
-```bash
-pip install pyttsx3
-```
-```bash
-pip install speech_recognition
-```
-```bash
-pip install wolframalpha
-``` 
-```bash
-pip install tkinter
-``` 
 Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on YouTube.
 
 | Name of Script | YouTube Link |  Author | Tools Used |
@@ -37,5 +25,5 @@ Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on Y
 
 ## Author(s)
 
-- Arnab Ray (Arnab11917676)
+- Arnab Ray (https://github.com/Arnab11917676)
 
