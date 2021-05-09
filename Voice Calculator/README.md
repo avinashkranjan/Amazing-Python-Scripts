@@ -9,7 +9,6 @@ There are two ways to run it on your Linux,MAC or Windows
 - Run the program in your IDE or terminal/command line.
 
 ## Requirements:
-- Python3
 Refer the requirments.txt file.
 
 Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on YouTube.
