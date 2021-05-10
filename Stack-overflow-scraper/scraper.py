@@ -43,11 +43,20 @@ def get_URL():
     url = 'https://stackoverflow.com/questions/tagged/{}?sort=MostVotes&edited=true'.format(tag)
     return url
 
+def number_questions():
+    questions = int(questions_box.get())
+    if type(questions) != int or questions > 15:
+        return 15
+    return questions
+
 def scrape_questions():
     for count in range(5):
         progress['value'] += 15
         window.update_idletasks()
         time.sleep(0.10)
+
+    question_count = number_questions()  
+    count = 0   
 
     url = get_URL()
     if url:
@@ -64,6 +73,8 @@ def scrape_questions():
         clear_progress()        
         return ""
     for question in questions:
+        if count >= question_count:
+            break
         question_text = question.find('a', {'class': 'question-hyperlink'}).text.strip()
         question_summary = question.find('div', {'class': 'excerpt'}).text.strip()
         question_summary = question_summary.replace('\n',' ')
@@ -72,6 +83,7 @@ def scrape_questions():
         views = question.find('div', {'class': 'views'}).text.strip().split()[0]
         entities = (question_text, question_summary, question_link, votes, views)
         sql_insert(con, entities)
+        count += 1
         
     messagebox.showinfo("Success!", "Questions scrapped successfully!") 
     clear_progress()
@@ -143,10 +155,14 @@ ttk.Label(window, text="Stack overflow question scraper",
           background='white', foreground="Orange",
           font=("Helvetica", 30, 'bold')).grid(row=0, column=1)
 
-# label for combobox
+# label texts
 ttk.Label(window, text="Enter tag (ex - python):", background = 'white',
           font=("Helvetica", 15)).grid(column=0,
                                        row=5, padx=10, pady=25)
+
+ttk.Label(window, text="No of questions to scrape:", background = 'white',
+          font=("Helvetica", 15)).grid(column=0,
+                                       row=6, padx=10, pady=5)
 
 
 # Button creation
@@ -154,11 +170,14 @@ scrape_btn = ttk.Button(window, text="Scrape questions!", style='my.TButton', co
 scrape_btn.grid(row=5, column=2, pady=5, padx=15, ipadx=5)
 
 display_btn = ttk.Button(window, text="Display from DB", style='my.TButton', command = show_results)
-display_btn.grid(row=7, column=2, pady=5, padx=15, ipadx=5)
+display_btn.grid(row=6, column=2, pady=5, padx=15, ipadx=5)
 
 # Search Box
 search_box = tk.Entry(window, font=("Helvetica 15"), bd = 2, width=60)
 search_box.grid(row=5, column=1, pady=5, padx=15, ipadx=5)
+
+questions_box = tk.Entry(window, font=("Helvetica 15"), bd = 2, width=60)
+questions_box.grid(row=6, column=1, pady=5, padx=15, ipadx=5)
 
 frame = ttk.Frame(window, style='my.TFrame')
 frame.place(relx=0.50, rely=0.18, relwidth=0.98, relheight=0.90, anchor="n")
