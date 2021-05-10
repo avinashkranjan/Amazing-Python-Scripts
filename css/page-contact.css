@@ -1,0 +1,192 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainscreen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #dfdbe5;
+}
+
+/*We divided the main part in two parts one is top part
+and other is bottom form part*/
+
+/*Styling top part*/
+.toppart {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 10rem 10rem;
+  background-image: url('../images/python_background.png');
+}
+.formpart hr {
+  border: none;
+  height: 3px;
+  background-color: #47b2e4;
+  width: 500px;
+  margin: 10px auto;
+}
+.subText {
+  background: #3a2f2f73;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.toppart .logo {
+  width: 6rem;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.toppart h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 auto 2rem;
+}
+.toppart p {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #eaeaea;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/*Top part styling completed*/
+
+/*Styling bottom  part*/
+
+/*Styling of box*/
+.bottompart {
+  width: 60rem;
+  margin: 0 auto;
+  background: white;
+  position: relative;
+  top: -7rem;
+  border-radius: 1.5rem;
+  box-shadow: 4px 3px 20px #3535358c;
+  display: flex;
+  flex-direction: row;
+}
+
+/*Styling of image part*/
+
+.imgpart {
+  background: #0d384d;
+  width: 25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+.subImg {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+}
+
+/*Styling form part starts here*/
+.formpart {
+  width: 35rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 2rem 2rem 4rem;
+  display: block;
+}
+h2 {
+  color: #47b2e4;
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+label {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 400;
+  display: block;
+  margin: 0.5rem 0;
+}
+.inputbox {
+  width: 26rem;
+  padding: 0.5rem;
+  border: 2px solid #b9b6b6;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  font-family: 'Roboto', sans-serif;
+  color: #615a5a;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/*Styling checkbox agreement line*/
+input.agree {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+label.agree {
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/*Styling submit button */
+.submitbtn {
+  width: 13rem;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  color: white;
+  background: #47b2e4;
+  border: 0;
+  outline: 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/*Styling submit button hover state*/
+.submitbtn:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 3px 3px 6px #38373785;
+}
+/*Form styling complted*/
+
+@media only screen and (max-width: 1000px) {
+  .toppart {
+    padding: 3rem 2rem 10rem;
+  }
+  .bottompart {
+    flex-direction: column;
+    width: auto;
+  }
+  .imgpart {
+    width: 100%;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 0;
+  }
+  .subImg {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+  }
+  .formpart {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .inputbox {
+    width: 16rem;
+  }
+  .options {
+    width: 16rem;
+  }
+  .eachoption {
+    display: block;
+    width: 100%;
+  }
+  .links {
+    display: none;
+  }
+}
