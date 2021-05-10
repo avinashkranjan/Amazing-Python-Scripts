@@ -37,12 +37,14 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
     # <----- Github Login & Database Update ----->
     git = Github(pa_token)
     user_object = git.get_user()
-    git_username = user_object.login
     print("[+] PyGithub Login Success!")
+    
     repo = git.get_repo("avinashkranjan/Amazing-Python-Scripts")
-    datastore_file = repo.get_contents("./Master Script/datastore.json")
-    repo.update_file(datastore_file.path, "Updated datastore.json", data_store, datastore_file.sha, branch="main")
-    repo.update_file("./datastore.json", "Updated datastore.json", data_store, datastore_file.sha, branch="gh-pages")
+    datastore_fileMaster = repo.get_contents("./Master Script/datastore.json", ref="master")
+    datastore_fileWebsite = repo.get_contents("./datastore.json", ref="gh-pages")
+    
+    repo.update_file(datastore_fileMaster.path, "Updated datastore.json", data_store, datastore_fileMaster.sha, branch="master")
+    repo.update_file("./datastore.json", "Updated datastore.json", data_store, datastore_fileWebsite.sha, branch="gh-pages")
     print("[+] Database Updated")
 
 

@@ -36,7 +36,7 @@ _Please delete options that are not relevant._
 
 `` If there is no-file/nothing to fill the below fields with, then type: none ``
 
-`` Example: `` If no requirements.txt needed/present then type in ``Requirments`` none => ``Requirments: none``
+`` Example: `` If no requirements.txt needed/present, then type none in ``Requirments``.
 
 Category:
 - [ ] Calculators
