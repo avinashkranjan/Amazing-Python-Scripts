@@ -7,7 +7,7 @@ import re
 category = r"- \[x\] (.+)"
 name = r"Title: (.+)"
 path = r"Folder: (.+)"
-requirments_path = r"Requirments: (.+)"
+requirments_path = r"Requirements: (.+)"
 entry = r"Script: (.+)"
 arguments = r"Arguments: (.+)"
 contributor = r"Contributor: (.+)"
