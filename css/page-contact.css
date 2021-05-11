@@ -190,3 +190,29 @@ label.agree {
     display: none;
   }
 }
+
+a.nav-link {
+  font-size: x-large;
+}
+
+.container-fluid {
+  background-color: rgb(74, 80, 75);
+}
+.nav-link {
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 20px;
+  /* text-decoration: underline; */
+  color: aliceblue !important;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+  padding-top: 15px;
+  padding: 0 10px;
+  padding-top: 2px;
+}
+
+.nav-link:hover {
+  color: rgb(225, 250, 86) !important;
+}

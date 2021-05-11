@@ -44,10 +44,14 @@ body {
   color: aliceblue !important;
 }
 
+.navbar > .container,
+.navbar > .container-fluid {
+  padding-top: 15px;
+  padding: 0 10px;
+  padding-top: 2px;
+}
+
 .nav-link:hover {
-  font-size: 22px;
-  font-weight: 600;
-  /* font-size: 24px; */
   color: rgb(225, 250, 86) !important;
 }
 
@@ -71,11 +75,11 @@ a.nav-link {
 
 .navbar > .container,
 .navbar > .container-fluid {
-  padding-top: 15px;
+  padding-top: 2px;
 }
 
 .d-flex {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .navbar-toggler {
   margin-bottom: 10px;
@@ -89,4 +93,9 @@ a.nav-link {
 
 .hidden {
   display: none;
+}
+
+.top-heading {
+  font-size: 56px;
+  margin: 20px;
 }
