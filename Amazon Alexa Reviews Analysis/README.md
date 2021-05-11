@@ -23,3 +23,7 @@ Natural Language Toolkit(nltk): The Natural Language Toolkit (NLTK) is a Python 
 ## Source
 
 https://www.kaggle.com/sid321axn/amazon-alexa-reviews
+
+## Author
+
+Manasi Chhibber
