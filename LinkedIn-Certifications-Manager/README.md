@@ -11,10 +11,10 @@ A CLI based tool to automatically add certification to your LinkedIn profile.
 ```bash
 cd Amazing-Python-Scripts
 ```
-<em>View help documentation:</em>  
+<em>Run the Script:</em>  
 ```powershell
-py LinkedIn-Certifications-Manager/manager.py -u true
+py LinkedIn-Certifications-Manager/manager.py
 ```
 ``` bash
-python3 LinkedIn-Certifications-Manager/manager.py -u true
+python3 LinkedIn-Certifications-Manager/manager.py
 ```
