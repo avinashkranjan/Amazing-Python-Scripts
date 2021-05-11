@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from time import sleep
-import json
 
 # Xpaths
 xLinkedin = {
@@ -44,9 +43,10 @@ class LinkedIn:
         nameInput = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
             (By.XPATH, xLinkedin['xCertName'])))
         nameInput.send_keys(name)
+        sleep(1)
         orgInput = driver.find_element_by_xpath(xLinkedin['xCertOrg'])
         orgInput.send_keys(org)
-        sleep(4)
+        sleep(3)
         orgInput.send_keys(Keys.ARROW_DOWN + Keys.ENTER)
         credIdInput = driver.find_element_by_xpath(xLinkedin['xCredId'])
         credIdInput.send_keys(credId)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     # Chrome environment setup
     opt = webdriver.ChromeOptions()
     opt.add_argument('--disable-gpu')
-    opt.add_argument('--headless')
+    # opt.add_argument('--headless')
     driver = webdriver.Chrome(
         executable_path='LinkedIn-Certifications-Manager/chromedriver', options=opt)
     driver.get('https://linkedin.com')
@@ -71,16 +71,17 @@ if __name__ == "__main__":
     linkedIn = LinkedIn(email, password)
     linkedIn.login()
 
-    # Load course data
-    courseData = json.load(open('LinkedIn-Certifications-Manager/data.json'))
-
     # Add certifications to linkedin
-    for org in courseData:
-        for course in range(len(courseData[org])):
-            name = courseData[org][course]['name']
-            credId = courseData[org][course]['url'].split('/')[-1]
-            credUrl = courseData[org][course]['url']
-            linkedIn.addCertData(name=name, org=org,
-                                 credId=credId, credUrl=credUrl)
-            print(f'Added: {name}')
+    while True:
+        name = input('Enter course name[nothing to cancel]: ')
+        if name == '':
+            break
+        courseUrl = input(f'Enter course url for the course[\'{name}\']: ')
+        org = input('Enter the name of the issuing organistion: ')
+        courseId = courseUrl.split('/')[-1]
+        linkedIn.addCertData(name=name, org=org,
+                             credId=courseId, credUrl=courseUrl)
+        print(f'Added: {name}')
+        name = ''
     print('Completed!')
+    driver.close()
