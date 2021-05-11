@@ -1,6 +1,6 @@
 # Blood Alcohol Content
 
-Want to know how much amount in alcohol drank a man/woman was? well Blood alcohol content program will help you find out how much  alcohol  he/her was drank.
+Want to know how much amount of alcohol you drank? Well, the Blood alcohol content program will help you find out the alcohol intake.
 
 ## Installation
 
