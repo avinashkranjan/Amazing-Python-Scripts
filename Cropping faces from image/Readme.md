@@ -12,6 +12,5 @@ User needs to have Python and OpenCV in their machines.
 
 
 ## Author
-Garima Goyal
-
+[Garima Goyal](https://github.com/undetectablevirus)
 
