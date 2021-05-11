@@ -11,14 +11,6 @@ Everyone would like to have a system, that keeps them updated about the total ca
 
 Once the user starts the program, it will ask you about the state whose data you want to know, after it is entered, the notification system will do the work by itself and keep updating the user after an interval of an hour. The script will keep running in the background until the user exits it manually.
 
-# Modules used :
-
-Plyer
-requests
-bs4
-time
-englisttohindi
-
 # Development Status
 
 This script is at present complete. A future version may include a display of data of various states and also compare the new cases to cured cases, give updates on the vaccine distribution, etc.
