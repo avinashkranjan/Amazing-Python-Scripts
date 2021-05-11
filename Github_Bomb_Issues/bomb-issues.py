@@ -15,6 +15,5 @@ repo = g.get_repo(repository)
 for x in range(number):
     repo.create_issue(
         title="Lorem ipsum",
-        body=
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     )

@@ -20,7 +20,6 @@ def input_and_parse(n):
     Returns:
        dic :A parsed dictionary.
     """
-
     print(
         "enter the current page and the page you want it to be on seperate values by a comma ',' \n"
     )

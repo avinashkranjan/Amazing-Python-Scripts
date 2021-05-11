@@ -18,7 +18,7 @@ myColorValues = [[51, 153, 255],  # BGR
                  [0, 255, 0],
                  [255, 0, 0]]
 
-myPoints = []  ## [x , y , colorId ]
+myPoints = []  # [x , y , colorId ]
 
 
 def findColor(img, myColors, myColorValues):
@@ -39,7 +39,8 @@ def findColor(img, myColors, myColorValues):
 
 
 def getContours(img):
-    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    contours, hierarchy = cv2.findContours(
+        img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     x, y, w, h = 0, 0, 0, 0
     for cnt in contours:
         area = cv2.contourArea(cnt)
@@ -53,7 +54,8 @@ def getContours(img):
 
 def drawOnCanvas(myPoints, myColorValues):
     for point in myPoints:
-        cv2.circle(imgResult, (point[0], point[1]), 10, myColorValues[point[2]], cv2.FILLED)
+        cv2.circle(imgResult, (point[0], point[1]),
+                   10, myColorValues[point[2]], cv2.FILLED)
 
 
 while True:

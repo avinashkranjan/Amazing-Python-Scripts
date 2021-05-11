@@ -69,7 +69,6 @@ def playerMove():
     '''
     Take the input from user and validate user's input
     '''
-
     run = True
     while run:
         try:

@@ -52,7 +52,8 @@ def slides_capture(links):
 
 
 def combine(all_slides):
-    output_name = input("\n\n Enter the name for pdf file of slides (without extension):")
+    output_name = input(
+        "\n\n Enter the name for pdf file of slides (without extension):")
     with open(output_name+".pdf", "wb") as f:
         f.write(img2pdf.convert(all_slides))
     for i in all_slides:

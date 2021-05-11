@@ -11,8 +11,6 @@ def extract():
     Function for extracting text from images.
     Additional it saves the text extracted as a txt file.
     """
-
-    # Enter the name of folder which contains img files
     image_location = input("Enter the Folder name containing Images: ")
     image_path = os.path.join(current_location, image_location)
 

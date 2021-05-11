@@ -30,13 +30,15 @@ def webhook_handle():
 
                 if event.get("message"):  # somebody typed a message
                     process_message(event)
-                elif event.get("postback"):  # user clicked/tapped "postback" button in earlier message
+                # user clicked/tapped "postback" button in earlier message
+                elif event.get("postback"):
                     process_postback(event)
     return 'ok'
 
 
 def process_message(event):
-    sender_id = event["sender"]["id"]  # the facebook ID of the person sending you the message
+    # the facebook ID of the person sending you the message
+    sender_id = event["sender"]["id"]
 
     # could receive text or attachment but not both
     if "text" in event["message"]:
@@ -141,7 +143,8 @@ def create_state_list(index):
 
 
 def get_stats_send(sender_id, state):
-    response = json.loads(requests.get("https://api.covid19india.org/data.json").text)
+    response = json.loads(requests.get(
+        "https://api.covid19india.org/data.json").text)
     list_state = response['statewise']
     for i in list_state:
         if i['state'] == state:
@@ -179,7 +182,8 @@ def call_send_api(message_data):
         "Content-Type": "application/json"
     }
 
-    r = requests.post("https://graph.facebook.com/v5.0/me/messages", params=params, headers=headers, data=message_data)
+    r = requests.post("https://graph.facebook.com/v5.0/me/messages",
+                      params=params, headers=headers, data=message_data)
 
 
 if __name__ == "__main__":
