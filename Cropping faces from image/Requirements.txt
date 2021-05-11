@@ -1,5 +1,3 @@
-Firstly, Make sure you have Python installed in your Machine. 
-Second requirement is the installation of OpenCV in your PC. You can install it using 'pip install opencv-python' if not installed.
-For the Haar cascades to work,user needsto download the trained classifier XML file (haarcascade_frontalface_default.xml), which is available in OpenCv’s GitHub repository. 
-Save this file to your working location.
-And here we are ready to go with the detection of faces:)
+python=3.8.2
+opencv=opencv_version =4.4.0.46
+Trained Calssifier XML File=haarcascade_frontalface_default.xml
