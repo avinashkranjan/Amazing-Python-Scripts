@@ -12,12 +12,6 @@ def send_message():
 
     password_info = password.get()
     
-    #print(address_info,email_body_info)
-    
-    #sender_email = input("Enter sender's email: ") 
-    
-    #sender_password = input("Enter password: ") 
-    
     server = smtplib.SMTP('smtp.gmail.com',587)
     
     server.starttls()
@@ -33,7 +27,7 @@ def send_message():
     address_entry.delete(0,END)
     email_body_entry.delete(0,END)
     password_entry.delete(0,END)
-    sender_address_entry(0,END)
+    sender_address_entry.delete(0,END)
     
 
 gui = Tk()

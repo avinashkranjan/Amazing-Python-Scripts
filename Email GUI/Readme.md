@@ -4,6 +4,7 @@
 
 ## Email GUI Functionalities : 🚀
 
+- **To send email the less security option of sender's email must be turned on.**
 - Enter all the details like sender's email, password, Recipient's Email and message.
 - The script logs into the gmail account and then sends the message.
 
