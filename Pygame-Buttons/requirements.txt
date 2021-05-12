@@ -1,4 +1,1 @@
-  | Requirement |  Command         | Documentation |
---|-------------|------------------|---------------|
-1.| Pygame      |pip install pygame|  Pygame/PyPi  |
---|-------------|------------------|---------------|
+pygame==2.0.1
