@@ -1,5 +1,5 @@
 import joblib
-model = joblib.load(r'C:\Users\DELL\Desktop\Kaggle+HE\Github GSSoC21\Amazing Python Scripts\Laptop Price Predictor\Model\LaptopPricePrediction.pkl')
+model = joblib.load(r'./Laptop Price Predictor/Model/LaptopPricePrediction.pkl')
 
 # GUI
 
