@@ -59,4 +59,4 @@ print('\nAccuracy:',r2_score(y_test, y_pred))
 # Getting the pkl file
 
 import pickle
-pickle.dump(regr, open('LaptopPricePrediction.pkl', 'wb'))
+pickle.dump(regr, open('./Laptop Price Predictor/Model/LaptopPricePrediction.pkl', 'wb'))
