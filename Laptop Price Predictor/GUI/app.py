@@ -52,6 +52,8 @@ def values():
         m = 2
     elif mf == 'Lenovo':
         m = 3
+    else:
+        root.destroy()
     
     global r # our 2nd input variable
     r = float(entry2.get()) 
