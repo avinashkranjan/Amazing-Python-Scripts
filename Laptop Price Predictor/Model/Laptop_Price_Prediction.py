@@ -11,7 +11,7 @@ from sklearn.metrics import r2_score
 
 # Getting our Data
 
-df = pd.read_csv(r'C:\Users\DELL\Desktop\Kaggle+HE\Github GSSoC21\Amazing Python Scripts\Laptop Price Predictor\Dataset\laptoppricing.csv', encoding = 'unicode_escape')
+df = pd.read_csv(r'./Laptop Price Predictor/Dataset/laptoppricing.csv', encoding = 'unicode_escape')
 
 # Data Preprocessing
 
