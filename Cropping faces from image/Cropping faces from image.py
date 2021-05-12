@@ -21,14 +21,16 @@ for (x, y, w, h) in faces:
                   (0, 0, 255), 2)
       
     faces = img[y:y + h, x:x + w]
-    cv2.imshow('Cropped faces',faces)     #Displaying the cropped faces
    
   
-cv2.imshow('Original Image',img)              #Displaying the original Image
-
-#Saving the image of cropped faces
-directory = input('Enter the directory where you want to save the image: ')    #Taking input for desired directory
-os.chdir(directory)
-cv2.imwrite('Cropped faces.jpg',faces)   #saving the image
+#Naming the output image
+image_name = path.split(r'/')
+image_path = image_name[-1].split('.')
+output  = image_path[0] + "(Croppedfaces).jpg"
+ 
+cv2.imshow('Original',img)    #Displaying the original Image
+cv2.imshow(output,faces)      #Displaying the cropped faces Image
+cv2.imwrite(output,faces)     #Saving the cropped faces Image
+  
 cv2.waitKey()
 cv2.destroyAllWindows()
