@@ -1,5 +1,6 @@
 import getpass
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -63,9 +64,8 @@ if __name__ == "__main__":
     # Chrome environment setup
     opt = webdriver.ChromeOptions()
     opt.add_argument('--disable-gpu')
-    # opt.add_argument('--headless')
-    driver = webdriver.Chrome(
-        executable_path='LinkedIn-Certifications-Manager/chromedriver', options=opt)
+    opt.add_argument('--headless')
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
     driver.get('https://linkedin.com')
 
     linkedIn = LinkedIn(email, password)
