@@ -9,9 +9,7 @@ There way to run it on your Linux,MAC or Windows
 
 - Run the program in your IDE or terminal/command line.
 
-<<<<<<< HEAD
 Click on the **Click Here** to see the Voice Calculator Demo on YouTube.
-=======
 
 | Name of Script   | YouTube Link                               | Author                                        | Tools Used                        |
 | ---------------- | ------------------------------------------ | --------------------------------------------- | --------------------------------- |
@@ -23,4 +21,4 @@ Click on the **Click Here** to see the Voice Calculator Demo on YouTube.
 
 ## Author(s)
 
-- Arnab Ray (Arnab11917676)
+- Arnab Ray (https://github.com/Arnab11917676)

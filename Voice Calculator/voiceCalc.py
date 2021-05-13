@@ -10,7 +10,7 @@ listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
-wolfprimeaplahe_app = str(input('Enter the API Token'))
+wolfprimeaplahe_app = input('Enter the API Token')
 
 
 def audio(audio):
