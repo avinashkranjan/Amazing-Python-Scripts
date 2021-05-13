@@ -1,0 +1,5 @@
+The following modules are required to run beatBoard.py
+    - playsound module
+
+To install the playsound module, run the following command
+    pip install playsound
