@@ -9,11 +9,13 @@ There way to run it on your Linux,MAC or Windows
 
 - Run the program in your IDE or terminal/command line.
 
+<<<<<<< HEAD
 Click on the **Click Here** to see the Voice Calculator Demo on YouTube.
+=======
 
 | Name of Script   | YouTube Link                               | Author                                        | Tools Used                        |
 | ---------------- | ------------------------------------------ | --------------------------------------------- | --------------------------------- |
-| Voice Calculator | [Click Here](https://youtu.be/cOgujLzl9zg) | [Arnab Ray](https://github.com/Arnab11917676) | Speech Recognition , Wolframaplha |
+| Voice Calculator | [Click Here](https://youtu.be/cOgujLzl9zg) | [Arnab Ray](https://github.com/Arnab11917676) | Speech Recognition , Wolframalpha |
 
 ## Output
 
