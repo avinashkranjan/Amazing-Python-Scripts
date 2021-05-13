@@ -9,7 +9,7 @@ There way to run it on your Linux,MAC or Windows
 
 - Run the program in your IDE or terminal/command line.
 
-Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on YouTube.
+Click on the **Click Here** to see the Voice Calculator Demo on YouTube.
 
 | Name of Script   | YouTube Link                               | Author                                        | Tools Used                        |
 | ---------------- | ------------------------------------------ | --------------------------------------------- | --------------------------------- |

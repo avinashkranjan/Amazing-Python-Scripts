@@ -10,7 +10,7 @@ listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
-wolfprimeaplahe_app = 'USER_TOKEN'
+wolfprimeaplahe_app = str(input('Enter the API Token'))
 
 
 def audio(audio):
@@ -40,7 +40,6 @@ def _takeCommand():
         query = r.recognize_google(audio, language='en-In')
         print(query)
 
-
     except Exception as e:
         print(e)
         print("Did't understand you...\nPlease say again...")
@@ -59,7 +58,8 @@ def _calculate():
     ourQuery = ''.join(query)
     Question = 'Your Query was :- '
     Answer = 'Your answer was :- '
-    finalAnswer = Question + str(ourQuery) + space + Answer + str(answerr) + space
+    finalAnswer = Question + str(ourQuery) + \
+        space + Answer + str(answerr) + space
 
     if exists('maths.txt'):
         with open('maths.txt', 'a', encoding='utf-8') as mth:
@@ -82,7 +82,6 @@ while True:
     if 'calculate' in spech:
         _calculate()
 
-
     elif 'clear' in spech:
 
         if exists('maths.txt'):
@@ -94,14 +93,11 @@ while True:
         else:
             tmessage.showinfo('Error', 'No file exists with this name')
 
-
     elif 'history' in spech:
         os.system('maths.txt')
 
-
     elif 'quit' in spech or 'exit' in spech:
         quit()
-
 
     else:
         tmessage.showinfo('Opps', "Didn't understand")
