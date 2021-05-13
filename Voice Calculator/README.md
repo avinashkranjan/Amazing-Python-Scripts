@@ -13,7 +13,7 @@ Click on the **Click Here** to see the Voice Calculator YouTube.
 
 | Name of Script   | YouTube Link                               | Author                                        | Tools Used                        |
 | ---------------- | ------------------------------------------ | --------------------------------------------- | --------------------------------- |
-| Voice Calculator | [Click Here](https://youtu.be/cOgujLzl9zg) | [Arnab Ray](https://github.com/Arnab11917676) | Speech Recognition , Wolframaplha |
+| Voice Calculator | [Click Here](https://youtu.be/cOgujLzl9zg) | [Arnab Ray](https://github.com/Arnab11917676) | Speech Recognition , Wolframalpha |
 
 ## Output
 
