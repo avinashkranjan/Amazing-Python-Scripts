@@ -30,19 +30,21 @@ def welcomeInst():
 def _takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Listning....")
+        print("Listening....")
+        audio('Listening')
         r.pause_threshold = 2
         r.energy_threshold = 3000
         audio = r.listen(source)
 
     try:
         print("Recognizing...")
+        audio('Recognizing')
         query = r.recognize_google(audio, language='en-In')
         print(query)
 
     except Exception as e:
-        print(e)
-        print("Did't understand you...\nPlease say again...")
+        tmessage.showinfo('Error', f'{e}')
+        print("Didn't understand you...\nCan you repeat?...")
         return "NONE"
 
     return query
@@ -61,12 +63,12 @@ def _calculate():
     finalAnswer = Question + str(ourQuery) + \
         space + Answer + str(answerr) + space
 
-    if exists('maths.txt'):
-        with open('maths.txt', 'a', encoding='utf-8') as mth:
+    if exists('./Voice Calculator/maths.txt'):
+        with open('./Voice Calculator/maths.txt', 'a', encoding='utf-8') as mth:
             mth.write(finalAnswer)
             mth.close()
     else:
-        history = open('maths.txt', 'w', encoding='utf-8')
+        history = open('./Voice Calculator/maths.txt', 'w', encoding='utf-8')
         history.write(finalAnswer)
         history.close()
     print("The answer is " + answerr)
@@ -84,8 +86,8 @@ while True:
 
     elif 'clear' in spech:
 
-        if exists('maths.txt'):
-            with open('maths.txt', 'r+') as file:
+        if exists('./Voice Calculator/maths.txt'):
+            with open('./Voice Calculator/maths.txt', 'r+') as file:
                 file.truncate(0)
                 file.close()
                 print('done')
@@ -94,7 +96,7 @@ while True:
             tmessage.showinfo('Error', 'No file exists with this name')
 
     elif 'history' in spech:
-        os.system('maths.txt')
+        os.system('./Voice Calculator/maths.txt')
 
     elif 'quit' in spech or 'exit' in spech:
         quit()

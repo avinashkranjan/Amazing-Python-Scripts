@@ -21,4 +21,4 @@ Click on the **Click Here** to see the Voice Calculator Demo on YouTube.
 
 ## Author(s)
 
-- Arnab Ray (https://github.com/Arnab11917676)
+- [Arnab Ray](https://github.com/Arnab11917676)
