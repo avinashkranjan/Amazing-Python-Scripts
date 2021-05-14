@@ -53,7 +53,8 @@ def values():
     elif mf == 'Lenovo':
         m = 3
     else:
-        root.destroy()
+        other = tk.Label(root, text='Please enter manufacturer as ASUS/Dell/HP/Lenovo.', bg='red')
+        canvas1.create_window(260, 240, window=other)
     
     global r # our 2nd input variable
     r = float(entry2.get()) 
