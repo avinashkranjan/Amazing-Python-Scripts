@@ -1,20 +1,20 @@
 # Twitter Video Downloader
 
-A GUI used to download 
+A GUI downloader used to download Twitter videos by providing its link.
 
-# Installation
+## Installation
 
 > pip3 install -r requirements.txt
 
-# Usage
+## Usage
 
 Provide the Twitter video URL in the field and click `Download`.
 
-# Output
+## Output
 
 Downloaded video you desired in the same directory of the script.
 
-# Authors
+## Authors
 
 Written by [XZANATOL](https://www.github.com/XZANATOL).
 

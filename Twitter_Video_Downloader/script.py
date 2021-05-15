@@ -11,6 +11,7 @@ def Invalid_URL():
     
 def Download_vid():
     """ Validates link and Downloads Video """
+    Download_Window.delete("0.0", "end")
     global URL_Val
     url = URL_Val.get()
 
@@ -53,6 +54,7 @@ Download_button = Button(main, text="Download", font=("Calibri", 9), command=Dow
 Download_button.place(x=250, y=80, width=100)
 
 Download_Window = Text(main, font=("Calibri", 9), bg="black", fg="white", bd=1, relief=SUNKEN, wrap=WORD)
+Download_Window.insert(END, "Welcome to Twitter Video Downloader, Provide a Twitter video link in the above box and click download to start the process. :D")
 Download_Window.place(x=30, y=120, width=530, height=250)
 
 Status = Label(main, text="Hello!! :D", fg="orange", font=("Calibri", 9), bd=1, relief=SUNKEN, anchor=W, padx=3)
