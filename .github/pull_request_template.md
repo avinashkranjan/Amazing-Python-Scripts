@@ -59,7 +59,7 @@ Title: \<write script title here\>
 
 Folder: \<type the folder name that contains your script\>
 
-Requirments: \<type the name of text file containing the required to install python packages, type None if no file required\>
+Requirements: \<type the name of text file containing the required to install python packages, type None if no file required\>
 
 Script: \<Enter the name of the ``.py`` file (The main entry point of the program)\>
 
