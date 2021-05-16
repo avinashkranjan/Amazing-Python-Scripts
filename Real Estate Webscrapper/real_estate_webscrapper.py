@@ -12,40 +12,40 @@ c=r.content
 soup=BeautifulSoup(c,"html.parser")
 
 
-l=[]
+complete_dataset = []
 
 
-all=soup.find_all("div",{"class":"flex relative clearfix m-srp-card__container"})
-for item in all:
-    d={}
+all_containers=soup.find_all("div",{"class":"flex relative clearfix m-srp-card__container"})
+for item in all_containers:
+    item_data={}
     try:
         Price=item.find("div",{"class":"m-srp-card__price"}).text.replace("\n","").replace(" ","").replace("₹","")
         p=Price.split()
-        d["Price"]=p[0]
+        item_data["Price"]=p[0]
 
     except:
         Price=item.find("span",{"class":"luxury-srp-card__price"}).text.replace("\n","").replace(" ","").replace("₹","")
         p=Price.split()
-        d["Price"]=p[0]
+        item_data["Price"]=p[0]
        
 
     try:
         Pricepersqft=item.find("div",{"class":"m-srp-card__area"}).text.replace("₹","")
         pr=Pricepersqft.split()
-        d["Pricepersqft"]=pr[0]
+        item_data["Pricepersqft"]=pr[0]
 
     except:
         try:
             Pricepersqft=item.find("span",{"class":"luxury-srp-card__sqft"}).text.replace("\n","").replace(" ","").replace("₹","")
             pr=Pricepersqft.split()
-            d["Pricepersqft"]=pr[0]
+            item_data["Pricepersqft"]=pr[0]
         except:
-            d["Pricepersqft"]=None
+            item_data["Pricepersqft"]=None
 
     try:
-        d["Size"]=item.find("span",{"class":"m-srp-card__title__bhk"}).text.replace("\n","").strip()[0:5]
+        item_data["Size"]=item.find("span",{"class":"m-srp-card__title__bhk"}).text.replace("\n","").strip()[0:5]
     except:
-        d["Size"]=None
+        item_data["Size"]=None
 
     
     title=item.find("span",{"class":"m-srp-card__title"})
@@ -59,17 +59,17 @@ for item in all:
     for word in range(i+1,len(words)):
         s=s+words[word]+" "
 
-    d["Address"]=s
+    item_data["Address"]=s
 
     try:
-        d["Carpet Area"]=item.find("div",{"class":"m-srp-card__summary__info"}).text
+        item_data["Carpet Area"]=item.find("div",{"class":"m-srp-card__summary__info"}).text
     except:
-        d["Carpet Area"]=item.find("div",{"class":"luxury-srp-card__area__value"}).text
+        item_data["Carpet Area"]=item.find("div",{"class":"luxury-srp-card__area__value"}).text
     
     
-    l.append(d)
+    complete_dataset.append(item_data)
     
     
 
-df=pandas.DataFrame(l)
+df=pandas.DataFrame(complete_dataset)
 df.to_csv("output2.csv")
