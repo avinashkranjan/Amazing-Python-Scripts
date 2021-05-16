@@ -30,5 +30,5 @@ ___
 [Himanshi2997](https://github.com/Himanshi2997)
 ---
 
-### Output
+## Output
 ![output2](https://user-images.githubusercontent.com/67272318/118381259-b8b71f80-b606-11eb-983d-5d8094d05f06.PNG)
