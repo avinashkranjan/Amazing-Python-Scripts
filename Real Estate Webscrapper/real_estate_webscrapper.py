@@ -72,4 +72,4 @@ for item in all_containers:
     
 
 df=pandas.DataFrame(complete_dataset)
-df.to_csv("output2.csv")
+df.to_csv("./Real Estate Webscrapper/scraped.csv")
