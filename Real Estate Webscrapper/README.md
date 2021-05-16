@@ -7,7 +7,7 @@ ___
 - BeautifulSoup
 - Pandas
 ---
-### How To install
+## How To install
 > pip install pandas
 
 > pip install beautifulsoup
