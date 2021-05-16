@@ -27,7 +27,7 @@ ___
 ---
 
 ## Author
-- Himanshi2997
+[Himanshi2997](https://github.com/Himanshi2997)
 ---
 
 ### Output
