@@ -14,7 +14,7 @@ header {
 }
 .image-part {
   width: auto;
-  background: url(AmazingPyScripts.jpeg) repeat 100% 50%;
+  background: url(../images/AmazingPyScripts.jpeg) repeat 100% 50%;
   background-size: cover;
   border-radius: 30%;
   height: 250px;
@@ -96,56 +96,64 @@ header {
   text-align: center;
 }
 
-.container-fluid{
+.container-fluid {
   background-color: rgb(74, 80, 75);
 }
-.nav-link{
+.nav-link {
   font-size: 22px;
   font-weight: 600;
   margin-right: 20px;
   /* text-decoration: underline; */
-  color: aliceblue!important;
+  color: aliceblue !important;
 }
 
-.nav-link:hover{
-
+.nav-link:hover {
   font-weight: 600;
-  color: rgb(119, 241, 63)!important;
+  color: rgb(119, 241, 63) !important;
 }
 
-
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   background-color: white;
 }
 
-.navbar-light .navbar-toggler{
+.navbar-light .navbar-toggler {
   background-color: aliceblue;
-  
-
 }
-a.nav-link{
+a.nav-link {
   font-size: x-large;
 }
 
-.navbar>.container, .navbar>.container-fluid{
+.navbar > .container,
+.navbar > .container-fluid {
   padding-top: 15px;
   padding: 0 10px;
   padding-top: 2px;
-
 }
 
-.d-flex{
+.d-flex {
   margin-bottom: 20px;
 }
-.navbar-toggler{
+.navbar-toggler {
   margin-bottom: 10px;
   margin-top: 5px;
   width: 52px;
 }
 .fa-python:before {
-  content: "\f3e2";
+  content: '\f3e2';
   font-size: x-large;
 }
-.navbar{
+.navbar {
   padding-left: 10px;
+}
+
+.contributor-name {
+  padding: 15px 0 15px 15px;
+}
+
+.contributor-card {
+  width: 180px !important;
+}
+
+.row {
+  width: 100% !important;
 }
