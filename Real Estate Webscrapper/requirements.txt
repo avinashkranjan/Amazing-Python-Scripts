@@ -1,7 +1,5 @@
-Requirements
-  
-1. requests==2.25.1
-2. pandas==1.2.4
-3. beautifulsoup4==4.9.3
-4. pip==20.2.3
-5. python==3.9.4
+requests==2.25.1
+pandas==1.2.4
+beautifulsoup4==4.9.3
+pip==20.2.3
+python==3.9.4
