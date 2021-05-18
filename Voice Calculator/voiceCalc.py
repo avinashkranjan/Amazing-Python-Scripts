@@ -31,14 +31,14 @@ def _takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening....")
-
+        audio("Listning...")
         r.pause_threshold = 2
         r.energy_threshold = 3000
         audio = r.listen(source)
 
     try:
         print("Recognizing...")
-
+        audio("Recognizing...")
         query = r.recognize_google(audio, language='en-In')
         print(query)
 
