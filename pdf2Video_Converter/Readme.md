@@ -26,7 +26,7 @@ If code is not explainable using comments, use this sections to explain your scr
 
 ## Output
 
-https://www.awesomescreenshot.com/video/3770253?key=4b6eb8f8a75ef0c93d22f462afcac2fd
+https://user-images.githubusercontent.com/55010599/118588269-aa5e3480-b7bb-11eb-955f-c5975f44ba96.mp4
 
 
 ## Author(s)
