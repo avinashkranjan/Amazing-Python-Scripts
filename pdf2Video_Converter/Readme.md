@@ -2,31 +2,28 @@
 
 ## Short description
 
-It will convert take a pdf file and a video as input and Add text audio of pdf to the Given Video.
+It will take a pdf file and a video as input and Add text audio of pdf to the Given Video.
 
 ## Setup instructions
+In order to run this script, you need to have Python and pip installed on your system. After you're done installing Python and pip, run the following command from your terminal to install the requirements from the same folder (directory) of the project.
+```
+pip install -r requirements.txt
 
-### Required Installation
+After satisfying all the requirements for the project, Open the terminal in the project folder and run
+```
+python script.py
+```
+or
+```
+python3 script.py
+```
+depending upon the python version. Make sure that you are running the command from the same virtual environment in which the required modules are installed.
 
-    pip3 install Pillow
-    pip3 install pytesseract
-    pip3 install pdf2image
-    pip install gTTS
-    pip3 install moviepy
-    pip3 install mutagen   
-```sudo apt-get install tesseract-ocr (for ubuntu)```
-
-### Explain how to setup and run your package/script in user's system
-
-- Place required pdf file and video in the same destination as of script.py
-- Run command python3 script.py fullname_of_pdf_with_ext full_name_of_video_with_ext
-- And you will get final.mp4
-
-If code is not explainable using comments, use this sections to explain your script
 
 ## Output
 
-https://www.awesomescreenshot.com/video/3770253?key=4b6eb8f8a75ef0c93d22f462afcac2fd
+User is asked for a Pdf file and video(mp4) file and Output Video file is stored in the folder
+
 
 
 ## Author(s)

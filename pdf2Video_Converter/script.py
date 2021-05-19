@@ -58,7 +58,7 @@ def pdf2text(PDF_file):
 	return mtext
 
 
-def text2video(mtext,video_file):
+def text2video(mtext,video_file,Pdf_file_name):
 
 	language = 'en'
 	
@@ -82,20 +82,23 @@ def text2video(mtext,video_file):
 
 	
 	new_clip = videoclip.set_audio(background_music)
-	new_clip.write_videofile("final.mp4")
+
+	name_of_vdeo_file=Pdf_file_name.split(".pdf")[0]+"(video).mp4";
+
+	new_clip.write_videofile(name_of_vdeo_file)
 	os.remove("output.mp3")
 
 
 
 if __name__ == "__main__":
 	# Getting name of pdf file
-	PDF_file = sys.argv[1]
+	PDF_file = input("Enter the name of Pdf file with extension:- ")
 
 	# Getting name of video file
-	video_file=sys.argv[2]
+	video_file=input("Enter the name of video File with extension:- ")
 
 	# Extracting Text from Pdf
 	text=pdf2text(PDF_file)
 
 	# Converting text to video
-	text2video(text,video_file)
+	text2video(text,video_file,PDF_file)
