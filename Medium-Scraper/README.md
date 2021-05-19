@@ -1,4 +1,4 @@
-# Dev.to Scrapper
+# Medium Scrapper
 Running this Script would allow the user to scrape any number of articles from [medium.com](https://medium.com/) from any category as per the user's choice
 
 ## Setup instructions
