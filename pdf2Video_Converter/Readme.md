@@ -25,7 +25,6 @@ depending upon the python version. Make sure that you are running the command fr
 User is asked for a Pdf file and video(mp4) file and Output Video file is stored in the folder
 
 
-
 ## Author(s)
 
 [Sukriti Sood](https://github.com/Sukriti-sood)
