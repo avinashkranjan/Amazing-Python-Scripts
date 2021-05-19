@@ -27,4 +27,4 @@ jobs:
           python ./.github/scripts/Update_Database.py "$body" "$token"
         env:
           body: ${{ github.event.pull_request.body }}
-          token: ${{ secrets.DB_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
