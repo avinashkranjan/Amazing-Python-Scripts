@@ -122,8 +122,6 @@ def delete_task():
     cur.execute(sql, (Name.get(),))
     conn.commit()
 
-
-
 """
 Get all rows in the tasks table
 """
@@ -137,9 +135,6 @@ def select_all_tasks():
             e.grid(row=i, column=j) 
             e.insert(END, student[j])
         i=i+1
-
-
-
 '''
 Getting the path of database and defining the table to be created
 '''
@@ -202,11 +197,3 @@ Button(root,text="VIEW BY NAME", font='Times 14 bold',bg='dark gray', command = 
 Button(root,text="EXIT", font='Times 14 bold',bg='dark gray', command = EXIT,width=8).place(x= 300, y=280)
 Button(root,text="RESET", font='Times 14 bold',bg='dark gray', command = RESET,width=8).place(x= 420, y=280)
 root.mainloop()
-
-
-
-
-
-
-
-
