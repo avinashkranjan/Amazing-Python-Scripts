@@ -1,4 +1,4 @@
-name: Python package
+name: DataBase Updater
 
 on:
   pull_request:
