@@ -12,7 +12,7 @@
 ## Running the script:
 
 ```sh
-    $ python Pomodoro_GUI.py
+    $ python Pomodoro_gui.py
 ```
 
 ## Working:
