@@ -1,7 +1,7 @@
 name: DataBase Updater
 
 on:
-  pull_request_target:
+  pull_request:
     # Will trigger on closed PRs
     types: [closed]
 
