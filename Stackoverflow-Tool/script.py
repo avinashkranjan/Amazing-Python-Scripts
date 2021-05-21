@@ -2,8 +2,10 @@ import subprocess
 import requests
 import webbrowser
 
+# take the input of the python file
+file=input("Enter the python file name(same directory) or enter the proper location\n")
 # executing a script and extracting the errors
-p = subprocess.run(['python', 'filename.py'], capture_output=True, text=True)
+p = subprocess.run(['python', file], capture_output=True, text=True)
 s= p.stderr
 s=s.split("\n")
 s=s[-2]
