@@ -1,0 +1,7 @@
+fire==0.4.0
+lxml==4.6.3
+pdf2docx==0.5.1
+PyMuPDF==1.18.12
+python-docx==0.8.10
+six==1.15.0
+termcolor==1.1.0

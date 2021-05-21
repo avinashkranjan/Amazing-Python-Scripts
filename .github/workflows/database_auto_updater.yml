@@ -1,7 +1,7 @@
-name: Python package
+name: DataBase Updater
 
 on:
-  pull_request:
+  pull_request_target:
     # Will trigger on closed PRs
     types: [closed]
 
