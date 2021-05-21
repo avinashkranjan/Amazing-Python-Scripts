@@ -140,6 +140,7 @@ Get all rows in the tasks table
 def select_all_tasks():
     r_set=conn.execute('''SELECT * from tasks''');
     i=0
+    j=0
     top = Toplevel(root)
     for student in r_set:
         list_of_names.append(student[1])
