@@ -4,8 +4,9 @@ importing all the required libraries
 import sqlite3
 from sqlite3 import Error
 from tkinter import *
+import tkinter.messagebox
 root = Tk()
-root.geometry('700x370')
+root.geometry('600x370')
 list_of_names=[]
 root.title('AddressBook')
 Name = StringVar()
@@ -39,6 +40,15 @@ def create_table(conn, create_table_sql):
         print(e)
     return
 
+'''
+displaying added/deleted message
+'''
+def onClickAdded():
+    tkinter.messagebox.showinfo(" ",Name.get()+" got added")
+
+def onClickDeleted():
+    tkinter.messagebox.showinfo(" ",Name.get()+" got deleted")
+
 """ Create a new task (ie creating new row) for the given Name  taking care of all conditions such as  Name,phone no
 cannot be empty ,phone no should be 10 digits and also if  Name already exist,then it cannot be inerted
 """
@@ -46,6 +56,7 @@ def create_task():
     sql = ''' INSERT INTO tasks(name,status_id)
               VALUES(?,?) '''
     if(Name.get() not in list_of_names):
+        
         if((Name.get()=='') | (Number.get()=='') | (len(Number.get())!=10)):
             top = Toplevel(root)
             top.geometry('180x100')
@@ -56,7 +67,8 @@ def create_task():
             myLabel.pack()
             mySubmitButton = Button(top, text=' Back ', command=top.destroy)
             mySubmitButton.pack()
-            return 
+            return
+        onClickAdded()
         cur = conn.cursor()
         cur.execute(sql, (Name.get(),Number.get()))
         conn.commit()
@@ -116,7 +128,8 @@ def delete_task():
     if((Name.get() not in list_of_names) | (Name.get()=='')):
         inputDialog = MyDialog(root)
         root.wait_window(inputDialog.top)
-        return 
+        return
+    onClickDeleted()
     sql = 'DELETE FROM tasks WHERE name=?'
     cur = conn.cursor()
     cur.execute(sql, (Name.get(),))
@@ -127,14 +140,19 @@ Get all rows in the tasks table
 """
 def select_all_tasks():
     r_set=conn.execute('''SELECT * from tasks''');
-    i=0  
+    i=0
+    top = Toplevel(root)
+    #top.geometry('300x300')
     for student in r_set:
         list_of_names.append(student[1])
         for j in range(len(student)):
-            e = Entry(root, width=11, fg='Gray20') 
+            e = Entry(top, width=11, fg='Gray20') 
             e.grid(row=i, column=j) 
             e.insert(END, student[j])
         i=i+1
+    okButton= Button(top, text=' ok ', command=top.destroy)
+    okButton.grid(row=i+3, column=j-1) 
+    #okButton.insert(END, student[j])
 '''
 Getting the path of database and defining the table to be created
 '''
@@ -185,15 +203,15 @@ def RESET():
 '''
 Creating UI for whole application
 '''
-Label(root, text = 'NAME', font='Times 15 bold').place(x= 230, y=20)
-Entry(root, textvariable = Name,width=42).place(x= 300, y=25)
-Label(root, text = 'PHONE NO ', font='Times 15 bold').place(x= 230, y=70)
-Entry(root, textvariable = Number,width=35).place(x= 342, y=73)
-Button(root,text=" ADD", font='Times 14 bold',bg='dark gray', command = create_task,width=8).place(x= 230, y=110)
-Button(root,text="EDIT", font='Times 14 bold',bg='dark gray',command = update_task,width=8).place(x= 360, y=108)
-Button(root,text="DELETE", font='Times 14 bold',bg='dark gray',command = delete_task,width=8).place(x= 490, y=107.5)
-Button(root,text="VIEW ALL", font='Times 14 bold',bg='dark gray', command = select_all_tasks,width=12).place(x= 260, y=191)
-Button(root,text="VIEW BY NAME", font='Times 14 bold',bg='dark gray', command = select_task_by_name,width=13).place(x= 430, y=190)
-Button(root,text="EXIT", font='Times 14 bold',bg='dark gray', command = EXIT,width=8).place(x= 300, y=280)
-Button(root,text="RESET", font='Times 14 bold',bg='dark gray', command = RESET,width=8).place(x= 420, y=280)
+Label(root, text = 'NAME', font='Times 15 bold').place(x= 130, y=20)
+Entry(root, textvariable = Name,width=42).place(x= 200, y=25)
+Label(root, text = 'PHONE NO ', font='Times 15 bold').place(x= 130, y=70)
+Entry(root, textvariable = Number,width=35).place(x= 242, y=73)
+Button(root,text=" ADD", font='Times 14 bold',bg='dark gray', command = create_task,width=8).place(x= 130, y=110)
+Button(root,text="EDIT", font='Times 14 bold',bg='dark gray',command = update_task,width=8).place(x= 260, y=108)
+Button(root,text="DELETE", font='Times 14 bold',bg='dark gray',command = delete_task,width=8).place(x= 390, y=107.5)
+Button(root,text="VIEW ALL", font='Times 14 bold',bg='dark gray', command = select_all_tasks,width=12).place(x= 160, y=191)
+Button(root,text="VIEW BY NAME", font='Times 14 bold',bg='dark gray', command = select_task_by_name,width=13).place(x= 330, y=190)
+Button(root,text="EXIT", font='Times 14 bold',bg='dark gray', command = EXIT,width=8).place(x= 200, y=280)
+Button(root,text="RESET", font='Times 14 bold',bg='dark gray', command = RESET,width=8).place(x= 320, y=280)
 root.mainloop()
