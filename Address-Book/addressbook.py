@@ -94,7 +94,6 @@ def select_task_by_name():
     cur.execute("SELECT * FROM tasks WHERE name=?", (Name.get(),))
     rows = cur.fetchall()
     if(len(rows)==0):
-        
         inputDialog = MyDialog(root)
         root.wait_window(inputDialog.top)
     else:
@@ -142,7 +141,6 @@ def select_all_tasks():
     r_set=conn.execute('''SELECT * from tasks''');
     i=0
     top = Toplevel(root)
-    #top.geometry('300x300')
     for student in r_set:
         list_of_names.append(student[1])
         for j in range(len(student)):
@@ -151,8 +149,10 @@ def select_all_tasks():
             e.insert(END, student[j])
         i=i+1
     okButton= Button(top, text=' ok ', command=top.destroy)
+    if(j==0):
+        j=1
     okButton.grid(row=i+3, column=j-1) 
-    #okButton.insert(END, student[j])
+    
 '''
 Getting the path of database and defining the table to be created
 '''
