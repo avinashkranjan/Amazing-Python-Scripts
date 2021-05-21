@@ -13,7 +13,7 @@ Tkinter library for rendering graphics and SQlite is used for database.
 	pip install tkinter
 
 # Usage
-* In this python project, the user has to click on a button which functions the user wants to access
+* In this python project, the user has button functionality to trigger that specific function.
 * eg –To edit a contact, the user has to fill the Name, phone no field and then click on edit button.
 To add a new contact user has to to fill the Name, phone no field and then click on the add button which can be seen by clicking on view_all button.
 
