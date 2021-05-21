@@ -73,10 +73,17 @@ def comp_v_on_v(Vals):
     abs_v1 = abs_val(Vals[:3])
     abs_v2 = abs_val(Vals[3:])
 
-    res_a_on_b = round(dot_prod / abs_v2, 5)
-    a_on_b_val.set(res_a_on_b)
-    res_b_on_a = round(dot_prod / abs_v1, 5)
-    b_on_a_val.set(res_b_on_a)
+    try:
+        res_a_on_b = round(dot_prod / abs_v2, 5)
+        a_on_b_val.set(res_a_on_b)
+    except:
+        a_on_b_val.set("Invalid")
+        
+    try:
+        res_b_on_a = round(dot_prod / abs_v1, 5)
+        b_on_a_val.set(res_b_on_a)
+    except:
+        b_on_a_val.set("Invalid")
 
 
 def proj_v_on_v(Vals):
@@ -85,21 +92,31 @@ def proj_v_on_v(Vals):
     abs_v1 = abs_val(Vals[:3])
     abs_v2 = abs_val(Vals[3:])
 
-    res_a_on_b = round(dot_prod / abs_v2**2, 5)
-    x_1 = res_a_on_b * Vals[3]
-    y_1 = res_a_on_b * Vals[4]
-    z_1 = res_a_on_b * Vals[5]
-    a_on_b_proj_x_val.set(x_1)
-    a_on_b_proj_y_val.set(y_1)
-    a_on_b_proj_z_val.set(z_1)
+    try:
+        res_a_on_b = round(dot_prod / abs_v2**2, 5)
+        x_1 = res_a_on_b * Vals[3]
+        y_1 = res_a_on_b * Vals[4]
+        z_1 = res_a_on_b * Vals[5]
+        a_on_b_proj_x_val.set(x_1)
+        a_on_b_proj_y_val.set(y_1)
+        a_on_b_proj_z_val.set(z_1)
+    except:
+        a_on_b_proj_x_val.set("Invalid")
+        a_on_b_proj_y_val.set("Invalid")
+        a_on_b_proj_z_val.set("Invalid")
 
-    res_b_on_a = round(dot_prod / abs_v1**2, 5)
-    x_2 = res_b_on_a * Vals[0]
-    y_2 = res_b_on_a * Vals[1]
-    z_2 = res_b_on_a * Vals[2]
-    b_on_a_proj_x_val.set(x_2)
-    b_on_a_proj_y_val.set(y_2)
-    b_on_a_proj_z_val.set(z_2)
+    try:
+        res_b_on_a = round(dot_prod / abs_v1**2, 5)
+        x_2 = res_b_on_a * Vals[0]
+        y_2 = res_b_on_a * Vals[1]
+        z_2 = res_b_on_a * Vals[2]
+        b_on_a_proj_x_val.set(x_2)
+        b_on_a_proj_y_val.set(y_2)
+        b_on_a_proj_z_val.set(z_2)
+    except:
+        b_on_a_proj_x_val.set("Invalid")
+        b_on_a_proj_y_val.set("Invalid")
+        b_on_a_proj_z_val.set("Invalid")
 
     Status["text"] = "Calculations Completed! :D "
     Status["fg"] = "green"
@@ -150,9 +167,15 @@ def Show_Vec_Frame(vec_num, values):
     Modulus_val.place(x=70, y=11, width=80)
 
     # Unit Vectors
-    uv_x = round(values[0]/Modulus, 5)
-    uv_y = round(values[1]/Modulus, 5)
-    uv_z = round(values[2]/Modulus, 5)
+    try:
+        uv_x = round(values[0]/Modulus, 5)
+        uv_y = round(values[1]/Modulus, 5)
+        uv_z = round(values[2]/Modulus, 5)
+    except:
+        uv_x = "Invalid"
+        uv_y = "Invalid"
+        uv_z = "Invalid"
+
     Unit_Vector_lbl = Label(vec_window, text="Unit Vector: ", anchor=E, font=("Calibri", 8))
     uv_x_lbl = Label(vec_window, text="X > ", anchor=E, font=("Calibri", 8))
     uv_x_val = Text(vec_window, height=1, borderwidth=0)
@@ -171,9 +194,14 @@ def Show_Vec_Frame(vec_num, values):
     uv_z_lbl.place(x=25, y=90)
     uv_z_val.place(x=50, y=91, width=80)
 
-    alpha = round(math.acos(uv_x) * 180 / math.pi, 5)
-    beta = round(math.acos(uv_y) * 180 / math.pi, 5)
-    gamma  = round(math.acos(uv_z) * 180 / math.pi, 5)
+    if uv_x != "Invalid":
+        alpha = round(math.acos(uv_x) * 180 / math.pi, 5)
+        beta = round(math.acos(uv_y) * 180 / math.pi, 5)
+        gamma  = round(math.acos(uv_z) * 180 / math.pi, 5)
+    else:
+        alpha = "Invalid"
+        beta = "Invalid"
+        gamma = "Invalid"
     Cosine_lbl = Label(vec_window, text="Cosine Angles: ", anchor=E, font=("Calibri", 8))
     alpha_lbl = Label(vec_window, text="X > ", anchor=E, font=("Calibri", 8))
     alpha_val = Text(vec_window, height=1, borderwidth=0)
