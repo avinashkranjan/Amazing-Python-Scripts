@@ -138,7 +138,7 @@ def select_all_tasks():
 '''
 Getting the path of database and defining the table to be created
 '''
-database = r"addressbook.db"
+database = r"./Address-Book/addressbook.db"
 sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
                                     id integer PRIMARY KEY,
                                     name text NOT NULL,
