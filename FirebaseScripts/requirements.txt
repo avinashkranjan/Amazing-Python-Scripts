@@ -1,0 +1,2 @@
+pyrebase4==4.4.3
+firebase=3.0.1
