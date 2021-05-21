@@ -3,10 +3,10 @@
 A Script to verify the Domain Name System.
 - This is useful to check for availability of DNS. 
 
-### Language
+## Language
 - [X] Python
   
-### Instructions to run this application
+## Instructions to run this application
 
   1. Python 3 must be installed in your system.
 
