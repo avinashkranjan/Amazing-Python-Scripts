@@ -1,8 +1,6 @@
 # Package/Script Name
 
-Short description of package/script
-
-Turtle for graphics
+The script name is LineSketch.py 
 
 ## Setup instructions
 
@@ -10,8 +8,8 @@ python file.py
 
 ## Detailed explanation of script, if needed
 
-Drawing random shapes
-
+Who doesn't love scribbling? So, If you are bored and want to draw something really funny and random,You can play this.
+Just follow some instructions for directions, and you can end up with a new art.
 ## Output
 
 ![img](sketch.png)
@@ -19,7 +17,4 @@ Drawing random shapes
 
 ## Author(s)
 
-Anushka Pathak
-
-## Disclaimers, if any
-No, as such
+[Anushka Pathak](https://github.com/anumshka)
