@@ -32,17 +32,8 @@ def checker(dns_val=None) -> OrderedDict:
 if __name__ == '__main__':
     dns_val = None
     option = None
-
-    if len(sys.argv) > 1:
-        if '--dns' in sys.argv:
-            d_index = sys.argv.index('--dns')
-            if d_index == sys.argv.index(sys.argv[-1:][0]):
-                print("Error, DNS was not specified")
-                sys.exit(1)
-            dns_val = sys.argv[sys.argv.index('--dns') + 1]
-        else:
-            print("help:\nuse \'--dns\' for DNS specification")
-            sys.exit(1)
+    print("Enter the DNS:")
+    dns_val=input()  
     try:
         response = checker(dns_val=dns_val)
     except Exception as err:
