@@ -21,13 +21,15 @@ pip3 install -r requirements.txt
 Usage:
 
 ```
-    python main.py --dns <DNS>
+    python main.py
 ```
 
 example:
 ```
-    python main.py --dns gaana.com
+    python main.py
 ```
+
+Enter the DNS: gaana.com
 {
     "DNS": "gaana.com",
     "IP": [
