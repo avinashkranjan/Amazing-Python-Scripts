@@ -2,7 +2,6 @@
 from PIL import Image
 import pytesseract
 from mutagen.mp3 import MP3
-import sys
 from moviepy.editor import VideoFileClip
 import moviepy.editor as mpe
 from gtts import gTTS
