@@ -16,7 +16,7 @@
 ```
 
 ## Working:
-![GIF](https://media.giphy.com/media/Z8k8V5FRALLMLKsOpJ/giphy.gif)
+![GIF](https://media.giphy.com/media/rFugmcue93IERozmWw/giphy.gif)
 
 
 ## Author:
