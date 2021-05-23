@@ -13,13 +13,14 @@ After providing the url, the corresponding file will be downloaded in no time.
 
 You will be able to see the status of the file being downloaded.
 
-![Output-1-pdf](./Screenshots/output1.png)
+![output1](https://user-images.githubusercontent.com/72334601/119267747-83658f80-bc0d-11eb-95ec-7cf757a520e6.png)
 
-![Output-2-pdf](./Screenshots/output2.png)
+![output2](https://user-images.githubusercontent.com/72334601/119267761-90827e80-bc0d-11eb-8b94-1eb81aaf487c.png)
 
-![Output-3-pdf](./Screenshots/output3.png)
+![output3](https://user-images.githubusercontent.com/72334601/119267780-a5f7a880-bc0d-11eb-842a-c78cd74c6d7a.png)
 
-![Output-4-mp4](./Downloads/output_2_mp4.PNG)
+![output_2_mp4](https://user-images.githubusercontent.com/72334601/119267771-9c6e4080-bc0d-11eb-93c6-4e21a2976a1a.PNG)
+
 
 The file will be stored locally after being downloaded.
 
