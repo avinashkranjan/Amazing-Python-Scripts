@@ -42,7 +42,7 @@ You can refer to the following articles on **_basics of Git and Github and also 
 
 <h2 align=center> ✨ Contributors </h2>
 
-Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contributions** of any kind is welcome! 
+Thanks go to these **Wonderful People** 👨🏻‍💻:      🚀 **Contributions** of any kind are welcome! 
 
 <table>
 	<tr>
