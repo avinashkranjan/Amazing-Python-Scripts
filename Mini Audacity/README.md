@@ -1,5 +1,5 @@
 
-# Removing background noise from a audio file just like "Audacity"
+# Removing background noise from an audio file just like "Audacity"
 
 Used some of the python libraries to filter the background noise to get a clear audio file
 
