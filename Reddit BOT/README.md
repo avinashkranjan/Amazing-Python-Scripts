@@ -1,5 +1,5 @@
 # Reddit BOT
-
+This Reddit Bot Pick a subreddit to scan,Designate a specific comment to search forSet your bot's replyautomatic responce.
 
 
 ## Setup instructions
@@ -22,21 +22,16 @@ pip install time
 pip install os
 ```
 
-| Name of Script |  Author | Tools Used |
+| Name of Script | Repo Name|  Author | Tools Used |
 | --- | --- | --- | --- 
-|Reddit BOT| | [Souhardya Bose](https://github.com/bose07) | praw,time,os
+|Reddit BOT| Amazing-Python-Scripts|[Souhardya Bose](https://github.com/bose07)  |praw,time,os 
 
 ## Output
-![image](https://user-images.githubusercontent.com/56763840/119303624-b21e4d00-bc83-11eb-9d45-13e2cca46cf5.png)
-
-
+![image](https://user-images.githubusercontent.com/56763840/119304225-95364980-bc84-11eb-9741-824b78270f1d.png)
 
 ## Demo
 
-
-
-
 ## Author(s)
 
-- (bose07)
+-Souhardya Bose (bose07)
 
