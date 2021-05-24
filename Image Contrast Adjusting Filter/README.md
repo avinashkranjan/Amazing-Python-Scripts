@@ -1,5 +1,5 @@
 
-# Increasing the contrast of an image to get a better version of it.
+# Adjusting the contrast of an image to get a better version of it.
 
 Used some of the python libraries to convert an image into a high contrast image.
 * Matplotlib,
