@@ -33,7 +33,6 @@ Run the python code
 <img src="Images/Result.jpg" height="300px">
 
 ## Author(s)
-Akriti
-
+[Akriti](https://github.com/A-kriti)
 
 
