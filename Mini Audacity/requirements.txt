@@ -1,1 +1,4 @@
-
+numpy==1.19.5
+matplotlib==3.2.2
+ipython==7.23.1
+Pillow==8.2.0
