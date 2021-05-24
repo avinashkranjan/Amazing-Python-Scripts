@@ -11,7 +11,7 @@ Used some of the python libraries to convert an image into a high contrast image
 * Imported the required libraries ( Numpy, Matplotlib, PIL, IPython.display)
 * Read the input image using Image from PIL library
 
-### Methods applied Using Cv2
+### Methods applied 
 * Converted the image into an array and then flatten it making it a 1d array
 * Count the number of occurance of each pixel in the image and hence getting an array of frequency count of each pixels
 * Then making cdf from the frequency count list 
