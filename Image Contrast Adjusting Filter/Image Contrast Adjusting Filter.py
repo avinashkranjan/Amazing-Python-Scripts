@@ -1,4 +1,4 @@
-%matplotlib inline
+
 from IPython.display import display, Math, Latex
 
 import numpy as np
