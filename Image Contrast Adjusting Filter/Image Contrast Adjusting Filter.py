@@ -5,7 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-img = Image.open('images.jpg')   #images.jpg = image on which you want to apply the filter
+img_path = input("Enter the path here:")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg 
+
+img = Image.open(img_path)
 
 # convert our image into a numpy array
 img = np.asarray(img)
