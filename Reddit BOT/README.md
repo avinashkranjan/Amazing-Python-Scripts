@@ -31,7 +31,9 @@ pip install os
 
 ## Demo
 
+![20210524_114341](https://user-images.githubusercontent.com/56763840/119304834-7c7a6380-bc85-11eb-80cc-5842a5e082f3.gif)
+
 ## Author(s)
 
--Souhardya Bose (bose07)
+- Souhardya Bose (bose07)
 
