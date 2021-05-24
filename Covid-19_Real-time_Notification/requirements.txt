@@ -1,0 +1,5 @@
+Plyer
+requests
+bs4
+time
+englisttohindi
