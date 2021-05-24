@@ -21,9 +21,10 @@ Click on the **Click Here** to see the Simple Python IDE using Tkinter Demo on Y
 
 | Name of Script | YouTube Link |  Author | Tools Used |
 | --- | --- | --- | --- 
-|Reddit BOT| | [Priyadarshan Ghosh](https://github.com/Priyadarshan2000) | 
+|Reddit BOT| | [Souhardya Bose](https://github.com/bose07) | 
 
 ## Output
+![image](https://user-images.githubusercontent.com/56763840/119303624-b21e4d00-bc83-11eb-9d45-13e2cca46cf5.png)
 
 
 
