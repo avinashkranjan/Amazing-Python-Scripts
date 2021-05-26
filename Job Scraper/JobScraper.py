@@ -13,7 +13,7 @@ def write_csv(loc, info):
     headers = ['Title', 'Company Name', 'Location', 'Date', 'Summary', 'Url']
 
     # Adding info into the rows of the file
-    with open(loc+'_openings.csv', 'a', encoding='utf-8') as csv_f:
+    with open('./Job Scraper/' + loc+'_openings.csv', 'a', encoding='utf-8') as csv_f:
         csv_p = csv.writer(csv_f, delimiter=',')
         csv_p.writerow(headers)
         csv_p.writerows(info)
