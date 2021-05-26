@@ -1,12 +1,11 @@
 
 from IPython.display import display, Math, Latex
-
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
+import os.path
 
 img_path = input("Enter the path here: ")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg 
-
 img = Image.open(img_path)
 
 # convert our image into a numpy array
@@ -14,9 +13,6 @@ img = np.asarray(img)
 #print(img.shape)
 # put pixels in a 1D array by flattening out img array
 flat = img.flatten()
-
-# show the histogram
-
 
 # create our own histogram function
 def get_histogram(image, bins):
@@ -33,17 +29,8 @@ def get_histogram(image, bins):
 # execute our histogram function
 hist = get_histogram(flat, 256)
 
-# create our cumulative sum function
-def cumsum(a):
-    a = iter(a)
-    b = [next(a)]
-    for i in a:
-        b.append(b[-1] + i)
-    return np.array(b)
-
 # execute the fn
-cs = cumsum(hist)
-
+cs = np.cumsum(hist)
 
 # numerator & denomenator
 nj = (cs - cs.min()) * 255
@@ -55,11 +42,8 @@ cs = nj / N
 # cast it back to uint8 since we can't use floating point values in images
 cs = cs.astype('uint8')
 
-
-
 # get the value from cumulative sum for every index in flat, and set that as img_new
 img_new = cs[flat]
-
 
 # put array back into original shape since we flattened it
 img_new = np.reshape(img_new, img.shape)
@@ -78,5 +62,8 @@ plt.title("Image 'Before' Contrast Adjustment")
 fig.add_subplot(1,2,2)
 plt.imshow(img_new, cmap='gray')
 plt.title("Image 'After' Contrast Adjustment")
+filename = os.path.basename(img_path)
+
+plt.savefig("(Contrast Adjusted)"+filename)
 
 plt.show()
