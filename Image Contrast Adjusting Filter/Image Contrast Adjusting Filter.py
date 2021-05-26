@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-img_path = input("Enter the path here:")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg 
+img_path = input("Enter the path here: ")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg 
 
 img = Image.open(img_path)
 
