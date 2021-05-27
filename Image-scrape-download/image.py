@@ -58,7 +58,6 @@ style.configure('my.TFrame', background='white')
 
 # Add labels and buttons
 my_label = HTMLLabel(root)
-my_label.pack(pady=20, padx=20)
   
 search_box = Entry(root, font=("Helvetica 15"), bd = 2, width=60)
 search_box.pack(side = TOP, pady=5, padx=15, ipadx=5)
@@ -68,6 +67,7 @@ search_btn.pack(side=TOP)
 
 save_btn = ttk.Button(text="Download Image!",command=saveImage,style='my.TButton')
 save_btn.pack(side=TOP)
-  
+
+my_label.pack(pady=20, padx=20)
 # Execute Tkinter
 root.mainloop()
