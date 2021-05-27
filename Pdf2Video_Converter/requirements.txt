@@ -1,0 +1,6 @@
+gTTS==2.2.2
+moviepy==1.0.3
+mutagen==1.45.1
+pdf2image==1.15.1
+Pillow==8.2.0
+pytesseract==0.3.7
