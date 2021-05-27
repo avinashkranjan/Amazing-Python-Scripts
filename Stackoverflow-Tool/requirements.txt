@@ -1,0 +1,3 @@
+subprocess
+requests
+webbrowser
