@@ -1,77 +1,68 @@
 # Spectral Subtraction: Method used for noise reduction 
 
+import scipy.io.wavfile as wav
 import numpy as np
-import scipy
-from scipy import io
-from scipy.io import wavfile
-import librosa
-from scipy.io.wavfile import read
 import matplotlib.pyplot as plt
 
-# edit following wav file name
-infile='test.wav'
-outfile='Filtered_Audio.wav'
-noisefile='test_noise.wav'
+file = input("Enter the path here :")
+sr, data = wav.read(file)
 
-# load input file, and stft (Short-time Fourier transform)
-#print ('load wav', infile)
-data, sr = librosa.load( infile, sr=None, mono=True) # keep native sr (sampling rate) and trans into mono
-s= librosa.stft(data)    # Short-time Fourier transform
-ss= np.abs(s)         # get magnitude
-angle= np.angle(s)    # get phase
-b=np.exp(1.0j* angle) # use this phase information when Inverse Transform
+fl = 400 #frame_length
+frames = []  #empty list 
+for i in range(0,int(len(data)/(int(fl/2))-1)):
+    arr = data[int(i*int(fl/2)):int(i*int(fl/2)+fl)]  
+    frames.append(arr)    #appending each array data into the frames list
+    
+frames = np.array(frames)   #converting the frames list into an array
 
-# load noise only file, stft, and get mean
-#print ('load wav', noisefile)
-nw, nsr = librosa.load( noisefile, sr=None, mono=True)
-ns= librosa.stft(nw)    # Short-time Fourier transform
-nss= np.abs(ns)      # get magnitude
-mns= np.mean(nss, axis=1) # get mean
+ham_window = np.hamming(fl)    #using np.hamming 
+windowed_frames = frames*ham_window    #multiplying frames array with ham_window
 
-# subtract noise spectral mean from input spectral, and istft (Inverse Short-Time Fourier Transform)
-sa= ss - mns.reshape((mns.shape[0],1))  # reshape for broadcast to subtract
-sa0= sa * b  # apply phase information
-y= librosa.istft(sa0) # back to time domain signal
+dft = []   #empty list containing fft of windowed_frames
 
-# save as a wav file
-scipy.io.wavfile.write(outfile, sr, (y * 32768).astype(np.int16)) # save in WAV format
-#librosa.output.write_wav(outfile, y , sr) 
-#print ('Que1_part3.wav', outfile)
+for i in windowed_frames:
+    dft.append(np.fft.fft(i))   #now taking the first fourier transform of each window
+    
+dft = np.array(dft)  #converting dft into array
+
+dft_mag_spec = np.abs(dft)      #converting dft into absolute values
+dft_phase_spec = np.angle(dft)   #finding dft angle
+
+noise_estimate = np.mean(dft_mag_spec,axis=0)    #mean
+noise_estimate_mag = np.abs(noise_estimate)   #absolute value
+
+estimate_mag = (dft_mag_spec-2*noise_estimate_mag)   #subtraction method
+estimate_mag[estimate_mag<0]=0
+
+estimate = estimate_mag*np.exp(1j*dft_phase_spec)  #calculating the final estimate
+
+ift = []   #taking ift as input list containing inverse fourier transform of estimate
+
+for i in estimate:
+    ift.append(np.fft.ifft(i))    #appending in ift list 
+
+clean_data = []
+clean_data.extend(ift[0][:int(fl/2)])     #extending clean_data containg ift list
+
+for i in range(len(ift)-1):   
+    clean_data.extend(ift[i][int(fl/2):]+ift[i+1][:int(fl/2)])
+    
+clean_data.extend(ift[-1][int(fl/2):])   #extending clean_data containing ift list
+clean_data = np.array(clean_data)  #converting it into array
 
 
-# Input
-input_data = read("test.wav")
-audio = input_data[1]
-plt.plot(audio[0:1024],color="orange")
-# label the axes
-plt.ylabel("Amplitude")
-plt.xlabel("Time")
-# set the title  
-plt.title("Input Wav")
-# display the plot
-plt.show()
+#finally plotting the graph showing the diffrence in the noise
 
-# Input noise
-input_data = read("test_noise.wav")
-audio = input_data[1]
-plt.plot(audio[0:1024],color="purple")
-# label the axes
-plt.ylabel("Amplitude")
-plt.xlabel("Time")
-# set the title  
-plt.title("Input Noise Wav")
-# display the plot
-plt.show()
+fig = plt.figure(figsize=(8,5))
+ax = plt.subplot(1,1,1)
+ax.plot(np.linspace(0,64000,64000),data,label='Original',color="orange")
+ax.plot(np.linspace(0,64000,64000),clean_data,label='Filtered',color="purple")
+ax.legend(fontsize=12)
+ax.set_title('Spectral Subtraction Method', fontsize=15)
 
-# Output
-input_data = read("Filtered_Audio.wav")
-audio = input_data[1]
-plt.plot(audio[0:1024],color="r")
-# label the axes
-plt.ylabel("Amplitude")
-plt.xlabel("Time")
-# set the title  
 
-plt.title("Spectral Subtraction Result:Filtered_Audio.wav")
-# display the plot
-plt.show()
+cleaned_file = "Filtered_Audio.wav"   #final filtered audio
+wav.write(cleaned_file,rate=sr, data = clean_data.astype(np.int16))
+
+
+
