@@ -45,6 +45,6 @@ ax.plot(np.linspace(0,64000,64000),clean_data,label='Filtered',color="purple")
 ax.legend(fontsize=12)
 ax.set_title('Spectral Subtraction Method', fontsize=15)
 filename = os.path.basename(file)
-cleaned_file = "Filtered_Audio"+filename   #final filtered audio
+cleaned_file = "(Filtered_Audio)"+filename   #final filtered audio
 wav.write(cleaned_file,rate=sr, data = clean_data.astype(np.int16))
 plt.savefig(filename+"(Spectral Subtraction graph).jpg")  #saved file name as audio.wav(Spectral Subtraction graph).jpg
