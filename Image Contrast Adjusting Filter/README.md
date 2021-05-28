@@ -5,7 +5,6 @@ Images captured in dim light mostly not have a much better contrast so an (Image
 ## Libraries used
 Firstly import the following python libraries 
 * Matplotlib,
-* IPython.display
 * NumPy
 * PIL
 Save the image and your code in the same folder
