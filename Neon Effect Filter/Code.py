@@ -3,7 +3,7 @@ import cv2
 import os.path 
 from matplotlib import pyplot as plt
 
-img_path = input("Enter the path here:")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg 
+img_path = input("Enter the path of image: ")  #example -> C:\Users\xyz\OneDrive\Desktop\project\image.jpg 
 img = cv2.imread(img_path)
 image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
