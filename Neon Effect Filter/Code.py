@@ -26,6 +26,6 @@ plt.imshow(array1,cmap='gray')
 plt.title("Neon Effect Filtered Photo")
 plt.axis('off')
 filename = os.path.basename(image_path)
-plt.savefig("(Neon Effect Filter)"+filename)  #saved file name as (Filtered)image_name.jpg
+plt.savefig("./Neon Effect Filter/Neon Effect Filter"+filename)  #saved file name as (Filtered)image_name.jpg
 
 plt.show()
