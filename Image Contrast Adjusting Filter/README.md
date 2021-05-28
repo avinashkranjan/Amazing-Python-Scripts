@@ -1,10 +1,6 @@
-
-
-
 # Image Contrast Adjusting Filter
 
 Images captured in dim light mostly not have a much better contrast so an (Image Contrast Adjusting filter) filter helps accordingly to adjusts and increase its contrast and hence we are having a better version of the image. Hence this filter helps to get a high contrast image.
-
 
 ## Libraries used
 Firstly import the following python libraries 
@@ -12,9 +8,7 @@ Firstly import the following python libraries
 * IPython.display
 * NumPy
 * PIL
-
 Save the image and your code in the same folder
-
 Run the python code
 
 ## Detailed explanation of the method used
@@ -28,11 +22,8 @@ Run the python code
 * Converting the cdf shape into the shape of given image
 * Finally converted the image into contrast adjusted image
 
-
 ## Comparison With The Result 
 <img src="Images/Result.jpg" height="300px">
 
 ## Author(s)
 [Akriti](https://github.com/A-kriti)
-
-
