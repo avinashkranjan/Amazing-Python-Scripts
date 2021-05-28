@@ -19,7 +19,7 @@ Run the python code
 * Finally getting an audio file with reduction in the background noise at a much higher extent
 
 ## Output
-<img src="Graph/graph.jpg" height="500px">
+<img src="Graph/test_noise.wav(Spectral Subtraction graph).jpg" height="500px">
 
 ## Author(s)
 [Akriti](https://github.com/A-kriti)
