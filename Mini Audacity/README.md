@@ -30,8 +30,7 @@ Run the python code
 
 ## Author(s)
 
-Akriti 
-
+[Akriti](https://github.com/A-kriti)
 
 
 
