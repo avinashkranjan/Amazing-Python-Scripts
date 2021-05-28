@@ -4,7 +4,7 @@ import scipy.io.wavfile as wav
 import numpy as np
 import matplotlib.pyplot as plt
 
-file = input("Enter the path here :")
+file = input("Enter the file path: ")
 sr, data = wav.read(file)
 
 fl = 400 #frame_length
@@ -63,6 +63,5 @@ ax.set_title('Spectral Subtraction Method', fontsize=15)
 
 cleaned_file = "Filtered_Audio.wav"   #final filtered audio
 wav.write(cleaned_file,rate=sr, data = clean_data.astype(np.int16))
-
 
 
