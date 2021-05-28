@@ -1,5 +1,4 @@
 # Spectral Subtraction: Method used for noise reduction 
-
 import scipy.io.wavfile as wav
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,7 +44,7 @@ ax.plot(np.linspace(0,64000,64000),data,label='Original',color="orange")
 ax.plot(np.linspace(0,64000,64000),clean_data,label='Filtered',color="purple")
 ax.legend(fontsize=12)
 ax.set_title('Spectral Subtraction Method', fontsize=15)
-cleaned_file = "Filtered_Audio.wav"   #final filtered audio
-wav.write(cleaned_file,rate=sr, data = clean_data.astype(np.int16))
 filename = os.path.basename(file)
+cleaned_file = "Filtered_Audio"+filename   #final filtered audio
+wav.write(cleaned_file,rate=sr, data = clean_data.astype(np.int16))
 plt.savefig(filename+"(Spectral Subtraction graph).jpg")  #saved file name as audio.wav(Spectral Subtraction graph).jpg
