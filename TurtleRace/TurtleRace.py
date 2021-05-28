@@ -33,11 +33,11 @@ while RaceRunning :
             show.penup()
             show.goto(-200, -150)
             show.color("red")
-            if winner == UserInput:
+            if winner.lower() == UserInput.lower():
+                print("Your turtle won!")
                 show.write("Your turtle won!")
             else:
+                print(f"Your turtle lost, the winner is {winner} turtle!")
                 show.write(f"Your turtle lost, the winner is {winner} turtle!")
-            time.sleep(1)
-            show.clear()
         runner.forward(random.randint(0, 10))
 scr.exitonclick()
