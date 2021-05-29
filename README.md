@@ -42,7 +42,7 @@ You can refer to the following articles on **_basics of Git and Github and also 
 
 <h2 align=center> ✨ Contributors </h2>
 
-Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contributions** of any kind is welcome! 
+Thanks go to these **Wonderful People** 👨🏻‍💻:      🚀 **Contributions** of any kind are welcome! 
 
 <table>
 	<tr>
@@ -58,12 +58,24 @@ Thanks goes to these **Wonderful People** 👨🏻‍💻:      🚀 **Contribut
 
 [![Stargazers over time](https://starchart.cc/avinashkranjan/Amazing-Python-Scripts.svg)](https://starchart.cc/avinashkranjan/Amazing-Python-Scripts)
 
-<h1 align=center> Project Admin ❤️ </h1>
-<p align="center">
-  <a href="https://github.com/avinashkranjan"><img src="https://user-images.githubusercontent.com/55796944/95675026-dab07580-0bd1-11eb-93e2-1cb1de8acf38.png" width=150px height=150px /></a> 
-    
-<p align="center">
-  <img src="https://img.shields.io/badge/avinashkranjan%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>  <img src="https://img.shields.io/badge/iavinashranjan%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"/> <img src="https://img.shields.io/badge/avinashkranjan7%20-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white"/>                                                                                      |
+<h1 align=center> Project Maintainers ❤️ </h1>
+<table>
+<tr>
+<td align="center"><a href="https://github.com/avinashkranjan"><img src="https://user-images.githubusercontent.com/55796944/95675026-dab07580-0bd1-11eb-93e2-1cb1de8acf38.png" width=150px height=150px /></a></br> <h4 style="color:red;">Avinash Ranjan</h4>
+<a href="https://www.linkedin.com/in/avinashkranjan/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
 
+<td align="center" ><a href="https://github.com/kaustubhgupta"><img src="https://user-images.githubusercontent.com/55796944/119778028-95348480-bee4-11eb-86b2-0ba065316e5f.jpg" width=150px height=150px /></a></br> <h4 style="color:red;">Kaustubh Gupta</h4>
+<a href="https://www.linkedin.com/in/kaustubh-gupta/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
+
+<td align="center"><a href="https://github.com/antrikshmisri"><img src="https://user-images.githubusercontent.com/55796944/119777909-72a26b80-bee4-11eb-829d-e5baa76bdb75.jpg" width=150px height=150px /></a></br> <h4 style="color:red;">Antriksh Misri</h4>
+<a href="https://www.linkedin.com/in/antriksh-misri-b631361a1/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
+
+<td align="center"><a href="https://github.com/santushtisharma10"><img src="https://user-images.githubusercontent.com/55796944/119778363-0c6a1880-bee5-11eb-9929-f74661ff38f5.jpg" width=150px height=150px /></a></br> <h4 style="color:red;">Santushti Sharma</h4>
+<a href="https://www.linkedin.com/in/santushti-sharma-9b65a6192/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
+
+<td align="center"><a href="https://github.com/Kushal997-das"><img src="https://user-images.githubusercontent.com/55796944/119778722-7b477180-bee5-11eb-9c20-172a31199dd3.jpg" width=150px height=150px /></a></br> <h4 style="color:red;">Kushal Das</h4> <a href="https://www.linkedin.com/in/kushal-das-7337421a9/"><img src="https://mpng.subpng.com/20180324/vhe/kisspng-linkedin-computer-icons-logo-social-networking-ser-facebook-5ab6ebfe5f5397.2333748215219374063905.jpg" width="32px" height="32px"></a></td>
+
+</tr>
+</table>
 
 <h1 align=center>Happy Coding 👨‍💻 </h1>
