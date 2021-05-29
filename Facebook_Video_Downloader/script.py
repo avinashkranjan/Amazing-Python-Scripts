@@ -93,7 +93,7 @@ Download_button = tk.Button(ld_window, text="Download", font=("Calibri", 9), com
 Download_button.place(x=100, y=100, width=200)
 
 # Progress Bar
-bar = Progressbar(ld_window, length=350, style='grey.Horizontal.TProgressbar')
+bar = Progressbar(ld_window, length=350, style='grey.Horizontal.TProgressbar',mode='determinate')
 bar['value'] = 0
 bar.place(y=200,width=350,x=25)
 
