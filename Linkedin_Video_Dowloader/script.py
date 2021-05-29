@@ -58,7 +58,7 @@ def Download_vid():
                     Download_Window.delete("1.0","end")
                     Download_Window.insert(tk.END,f"Dowloaded.... {per_downloaded}%")
                     file.write(data)
-                print("Dowload Finished")
+                print("Download Finished")
             break  
 
     Status["text"] = "Finished!!"
