@@ -1,5 +1,5 @@
 # ALL Imports
-
+from tkinter.ttk import *
 import tkinter as tk
 from requests import get, HTTPError, ConnectionError
 from re import findall
@@ -33,7 +33,6 @@ def get_downloadlink(url):
 def Download_vid():
 
     # Validates Link and download Video
-    Download_Window.delete("0.0", "end")
     global Url_Val
     url=Url_Val.get()
 
@@ -64,8 +63,7 @@ def download(url):
         for data in r.iter_content(block_size):
             totaldata+=len(data)
             per_downloaded=totaldata*100/total_size
-            Download_Window.delete("1.0","end")
-            Download_Window.insert(tk.END,f"Dowloaded.... {per_downloaded}%")
+            bar['value'] = per_downloaded
             file.write(data)
         file.close()    
         print("Download Finished")
@@ -94,11 +92,11 @@ Url_Input.place( x=25,y=50, width=350)
 Download_button = tk.Button(ld_window, text="Download", font=("Calibri", 9), command=Download_vid)
 Download_button.place(x=100, y=100, width=200)
 
-# Download Window
+# Progress Bar
+bar = Progressbar(ld_window, length=350, style='grey.Horizontal.TProgressbar')
+bar['value'] = 0
+bar.place(y=200,width=350,x=25)
 
-Download_Window = tk.Text(ld_window, font=("Calibri", 9), bg="black", fg="white", bd=1, relief=tk.SUNKEN, wrap=tk.WORD)
-Download_Window.insert(tk.END, "Welcome to Facebook Video Downloader, Provide a Facebook video link in the above box and click download to start the process. :D")
-Download_Window.place(x=25, y=200, width=350, height=250)
 
 # Text for Status of Downloading
 Status = tk.Label(ld_window, text="Hello!! :D", fg="blue", font=("Calibri", 9), bd=1, relief=tk.SUNKEN, anchor=tk.W, padx=3)
