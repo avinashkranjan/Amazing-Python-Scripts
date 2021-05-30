@@ -8,7 +8,8 @@
 [![GitHub issues](https://img.shields.io/github/issues/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues)
 [![GitHub issues closed](https://img.shields.io/github/issues-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/issues?q=is%3Aissue+is%3Aclosed)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+is%3Aclosed) ![GitHub repo size](https://img.shields.io/github/repo-size/avinashkranjan/Amazing-Python-Scripts?color=yellow)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/avinashkranjan/Amazing-Python-Scripts.svg)](https://github.com/avinashkranjan/Amazing-Python-Scripts/pulls?q=is%3Apr+is%3Aclosed) ![GitHub repo size](https://img.shields.io/github/repo-size/avinashkranjan/Amazing-Python-Scripts?color=yellow) 
+![Lines of Code](https://img.shields.io/tokei/lines/github/avinashkranjan/Amazing-Python-Scripts?color=yellow&label=Lines%20of%20Code)
 
 <h2 align=center> 📑 Introduction </h2>
 
