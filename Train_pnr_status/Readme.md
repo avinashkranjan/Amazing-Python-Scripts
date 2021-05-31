@@ -4,8 +4,7 @@
 
 ## Train PNR Status Functionalities : 🚀
 
-- First enter the google executable path
-- Next enter the tesseract path
+- Enter the tesseract path
 - After entering a GUI will pop up in which enter the PNR number and click on submit
 - The script will fill the perform web scrapping and display the PNR status
 
