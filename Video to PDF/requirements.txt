@@ -1,0 +1,4 @@
+Tkinter
+FPDF
+Speech Recognition
+MoviePy
