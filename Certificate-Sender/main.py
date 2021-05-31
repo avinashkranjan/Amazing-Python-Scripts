@@ -1,94 +1,105 @@
-import pandas as pd
-import smtplib
-import re
 import os
-import openpyxl
-from email.mime.text import MIMEText
+import re
+import smtplib
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
+from email.mime.text import MIMEText
+from typing import Iterable, Optional
 
+import pandas as pd
+from PIL import Image, ImageDraw, ImageFont
+from dotenv import load_dotenv
 
-# Mail Setup
-emailID = "abc1234@gmail.com"  # ADD MAIL ID
-pwd = "xyz@1234"  # ADD PASSWORD
-subject = "🥳 Thank You For Attending! Here is your Certificate 🎉"  # EMAIL SUBJECT
-body = """Hi!\n\nThanks for your active participation in our webinar on "All About Git, GitHub & Open Source" 
-Organized by Dhanraj. So now your wait is over and here is your certificate of participation in the webinar.\n\nAlso, 
-don't forget to tag on LinkedIn with your certificate. we are happy to see you there!\n\nDhanraj: 
-https://www.linkedin.com/in/dhanrajdc7/ """
-
-# Files
-excelFile = "Data.xlsx"  # DATA(NAME & EMAIL)
-templateFile = "template.png"  # CERTIFICATE TEMPLATE
-fontFile = "OpenSans-Bold.ttf"  # FONT
-startingPosition = (811, 883)  # POSITION OF NAME TEXT (Check README FOR TUTORIAL)
 
 # Validate Email
-def checkMail(email):
-    regex = '^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$' # DO NOT CHANGE
-
-    if (re.search(regex, email)):
-        return True
-    else:
-        return False
+def check_email(email):
+    regex = r'(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}'  # DO NOT CHANGE
+    return bool(re.match(regex, email))
 
 
 # Shorten the name if it's too long
-def shorten( text, _max ):
-    t = text.split(" ")
-    text = ''
-    if len(t)>1:
-        for i in t[:-1]:
-            text += i[0] + '.'
-    text += ' ' + t[-1]
-    if len(text) < _max :
-        return text
-    else :
-        return -1
+def shorten_name(name, max_length):
+    split_names = name.split(" ")
+    name = ''
+    if len(name) > max_length and len(split_names) > 1:
+        for i in split_names[:-1]:
+            name += i[0] + '.'
+        name += ' ' + split_names[-1]
+
+    return name
+
 
 # Create Certificate
-def makeCertificate(name):
-    img = Image.open(templateFile) # CERTIFICATE TEMPLATE
+def make_certificate(
+        name: str,
+        template_file: Optional[str] = None,
+        font_file: Optional[str] = None,
+        starting_position: Optional[Iterable[int]] = None
+):
+    if not template_file:
+        template_file = os.getenv('CERTIFICATE_TEMPLATE_FILEPATH')
+
+    if not font_file:
+        font_file = os.getenv('CERTIFICATE_NAME_FONT_FILEPATH')
+
+    if not starting_position:
+        starting_position = tuple(map(int, os.getenv(
+            'CERTIFICATE_NAME_STARTING_POSITION').split(',')))
+
+    img = Image.open(template_file)  # CERTIFICATE TEMPLATE
     img.load()
     draw = ImageDraw.Draw(img)
 
     # Load font
-    font = ImageFont.truetype(fontFile, 96)
+    font = ImageFont.truetype(font_file, 96)
 
     if name != "":
-        shortTxt = ""
         if len(name) > 20:
-            shortTxt = shorten(name, 20)
+            shortened_name = shorten_name(name, 20)
         else:
-            shortTxt = name
+            shortened_name = name
 
-        draw.text(startingPosition, shortTxt, (0, 0, 0), font=font) # POSITION OF NAME TEXT (Check README FOR TUTORIAL)
+        # POSITION OF NAME TEXT (Check README FOR TUTORIAL)
+        draw.text(starting_position, shortened_name, (0, 0, 0), font=font)
     else:
-        return -1
+        return None
 
     if not os.path.exists('certificates'):
-        os.makedirs('certificates') # CREATE FOLDER
+        os.mkdir('certificates')  # CREATE FOLDER
 
     background = Image.new("RGB", img.size, (255, 255, 255))
     background.paste(img, mask=img.split()[3])
 
-    background.save('certificates/' + str(name) + '.pdf', "PDF", resolution=100.0) # SAVE IN FOLDER
+    # SAVE IN FOLDER
+    background.save(f'certificates/{name}.pdf', "PDF", resolution=100.0)
+
     return 'certificates/' + str(name) + '.pdf'
 
 
-def sendMail(fileName, receiver):
+def send_mail(receiver: str, certificate_filepath: str,
+              email_id: Optional[str] = None, pwd: Optional[str] = None,
+              subject: Optional[str] = None, body: Optional[str] = None):
+    if not email_id:
+        email_id = os.getenv('EMAIL_ID')
+
+    if not pwd:
+        pwd = os.getenv('EMAIL_PASSWORD')
+
+    if not subject:
+        subject = os.getenv('EMAIL_SUBJECT')
+
+    if not body:
+        body = os.getenv('CERTIFICATE_EMAIL_BODY')
+
     # Email Setup
-    server = smtplib.SMTP("smtp.gmail.com", 587) # SMTP SERVER
+    server = smtplib.SMTP("smtp.gmail.com", 587)  # SMTP SERVER
     server.starttls()  # Traffic encryption
-    server.login(emailID, pwd)  # SMTP Login
+    server.login(email_id, pwd)  # SMTP Login
 
     msg = MIMEMultipart()
     msg['Subject'] = subject
-    msg['From'] = emailID
-    # msg['Reply-to'] = emailID
+    msg['From'] = email_id
+    # msg['Reply-to'] = email_id
     msg['To'] = receiver
 
     # That is what u see if dont have an email reader:
@@ -99,44 +110,53 @@ def sendMail(fileName, receiver):
     msg.attach(part)
 
     # Attachment
-    part = MIMEApplication(open(filename, "rb").read())
-    part.add_header('Content-Disposition', 'attachment', filename=os.path.basename(filename))
+    part = MIMEApplication(open(certificate_filepath, "rb").read())
+    part.add_header('Content-Disposition', 'attachment',
+                    filename=os.path.basename(certificate))
     msg.attach(part)
 
     # Send Mail
-    server.sendmail( emailID, receiver, msg.as_string() )
+    server.sendmail(email_id, receiver, msg.as_string())
 
 
 # Run Script
 if __name__ == '__main__':
+    load_dotenv()
     error_list = []
     error_count = 0
 
+    excel_file = os.getenv('CERTIFICATE_HOLDERS_EXCEL_FILEPATH')
+
     # Reading File
-    file = pd.ExcelFile(excelFile, engine='openpyxl')
+    file = pd.ExcelFile(excel_file, engine='openpyxl')
     count = 0
 
     for sheet in file.sheet_names:
         print("\n\n<-- New Sheet -->\n")
-        df1 = file.parse(sheet)
-        for i in range(len(df1['EMAIL'])):
+        recipient_df = file.parse(sheet)
 
-            if checkMail(df1['EMAIL'][i]):
-                filename = makeCertificate(df1['NAME'][i])
+        for _, row in recipient_df.iterrows():
+
+            recipient_name, recipient_email = row
+
+            if check_email(recipient_email):
+                certificate = make_certificate(recipient_name)
 
                 # Successfully made certificate
-                if filename != -1:
-                    sendMail(filename, df1['EMAIL'][i])
-                    print(">>> ", count, ": ", df1['EMAIL'][i], " : Sent")
-                    # Add to error list
+                if certificate:
+                    send_mail(receiver=recipient_email,
+                              certificate_filepath=certificate)
+                    print(">>> ", count, ": ", recipient_email, " : Sent")
                 else:
-                    error_list.append(df1['EMAIL'](i))
+                    # Add to error list
+                    error_list.append(recipient_email)
                     error_count += 1
             else:
-                error_list.append(str(df1['EMAIL'][i]))
+                # Add to error list
+                error_list.append(recipient_email)
                 error_count += 1
 
             count += 1
 
     print("\n\n <<:>> All Emails Sent <<:>>\n\n")
-    print("Error List: " + str(error_list))
+    print(f"Error List: {error_list}")

@@ -1,0 +1,12 @@
+# Auto-generated
+.idea/
+.vscode/
+
+# Configuration & Environment variables
+.env
+
+# Virtual Environment
+*env/
+
+# Genereated certificates
+certificates/
