@@ -62,8 +62,7 @@ def text_to_pdf(file):
         pdf.multi_cell(effective_page_width, 0.15, x)
         pdf.ln(0.5)
 
-
-    pdf.output("my_pdf.pdf")
+    pdf.output("../Video to PDF/my_pdf.pdf")
 
 
 

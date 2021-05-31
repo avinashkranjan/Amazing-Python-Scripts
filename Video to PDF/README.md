@@ -2,12 +2,10 @@
 
 Using this tool, you can convert any video of your choice into a PDF.
 
-## Modules used :
-- Tkinter
-- MoviePy
-- Speech Recognition
-- OS
-- FPDF
+To run the script, install the dependencies using
+``
+pip install -r requirements.txt
+``
 
 [Sample Video Link](https://www.youtube.com/watch?v=rGHrKkieqCY)
 
