@@ -35,8 +35,6 @@ def audio_to_pdf():
             text = r.recognize_google(audio_data)
             write_file = open('my_text.txt', 'w')
             write_file.write(text)
-            write_file.write('\n')
-            write_file.write('abcdefg')
             write_file.close()
             text_to_pdf('my_text.txt')
         messagebox.showinfo("Message", "Conversion Successfull")
