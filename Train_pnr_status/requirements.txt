@@ -1,0 +1,8 @@
+selenium
+PIL
+pytesseract
+io
+numpy
+time
+cv2
+tkinter

@@ -31,18 +31,14 @@
 
     Sit back and Relax. Let the Script do the Job. ☕
 
-### Requirements
+## DEMO
 
-    - selenium
-    - PIL
-    - pytesseract
-    - io
-    - numpy
-    - time
-    - cv2
-    - tkinter
+![Screenshot (264)](https://user-images.githubusercontent.com/60662775/120154793-d6db6d00-c20d-11eb-84bd-52c1d1a5a4c2.png)
+
+After clicking on submit it goes to official IRCTC website and draws the PNR status.
+
     
 ## Author
    
-![Amit Kumar Mishra](https://github.com/Amit366)
+[Amit Kumar Mishra](https://github.com/Amit366)
 

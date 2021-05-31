@@ -7,6 +7,7 @@ import cv2 as cv
 import time
 import tkinter   
 from tkinter import ttk
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def click():
@@ -34,15 +35,17 @@ def GUI() :
     lbl.grid(column = 1, row = 4) 
     window.mainloop()
 
-GUI()
 window = tkinter.Tk()
 name = tkinter.StringVar()    
 url="http://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en"
 
-google = input(r"Enter google executable path");
-tess = input(r"Enter tesseract path");
+GUI()
 
-browser = webdriver.Chrome(executable_path= google)     
+#google = input(r"Enter google executable path");
+tess = input(r"Enter tesseract path: ");
+
+browser = webdriver.Chrome(
+            executable_path=ChromeDriverManager().install())   
 browser.get(url)
 pnrnumber = browser.find_element_by_id('inputPnrNo')
 pnrnumber.send_keys(inputpnrnumber)
