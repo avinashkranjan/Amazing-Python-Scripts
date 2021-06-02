@@ -9,6 +9,6 @@ newsapi-python==0.1.1
 requests==2.24.0
 six==1.15.0
 soupsieve==2.0.1
-urllib3==1.25.11
+urllib3==1.26.5
 pydub==0.24.1
 simpleaudio==1.0.4
