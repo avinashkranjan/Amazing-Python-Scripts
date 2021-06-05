@@ -1,0 +1,3 @@
+fpdf==1.7.2
+speech_recognition==3.7.1
+moviepy==1.0.1
