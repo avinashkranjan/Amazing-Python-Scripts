@@ -31,7 +31,10 @@
 ## DEMO
 ![Screenshot (241)](https://user-images.githubusercontent.com/60662775/116357999-c86af180-a81a-11eb-91b2-fe1bca70872c.png)
 
+- re
+- requests
+- urllib.request
+    
 ## Author
    
-   Amit Kumar Mishra
-
+[Amit Kumar Mishra](https://github.com/Amit366)
