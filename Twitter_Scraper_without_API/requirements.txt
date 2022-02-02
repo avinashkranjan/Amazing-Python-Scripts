@@ -7,4 +7,4 @@ PySocks==1.7.1
 requests==2.25.1
 snscrape==0.3.4
 soupsieve==2.2
-urllib3==1.26.4
+urllib3==1.26.5
