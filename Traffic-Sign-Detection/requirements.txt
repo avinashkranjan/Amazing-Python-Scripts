@@ -104,7 +104,7 @@ six==1.15.0
 SoundFile==0.10.3.post1
 tensorboard==2.4.1
 tensorboard-plugin-wit==1.7.0
-tensorflow==2.5.2
+tensorflow==2.5.3
 tensorflow-estimator==2.4.0
 tensorflow-gpu==2.5.3
 termcolor==1.1.0
