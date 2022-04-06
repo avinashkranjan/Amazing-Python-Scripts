@@ -56,7 +56,7 @@ nbconvert==6.0.7
 nbformat==5.1.2
 nest-asyncio==1.4.3
 networkx==2.5
-notebook==6.2.0
+notebook==6.4.10
 numba==0.52.0
 numpy==1.22.0rc1
 oauthlib==3.1.0
