@@ -3,5 +3,5 @@ pdf2image==1.15.1
 fpdf==1.7.2
 numpy==1.22.0rc1
 Pillow==9.0.1
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 skimage==0.0
