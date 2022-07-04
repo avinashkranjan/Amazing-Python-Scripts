@@ -50,7 +50,7 @@ llvmlite==0.35.0
 Markdown==3.3.3
 MarkupSafe==1.1.1
 matplotlib==3.3.3
-mistune==2.0.1
+mistune==2.0.3
 nbclient==0.5.1
 nbconvert==6.0.7
 nbformat==5.1.2
