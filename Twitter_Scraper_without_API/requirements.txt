@@ -2,7 +2,7 @@ beautifulsoup4==4.9.3
 certifi==2020.12.5
 chardet==4.0.0
 idna==2.10
-lxml==4.6.5
+lxml==4.9.1
 PySocks==1.7.1
 requests==2.25.1
 snscrape==0.3.4
