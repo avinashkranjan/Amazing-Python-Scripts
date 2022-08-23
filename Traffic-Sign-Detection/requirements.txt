@@ -52,7 +52,7 @@ MarkupSafe==1.1.1
 matplotlib==3.3.3
 mistune==2.0.3
 nbclient==0.5.1
-nbconvert==6.3.0
+nbconvert==6.5.1
 nbformat==5.1.2
 nest-asyncio==1.4.3
 networkx==2.5
