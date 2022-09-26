@@ -6,7 +6,7 @@ async-generator==1.10
 attrs==20.3.0
 audioread==2.1.9
 backcall==0.2.0
-bleach==3.2.1
+bleach==3.3.0
 cachetools==4.2.0
 certifi==2020.12.5
 cffi==1.14.4
@@ -31,8 +31,8 @@ ipython==7.31.1
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
 jedi==0.18.0
-Jinja2==2.11.2
-joblib==1.0.0
+Jinja2==2.11.3
+joblib==1.2.0
 jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==6.1.11
@@ -41,7 +41,7 @@ jupyter-core==4.7.0
 jupyter-http-over-ws==0.0.8
 jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
-Keras==2.4.3
+Keras==2.6.0rc3
 Keras-Preprocessing==1.1.2
 keyboard==0.13.5
 kiwisolver==1.3.1
@@ -55,7 +55,7 @@ nbclient==0.5.1
 nbconvert==6.5.1
 nbformat==5.1.2
 nest-asyncio==1.4.3
-networkx==2.5
+networkx==2.6
 notebook==6.4.12
 numba==0.52.0
 numpy==1.22.0
@@ -71,7 +71,7 @@ Pillow==9.0.1
 pooch==1.3.0
 prometheus-client==0.9.0
 prompt-toolkit==3.0.10
-protobuf==3.15.0
+protobuf==3.18.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
@@ -87,7 +87,7 @@ pytz==2020.5
 PyWavelets==1.1.1
 pywin32==300
 pywinpty==0.5.7
-PyYAML==5.3.1
+PyYAML==5.4
 pyzmq==21.0.1
 qtconsole==5.0.1
 QtPy==1.9.0
@@ -116,7 +116,7 @@ tornado==6.1
 tqdm==4.56.0
 traitlets==5.0.5
 typing-extensions==3.7.4.3
-urllib3==1.26.2
+urllib3==1.26.5
 wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==1.0.1
