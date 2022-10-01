@@ -9,4 +9,4 @@ requests==2.25.1
 six==1.15.0
 soupsieve==2.1
 tornado==6.1
-urllib3==1.26.2
+urllib3==1.26.5
