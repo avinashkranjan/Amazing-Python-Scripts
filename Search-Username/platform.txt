@@ -16,3 +16,11 @@ Supported Platforms
 "goodreads": f'https://www.goodreads.com/{username}',
 "wikipedia": f'https://www.wikipedia.org/wiki/User:{username}',
 "slack": f'https://{username}.slack.com'
+"7cups": f'https://www.7cups.com/@{username}'
+"9gag": f'https://www.9gag.com/u/{username}'
+"AboutMe": f'https://about.me/{username}'
+"Academia": f'https://independent.academia.edu/{username}'
+"Blogger" : f'https://{username}.blogspot.com'
+"ClubHouse": f'https://www.clubhouse.com/@{username}'
+"CodeChef": f'https://www.codechef.com/users/{username}'
+"DeviantART": f'https://{username}.deviantart.com
