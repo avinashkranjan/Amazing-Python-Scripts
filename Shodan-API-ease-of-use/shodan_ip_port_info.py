@@ -39,7 +39,7 @@ def shodan_port_info():
         except:
             print('No port information for that IP')            
         finally:
-            cont_or_exit = str(input('type yes to continue or press any key to exit: '))
+            cont_or_exit = str(input('type yes to continue or type no to exit: '))
             if cont_or_exit in ['Yes', 'yes', 'YES']:
                 x = True
             elif cont_or_exit in ['No', 'no', 'NO']:
