@@ -122,3 +122,4 @@ webencodings==0.5.1
 Werkzeug==1.0.1
 widgetsnbextension==3.5.1
 wrapt==1.12.1
+wheel>=0.38.0 # not directly required, pinned by Snyk to avoid a vulnerability
