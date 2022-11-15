@@ -1,3 +1,4 @@
 sumy==0.8.1
 spacy==2.3.2
 neologdn==0.4
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
