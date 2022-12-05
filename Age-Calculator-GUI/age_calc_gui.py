@@ -1,4 +1,5 @@
 # import libraries
+
 import tkinter as tk
 from datetime import date
 
@@ -26,7 +27,11 @@ class App:
         # label for year in which user was born
         self.l2 = tk.Label(text="Year: ", font="courier 10", bg="lightblue")
         self.l2.grid(row=2, column=0)
+        #yearValue = tk.StringVar()
+        #adding some checking to ensure its valid
         yearValue = tk.StringVar()
+        #while yearValue.get() > 12 or yearValue.get() < 0:
+        #    yearValye = tk.IntVar()
         self.yearEntry = tk.Entry(self.master, textvariable=yearValue, relief="solid")
         self.yearEntry.grid(row=2, column=1, padx=10, pady=10)
 
@@ -44,17 +49,66 @@ class App:
         self.dayEntry = tk.Entry(self.master, textvariable=dayValue, relief="solid")
         self.dayEntry.grid(row=4, column=1, padx=10, pady=10)
 
+
+        def check_year():
+            self.statement.destroy()
+            today = date.today()
+            try:
+                year = int(self.yearEntry.get())
+                if today.year - year < 0:
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s age cannot be negative.", font="courier 10", bg="lightblue")
+                    self.statement.grid(row=6, column=1, pady=15)
+                    return False
+                else:
+                    return True
+            except Exception as e:
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth year cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement.grid(row=6, column=1, pady=15)
+                return False
+
+        def check_month():
+            self.statement.destroy()
+            try:
+                month = int(self.monthEntry.get())
+                if month < 0 or month > 12:
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s birth month is outside 1-12.", font="courier 10", bg="lightblue")
+                    self.statement.grid(row=6, column=1, pady=15)
+                    return False
+                else:
+                    return True
+            except Exception as e:
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement.grid(row=6, column=1, pady=15)
+                return False
+        
+        def check_day():
+            self.statement.destroy()
+            try:
+                day = int(self.dayEntry.get())
+                if day < 0 or day > 31:
+                    self.statement = tk.Label(text=f"{nameValue.get()}'s birth day is outside 1-31.", font="courier 10", bg="lightblue")
+                    self.statement.grid(row=6, column=1, pady=15)
+                    return False
+                else:
+                    return True
+            except Exception as e:
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement.grid(row=6, column=1, pady=15)
+                return False
+
         # defining the function for calculating age
         def ageCalc():
             self.statement.destroy()
             today = date.today()
-            birthDate = date(int(self.yearEntry.get()), int(
-                self.monthEntry.get()), int(self.dayEntry.get()))
-            age = today.year - birthDate.year
-            if today.month < birthDate.month or today.month == birthDate.month and today.day < birthDate.day:
-                age -= 1
-            self.statement = tk.Label(text=f"{nameValue.get()}'s age is {age}.", font="courier 10", bg="lightblue")
-            self.statement.grid(row=6, column=1, pady=15)
+            #adding some stuff for checking validity of inputs
+            if check_year() and check_month() and check_day():
+                birthDate = date(int(self.yearEntry.get()), int(
+                    self.monthEntry.get()), int(self.dayEntry.get()))
+                age = today.year - birthDate.year
+                if today.month < birthDate.month or today.month == birthDate.month and today.day < birthDate.day:
+                    age -= 1
+                self.statement = tk.Label(text=f"{nameValue.get()}'s age is {age}.", font="courier 10", bg="lightblue")
+                self.statement.grid(row=6, column=1, pady=15)
 
         # create a button for calculating age
         self.button = tk.Button(text="Calculate age", font="courier 12 bold", fg="white", bg="dodgerblue", command=ageCalc)
