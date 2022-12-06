@@ -27,11 +27,7 @@ class App:
         # label for year in which user was born
         self.l2 = tk.Label(text="Year: ", font="courier 10", bg="lightblue")
         self.l2.grid(row=2, column=0)
-        #yearValue = tk.StringVar()
-        #adding some checking to ensure its valid
         yearValue = tk.StringVar()
-        #while yearValue.get() > 12 or yearValue.get() < 0:
-        #    yearValye = tk.IntVar()
         self.yearEntry = tk.Entry(self.master, textvariable=yearValue, relief="solid")
         self.yearEntry.grid(row=2, column=1, padx=10, pady=10)
 
@@ -51,6 +47,7 @@ class App:
 
 
         def check_year():
+            #simple method to check the validity of a user input birth year
             self.statement.destroy()
             today = date.today()
             try:
@@ -67,6 +64,7 @@ class App:
                 return False
 
         def check_month():
+            #simple method to check the validity of a user input birth month
             self.statement.destroy()
             try:
                 month = int(self.monthEntry.get())
@@ -82,6 +80,7 @@ class App:
                 return False
         
         def check_day():
+            #simple method to check the validity of a user input birth day
             self.statement.destroy()
             try:
                 day = int(self.dayEntry.get())
