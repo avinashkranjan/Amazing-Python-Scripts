@@ -5,3 +5,4 @@ pywin32==301
 soupsieve==2.0.1
 urllib3==1.26.5
 win10toast==0.9
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
