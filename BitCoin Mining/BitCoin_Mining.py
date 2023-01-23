@@ -54,7 +54,7 @@ if __name__ == '__main__':
     start = time.time()
     print("start mining")
 
-    previous_hash = input('Enter Previous has value : ')
+    previous_hash = input('Enter Previous hash value : ')
 
     # Calling mine function with all required parameters
     new_hash = mine(5, transactions, previous_hash, difficulty)
