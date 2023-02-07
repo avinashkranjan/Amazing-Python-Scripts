@@ -4,3 +4,4 @@ mutagen==1.45.1
 pdf2image==1.15.1
 Pillow==9.0.1
 pytesseract==0.3.7
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
