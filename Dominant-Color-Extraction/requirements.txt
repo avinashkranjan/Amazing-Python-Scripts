@@ -5,3 +5,4 @@ pandas==1.1.5
 cv2==4.4.0
 matplotlib==3.3.3
 sklearn==0.23.2
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
