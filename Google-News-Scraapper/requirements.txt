@@ -1,3 +1,4 @@
 openpyxl==3.0.5
 pandas==1.0.5
 requests==2.24.0
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
