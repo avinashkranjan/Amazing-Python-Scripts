@@ -5,6 +5,7 @@ import requests
 from urllib.parse import quote
 import array as arr
 
+
 class simple_image_download:
     def __init__(self):
         pass
@@ -19,7 +20,7 @@ class simple_image_download:
                     'utf-8')) + '&biw=1536&bih=674&tbm=isch&sxsrf=ACYBGNSXXpS6YmAKUiLKKBs6xWb4uUY5gA:1581168823770&source=lnms&sa=X&ved=0ahUKEwioj8jwiMLnAhW9AhAIHbXTBMMQ_AUI3QUoAQ'
             raw_html = self._download_page(url)
 
-            end_object = -1;
+            end_object = -1
 
             j = 0
             while j < limit:
@@ -45,8 +46,7 @@ class simple_image_download:
                 j += 1
 
             i += 1
-        return(links)
-
+        return (links)
 
     def download(self, keywords, limit):
         keyword_to_search = [str(item).strip() for item in keywords.split(',')]
@@ -59,7 +59,7 @@ class simple_image_download:
                 keyword_to_search[i].encode('utf-8')) + '&biw=1536&bih=674&tbm=isch&sxsrf=ACYBGNSXXpS6YmAKUiLKKBs6xWb4uUY5gA:1581168823770&source=lnms&sa=X&ved=0ahUKEwioj8jwiMLnAhW9AhAIHbXTBMMQ_AUI3QUoAQ'
             raw_html = self._download_page(url)
 
-            end_object = -1;
+            end_object = -1
 
             j = 0
             while j < limit:
@@ -83,7 +83,7 @@ class simple_image_download:
 
                 path = main_directory + keyword_to_search[i]
 
-                #print(object_raw)
+                # print(object_raw)
 
                 if not os.path.exists(path):
                     os.makedirs(path)
@@ -99,7 +99,6 @@ class simple_image_download:
                 j += 1
 
             i += 1
-
 
     def _create_directories(self, main_directory, name):
         try:
@@ -122,7 +121,7 @@ class simple_image_download:
             pass
         return
 
-    def _download_page(self,url):
+    def _download_page(self, url):
 
         try:
             headers = {}
