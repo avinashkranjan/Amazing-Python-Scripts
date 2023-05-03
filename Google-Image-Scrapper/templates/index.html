@@ -1,0 +1,56 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Flask Bootstrap Form Example{% endblock %}
+{% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-sm">
+            <img src="static/images/google-logo.jpg" alt="Google Logo" width="200" height="100">
+        </div>
+        <div class="col-sm">
+            <h1>Google Image Downloader</h1>
+            <form method="post" action="/">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    {{ form.name(class="form-control", id="name", required="required") }}
+                </div>
+                <div class="form-group">
+                    <label for="number_of_images">Number of Images</label>
+                    {{ form.number_of_images(class="form-control", id="number_of_images", required="required") }}
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+{% endblock %}
