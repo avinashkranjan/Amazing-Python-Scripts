@@ -14,7 +14,7 @@ This is a News Generator App.
 ## Output
 
 <div align="center">
-    <img src="output.png" alt="Logo" width="400" height="400">
+    <img src="output.jpeg" alt="Logo" width="400" height="400">
 </div>
 
 ## Author(s)
