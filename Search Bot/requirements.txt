@@ -1,0 +1,9 @@
+gensim
+tkinter
+nltk
+wordcloud
+marplotlib
+io
+PIL
+googlesearch
+requests
