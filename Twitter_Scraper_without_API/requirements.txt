@@ -4,7 +4,7 @@ chardet==4.0.0
 idna==2.10
 lxml==4.9.1
 PySocks==1.7.1
-requests==2.25.1
+requests==2.31.0
 snscrape==0.3.4
 soupsieve==2.2
 urllib3==1.26.5
