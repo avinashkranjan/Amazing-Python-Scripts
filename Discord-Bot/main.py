@@ -1,32 +1,28 @@
 import random
-
 import discord
 from discord.ext import commands
 
-# your token here, inside the ""
+# Your token here, inside the ""
 TOKEN = ""
-# channel to send welcome messages to
+# Channel to send welcome messages to
 WELCOME_CHANNEL = "welcome"
-# all the nicknames for the random_nickname command
+# All the nicknames for the random_nickname command
 NICKS = ["example1", "example2", "example3"]
 
-# you can change the prefix here
+# You can change the prefix here
 bot = commands.Bot(command_prefix="!")
 
 
 @bot.event
 async def on_ready():
-    print("bot started")
+    print("Bot started")
 
 
 @bot.event
 async def on_member_join(member):
-    welcome_channel = discord.utils.get(member.guild.channels,
-                                        name=WELCOME_CHANNEL)
-    # feel free to change this message!
-    await welcome_channel.send(
-        f"welcome {member.mention}, please read our rules and have a great time!"
-    )
+    welcome_channel = discord.utils.get(member.guild.channels, name=WELCOME_CHANNEL)
+    # Feel free to change this message!
+    await welcome_channel.send(f"Welcome {member.mention}! Please read our rules and have a great time!")
 
 
 @commands.has_permissions(ban_members=True)
@@ -34,23 +30,23 @@ async def on_member_join(member):
 async def ban(ctx, user: discord.Member):
     """Ban the given user"""
     await ctx.guild.ban(user, delete_message_days=0)
-    await ctx.send(f"banned {user}")
+    await ctx.send(f"Banned {user}")
 
 
 @commands.has_permissions(ban_members=True)
 @bot.command()
 async def unban(ctx, user: discord.User):
-    "Unban the given user"
+    """Unban the given user"""
     await ctx.guild.unban(user)
-    await ctx.send(f"unbanned {user}")
+    await ctx.send(f"Unbanned {user}")
 
 
 @commands.has_permissions(kick_members=True)
 @bot.command()
 async def kick(ctx, user: discord.User):
-    "Kick the given user"
+    """Kick the given user"""
     await ctx.guild.kick(user)
-    await ctx.send(f"kicked {user}")
+    await ctx.send(f"Kicked {user}")
 
 
 @bot.command(aliases=["rnick"])
@@ -64,9 +60,9 @@ async def random_nick(ctx):
 @commands.has_permissions(manage_nicknames=True)
 @bot.command(aliases=["change_name"])
 async def change_nick(ctx, user: discord.Member, *, new_nick):
-    """Change somebody elses nickname."""
+    """Change somebody else's nickname"""
     await user.edit(nick=new_nick)
-    await ctx.send(f"Changed the nick of {user.mention} to `{new_nick}`")
+    await ctx.send(f"Changed the nickname of {user.mention} to `{new_nick}`")
 
 
 if __name__ == "__main__":
