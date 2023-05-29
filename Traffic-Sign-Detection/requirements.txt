@@ -91,7 +91,7 @@ PyYAML==5.3.1
 pyzmq==21.0.1
 qtconsole==5.0.1
 QtPy==1.9.0
-requests==2.25.1
+requests==2.31.0
 requests-oauthlib==1.3.0
 resampy==0.2.2
 rsa==4.7
