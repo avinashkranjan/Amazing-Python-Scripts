@@ -25,8 +25,6 @@ This Python script allows you to translate a string of text into the language of
 3. Run the script using the following command:
 
    ```shell
-   cd '.\Amazing-Python-Scripts\'
-   cd  cd '.\Language Translator\'
    python language_translator.py
 
 4. Enter the text you want to translate when prompted.
