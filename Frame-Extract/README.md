@@ -11,6 +11,8 @@ To use this script, get a copy of the script into your system and pass in the re
 
 The Script takes the following Arguments:
 
+~~~
+
 python framext.py -h
 
 usage: Frame Extractor [-h] -i VIDEO_FILE -o OUTPUT_DIR [-s SAMPLE_RATE]
