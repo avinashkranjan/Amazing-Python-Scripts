@@ -37,6 +37,10 @@ The Hand Written Digit Recognition project relies on the following dependencies:
 * jQuery: A JavaScript library used for DOM manipulation and event handling.
 * The required dependencies are already included in the project repository, so there is no need for additional setup.
 
+## Demo
+![handwritten-recognition-5](https://github.com/Raghucharan16/Amazing-Python-Scripts/assets/104614903/872abeb1-5e44-496c-a166-b9f25e2f7acd)
+
+
 Contact
 If you have any questions, suggestions, ideas or issues regarding the project, please feel free to contact the me.
 
