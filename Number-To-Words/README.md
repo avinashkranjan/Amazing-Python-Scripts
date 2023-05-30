@@ -16,6 +16,10 @@ This program can convert the numbers upto the range of Trillions.
 
         This module is used to create the GUI of the progam
 
+        You can install it using the below command :
+
+        ```pip install tk```
+
 ## Output
 
 <img src="./Screenshots/1.png" alt="Screenshot 1">
