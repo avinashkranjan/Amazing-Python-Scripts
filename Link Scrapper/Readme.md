@@ -15,4 +15,3 @@ image.png
 ## Author(s)
 
 Tanya Mohanka
-
