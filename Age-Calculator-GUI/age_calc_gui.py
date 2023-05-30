@@ -45,6 +45,26 @@ class App:
         self.dayEntry = tk.Entry(self.master, textvariable=dayValue, relief="solid")
         self.dayEntry.grid(row=4, column=1, padx=10, pady=10)
 
+        def check_name():
+            #simple method to check the validity of a user input name
+            self.statement.destroy()
+            try:
+                #checking if name has only lower and upper case alphabets is yes then valid else not valid
+                for i in nameValue.get():
+                    if (i>='a' and i<='z') or (i>='A' and i<='Z'):
+                        pass
+                    else:
+                        self.statement = tk.Label(text=f"{nameValue.get()} is not a\n valid name! Please\n enter a valid name .", font="courier 10", bg="lightblue")
+                        self.statement.grid(row=6, column=1, pady=15)
+                        return False
+
+                return True
+            #the code will never go to this except statement but we have written this just to be at a safer side
+            except Exception as e:
+                self.statement = tk.Label(text="Please try with a\n different name .", font="courier 10", bg="lightblue")
+                self.statement.grid(row=6, column=1, pady=15)
+                return False
+
 
         def check_year():
             #simple method to check the validity of a user input birth year
@@ -99,8 +119,9 @@ class App:
         def ageCalc():
             self.statement.destroy()
             today = date.today()
-            #adding some stuff for checking validity of inputs
-            if check_year() and check_month() and check_day():
+            #adding some stuff for checking validity of inputs and also checking valid name 
+            #checking in order therefore first check for name then year then for month and then for day
+            if check_name() and check_year() and check_month() and check_day():
                 birthDate = date(int(self.yearEntry.get()), int(
                     self.monthEntry.get()), int(self.dayEntry.get()))
                 age = today.year - birthDate.year
