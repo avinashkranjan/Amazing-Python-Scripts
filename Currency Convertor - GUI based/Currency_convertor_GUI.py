@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
     # Convert button and placing
     convert_btn = tk.Button(
-        screen, text="Convert", fg='white', bg="#3500D3", command=calculate_conversion)
+        screen, text="Convert", fg='black', bg="#3500D3", command=calculate_conversion)
     convert_btn.place(x=230, y=240)
 
     screen.mainloop()
