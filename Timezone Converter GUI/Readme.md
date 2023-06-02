@@ -17,3 +17,7 @@ A script file's comments explain what is happening
 ## Author(s)
 
 Volcano-Dragon
+
+## Output
+![image](https://github.com/Volcano-Dragon/Amazing-Python-Scripts/assets/93902835/dba692d9-fffc-428f-b4d6-15cb39fffbba)
+
