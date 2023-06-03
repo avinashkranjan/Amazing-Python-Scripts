@@ -1,15 +1,29 @@
-Age_Calculator.py
+   **Age_Calculator**
 
-Step1:-  First of all, we need to import two libraries into our code. The first one is the time and date
+**Step1:**  
 
-Step2:-  Now, just use Age_Calculator.py code run it on online r any complier 
+First of all, we need to import two libraries into our code. The first one is the time and date
 
-Step3:- It will frist your date of birth year!
+**Step2:**  
 
-Step4:- Then it will ask your birth month!
+Now, just use Age_Calculator.py code run it on online r any complier 
 
-Step5:- Then it will ask your birth day!
+**Step3:**
 
-Step6:-  Finally it will just a date of you enterted and current date and time it will print the the years and months days!
+It will frist your date of birth year!
 
-conclusion:- It is useful to Calculate birthdays in years!
+**Step4:** 
+
+Then it will ask your birth month!
+
+**Step5:** 
+
+Then it will ask your birth day!
+
+**Step6:**  
+
+Finally it will just a date of you enterted and current date and time it will print the the years and months days!
+
+**conclusion:** 
+
+It is useful to Calculate birthdays in years!
