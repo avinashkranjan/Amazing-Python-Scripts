@@ -1,7 +1,6 @@
 # **Stack**
 Stacks are a fundamental data structure that follows the Last-In-First-Out (LIFO) principle. In a stack, elements are added and removed from the same end, known as the top of the stack.
 
-<br />
 
 ## **Explanation**
 1. ### **Stack**
@@ -9,14 +8,12 @@ Stacks are a fundamental data structure that follows the Last-In-First-Out (LIFO
 
     🔗 View here: [Stack](./Menu_Driven_Code_for_Stack.py)
 
-<br />
 
 2. ### **Dynamic Stack using Linked List**
     A dynamic stack implemented using a linked list allows for a stack with dynamic memory allocation. The menu-driven code for a dynamic stack using a linked list provides options to push (add) elements, pop (remove) elements, display the stack, check if it is empty, check if it is full (not applicable for linked list implementation), and exit.
 
     🔗 View here: [Dynamic Stack using Linked List](./Menu_Driven_Code_for_Dynamic_Stack_using_LinkedList.py)
 
-<br />
 
 ## **Setup Instructions**
 
@@ -34,7 +31,6 @@ Stacks are a fundamental data structure that follows the Last-In-First-Out (LIFO
 
     Note: Replace `filename.py` with the name of the python file which is to be executed.
 
-<br />
 
 ## **Author**
 

@@ -1,7 +1,6 @@
 # **Queue**
 Queues are a common data structure that follows the First-In-First-Out (FIFO) principle, where elements are inserted at the rear and removed from the front.
 
-<br />
 
 ## **Explanation**
 
@@ -10,28 +9,24 @@ Queues are a common data structure that follows the First-In-First-Out (FIFO) pr
 
     🔗 View here: [Linear Queue](./Menu_Driven_Code_for_Linear_Queue.py)
 
-<br />
 
 2. ### **Circular Queue**
     A circular queue overcomes the limitation of a linear queue by reusing empty spaces at the beginning of the queue. It uses a circular buffer or a modulo operation to wrap around and fill the empty spaces. The menu-driven code for a circular queue offers options to enqueue, dequeue, display the queue, check if it is empty, check if it is full, and exit. Special attention should be given to handle the circular nature of the queue when performing enqueue and dequeue operations.
 
     🔗 View here: [Circular Queue](./Menu_Driven_Code_for_Circular_Queue.py)
 
-<br />
 
 3. ### **Priority Queue**
     A priority queue assigns a priority value to each element, and the element with the highest priority is dequeued first. The menu-driven code for a priority queue provides options to enqueue elements with their respective priorities, dequeue elements based on priority, display the queue, check if it is empty, check if it is full, and exit. It typically employs a suitable data structure like a heap or a binary search tree to maintain the priority order efficiently.
 
     🔗 View here: [Priority Queue](./Menu_Driven_Code_for_Priority_Queue.py)
 
-<br />
 
 4. ### **Dynamic Linear Queue using Linked List**
     A dynamic linear queue implemented using a linked list allows for a queue with dynamic memory allocation. The menu-driven code for this structure includes options to enqueue elements, dequeue elements, display the queue, check if it is empty, check if it is full (not applicable for linked list implementation), and exit.
 
     🔗 View here: [Dynamic Linear Queue using Linked List](./Menu_Driven_Code_for_Dynamic_Linear_Queue_using_LinkedList.py)
 
-<br />
 
 ## **Setup Instructions**
 
@@ -49,7 +44,6 @@ Queues are a common data structure that follows the First-In-First-Out (FIFO) pr
 
     Note: Replace `filename.py` with the name of the python file which is to be executed.
 
-<br />
 
 ## **Author**
 
