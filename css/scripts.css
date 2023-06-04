@@ -1,3 +1,22 @@
+body {
+  background-color: white;
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  height: 100%;
+  transition: all 1s;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transform: scale(1.05);
+}
 .navbar {
   width: 100%;
   height: 100%;
@@ -6,7 +25,6 @@
   background-size: cover;
   padding-bottom: 0;
   padding-top: 0;
-  /* background: url(https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif); */
 }
 body {
   margin-bottom: 3%;
@@ -20,15 +38,8 @@ body {
 .img-fluid {
   max-height: 100%;
 }
-.card {
-  height: 100%;
-}
 #loadmore {
   display: none;
-}
-.button {
-  text-align: center;
-  margin: 5%;
 }
 .card-body p a {
   text-decoration: none;
@@ -40,7 +51,6 @@ body {
   font-size: 22px;
   font-weight: 600;
   margin-right: 20px;
-  /* text-decoration: underline; */
   color: aliceblue !important;
 }
 
@@ -87,7 +97,7 @@ a.nav-link {
   width: 52px;
 }
 .fa-python:before {
-  content: '\f3e2';
+  content: "\f3e2";
   font-size: x-large;
 }
 
@@ -97,5 +107,47 @@ a.nav-link {
 
 .top-heading {
   font-size: 56px;
+  text-shadow: 2px 5px 5px gray;
+  letter-spacing: 2px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin: 20px;
+}
+.card-title {
+  padding-top: 10px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+
+  text-align: center;
+  color: rgb(37, 37, 224);
+}
+.card-text {
+  padding-top: 20px;
+  text-align: center;
+}
+.card-body p a {
+  margin-left: 80px;
+  text-align: center;
+  margin-top: 10px;
+  text-align: right;
+}
+.card-body p a:hover {
+  color: red;
+}
+.btn-primary {
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.btn-primary:hover {
+  border: none;
+  color: black;
+  box-shadow: radial-gradient(
+    circle farthest-corner at 22.4% 21.7%,
+    rgba(4, 189, 228, 1) 0%,
+    rgba(2, 83, 185, 1) 100.2%
+  );
+  background-image: linear-gradient(to right, #b6fbff, #83a4d4);
 }
