@@ -6,10 +6,9 @@ Searching techniques are algorithms used to find a specific element or value wit
 
 1. ### **Binary Search Technique (Iterative)**
     Binary search is a highly efficient searching technique for sorted arrays or lists. In the iterative approach, the search is divided into halves repeatedly until the target value is found or determined to be absent.
-
     <details>
     <summary><h3>Explanation</h3></summary>
-
+    
         1. Initialize two pointers, 'low' and 'high', pointing to the start and end of the array respectively.
         2. While 'low' is less than or equal to 'high', do the following:
             - Calculate the mid-point index as the average of 'low' and 'high'.
@@ -19,9 +18,9 @@ Searching techniques are algorithms used to find a specific element or value wit
         3. If the target value is not found, return a sentinel value indicating its absence.
 
     </details>
-
+    
     🔗 View here: [Binary Search Technique (Iterative)](./Binary_Search_Iterative.py)
-
+---
 
 2. ### **Binary Search Technique (Recursive)**
     Binary search can also be implemented recursively. The recursive approach follows the same principle of dividing the search space in half until the target value is found or determined to be absent.
@@ -39,7 +38,7 @@ Searching techniques are algorithms used to find a specific element or value wit
     </details>
 
     🔗 View here: [Binary Search Technique (Recursive)](./Binary_Search_Recursive.py)
-
+---
 
 3. ### **Sequential Search**
     Sequential search, also known as linear search, is a simple and straightforward searching technique applicable to both sorted and unsorted data. It involves iterating through each element of the collection until the target value is found or the end of the collection is reached. 
