@@ -1,7 +1,6 @@
 # **Searching Techniques**
 Searching techniques are algorithms used to find a specific element or value within a collection of data.
 
-<br />
 
 ## **Explanation**
 
@@ -23,7 +22,6 @@ Searching techniques are algorithms used to find a specific element or value wit
 
     🔗 View here: [Binary Search Technique (Iterative)](./Binary_Search_Iterative.py)
 
-    <br>
 
 2. ### **Binary Search Technique (Recursive)**
     Binary search can also be implemented recursively. The recursive approach follows the same principle of dividing the search space in half until the target value is found or determined to be absent.
@@ -42,7 +40,6 @@ Searching techniques are algorithms used to find a specific element or value wit
 
     🔗 View here: [Binary Search Technique (Recursive)](./Binary_Search_Recursive.py)
 
-    <br>
 
 3. ### **Sequential Search**
     Sequential search, also known as linear search, is a simple and straightforward searching technique applicable to both sorted and unsorted data. It involves iterating through each element of the collection until the target value is found or the end of the collection is reached. 
@@ -59,7 +56,6 @@ Searching techniques are algorithms used to find a specific element or value wit
 
     🔗 View here: [Sequential Search](./Sequential_Search.py)
 
-<br />
 
 ## **Setup Instructions**
 
@@ -77,7 +73,6 @@ Searching techniques are algorithms used to find a specific element or value wit
 
     Note: Replace `filename.py` with the name of the python file which is to be executed.
 
-<br />
 
 ## **Author**
 
