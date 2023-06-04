@@ -19,8 +19,6 @@ Binary search is a highly efficient searching technique for sorted arrays or lis
 
 </details>
 
-<br />
-
 🔗 View here: [Binary Search Technique (Iterative)](./Binary_Search_Iterative.py)
 
 ---
@@ -41,8 +39,6 @@ Binary search can also be implemented recursively. The recursive approach follow
 
 </details>
 
-<br />
-
 🔗 View here: [Binary Search Technique (Recursive)](./Binary_Search_Recursive.py)
 
 ---
@@ -60,7 +56,5 @@ Sequential search, also known as linear search, is a simple and straightforward 
     4. If the end of the collection is reached without finding the target value, return a sentinel value indicating its absence.
 
 </details>
-
-<br />
 
 🔗 View here: [Sequential Search](./Sequential_Search.py)
