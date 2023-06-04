@@ -17,7 +17,7 @@ This project is based on face detection using OpenCV with a webcam. It continuou
 <img width="528" alt="figure" src="https://github.com/naazkakria/face_recognition_/blob/main/image_detected.jpeg">
 
 ## Authors
-1) By [Sakshi](https://github.com/sakshid2706)
+1) By Sakshi
 2) Written by [Naaz](https://github.com/naazkakria)
 
 
