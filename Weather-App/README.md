@@ -1,6 +1,6 @@
 # Weather app
 
-This is a simple application that allows you to check the temperature of a city using web scraping from Google search results.
+A simple application that allows you to check the temperature of a city using web scraping from Google search results.
 
 ## Prerequisites
 
