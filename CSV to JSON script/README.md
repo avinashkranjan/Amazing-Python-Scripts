@@ -1,26 +1,31 @@
-##CSV to JSON Converter
+# CSV to JSON Converter
+![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
+
+
 This script converts a CSV file to JSON format. It reads a CSV file, processes its data, and writes the converted JSON data to a new file.
 
-Requirements
+
+
+### Requirements
 To run this script, you need the following:
 
-Python
-pandas library
+* Python
+* pandas library
 You can install the required library by running the following command:
-pip install pandas
+* pip install pandas
 
 
 
-Input (example):
-Enter CSV file name: 
+### Input (example):
+* Enter CSV file name: 
 titanic.csv
 
-Enter output JSON file name: 
+* Enter output JSON file name: 
 titanic
 
-Output "titanic.json" will be created
+* Output "titanic.json" will be created
 
 
 
-Author
+## Author
 This script was created by [Vinay Ghate](https://github.com/vinay-ghate)
