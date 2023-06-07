@@ -18,4 +18,4 @@ This is a Python program that simulates a coffee machine. It allows you to choos
 5. Enjoy your coffee!
 
 ## Output
-![Screenshot of Output](C:\Users\Preeti\Amazing-Python-Scripts\Coffee-Machine-py-game\Screenshot 2023-06-05 211030.png)
+![output](Coffee-Machine-py-game\output.png)
