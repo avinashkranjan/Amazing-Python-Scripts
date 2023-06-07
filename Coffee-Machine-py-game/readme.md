@@ -16,3 +16,6 @@ This is a Python program that simulates a coffee machine. It allows you to choos
    python coffee_machine.py
 4. Follow the prompts to choose your desired coffee and enter the number of coins for payment.
 5. Enjoy your coffee!
+
+## Output
+![Screenshot of Output](C:\Users\Preeti\Amazing-Python-Scripts\Coffee-Machine-py-game\Screenshot 2023-06-05 211030.png)
