@@ -1,11 +1,14 @@
-from PIL import Image
+from PIL import Image, ImageEnhance
 
 # ASCII characters used to build the output text
-CHARS = [".", ".", ".", "1", "1", "1", "1", "1", "0", "0", "0"]
+CHARS = "00011111..."
 
 # Convert pixels to a string of ASCII characters
-def pixels_to_ascii(image):
-    pixels = image.convert("L").getdata()
+def pixels_to_ascii(image, contrast_factor):
+    image = image.convert("L")
+    enhancer = ImageEnhance.Contrast(image)
+    image = enhancer.enhance(contrast_factor)
+    pixels = image.getdata()
     characters = " ".join([CHARS[int((pixel/256)*len(CHARS))] for pixel in pixels])
     return(characters)
 
@@ -15,8 +18,20 @@ def photoascii():
     try:
         image = Image.open(path)
     except Exception:
-        print("Invalid path")
+        print("Invalid Path!")
         return
+    
+    contrast_factor = input("Enter contrast factor (1 = Original Contrast) [Note: Enter negative value to invert output] : ")
+    try:
+        contrast_factor = float(contrast_factor)
+    except Exception:
+        print("Invalid Input!")
+        return
+
+    if contrast_factor < 0:
+        global CHARS
+        CHARS = CHARS[::-1]
+        contrast_factor = -contrast_factor
 
     # Fetch the name of the image file
     dot_index = path.rfind('.')
@@ -33,7 +48,7 @@ def photoascii():
     resized_image = image.resize((new_width, new_height))
 
     # Convert image to ASCII
-    new_image_data = pixels_to_ascii(resized_image)
+    new_image_data = pixels_to_ascii(resized_image, contrast_factor)
     pixel_count = len(new_image_data)
     scanline_width = new_width * 2;
     ascii_image = "\n".join([new_image_data[index:(index+scanline_width)]

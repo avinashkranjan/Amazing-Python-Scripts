@@ -1,6 +1,7 @@
 import socket
 import subprocess
 import sys
+import asyncio
 from datetime import datetime
 
 subprocess.call('cls', shell=True)
@@ -17,16 +18,28 @@ print("-" * 60)
 # Check what time the scan started
 t1 = datetime.now()
 
-# Using the range function to specify ports (here it will scans all ports
-
-# We also put in some error handling for catching errors
-try:
-    for port in range(1, 1025):
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex((remoteServerIP, port))
-        if result == 0:
-            print("Port {}: Open".format(port))
+async def scan_port(port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.setblocking(False)
+    try:
+        await asyncio.wait_for(
+            asyncio.get_event_loop().sock_connect(sock, (remoteServerIP, port)),
+            timeout=1
+        )
+        print("Port {}: Open".format(port))
+    except (socket.timeout, ConnectionRefusedError):
+        pass
+    finally:
         sock.close()
+
+async def main():
+    tasks = []
+    for port in range(1, 1025):
+        tasks.append(scan_port(port))
+    await asyncio.gather(*tasks)
+
+try:
+    asyncio.run(main())
 except KeyboardInterrupt:
     print("You pressed Ctrl+C")
     sys.exit()
@@ -45,4 +58,4 @@ t2 = datetime.now()
 # Calculates the difference of time, to see how long it took to run the script
 total = t2 - t1
 
-print('Scanning Completed in: ', total)
+print('Scanning Completed in:', total)
