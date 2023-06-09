@@ -26,4 +26,4 @@ It Fetch all the Available links in given Webpage.
 
 ## Author(s)
 
-[Avinash Kr. Ranjan](https://github.com/avinashkranjan)
+[Gulshan Kumar jakhon](https://github.com/gulshanjakhon)
