@@ -1,0 +1,2 @@
+Kivy==2.2.0
+Kivy-Garden==0.1.5

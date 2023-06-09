@@ -2,12 +2,18 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import smtplib
+import pywhatkit
+import datetime
 
 # header = {
-# "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+# "
+# Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+# "
 # }
 
-# Url = "https://www.amazon.in/Apple-AirPods-Wireless-Charging-Case/dp/B07QDRYVCZ/ref=sr_1_1_sspa?crid=2O0YQXVBL4T86&dchild=1&keywords=airpods&qid=1601031081&sprefix=airpod%2Caps%2C615&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFPVUpPNUNIQUE1RUUmZW5jcnlwdGVkSWQ9QTAxNzI3NjJPNlg3OTJFSTVSOE8mZW5jcnlwdGVkQWRJZD1BMDg1MTYzNjJSRUw4VFVKQzQ1TDkmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
+# Url = "
+# https://www.amazon.in/Apple-Original-MMTN2ZM-Lightning-Connector/dp/B01M1EEPOB/ref=sr_1_1?crid=XFITOYOGI999&keywords=airpods+apple&qid=1685422019&s=electronics&sprefix=airpods+appl%2Celectronics%2C458&sr=1-1
+# "
 
 # get your browser information by searching "my user agent"
 user_agent = input("Enter your User-Agent string here\n")
@@ -19,6 +25,11 @@ soup = BeautifulSoup(page.content, "html.parser")
 
 # print(soup)
 
+
+def message_sending(phone_number,title):
+    now = datetime.datetime.now()
+    message = f"Price of {title} is fallen below the threshold amount. Click on the link below to buy the product!!!\n\n"
+    pywhatkit.sendwhatmsg(phone_number, message, now.hour, now.minute + 1)
 
 def mail_sending(mail_id, title, password):
     server_mail = "smtp.gmail.com"
@@ -37,53 +48,28 @@ def mail_sending(mail_id, title, password):
 def check_price():
     title = soup.find(id="productTitle").get_text().strip()
     try:
-        price = soup.find(
-            id="priceblock_ourprice_row").get_text().strip()[:20].replace(
-                '₹', '').replace(' ', '').replace('Price:', '').replace(
-                    '\n', '').replace('\xa0',
-                                      '').replace(',', '').replace('Fu', '')
+        price = price = soup.find('span', class_='a-price-whole').text
+        price = price[:len(price)-1]
 
     except:
-        try:
-            price = soup.find(
-                id="priceblock_dealprice").get_text().strip()[:20].replace(
-                    '₹', '').replace(' ', '').replace('Price:', '').replace(
-                        '\n', '').replace('\xa0',
-                                          '').replace(',',
-                                                      '').replace('Fu', '')
+        print("Object out of stock or removed")
+        return
 
-        except:
-            try:
-                price = soup.find(
-                    id="priceblock_ourprice").get_text().strip()[:20].replace(
-                        '₹',
-                        '').replace(' ', '').replace('Price:', '').replace(
-                            '\n',
-                            '').replace('\xa0',
-                                        '').replace(',', '').replace('Fu', '')
-
-            except:
-                price = soup.find(id="priceblock_ourprice_lbl").get_text(
-                ).strip()[:20].replace('₹', '').replace(' ', '').replace(
-                    'Price:',
-                    '').replace('\n',
-                                '').replace('\xa0',
-                                            '').replace(',',
-                                                        '').replace('Fu', '')
-
-    fixed_price = float(price)
+    fixed_price = float(price.replace(",", ""))
     print(title)
     print(f'The current price is {fixed_price}')
     y_price = (input('Enter the price you wish to get the product at:'))
     your_price = y_price.replace(',', '')
     mail_id = input("Please enter your email id: ")
     password = input("Enter your app password here: ")
+    phone_number = input("Please enter your phone number: ")
     print(
         "Thank You! You'll receive an email as soon as the price of product drops...!"
     )
     # print(price)
     if fixed_price <= float(your_price):
         mail_sending(mail_id, title, password)
+        message_sending(phone_number, title)
         exit()
     else:
         pass

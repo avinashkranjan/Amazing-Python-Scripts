@@ -1,8 +1,8 @@
 # YouTube Video Downloader
 
-The objective of this project is to download any type of video in a fast and easy way from youtube in your device.
+The objective of this project is to download any type of video or an entire playlist in a fast and easy way from YouTube in your device.
 
-In this, user has to copy the youtube video URL that they want to download and simply paste that URL in the ‘paste link here’ section and click on the download button, it will start downloading the video. When video downloading finishes, it shows a message ‘downloaded’ popup on the window below the download button.
+In this, user has to copy the youtube video/playlist URL that they want to download and simply paste that URL in the ‘paste link here’ section and click on the download button, it will start downloading the video. When video downloading finishes, it shows a message ‘DOWNLOADED!’ popup on the window below the download button.
 
 </br>
 
@@ -83,4 +83,4 @@ After running this script, you will be able to see this:
 
 </br>
 
-![YTVD](https://user-images.githubusercontent.com/73488906/111301619-6eeaa100-8678-11eb-9ef2-5ce1b02571cf.png)
+![YTVD](screenshot.png)
