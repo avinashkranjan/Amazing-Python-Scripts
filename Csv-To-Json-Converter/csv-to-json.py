@@ -1,4 +1,4 @@
-##   Install the required modules by typing these commands in the terminal
+## csv and json modules are inbuilt, but if not present, install by typing these commands in the terminal
 ##   pip install csv
 ##   pip install json
 
