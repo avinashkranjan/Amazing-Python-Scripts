@@ -1,0 +1,3 @@
+requirement.txt 
+
+pip install BeautifulSoup4 
