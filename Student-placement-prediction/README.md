@@ -1,4 +1,6 @@
-# student_placement_prediction / ML-model-deployment
+# Student Placement Prediction 
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 winscp - with help of this we can upload our file on aws
 
