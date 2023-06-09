@@ -93,3 +93,9 @@
 | 89\.     | Voice-Assistant  | Voice-Assistant Bot | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/Voice-Assistant) |  [Avinash .K. Rajan](https://github.com/avinashkranjan) |
 | 90\.     | Website-Status-Checker  | This script will check the status of the web address which you will input | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/Website-Status-Checker) |  [Avinash .K. Rajan](https://github.com/avinashkranjan) |
 | 91\.     | Movie-Genre-Prediction-Chatbot       | An chatbot will predict the genre of the movie based on the input text. | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/Movie-Genre-Prediction-Chatbot) | [Hritik Jaiswal](https://github.com/hritik5102) |
+| 92\.     | Stack | Stack scripts is to provide an organized way to store and retrieve data items.  | [Take Me](./Stack/) | [Himanshu Agarwal](https://github.com/himanshu-03)
+| 93\.     | Queue | Queue scripts in Python is to allow efficient handling of elements in a sequence according to the FIFO rule. | [Take Me](./Queue/) | [Himanshu Agarwal](https://github.com/himanshu-03)
+|94\.      | Linked List | Linked List data Scripts are used to store and manage a collection of elements in a dynamic and flexible manner | [Take Me](./Linked%20List/) | [Himanshu Agarwal](https://github.com/himanshu-03)
+| 95\.     | Searching Techniques | Searching techniques are scripts used to find a specific element or value within a collection of data. | [Take Me](./Searching%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
+| 96\.     | Sorting Techniques | Sorting techniques are scripts that arrange a collection of data elements in a particular order, typically ascending or descending. | [Take Me](./Sorting%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
+
