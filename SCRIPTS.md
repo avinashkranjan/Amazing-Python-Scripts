@@ -98,5 +98,4 @@
 |94\.      | Linked List | Linked List data Scripts are used to store and manage a collection of elements in a dynamic and flexible manner | [Take Me](./Linked%20List/) | [Himanshu Agarwal](https://github.com/himanshu-03)
 | 95\.     | Searching Techniques | Searching techniques are scripts used to find a specific element or value within a collection of data. | [Take Me](./Searching%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
 | 96\.     | Sorting Techniques | Sorting techniques are scripts that arrange a collection of data elements in a particular order, typically ascending or descending. | [Take Me](./Sorting%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
-| 97\.     | File Downloader | A file downloader script is a program or script that automates the process of downloading files from a given URL. It enables users to retrieve files from the internet without manual intervention.. | [Take Me](./File Downloader Script/) | [Himanshu Agarwal](https://github.com/Abhinavcode13)
-| 101\.     | Travel Destination Scraper script | The script provided is a travel destination scraper. It is designed to extract information about travel destinations from a specified webpage using web scraping techniques. | [Take Me](./Travel Destination Scraper script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
+
