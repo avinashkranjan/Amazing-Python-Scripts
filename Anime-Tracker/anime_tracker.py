@@ -44,9 +44,8 @@ def details(soup):
 
 def entry():
     print("\nType complete name>>\n")
-    anime_name = input(
-        "[+] Enter the name of the Anime : ").strip().title().replace(
-            " ", "-")
+    anime_name = input("Enter the name of the anime : ")
+    anime_name = (" ".join(anime_name.split())).title().replace(" ", "-")
 
     print("\n")
     print(anime_name)
