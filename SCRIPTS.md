@@ -99,5 +99,5 @@
 | 95\.     | Searching Techniques | Searching techniques are scripts used to find a specific element or value within a collection of data. | [Take Me](./Searching%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
 | 96\.     | Sorting Techniques | Sorting techniques are scripts that arrange a collection of data elements in a particular order, typically ascending or descending. | [Take Me](./Sorting%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
 | 99\.     | File Organizer script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Organizer script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
-| 100\.     | File Encryption/Decryption script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Organizer script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
+| 100\.     | File Encryption/Decryption script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Encryption/Decryption script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
 
