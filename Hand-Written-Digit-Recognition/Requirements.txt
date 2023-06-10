@@ -1,0 +1,3 @@
+python==3.6
+tensorflow==2.11.1
+tensorflowjs==3.1

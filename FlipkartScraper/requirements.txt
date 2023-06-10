@@ -1,0 +1,10 @@
+bs4
+requests
+pandas
+numpy
+bs4
+boto3
+ndjson
+selenium
+httpx
+lxml
