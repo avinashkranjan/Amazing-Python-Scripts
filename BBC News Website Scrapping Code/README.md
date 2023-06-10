@@ -6,7 +6,9 @@ Modules Used -
 
 To run the program - 
 
-1) Navigate to the directory and run 
+
+1) Make sure you have installed the above mentioned packages
+2) Navigate to the directory and run 
 
 ```
 python3 main.py
