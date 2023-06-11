@@ -17,3 +17,6 @@
 
  * The resized images will then get stored in the 'resized-images' folder.
 
+## Contributor
+
+ * <a href="github.com/singhchanmeet"> Chanmeet Singh </a>
