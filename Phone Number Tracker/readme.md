@@ -18,14 +18,13 @@ The following modules are imported from phonenumbers package:
 
 ## Detailed explanation of script, if needed
 
-`This is a phonenumber tracker that uses phonenumbers library to get the following details :
+This is a phonenumber tracker that uses phonenumbers library to get the following details :
 -country 
--service provider of the phone number`
+-service provider of the phone number
 
 ## Output
 
-
-<img src="file:///C:/Users/Uma/OneDrive/Desktop/Capture.PNG">
+![image](https://github.com/Uma-95/Amazing-Python-Scripts/assets/99042417/23fcdd91-c864-486d-913c-675893cff6e8)
 
 ## Author
 
