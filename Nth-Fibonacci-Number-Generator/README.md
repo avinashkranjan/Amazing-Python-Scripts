@@ -1,4 +1,4 @@
-# Package/Script Name
+# Nth Fibonacci Number Generator
 
 This script calculates Nth Fibonacci Nunber.
 Version of Python used : Python 3.10.7
