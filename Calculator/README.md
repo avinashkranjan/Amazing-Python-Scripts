@@ -1,6 +1,6 @@
 <h1 align="center">Calculator</h1>
 This is a simple calculator program written in Python that performs basic arithmetic operations. It can add, subtract, multiply, and divide numbers.
----------------------------------------------------------------------
+
 
 ## How it works
 - It takes the mathematical equation by the User.
@@ -23,6 +23,8 @@ To use the calculator program, follow these steps:
 
 -The program will display the result of the operation.
 
+## Screenshot
+<img width="546" alt="calcy" src="https://github.com/AnkitaBarbora/Amazing-Python-Scripts/assets/101138526/027bdcb6-9a7a-4919-af85-10e8e0432b0c">
 
 
 #### By [Avinash Kr. Ranjan](https://github.com/avinashkranjan)
