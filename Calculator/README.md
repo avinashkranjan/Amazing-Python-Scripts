@@ -21,7 +21,7 @@ To use the calculator program, follow these steps:
 
 - Enter the the operation you wish to perform.
 
--The program will display the result of the operation.
+- The program will display the result of the operation.
 
 ## Screenshot
 <img width="546" alt="calcy" src="https://github.com/AnkitaBarbora/Amazing-Python-Scripts/assets/101138526/027bdcb6-9a7a-4919-af85-10e8e0432b0c">
