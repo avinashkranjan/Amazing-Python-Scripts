@@ -1,33 +1,13 @@
-   **Age_Calculator**
+   **Regular_Expressions_Match**
 
 
 
-**Step1:**  
+**How to Use:**  
+This Script is an Pattern match with regular expressions before that we need to import re Then just we need to run reg.py simple and easy to use.
 
-First of all, we need to import two libraries into our code. The first one is the time and date
-
-**Step2:**  
-
-Now, just use Age_Calculator.py code run it on online r any complier 
-
-**Step3:**
-
-It will frist your date of birth year!
-
-**Step4:** 
-
-Then it will ask your birth month!
-
-**Step5:** 
-
-Then it will ask your birth day!
-
-**Step6:**  
-
-Finally it will just a date of you enterted and current date and time it will print the the years and months days!
 
 **conclusion:** 
 
-It is useful to Calculate birthdays in years!
+This Just a Script That we can allow and Deny with our rules! in submmtion formes r webiste whenver we need!
 
 #### By [Kalivarapubindusree]() 
