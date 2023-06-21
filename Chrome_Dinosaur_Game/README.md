@@ -1,12 +1,10 @@
 # Dinosaur Game
 
-<img src="dino.gif" width="500px">
-
 ## Description
 
 The Dinosaur Game is a simple game inspired by the Chrome dinosaur game. It is built using the Pygame module in Python and offers an enjoyable offline gaming experience.
 
-## Installation
+## Setup instructions
 
 1. Clone the repository or download the source code.
 2. Install Python (version 3.7 or higher) if not already installed.
@@ -29,15 +27,11 @@ python main.py
 4. Try to survive as long as possible by avoiding obstacles like cacti and pterodactyls.
 5. Your score will be displayed on the screen. Challenge yourself to beat your high score!
 
-## Features
+## Output
 
--   Simple and addictive gameplay.
--   Retro-style pixelated graphics.
--   Increasing difficulty as the game progresses.
--   Offline mode allows you to play without an internet connection.
--   Endless runner style with no defined endpoint.
+<img src="dino.gif" width="500px">
 
-## Contributor
+## Author(s)
 
 #### This project was contributed by Atharvashirsh Tiwary.
 
