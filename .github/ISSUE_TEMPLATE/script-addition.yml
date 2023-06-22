@@ -1,8 +1,7 @@
 name: ✨ Script Addition
 description: Describe this Script you want to add
-title: ''
-labels: ''
-assignees: ''
+title: '[Script]: '
+labels: ['⭐ goal: Script-addition']
 body:
 - type: textarea
   id: Aim
