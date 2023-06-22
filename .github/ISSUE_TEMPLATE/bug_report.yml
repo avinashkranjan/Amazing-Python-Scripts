@@ -11,65 +11,66 @@ body:
   validations:
     required: true
 - type: textarea
-  id: To Reproduce
+  id: steps-to-reproduce
   attributes:
     label: Steps to reproduce the behavior
-    placeholder: 1. Go to '...'
-                 2. Click on '....'
-                 3. Scroll down to '....'
-                 4. See error
+    placeholder: |
+      1. Go to '...'
+      2. Click on '....'
+      3. Scroll down to '....'
+      4. See error
   validations:
-    required: false   
+    required: false
 - type: textarea
   id: expected-behaviour
   attributes:
     label: Expected behavior
     placeholder: A clear and concise description of what you expected to happen.
   validations:
-    required: true    
+    required: true
 - type: textarea
   id: screenshots
   attributes:
     label: Screenshots
     placeholder: If applicable, add screenshots to help explain your problem.
   validations:
-    required: false  
+    required: false
 - type: dropdown
-  id: Device
+  id: device
   attributes:
     label: Device?
     multiple: true
     options:
-    - Desktop
-    - Mobile   
+      - Desktop
+      - Mobile
 - type: dropdown
-  id: Operating-system
+  id: operating-system
   attributes:
     label: Which OS are affected?
     multiple: true
     options:
-    - Mac
-    - Windows
-    - linux  
+      - Mac
+      - Windows
+      - Linux
 - type: textarea
   id: version
   attributes:
     label: Enter the version of your web browser
     placeholder: Version
   validations:
-    required: true           
+    required: true
 - type: dropdown
   id: browsers
   attributes:
     label: Which browsers are affected?
     multiple: true
     options:
-    - Firefox
-    - Chrome
-    - Safari
-    - Microsoft Edge
-    - Brave
-    - Other    
+      - Firefox
+      - Chrome
+      - Safari
+      - Microsoft Edge
+      - Brave
+      - Other
 - type: textarea
   id: additional-info
   attributes:
@@ -86,4 +87,3 @@ body:
         required: true
       - label: I'm a GSSoC'23 contributor
       - label: I want to work on this issue
-
