@@ -9,6 +9,7 @@ Short description of package/script
 ## Setup instructions
 
 You can install these using pip install
+pip install -r requirements.txt
 
 ## Detailed explanation of script, if needed
 
