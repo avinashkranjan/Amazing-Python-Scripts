@@ -6,10 +6,6 @@ This project performs time series analysis on a dataset of monthly champagne sal
 
 The dataset used for this analysis is "perrin-freres-monthly-champagne-.csv". It contains historical monthly sales data for champagne.
 
-## Requirements
-
-- Python (version X.X.X)
-- Libraries: numpy, pandas, matplotlib, statsmodels
 
 ## Installation
 
