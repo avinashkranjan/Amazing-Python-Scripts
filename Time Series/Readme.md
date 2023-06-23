@@ -20,7 +20,7 @@ The dataset used for this analysis is "perrin-freres-monthly-champagne-.csv". It
 ## Usage
 
 1. Place the dataset file ("perrin-freres-monthly-champagne-.csv") in the same directory as the script.
-2. Open the Python script "champagne_sales_analysis.py" in your preferred Python environment.
+2. Open the Python script "Time_series_product_sales_deploy.ipynb" in your preferred Python environment.
 3. Run the script to perform the analysis.
 4. The script will perform the following steps:
 - Load and clean the dataset.
