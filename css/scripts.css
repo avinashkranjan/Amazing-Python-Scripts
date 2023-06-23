@@ -17,6 +17,11 @@ body {
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   transform: scale(1.05);
 }
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .navbar {
   width: 100%;
   height: 100%;
