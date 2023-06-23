@@ -1,31 +1,39 @@
-'''
+"""
 Script that converts any Image into its ASCII representation.
-'''
+"""
 
 from sys import exit as sysexit
 from PIL import Image, ImageEnhance
 
 
 def pixels_to_ascii(image, char_ramp):
-    '''
-    Function that takes in an image and a character sequence. And returns a string containing 
-    the ASCII representation of the image based on the character sequence provided.
-    '''
+    """
+    Function that takes in an image and a character sequence.
+    And returns a string containing the ASCII representation of
+    the image based on the character sequence provided.
+    """
 
     pixels = image.convert("L").getdata()
-    characters = " ".join([char_ramp[int((pixel/256)*len(char_ramp))] for pixel in pixels])
+    characters = " ".join(
+        [char_ramp[int((pixel / 256) * len(char_ramp))] for pixel in pixels]
+    )
     pixel_count = len(characters)
     scanline_width = image.width * 2
 
-    return "\n".join([characters[index:(index+scanline_width)]
-            for index in range(0, pixel_count, scanline_width)])
+    return "\n".join(
+        [
+            characters[index: (index + scanline_width)]
+            for index in range(0, pixel_count, scanline_width)
+        ]
+    )
 
 
 def input_image():
-    '''
-    Function that asks user for a path to an image file and checks for validity.
-    Then it loads and returns the image and the path as a tuple(image, path).
-    '''
+    """
+    Function that asks user for a path to an image file
+    and checks for validity. Then it loads and returns the
+    image and the path as a tuple(image, path).
+    """
 
     path = input("Enter a valid pathname to an image:\n")
 
@@ -39,10 +47,11 @@ def input_image():
 
 
 def input_ramp():
-    '''
-    Function that asks the user to choose from a set of character sequences
-    or to specify their own custom sequence and then returns that as a string.
-    '''
+    """
+    Function that asks the user to choose from a set
+    of character sequences or to specify their own
+    custom sequence and then returns that as a string.
+    """
 
     print("Choose a Character Sequence!")
     print("1 - Basic")
@@ -64,13 +73,25 @@ def input_ramp():
     if choice == 2:
         return list("@%#*+=-:. ")
     if choice == 3:
-        return list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1}{[]?-_+~<>i!lI;:,\"^`'. ")
+        return list(
+            "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft"
+            + "/\\|()1}{[]?-_+~<>i!lI;:,\"^`'. "
+        )
     if choice == 4:
         return ["█", "▉", "▊", "▋", "▌", "▍", "▎", "▏"]
     if choice == 5:
         return ["█", "▓", "▒", "░", " "]
     if choice == 6:
-        custom_ramp = input("Enter your Character Sequence from High density to Low: ")
+        while True:
+            custom_ramp = input("Enter character sequence ['?' for info]: ")
+            if custom_ramp == "?":
+                print(
+                    "The character sequence must start with characters",
+                    "that represent high pixel density and end with",
+                    "characters that represent low pixel density.",
+                )
+            else:
+                break
         if len(custom_ramp) == 0:
             print("Invalid Input!")
             sysexit()
@@ -81,17 +102,19 @@ def input_ramp():
 
 
 def input_contrast():
-    '''
+    """
     Function that asks user for the contrast factor that is to be applied
     on the image before conversion. And returns it.
-    '''
+    """
 
     while True:
-        contrast_factor = input("Enter contrast factor [Default - 1 | '?' for info] : ")
-        if contrast_factor == '?':
-            print("Contrast factor is a value that is used to controle the contrast of the output.",
-                "Default value of the contrast factor is 1.",
-                "Entering a negative value will invert the output.")
+        contrast_factor = input("Enter contrast factor ['?' for info] : ")
+        if contrast_factor == "?":
+            print(
+                "Contrast factor is a value that is used to controle",
+                "the contrast of the output. Default value of the contrast",
+                "factor is 1. Negative value will invert the output.",
+            )
         else:
             break
 
@@ -105,18 +128,20 @@ def input_contrast():
 
 
 def resize_image(image):
-    '''
+    """
     Function that takes in an image and asks the user for a sample size.
-    Then returns a resized image such that each pixel represents the sample grid.
-    '''
+    Then returns a resized image with each pixel representing the sample grid.
+    """
 
     while True:
-        sample_size = input("Enter the sample size [Default - 4 | '?' for info] : ")
-        if sample_size == '?':
-            print("Sample size refers to the number of pixels",
+        sample_size = input("Enter the sample size ['?' for info] : ")
+        if sample_size == "?":
+            print(
+                "Sample size refers to the number of pixels",
                 "that will be sampled for one character.",
                 "Default value of sample size is 4.",
-                "Its value must be greater than or equal to 1.")
+                "Its value must be greater than or equal to 1.",
+            )
         else:
             break
 
@@ -138,26 +163,26 @@ def resize_image(image):
 
 
 def get_output_path(path):
-    '''
+    """
     Function that takes in the path of the input image file and returns the
-    path of a text file that the ouput will be saved to. 
-    '''
+    path of a text file that the ouput will be saved to.
+    """
 
-    dot_index = path.rfind('.')
-    slash_index = path.rfind('\\')
+    dot_index = path.rfind(".")
+    slash_index = path.rfind("\\")
 
     if slash_index == -1:
-        slash_index = path.rfind('/')
+        slash_index = path.rfind("/")
 
-    image_name = path[slash_index+1:dot_index] + "_" + path[dot_index+1:]
+    image_name = path[slash_index + 1: dot_index] + "_" + path[dot_index + 1:]
 
     return path[:slash_index] + f"/{image_name}_ASCII.txt"
 
 
 def main():
-    '''
+    """
     The main function.
-    '''
+    """
 
     image, path = input_image()
     char_ramp = input_ramp()
@@ -170,8 +195,9 @@ def main():
     image = resize_image(ImageEnhance.Contrast(image).enhance(contrast_factor))
     ascii_image = pixels_to_ascii(image, char_ramp)
 
-    with open(get_output_path(path), "w", encoding='utf8') as file:
+    with open(get_output_path(path), "w", encoding="utf8") as file:
         file.write(ascii_image)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
