@@ -1,0 +1,89 @@
+name: 🐛 Bug Report
+description: Report a bug report
+title: '[Bug]: '
+labels: ['🔧 goal: fix']
+body:
+- type: textarea
+  id: what-happened
+  attributes:
+    label: Describe the bug
+    placeholder: A clear and concise description of what the bug is.
+  validations:
+    required: true
+- type: textarea
+  id: steps-to-reproduce
+  attributes:
+    label: Steps to reproduce the behavior
+    placeholder: |
+      1. Go to '...'
+      2. Click on '....'
+      3. Scroll down to '....'
+      4. See error
+  validations:
+    required: false
+- type: textarea
+  id: expected-behaviour
+  attributes:
+    label: Expected behavior
+    placeholder: A clear and concise description of what you expected to happen.
+  validations:
+    required: true
+- type: textarea
+  id: screenshots
+  attributes:
+    label: Screenshots
+    placeholder: If applicable, add screenshots to help explain your problem.
+  validations:
+    required: false
+- type: dropdown
+  id: device
+  attributes:
+    label: Device?
+    multiple: true
+    options:
+      - Desktop
+      - Mobile
+- type: dropdown
+  id: operating-system
+  attributes:
+    label: Which OS are affected?
+    multiple: true
+    options:
+      - Mac
+      - Windows
+      - Linux
+- type: textarea
+  id: version
+  attributes:
+    label: Enter the version of your web browser
+    placeholder: Version
+  validations:
+    required: true
+- type: dropdown
+  id: browsers
+  attributes:
+    label: Which browsers are affected?
+    multiple: true
+    options:
+      - Firefox
+      - Chrome
+      - Safari
+      - Microsoft Edge
+      - Brave
+      - Other
+- type: textarea
+  id: additional-info
+  attributes:
+    label: Additional context
+    placeholder:  Add any other context about the problem here.
+  validations:
+    required: false
+- type: checkboxes
+  id: terms
+  attributes:
+    label: 'Record'
+    options:
+      - label: I agree to follow this project's Code of Conduct
+        required: true
+      - label: I'm a GSSoC'23 contributor
+      - label: I want to work on this issue
