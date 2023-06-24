@@ -2,8 +2,6 @@
 
 The aim of the provided script is to scrape all HTML <img> tags from a given URL.
 
-Here is a breakdown of the code:
-
     It imports the necessary modules: BeautifulSoup from the bs4 (Beautiful Soup) library for parsing HTML, and requests for making HTTP requests.
     The code checks the length of the command-line arguments. If the length is not equal to 2 (indicating that a URL was not provided), it exits with an error message.
     It uses the requests.get() function to make an HTTP GET request to the provided URL. The User-Agent header is set to mimic a web browser to avoid any potential blocking or filtering.
