@@ -1,25 +1,20 @@
-# Package/Script Name
+# Audio Splitting
 
-Short description of package/script
-
-- If package, list of functionalities/scripts it can perform
-- If standalone script, short description of script explaining what it achieves
+This Python script allows you to split large audio files into smaller segments based on silence, making them suitable for transcription or further analysis.
 
 ## Setup instructions
 
-Explain how to setup and run your package/script in user's system
-
-## Detailed explanation of script, if needed
-
-If code is not explainable using comments, use this sections to explain your script
+- Download the repository and `cd` to the the folder by running the caommand `cd Audio\ splitter`
+- Run the script with the following command `python audio_split.py input_audio_file`
+    - `input_audio_file` - Provide the path to the audio file you want to split.
 
 ## Output
 
-Display images/gifs/videos of output/result of your script so that users can visualize it
+The audio chunks will be saved in a new folder on your local system. Each audio chunk is approximately 10-15 seconds long which is best suitable for transcription. 
 
 ## Author(s)
 
-Name(s) of author(s)
+Srujana
 
 ## Disclaimers, if any
 
