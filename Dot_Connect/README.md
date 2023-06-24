@@ -6,7 +6,7 @@ The objective of Dot Connect is to score the most points by creating boxes on th
 
 # Package/Script Name
 
-The script utilizes the **Tkinter library** to create a graphical user interface (GUI) for the game. It provides a canvas where players can click on dots to draw lines and track their scores. The game board consists of a grid of dots, and players take turns drawing horizontal or vertical lines between adjacent dots. When a player completes a square by closing off the fourth side, they earn a point and get an additional turn.
+The script utilizes the **Tkinter library** to create a graphical user interface (GUI) for the game. It provides a canvas where players can click in between two dots to draw lines and track their scores. The game board consists of a grid of dots, and players take turns drawing horizontal or vertical lines between adjacent dots. When a player completes a square by closing off the fourth side, they earn a point and get an additional turn.
 
 The script keeps track of each player's score and displays it in a separate info frame within the GUI. The game continues until all squares on the grid are completed, and a "GAME OVER" message is displayed.
 
@@ -25,7 +25,7 @@ To set up and run the "Dot Connect" game, follow these instructions:
    python dot_connect.py
    ```
 
-5. **Play the Game:** The game window will open, displaying the game board with dots. Players can take turns clicking on the dots to draw lines. The objective is to complete squares by closing off the fourth side. Each completed square earns a point for the respective player. The game continues until all squares are completed. A "GAME OVER" message will be displayed when the game ends.
+5. **Play the Game:** The game window will open, displaying the game board with dots. Players can take turns clicking in between two dots to draw lines. The objective is to complete squares by closing off the fourth side. Each completed square earns a point for the respective player. The game continues until all squares are completed. A "GAME OVER" message will be displayed when the game ends.
 
 6. **Reset the Game:** After the game is over, you can click the "Reset Game" button to start a new game and reset the scores.
 
