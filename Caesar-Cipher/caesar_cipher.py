@@ -1,4 +1,5 @@
 import string as st
+import pyperclip
 
 letter_list = st.ascii_lowercase
 alphabet = [letter for letter in letter_list]*2
@@ -17,6 +18,8 @@ def caesar(text1, shift1, direction1):
         else:
             end_text += char
     print(f'The {direction1}d text is: {end_text}.')
+    pyperclip.copy(end_text)
+    print("It has been copied to you clipboard 😉")
 
 
 should_continue = True
