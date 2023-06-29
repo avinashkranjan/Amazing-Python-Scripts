@@ -2,166 +2,169 @@ from tkinter import *
 from tkinter import font
 
 # Constants
-TOL = 8
-CELLSIZE = 40
+TOLERANCE = 8
+CELL_SIZE = 40
 OFFSET = 10
-CIRCLERAD = 2
-DOTOFFSET = OFFSET + CIRCLERAD
-GAME_H = 400
-GAME_W = 400
+CIRCLE_RADIUS = 5
+DOT_OFFSET = OFFSET + CIRCLE_RADIUS
+GAME_HEIGHT = 400
+GAME_WIDTH = 400
 
 # Player Class
-class Player(object):
-    def __init__(self, name, color="black"):
+class Player:
+    def __init__(self, name, color="#00BFFF"):  # Blue color
         self.score = 0
-        self.str = StringVar()
+        self.text_var = StringVar()
         self.name = name
         self.color = color
 
     def update(self):
-        self.str.set(self.name + ": %d" % self.score)
+        self.text_var.set(f"{self.name}: {self.score}")
 
 
 # Main Frame Class
-class MyFrame(Frame):
+class DotConnectFrame(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
 
         # Fonts
-        self.GO_font = font.Font(self, name="GOFont", family="Comic Sans MS", weight="bold", size=36)
-
-        # Canvas
-        self.canvas = Canvas(self, height=GAME_H, width=GAME_W, bg="gray")
-        self.canvas.bind("<Button-1>", lambda e: self.click(e))
-        self.canvas.grid(row=0, column=0)
-
-        # Dots
-        self.dots = [[self.canvas.create_oval(CELLSIZE*i+OFFSET, CELLSIZE*j+OFFSET, CELLSIZE*i+OFFSET+2*CIRCLERAD, CELLSIZE*j+OFFSET+2*CIRCLERAD, fill="black") for j in range(10)] for i in range(10)]
-        self.lines = []
+        self.title_font = font.Font(self, name="TitleFont", family="Arial", weight="bold", size=36)
 
         # Info Frame
-        self.infoframe = Frame(self, bg="gray")
-        self.players = [Player("Player A", "blue"), Player("Player B", "green")]
-        self.infoframe.players = [Label(self.infoframe, textvariable=i.str, bg="white", font="Arial 20 bold") for i in self.players]
-        for i in self.infoframe.players:
+        self.info_frame = Frame(self, bg="#333333")  # Dark gray background
+        self.players = [Player("Player A", "#00BFFF"), Player("Player B", "#00FF00")]  # Blue and Green colors
+        self.info_frame.players = [Label(self.info_frame, textvariable=i.text_var, bg="#FFFFFF", fg="#333333", font="Arial 20 bold") for i in self.players]  # White text on dark gray background
+        for i in self.info_frame.players:
             i.grid()
-        self.turn = self.players[0]
-        self.update_players()
-        self.infoframe.grid(row=0, column=1, sticky=N)
+        self.info_frame.grid(row=0, column=0, columnspan=2, pady=10)
+
+        # Canvas
+        self.canvas = Canvas(self, height=GAME_HEIGHT, width=GAME_WIDTH, bg="#333333")  # Dark gray background
+        self.canvas.bind("<Button-1>", lambda e: self.click(e))
+        self.canvas.grid(row=1, column=0, padx=10)
+
+        # Dots
+        self.dots = [[self.canvas.create_oval(CELL_SIZE*i+OFFSET, CELL_SIZE*j+OFFSET, CELL_SIZE*i+OFFSET+2*CIRCLE_RADIUS, CELL_SIZE*j+OFFSET+2*CIRCLE_RADIUS, fill="#000000") for j in range(10)] for i in range(10)]  # Black dots
+        self.lines = []
 
         # Reset Game Button
-        self.reset_button = Button(self, text="Reset Game", command=self.reset_game)
-        self.reset_button.grid(row=1, column=0)
+        self.reset_button = Button(self, text="Reset Game", command=self.reset_game, font="Arial 14 bold", bg="#FF0000", fg="#000000")  # Red button with white text
+        self.reset_button.grid(row=2, column=0, pady=10)
+
+        self.turn = self.players[0]
+        self.update_players()
 
         self.grid()
 
     def update_players(self):
-        for i in self.players:
-            i.update()
+        for player in self.players:
+            player.update()
 
     def click(self, event):
         x, y = event.x, event.y
-        orient = self.isclose(x, y)
+        orientation = self.check_proximity(x, y)
 
-        if orient:
-            if self.line_exists(x, y, orient):
+        if orientation:
+            if self.line_exists(x, y, orientation):
                 return
-            l = self.create_line(x, y, orient)
-            score = self.new_box_made(l)
+            line = self.create_line(x, y, orientation)
+            score = self.update_score(line)
             if score:
                 self.turn.score += score
                 self.turn.update()
                 self.check_game_over()
             else:
                 index = self.players.index(self.turn)
-                self.turn = self.players[1-index]
-            self.lines.append(l)
+                self.turn = self.players[1 - index]
+            self.lines.append(line)
 
-    def create_line(self, x, y, orient):
-        startx = CELLSIZE * ((x-OFFSET)//CELLSIZE) + DOTOFFSET
-        starty = CELLSIZE * ((y-OFFSET)//CELLSIZE) + DOTOFFSET
-        tmpx = (x-OFFSET)//CELLSIZE
-        tmpy = (y-OFFSET)//CELLSIZE
-        
-        if orient == HORIZONTAL:
-            endx = startx + CELLSIZE
-            endy = starty
+    def create_line(self, x, y, orientation):
+        start_x = CELL_SIZE * ((x - OFFSET) // CELL_SIZE) + DOT_OFFSET
+        start_y = CELL_SIZE * ((y - OFFSET) // CELL_SIZE) + DOT_OFFSET
+        tmp_x = (x - OFFSET) // CELL_SIZE
+        tmp_y = (y - OFFSET) // CELL_SIZE
+
+        if orientation == "horizontal":
+            end_x = start_x + CELL_SIZE
+            end_y = start_y
         else:
-            endx = startx
-            endy = starty + CELLSIZE
+            end_x = start_x
+            end_y = start_y + CELL_SIZE
 
-        return self.canvas.create_line(startx, starty, endx, endy)
+        return self.canvas.create_line(start_x, start_y, end_x, end_y, width=2, fill=self.turn.color)
 
-    def new_box_made(self, line):
+    def update_score(self, line):
         score = 0
         x0, y0, x1, y1 = self.canvas.coords(line)
-        if x0 == x1:  # vertical line
-            midx = x0
-            midy = (y0+y1)/2
-            pre = (x0 - CELLSIZE/2, midy)
-            post = (x0 + CELLSIZE/2, midy)
-        elif y0 == y1:  # horizontal line
-            midx = (x0 + x1)/2
-            midy = y0
-            pre = (midx, y0 - CELLSIZE/2)
-            post = (midx, y0 + CELLSIZE/2)
-        
-        if len(self.find_lines(pre)) == 3:  
-            self.fill_in(pre)               
+        if x0 == x1:  # Vertical line
+            mid_x = x0
+            mid_y = (y0 + y1) / 2
+            pre = (x0 - CELL_SIZE / 2, mid_y)
+            post = (x0 + CELL_SIZE / 2, mid_y)
+        elif y0 == y1:  # Horizontal line
+            mid_x = (x0 + x1) / 2
+            mid_y = y0
+            pre = (mid_x, y0 - CELL_SIZE / 2)
+            post = (mid_x, y0 + CELL_SIZE / 2)
+
+        if len(self.find_lines(pre)) == 3:
+            self.fill_box(pre)
             score += 1
         if len(self.find_lines(post)) == 3:
-            self.fill_in(post)
+            self.fill_box(post)
             score += 1
         return score
 
     def find_lines(self, coords):
         x, y = coords
-        if x < 0 or x > GAME_W:
+        if x < 0 or x > GAME_WIDTH:
             return []
-        if y < 0 or y > GAME_W:
+        if y < 0 or y > GAME_WIDTH:
             return []
 
-        lines = [x for x in self.canvas.find_enclosed(x-CELLSIZE, y-CELLSIZE, x+CELLSIZE, y+CELLSIZE) if x in self.lines]
+        lines = [x for x in self.canvas.find_enclosed(x - CELL_SIZE, y - CELL_SIZE, x + CELL_SIZE, y + CELL_SIZE) if x in self.lines]
         return lines
 
-    def fill_in(self, coords):
+    def fill_box(self, coords):
         x, y = coords
         self.canvas.create_text(x, y, text=self.turn.name, fill=self.turn.color, font="Arial 5 bold")
 
-    def isclose(self, x, y):
+    def check_proximity(self, x, y):
         x -= OFFSET
         y -= OFFSET
-        dx = x - (x//CELLSIZE)*CELLSIZE
-        dy = y - (y//CELLSIZE)*CELLSIZE
+        dx = x - (x // CELL_SIZE) * CELL_SIZE
+        dy = y - (y // CELL_SIZE) * CELL_SIZE
 
-        if abs(dx) < TOL:
-            if abs(dy) < TOL:
-                return None  
+        if abs(dx) < TOLERANCE:
+            if abs(dy) < TOLERANCE:
+                return None
             else:
-                return VERTICAL
-        elif abs(dy) < TOL:
-            return HORIZONTAL
+                return "vertical"
+        elif abs(dy) < TOLERANCE:
+            return "horizontal"
         else:
             return None
 
-    def line_exists(self, x, y, orient):
-        id_ = self.canvas.find_closest(x, y, halo=TOL)[0]
+    def line_exists(self, x, y, orientation):
+        id_ = self.canvas.find_closest(x, y, halo=TOLERANCE)[0]
         if id_ in self.lines:
             return True
         else:
             return False
 
     def check_game_over(self):
-        total = sum([x.score for x in self.players])
+        total = sum([player.score for player in self.players])
         if total == 81:
-            self.canvas.create_text(GAME_W/2, GAME_H/2, text="GAME OVER", font=self.GO_font, fill="#888", justify=CENTER)
+            self.canvas.create_text(GAME_WIDTH / 2, GAME_HEIGHT / 2, text="GAME OVER", font=self.title_font, fill="#888888",
+                                    justify=CENTER)
 
     def reset_game(self):
         self.canvas.delete("all")
         self.lines = []
         for i in range(10):
             for j in range(10):
-                self.dots[i][j] = self.canvas.create_oval(CELLSIZE*i+OFFSET, CELLSIZE*j+OFFSET, CELLSIZE*i+OFFSET+2*CIRCLERAD, CELLSIZE*j+OFFSET+2*CIRCLERAD, fill="black")
+                self.dots[i][j] = self.canvas.create_oval(CELL_SIZE * i + OFFSET, CELL_SIZE * j + OFFSET, CELL_SIZE * i + OFFSET + 2 * CIRCLE_RADIUS,
+                                                          CELL_SIZE * j + OFFSET + 2 * CIRCLE_RADIUS, fill="#000000")
         for player in self.players:
             player.score = 0
             player.update()
@@ -169,8 +172,8 @@ class MyFrame(Frame):
 
 
 # Main Tkinter Window
-mainw = Tk()
-mainw.title("Dot Connect")
-mainw.config(bg="white")
-mainw.f = MyFrame(mainw)
-mainw.mainloop()
+main_window = Tk()
+main_window.title("Dot Connect")
+main_window.config(bg="#000000")  
+main_window.frame = DotConnectFrame(main_window)
+main_window.mainloop()
