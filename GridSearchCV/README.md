@@ -10,3 +10,5 @@ Algorithms implemented:
 6) KNN
 
 To use this, X and y i.e. independent and dependent variables must be defined.
+
+Installation required : scikit-learn
