@@ -1,0 +1,7 @@
+Keras==2.4.3
+keras-nightly==2.5.0.dev2021032900
+matplotlib==3.3.3
+numpy==1.22.0
+opencv-contrib-python==4.5.2.52
+opencv-python==4.2.0.32
+pygame==2.0.1
