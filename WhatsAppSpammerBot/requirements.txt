@@ -1,0 +1,3 @@
+pyautogui
+webbrowser
+time
