@@ -104,5 +104,5 @@
 | 102\.     | Scientific Calculator | This python program will help to solve the hardest problems of trigonometry, exponents functions, logarithmic functions, etc. in very easy way. This program has a best User interface of the scientific calculator and provide a best user experience | [Take Me](./Scientific_Calculator) | [Avdhesh Varshney](https://github.com/Avdhesh-Varshney)
 | 103\.     | Chess Game | Chess Game is created using PYTHON script that provides user a interactive platform to play chess game. This program will create a interactive GUI of chess board for the user. Directly started in the terminal. | [Take Me](./Chess-Game/) | [Avdhesh Varshney](https:github.com/Avdhesh-Varshney)
 | 104\.     | Audio splitting script  | This Python script allows you to split large audio files into smaller segments based on silence, making them suitable for transcription or further analysis. | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/Audio\Splitting) |  [Srujana Vanka](https://github.com/srujana-16) |
-
+| 105\.     | Hangman game script | The Hangman game is a classic word-guessing game where the player tries to guess a secret word within a certain number of attempts. | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/hangman) | [Srujana Vanka](https://github.com/srujana-16) 
 
