@@ -1,17 +1,19 @@
-#function which finds out individual term of the fibonacci sequence
-def fibo(x):
-    if(x == 1 or x == 2): #base case
-        return 1
+def fibo(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
     else:
-        return fibo(x-1) + fibo(x-2) 
-        #following the actual way how the fibonacci series is generated i.e. adding the previous two terms
+        sequence = [0, 1]
+        for i in range(2, n):
+            sequence.append(sequence[i-1] + sequence[i-2])
+        return sequence
 
 n = 0
-while(n<=0):
-    n = int(input("Enter how many terms do you need in your Fibonacci Sequence? "))
-    #this loop is just to ensure that the user inputs a valid number
+while n <= 0:
+    n = int(input("Enter how many terms you need in your Fibonacci Sequence: "))
 
-for i in range(1,n): 
-    #finding out individual terms of the series and printing till (n-1) terms since we don't want an extra comma at the end
-    print(fibo(i), end=", ")
-print(fibo(n)) #printing the last(i.e. nth term)
+fib_sequence = fibo(n)
+print(", ".join(map(str, fib_sequence)))

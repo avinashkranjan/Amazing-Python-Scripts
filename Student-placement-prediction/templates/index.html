@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Placement Predictor</title>
+</head>
+<body>
+
+    <h1>Student Placement Predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>CGPA</label><br>
+        <input type="text" name="cgpa"><br><br>
+
+        <label>IQ</label><br>
+        <input type="text" name="iq"><br><br>
+
+        <label>Profile Score</label><br>
+        <input type="text" name="profile_score"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>
