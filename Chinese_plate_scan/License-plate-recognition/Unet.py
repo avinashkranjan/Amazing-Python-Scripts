@@ -15,7 +15,6 @@ def unet_train():
     print(n)
     X_train, y_train = [], []
     for i in range(n):
-        print("正在读取第%d张图片" % i)
         img = cv2.imread(path + 'train_image/%d.png' % i)
         label = cv2.imread(path + 'train_label/%d.png' % i)
         X_train.append(img)
@@ -91,24 +90,21 @@ def unet_train():
     model.summary()
 
     print("开始训练u-net")
-    model.fit(X_train, y_train, epochs=100, batch_size=15)#epochs和batch_size看个人情况调整，batch_size不要过大，否则内存容易溢出
-    #我11G显存也只能设置15-20左右，我训练最终loss降低至250左右，acc约95%左右
+    model.fit(X_train, y_train, epochs=100, batch_size=15)
     model.save('unet.h5')
     print('unet.h5保存成功!!!')
 
 
 def unet_predict(unet, img_src_path):
-    img_src = cv2.imdecode(np.fromfile(img_src_path, dtype=np.uint8), -1)  # 从中文路径读取时用
-    # img_src=cv2.imread(img_src_path)
+    img_src = cv2.imdecode(np.fromfile(img_src_path, dtype=np.uint8), -1) 
     if img_src.shape != (512, 512, 3):
-        img_src = cv2.resize(img_src, dsize=(512, 512), interpolation=cv2.INTER_AREA)[:, :, :3]  # dsize=(宽度,高度),[:,:,:3]是防止图片为4通道图片，后续无法reshape
-    img_src = img_src.reshape(1, 512, 512, 3)  # 预测图片shape为(1,512,512,3)
-
-    img_mask = unet.predict(img_src)  # 归一化除以255后进行预测
-    img_src = img_src.reshape(512, 512, 3)  # 将原图reshape为3维
-    img_mask = img_mask.reshape(512, 512, 3)  # 将预测后图片reshape为3维
-    img_mask = img_mask / np.max(img_mask) * 255  # 归一化后乘以255
-    img_mask[:, :, 2] = img_mask[:, :, 1] = img_mask[:, :, 0]  # 三个通道保持相同
-    img_mask = img_mask.astype(np.uint8)  # 将img_mask类型转为int型
+        img_src = cv2.resize(img_src, dsize=(512, 512), interpolation=cv2.INTER_AREA)[:, :, :3]
+    img_src = img_src.reshape(1, 512, 512, 3)
+    img_mask = unet.predict(img_src) 
+    img_src = img_src.reshape(512, 512, 3) 
+    img_mask = img_mask.reshape(512, 512, 3)
+    img_mask = img_mask / np.max(img_mask) * 255  
+    img_mask[:, :, 2] = img_mask[:, :, 1] = img_mask[:, :, 0]  
+    img_mask = img_mask.astype(np.uint8)
 
     return img_src, img_mask
