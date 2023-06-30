@@ -52,7 +52,7 @@ def main():
         print("4. To print the Google search results obtained after searching.")  
         print("5. To exit from the code execution.")  
           
-        choice = int(input())
+        choice = int(input(''))
 
         if choice == 1:  
             google_search_bot.set_search_count()  
@@ -62,7 +62,7 @@ def main():
             google_search_bot.perform_search()
         elif choice == 4:
             google_search_bot.print_search_res()
-        elif choice == 5:
+        else choice == 5:
             sys.exit()
 
         print("To continue with the code execution, enter 'y' or 'n':")  
