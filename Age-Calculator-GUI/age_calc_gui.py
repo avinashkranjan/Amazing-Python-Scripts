@@ -91,7 +91,7 @@ class App:
                 else:
                     return True
             except Exception as e:
-                self.statement = tk.Label(text=f"{nameValue.get()}'s birth month\n cannot parse to int.", font="courier 10", bg="lightblue")
+                self.statement = tk.Label(text=f"{nameValue.get()}'s birth day\n cannot parse to int.", font="courier 10", bg="lightblue")
                 self.statement.grid(row=6, column=1, pady=15)
                 return False
 
