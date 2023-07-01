@@ -15,12 +15,12 @@ pip install -r requirements.txt
 
 ## Output
 
-
+![Project Image](image.png)
 
 ## Author(s)
 
-Name(s) of author(s)
+Harsh Pandey
 
 ## Disclaimers, if any
 
-Use this section to mention if any particular disclaimer is required
+
