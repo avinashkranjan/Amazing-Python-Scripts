@@ -38,9 +38,9 @@ body {
 .img-fluid {
   max-height: 100%;
 }
-#loadmore {
+/* #loadmore {
   display: none;
-}
+} */
 .card-body p a {
   text-decoration: none;
 }
@@ -150,4 +150,30 @@ a.nav-link {
     rgba(2, 83, 185, 1) 100.2%
   );
   background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Adjust the margin as needed */
+}
+.disabled{
+  fill:grey;
+  cursor: not-allowed;
+}
+
+
+.page-number-circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #0D6EFD;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  color: white;
+  font-weight: bold;
+  padding: 3px;
+  margin: 0 5px;
 }

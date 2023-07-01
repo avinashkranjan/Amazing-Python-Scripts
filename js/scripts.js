@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-  const requestURL = 'datastore.json'
-  const request = new XMLHttpRequest()
-  request.open('GET', requestURL)
-  request.responseType = 'json'
-  request.send()
-  request.onload = processData
+  const requestURL = 'datastore.json';
+  const request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = processData;
+
+  let currentPage = 1;
 
   function processData() {
-    const data = request.response
-    let jsonData = JSON.parse(JSON.stringify(data))
-    let categories = Object.keys(jsonData)
-    let scriptNumber = 1
+    const data = request.response;
+    let jsonData = JSON.parse(JSON.stringify(data));
+    let categories = Object.keys(jsonData);
+    let scriptNumber = 1;
+
     for (category in categories) {
-      var category_scripts = jsonData[categories[category]]
+      var category_scripts = jsonData[categories[category]];
       for (script in category_scripts) {
         var scriptDetails = {
           name: script,
@@ -20,23 +23,85 @@ document.addEventListener('DOMContentLoaded', function (event) {
           author: category_scripts[script][4],
           folder: category_scripts[script][0],
           file: category_scripts[script][1],
-        }
-        populateCards(scriptNumber, scriptDetails)
-        scriptNumber++
+        };
+        populateCards(scriptNumber, scriptDetails);
+        scriptNumber++;
+      }
+    }
+    displayAllCards();
+    updatePageNumber();
+    updateButtonStates();
+  }
+
+  function displayAllCards() {
+    const cardsPerPage = 16;
+    const startIndex = (currentPage - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+
+    let cards = document.getElementById('card-holder').children;
+    for (let count = 0; count < cards.length; count++) {
+      if (count >= startIndex && count < endIndex) {
+        cards[count].style.display = 'block';
+      } else {
+        cards[count].style.display = 'none';
       }
     }
   }
 
-  // Bind event handlers to buttons
-  let loadMore = document.getElementById('load-more')
-  loadMore.addEventListener('click', More)
+  function updatePageNumber() {
+    let pageNumberElement = document.getElementById('page-number');
+    pageNumberElement.textContent = currentPage;
+  }
 
-  let search = document.getElementById('search')
-  search.addEventListener('keydown', Search)
+  function updateButtonStates() {
+    let prevPageButton = document.getElementById('prevPage');
+    let nextPageButton = document.getElementById('nextPage');
+    const totalPages = getTotalPages();
+
+    if (currentPage === 1) {
+      prevPageButton.classList.add('disabled');
+    } else {
+      prevPageButton.classList.remove('disabled');
+    }
+
+    if (currentPage === totalPages) {
+      nextPageButton.classList.add('disabled');
+    } else {
+      nextPageButton.classList.remove('disabled');
+    }
+  }
+
+  function getTotalPages() {
+    const cardsPerPage = 16;
+    const totalCards = document.getElementById('card-holder').children.length;
+    return Math.ceil(totalCards / cardsPerPage);
+  }
+
+  document.getElementById('prevPage').addEventListener('click', function () {
+    if (currentPage > 1) {
+      currentPage--;
+      displayAllCards();
+      updatePageNumber();
+      updateButtonStates();
+      scrollToTop();
+    }
+  });
+
+  document.getElementById('nextPage').addEventListener('click', function () {
+    const totalPages = getTotalPages();
+
+    if (currentPage < totalPages) {
+      currentPage++;
+      displayAllCards();
+      updatePageNumber();
+      updateButtonStates();
+      scrollToTop();
+    }
+  });
 
   function populateCards(scriptNumber, scriptDetails) {
-    let cardHolder = document.getElementById('card-holder')
-    let isHidden = scriptNumber <= 20 ? '' : 'hidden'
+    let cardHolder = document.getElementById('card-holder');
+    let isHidden = scriptNumber <= 20 ? '' : 'hidden';
 
     let divHTML = `<div class="col-sm-6 col-md-3 ${isHidden} ">
                       <div class="card shadow">
@@ -47,32 +112,33 @@ document.addEventListener('DOMContentLoaded', function (event) {
                               <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/${scriptDetails['folder']}/${scriptDetails['file']}" class="btn btn-primary">Take Me</a>
                           </div>
                       </div>
-                  </div>`
-    cardHolder.innerHTML += divHTML
-  }
-
-  function More() {
-    loadMore.style.display = 'none'
-    let cardsCount = document.getElementById('card-holder').children.length
-    let cards = document.getElementById('card-holder').children
-    for (let count = 0; count < cardsCount; count++) {
-      cards[count].style.display = 'block'
-    }
+                  </div>`;
+    cardHolder.innerHTML += divHTML;
   }
 
   function Search() {
-    let cardsCount = document.getElementById('card-holder').children.length
-    let cards = document.getElementById('card-holder').children
-    let searchKey = document.getElementById('search').value.toLowerCase()
+    let cardsCount = document.getElementById('card-holder').children.length;
+    let cards = document.getElementById('card-holder').children;
+    let searchKey = document.getElementById('search').value.toLowerCase();
     for (let count = 0; count < cardsCount; count++) {
       scriptTitle = cards[count]
         .getElementsByTagName('h5')[0]
-        .innerHTML.toLowerCase()
+        .innerHTML.toLowerCase();
       if (scriptTitle.includes(searchKey)) {
-        cards[count].style.display = 'block'
+        cards[count].style.display = 'block';
       } else {
-        cards[count].style.display = 'none'
+        cards[count].style.display = 'none';
       }
     }
   }
-})
+
+  let search = document.getElementById('search');
+  search.addEventListener('keydown', Search);
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+});
