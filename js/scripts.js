@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                           <div class="card-body">
                               <h5 class="card-title">${scriptDetails['name']}</h5>
                               <p class="card-text">${scriptDetails['summary']}</p>
-                              <p>- <a href="https://github.com/${scriptDetails['author']}">${scriptDetails['author']}</a></p><br>
+                              <p><a href="https://github.com/${scriptDetails['author']}">${scriptDetails['author']}</a></p><br>
                               <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/${scriptDetails['folder']}/${scriptDetails['file']}" class="btn btn-primary">Take Me</a>
                           </div>
                       </div>
