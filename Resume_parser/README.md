@@ -26,7 +26,7 @@ The Resume Parser follows these steps to extract information from a resume:
 1. Clone the repository to your local machine:
 
    ```shell
-   git clone https://github.com/your-username/resume-parser.git
+   git clone https://github.com/mkswagger/Amazing-Python-Scripts/tree/master/Resume_parser
    
 2. Place the resume PDF file you want to parse in the project directory.
 
