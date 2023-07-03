@@ -1,4 +1,4 @@
-## Package/Script Name
+## QR_Code_Scanner
 Scan the QR code of a specific location from the local system and display the link that embed with the QR code.
 
 ## Setup instructions
