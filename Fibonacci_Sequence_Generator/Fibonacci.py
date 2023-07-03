@@ -1,23 +1,19 @@
-def Fibbo_Sequence_Generator():
-    # Generates a fibonacci sequence with the size of ngi
-    runFib = True
-    while(runFib):
-        n = int(input('How many numbers do you need? '))
-        if n > 0 :
-            runFib = False
-            series = [1]
+def fibo(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        sequence = [0, 1]
+        for i in range(2, n):
+            sequence.append(sequence[i-1] + sequence[i-2])
+        return sequence
 
-            while len(series) < n:
-                if len(series) == 1:
-                    series.append(1)
-                else:
-                    series.append(series[-1] + series[-2])
+n = 0
+while n <= 0:
+    n = int(input("Enter how many terms you need in your Fibonacci Sequence: "))
 
-            for i in range(len(series)):  # Convert the numbers to strings
-                series[i] = str(series[i])
-        else:
-            print('enter a valid number')
-
-    return(', '.join(series))  # Return the sequence seperated by commas
-
-print(Fibbo_Sequence_Generator())
+fib_sequence = fibo(n)
+print(", ".join(map(str, fib_sequence)))

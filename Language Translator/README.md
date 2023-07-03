@@ -9,7 +9,7 @@ This Python script allows you to translate a string of text into the language of
 
 ## Installation
 
-1. Clone the repository or download the script file `translate.py`.
+1. Clone the repository.
 
 2. Install the required dependencies using the following command:
 
