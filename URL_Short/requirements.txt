@@ -1,6 +1,6 @@
 -e .
 appdirs==1.4.4          #1.4.3
-certifi==2020.4.5.1     #2018.1.18
+certifi==2022.12.7     #2018.1.18
 chardet==3.0.4          # up to date
 Django==3.0.7           #1.1
 pytest-django
