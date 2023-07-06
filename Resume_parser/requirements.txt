@@ -20,7 +20,7 @@ confection==0.0.4
 cssselect==1.2.0
 cymem==2.0.7
 decorator==5.1.1
-Django==4.1.7
+Django==4.1.10
 doc2text==0.2.4
 docopt==0.6.2
 docx==0.2.4
