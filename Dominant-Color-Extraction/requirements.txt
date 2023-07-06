@@ -1,0 +1,7 @@
+Python==3.8.5
+jupyter==4.7.0
+jupyter-notebook==6.1.4
+pandas==1.1.5
+cv2==4.4.0
+matplotlib==3.3.3
+sklearn==0.23.2

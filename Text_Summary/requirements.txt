@@ -1,0 +1,3 @@
+nltk==3.6.6
+numpy==1.22.0
+networkx==2.5

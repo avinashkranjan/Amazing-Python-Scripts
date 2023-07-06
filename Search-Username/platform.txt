@@ -1,0 +1,26 @@
+Supported Platforms
+
+"instagram": f'https://www.instagram.com/{username}',
+"facebook": f'https://www.facebook.com/{username}',
+"twitter": f'https://twitter.com/{username}',
+"youtube": f'https://www.youtube.com/{username}',
+"reddit": f'https://www.reddit.com/user/{username}',
+"blogger": f'https://{username}.blogspot.com',
+"github": f'https://www.github.com/{username}',
+"steam": f'https://steamcommunity.com/id/{username}',
+"soundcloud": f'https://soundcloud.com/{username}',
+"medium": f'https://medium.com/@{username}',
+"spotify": f'https://open.spotify.com/user/{username}',
+"patreon": f'https://www.patreon.com/{username}',
+"bitbucket": f'https://bitbucket.org/{username}',
+"goodreads": f'https://www.goodreads.com/{username}',
+"wikipedia": f'https://www.wikipedia.org/wiki/User:{username}',
+"slack": f'https://{username}.slack.com'
+"7cups": f'https://www.7cups.com/@{username}'
+"9gag": f'https://www.9gag.com/u/{username}'
+"AboutMe": f'https://about.me/{username}'
+"Academia": f'https://independent.academia.edu/{username}'
+"Blogger" : f'https://{username}.blogspot.com'
+"ClubHouse": f'https://www.clubhouse.com/@{username}'
+"CodeChef": f'https://www.codechef.com/users/{username}'
+"DeviantART": f'https://{username}.deviantart.com

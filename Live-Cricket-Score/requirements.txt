@@ -1,0 +1,7 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+pypiwin32==223
+pywin32==301
+soupsieve==2.0.1
+urllib3==1.26.5
+win10toast==0.9

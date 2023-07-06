@@ -1,0 +1,6 @@
+python-decouple==3.4
+twilio==6.41.0
+pandas==0.25.3
+requests==2.31.0
+apscheduler==3.6.3
+urllib3>=1.26.5 # not directly required, pinned by Snyk to avoid a vulnerability

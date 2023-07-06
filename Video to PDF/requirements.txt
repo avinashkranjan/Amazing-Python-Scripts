@@ -1,0 +1,6 @@
+fpdf==1.7.2
+speech_recognition==3.7.1
+moviepy==1.0.1
+numpy>=1.22.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
+imageio>=2.6.0 # not directly required, pinned by Snyk to avoid a vulnerability
+pillow>=8.3.2 # not directly required, pinned by Snyk to avoid a vulnerability

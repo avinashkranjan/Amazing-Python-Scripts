@@ -1,0 +1,8 @@
+pybase64==1.0.1
+urllib3==1.24.3
+virtualenv==20.0.30
+chardet=3.0.2
+idna=2.5
+wget==3.2
+certifi=2017.4.17
+Python=3.8.6

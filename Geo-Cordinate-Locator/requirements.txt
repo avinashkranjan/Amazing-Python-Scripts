@@ -1,0 +1,3 @@
+tkinter==8.6.10
+geopy==2.0.0
+clipboard==8.6.10

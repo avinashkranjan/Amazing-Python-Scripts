@@ -1,0 +1,11 @@
+pyttsx3
+datetime
+speech_recognition
+pyaudio
+wikipedia
+webbrowser
+smtplib
+pywhatkit
+pyjokes 
+time
+sys

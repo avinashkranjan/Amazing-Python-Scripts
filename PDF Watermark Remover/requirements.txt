@@ -1,0 +1,7 @@
+scikit_image==0.18.1
+pdf2image==1.15.1
+fpdf==1.7.2
+numpy==1.22.0
+Pillow==9.0.1
+PyPDF2==1.27.9
+skimage==0.0

@@ -1,0 +1,3 @@
+numpy==1.22.0
+pandas @ file:///C:/ci/pandas_1592833613419/work
+scikit-learn @ file:///C:/ci/scikit-learn_1592853510272/work
