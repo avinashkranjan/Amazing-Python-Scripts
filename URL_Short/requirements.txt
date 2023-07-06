@@ -11,7 +11,7 @@ packaging==20.4         #16.8
 pyparsing==2.4.7        #2.2.0
 pyshorteners==1.0.1     #0.6.1
 pytz==2020.1            #2017.3
-requests==2.23.0        #2.18.4
+requests==2.31.0        #2.18.4
 # six==1.10.0
 urllib3==1.26.5         #1.22  
 djangorestframework==3.11.0  # up to date   
