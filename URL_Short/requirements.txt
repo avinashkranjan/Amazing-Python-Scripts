@@ -14,4 +14,4 @@ pytz==2020.1            #2017.3
 requests==2.31.0        #2.18.4
 # six==1.10.0
 urllib3==1.26.5         #1.22  
-djangorestframework==3.11.0  # up to date   
+djangorestframework==3.11.2  # up to date   
