@@ -2,7 +2,7 @@
 appdirs==1.4.4          #1.4.3
 certifi==2020.4.5.1     #2018.1.18
 chardet==3.0.4          # up to date
-Django==3.0.7           #1.1
+Django==3.1.14           #1.1
 pytest-django
 pytest-pythonpath
 django-widget-tweaks==1.4.8 #1.4.1
