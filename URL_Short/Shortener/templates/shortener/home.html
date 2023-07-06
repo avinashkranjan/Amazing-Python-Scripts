@@ -1,0 +1,47 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UrlShortener</title>
+    <!--Include Bootstrap CSS-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+    	<h1 class="text-center">URL Shortner</h1>
+    	<div class="row">
+	        <form role="form" action="" method="post" class="col-md-8 col-md-offset-2">
+	        	{% csrf_token %}
+	        	<div class="form-group">
+	        		<label for="id_url">Long URL:</label>
+	        		{{ form.url|attr:"class:form-control input-lg"|attr:"placeholder:Example: https://www.youtube.com/watch?v=Y2VF8tmLFHw" }}
+	        		<p class="help-block text-right">Enter the lengthy URL you want to shorten.</p>
+	        	</div>
+	        	{% if error %}
+	        	<div class="text-center container">Enter the https:// or http:// in the starting of URL</div>
+	        	{% endif %}
+	        	<div class="form-group col-md-4 col-md-offset-4">
+	        		<label for="id_host">Service/Host:</label>
+	        		{{ form.host|attr:"class:form-control" }}
+	        		<p class="help-block text-center">Choose the service you want to use.</p>
+	        	</div>
+	        	<div class="form-group text-center col-md-12">
+	            	<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+	            </div>
+	        </form>
+        </div>
+        <div class="row">
+        	<div class="text-center col-md-6 col-md-offset-3">
+				<h2>{{ short_url }}</h2>
+				{% if short_url %}
+					<img src="http://chart.apis.google.com/chart?cht=qr&chl={{ short_url }}&chs=180x180" />
+				{% endif %}
+			</div>
+        </div>
+    </div>
+</body>    
+
+</html> 
