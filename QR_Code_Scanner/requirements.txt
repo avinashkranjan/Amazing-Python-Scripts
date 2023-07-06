@@ -1,0 +1,3 @@
+opencv-python==4.7.0.72
+pandas==1.5.3
+pathlib==1.0.1
