@@ -109,5 +109,4 @@
 | 107\.     | ISBN Number Validator Script | Full form of ISBN number - International Standard Book Numbers. This python script can verify the entered number is valid isbn number or not. | [Take Me](./ISBN-Number-Validator/) | [Avdhesh Varshney](https://github.com/Avdhesh-Varshney)
 | 107\.     | Image Classification | This script performs image classification using the MobileNetV2 pre-trained model provided by TensorFlow. It allows you to classify images into different categories based on the ImageNet dataset. | [Take Me](https://github.com/avinashkranjan/Amazing-Python-Scripts/tree/master/Image\Classification)  | [Srujana Vanka](https://github.com/srujana-16) 
 | 108\.     | Check External IP Address | This is a basic Python script for determining your external IP address. | [Take Me](./Check_External_IP) | [Sabhi Sharma](https//github.com/sabhisharma-ise)
-| 112\.     | Find By Lyrics | It is a Python script to get song lyrics or find a song from a snippet of it's lyrics, and more. | [Take Me](./FindByLyrics/) | [Sabhi Sharma](https//github.com/sabhisharma-ise)
 
