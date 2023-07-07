@@ -103,4 +103,5 @@
 | 101\.     |Story Generator | This script randomly selects a character, setting, action, and conclusion from predefined lists and generates a story using these elements. | [Take Me](./Story_Generator/story_generator.py) | [Shraddha Singh](https://github.com/shraddha761)
 | 102\.     | Scientific Calculator | This python program will help to solve the hardest problems of trigonometry, exponents functions, logarithmic functions, etc. in very easy way. This program has a best User interface of the scientific calculator and provide a best user experience | [Take Me](./Scientific_Calculator) | [Avdhesh Varshney](https://github.com/Avdhesh-Varshney)
 | 103\.     | Chess Game | Chess Game is created using PYTHON script that provides user a interactive platform to play chess game. This program will create a interactive GUI of chess board for the user. Directly started in the terminal. | [Take Me](./Chess-Game/) | [Avdhesh Varshney](https:github.com/Avdhesh-Varshney)
+| 104\.     | DOH-dig | CA command-line tool for performing DNS queries using DNS-over-HTTPS (DoH) with Cloudflare DNS. | [Take Me](./DOH-dig/) | [Shraddha Singh](https:github.com/shraddha761)
 
