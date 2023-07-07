@@ -5,13 +5,21 @@ import socket
 server_host = 'example.com'
 server_port = 443
 
-# Create a socket
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# Create an SSL context
+ssl_context = ssl.create_default_context()
 
-# Wrap the socket with SSL/TLS
-ssl_sock = ssl.wrap_socket(sock)
+# Verify the server's certificate
+ssl_context.verify_mode = ssl.CERT_REQUIRED
+ssl_context.check_hostname = True
+ssl_context.load_default_certs()
 
 try:
+    # Create a socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    # Wrap the socket with the SSL context
+    ssl_sock = ssl_context.wrap_socket(sock, server_hostname=server_host)
+
     # Connect to the server
     ssl_sock.connect((server_host, server_port))
     print("Connected to the server.")
