@@ -10,6 +10,7 @@ Model Classification Report:
 
 To Run:
 >cd Agriculture Optimization ML Model
+
 >streamlit run streamlit.py
 
 Requirements:
