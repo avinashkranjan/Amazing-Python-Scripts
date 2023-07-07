@@ -21,6 +21,6 @@ streamlit
 matplotlib
 seaborn
 
-pip install numpy pandas scikit-learn streamlit matplotlib seaborn
+>pip install numpy pandas scikit-learn streamlit matplotlib seaborn
 
 
