@@ -15,7 +15,7 @@ def predict_crop(input_data):
     crop_label = lr.predict(input_data)
     return crop_label[0]
 def main():
-    st.title("Crop Prediction App")
+    st.title("Agriculture Optimisation App")
     st.write("Enter the parameter values to predict the crop label:")
 
     
