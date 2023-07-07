@@ -15,16 +15,16 @@ def create_sgpa_entries():
         sgpa_labels.append(sgpa_label)
         sgpa_entries.append(sgpa_entry)
 
-    create_sgpa_entries_button.grid_remove()
-    cgpa_calc_button.grid(row=num_semesters + 2, column=0, columnspan=2, padx=10, pady=5)
+    create_sgpa_buttons.grid_remove()
+    cgpa_calc.grid(row=num_semesters + 2, column=0, columnspan=2, padx=10, pady=5)
 
 
-def validate_sgpa_entries(event):
+def validate_sgpa_entries():
     filled_entries = [entry.get() for entry in sgpa_entries]
     if all(filled_entries):
-        cgpa_calc_button.configure(state="normal")
+        cgpa_calc.configure(state="normal")
     else:
-        cgpa_calc_button.configure(state="disabled")
+        cgpa_calc.configure(state="disabled")
 
 
 def calculate_cgpa():
@@ -32,7 +32,6 @@ def calculate_cgpa():
 
     total_sgpa = sum(sgpa_values)
     num_semesters = len(sgpa_values)
-    total_credit_hours = num_semesters * 18  # Assuming 18 credit hours per semester
     cgpa = total_sgpa / num_semesters
 
     cgpa_label.configure(text=f"CGPA: {cgpa:.2f}")
@@ -48,8 +47,8 @@ def reset_entries():
     sgpa_labels.clear()
     sgpa_entries.clear()
 
-    create_sgpa_entries_button.grid(row=1, column=0, columnspan=2, padx=10, pady=5)
-    cgpa_calc_button.configure(state="disabled")
+    create_sgpa_buttons.grid(row=1, column=0, columnspan=2, padx=10, pady=5)
+    cgpa_calc.configure(state="disabled")
     cgpa_label.configure(text="CGPA: ")
 
     reset_button.configure(state="disabled")
@@ -70,10 +69,10 @@ num_semesters_entry.grid(row=0, column=1, padx=10, pady=5, sticky="W")
 sgpa_labels = []
 sgpa_entries = []
 
-create_sgpa_entries_button = tk.Button(sgpa_frame, text="Create SGPA Entries", command=create_sgpa_entries)
-create_sgpa_entries_button.grid(row=1, column=0, columnspan=2, padx=10, pady=5)
+create_sgpa_buttons = tk.Button(sgpa_frame, text="Create SGPA Entries", command=create_sgpa_entries)
+create_sgpa_buttons.grid(row=1, column=0, columnspan=2, padx=10, pady=5)
 
-cgpa_calc_button = tk.Button(sgpa_frame, text="Calculate CGPA", command=calculate_cgpa, state="disabled")
+cgpa_calc = tk.Button(sgpa_frame, text="Calculate CGPA", command=calculate_cgpa, state="disabled")
 
 cgpa_label = tk.Label(root, text="CGPA: ")
 cgpa_label.pack()
