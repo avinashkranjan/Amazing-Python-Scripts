@@ -1,0 +1,241 @@
+body {
+    margin: 5em;
+    font-family: Myriad Pro;
+}
+.timeline {
+    position: relative;
+    padding: 1.5em 0 0.5em;
+    margin: 1em 50px 1em 50px;
+    border: 1px solid #ddd;
+    border-width: 0 1px;
+}
+.timeline:before{
+    content: none;
+}
+.timeline .starttime,
+.timeline .stoptime {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    padding: 3px 5px 0;
+    color: #999;
+    white-space: nowrap;
+    display: block;
+    font-size: 13px;
+}
+.timeline .starttime {
+    left: 0;
+}
+.timeline .stoptime {
+    text-align: right;
+    right: 0;
+}
+.timeline .line {
+    display: block;
+    list-style-type: none;
+    margin: 0.5em 0 0;
+    padding: 0;
+    height: 1em;
+    border-top: 4px solid #008000;
+    width: 100%;
+    position: relative;
+}
+.timeline .line h4 {
+    position: absolute;
+    right: 100%;
+    top: -0.6em;
+    width: 100px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1;
+    margin: 0 5px 0 0;
+    white-space: nowrap;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: Myriad Pro;
+}
+
+.timeline .line h4.total {
+    right: 0;
+    left: 100%;
+    width: auto;
+    padding-left: 5px;
+}
+.timeline .line .events {
+    position: relative;
+    top: -0.8em;
+    margin: 0 0.5em;
+}
+.timeline .line .events .event {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    margin: 0 0 0 -0.5em;
+}
+.timeline .line .events .event .circle {
+    position: relative;
+    background: #fff;
+    border: 4px solid #008000;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.timeline .line .events .event .circle .circle-inner {
+    /* background: #fff; */
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.timeline .line .events .event .label {
+    display: none;
+    width: 10em;
+    font-size: 13px;
+    border: 3px solid #008000;
+    background: #fff;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 2px #fff;
+    box-shadow: 0 2px 2px #fff;
+    position: absolute;
+    margin: -2px 0 0 -6em;
+    left: 50%;
+    top: 50%;
+}
+.timeline .line .events .event .label label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+.timeline .line .events .event:hover .circle .circle-inner {
+    z-index: 1010;
+}
+.timeline .line .events .event:hover .label {
+    display: block;
+    z-index: 1000;
+}
+.timeline .line.video1 {
+    border-color: #00f;
+}
+.timeline .line.video1 .events .event .circle {
+    border-color: #00f;
+}
+.timeline .line.video1 .events .event .label {
+    border-color: #00f;
+}
+.timeline .line.video2 {
+    border-color: #5eff00;
+}
+.timeline .line.video2 .events .event .circle {
+    border-color: #5eff00;
+}
+.timeline .line.video2 .events .event .label {
+    border-color: #5eff00;
+}
+.timeline .line.video3 {
+    border-color: #f00;
+}
+.timeline .line.video3 .events .event .circle {
+    border-color: #f00;
+}
+.timeline .line.video3 .events .event .label {
+    border-color: #f00;
+}
+.timeline .time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.timeline .time .period {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.timeline .time .period .label {
+    font-size: 11px;
+    height: 13px;
+    line-height: 13px;
+    color: #aaa;
+    margin: 3px;
+}
+.timeline .time .period .label.last {
+    float: right;
+}
+.timeline .time .period .label.first,
+.timeline .time .period .label.last {
+    color: #999;
+    font-size: 13px;
+}
+.timeline .time .period:nth-child(even) {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-width: 0 1px;
+}
+.timeline.static .line.video1 .events .event:nth-child(1) {
+    left: 0%;
+}
+.timeline.static .line.video1 .events .event:nth-child(2) {
+    left: 30%;
+}
+.timeline.static .line.video1 .events .event:nth-child(3) {
+    left: 50%;
+}
+.timeline.static .line.video1 .events .event:nth-child(4) {
+    left: 70%;
+}
+.timeline.static .line.video1 .events .event:nth-child(5) {
+    left: 90%;
+}
+.timeline.static .line.video2 .events .event:nth-child(1) {
+    left: 15%;
+}
+.timeline.static .line.video2 .events .event:nth-child(2) {
+    left: 25%;
+}
+.timeline.static .line.video2 .events .event:nth-child(3) {
+    left: 60%;
+}
+.timeline.static .line.video2 .events .event:nth-child(4) {
+    left: 70%;
+}
+.timeline.static .line.video2 .events .event:nth-child(5) {
+    left: 85%;
+}
+.timeline.static .line.video3 .events .event:nth-child(1) {
+    left: 5%;
+}
+.timeline.static .line.video3 .events .event:nth-child(2) {
+    left: 20%;
+}
+.timeline.static .line.video3 .events .event:nth-child(3) {
+    left: 55%;
+}
+.timeline.static .line.video3 .events .event:nth-child(4) {
+    left: 72%;
+}
+.timeline.static .line.video3 .events .event:nth-child(5) {
+    left: 87%;
+}
+.timeline.static .time .period:nth-child(1) {
+    left: 0%;
+    width: 10%;
+}
+.timeline.static .time .period:nth-child(2) {
+    left: 10%;
+    width: 62%;
+}
+.timeline.static .time .period:nth-child(3) {
+    left: 72%;
+    width: 28%;
+}
+
