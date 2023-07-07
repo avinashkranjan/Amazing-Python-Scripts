@@ -1,26 +1,30 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template,json
+from flask import Flask, request, jsonify, render_template, json
 import cv2
 from skimage.metrics import structural_similarity as ssim
 
 
-
 app = Flask(__name__)
 
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+face_cascade = cv2.CascadeClassifier(
+    cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+
 
 @app.route('/')
 def home():
-    return jsonify({'message':'Welcome to Flask Apis'})
+    return jsonify({'message': 'Welcome to Flask Apis'})
 
-@app.route('/image_Compare',methods=['POST'])
+
+@app.route('/image_Compare', methods=['POST'])
 def predict():
     file1 = request.files['file1']
     file2 = request.files['file2']
 
     # Read the images using OpenCV
-    img1 = cv2.imdecode(np.frombuffer(file1.read(), np.uint8), cv2.IMREAD_COLOR)
-    img2 = cv2.imdecode(np.frombuffer(file2.read(), np.uint8), cv2.IMREAD_COLOR)
+    img1 = cv2.imdecode(np.frombuffer(
+        file1.read(), np.uint8), cv2.IMREAD_COLOR)
+    img2 = cv2.imdecode(np.frombuffer(
+        file2.read(), np.uint8), cv2.IMREAD_COLOR)
 
     # Resize the images to 256x256 pixels
     img1 = cv2.resize(img1, (256, 256))
@@ -37,25 +41,30 @@ def predict():
     similarity_percentage = score * 100
 
     # Return the similarity percentage in a JSON response
-    return jsonify({'similarity_percentage': similarity_percentage})    
+    return jsonify({'similarity_percentage': similarity_percentage})
 
-@app.route('/face_recognize',methods=['POST'])
+
+@app.route('/face_recognize', methods=['POST'])
 def predictface():
-     # Get the uploaded files from the request
+    # Get the uploaded files from the request
     file1 = request.files['file1']
     file2 = request.files['file2']
 
    # Read the images using OpenCV directly from the request files
-    img1 = cv2.imdecode(np.frombuffer(file1.read(), np.uint8), cv2.IMREAD_COLOR)
-    img2 = cv2.imdecode(np.frombuffer(file2.read(), np.uint8), cv2.IMREAD_COLOR)
+    img1 = cv2.imdecode(np.frombuffer(
+        file1.read(), np.uint8), cv2.IMREAD_COLOR)
+    img2 = cv2.imdecode(np.frombuffer(
+        file2.read(), np.uint8), cv2.IMREAD_COLOR)
 
     # Convert the images to grayscale
     gray_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     gray_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
     # Detect faces in the images
-    faces1 = face_cascade.detectMultiScale(gray_img1, scaleFactor=1.1, minNeighbors=5)
-    faces2 = face_cascade.detectMultiScale(gray_img2, scaleFactor=1.1, minNeighbors=5)
+    faces1 = face_cascade.detectMultiScale(
+        gray_img1, scaleFactor=1.1, minNeighbors=5)
+    faces2 = face_cascade.detectMultiScale(
+        gray_img2, scaleFactor=1.1, minNeighbors=5)
 
     # Compare only the first detected face in each image
     if len(faces1) > 0 and len(faces2) > 0:
@@ -80,6 +89,7 @@ def predictface():
 
     else:
         return jsonify({'similarity_percentage': 'Could not detect faces in both images.'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
