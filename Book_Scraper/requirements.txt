@@ -1,0 +1,4 @@
+beautifulsoup4==4.11.1
+emoji==1.6.3
+pyfiglet==0.8.post1
+Requests==2.31.0

@@ -9,7 +9,7 @@ def calculate_age(birthday):
 
     day_check = ((today.month, today.day) < (birthday.month, birthday.day))
     year_diff = today.year - birthday.year - day_check
-    remaining_months = abs(today.month - birthday.month)
+   remaining_months = abs((12-birthday.month)+today.month)
     remaining_days = abs(today.day - birthday.day)
 
     # Return the age as a formatted string
@@ -17,7 +17,7 @@ def calculate_age(birthday):
     return age_string
 
 if __name__ == "__main__":
-    print("Simple Age Calculator")
+    print(" Age Calculator By Python")
 
     try:
         birthYear = int(input("Enter the birth year: "))
