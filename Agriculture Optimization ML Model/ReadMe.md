@@ -25,6 +25,7 @@ seaborn
 >pip install numpy pandas scikit-learn streamlit matplotlib seaborn
 
 Some Imp Graphs:
+
 ![image](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/c4de9c56-dec7-4a09-b85a-60a443bb86bb)
 ![image](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/edd73500-504e-4b10-aa53-d8c30c31be25)
 ![image](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/f694ca20-aecf-4531-93af-ed217fa1149d)
