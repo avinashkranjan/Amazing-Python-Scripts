@@ -4,7 +4,17 @@ import json
 
 
 class AskUbuntu:
+    """
+    Create an instance of `AskUbuntu` class.
 
+    ```python
+    questions = AskUbuntu("topic")
+    ```
+
+    | Methods                     | Details                                                                                              |
+    | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+    | `.getQuestions()`        | Returns the questions, views, votes, answer counts, and descriptions in JSON format              |
+    """
     def __init__(self, topic):
         self.topic = topic
 
