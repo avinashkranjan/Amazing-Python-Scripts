@@ -15,6 +15,7 @@ class AskUbuntu:
     | --------------------------- | ---------------------------------------------------------------------------------------------------- |
     | `.getQuestions()`        | Returns the questions, views, votes, answer counts, and descriptions in JSON format              |
     """
+    
     def __init__(self, topic):
         self.topic = topic
 
