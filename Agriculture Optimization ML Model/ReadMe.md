@@ -5,6 +5,7 @@ Frontend:
 ![image](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/f9aca687-9b41-43df-9f91-4905f7682f81)
 
 Model Classification Report:
+
 ![Screenshot 2023-07-08 042012](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/ff11e592-1a53-41df-b265-ddda0d7ca91b)
 
 To Run:
