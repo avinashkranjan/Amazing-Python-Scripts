@@ -36,7 +36,7 @@ def priceCheck():
     print(price)
     print(THRESHHOLD)
     # If the price falls below threshold, send an email
-    if(price < THRESHHOLD):
+    if (price < THRESHHOLD):
         sendMail(title)
 
 
@@ -50,6 +50,6 @@ CHECK_AGAIN = int(input('Enter the time between checks in minutes:'))
 if (PRODUCT_URL == '' or MY_APP_PASSWORD == '' or MY_EMAIL == '' or RECEIVER_EMAIL == ''):
     print('VALUES MISSING! TRY AGAIN')
     exit()
-while(True):
+while (True):
     priceCheck()
     time.sleep(CHECK_AGAIN*60)

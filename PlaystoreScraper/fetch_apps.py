@@ -21,7 +21,7 @@ def sql_table(con):
     """
     cur = con.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS apps(QUERY text, URL text, NAME text, RATING text, "
-                " REVIEWS text, INSTALLS text, VERSION text, LASTUPDATE text, " 
+                " REVIEWS text, INSTALLS text, VERSION text, LASTUPDATE text, "
                 " COMPANY text, CONTACT text)")
     con.commit()
 
@@ -52,27 +52,27 @@ while 1:
 
     print('\nGetting all the desired info...\n')
     time.sleep(5)
-    
+
     last_height = driver.execute_script("return document.body.scrollHeight")
     time.sleep(5)
-    
+
     while True:
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    
+        driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);")
+
         time.sleep(5)
-    
+
         new_height = driver.execute_script("return document.body.scrollHeight")
         if new_height == last_height:
             break
         last_height = new_height
-
 
     store_urls = []
     elems = driver.find_elements_by_xpath("//a[@href]")
     for elem in elems:
         if "details?id" in elem.get_attribute("href"):
             store_urls.append((elem.get_attribute("href")))
-            
+
     store_urls = list(dict.fromkeys(store_urls))
 
     for every in store_urls:
@@ -92,12 +92,12 @@ while 1:
 
             stat_info_table = driver.find_elements_by_class_name("htlgb")
             stats = []
-            for x in range (len(stat_info_table)):
+            for x in range(len(stat_info_table)):
                 if x % 2 == 0:
                     stats.append(stat_info_table[x].text)
 
             stat_header = driver.find_elements_by_class_name("BgcNfc")
-            for x in range (len(stat_header)):
+            for x in range(len(stat_header)):
                 if stat_header[x].text == "Installs":
                     installs = stats[x]
 
@@ -115,21 +115,19 @@ while 1:
                         if "@" in y:
                             contact = y
                             break
-            
+
                 entities = (query, url, name, rating, reviews, installs, version, lastupdate
                             version, lastupdate, company, email)
                 sql_insert_table(con, entities)
 
-        
         except Exception as e:
             continue
 
     print('\nAll info collected successfully!!\n')
 
     ans = input('Press (y) to continue or any other key to exit: ').lower()
-        if ans == 'y':
+       if ans == 'y':
             continue
         else:
             print('Exiting..')
             break
-

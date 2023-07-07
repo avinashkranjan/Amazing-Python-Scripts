@@ -21,7 +21,7 @@ words = []
 categories = []
 for i in data_token:
     charc = i.split('|')
-    if(len(charc) > 2):
+    if (len(charc) > 2):
         ch = charc[2].split(".")
         categories.append(ch[0])  # This gives all the categories of POS tags
         if i not in string.punctuation and len(charc[0]) > 1:

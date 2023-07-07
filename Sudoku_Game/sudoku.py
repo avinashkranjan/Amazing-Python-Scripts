@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox,simpledialog
+from tkinter import messagebox, simpledialog
 import random
 
 
@@ -13,7 +13,8 @@ class Sudoku:
 
     def create_widgets(self):
         self.master.configure(bg='#ECECEC')
-        self.canvas = tk.Canvas(self.master, width=680, height=680, bg='#F8C8DC', highlightthickness=0)
+        self.canvas = tk.Canvas(self.master, width=680,
+                                height=680, bg='#F8C8DC', highlightthickness=0)
         self.canvas.pack(side=tk.TOP, padx=0, pady=0)
 
         self.draw_board()
@@ -22,31 +23,32 @@ class Sudoku:
         self.button_frame.pack(side=tk.TOP, pady=20)
 
         self.check_button = tk.Button(self.button_frame, text='Check', font=('Inter', 12, 'bold'),
-                                  bg='#E75442', fg='#FFFFFF', bd=0, command=self.check_solution)
+                                      bg='#E75442', fg='#FFFFFF', bd=0, command=self.check_solution)
         self.check_button.pack(side=tk.LEFT, padx=10)
 
         self.solve_button = tk.Button(self.button_frame, text='Solve', font=('Inter', 12, 'bold'),
-                                  bg='#3AC6FF', fg='#FFFFFF', bd=0, command=self.solve_puzzle)
+                                      bg='#3AC6FF', fg='#FFFFFF', bd=0, command=self.solve_puzzle)
         self.solve_button.pack(side=tk.LEFT, padx=10)
 
         self.level_frame = tk.Frame(self.master, bg='#ECECEC')
         self.level_frame.pack(side=tk.TOP, pady=0)
 
-        self.level_label = tk.Label(self.level_frame, text='Select Level:', font=('Inter', 12,"bold"), bg='#77DD77', fg='#ECECEC')
+        self.level_label = tk.Label(self.level_frame, text='Select Level:', font=(
+            'Inter', 12, "bold"), bg='#77DD77', fg='#ECECEC')
         self.level_label.pack(side=tk.LEFT, padx=10)
 
         self.level_var = tk.StringVar()
         self.level_var.set('Easy')
         self.level_dropdown = tk.OptionMenu(self.level_frame, self.level_var, 'Easy', 'Medium', 'Hard',
-                                        command=self.new_game)
-        self.level_dropdown.config(font=('Arial', 12,"bold"), bg='#ffb347', fg='#ECECEC', bd=0)
+                                            command=self.new_game)
+        self.level_dropdown.config(
+            font=('Arial', 12, "bold"), bg='#ffb347', fg='#ECECEC', bd=0)
         self.level_dropdown.pack(side=tk.LEFT, padx=10)
 
         self.new_game_button = tk.Button(self.level_frame, text='New Game', font=('Inter', 12, 'bold'),
-                                     bg='#FFD700', fg='#ECECEC', bd=0, command=self.new_game_wrapper)
+                                         bg='#FFD700', fg='#ECECEC', bd=0, command=self.new_game_wrapper)
         self.new_game_button.pack(side=tk.LEFT, padx=10)
         self.canvas.bind("<Button-1>", self.on_cell_click)
-
 
     def new_game_wrapper(self):
         level = self.level_var.get()
@@ -95,18 +97,19 @@ class Sudoku:
                     return True
                 board[row][col] = 0
         return False
-    
+
     def on_cell_click(self, event):
         x, y = event.x, event.y
         row, col = (y - 80) // 60, (x - 80) // 60
         if self.board[row][col] != 0:
-            messagebox.showinfo('Invalid Move', 'Cannot change pre-filled cells!')
+            messagebox.showinfo(
+                'Invalid Move', 'Cannot change pre-filled cells!')
             return
-        num = tk.simpledialog.askinteger('Input', 'Enter a number (1-9):', minvalue=1, maxvalue=9)
+        num = tk.simpledialog.askinteger(
+            'Input', 'Enter a number (1-9):', minvalue=1, maxvalue=9)
         if num:
             self.board[row][col] = num
             self.draw_board()
-   
 
     def get_empty_cell(self, board):
         for i in range(9):
@@ -149,10 +152,11 @@ class Sudoku:
                 y = j * 60 + 80
                 cell_value = self.board[j][i]
                 if cell_value != 0:
-                # Adjust the coordinates to avoid intersection
-                 text_x = x + 15
-                 text_y = y + 15
-                 self.canvas.create_text(text_x, text_y, text=str(cell_value), font=('Inter', 20, 'bold'), fill='#333333')
+                    # Adjust the coordinates to avoid intersection
+                    text_x = x + 15
+                    text_y = y + 15
+                    self.canvas.create_text(text_x, text_y, text=str(
+                        cell_value), font=('Inter', 20, 'bold'), fill='#333333')
 
         self.draw_grid()
 
@@ -162,8 +166,10 @@ class Sudoku:
                 line_width = 2
             else:
                 line_width = 1
-            self.canvas.create_line(60 * i + 80, 80, 60 * i + 80, 620, width=line_width, fill='#333333')
-            self.canvas.create_line(80, 60 * i + 80, 620, 60 * i + 80, width=line_width, fill='#333333')
+            self.canvas.create_line(
+                60 * i + 80, 80, 60 * i + 80, 620, width=line_width, fill='#333333')
+            self.canvas.create_line(
+                80, 60 * i + 80, 620, 60 * i + 80, width=line_width, fill='#333333')
 
     def clear_board(self):
         self.canvas.delete('all')
@@ -172,9 +178,11 @@ class Sudoku:
         for i in range(9):
             for j in range(9):
                 if self.board[i][j] != self.solution[i][j]:
-                    messagebox.showinfo('Incorrect', 'The solution is not correct!')
+                    messagebox.showinfo(
+                        'Incorrect', 'The solution is not correct!')
                     return
-        messagebox.showinfo('Correct', 'Congratulations! You solved the puzzle!')
+        messagebox.showinfo(
+            'Correct', 'Congratulations! You solved the puzzle!')
 
     def remove_cells(self, num_cells):
         cells = [(i, j) for i in range(9) for j in range(9)]
@@ -192,13 +200,14 @@ class Sudoku:
         return empty_cells
 
     def solve_puzzle(self):
-     solution_board = [row[:] for row in self.board]
-     if self.solve_board(solution_board):
-        self.solution = solution_board  
-        self.board = solution_board
-        self.draw_board()
-     else:
-        messagebox.showinfo('Unsolvable', 'The puzzle does not have a solution.')
+        solution_board = [row[:] for row in self.board]
+        if self.solve_board(solution_board):
+            self.solution = solution_board
+            self.board = solution_board
+            self.draw_board()
+        else:
+            messagebox.showinfo(
+                'Unsolvable', 'The puzzle does not have a solution.')
 
 
 if __name__ == '__main__':

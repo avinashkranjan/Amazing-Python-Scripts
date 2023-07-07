@@ -12,7 +12,7 @@ for i in range(20):
 
 background = np.flip(background, axis=1)
 
-while(cap.isOpened()):
+while (cap.isOpened()):
     ret, img = cap.read()
 
     img = np.flip(img, axis=1)

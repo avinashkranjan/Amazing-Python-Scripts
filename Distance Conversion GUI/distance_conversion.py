@@ -32,7 +32,7 @@ def convert():
     ip_unit = ip_opt.get()
     op_unit = op_opt.get()
     # if user chooses same input & output unit then display warning
-    if(ip_unit == op_unit):
+    if (ip_unit == op_unit):
         messagebox.showwarning("Warning", "Select different units")
     # else perform conversion
     else:

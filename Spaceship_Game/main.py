@@ -40,9 +40,12 @@ def drawWindow(red, yellow, red_bullets, yellow_bullets, red_health, yellow_heal
     HEALTH_FONT = pygame.font.SysFont('comicsans', 40)
 
     # Displaying Health by font
-    red_health_text = HEALTH_FONT.render("Health: " + str(red_health), True, (255, 255, 255))
-    yellow_health_text = HEALTH_FONT.render("Health: " + str(yellow_health), True, (255, 255, 255))
-    WINDOW.blit(red_health_text, (util.width - red_health_text.get_width() - 10, 10))
+    red_health_text = HEALTH_FONT.render(
+        "Health: " + str(red_health), True, (255, 255, 255))
+    yellow_health_text = HEALTH_FONT.render(
+        "Health: " + str(yellow_health), True, (255, 255, 255))
+    WINDOW.blit(red_health_text, (util.width -
+                red_health_text.get_width() - 10, 10))
     WINDOW.blit(yellow_health_text, (10, 10))
 
     # to load surfaces we use blit
@@ -149,11 +152,13 @@ def main():
                 # CHECKING if we press LCTRL and we have 3 bullets at a time on a screen
                 if event.key == pygame.K_LCTRL and len(yellow_bullets) < MAX_BULLETS:
                     # 10, 5 width, height of bullet and others are location
-                    bullet = pygame.Rect(yellow.x + yellow.width, yellow.y + yellow.height // 2 - 2, 10, 5)
+                    bullet = pygame.Rect(
+                        yellow.x + yellow.width, yellow.y + yellow.height // 2 - 2, 10, 5)
                     yellow_bullets.append(bullet)
 
                 if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS:
-                    bullet = pygame.Rect(red.x, red.y + red.height // 2 - 2, 10, 5)
+                    bullet = pygame.Rect(
+                        red.x, red.y + red.height // 2 - 2, 10, 5)
                     red_bullets.append(bullet)
 
             # If bullets hit red spaceship then decrease health

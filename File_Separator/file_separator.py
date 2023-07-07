@@ -1,6 +1,7 @@
 import os
 import shutil
 
+
 def separate_files():
     source_folder = os.getcwd()  # Current working directory as the source folder
     destination_folder = os.path.join(source_folder, "separated_files")

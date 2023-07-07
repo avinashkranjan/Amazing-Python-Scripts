@@ -63,7 +63,7 @@ def submit(con):
 def query(con):
 
     password = simpledialog.askstring("Password", "Enter Master Password")
-    if(password == master_password):
+    if (password == master_password):
         # set button text
         query_btn.configure(text="Hide Records", command=hide)
         cursor = con.cursor()

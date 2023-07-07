@@ -51,7 +51,8 @@ class CoffeeMachine:
             return message
 
         # Check if there are enough resources to make the selected coffee
-        message = self.check_resources(water_needed, milk_needed, coffee_beans_needed, cups_needed)
+        message = self.check_resources(
+            water_needed, milk_needed, coffee_beans_needed, cups_needed)
         if message == "Enough resources. Enjoy your coffee!":
             # Prompt for inserting coins and calculate the total amount
             print(f"Please insert coins for {coffee_type} (${price}):")

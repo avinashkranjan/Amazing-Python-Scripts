@@ -22,7 +22,8 @@ def hog_feature(img):
     block_stride = (8, 8)
     cell_size = (8, 8)
     nbins = 9
-    descriptor = cv2.HOGDescriptor(win_size, block_size, block_stride, cell_size, nbins)
+    descriptor = cv2.HOGDescriptor(
+        win_size, block_size, block_stride, cell_size, nbins)
     hog = descriptor.compute(img)
     return hog
 

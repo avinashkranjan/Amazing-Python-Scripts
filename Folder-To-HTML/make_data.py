@@ -5,6 +5,7 @@ static_folder = 'td_static'
 html_file = 'data_view.html'
 data_dir_path = os.path.dirname(os.path.abspath(__file__))
 
+
 class DataView():
 
     def __init__(self, data_folder, html_file):
@@ -19,7 +20,7 @@ class DataView():
             'other': []
         }
 
-        self.allowed_data_types = ['.mp4','.mp3','.pdf']
+        self.allowed_data_types = ['.mp4', '.mp3', '.pdf']
         self.data_types = {
             '.mp4': """
                     <video class="td-video" controls>
@@ -31,13 +32,12 @@ class DataView():
                         <source src="{src_info}" type="audio/ogg">
                     </audio>
                     """,
-            ".pdf" : """
+            ".pdf": """
                     <a class="td-pdf" href="file://""" + data_dir_path + """/{src_info}" target="_blank" >OPEN</a>
                     """
 
         }
         self.list_of_files = {}
-
 
     def find_all_files(self):
         for (dirpath, dirnames, filenames) in os.walk(data_folder):
@@ -45,7 +45,7 @@ class DataView():
                 self.list_of_files[filename] = os.sep.join([dirpath, filename])
 
     def write_first_html(self, src_tags):
-        with open(self.html_file,'w') as h_file:
+        with open(self.html_file, 'w') as h_file:
             h_file.write(
                 """
                 <!DOCTYPE html>
@@ -58,7 +58,7 @@ class DataView():
                     <!-- ALL THE OUTSIDE CSS -->
 
                     <!-- ALL CUSTOM CSS -->
-                    <link rel="stylesheet" href=" """+ static_folder +"""/css/main/data_view.css">
+                    <link rel="stylesheet" href=" """ + static_folder + """/css/main/data_view.css">
 
                     <title>Data View</title>
 
@@ -81,13 +81,13 @@ class DataView():
                 """.format(src_tags=src_tags)
             )
 
-    def write_middle_html(self,object):
+    def write_middle_html(self, object):
         ext = object['ext']
         src_info = object['src_info']
         src_name = object['src_name']
         src_tags = object['src_tags']
 
-        with open(self.html_file,'a') as h_file:
+        with open(self.html_file, 'a') as h_file:
             h_file.write(
                 """
                 <div class="td-element">
@@ -95,21 +95,21 @@ class DataView():
                     <div class="_tde-info">{src_name}</div>
                     <div class="_tde-tags">{src_tags}</div>
                 </div>
-                """.format(src_info=self.data_types[ext].format(src_info=src_info),src_name=src_name,src_tags=src_tags)
+                """.format(src_info=self.data_types[ext].format(src_info=src_info), src_name=src_name, src_tags=src_tags)
             )
 
     def write_end_html(self):
-        with open(self.html_file,'a') as h_file:
+        with open(self.html_file, 'a') as h_file:
             h_file.write(
                 """
                         </div>
                     </div>
                 </div>
                 <!-- ALL OUTSIDE SCRIPTS -->
-                <script src=" """+ static_folder +"""/js/outside/jquery-3.6.1.min.js"></script>
+                <script src=" """ + static_folder + """/js/outside/jquery-3.6.1.min.js"></script>
 
                 <!-- ALL MAIN SCRIPTS-->
-                <script src=" """+ static_folder +"""/js/main/data_view.js"></script>
+                <script src=" """ + static_folder + """/js/main/data_view.js"></script>
                 </body>
                 </html>
                 """
@@ -126,7 +126,8 @@ class DataView():
 
             self.all_tags.update(tags)
 
-            src_tags = '\n'.join('<span class="_td-te2">#{}</span>'.format(t) for t in tags)
+            src_tags = '\n'.join(
+                '<span class="_td-te2">#{}</span>'.format(t) for t in tags)
 
             if ext in self.allowed_data_types:
                 object = {
@@ -138,16 +139,18 @@ class DataView():
 
                 self.objects[ext].append(object)
 
-        src_tags = '\n'.join('<div class="_td-te">#{}</div>'.format(t) for t in list(self.all_tags))
+        src_tags = '\n'.join('<div class="_td-te">#{}</div>'.format(t)
+                             for t in list(self.all_tags))
 
         self.write_first_html(src_tags)
 
-        for ext,object_list in self.objects.items():
+        for ext, object_list in self.objects.items():
             for object_dict in object_list:
                 self.write_middle_html(object_dict)
 
         self.write_end_html()
 
-data_obj = DataView(data_folder,html_file)
+
+data_obj = DataView(data_folder, html_file)
 data_obj.find_all_files()
 data_obj.work_on_files()

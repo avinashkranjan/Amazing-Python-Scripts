@@ -23,7 +23,7 @@ for i in range(0, 7):
 if UserInput:
     RaceRunning = True
     # till the game is running
-while RaceRunning :
+while RaceRunning:
     for runner in Runners:
         if runner.xcor() > 230:
             winner = runner.pencolor()

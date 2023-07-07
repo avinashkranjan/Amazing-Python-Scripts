@@ -7,7 +7,7 @@ import os
 print("1) Dataset comparison of stocks")
 print("2) Real time comparison of stocks")
 ch = int(input("Enter choice: "))
-if(ch == 1):
+if (ch == 1):
     data = input("Enter file path: ")
     df = pd.read_csv(data)
 
@@ -38,7 +38,7 @@ if(ch == 1):
     print(increased_stocks)
 
 
-elif(ch == 2):
+elif (ch == 2):
 
     api_key = os.environ['api_key']
     stocks = input("Name of the stock: ")

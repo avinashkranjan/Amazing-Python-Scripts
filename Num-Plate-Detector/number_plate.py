@@ -21,11 +21,11 @@ cv2.imshow("Original Image", image)
 # cv2.imshow("1 - Grayscale Conversion", gray)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-#cv2.imshow("2 - Bilateral Filter", gray)
+# cv2.imshow("2 - Bilateral Filter", gray)
 gray = cv2.bilateralFilter(gray, 11, 17, 17)
 
 # canny edge detector
-#cv2.imshow("4 - Canny Edges", edged)
+# cv2.imshow("4 - Canny Edges", edged)
 edged = cv2.Canny(gray, 170, 200)
 
 """

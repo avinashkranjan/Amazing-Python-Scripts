@@ -1,7 +1,7 @@
 from pytube import YouTube
 from tkinter import *
 from pytube.cli import on_progress
-#Asking for all the video links
+# Asking for all the video links
 n = int(input("Enter the number of youtube videos you want to download:"))
 # A list to store all the links
 links = []
@@ -10,28 +10,27 @@ print("\nEnter every one of the links in individual line:")
 for i in range(0, n):
     temp = input()
     links.append(temp)
-#Showing all details for videos and downloading them one by one
+# Showing all details for videos and downloading them one by one
 for i in range(0, n):
     link = links[i]
-    yt = YouTube(link,on_progress_callback=on_progress)
+    yt = YouTube(link, on_progress_callback=on_progress)
     print(yt)
     print("\nDetails for Video", i+1, "\n")
     print("Video's Title:   ", yt.title)
     print("Number of views:  ", yt.views)
     print("video's Length:  ", yt.length, "seconds")
-    
+
     # Filter to select only progressive streams
     stream = str(yt.streams.filter(progressive=True))
     stream = stream[1:]
     stream = stream[:-1]
     streamlist = stream.split(", ")
     print("\nAll available options for downloads:\n")
-    
+
     # loop around all available streams and print them for user to decide
     for i in range(0, len(streamlist)):
         st = streamlist[i].split(" ")
         print(i+1, ") ", st[1], " and ", st[3], sep='')
-    
 
     # ask user the tag forthe stream to download
 
@@ -53,26 +52,7 @@ for i in range(0, n):
     tag = int(input("\nEnter the itag of your preferred stream to download:   "))
     ys = yt.streams.get_by_itag(tag)
     print("\nDownloading...")
-    
-    
-    
+
     ys.download()
     print("\nDownload completed :)")
     print()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

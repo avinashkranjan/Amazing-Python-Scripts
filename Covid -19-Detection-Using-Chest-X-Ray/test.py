@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow.keras as keras
-#from keras.layers import *
-#from keras.models import *
+# from keras.layers import *
+# from keras.models import *
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
@@ -20,7 +20,7 @@ window.geometry('1280x720')
 
 window.configure(background='yellow')
 
-#window.attributes('-fullscreen', True)
+# window.attributes('-fullscreen', True)
 
 window.grid_rowconfigure(0, weight=1)
 window.grid_columnconfigure(0, weight=1)
@@ -34,8 +34,8 @@ message = tk.Label(window,
                    font=('times', 30, 'italic bold underline'))
 message.place(x=200, y=20)
 
-#txt = tk.Entry(window,width=20  ,bg="blue" ,fg="red",font=('times', 15, ' bold '))
-#txt.place(x=700, y=215)
+# txt = tk.Entry(window,width=20  ,bg="blue" ,fg="red",font=('times', 15, ' bold '))
+# txt.place(x=700, y=215)
 
 lbl3 = tk.Label(window,
                 text="Status of a Person : ",
@@ -96,8 +96,8 @@ def run_example():
         message.configure(text=res)
 
 
-#clearButton = tk.Button(window, text="Clear", command=clear  ,fg="red"  ,bg="green"  ,width=20  ,height=2 ,activebackground = "Red" ,font=('times', 15, ' bold '))
-#clearButton.place(x=950, y=200)
+# clearButton = tk.Button(window, text="Clear", command=clear  ,fg="red"  ,bg="green"  ,width=20  ,height=2 ,activebackground = "Red" ,font=('times', 15, ' bold '))
+# clearButton.place(x=950, y=200)
 
 takeImg = tk.Button(window,
                     text="Click to load X-ray Images ",

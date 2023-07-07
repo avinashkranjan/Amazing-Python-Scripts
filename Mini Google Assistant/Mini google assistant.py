@@ -75,11 +75,11 @@ def run_mini_google_assistant():
 
             if "photo" in command:
                 if cv2.waitKey(0) & 0xFF == ord('s'):  # used 's' as quitting button
-                    #talk("You can use s button to quit")
+                    # talk("You can use s button to quit")
                     break
             elif "video" in command:
                 if cv2.waitKey(1) & 0xFF == ord('s'):  # used 's' as quitting button
-                    #talk("You can use s button to quit")
+                    # talk("You can use s button to quit")
 
                     break
 
@@ -97,4 +97,4 @@ talk("And i can help you to play song, tell time, tell date, tell joke and i can
 talk("Now please tell me how can i help you!")
 while True:
     run_mini_google_assistant()
-    #talk("Nice to see you here, I belive that you enjoyed!")
+    # talk("Nice to see you here, I belive that you enjoyed!")

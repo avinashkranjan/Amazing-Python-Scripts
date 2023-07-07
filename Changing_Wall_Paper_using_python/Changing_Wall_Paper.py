@@ -4,28 +4,30 @@ from tkinter import filedialog
 from wallpaper import set_wallpaper
 
 # user define function
+
+
 def change_wall():
 
-	# set your photo
-	try:
-		set_wallpaper(str(path.get()))
-		check = "success"
+    # set your photo
+    try:
+        set_wallpaper(str(path.get()))
+        check = "success"
 
-	except:
+    except:
 
-		check = "Wallpaper not found !"
-	result.set(check)
+        check = "Wallpaper not found !"
+    result.set(check)
 
 
 def browseFiles():
-	filename = filedialog.askopenfilename(initialdir="/",
-										title="Select a File",
-										filetypes=(("jpeg files", "*.jpg"), ("all files", "*.*")))
-	path.set(filename)
-	
-	# Change label contents
-	label_file_explorer.configure(text="File Opened: "+filename)
-	return filename
+    filename = filedialog.askopenfilename(initialdir="/",
+                                          title="Select a File",
+                                          filetypes=(("jpeg files", "*.jpg"), ("all files", "*.*")))
+    path.set(filename)
+
+    # Change label contents
+    label_file_explorer.configure(text="File Opened: "+filename)
+    return filename
 
 
 # object of tkinter
@@ -39,7 +41,7 @@ path = StringVar()
 
 
 label_file_explorer = Label(
-	master, text="Select a image", width=100, fg="blue")
+    master, text="Select a image", width=100, fg="blue")
 
 
 # Creating label for each information
@@ -51,7 +53,7 @@ Label(master, text="Status :", bg="light grey").grid(row=3, sticky=W)
 # Creating label for class variable
 # name using widget Entry
 Label(master, text="", textvariable=result,
-	bg="light grey").grid(row=3, column=1, sticky=W)
+      bg="light grey").grid(row=3, column=1, sticky=W)
 
 # creating a button using the widget
 # Button that will call the submit function

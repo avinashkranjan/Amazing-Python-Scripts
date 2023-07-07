@@ -6,11 +6,13 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Circular Queue
 """
 
+
 class Q:
     queue = []
     count = 0
-    front=0
-    rear=0
+    front = 0
+    rear = 0
+
     def createQueue(self, size):
         Q.front = 0
         Q.rear = -1
@@ -21,8 +23,8 @@ class Q:
         print(Q.queue)
 
     def enqueue(self, e):
-        Q.rear = (Q.rear+1)%Q.MaxSize
-        Q.count+=1
+        Q.rear = (Q.rear+1) % Q.MaxSize
+        Q.count += 1
         Q.queue[Q.rear] = e
         print(e, 'enqueued in Queue')
         print('')
@@ -30,12 +32,12 @@ class Q:
     def dequeue(self):
         temp = Q.queue[Q.front]
         Q.front = (Q.front+1) % Q.MaxSize
-        Q.count-=1
+        Q.count -= 1
         print(temp, 'dequeued from Queue')
         print('')
 
     def isFull(self):
-        if Q.count==Q.MaxSize:
+        if Q.count == Q.MaxSize:
             return True
         else:
             return False
@@ -52,14 +54,12 @@ class Q:
         i = Q.front
         while c < Q.count:
             print(Q.queue[i], end="-->")
-            i =(i+1)%self.MaxSize
-            c+=1
+            i = (i+1) % self.MaxSize
+            c += 1
         print('')
 
 
-
 # Main Code:
-
 o = Q()
 o.createQueue(int(input('Enter size of the queue: ')))
 

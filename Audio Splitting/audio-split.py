@@ -8,6 +8,7 @@ import wave
 import os
 import webrtcvad
 
+
 def read_wave(path):
 
     with contextlib.closing(wave.open(path, 'rb')) as wf:
@@ -63,14 +64,12 @@ def vad_collector(sample_rate, frame_duration_ms,
     for frame in frames:
         is_speech = vad.is_speech(frame.bytes, sample_rate)
 
-
         if not triggered:
             ring_buffer.append((frame, is_speech))
             num_voiced = len([f for f, speech in ring_buffer if speech])
 
             if num_voiced > 0.9 * ring_buffer.maxlen:
                 triggered = True
-
 
                 for f, s in ring_buffer:
                     voiced_frames.append(f)
@@ -93,13 +92,15 @@ def vad_collector(sample_rate, frame_duration_ms,
     if voiced_frames:
         yield b''.join([f.bytes for f in voiced_frames])
 
+
 path = "./frontend/speech-transcription-app/public/Original data"
 if not os.path.exists(path):
-        os.makedirs(path)
-        print("Output folder created")
+    os.makedirs(path)
+    print("Output folder created")
 else:
-        print("Output folder already present")
-        sys.exit()
+    print("Output folder already present")
+    sys.exit()
+
 
 def folder(path):
     if not os.path.exists(path):
@@ -108,6 +109,7 @@ def folder(path):
     else:
         print("Output folder already present")
 
+
 path = "./frontend/speech-transcription-app/public/Original data"
 folder(path)
 path = "./main/save"
@@ -115,19 +117,18 @@ folder(path)
 path = "./main/discard"
 folder(path)
 
-file_name= "./main/mod_1.wav"
-op_path= "./frontend/speech-transcription-app/public/Original data/audio_chunks"
+file_name = "./main/mod_1.wav"
+op_path = "./frontend/speech-transcription-app/public/Original data/audio_chunks"
 
 
-
-def main(file_name,op_path):
+def main(file_name, op_path):
 
     if os.path.isdir(op_path):
         print("Output folder already present")
     else:
         os.mkdir(op_path)
-        print("Output folder created")  
-    
+        print("Output folder created")
+
     audio, sample_rate = read_wave(file_name)
     vad = webrtcvad.Vad(2)
     frames = frame_generator(30, audio, sample_rate)
@@ -135,25 +136,15 @@ def main(file_name,op_path):
 
     for i, segment in enumerate(segments):
         path = op_path+'/'+'chunk%004d.wav' % (i+1,)
-        print(' Writing %s' %(path,))
-        write_wave(path, segment, sample_rate )
-
+        print(' Writing %s' % (path,))
+        write_wave(path, segment, sample_rate)
 
 
 # sys.argv[1]
 
 # sys.argv[2]
-file_name= "./main/mod_1.wav"
-op_path= "./frontend/speech-transcription-app/public/Original data/audio_chunks"
-main(file_name,op_path)
+file_name = "./main/mod_1.wav"
+op_path = "./frontend/speech-transcription-app/public/Original data/audio_chunks"
+main(file_name, op_path)
 
 print("Audio Splitting Done")
-
-
-
-
-
-
-
-
-

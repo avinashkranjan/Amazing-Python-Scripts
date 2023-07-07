@@ -10,11 +10,15 @@ SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
 SERVICE_ACCOUNT_FILE = ''
 
 # Authenticate with the YouTube Data API
-credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+credentials = service_account.Credentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-youtube = googleapiclient.discovery.build('youtube', 'v3', credentials=credentials)
+youtube = googleapiclient.discovery.build(
+    'youtube', 'v3', credentials=credentials)
 
 # Define a function to get video statistics
+
+
 def get_video_stats(video_id):
     # Retrieve live views and likes data
     request = youtube.videos().list(
@@ -30,7 +34,7 @@ def get_video_stats(video_id):
         live_views = int(statistics['viewCount'])
         live_likes = int(statistics['likeCount'])
         live_comments = int(statistics['commentCount'])
-        
+
         # Print the results
         print(f'Live views: {live_views}')
         print(f'Live likes: {live_likes}')
@@ -39,11 +43,11 @@ def get_video_stats(video_id):
         print('No video statistics found')
 
 
-
 # Main function
 def main():
     video_id = input("Enter Youtube Video Link : ")
     get_video_stats(video_id.split('/')[-1])
+
 
 # Run the main function if this file is executed as a script
 if __name__ == '__main__':

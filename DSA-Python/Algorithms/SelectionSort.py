@@ -4,6 +4,7 @@ Selection Sort
 Time Complexity: O(n^2)
 """
 
+
 def FindMin(arr):
     """finds minimum element from the list"""
     min = 100000  # let list contain +ve numbers only: so minimum number is -1
@@ -23,6 +24,7 @@ def SelectionSort(arr):
         # swapping element
         if i != minIndex:
             arr[i], arr[minIndex] = arr[minIndex], arr[i]
+
 
 if __name__ == '__main__':
     elements = [100, 19, 28, 14, 6, 1, 99]

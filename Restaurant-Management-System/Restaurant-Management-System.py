@@ -1,4 +1,4 @@
-from tkinter import*
+from tkinter import *
 import random
 import time
 
@@ -20,9 +20,11 @@ f2.pack(side=RIGHT)
 # =====================TIME========================================
 localtime = time.asctime(time.localtime(time.time()))
 
-lblInfo = Label(Tops, font=('arial', 50, 'bold'), text="Restaurant Management Systems", fg="Black", bd=10)
+lblInfo = Label(Tops, font=('arial', 50, 'bold'),
+                text="Restaurant Management Systems", fg="Black", bd=10)
 lblInfo.grid(row=0, column=0)
-lblInfo = Label(Tops, font=('arial', 20, 'bold'), text=localtime, fg="Black", bd=10)
+lblInfo = Label(Tops, font=('arial', 20, 'bold'),
+                text=localtime, fg="Black", bd=10)
 lblInfo.grid(row=1, column=0)
 # =========================calculator=================================
 
@@ -124,39 +126,45 @@ Cost = StringVar()
 Chicken_Burger = StringVar()
 Cheese_Burger = StringVar()
 
-lblReference = Label(f1, font=('arial', 16, 'bold'), text="Reference", bd=16, anchor='w')
+lblReference = Label(f1, font=('arial', 16, 'bold'),
+                     text="Reference", bd=16, anchor='w')
 lblReference.grid(row=0, column=0)
 txtReference = Entry(f1, font=('arial', 16, 'bold'), textvariable=rand, bd=10, insertwidth=4,
-                     bg="sky blue",justify='right')
+                     bg="sky blue", justify='right')
 txtReference.grid(row=0, column=1)
 
-lblFries = Label(f1, font=('arial', 16, 'bold'), text="Large Fries", bd=16, anchor='w')
+lblFries = Label(f1, font=('arial', 16, 'bold'),
+                 text="Large Fries", bd=16, anchor='w')
 lblFries.grid(row=1, column=0)
 txtFries = Entry(f1, font=('arial', 16, 'bold'), textvariable=Fries, bd=10, insertwidth=4,
                  bg="sky blue", justify='right')
 txtFries.grid(row=1, column=1)
 
-lblBurger = Label(f1, font=('arial', 16, 'bold'), text="Burger Meal", bd=16, anchor='w')
+lblBurger = Label(f1, font=('arial', 16, 'bold'),
+                  text="Burger Meal", bd=16, anchor='w')
 lblBurger.grid(row=2, column=0)
 txtBurger = Entry(f1, font=('arial', 16, 'bold'), textvariable=Burger, bd=10, insertwidth=4,
                   bg="sky blue", justify='right')
 txtBurger.grid(row=2, column=1)
 
 
-lblFilet = Label(f1, font=('arial', 16, 'bold'), text="Filet_O_Meal", bd=16, anchor='w')
+lblFilet = Label(f1, font=('arial', 16, 'bold'),
+                 text="Filet_O_Meal", bd=16, anchor='w')
 lblFilet.grid(row=3, column=0)
 txtFilet = Entry(f1, font=('arial', 16, 'bold'), textvariable=Filet,
                  bd=10, insertwidth=4, bg="sky blue", justify='right')
 txtFilet.grid(row=3, column=1)
 
 
-lblChicken = Label(f1, font=('arial', 16, 'bold'), text="Chicken Meal", bd=16, anchor='w')
+lblChicken = Label(f1, font=('arial', 16, 'bold'),
+                   text="Chicken Meal", bd=16, anchor='w')
 lblChicken.grid(row=4, column=0)
 txtChicken = Entry(f1, font=('arial', 16, 'bold'), textvariable=Chicken_Burger, bd=10, insertwidth=4,
                    bg="sky blue", justify='right')
 txtChicken.grid(row=4, column=1)
 
-lblCheese = Label(f1, font=('arial', 16, 'bold'), text="Cheese Meal", bd=16, anchor='w')
+lblCheese = Label(f1, font=('arial', 16, 'bold'),
+                  text="Cheese Meal", bd=16, anchor='w')
 lblCheese.grid(row=5, column=0)
 txtCheese = Entry(f1, font=('arial', 16, 'bold'), textvariable=Cheese_Burger,
                   bd=10, insertwidth=4, bg="sky blue", justify='right')
@@ -164,19 +172,22 @@ txtCheese.grid(row=5, column=1)
 
 # ===================Restaurant Info 2================================================
 
-lblDrinks = Label(f1, font=('arial', 16, 'bold'), text="Drinks", bd=16, anchor='w')
+lblDrinks = Label(f1, font=('arial', 16, 'bold'),
+                  text="Drinks", bd=16, anchor='w')
 lblDrinks.grid(row=0, column=2)
 txtDrinks = Entry(f1, font=('arial', 16, 'bold'), textvariable=Drinks,
                   bd=10, insertwidth=4, bg="sky blue", justify='right')
 txtDrinks.grid(row=0, column=3)
 
-lblCost = Label(f1, font=('arial', 16, 'bold'), text="Cost of Meal", bd=16, anchor='w')
+lblCost = Label(f1, font=('arial', 16, 'bold'),
+                text="Cost of Meal", bd=16, anchor='w')
 lblCost.grid(row=1, column=2)
 txtCost = Entry(f1, font=('arial', 16, 'bold'), textvariable=Cost,
                 bd=10, insertwidth=4, bg="sky blue", justify='right')
 txtCost.grid(row=1, column=3)
 
-lblService = Label(f1, font=('arial', 16, 'bold'), text="Service Charge", bd=16, anchor='w')
+lblService = Label(f1, font=('arial', 16, 'bold'),
+                   text="Service Charge", bd=16, anchor='w')
 lblService.grid(row=2, column=2)
 txtService = Entry(f1, font=('arial', 16, 'bold'), textvariable=Service_Charge, bd=10, insertwidth=4,
                    bg="sky blue", justify='right')
@@ -199,9 +210,11 @@ txtSubTotal = Entry(f1, font=('arial', 16, 'bold'), textvariable=SubTotal,
 txtSubTotal.grid(row=4, column=3)
 
 
-lblTotalCost = Label(f1, font=('arial', 16, 'bold'), text="Total Cost", bd=16, anchor='w')
+lblTotalCost = Label(f1, font=('arial', 16, 'bold'),
+                     text="Total Cost", bd=16, anchor='w')
 lblTotalCost.grid(row=5, column=2)
-txtTotalCost = Entry(f1, font=('arial', 16, 'bold'), textvariable=Total, bd=10, insertwidth=4, bg="sky blue", justify='right')
+txtTotalCost = Entry(f1, font=('arial', 16, 'bold'), textvariable=Total,
+                     bd=10, insertwidth=4, bg="sky blue", justify='right')
 txtTotalCost.grid(row=5, column=3)
 # =========================================================================================================
 btnTotal = Button(f1, padx=10, pady=8, bd=5, fg="black", font=('arial', 20, 'bold'),
@@ -211,4 +224,3 @@ btnReset = Button(f1, padx=10, pady=8, bd=10, fg="black", font=('arial', 20, 'bo
 btnExit = Button(f1, padx=10, pady=8, bd=10, fg="black", font=('arial', 20, 'bold'),
                  width=7, text="Exit", bg="sky blue", command=Exit).grid(row=7, column=3)
 root.mainloop()
-

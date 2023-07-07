@@ -38,11 +38,14 @@ Linear Search   7 iterations    O(n)
 Binary Search   3 iterations    log(n)
 """
 
+
 def LinearSearch(numList, key):
-    for index, element in enumerate(numList):  # return index as well as element
+    # return index as well as element
+    for index, element in enumerate(numList):
         if element == key:
             return index  # if key is found in list, return index of key
     return -1
+
 
 def BinarySearch(numList, key):
     left = 0  # index of elements at left of the mid value
@@ -50,7 +53,7 @@ def BinarySearch(numList, key):
     mid_index = 0  # index of mid value
 
     while left <= right:  # while index[left] <= index[right]
-        mid_index = (left + right)  // 2  # '//2' returns integer value
+        mid_index = (left + right) // 2  # '//2' returns integer value
         mid_num = numList[mid_index]
 
         if mid_num == key:  # middle number is equal to key
@@ -64,7 +67,10 @@ def BinarySearch(numList, key):
 
 
 """Binary Search using Recursion"""
-def BinarySearchRecursion(numList, key, leftIndex, rightIndex):  # will search within left and right
+
+
+# will search within left and right
+def BinarySearchRecursion(numList, key, leftIndex, rightIndex):
     if rightIndex < leftIndex:  # won't iterate in reverse order
         return -1
 
@@ -84,10 +90,6 @@ def BinarySearchRecursion(numList, key, leftIndex, rightIndex):  # will search w
     return BinarySearchRecursion(numList, key, leftIndex, rightIndex)
 
 
-
-
-
-
 if __name__ == '__main__':
     numList = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
     key = 18
@@ -100,6 +102,3 @@ if __name__ == '__main__':
     # Binary Search using Recursion
     index = BinarySearchRecursion(numList, key, 0, len(numList))
     print(f"Binary Search Recursion: Number found at index {index}")
-
-
-

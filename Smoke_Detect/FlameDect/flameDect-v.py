@@ -1,5 +1,5 @@
 
-#*-* coding:utf-8 *-*
+# *-* coding:utf-8 *-*
 
 import numpy as np
 import cv2
@@ -16,7 +16,7 @@ tm = time.time()
 while 1:
     ret, frame = cap.read()
     for i in xrange(50):
-        if i%50 != 0:
+        if i % 50 != 0:
             break
         else:
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -54,7 +54,7 @@ while 1:
         t3 = time.time()
         print 'total time %f' % (t3 - t)
         print x1, y1, x2, y2
-        
+
     if cv2.waitKey(5) & 0xFF == 27:
         break
 cap.release()

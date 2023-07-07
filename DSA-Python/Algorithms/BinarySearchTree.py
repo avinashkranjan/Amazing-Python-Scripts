@@ -58,7 +58,6 @@ class Node:
         self.left = None
         self.right = None
 
-
     def add_child(self, data):
         """Insert data as child in Tree"""
 
@@ -73,16 +72,18 @@ class Node:
                 if self.left is None:  # and if no element is present at left of node
                     self.left = Node(data)  # insert data at left
                 else:
-                    self.left.add_child(data)  # consider node(left) {current node} as node(root)
+                    # consider node(left) {current node} as node(root)
+                    self.left.add_child(data)
 
             elif data > self.data:  # if data is greater than root node
                 if self.right is None:  # and if no data(right) is None
-                    self.right = Node(data)  # insert data at right of node(parent)
+                    # insert data at right of node(parent)
+                    self.right = Node(data)
                 else:  # if data is already present at right of node
-                    self.right.add_child(data)  # consider node(right) {current node} as node(root)
+                    # consider node(right) {current node} as node(root)
+                    self.right.add_child(data)
         else:
             self.data = data  # if tree is empty; treat incoming data as root of the tree
-
 
     def InOrderTraversal(self):
         elements = []  # list to be filled with all elements of BST in specific order
@@ -97,7 +98,6 @@ class Node:
             elements += self.right.InOrderTraversal()
 
         return elements  # return list[elements]
-
 
     def PreOrderTraversal(self):
         elements = []
@@ -149,18 +149,16 @@ class Node:
                 return False
 
     def max(self):
-         '''Maximum element of tree: keep searching on right sub-tree to find maximum element '''
-         if self.right is None:  # leaf node
-             return self.data
-         return self.right.max()
-
+        '''Maximum element of tree: keep searching on right sub-tree to find maximum element '''
+        if self.right is None:  # leaf node
+            return self.data
+        return self.right.max()
 
     def min(self):
         ''' Minimum element of tree: keep searching on left sub-tree to find minimum element '''
         if self.left is None:  # leaf node
             return self.data
         return self.left.min()
-
 
     def delete(self, val):
         if val < self.data:  # search for element in left sub-tree
@@ -182,7 +180,6 @@ class Node:
             self.right = self.right.delete(min_val)
 
         return self
-
 
     def display(self):
         """ Display tree """
@@ -218,7 +215,8 @@ def build_tree(elements):
 if __name__ == '__main__':
 
     # Numeric BST
-    num_list = [20, 18, 37, 15, 7, 5, 9, 18, 24, 0]  # repeated elements are removed
+    # repeated elements are removed
+    num_list = [20, 18, 37, 15, 7, 5, 9, 18, 24, 0]
     list_tree = build_tree(num_list)
     print(list_tree.InOrderTraversal())  # return list in sorted order
     print(list_tree.PreOrderTraversal())  # return list in sorted order
@@ -235,4 +233,3 @@ if __name__ == '__main__':
     print(country_tree.InOrderTraversal())  # return list in sorted order
     print(country_tree.search("UK"))  # False
     print(country_tree.search("Japan"))  # True
-

@@ -12,13 +12,14 @@ from googletrans import Translator
 le = LabelEncoder()
 
 app = Flask(__name__)
-@app.route('/')
 
+
+@app.route('/')
 def home():
     return render_template("home.html")
 
-@app.route("/predict", methods = ["POST"])
 
+@app.route("/predict", methods=["POST"])
 def predict():
     # loading the dataset
     data = pd.read_csv("language_detection.csv")
@@ -27,7 +28,7 @@ def predict():
     # label encoding
     y = le.fit_transform(y)
 
-    #loading the model and cv
+    # loading the model and cv
     model = pickle.load(open("model.pkl", "rb"))
     cv = pickle.load(open("transform.pkl", "rb"))
 
@@ -46,6 +47,8 @@ def predict():
         my_pred = le.inverse_transform(my_pred)
 
     return render_template("home.html", pred="{}".format(my_pred[0]))
+
+
 @app.route("/translate", methods=["POST"])
 def translate():
     translator = Translator()
@@ -58,5 +61,6 @@ def translate():
         translation = translator.translate(text, dest=target_lang)
     return render_template("home.html", translation=translation.text)
 
-if __name__ =="__main__":
+
+if __name__ == "__main__":
     app.run(debug=True)

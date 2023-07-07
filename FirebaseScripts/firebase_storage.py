@@ -20,7 +20,8 @@ def delete_file(firebase_path, name_of_file_to_delete):
 
 
 def download_file(firebase_path, file_name):
-    response = storage.child(firebase_path).download(path="./", filename=file_name)
+    response = storage.child(firebase_path).download(
+        path="./", filename=file_name)
     print(response)
     return response
 

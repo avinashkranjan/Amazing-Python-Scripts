@@ -12,8 +12,10 @@ from pygame import image, transform
 
 animals_count = dict((a, 0) for a in gc.ASSET_FILES)
 
+
 def available_animals():
     return [animal for animal, count in animals_count.items() if count < 2]
+
 
 class Animal:
     def __init__(self, index):
@@ -24,7 +26,8 @@ class Animal:
         self.col = index % gc.NUM_TILES_SIDE
         self.skip = False
         self.image = image.load(self.image_path)
-        self.image = transform.scale(self.image, (gc.IMAGE_SIZE - 2 * gc.MARGIN, gc.IMAGE_SIZE - 2 * gc.MARGIN))
+        self.image = transform.scale(
+            self.image, (gc.IMAGE_SIZE - 2 * gc.MARGIN, gc.IMAGE_SIZE - 2 * gc.MARGIN))
         self.box = self.image.copy()
         self.box.fill((200, 200, 200))
 

@@ -21,19 +21,22 @@ Best-case Performance
 
 """
 
+
 def ShellSort(arr):
     # gap = 3  # initialised gap to 3
     size = len(arr)
     gap = size // 2  # initialised gap to half of size of array
     while gap > 0:
         for i in range(gap, size):
-            pointer = arr[i]  # pointer initialised to array such that gap is maintained
+            # pointer initialised to array such that gap is maintained
+            pointer = arr[i]
             j = i
             # get element which is at gap 3 and compare with current pointer element AND j>=gap else (j-gap) would be negative
             while j >= gap and arr[j - gap] > pointer:
                 arr[j] = arr[j-gap]  # swapped elements
                 j -= gap  # In each while loop iteration, reduce by gap for comparison with previous elements
-            arr[j] = pointer  # after while loop ends, all elements have been swapped
+            # after while loop ends, all elements have been swapped
+            arr[j] = pointer
             # after function end, all heavy values are at right side and light values at left of partially-sorted array
         gap = gap // 2  # gap reduced by half
 

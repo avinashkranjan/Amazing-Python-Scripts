@@ -11,14 +11,18 @@ def load_assests():
     :return: YELLOW_SPACESHIP, RED_SPACESHIP, SPACE, BORDER
     """
     # Loading spaceship images into our file known as surfaces as we use this above background
-    spaceshipImageYellow = pygame.image.load(os.path.join("Assets", "Yellow_Spaceship.png"))
-    spaceshipImageRed = pygame.image.load(os.path.join("Assets", "Red_Spaceship.png"))
+    spaceshipImageYellow = pygame.image.load(
+        os.path.join("Assets", "Yellow_Spaceship.png"))
+    spaceshipImageRed = pygame.image.load(
+        os.path.join("Assets", "Red_Spaceship.png"))
     SPACE = pygame.image.load(os.path.join("Assets", "space.jpg"))
 
     # SCALING down the images
     SPACESHIP_WIDTH, SPACESHIP_HEIGHT = (50, 40)
-    YELLOW_SPACESHIP = pygame.transform.scale(spaceshipImageYellow, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT))
-    RED_SPACESHIP = pygame.transform.scale(spaceshipImageRed, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT))
+    YELLOW_SPACESHIP = pygame.transform.scale(
+        spaceshipImageYellow, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT))
+    RED_SPACESHIP = pygame.transform.scale(
+        spaceshipImageRed, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT))
     SPACE = pygame.transform.scale(SPACE, (900, 500))
 
     # ROTATING the images
@@ -101,7 +105,8 @@ def winner(text, WIN):
     FONT = pygame.font.SysFont('comicsans', 100)
     # Displaying the winner font on the screen.
     draw_text = FONT.render(text, 1, (255, 255, 255))
-    WIN.blit(draw_text, (width / 2 - draw_text.get_width() / 2, height / 2 - draw_text.get_height() / 2))
+    WIN.blit(draw_text, (width / 2 - draw_text.get_width() /
+             2, height / 2 - draw_text.get_height() / 2))
     # Updating the display
     pygame.display.update()
     pygame.time.delay(5000)

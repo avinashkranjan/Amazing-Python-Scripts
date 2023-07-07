@@ -8,11 +8,11 @@ from pyppeteer.errors import PageError, TimeoutError, NetworkError
 
 
 def main():
-    parser = argparse.ArgumentParser(description = 'Page Downloader as PDF')
-    parser.add_argument('--link', '-l', action = 'store', dest = 'link', 
-                        required = True, help = 'Inform the link to download.')
-    parser.add_argument('--name', '-n', action = 'store', dest = 'name', 
-                        required = False, help = 'Inform the name to save.')
+    parser = argparse.ArgumentParser(description='Page Downloader as PDF')
+    parser.add_argument('--link', '-l', action='store', dest='link',
+                        required=True, help='Inform the link to download.')
+    parser.add_argument('--name', '-n', action='store', dest='name',
+                        required=False, help='Inform the name to save.')
 
     arguments = parser.parse_args()
 
@@ -37,6 +37,7 @@ def main():
         print('Timeout.')
     except NetworkError:
         print('No access to the network.')
+
 
 if __name__ == '__main__':
     main()

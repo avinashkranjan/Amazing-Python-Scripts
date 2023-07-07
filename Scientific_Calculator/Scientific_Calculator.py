@@ -3,7 +3,7 @@
 ############################################ (https://github.com/Avdhesh-Varshney) ##########################################
 
 # Importing Modules
-from tkinter import * 
+from tkinter import *
 import tkinter.messagebox as tmsg
 import math as m
 
@@ -11,25 +11,28 @@ import math as m
 root = Tk()
 
 # Fixing the size of the calculator screen
-root.minsize(520,340)
-root.maxsize(520,340)
+root.minsize(520, 340)
+root.maxsize(520, 340)
 
 # Title of the calculator
 root.title("Scientific Calculator")
 root.wm_iconbitmap("calculator.ico")
 
 sc = StringVar()
-sc = Entry(root,width=31,textvariable=sc,relief=SUNKEN,font="cosmicsansms 20")
-sc.grid(row=0,column=0,columnspan=10,padx=11,pady=12) 
+sc = Entry(root, width=31, textvariable=sc,
+           relief=SUNKEN, font="cosmicsansms 20")
+sc.grid(row=0, column=0, columnspan=10, padx=11, pady=12)
 
 # Helping messages
+
+
 def helper():
     help = '''1. For the following functions please enter the number first and then press the required function:
 sin, cos, tan, log, ln, √, !, rad, degree, 1/x, π, e 
 
 2. For multiplication with float numbers, say 5*0.4 multiply like 5*4/10'''
     # Adding message into the menu bar of the calculator
-    tmsg.showinfo("Help",help)
+    tmsg.showinfo("Help", help)
 
 
 # About section of the header
@@ -47,23 +50,23 @@ def abt():
 def const():
     msg = '''If you press constants like:  π and e, 2 times, the result will be square of that constant. 
 That means number of times you press the constant, the result will be constant to the power that number. '''
-    tmsg.showinfo("Help",msg)
+    tmsg.showinfo("Help", msg)
 
 
 # Initialising main screen/root of the calculator
 mainmenu = Menu(root)
 
 # Adding menu bar in the calculator
-submenu = Menu(mainmenu,tearoff=0)
-submenu.add_command(label="General",command=helper)
-submenu.add_command(label="Constants",command=const)
-mainmenu.add_cascade(label="Help",menu=submenu)
+submenu = Menu(mainmenu, tearoff=0)
+submenu.add_command(label="General", command=helper)
+submenu.add_command(label="Constants", command=const)
+mainmenu.add_cascade(label="Help", menu=submenu)
 
 # Append the author details
-mainmenu.add_command(label="About",command=abt) 
+mainmenu.add_command(label="About", command=abt)
 
 # Append the exit button
-mainmenu.add_command(label="Exit",command=quit)
+mainmenu.add_command(label="Exit", command=quit)
 
 # Finally set the configuration in the screen of the calculator made by Tkinter library
 root.config(menu=mainmenu)
@@ -75,7 +78,7 @@ def scientificCalc(event):
     key = event.widget
     text = key['text']
     val = sc.get()
-    sc.delete(0,END)
+    sc.delete(0, END)
 
     # Checking the function i.e., which function is triggered by the user
 
@@ -84,20 +87,20 @@ def scientificCalc(event):
         sc.insert(0, m.sin(float(val)))
 
     elif text == "cos":
-        sc.insert(0, m.cos(float(val)))  
+        sc.insert(0, m.cos(float(val)))
 
     elif text == "tan":
         sc.insert(0, m.tan(float(val)))
-    
+
     # Logarithmic functions
     elif text == "log":
-        if(float(val) <= 0.00):
+        if (float(val) <= 0.00):
             sc.insert(0, "Not Possible")
         else:
             sc.insert(0, m.log10(float(val)))
 
     elif text == "ln":
-        if(float(val) <= 0.00):
+        if (float(val) <= 0.00):
             sc.insert(0, "Not Possible")
         else:
             sc.insert(0, m.log(float(val)))
@@ -126,7 +129,7 @@ def scientificCalc(event):
             sc.insert(0, ans)
 
     elif text == "1/x":
-        if(val == "0"):
+        if (val == "0"):
             sc.insert(0, "ꝏ")
         else:
             sc.insert(0, 1/float(val))
@@ -136,21 +139,21 @@ def scientificCalc(event):
             sc.insert(0, str(m.e))
         else:
             sc.insert(0, str(float(val) * (m.e)))
-    
+
 
 # Function to check click events
 def click(event):
     key = event.widget
     text = key['text']
     oldValue = sc.get()
-    sc.delete(0,END)
+    sc.delete(0, END)
     newValue = oldValue + text
-    sc.insert(0,newValue)
+    sc.insert(0, newValue)
 
 
 # Clear the calculator screen
 def clr(event):
-    sc.delete(0,END)
+    sc.delete(0, END)
 
 
 # Delete the entered text or number one by one
@@ -168,12 +171,13 @@ def calculate(event):
     answer = eval(answer)
     sc.delete(0, END)
     sc.insert(0, answer)
-    
+
 
 # Initialising the user interface of the calculator
 class Calculator:
     def __init__(self, txt, r, c, funcName, color="black"):
-        self.var = Button(root, text=txt, padx=3, pady=5, fg="white", bg=color, width=10, font="cosmicsansms 12")
+        self.var = Button(root, text=txt, padx=3, pady=5,
+                          fg="white", bg=color, width=10, font="cosmicsansms 12")
         self.var.bind("<Button-1>", funcName)
         self.var.grid(row=r, column=c)
 
@@ -275,4 +279,3 @@ btn34 = Calculator("=", 7, 4, calculate)
 
 # Program Starts
 root.mainloop()
-

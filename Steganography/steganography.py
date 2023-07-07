@@ -29,18 +29,18 @@ def encode(path_image, data):
     charCount = 0
     print("[*] Encoding Data.......")
     for i in range(Row + 1):
-        while(count < width and charCount < len(data)):
+        while (count < width and charCount < len(data)):
             char = data[charCount]
             charCount += 1
             for index_k, k in enumerate(char):
-                if((k == '1' and img[i][count][index_k % 3] % 2 == 0) or (k == '0' and img[i][count][index_k % 3] % 2 == 1)):
+                if ((k == '1' and img[i][count][index_k % 3] % 2 == 0) or (k == '0' and img[i][count][index_k % 3] % 2 == 1)):
                     img[i][count][index_k % 3] -= 1
-                if(index_k % 3 == 2):
+                if (index_k % 3 == 2):
                     count += 1
-                if(index_k == 7):
-                    if(charCount*3 < Pixal and img[i][count][2] % 2 == 1):
+                if (index_k == 7):
+                    if (charCount*3 < Pixal and img[i][count][2] % 2 == 1):
                         img[i][count][2] -= 1
-                    if(charCount*3 >= Pixal and img[i][count][2] % 2 == 0):
+                    if (charCount*3 >= Pixal and img[i][count][2] % 2 == 0):
                         img[i][count][2] -= 1
                     count += 1
         count = 0
@@ -55,17 +55,17 @@ def decode(path_image):
     for index_i, i in enumerate(img):
         i.tolist()
         for index_j, j in enumerate(i):
-            if((index_j) % 3 == 2):
+            if ((index_j) % 3 == 2):
                 data.append(bin(j[0])[-1])
                 data.append(bin(j[1])[-1])
-                if(bin(j[2])[-1] == '1'):
+                if (bin(j[2])[-1] == '1'):
                     stop = True
                     break
             else:
                 data.append(bin(j[0])[-1])
                 data.append(bin(j[1])[-1])
                 data.append(bin(j[2])[-1])
-        if(stop):
+        if (stop):
             break
 
     message = []

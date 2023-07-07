@@ -37,7 +37,7 @@ def data_set(dir_data):
         ymin = int(df1['ymin'][i])
         xmax = int(df1['xmax'][i])
         ymax = int(df1['ymax'][i])
-        #image=image[ymin:ymax,  xmin:xmax]
+        # image=image[ymin:ymax,  xmin:xmax]
         try:
             # resizing to (70 x 70)
             image = cv2.resize(image, (70, 70))
@@ -45,7 +45,7 @@ def data_set(dir_data):
             skipped += 1
             print(E)
             continue
-        if(df1['class'][i] == 'mask'):
+        if (df1['class'][i] == 'mask'):
             without_mask = 'with_mask'
         image = img_to_array(image)
         data.append(image)

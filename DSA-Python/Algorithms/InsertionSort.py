@@ -39,16 +39,20 @@ Effective Approach
 
 
 def InsertionSort(elements):
-    for i in range(1, len(elements)):  # starting with the 2nd element {index[1]}
+    # starting with the 2nd element {index[1]}
+    for i in range(1, len(elements)):
         pointer = elements[i]  # current element named as pointer
-        j = i - 1  # left element of pointer {index[current] - 1 = elements[left]}
+        # left element of pointer {index[current] - 1 = elements[left]}
+        j = i - 1
         # compare current element (pointer) to sorted array (j)
         # iterate between j to index[0] and continue until elements of j > pointer
         while j >= 0 and pointer < elements[j]:
-            elements[j + 1] = elements[j]  # swapped left element to right element
+            # swapped left element to right element
+            elements[j + 1] = elements[j]
             j = j - 1  # same as j--
         # when loop is terminated, pointer will be assigned to next element
-        elements[j + 1] = pointer  # increase pointer value and repeat until array is sorted
+        # increase pointer value and repeat until array is sorted
+        elements[j + 1] = pointer
 
 
 if __name__ == '__main__':

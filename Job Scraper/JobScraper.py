@@ -39,22 +39,23 @@ def job_scraper():
         soup = BeautifulSoup(req_page.text, "html.parser")
         job_table = soup.find("td", id="resultsCol")
         count = 0
-        
+
         flag = 1
-        while flag :
+        while flag:
             for job_card in job_table.find_all("div", class_="jobsearch-SerpJobCard"):
                 # Getting the job title
-                title_elem = job_card.find('a', class_='jobtitle turnstileLink')
+                title_elem = job_card.find(
+                    'a', class_='jobtitle turnstileLink')
                 title = title_elem.text.strip()
 
                 # Getting the company name
                 company_details = job_card.find('div', class_='sjcl')
                 company_name = company_details.find('span', class_='company')
                 company_name = company_name.text.strip()
-                
+
                 # Getting the company location
                 company_loc = company_details.find('span', class_='location')
-                if company_loc!= None:
+                if company_loc != None:
                     company_loc = company_loc.text.strip()
                 else:
                     company_loc = loc
@@ -68,13 +69,15 @@ def job_scraper():
                 date = date_elem.text.strip()
 
                 # Getting the job summary
-                summary_ele = job_card.findAll('div', attrs={'class': 'summary'})
+                summary_ele = job_card.findAll(
+                    'div', attrs={'class': 'summary'})
                 for span in summary_ele:
                     span = span.text.strip()
 
                 count += 1
 
-                job_array.append([title, company_name, company_loc, date, span, link])
+                job_array.append(
+                    [title, company_name, company_loc, date, span, link])
                 if count == num:
                     flag = 0
                     break
@@ -86,7 +89,7 @@ def job_scraper():
                 if page.attrs['aria-label'] == 'Next':
                     found = 1
                     break
-            
+
             if found:
                 next_page_link = 'https://in.indeed.com' + page.attrs['href']
 
@@ -101,11 +104,9 @@ def job_scraper():
 
         write_csv(loc, job_array)
 
-
     else:
         print('There seems to be a problem fetching the results. Check your inputs, connections and try again')
 
 
 if __name__ == '__main__':
     job_scraper()
-

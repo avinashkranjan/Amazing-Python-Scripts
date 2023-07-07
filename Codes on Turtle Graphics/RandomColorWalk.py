@@ -9,7 +9,8 @@ tim.speed("fastest")
 for i in range(300):
     tim.forward(30)
     # Choosing a random combination of colors
-    tim.color((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+    tim.color((random.randint(0, 255), random.randint(
+        0, 255), random.randint(0, 255)))
     tim.setheading(random.choice([0, 90, 180, 270]))
 scr = t.Screen()
 scr.exitonclick()

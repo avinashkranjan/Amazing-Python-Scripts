@@ -1,6 +1,7 @@
 import plotly.graph_objects as go
 import numpy as np
 
+
 def create_line_chart(x_data, y_data):
     fig = go.Figure(data=go.Scatter(x=x_data, y=y_data))
 
@@ -17,6 +18,7 @@ def create_line_chart(x_data, y_data):
         margin=dict(l=50, r=50, b=100, t=100, pad=4)
     )
     fig.show()
+
 
 if __name__ == "__main__":
     np.random.seed(42)

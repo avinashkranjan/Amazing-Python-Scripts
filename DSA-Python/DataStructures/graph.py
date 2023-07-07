@@ -33,6 +33,7 @@ Difference between TREE and GRAPH:
 
 """
 
+
 class Graph:
     def __init__(self, edges):
         self.edges = edges
@@ -40,9 +41,11 @@ class Graph:
         self.graph_dict = {}  # blank dictionary
         for start, end in self.edges:
             if start in self.graph_dict:  # element1 is already in dictionary
-                self.graph_dict[start].append(end)  # add another element associated to element1 in graph_dictionary
+                # add another element associated to element1 in graph_dictionary
+                self.graph_dict[start].append(end)
             else:
-                self.graph_dict[start] = [end]  # if element1 is not present, add it to graph_dictionary
+                # if element1 is not present, add it to graph_dictionary
+                self.graph_dict[start] = [end]
         print("Graph dictionary: ", self.graph_dict)  # print route dictionary
 
     # get paths between start-point and end-point
@@ -89,17 +92,15 @@ class Graph:
         return shortest_path
 
 
-
-
 if __name__ == '__main__':
 
     routes = [
-        ("Mumbai","Pune"),
+        ("Mumbai", "Pune"),
         ("Mumbai", "Surat"),
         ("Surat", "Bangaluru"),
-        ("Pune","Hyderabad"),
-        ("Pune","Mysuru"),
-        ("Hyderabad","Bangaluru"),
+        ("Pune", "Hyderabad"),
+        ("Pune", "Mysuru"),
+        ("Hyderabad", "Bangaluru"),
         ("Hyderabad", "Chennai"),
         ("Mysuru", "Bangaluru"),
         ("Chennai", "Bangaluru")
@@ -129,11 +130,15 @@ if __name__ == '__main__':
     start = "Mumbai"
     end = "New York"
 
-    print(f"All paths between: {start} and {end}: ",route_graph.getpath(start,end))
-    print(f"Shortest path between {start} and {end}: ", route_graph.getShortestPath(start,end))
+    print(f"All paths between: {start} and {end}: ",
+          route_graph.getpath(start, end))
+    print(f"Shortest path between {start} and {end}: ",
+          route_graph.getShortestPath(start, end))
 
     start = "Dubai"
     end = "New York"
 
-    print(f"All paths between: {start} and {end}: ",route_graph.getpath(start,end))
-    print(f"Shortest path between {start} and {end}: ", route_graph.getShortestPath(start,end))
+    print(f"All paths between: {start} and {end}: ",
+          route_graph.getpath(start, end))
+    print(f"Shortest path between {start} and {end}: ",
+          route_graph.getShortestPath(start, end))

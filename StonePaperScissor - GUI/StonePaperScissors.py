@@ -5,7 +5,7 @@ import random
 
 from tkinter import *
 
-#variables and Dictionary
+# variables and Dictionary
 # These are total events that could occur if/else can also be used but they are pain to implement
 schema = {
     "rock": {"rock": 1, "paper": 0, "scissors": 2},

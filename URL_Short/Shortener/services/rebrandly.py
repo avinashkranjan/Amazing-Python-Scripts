@@ -5,7 +5,7 @@ Needs an API_KEY
 """
 import json
 
-from pyshorteners.base import BaseShortener                     
+from pyshorteners.base import BaseShortener
 from pyshorteners.exceptions import ShorteningErrorException
 
 
@@ -30,7 +30,7 @@ class Rebrandly(BaseShortener):
         response = self._post(self.api_url, data=params, headers=headers)
         if response.ok:
             try:
-                
+
                 data = response.json()
             except ValueError as e:
                 raise ShorteningErrorException('There was an error shortening'

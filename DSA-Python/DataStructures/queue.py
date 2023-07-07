@@ -49,13 +49,13 @@ print(f"Popping FIRST item {queue}", end="\n\n")
 
 # insert(), index(), remove(), count()
 
-print (f"Index of 2 between index 0&3 is {queue.index(3,1,4)}", end="\n\n") # index(ele, begi, endi) : return First repetitive_index of element
-  
-queue.insert(3,1) # insert(index,val)
-print (f"Queue after inserting 1 at index3 {queue}", end="\n\n")
-    
-print (f"1 has been repeated {queue.count(1)} times", end="\n\n")
-  
-queue.remove(3)
-print (f"Deleting first occurrence of 3 is{queue}", end="\n\n")
+# index(ele, begi, endi) : return First repetitive_index of element
+print(f"Index of 2 between index 0&3 is {queue.index(3,1,4)}", end="\n\n")
 
+queue.insert(3, 1)  # insert(index,val)
+print(f"Queue after inserting 1 at index3 {queue}", end="\n\n")
+
+print(f"1 has been repeated {queue.count(1)} times", end="\n\n")
+
+queue.remove(3)
+print(f"Deleting first occurrence of 3 is{queue}", end="\n\n")

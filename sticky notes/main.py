@@ -58,11 +58,11 @@ class StickyNotes(Toplevel):
 
     def quit_window(self, event):
         self.closebutton.config(relief='flat', bd=0)
-        if(messagebox.askyesno('Delete Note?', 'Are you sure you want to delete this note?', parent=self)):
+        if (messagebox.askyesno('Delete Note?', 'Are you sure you want to delete this note?', parent=self)):
             global no_of_windows
             self.destroy()
             no_of_windows -= 1
-            if(no_of_windows == 1):
+            if (no_of_windows == 1):
                 root.destroy()
             return
         self.closebutton.config(relief='flat', bd=0, bg='#F8F7B6')

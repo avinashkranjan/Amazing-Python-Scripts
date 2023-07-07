@@ -1,11 +1,11 @@
-## json and csv modules are installed by default, no need to install
+# json and csv modules are installed by default, no need to install
 
 import json
 import csv
 
 
-## specify file path , along with extension
-input_json_file='input.json'
+# specify file path , along with extension
+input_json_file = 'input.json'
 csv_file = 'output.csv'
 
 # Load JSON data from a file
@@ -24,4 +24,4 @@ with open(csv_file, 'w', newline='') as csvfile:
     for item in data:
         writer.writerow(item.values())
 
-printf("Conversion successfull. The output file is saved as : "+ csv_file)
+printf("Conversion successfull. The output file is saved as : " + csv_file)

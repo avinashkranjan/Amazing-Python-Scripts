@@ -1,24 +1,27 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template,json
+from flask import Flask, request, jsonify, render_template, json
 import cv2
 from skimage.metrics import structural_similarity as ssim
 
 
-
 app = Flask(__name__)
+
 
 @app.route('/')
 def home():
-    return jsonify({'message':'Welcome to Flask Apis'})
+    return jsonify({'message': 'Welcome to Flask Apis'})
 
-@app.route('/img',methods=['POST'])
+
+@app.route('/img', methods=['POST'])
 def predict():
     file1 = request.files['file1']
     file2 = request.files['file2']
 
     # Read the images using OpenCV
-    img1 = cv2.imdecode(np.frombuffer(file1.read(), np.uint8), cv2.IMREAD_COLOR)
-    img2 = cv2.imdecode(np.frombuffer(file2.read(), np.uint8), cv2.IMREAD_COLOR)
+    img1 = cv2.imdecode(np.frombuffer(
+        file1.read(), np.uint8), cv2.IMREAD_COLOR)
+    img2 = cv2.imdecode(np.frombuffer(
+        file2.read(), np.uint8), cv2.IMREAD_COLOR)
 
     # Resize the images to 256x256 pixels
     img1 = cv2.resize(img1, (256, 256))
@@ -35,7 +38,7 @@ def predict():
     similarity_percentage = score * 100
 
     # Return the similarity percentage in a JSON response
-    return jsonify({'similarity_percentage': similarity_percentage})    
+    return jsonify({'similarity_percentage': similarity_percentage})
 
 
 if __name__ == '__main__':

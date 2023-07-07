@@ -4,7 +4,8 @@ import random
 def get_user_input():
     while True:
         try:
-            ip = int(input("Enter a number (1-3):\n1. Stone\t2. Paper\t3. Scissors: "))
+            ip = int(
+                input("Enter a number (1-3):\n1. Stone\t2. Paper\t3. Scissors: "))
             if ip in [1, 2, 3]:
                 return ip
             else:

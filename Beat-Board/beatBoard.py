@@ -10,24 +10,24 @@ class padSound:
     def given_sound(self):
         playsound(self.soundLocation)
 
-    def play_sound(self,event):
+    def play_sound(self, event):
         sound = Thread(target=self.given_sound)
         sound.start()
 
 
 # All the locations of the sounds
-kickLocation  = './Beat-Board/Sounds/Kick.wav'
+kickLocation = './Beat-Board/Sounds/Kick.wav'
 hiHatLocation = './Beat-Board/Sounds/hiHat.wav'
 snareLocation = './Beat-Board/Sounds/snare.wav'
-pad1Location  = './Beat-Board/Sounds/Pad1.wav'
-pad2Location  = './Beat-Board/Sounds/Pad2.wav'
-pad3Location  = './Beat-Board/Sounds/Pad3.wav'
-pad4Location  = './Beat-Board/Sounds/Pad4.wav'
-pad5Location  = './Beat-Board/Sounds/Pad5.wav'
-pad6Location  = './Beat-Board/Sounds/Pad6.wav'
+pad1Location = './Beat-Board/Sounds/Pad1.wav'
+pad2Location = './Beat-Board/Sounds/Pad2.wav'
+pad3Location = './Beat-Board/Sounds/Pad3.wav'
+pad4Location = './Beat-Board/Sounds/Pad4.wav'
+pad5Location = './Beat-Board/Sounds/Pad5.wav'
+pad6Location = './Beat-Board/Sounds/Pad6.wav'
 
 # Create drum objects
-kickDrum  = padSound(kickLocation)
+kickDrum = padSound(kickLocation)
 hiHatDrum = padSound(hiHatLocation)
 snareDrum = padSound(snareLocation)
 
@@ -38,6 +38,7 @@ pad3 = padSound(pad3Location)
 pad4 = padSound(pad4Location)
 pad5 = padSound(pad5Location)
 pad6 = padSound(pad6Location)
+
 
 def create_layout():
 
@@ -111,7 +112,7 @@ def create_layout():
 
 
 main_window = Tk()
-main_window.resizable(False,False)
+main_window.resizable(False, False)
 main_window.title('Beat Board')
 create_layout()
 main_window.mainloop()

@@ -6,10 +6,12 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Circular Linked List
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
 
 class LinkedList:
     def __init__(self):
@@ -37,8 +39,8 @@ class LinkedList:
             else:
                 self.root = self.root.next
                 self.last.next = self.root
-            print('\nDeleted element: ',temp.data)
-    
+            print('\nDeleted element: ', temp.data)
+
     def insertRight(self, data):
         n = Node(data)
         if self.root == None:
@@ -55,7 +57,7 @@ class LinkedList:
             print('\nLinked List is empty..!!')
         else:
             if self.root == self.last:
-                self.root = self.last =  None
+                self.root = self.last = None
             else:
                 temp = self.root
                 temp2 = self.root
@@ -64,7 +66,7 @@ class LinkedList:
                     temp = temp.next
                 self.last = temp2
                 temp2.next = self.root
-            print('\nDeleted element: ',temp.data)
+            print('\nDeleted element: ', temp.data)
 
     def printList(self):
         if self.root == None:
@@ -72,13 +74,13 @@ class LinkedList:
         temp = self.root
         print('\nElements in Linked List are: ')
         while True:
-            print('|',temp.data,'| -> ',end = '')
+            print('|', temp.data, '| -> ', end='')
             temp = temp.next
             if temp == self.root:
                 break
         print('None')
         print()
-        
+
 
 o = LinkedList()
 
@@ -96,19 +98,19 @@ while True:
     elif ch == 2:
         data = int(input('\nEnter value to be inserted in right: '))
         o.insertRight(data)
-    
+
     elif ch == 3:
         o.deleteLeft()
-    
+
     elif ch == 4:
         o.deleteRight()
 
     elif ch == 5:
         o.printList()
-    
+
     elif ch == 0:
         print('You are out of the program..!!')
         break
-    
+
     else:
         print('\nWrong Input..\nEnter the correct choice..!!\n')

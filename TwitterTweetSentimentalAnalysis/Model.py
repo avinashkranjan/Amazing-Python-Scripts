@@ -47,10 +47,13 @@ class model(object):
             score = SentimentIntensityAnalyzer().polarity_scores(tweet.full_text)
 
             if polarity < 0 or subjectivity < 0 and score['neg'] > score['pos']:
-                result.append([tweet.full_text, polarity, subjectivity, score, "negative"])
+                result.append([tweet.full_text, polarity,
+                              subjectivity, score, "negative"])
             elif polarity > 0 and subjectivity > 0 and score['neg'] < score['pos']:
-                result.append([tweet.full_text, polarity, subjectivity, score, "positive"])
+                result.append([tweet.full_text, polarity,
+                              subjectivity, score, "positive"])
             else:
-                result.append([tweet.full_text, polarity, subjectivity, score, "neutral"])
+                result.append([tweet.full_text, polarity,
+                              subjectivity, score, "neutral"])
 
         return result

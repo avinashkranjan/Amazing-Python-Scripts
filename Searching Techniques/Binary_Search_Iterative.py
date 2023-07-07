@@ -8,7 +8,9 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 """
 
 # Iterative Method
-def binarysearch(a,key):
+
+
+def binarysearch(a, key):
     start = 0
     end = len(a)-1
 
@@ -27,6 +29,7 @@ def binarysearch(a,key):
 
     return -1
 
+
 a = []
 size = int(input('Enter size of array: '))
 print('')
@@ -34,12 +37,12 @@ for i in range(size):
     data = int(input('Enter element: '))
     a.append(data)
 print('')
-print('Elements are: ',a)
+print('Elements are: ', a)
 
 key = int(input('Enter key to search: '))
 
-res = binarysearch(a,key)
+res = binarysearch(a, key)
 if res == -1:
-    print(key,'not found..!!')
+    print(key, 'not found..!!')
 else:
-    print(key,'found at',res+1,'location')
+    print(key, 'found at', res+1, 'location')

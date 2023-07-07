@@ -4,6 +4,7 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 import numpy as np
 
+
 def classify_image(image_path):
     # Load the pre-trained MobileNetV2 model
     model = mobilenet.MobileNetV2(weights='imagenet')
@@ -20,6 +21,7 @@ def classify_image(image_path):
 
     return decoded_predictions
 
+
 # Example usage
 image_path = "image.jpg"
 predictions = classify_image(image_path)
@@ -27,4 +29,3 @@ predictions = classify_image(image_path)
 # Print the top 3 predictions
 for prediction in predictions:
     print(f"{prediction[1]}: {prediction[2]*100:.2f}%")
-

@@ -14,7 +14,8 @@ class model(object):
         lower_case = text.lower()
 
         # Removing punctuations
-        cleaned_text = lower_case.translate(str.maketrans('', '', string.punctuation))
+        cleaned_text = lower_case.translate(
+            str.maketrans('', '', string.punctuation))
 
         # splitting text into words
         tokenized_words = cleaned_text.split()
@@ -47,7 +48,8 @@ class model(object):
         emotion_list = []
         with open('./Text_Sentimental_Analysis_Script_with_GUI/textFiles/emotions.txt', 'r') as file:
             for line in file:
-                clear_line = line.replace("\n", '').replace(",", '').replace("'", '').strip()
+                clear_line = line.replace("\n", '').replace(
+                    ",", '').replace("'", '').strip()
                 word, emotion = clear_line.split(':')
 
                 if word in final_words:

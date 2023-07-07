@@ -16,7 +16,8 @@ root.title("Cryptography World")
 
 # label
 Label(root, text='ENCODE DECODE', font='arial 20 bold').pack()
-Label(root, text='By Anushka Chitranshi', font='arial 20 bold').pack(side=BOTTOM)
+Label(root, text='By Anushka Chitranshi',
+      font='arial 20 bold').pack(side=BOTTOM)
 
 # define variables
 Text = StringVar()
@@ -83,7 +84,7 @@ Entry(
 # key
 Label(root, font='arial 12 bold', text='KEY').place(x=60, y=90)
 Entry(
-    root, font='arial 10', textvariable=private_key , bg='ghost white'
+    root, font='arial 10', textvariable=private_key, bg='ghost white'
 ).place(x=290, y=90)
 
 # mode
@@ -91,12 +92,12 @@ Label(
     root, font='arial 12 bold', text='MODE(e-encode, d-decode)'
 ).place(x=60, y=120)
 Entry(
-    root, font='arial 10', textvariable=mode , bg='ghost white'
+    root, font='arial 10', textvariable=mode, bg='ghost white'
 ).place(x=290, y=120)
 
 # result
 Entry(
-     root, font='arial 10 bold', textvariable=Result, bg='ghost white'
+    root, font='arial 10 bold', textvariable=Result, bg='ghost white'
 ).place(x=290, y=150)
 
 # result button

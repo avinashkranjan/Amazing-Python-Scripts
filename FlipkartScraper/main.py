@@ -9,14 +9,15 @@ import concurrent.futures
 
 SeleniumScraper = SeleniumScraper()
 
+
 class Scraper:
     def __init__(self):
         self.brand: str = "flipkart"
         self.website = "https://www.flipkart.com/search?q="
         self.websiteName = "https://www.flipkart.com"
-        self.stamp: str = datetime.now().strftime("%Y-%ma-%d_%H-%M-%S") 
+        self.stamp: str = datetime.now().strftime("%Y-%ma-%d_%H-%M-%S")
         self.storagePath: str = os.getcwd()
-    
+
         self.productLinksXpath = '//*[@rel="noopener noreferrer"]//@href'
         self.skuXpath = '//tr[contains(@class, "row")]//td[contains(text(), "Model Number")]/following-sibling::td[1]/ul/li/text()'
         self.nameXpath = '//*[@class="B_NuCI"]//text()'
@@ -24,7 +25,7 @@ class Scraper:
         self.image = '//*[@class="_396cs4 _2amPTt _3qGmMb"]//@src'
         self.category = '//*[@class="_3GIHBu"]//text()'
         self.price = '//*[@class="_30jeq3 _16Jk6d"]//text()'
-        
+
     def getProductList(self, keyword):
         try:
             productLinks = []
@@ -34,8 +35,9 @@ class Scraper:
                 doc = SeleniumScraper.fetch_request_selenium(url)
             else:
                 doc = html.fromstring(response)
-            
-            Links = SeleniumScraper.get_xpath_link(doc, self.productLinksXpath, self.websiteName)
+
+            Links = SeleniumScraper.get_xpath_link(
+                doc, self.productLinksXpath, self.websiteName)
             productLinks.extend(Links)
 
             for page in range(2, 20):
@@ -46,13 +48,14 @@ class Scraper:
                     doc = SeleniumScraper.fetch_request_selenium(url)
                 else:
                     doc = html.fromstring(response)
-                
-                Links = SeleniumScraper.get_xpath_link(doc, self.productLinksXpath, self.websiteName)
+
+                Links = SeleniumScraper.get_xpath_link(
+                    doc, self.productLinksXpath, self.websiteName)
                 productLinks.extend(Links)
 
             print(f'Total products for {keyword} is {len(productLinks)}')
             return productLinks
-        
+
         except Exception as e:
             print(e)
 
@@ -67,13 +70,13 @@ class Scraper:
         productDetails = {}
 
         try:
-            sku = SeleniumScraper.get_xpath_data(doc ,self.skuXpath)
+            sku = SeleniumScraper.get_xpath_data(doc, self.skuXpath)
             sku = sku[0]
         except:
             sku = "None"
 
         try:
-            name = SeleniumScraper.get_xpath_data(doc ,self.nameXpath)
+            name = SeleniumScraper.get_xpath_data(doc, self.nameXpath)
             name = name[0]
         except:
             name = "None"
@@ -85,7 +88,8 @@ class Scraper:
             description = "None"
 
         try:
-            image_path = SeleniumScraper.get_xpath_link(doc, self.image, self.websiteName)
+            image_path = SeleniumScraper.get_xpath_link(
+                doc, self.image, self.websiteName)
             image_path = image_path[0]
         except:
             image_path = "None"
@@ -101,7 +105,7 @@ class Scraper:
             price = SeleniumScraper.cleanData(price)
             price = price[0]
         except:
-            price = "None"    
+            price = "None"
 
         productDetails["sku"] = str(sku)
         productDetails["name"] = str(name)
@@ -124,19 +128,19 @@ class Scraper:
 
         # make db amazon.db if it doesn't exist
         if not os.path.exists(self.storagePath + "/" + self.brand + ".db"):
-            print(f'Creating {self.brand}.db at {self.storagePath+self.brand+".db"}')
+            print(
+                f'Creating {self.brand}.db at {self.storagePath+self.brand+".db"}')
             db = FlipkartDatabaseConnector(self.stamp)
             db.schemaMaker()
             print(db.welcomeMessage)
 
         self.db = FlipkartDatabaseConnector(self.stamp)
         print(self.db.welcomeMessage)
-    
-        with concurrent.futures.ThreadPoolExecutor(max_workers=number_of_threads) as executor:
-           productUrls =  executor.map(self.getProductList, product_categories)
-           productList.extend(productUrls)
 
-        
+        with concurrent.futures.ThreadPoolExecutor(max_workers=number_of_threads) as executor:
+            productUrls = executor.map(self.getProductList, product_categories)
+            productList.extend(productUrls)
+
         # flatten the list productList
         productList = [item for sublist in productList for item in sublist]
         print(f'Total products for {self.brand} is {len(productList)}')
@@ -149,8 +153,8 @@ class Scraper:
                 self.db.insertProduct(result)
 
         self.db.removeDuplicates()
-        
-    
+
+
 if __name__ == '__main__':
     scraper = Scraper()
     scraper.start()

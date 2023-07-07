@@ -38,14 +38,14 @@ class Extractor:
         # Video length in frames
         self.vid_length = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
-
     def extractor(self):
         is_ok, frame = self.cap.read()
         count = 0
         print(self.fps)
         while is_ok:
             # is_ok, frame = self.cap.read()
-            print(f"Extracting frame {count} of {self.vid_length-1}") if self.verbose else {}
+            print(
+                f"Extracting frame {count} of {self.vid_length-1}") if self.verbose else {}
             # save current frame
             cv2.imwrite(os.path.join(
                 self.output_dir, f"{count}.jpg"), frame)
@@ -75,7 +75,7 @@ def main():
                         help="Location of video file", required=True)
     parser.add_argument("-o", "--output_dir", type=str,
                         help="Output directory to store frames", required=True)
-    parser.add_argument("-v", "--verbose", type = bool,
+    parser.add_argument("-v", "--verbose", type=bool,
                         help="Display details of extraction of frames", default=False)
     args = parser.parse_args()
     # print(args)

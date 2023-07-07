@@ -8,7 +8,7 @@
 import os
 import requests
 
-url="https://graph.facebook.com/{}/picture?type=large"
+url = "https://graph.facebook.com/{}/picture?type=large"
 
 """ This url is the url provided by the Facebook graph api
 which helps to get to the profile picture of the corresponding Facebook id 
@@ -27,13 +27,13 @@ if not "fb_dps" in os.listdir(path):
 If it does not exist, then it gets created
 """
 
-fbid=int(input("Enter the Facebook-id to download it's profile picture: "))
-# the number should be a valid Facebook user id 
+fbid = int(input("Enter the Facebook-id to download it's profile picture: "))
+# the number should be a valid Facebook user id
 
 try:
-    result=requests.get(url.format(fbid))
-    with open("fb_dps/{}_img.jpg".format(fbid),"wb") as file:
+    result = requests.get(url.format(fbid))
+    with open("fb_dps/{}_img.jpg".format(fbid), "wb") as file:
         file.write(result.content)
 
 except:
-	print("There was some error")
+    print("There was some error")
