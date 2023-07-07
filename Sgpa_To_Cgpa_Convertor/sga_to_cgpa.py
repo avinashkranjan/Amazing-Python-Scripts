@@ -1,6 +1,6 @@
 import tkinter as tk
 
-
+"""Create SGPA entries based on the total number of semesters entered by the user."""
 def create_sgpa_entries():
     num_semesters = int(num_semesters_entry.get())
 
@@ -18,7 +18,7 @@ def create_sgpa_entries():
     create_sgpa_buttons.grid_remove()
     cgpa_calc.grid(row=num_semesters + 2, column=0, columnspan=2, padx=10, pady=5)
 
-
+"""Validate the SGPA entries to enable or disable the CGPA calculation button."""
 def validate_sgpa_entries():
     filled_entries = [entry.get() for entry in sgpa_entries]
     if all(filled_entries):
@@ -26,8 +26,8 @@ def validate_sgpa_entries():
     else:
         cgpa_calc.configure(state="disabled")
 
-
-def calculate_cgpa():
+"""It is used to calculate cgpa."""
+def calculate_cgpa(): 
     sgpa_values = [float(sgpa_entry.get()) for sgpa_entry in sgpa_entries]
 
     total_sgpa = sum(sgpa_values)
@@ -38,7 +38,7 @@ def calculate_cgpa():
 
     reset_button.configure(state="normal")
 
-
+"""This is used to reset entries after calcuting Cgpa."""
 def reset_entries():
     for label in sgpa_labels:
         label.destroy()
