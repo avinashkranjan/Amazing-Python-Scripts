@@ -61,4 +61,3 @@ class AskUbuntu:
             error_message = {"message": "No questions related to the topic found"}
             ejson = json.dumps(error_message)
             return ejson
-        
