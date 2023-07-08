@@ -9,10 +9,10 @@ def calculate_age(birthday):
 
     day_check = ((today.month, today.day) < (birthday.month, birthday.day))
     year_diff = today.year - birthday.year - day_check
-   remaining_months = abs((12-birthday.month)+today.month)
+    remaining_months = abs((12-birthday.month)+today.month)
     remaining_days = abs(today.day - birthday.day)
 
-    # Return the age as a formatted string
+        # Return the age as a formatted string
     age_string = f"Age: {year_diff} years, {remaining_months} months, and {remaining_days} days"
     return age_string
 
