@@ -103,13 +103,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let cardHolder = document.getElementById('card-holder');
     let isHidden = scriptNumber <= 20 ? '' : 'hidden';
 
-    let divHTML = `<div class="col-sm-6 col-md-3 ${isHidden} ">
+    let divHTML = `<div class="col-sm-6 col-md-4 col-lg-3 card-body ${isHidden} ">
                       <div class="card shadow">
                           <div class="card-body">
                               <h5 class="card-title">${scriptDetails['name']}</h5>
                               <p class="card-text">${scriptDetails['summary']}</p>
-                              <p><a href="https://github.com/${scriptDetails['author']}">${scriptDetails['author']}</a></p><br>
-                              <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/${scriptDetails['folder']}/${scriptDetails['file']}" class="btn btn-primary">Take Me</a>
+                              <p class="gitmain"><a href="https://github.com/${scriptDetails['author']}" class="giticon"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="logoGit" /></a><a class="author" href="https://github.com/${scriptDetails['author']}" > ${scriptDetails['author']} </a></p><br>
+                              <a href="https://github.com/avinashkranjan/Amazing-Python-Scripts/blob/master/${scriptDetails['folder']}/${scriptDetails['file']}" class="btn btn-primary takemebtn">SCRIPT</a>
                           </div>
                       </div>
                   </div>`;
