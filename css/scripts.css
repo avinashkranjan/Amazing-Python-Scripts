@@ -4,19 +4,20 @@ body {
 }
 
 .card {
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 5) 0px 2px 1px, rgba(0, 0, 0, 5) 0px 4px 2px,
+    rgba(0, 0, 0, 5) 0px 8px 4px, rgba(0, 0, 0, 5) 0px 16px 8px,
+    rgba(0, 0, 0, 5) 0px 32px 16px;
+    border-radius: 10px;
   transition: all 1s;
 }
 
 .card:hover {
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+  box-shadow: rgba(0, 0, 0, 5) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .navbar {
@@ -125,18 +126,24 @@ a.nav-link {
   margin: 20px;
 }
 
-.card-title {
-  height: 10vh;
-  padding-top: 12px;
-  /* margin-bottom: 0.5rem; */
-  font-weight: bold;
-
-  text-align: center;
-  color: rgb(37, 37, 224);
+.card-body{
+    transition: 1s linear;
 }
 
+.card-title {
+  font-size: 1.7rem;
+  height: 10vh;
+  padding-top: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(62, 62, 241);
+}
+
+.card-body:hover{
+  /* background-color: #a0c2f6; */
+}
 .card-text {
-  height: 16vh;
+  min-height: 16vh;
   padding-top: 6px;
   text-align: center;
   overflow: hidden;
@@ -144,12 +151,32 @@ a.nav-link {
   -webkit-line-clamp: 4;
   line-clamp: 4;
   -webkit-box-orient: vertical;
+  font-weight: 550;
+  padding-inline: 10%;
+  text-align: start;
+
 }
 
-.card-body p a {
-  display: block;
-  text-align: center;
-  margin-top: 30px;
+.logoGit{
+  width: 40px;
+  height: 40px;
+}
+
+.gitmain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto ;
+}
+
+.author{
+  color: black;
+  padding-left: 5px;
+  font-size: 1.2rem;
+}
+
+.author:hover{
+  color: black;
 }
 
 .card-body p a:hover {
@@ -169,9 +196,9 @@ a.nav-link {
   border: none;
   color: black;
   box-shadow: radial-gradient(circle farthest-corner at 22.4% 21.7%,
-      rgba(4, 189, 228, 1) 0%,
+      rgb(6, 13, 218) 0%,
       rgba(2, 83, 185, 1) 100.2%);
-  background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+  background-image: linear-gradient(to right, #3630d6, #fafafb);
 }
 
 .pagination-container {
@@ -199,3 +226,6 @@ a.nav-link {
   padding: 3px;
   margin: 0 5px;
 }
+
+
+/* card */
