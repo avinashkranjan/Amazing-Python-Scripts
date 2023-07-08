@@ -1,0 +1,30 @@
+name: ✨ Script Addition
+description: Describe this Script you want to add
+title: '[Script]: '
+labels: ['⭐ goal: Script-addition']
+body:
+- type: textarea
+  id: Aim
+  attributes:
+    label: Aim
+    placeholder:  What is the objective of the Script
+  validations:
+    required: true
+- type: textarea
+  id:  Details
+  attributes:
+    label:  Details
+    placeholder:  What the features will your script have
+  validations:
+    required: true           
+- type: checkboxes
+  id: terms
+  attributes:
+    label: 'Record'
+    options:
+      - label: I agree to follow this project's Code of Conduct
+        required: true
+      - label: I'm a GSSoC'23 contributor
+      - label: I want to work on this issue
+
+
