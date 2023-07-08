@@ -12,7 +12,11 @@ def calculate_conversion():
     currency_rates = data['rates']
 
     # get From amount from GUI
-    amount = float(from_amount.get())
+    try:
+        amount = float(from_amount.get())
+        answer.config(text="Successful !")
+    except ValueError:
+        answer.config(text="*Invalid input.Please enter number.")
 
     # Get country code from GUI
     fc = from_currency_code.get()
@@ -75,9 +79,13 @@ if __name__ == '__main__':
         currency_rates.keys()), font=("Lato", 12), state='readonly', width=14, justify=tk.CENTER)
     to_currency_menu.place(x=303, y=110)
 
+    answer = tk.Label(screen, anchor="center", bg='#282828',
+                         fg='red', width=50, font=("Lato", 12),text="")
+    answer.place(x=50, y=220)
+
     # Convert button and placing
     convert_btn = tk.Button(
         screen, text="Convert", fg='white', bg="#3500D3", command=calculate_conversion)
-    convert_btn.place(x=230, y=240)
+    convert_btn.place(x=230, y=260)
 
     screen.mainloop()
