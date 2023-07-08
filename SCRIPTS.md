@@ -100,4 +100,6 @@
 | 96\.     | Sorting Techniques | Sorting techniques are scripts that arrange a collection of data elements in a particular order, typically ascending or descending. | [Take Me](./Sorting%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
 | 99\.     | File Organizer script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Organizer script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
 | 100\.     | File Encryption/Decryption script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Encryption/Decryption script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
+| 101\.     | Doh-dig Script | This script performs a DNS lookup using DNS-over-HTTPS (DoH) and the Cloudflare DNS service. It allows you to query DNS records for a specific domain using DoH and retrieve the corresponding DNS information in JSON format.
+ | [Take Me](./Doh-dig/) | [Shraddha Singh](https://github.com/shraddha761)
 
