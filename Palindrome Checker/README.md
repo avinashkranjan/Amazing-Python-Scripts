@@ -1,10 +1,10 @@
-# Palindrome Checker
+# **Palindrome Checker**
 This is a Python program that checks whether a given word or phrase is a palindrome or not. It provides a graphical user interface (GUI) using the Tkinter library.
 
-## Requirements
+## **Requirements**
 - Tkinter library
 
-## How to Run
+## **How to Run**
 1. Install the Tkinter library if it is not already installed by using
 ``` 
   pip install tkinter
@@ -15,11 +15,11 @@ This is a Python program that checks whether a given word or phrase is a palindr
 
 6. Enter a word or phrase in the input field.
 
-5. Click the "Check" button to check if it is a palindrome.
+5. Click the "Check" button to check if it is a palindrome or not.
 
 6. The program will display the result in the output label below the button.
 
-## Output
+## **Output**
 ![Output](image.png)
 
 ## **Author**
