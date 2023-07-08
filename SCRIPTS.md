@@ -100,4 +100,6 @@
 | 96\.     | Sorting Techniques | Sorting techniques are scripts that arrange a collection of data elements in a particular order, typically ascending or descending. | [Take Me](./Sorting%20Techniques/) | [Himanshu Agarwal](https://github.com/himanshu-03)
 | 99\.     | File Organizer script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Organizer script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
 | 100\.     | File Encryption/Decryption script | A File Organizer script is a program or script that automates the process of organizing files within a directory or multiple directories | [Take Me](./File Encryption/Decryption script/) | [Abhinav kumar](https://github.com/Abhinavcode13)
+| 101\.     | Crypt_Socket | Basic client-server application for secure socket communication in Python, using SSL/TLS encryption. The code demonstrates how to establish a secure connection between a server and a client, ensuring confidentiality and integrity of the transmitted data.
+ | [Take Me](./Crypt_Socket/) | [Shraddha SIngh](https://github.com/shraddha761)
 
