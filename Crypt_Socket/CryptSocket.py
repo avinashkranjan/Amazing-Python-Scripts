@@ -6,12 +6,7 @@ server_host = 'example.com'
 server_port = 443
 
 # Create an SSL context
-ssl_context = ssl.create_default_context()
-
-# Verify the server's certificate
-ssl_context.verify_mode = ssl.CERT_REQUIRED
-ssl_context.check_hostname = True
-ssl_context.load_default_certs()
+ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
 
 try:
     # Create a socket
