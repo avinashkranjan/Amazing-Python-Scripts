@@ -18,7 +18,7 @@ def main():
 
     
 def valid(word):
-"""
+    """
     Checks if a word is valid by checking its meaning using PyDictionary.
     Args:
         word (str): The word to be validated.
