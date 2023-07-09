@@ -2,9 +2,7 @@ from PyDictionary import PyDictionary
 
 
 def main():
-    """
-    Main entry point of the Scrabble game.
-    """
+    """Main entry point of the Scrabble game."""
     print('*' * 10 + "Welcome to the Scrabble game" + '*' * 10)
     print("Let's start playing!!\n")
     score_board = {}
@@ -16,7 +14,7 @@ def main():
     print('*' * 40)
     print("Thank you for your time. Have a Nice day!")
 
-    
+
 def valid(word):
     """
     Checks if a word is valid by checking its meaning using PyDictionary.
@@ -26,9 +24,9 @@ def valid(word):
         bool: True if the word is valid, False otherwise.
     """
     dictionary = PyDictionary()
-    return dictionary.meaning(word) is not None 
+    return dictionary.meaning(word) is not None
 
-    
+
 def compute_score(word):
     """
     Computes the score for a given word based on a score list.
@@ -40,9 +38,9 @@ def compute_score(word):
         ValueError: If the word is invalid or contains non-alphabetic characters.
     """
     score_list = {
-                'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 
-                'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 
-                'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 
+                'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2,
+                'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1,
+                'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1,
                 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
     score = 0
     if word.isalpha():
@@ -50,12 +48,11 @@ def compute_score(word):
             for char in word:
                 score += score_list[char.lower()]
             return score
-        else:
-            raise ValueError("Invalid word")
+        raise ValueError("Invalid word")
     else:
         raise ValueError("Word should only contain alphabetic characters")
 
-    
+
 def player_count():
     """
     Prompts the user to input the number of players for the game.
@@ -73,7 +70,7 @@ def player_count():
         except ValueError as e:
             print(str(e))
 
-                  
+
 def get_input(score_board):
     """
     Retrieves the word input from each player and updates their scores.
@@ -99,10 +96,11 @@ def get_input(score_board):
         continue
     return score_board
 
-        
+
 def winner(score_board):
     """
     Determines the winner(s) based on the highest scores.
+    
     Args:
         score_board (dict): The dictionary storing the scores of each player.
     Returns:
@@ -117,10 +115,8 @@ def winner(score_board):
         if len(winners) > 1:
             return f"It's a tie. The winners are {', '.join(winners)}!!"
         return f"The winner is {winners[0]}!"
-    else:
-        return "No players found. Game over!"
+    return "No players found. Game over!"
 
 
 if __name__ == "__main__":
     main()
-
