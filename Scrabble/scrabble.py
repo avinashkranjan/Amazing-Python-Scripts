@@ -49,8 +49,7 @@ def compute_score(word):
                 score += score_list[char.lower()]
             return score
         raise ValueError("Invalid word")
-    else:
-        raise ValueError("Word should only contain alphabetic characters")
+    raise ValueError("Word should only contain alphabetic characters")
 
 
 def player_count():
@@ -99,8 +98,6 @@ def get_input(score_board):
 
 def winner(score_board):
     """
-    Determines the winner(s) based on the highest scores.
-    
     Args:
         score_board (dict): The dictionary storing the scores of each player.
     Returns:
