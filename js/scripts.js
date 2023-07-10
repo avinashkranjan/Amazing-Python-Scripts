@@ -134,6 +134,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   let search = document.getElementById('search');
   search.addEventListener('keydown', Search);
+// Handle Scroll to Top Function
+  document.getElementById('scroll-top').addEventListener('click', function () {
+    scrollToTop();
+  });
 
   function scrollToTop() {
     window.scrollTo({
