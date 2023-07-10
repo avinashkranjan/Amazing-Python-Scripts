@@ -130,10 +130,12 @@ input.agree {
 label.agree {
   font-size: 0.9rem;
   display: inline-block;
+  margin-bottom: 30px;
 }
 
 /*Styling submit button */
 .submitbtn {
+  display: block;
   width: 13rem;
   padding: 0.7rem;
   font-size: 1.2rem;
