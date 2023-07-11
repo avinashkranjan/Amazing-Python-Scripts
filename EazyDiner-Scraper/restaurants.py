@@ -72,5 +72,3 @@ class EazyDiner:
             return res_json
         except:
             return None
-
-    
