@@ -4,13 +4,36 @@ from bs4 import BeautifulSoup
 
 
 class EazyDiner:
-   
+    """
+    Class - `EazyDiner`
+    Example:
+    ```
+    hotels = EazyDiner(location="Delhi NCR")
+    ```\n
+    Methods :\n
+    1. ``.getRestaurants() | Response - List of restraunts and its details.
+    """
 
     def __init__(self, location):
         self.location = location
 
     def getRestaurants(self):
-        
+        """
+        Class - `EazyDiner`
+        Example:
+        ```
+        del = EazyDiner("Delhi NCR") or del = EazyDiner("delhi-ncr")
+        del.getRestaurants()
+        ```
+        Returns:
+        {
+            "restaurant": restaurant name
+            "location": location of restaurant
+            "rating": rating
+            "cuisine": cuisines provided
+            "price": price for two people
+        }
+        """
         url = (
             "https://www.eazydiner.com/restaurants?location="
             + self.location.replace(" ", "-").replace(",", "").lower()
