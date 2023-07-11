@@ -8,7 +8,7 @@ class EazyDiner:
     Class - `EazyDiner`
     Example:
     ```
-    hotels = EazyDiner(location="Delhi NCR")
+    restaurants = EazyDiner(location="Delhi NCR")
     ```\n
     Methods :\n
     1. ``.getRestaurants() | Response - List of restraunts and its details.
