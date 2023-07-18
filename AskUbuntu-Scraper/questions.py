@@ -11,7 +11,7 @@ class AskUbuntu:
     questions = AskUbuntu("topic")
     ```
     """
-    
+
     def __init__(self, topic):
         self.topic = topic
 
