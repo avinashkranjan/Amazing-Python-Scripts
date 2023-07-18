@@ -9,8 +9,8 @@ class EazyDiner:
     Example:
     ```
     restaurants = EazyDiner(location="Delhi NCR")
-    ```\n
-    Methods :\n
+    ```
+    Methods :
     1. ``.getRestaurants() | Response - List of restraunts and its details.
     """
 
@@ -70,5 +70,5 @@ class EazyDiner:
                 )
             res_json = json.dumps(restaurant_data)
             return res_json
-        except:
+        except ValueError:
             return None
