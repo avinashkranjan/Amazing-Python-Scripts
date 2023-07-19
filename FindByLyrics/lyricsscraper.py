@@ -86,7 +86,8 @@ div:nth-child(4) > p:nth-child(3) > button:nth-child(1)"
             req_obj = BeautifulSoup(html, "lxml")
             results = req_obj.select(".category-header > hgroup:nth-child(2)")
             try:
-                lyrics, artists, albums, search_term = results[0].find_all("strong")
+                lyrics, artists, albums, search_term = results[0].find_all(
+                    "strong")
                 message = f"Search Results: {lyrics.text} lyrics, \
                     {artists.text} artists, {albums.text} albums for search term {search_term.text}"
                 print(message)
@@ -137,7 +138,7 @@ div:nth-child(4) > p:nth-child(3) > button:nth-child(1)"
             return ""
         for opening, text, closing in remove_tags_regex.findall(lyricsbody):
             # Planning on doing something with the definitions?
-            del(text)
+            del (text)
             lyricsbody.replace(opening, "")
             lyricsbody.replace(closing, "")
         return lyricsbody
@@ -152,7 +153,8 @@ div:nth-child(4) > p:nth-child(3) > button:nth-child(1)"
         start = onclick.find("href='") + 6
         end = onclick.find("';")
         url = onclick[start:end]
-        lyric_snippet = extract[0].text.replace("<em>", "").replace("</em>", "")
+        lyric_snippet = extract[0].text.replace(
+            "<em>", "").replace("</em>", "")
         return url, lyric_snippet
 
     def extract_data(self, obj, selector):
@@ -172,7 +174,8 @@ div:nth-child(4) > p:nth-child(3) > button:nth-child(1)"
         if not extract:
             return "", ""
         img_url = list(extract[0].children)[0].get("src")
-        img_title = list(extract[0].children)[0].get("title").replace(" ", "_").lower()
+        img_title = list(extract[0].children)[0].get(
+            "title").replace(" ", "_").lower()
         return img_title, img_url
 
     def parse_lyrics(self):
@@ -185,12 +188,15 @@ div:nth-child(4) > p:nth-child(3) > button:nth-child(1)"
                     if count == self.count:
                         return lyrics
                     item = {}
-                    title, lyric_url = self.extract_data(i, ".lyric-meta-title")
+                    title, lyric_url = self.extract_data(
+                        i, ".lyric-meta-title")
                     artist, artist_link = self.extract_data(
                         i, ".lyric-meta-album-artist"
                     )
-                    year, year_link = self.extract_data(i, ".lyric-meta-album-year")
-                    album, album_url = self.extract_data(i, ".lyric-meta-album")
+                    year, year_link = self.extract_data(
+                        i, ".lyric-meta-album-year")
+                    album, album_url = self.extract_data(
+                        i, ".lyric-meta-album")
                     (
                         url,
                         snippet,
@@ -225,7 +231,8 @@ div:nth-child(4) > p:nth-child(3) > button:nth-child(1)"
                     album["album_url"] = self.base_url + j[0].get("href")
                     if "artist" in j[-1].get("href"):
                         album["album_artist"] = j[-1].text
-                        album["album_artist_url"] = self.base_url + j[-1].get("href")
+                        album["album_artist_url"] = self.base_url + \
+                            j[-1].get("href")
                     else:
                         album["album_artist_url"] = album["album_artist"] = "N/A"
                     albums.append(album)

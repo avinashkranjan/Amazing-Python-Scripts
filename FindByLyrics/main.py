@@ -1,12 +1,12 @@
+from lyricsscraper import LyricsDotComScraper as Scraper
+from fuzzywuzzy import process
 import argparse
 import json
 
 import warnings
 # Quieten python-levenshtein warning
-warnings.filterwarnings("ignore") 
+warnings.filterwarnings("ignore")
 
-from fuzzywuzzy import process
-from lyricsscraper import LyricsDotComScraper as Scraper
 
 DESC = """Get song lyrics or find a song from a snippet of it's lyrics, and \
           more."""
@@ -102,8 +102,8 @@ def main():
     parser.add_argument("-d", "--decade", help=DECADE_HELP,
                         action="store")
     parser.add_argument(
-                        "-c", "--count", help=COUNT_HELP, action="store",
-                        type=int, default=1)
+        "-c", "--count", help=COUNT_HELP, action="store",
+        type=int, default=1)
     parser.add_argument("-y", "--year", help=YEAR_HELP, action="store")
     parser.add_argument("-s", "--style", help=STYLE_HELP, action="store")
     parser.add_argument(
