@@ -49,12 +49,14 @@ def available_domain_names():
         response = res.json()
 
         # Saving our available domains in a text file.
-        print(f"\nSaving all the available domain names in {domain_name}.txt file")
+        print(
+            f"\nSaving all the available domain names in {domain_name}.txt file")
         f = open(f"{domain_name}.txt", "a")
         for i in response:
             f.writelines(i["domain"] + "\n")
         f.close()
-        print(f"\nFile {domain_name}.txt saved successfully in your current directory")
+        print(
+            f"\nFile {domain_name}.txt saved successfully in your current directory")
 
     else:
         print("Error Status Code")
