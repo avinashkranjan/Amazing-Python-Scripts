@@ -16,5 +16,6 @@ def speak(audio):
 def joke():
     speak(pyjokes.get_joke())
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     joke()
