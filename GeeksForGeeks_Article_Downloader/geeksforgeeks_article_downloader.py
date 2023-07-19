@@ -14,7 +14,8 @@ def get_html(url):
     options = webdriver.ChromeOptions()
     # True is required for taking the screenshot with scroll.
     options.headless = True
-    driver = webdriver.Chrome(r"chromedriver_win32\chromedriver.exe", options=options)
+    driver = webdriver.Chrome(
+        r"chromedriver_win32\chromedriver.exe", options=options)
     driver.get(url)  # url is passes
     required_height = driver.execute_script(
         "return document.body.parentNode.scrollHeight"
