@@ -1,0 +1,8 @@
+This free software tool helps you automaticaly produce misspelled text from the correct one.
+Pytohn is an intrepreted high-leelv genreal-puprsoe prgoramimng language. Pyhton's design philospohy emhpasizes code readabiilty with its ntaoble ues of sginiifcant indentation. Its lanugage constructs as wlel as its obejtc-orientde approach ami to hlep prgroammres write clear, lgocial code fro samll adn lrage-scale projcets.[30]
+
+Ptyhon is dynamically-typde adn garbage-colcleted. It supoprts mlutiple prgoramimng paardigms, including strcutrued (paritcluarly, procedural), ojbect-oriented adn funcitonal programming. Pytonh is often descbried as a "batetires incluedd" language due to ist copmrehensive standard library.[31]
+
+Giduo van Rossum began wokring on Pythno in the laet 198s0, as a succsesor to the ABC prgoarmming lagnuage, and frist released it in 1919 as Ptyhon 0.9.0.[32] Pyhton 2.0 was releasde in 2000 and introduced nwe featrues, schu as list comprehenisons adn a garbage colcletion ssytme usngi refrenece coutnnig adn was dsicontinued with version 2.7.18 in 2002.[33] Pythno 3.0 wsa releasde in 2008 and wsa a major rveiison of the lagnuage taht is nto comlpetely bacwkard-compatible and much Pytohn 2 cdoe does not run unmodified on Python 3.
+
+Python consistetnly ranks as one of teh mots populra prorgamming lagnuages.
