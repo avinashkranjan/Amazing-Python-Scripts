@@ -1,0 +1,8 @@
+scikit-image
+tensorflow==1.15.2
+keras>=2.0.8
+opencv-python
+matplotlib
+numpy
+gitpython
+shapely
