@@ -42,4 +42,4 @@ Symbol Value:
 Have fun playing the slot machine game!
 
 ## Author 
-Khushimarothi[https://github.com/khushimarothi]
+[Khushi Marothi](https://github.com/khushimarothi)
