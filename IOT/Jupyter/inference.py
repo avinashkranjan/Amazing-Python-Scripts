@@ -89,9 +89,11 @@ class Network:
 
         if num_requests == 0:
             # Loads network read from IR to the plugin
-            self.net_plugin = self.plugin.load_network(network=self.net, device_name=device)
+            self.net_plugin = self.plugin.load_network(
+                network=self.net, device_name=device)
         else:
-            self.net_plugin = self.plugin.load_network(network=self.net, num_requests=num_requests, device_name=device)
+            self.net_plugin = self.plugin.load_network(
+                network=self.net, num_requests=num_requests, device_name=device)
             # log.error("num_requests != 0")
 
         self.input_blob = next(iter(self.net.inputs))
@@ -129,7 +131,7 @@ class Network:
         """
 
         self.infer_request_handle = self.net_plugin.start_async(
-                request_id=request_id, inputs={self.input_blob: frame})
+            request_id=request_id, inputs={self.input_blob: frame})
         return self.net_plugin
 
     def wait(self, request_id):
