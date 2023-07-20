@@ -1,0 +1,2 @@
+Install tkinter by using pip install tk on command prompt
+Install random module by using pip install random
