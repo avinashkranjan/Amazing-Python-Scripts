@@ -1,0 +1,3 @@
+json
+requests
+beautifulsoup4
