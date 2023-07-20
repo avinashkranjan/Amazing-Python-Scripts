@@ -40,3 +40,6 @@ Symbol Value:
 - The game uses Python's `random` module to generate random symbols for each spin.
 
 Have fun playing the slot machine game!
+
+## Author 
+Khushimarothi[https://github.com/khushimarothi]
