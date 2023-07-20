@@ -65,6 +65,8 @@ accepted_devices = ["CPU", "GPU", "HETERO:FPGA,CPU", "MYRIAD", "HDDL"]
 is_async_mode = True
 
 # Event class to store the intruder details
+
+
 class Event:
     def __init__(self, event_time=None, intruder=None, count=None, frame=None):
         self.time = event_time
@@ -176,6 +178,7 @@ def parse_args():
         else:
             is_async_mode = True
 
+
 def check_args():
     """
     Validate the command line arguments
@@ -249,17 +252,20 @@ def get_input():
     labels = []
     streams = []
 
-    assert os.path.isfile(CONFIG_FILE), "{} file doesn't exist".format(CONFIG_FILE)
+    assert os.path.isfile(
+        CONFIG_FILE), "{} file doesn't exist".format(CONFIG_FILE)
     config = json.loads(open(CONFIG_FILE).read())
     for id, item in enumerate(config['inputs']):
         for idx, video in enumerate(item['video']):
             cams = idx + 1
             cam_name = "Cam {}".format(idx)
             if video.isdigit():
-                video_cap = VideoCap(cv2.VideoCapture(int(video)), cam_name, cams, is_cam=True)
+                video_cap = VideoCap(cv2.VideoCapture(
+                    int(video)), cam_name, cams, is_cam=True)
             else:
                 if os.path.isfile(video):
-                    video_cap = VideoCap(cv2.VideoCapture(video), cam_name, cams, is_cam=False)
+                    video_cap = VideoCap(cv2.VideoCapture(
+                        video), cam_name, cams, is_cam=False)
                 else:
                     return [-8, [video]]
             video_caps.append(video_cap)
@@ -302,16 +308,22 @@ def save_json():
         for i in range(events_size):
             event_json.write("\t\t\"%d\":{\n" % (i))
             event_json.write("\t\t\t\"time\":\"%s\",\n" % events[i].time)
-            event_json.write("\t\t\t\"content\":\"%s\",\n" % events[i].intruder)
-            event_json.write("\t\t\t\"videoTime\":\"%d\"\n" % float(events[i].frame / fps))
+            event_json.write("\t\t\t\"content\":\"%s\",\n" %
+                             events[i].intruder)
+            event_json.write("\t\t\t\"videoTime\":\"%d\"\n" %
+                             float(events[i].frame / fps))
             event_json.write("\t\t},\n")
-            data_json.write("\t\t\"%d\": \"%d\",\n" % (float(events[i].frame / fps), events[i].count))
+            data_json.write("\t\t\"%d\": \"%d\",\n" %
+                            (float(events[i].frame / fps), events[i].count))
         event_json.write("\t\t\"%d\":{\n" % events_size)
         event_json.write("\t\t\t\"time\":\"%s\",\n" % events[events_size].time)
-        event_json.write("\t\t\t\"content\":\"%s\",\n" % events[events_size].intruder)
-        event_json.write("\t\t\t\"videoTime\":\"%d\"\n" % float(events[events_size].frame / fps))
+        event_json.write("\t\t\t\"content\":\"%s\",\n" %
+                         events[events_size].intruder)
+        event_json.write("\t\t\t\"videoTime\":\"%d\"\n" %
+                         float(events[events_size].frame / fps))
         event_json.write("\t\t}\n")
-        data_json.write("\t\t\"%d\": \"%d\"\n" % (float(events[events_size].frame / fps), events[events_size].count))
+        data_json.write("\t\t\"%d\": \"%d\"\n" % (
+            float(events[events_size].frame / fps), events[events_size].count))
         total = events[events_size].count
     event_json.write("\t}\n")
     event_json.write("}")
@@ -350,13 +362,17 @@ def arrange_windows():
             rows += 1
             cols = 1
             cv2.namedWindow(video_caps[idx].cam_name, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(video_caps[idx].cam_name, window_width, window_height)
-            cv2.moveWindow(video_caps[idx].cam_name, spacer * cols, row_spacer * rows)
+            cv2.resizeWindow(video_caps[idx].cam_name,
+                             window_width, window_height)
+            cv2.moveWindow(video_caps[idx].cam_name,
+                           spacer * cols, row_spacer * rows)
         else:
             cols += 1
             cv2.namedWindow(video_caps[idx].cam_name, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(video_caps[idx].cam_name, window_width, window_height)
-            cv2.moveWindow(video_caps[idx].cam_name, spacer * cols, row_spacer * rows)
+            cv2.resizeWindow(video_caps[idx].cam_name,
+                             window_width, window_height)
+            cv2.moveWindow(video_caps[idx].cam_name,
+                           spacer * cols, row_spacer * rows)
 
 
 # Signal handler
@@ -446,14 +462,16 @@ def intruder_detector():
     # Initializing VideoWriter for each source
     if UI and not LOOP_VIDEO:
         for video_cap in video_caps:
-            ret, ret_value = video_cap.init_vw(int(video_cap.input_height), int(video_cap.input_width))
+            ret, ret_value = video_cap.init_vw(
+                int(video_cap.input_height), int(video_cap.input_width))
             if ret != 0:
                 return ret, ret_value
 
     # Initialise the class
     infer_network = Network()
     # Load the network to IE plugin to get shape of input layer
-    n, c, h, w = infer_network.load_model(model_xml, TARGET_DEVICE, 1, 1, 2, CPU_EXTENSION)[1]
+    n, c, h, w = infer_network.load_model(
+        model_xml, TARGET_DEVICE, 1, 1, 2, CPU_EXTENSION)[1]
     # Arrange windows so that they are not overlapping
     arrange_windows()
 
@@ -488,7 +506,8 @@ def intruder_detector():
             if no_more_data[idx]:
                 stream_end_frame = numpy.zeros((int(video_cap.input_height), int(video_cap.input_width), 1),
                                                dtype='uint8')
-                stream_end_message = "Stream from {} has ended.".format(video_cap.cam_name)
+                stream_end_message = "Stream from {} has ended.".format(
+                    video_cap.cam_name)
                 cv2.putText(stream_end_frame, stream_end_message, (int(video_cap.input_width / 2) - 30,
                                                                    int(video_cap.input_height / 2) - 30),
                             cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
@@ -514,7 +533,8 @@ def intruder_detector():
                 # Async enabled and more than one video capture
                 else:
                     # Get previous index
-                    videoCapResult = video_caps[idx - 1 if idx - 1 >= 0 else len(video_caps) - 1]
+                    videoCapResult = video_caps[idx -
+                                                1 if idx - 1 >= 0 else len(video_caps) - 1]
 
             else:
                 in_frame = cv2.resize(video_cap.frame, (w, h))
@@ -541,7 +561,8 @@ def intruder_detector():
                         xmax = int(obj[5] * videoCapResult.input_width)
                         ymax = int(obj[6] * videoCapResult.input_height)
                         # Draw bounding box around the intruder detected
-                        cv2.rectangle(videoCapResult.frame, (xmin, ymin), (xmax, ymax), (0, 255, 0), 4, 16)
+                        cv2.rectangle(videoCapResult.frame, (xmin, ymin),
+                                      (xmax, ymax), (0, 255, 0), 4, 16)
 
                 for i in range(videoCapResult.no_of_labels):
                     if videoCapResult.candidate_count[i] == videoCapResult.current_count[i]:
@@ -557,8 +578,10 @@ def intruder_detector():
                         continue
 
                     if videoCapResult.current_count[i] > videoCapResult.last_correct_count[i]:
-                        videoCapResult.total_count[i] += videoCapResult.current_count[i] - videoCapResult.last_correct_count[i]
-                        det_objs = videoCapResult.current_count[i] - videoCapResult.last_correct_count[i]
+                        videoCapResult.total_count[i] += videoCapResult.current_count[i] - \
+                            videoCapResult.last_correct_count[i]
+                        det_objs = videoCapResult.current_count[i] - \
+                            videoCapResult.last_correct_count[i]
                         total_count = sum(videoCapResult.total_count)
                         for det_obj in range(det_objs):
                             current_time = time.strftime("%H:%M:%S")
@@ -570,14 +593,17 @@ def intruder_detector():
                                           frame=videoCapResult.frame_count)
                             videoCapResult.events.append(event)
 
-                        snapshot_name = "output/intruder_{}.png".format(total_count)
+                        snapshot_name = "output/intruder_{}.png".format(
+                            total_count)
                         cv2.imwrite(snapshot_name, videoCapResult.frame)
                     videoCapResult.last_correct_count[i] = videoCapResult.current_count[i]
 
                 # Create intruder log window, add logs to the frame and display it
-                log_window = numpy.zeros((LOG_WIN_HEIGHT, LOG_WIN_WIDTH, 1), dtype='uint8')
+                log_window = numpy.zeros(
+                    (LOG_WIN_HEIGHT, LOG_WIN_WIDTH, 1), dtype='uint8')
                 for i, log in enumerate(log_list):
-                    cv2.putText(log_window, log, (10, 20 * i + 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+                    cv2.putText(log_window, log, (10, 20 * i + 15),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
                 cv2.imshow("Intruder Log", log_window)
                 videoCapResult.frame_count += 1
 
@@ -620,7 +646,8 @@ def intruder_detector():
 
         if cv2.waitKey(1) == 9:
             is_async_mode = not is_async_mode
-            print("Switched to {} mode".format("async" if is_async_mode else "sync"))
+            print("Switched to {} mode".format(
+                "async" if is_async_mode else "sync"))
 
         if False not in no_more_data:
             break
@@ -670,7 +697,8 @@ if __name__ == '__main__':
     elif status == -14:
         print("No input source found in configuration file!")
     elif status == -15:
-        print("Error: No labels currently in use. Please edit " + CONFIG_FILE+" file!")
+        print("Error: No labels currently in use. Please edit " +
+              CONFIG_FILE+" file!")
     elif status == -16:
         print("Error in opening intruder log file!")
     elif status == -17:
