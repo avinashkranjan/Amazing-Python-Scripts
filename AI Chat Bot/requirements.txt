@@ -1,0 +1,2 @@
+pyfiglet==0.8.post1
+Requests==2.31.0
