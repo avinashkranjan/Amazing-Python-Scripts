@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <link rel="stylesheet" href="vendor/almasaeed2010/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/almasaeed2010/adminlte/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/almasaeed2010/adminlte/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="vendor/almasaeed2010/adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="resources/css/timeline.css">
+    <link rel="stylesheet" href="resources/css/counter.css">
+</head>
+<body>
+    <header class="main-header">
+    </header>
+    <section class="content">
+        <div class="row">
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 panel-left">
+                            <div class="row">
+                                <div class="video-holder col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <video id="video1" data-videoid="video1" data-videoname="Video 1" width="100%" autoplay controls>
+                                        <source src="resources/videos/video1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 counter">
+                                    <div class="tl"></div>
+                                    <div class="footer">
+                                        <div class="footer first">Time</div>
+                                        <div class="footer last">Total detected</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 panel-right">
+                            <div class="scrollbar-light">
+
+                                <div class="box box-solid">
+                                    <div class="box-header with-border">
+                                        <i class="fa fa-warning"></i>
+
+                                        <h3 class="box-title">Alerts</h3>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div id="detection-alert" class="box-body"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/almasaeed2010/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/almasaeed2010/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="resources/javascript/counter.js"></script>
+    <script type="text/javascript" src="resources/javascript/timeline.js"></script>
+    <script type="text/javascript" src="resources/javascript/detection_alert.js"></script>
+</body>
+</html>
