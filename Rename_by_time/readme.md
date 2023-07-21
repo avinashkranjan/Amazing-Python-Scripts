@@ -3,6 +3,6 @@ This software can rename your all current directory files in ascending order bas
 
 # Video Demo 
 
-## Note: pls turn audio for a clear understanding
 
-https://github.com/Rancho2002/rename-by-time/assets/92109154/0ff611ff-d81b-46bf-b49f-86d2775638d6
+https://github.com/Rancho2002/Amazing-Python-Scripts/assets/92109154/12ea31cd-e257-499f-bb3a-6491f4cf2c67
+
