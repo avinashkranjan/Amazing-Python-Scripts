@@ -1,0 +1,42 @@
+name: Auto Assign
+
+on:
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch:
+
+jobs:
+  assign_issues:
+    if: >
+      (github.event_name == 'issue_comment' && (
+      startsWith(github.event.comment.body, '/assign') || 
+      startsWith(github.event.comment.body, '/unassign') || 
+      contains(github.event.comment.body, 'assign to me') || 
+      contains(github.event.comment.body, 'please assign me this')  || 
+      contains(github.event.comment.body, 'assign this to me')  || 
+      contains(github.event.comment.body, 'assign this issue to me')  || 
+      contains(github.event.comment.body, 'I can try fixing this')  || 
+      contains(github.event.comment.body, 'i am interested in doing this')  || 
+      contains(github.event.comment.body, 'I am interested in contributing'))) || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for issue assignees
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueNumber = context.payload.issue.number;
+            if (issueNumber) {
+              const commenter = context.payload.comment.user.login;
+              const config = {
+                owner: 'avinashkranjan',
+                repo: 'Pentesting-and-Hacking-Scripts',
+                issue_number: issueNumber,
+                assignees: [commenter]
+              };
+              return github.issues.addAssignees(config);
+            } else {
+              return true;
+            }
