@@ -11,11 +11,13 @@ from pygame import display, event, image
 from time import sleep
 from animal import Animal
 
+
 def find_index_from_xy(x, y):
     row = y // gc.IMAGE_SIZE
     col = x // gc.IMAGE_SIZE
     index = row * gc.NUM_TILES_SIDE + col
     return row, col, index
+
 
 pygame.init()
 display.set_caption('My Game')
@@ -41,7 +43,8 @@ while running:
             row, col, index = find_index_from_xy(mouse_x, mouse_y)
             if index not in current_images_displayed:
                 if len(current_images_displayed) > 1:
-                    current_images_displayed = current_images_displayed[1:] + [index]
+                    current_images_displayed = current_images_displayed[1:] + [
+                        index]
                 else:
                     current_images_displayed.append(index)
 
@@ -53,7 +56,8 @@ while running:
     for i, tile in enumerate(tiles):
         current_image = tile.image if i in current_images_displayed else tile.box
         if not tile.skip:
-            screen.blit(current_image, (tile.col * gc.IMAGE_SIZE + gc.MARGIN, tile.row * gc.IMAGE_SIZE + gc.MARGIN))
+            screen.blit(current_image, (tile.col * gc.IMAGE_SIZE +
+                        gc.MARGIN, tile.row * gc.IMAGE_SIZE + gc.MARGIN))
         else:
             total_skipped += 1
 

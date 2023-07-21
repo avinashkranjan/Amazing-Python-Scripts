@@ -53,7 +53,7 @@ def generate_array():
     size_val = int(size_value.get())
     max_val = int(max_value.get())
 
-    if(min_val > max_val):
+    if (min_val > max_val):
         messagebox.showwarning(
             message="Max. value should not be less than Min. value")
         min_val, max_val = max_val, min_val

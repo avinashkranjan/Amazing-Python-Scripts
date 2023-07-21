@@ -167,7 +167,7 @@ class FileMover():
                 raise SystemExit()
             elif sortby is None:
                 for file in os.listdir(get_path('src')):
-                    #file_ending = get_file_type()
+                    # file_ending = get_file_type()
                     is_file_in_curr_dir = os.path.isfile(
                         get_path('dst') + "/" + file)
                     for value in file_type:

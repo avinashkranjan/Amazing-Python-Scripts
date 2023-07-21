@@ -7,10 +7,12 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Linear Linked List
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
 
 class LinkedList:
     def __init__(self):
@@ -30,8 +32,8 @@ class LinkedList:
         else:
             temp = self.root
             self.root = self.root.next
-            print('\nDeleted element: ',temp.data)
-    
+            print('\nDeleted element: ', temp.data)
+
     def insertRight(self, data):
         n = Node(data)
         if self.root == None:
@@ -54,7 +56,7 @@ class LinkedList:
             temp2.next = None
             if temp == self.root:
                 self.root = None
-            print('\nDeleted element: ',temp.data)
+            print('\nDeleted element: ', temp.data)
 
     def printList(self):
         if self.root == None:
@@ -62,12 +64,12 @@ class LinkedList:
         temp = self.root
         print('\nElements in Linked List are: ')
         while temp != None:
-            print('|',temp.data,'| -> ',end = '')
+            print('|', temp.data, '| -> ', end='')
             temp = temp.next
         print('None')
         print()
 
-    def searchList(self,data):
+    def searchList(self, data):
         if self.root == None:
             print('\nLinked List is empty..!!')
         else:
@@ -75,10 +77,10 @@ class LinkedList:
             temp = self.root
             while temp != None:
                 if temp.data == data:
-                    print('\nElement', data, 'found at node: ',count)
+                    print('\nElement', data, 'found at node: ', count)
                     return
                 temp = temp.next
-                count+=1
+                count += 1
             return ('\nElement not found')
 
     def deleteElement(self, data):
@@ -91,7 +93,7 @@ class LinkedList:
             while temp != None and temp.data != data:
                 temp2 = temp
                 temp = temp.next
-                count+=1
+                count += 1
             if temp != None:
                 if temp == self.root:
                     self.root = self.root.next
@@ -99,9 +101,11 @@ class LinkedList:
                     temp2.next = None
                 else:
                     temp2.next = temp.next
-                print('\nDeleted Element:',temp.data,'from position: ',count)
+                print('\nDeleted Element:', temp.data,
+                      'from position: ', count)
             else:
                 print(data, 'not found in Linked List')
+
 
 o = LinkedList()
 
@@ -119,10 +123,10 @@ while True:
     elif ch == 2:
         data = int(input('\nEnter value to be inserted in right: '))
         o.insertRight(data)
-    
+
     elif ch == 3:
         o.deleteLeft()
-    
+
     elif ch == 4:
         o.deleteRight()
 
@@ -132,14 +136,14 @@ while True:
 
     elif ch == 6:
         o.printList()
-    
+
     elif ch == 7:
         data = int(input('Enter the value of Element x: '))
         o.searchList(data)
-    
+
     elif ch == 0:
         print('You are out of the program..!!')
         break
-    
+
     else:
         print('\nWrong Input..\nEnter the correct choice..!!\n')

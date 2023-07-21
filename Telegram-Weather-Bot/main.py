@@ -17,6 +17,7 @@ def echo_all(message):
     bot.send_message(
         message.chat.id, format_response_to_human_readable(response))
 
+
 def format_response_to_human_readable(response):
     location = response["location"]
     current = response["current"]

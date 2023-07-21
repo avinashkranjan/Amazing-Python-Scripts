@@ -85,7 +85,7 @@ for article in articles:
     pdf.output("{}.pdf".format(pdf_title))
 
     count = count + 1
-    if(count == number_articles):
+    if (count == number_articles):
         break
 
 driver.close()  # closing the webdriver

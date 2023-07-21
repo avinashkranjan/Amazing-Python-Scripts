@@ -6,8 +6,8 @@
 print("**********Adding Elements**********", end="\n\n")
 
 
-tuple = (1, 2, 3, 'Alphabet') 
-print(f"Tuple is {tuple}", end="\n\n") 
+tuple = (1, 2, 3, 'Alphabet')
+print(f"Tuple is {tuple}", end="\n\n")
 
 
 ''' Accessing Elements '''
@@ -33,7 +33,7 @@ print(f"Letter-at-3-index of 3rd-Index-elements is {tuple[3][3]}", end="\n\n")
 print("**********Appending Elements**********", end="\n\n")
 
 
-tuple = tuple + (4, 5, ['B', 'C']) #add elements
+tuple = tuple + (4, 5, ['B', 'C'])  # add elements
 print(f"Tuple after appending elements is {tuple}", end="\n\n")
 # (1, 2, 3, 'Alphabet', 4, 5, ['B','C'])
 
@@ -48,4 +48,3 @@ print(f"Changed 6th-index-element to K {tuple}", end="\n\n")
 print(f"2 has been repeated {tuple.count(2)} time", end="\n\n")
 
 print(f"Index of ['K','C'] is {tuple.index(['K', 'C'])}", end="\n\n")
-

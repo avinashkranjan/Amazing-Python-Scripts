@@ -41,7 +41,7 @@ def get_audio():
 engine = pyttsx3.init()
 engine.say(
     "hello sir!, This is, Robot, Created by ,Sai Harsha , How can help you?")
-#engine.setProperty('rate', 120)
+# engine.setProperty('rate', 120)
 engine.runAndWait()
 text = get_audio()
 if "PPT" or "ppt" or "intro" or "INTRO" in text:

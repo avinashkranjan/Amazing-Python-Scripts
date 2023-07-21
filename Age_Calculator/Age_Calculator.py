@@ -19,14 +19,14 @@ def calculate_age(birthday):
 
 
 if __name__ == "__main__":
-  print(" Age Calculator By Python")
+    print(" Age Calculator By Python")
 
-  try:
-    birthYear = int(input("Enter the birth year: "))
-    birthMonth = int(input("Enter the birth month: "))
-    birthDay = int(input("Enter the birth day: "))
-    dateOfBirth = date(birthYear, birthMonth, birthDay)
-    age = calculate_age(dateOfBirth)
-    print(age)
-  except ValueError:
-    print("Invalid input. Please enter valid integers for the year, month, and day.")
+    try:
+        birthYear = int(input("Enter the birth year: "))
+        birthMonth = int(input("Enter the birth month: "))
+        birthDay = int(input("Enter the birth day: "))
+        dateOfBirth = date(birthYear, birthMonth, birthDay)
+        age = calculate_age(dateOfBirth)
+        print(age)
+    except ValueError:
+        print("Invalid input. Please enter valid integers for the year, month, and day.")

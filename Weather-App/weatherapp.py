@@ -1,9 +1,11 @@
-# Importing required modules 
+# Importing required modules
 import requests
 from bs4 import BeautifulSoup
 import tkinter as tk
 
-# Creating function to get temperature 
+# Creating function to get temperature
+
+
 def get_temp():
     # Taking City You Want to Check Temperature
     city = city_entry.get()
@@ -28,7 +30,7 @@ root.geometry('200x200')
 # Creating label for city
 city_label = tk.Label(root, text="City: ")
 
-# Creating entry widget for city 
+# Creating entry widget for city
 city_entry = tk.Entry(root)
 
 # Creating button to get temperature

@@ -12,6 +12,8 @@ def valid_ISBN(isbn):
         return False
 
 # Checking the entered number is a valid 10-digit isbn number
+
+
 def valid_ISBN10(isbn):
     # Check if the ISBN is valid according to the ISBN-10 algorithm
     if not isbn[:-1].isdigit() or not isbn[-1] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'X']:
@@ -32,6 +34,8 @@ def valid_ISBN10(isbn):
     return str(checkDigit) == isbn[-1]
 
 # Checking the entered number is a valid 13-digit isbn number
+
+
 def valid_ISBN13(isbn):
     # Check if the ISBN is valid according to the ISBN-13 algorithm
     if not isbn.isdigit():
@@ -58,4 +62,3 @@ if valid_ISBN(isbnNumber):
     print("\nValid ISBN number.\n")
 else:
     print("\nInvalid ISBN number.\n")
-

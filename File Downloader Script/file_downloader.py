@@ -1,5 +1,6 @@
 import requests
 
+
 def download_file(url, destination):
     response = requests.get(url, stream=True)
     if response.status_code == 200:
@@ -9,6 +10,7 @@ def download_file(url, destination):
         print("File downloaded successfully.")
     else:
         print("Failed to download file.")
+
 
 # Example usage: Download a file from a URL
 file_url = 'https://example.com/path/to/file.txt'

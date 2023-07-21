@@ -11,6 +11,7 @@ from Shortener.views import worker
 # Form tests
 # View tests
 
+
 def test_worker_shortens_url_with_tinyurl():
     url = "http://7bna.net/wallpapers/cat-pictures.html"
     host = "Tinyurl"

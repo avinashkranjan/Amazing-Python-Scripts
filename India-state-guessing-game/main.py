@@ -2,24 +2,24 @@ import turtle
 import pandas as pd
 screen = turtle.Screen()
 screen.title("Indian states game")
-#screen.setup(width=500, height=500)
+# screen.setup(width=500, height=500)
 image = "9671e6ba88f7b2ed4bea5941ffebf8ee (1).gif"
 
-#def get_mouse_click_coor(x,y):
- #   print(x,y)
+# def get_mouse_click_coor(x,y):
+#   print(x,y)
 
-#turtle.onscreenclick(get_mouse_click_coor)
+# turtle.onscreenclick(get_mouse_click_coor)
 
 data = pd.read_csv("states.csv")
-#print(data)
+# print(data)
 all_states = data['States'].to_list()
-#print(all_states)
+# print(all_states)
 guessed_states = []
 
 screen.addshape(image)
 turtle.shape(image)
 
-#answer_state = screen.textinput(title= "Guess the state", prompt= "Name a state!")
+# answer_state = screen.textinput(title= "Guess the state", prompt= "Name a state!")
 
 while len(guessed_states) < 30:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/28 States Correct",
@@ -41,7 +41,7 @@ while len(guessed_states) < 30:
         t.goto(int(state_data.x), int(state_data.y))
         t.write(answer_state)
 
-    #print(guessed_states)
-    #print(missing_states)
+    # print(guessed_states)
+    # print(missing_states)
 
 turtle.mainloop()

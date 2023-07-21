@@ -18,6 +18,7 @@ block_list = []
 # redirecting above URLs to this localhost to ensure blocking
 redirect = "127.0.0.1"
 
+
 def block_websites():
     """
     The function will open the host file and add the block-list websites to
@@ -50,11 +51,13 @@ def block_websites():
         web_var.set("")
 
     except PermissionError:
-        tk.messagebox.showinfo("Error", "Run cmd in the admin mode and then try again!")
+        tk.messagebox.showinfo(
+            "Error", "Run cmd in the admin mode and then try again!")
         web_var.set("")
 
     except (FileNotFoundError, NameError):
-        tk.messagebox.showinfo("Error", "Functionality not supported in your OS!")
+        tk.messagebox.showinfo(
+            "Error", "Functionality not supported in your OS!")
         web_var.set("")
 
 
@@ -81,7 +84,7 @@ def remove_websites():
                 for lines in content:
                     if not any(website in lines for website in block_list):
                         file.write(lines)
-                        
+
                 # Truncating the file to its original size
                 file.truncate()
 
@@ -102,22 +105,27 @@ def blocker():
     popup_4 = tk.Toplevel(root)
     popup_4.title("Website Blocker!")
     popup_4.geometry("360x220")
-    popup_4.config( bg = 'DodgerBlue4')
+    popup_4.config(bg='DodgerBlue4')
 
     global block_list
     global web_var
-    web_var=tk.StringVar()
+    web_var = tk.StringVar()
 
-    pass_label = tk.Label(popup_4, text = 'Enter URL to block:', font = ('Arial',12, 'bold'), bg = 'DodgerBlue4', fg = 'white')
-    pass_entry = tk.Entry(popup_4, textvariable = web_var, font = ('Arial',12, 'bold'))
+    pass_label = tk.Label(popup_4, text='Enter URL to block:', font=(
+        'Arial', 12, 'bold'), bg='DodgerBlue4', fg='white')
+    pass_entry = tk.Entry(popup_4, textvariable=web_var,
+                          font=('Arial', 12, 'bold'))
 
-    sub_btn = tk.Button(popup_4, text = 'Block', font = ('Arial',12, 'bold'), command = block_websites, bg='gold', activebackground='yellow')
+    sub_btn = tk.Button(popup_4, text='Block', font=(
+        'Arial', 12, 'bold'), command=block_websites, bg='gold', activebackground='yellow')
 
     text_to_put = '*Supported for windows ONLY\n*You can add multiple urls\n*Don\'t forget to unblock after'
 
-    instructions = tk.Label(popup_4, text = text_to_put, font = ('Arial',12, 'bold'), justify='left', bg = 'sky blue')
+    instructions = tk.Label(popup_4, text=text_to_put, font=(
+        'Arial', 12, 'bold'), justify='left', bg='sky blue')
 
-    unblock_btn = tk.Button(popup_4, text = 'Unblock all', font = ('Arial',12, 'bold'), command = remove_websites, state='disabled', width = 23, height = 2, bg='gold', activebackground='yellow')
+    unblock_btn = tk.Button(popup_4, text='Unblock all', font=('Arial', 12, 'bold'), command=remove_websites,
+                            state='disabled', width=23, height=2, bg='gold', activebackground='yellow')
 
     if enable:
         unblock_btn.config(state='normal')
@@ -143,27 +151,29 @@ def break_timer():
     try:
         # Creating a continous loop of text of time on the screen for 25 mins
         t = 5*60
-        while t>-1:
+        while t > -1:
             minute_count = t // 60
             second_count = t % 60
             timer = '{:02d}:{:02d}'.format(minute_count, second_count)
-            time_display = tk.Label(popup_2, text = timer, bg = 'DodgerBlue4', fg = 'white', font = ('STIX', 90, 'bold'))
-            time_display.place(x=0,y=0)
+            time_display = tk.Label(
+                popup_2, text=timer, bg='DodgerBlue4', fg='white', font=('STIX', 90, 'bold'))
+            time_display.place(x=0, y=0)
             popup_2.update()
             time.sleep(1)
             t -= 1
     except:
-        pass    
-    
+        pass
+
     # Setting up an alarm sound and popup window to let user know when the time is up
     if t == -1:
-        tk.messagebox.showinfo("Time's up!", "Break is over!\nTime to get to work!")
+        tk.messagebox.showinfo(
+            "Time's up!", "Break is over!\nTime to get to work!")
         popup_2.destroy()
         global break_count
         pygame.mixer.music.load("./Pomodoro_GUI/beep.wav")
         pygame.mixer.music.play(loops=1)
         break_count += 1
-    
+
 
 def show_report():
     """
@@ -174,14 +184,18 @@ def show_report():
     popup_3 = tk.Toplevel(root)
     popup_3.title("Report")
     popup_3.geometry("370x170")
-    popup_3.config( bg = 'DodgerBlue4')
+    popup_3.config(bg='DodgerBlue4')
 
     pomo_time = str(timedelta(minutes=pomo_count*25))[:-3]
     break_time = str(timedelta(minutes=pomo_count*5))[:-3]
-    tk.Label(popup_3, text=f"Number of Pomodoros completed: {pomo_count}", justify=tk.LEFT, bg = 'DodgerBlue4', fg = 'white', font=('Arial',12,'bold')).place(x = 10, y = 10)
-    tk.Label(popup_3, text=f"Number of breaks completed: {break_count}", justify=tk.LEFT, bg = 'DodgerBlue4', fg = 'white', font=('Arial',12,'bold')).place(x = 10, y = 50)
-    tk.Label(popup_3, text=f"Hours of work done: {pomo_time} hrs", justify=tk.LEFT,  bg = 'DodgerBlue4', fg = 'white', font=('Arial',12,'bold')).place(x = 10, y = 90)
-    tk.Label(popup_3, text=f"Hours of break taken: {break_time} hrs", justify=tk.LEFT,  bg = 'DodgerBlue4', fg = 'white', font=('Arial',12,'bold')).place(x = 10, y = 130)
+    tk.Label(popup_3, text=f"Number of Pomodoros completed: {pomo_count}", justify=tk.LEFT, bg='DodgerBlue4', fg='white', font=(
+        'Arial', 12, 'bold')).place(x=10, y=10)
+    tk.Label(popup_3, text=f"Number of breaks completed: {break_count}", justify=tk.LEFT, bg='DodgerBlue4', fg='white', font=(
+        'Arial', 12, 'bold')).place(x=10, y=50)
+    tk.Label(popup_3, text=f"Hours of work done: {pomo_time} hrs", justify=tk.LEFT,
+             bg='DodgerBlue4', fg='white', font=('Arial', 12, 'bold')).place(x=10, y=90)
+    tk.Label(popup_3, text=f"Hours of break taken: {break_time} hrs", justify=tk.LEFT,
+             bg='DodgerBlue4', fg='white', font=('Arial', 12, 'bold')).place(x=10, y=130)
 
 
 def pomodoro_timer():
@@ -197,21 +211,23 @@ def pomodoro_timer():
     try:
         # Creating a continous loop of text of time on the screen for 25 mins
         t = 25*60
-        while t>-1:
+        while t > -1:
             minute_count = t // 60
             second_count = t % 60
             timer = '{:02d}:{:02d}'.format(minute_count, second_count)
-            time_display = tk.Label(popup_1, text = timer, bg = 'DodgerBlue4', fg = 'white', font = ('STIX', 90, 'bold'))
-            time_display.place(x=0,y=0)
+            time_display = tk.Label(
+                popup_1, text=timer, bg='DodgerBlue4', fg='white', font=('STIX', 90, 'bold'))
+            time_display.place(x=0, y=0)
             popup_1.update()
             time.sleep(1)
             t -= 1
     except:
-        pass    
-    
+        pass
+
     # Setting up an alarm sound and popup window to let user know when the time is up
     if t == -1:
-        tk.messagebox.showinfo("Time's up!", "Pomodoro completed successfully!\nYou deserve a break!")
+        tk.messagebox.showinfo(
+            "Time's up!", "Pomodoro completed successfully!\nYou deserve a break!")
         popup_1.destroy()
         global pomo_count
         pomo_count += 1
@@ -232,28 +248,32 @@ def main():
     root.geometry('470x608')
 
     # Setting the screen background
-    bg = tk.PhotoImage(file = "./Pomodoro_GUI/bg.png")
-    label1 = tk.Label( root, image = bg)
-    label1.place(x = 0, y = 0)
+    bg = tk.PhotoImage(file="./Pomodoro_GUI/bg.png")
+    label1 = tk.Label(root, image=bg)
+    label1.place(x=0, y=0)
 
-    intro1 = tk.Label(root, text = 'POMODORO TIMER', bg = 'snow', fg = 'maroon', font = ('Arial', 25, 'bold'))
+    intro1 = tk.Label(root, text='POMODORO TIMER', bg='snow',
+                      fg='maroon', font=('Arial', 25, 'bold'))
     intro1.place(x=100, y=100)
 
-    blocker_btn = tk.Button(root, text = 'WEBSITE BLOCKER', command = blocker, font = ('Arial', 12, 'bold'), bg='gold', activebackground='yellow', height = 3, width = 25)
+    blocker_btn = tk.Button(root, text='WEBSITE BLOCKER', command=blocker, font=(
+        'Arial', 12, 'bold'), bg='gold', activebackground='yellow', height=3, width=25)
     blocker_btn.place(x=100, y=150)
 
-    start_btn = tk.Button(root, text = 'START WORK TIMER', command = pomodoro_timer, font = ('Arial', 12, 'bold'), bg='gold', activebackground='yellow', height = 3, width = 25)
+    start_btn = tk.Button(root, text='START WORK TIMER', command=pomodoro_timer, font=(
+        'Arial', 12, 'bold'), bg='gold', activebackground='yellow', height=3, width=25)
     start_btn.place(x=100, y=250)
 
-    break_btn = tk.Button(root, text = 'START BREAK TIMER', command = break_timer, font = ('Arial', 12, 'bold'), bg='gold', activebackground='yellow', height = 3, width = 25)
+    break_btn = tk.Button(root, text='START BREAK TIMER', command=break_timer, font=(
+        'Arial', 12, 'bold'), bg='gold', activebackground='yellow', height=3, width=25)
     break_btn.place(x=100, y=350)
 
-    report_btn = tk.Button(root, text = 'SHOW REPORT', command = show_report, font = ('Arial', 12, 'bold'), bg='gold', activebackground='yellow', height = 3, width = 25)
+    report_btn = tk.Button(root, text='SHOW REPORT', command=show_report, font=(
+        'Arial', 12, 'bold'), bg='gold', activebackground='yellow', height=3, width=25)
     report_btn.place(x=100, y=450)
 
     root.mainloop()
 
 
 if __name__ == '__main__':
-	main()
-
+    main()

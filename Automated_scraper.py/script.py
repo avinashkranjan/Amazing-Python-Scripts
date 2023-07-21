@@ -3,11 +3,12 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
+
 def display_content(url, selector):
     try:
         # Send a GET request to the URL
         response = requests.get(url)
-        
+
         # Check if the request was successful
         if response.status_code == 200:
             # Create a BeautifulSoup object with the page content
@@ -23,10 +24,12 @@ def display_content(url, selector):
     except Exception as e:
         print("An error occurred:", e)
 
+
 if __name__ == "__main__":
     # Check if URL, selector, and interval are provided as arguments
     if len(sys.argv) < 4:
-        print("Usage: python script.py [URL] [CSS selector] [Interval in minutes]")
+        print(
+            "Usage: python script.py [URL] [CSS selector] [Interval in minutes]")
         sys.exit(1)
 
     # Get the URL, selector, and interval from command-line arguments

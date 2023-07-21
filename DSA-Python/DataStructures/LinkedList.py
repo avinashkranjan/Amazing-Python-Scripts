@@ -20,21 +20,24 @@ Linked Lists:
         Accessing Elements by Value -----> O(n)
 """
 
+
 class Node:
     '''
     Working of Class Node:
         whenever this class is called, a data will be passed which will get saved in LinkedList as a node which has 2 parts: data & next
     '''
+
     def __init__(self, data=None, next=None):  # initialised data to None
         self.data = data
         self.next = next
+
 
 class LinkedList():
     def __init__(self):
         self.head = Node()  # Head is starting point of a Linked List and points to no other value
 
     # def accept_data(self, data):
-    def accept_data(self, *data): # args to get data at single go
+    def accept_data(self, *data):  # args to get data at single go
         new_node = Node(data)  # created a new node to add data
         cur = self.head  # pointer set for the next data
         while cur.next != None:
@@ -44,8 +47,8 @@ class LinkedList():
             cur = cur.next
         cur.next = new_node  # pointer set to the new node
 
-
     # method to print each element of Linked List
+
     def display(self):
         disp = []
         cur = self.head
@@ -53,7 +56,8 @@ class LinkedList():
 
         while cur.next != None:  # will iterate until next val of current pointer gets None
             cur = cur.next  # accessing next element of the node
-            disp.append(cur.data)  # appended the data of current element to the list disp[]
+            # appended the data of current element to the list disp[]
+            disp.append(cur.data)
         print(disp)
 
     # Method to get length of elements in Linked List
@@ -85,7 +89,6 @@ class LinkedList():
             itr = itr.next
             count += 1
 
-
     def insertAtIndex(self, index, data):
         # check if index is valid
         if index < 0 or index >= self.getLength():
@@ -102,8 +105,7 @@ class LinkedList():
                 node = Node(data, itr.next)
                 itr.next = node
             itr = itr.next
-            count+=1
-
+            count += 1
 
 
 l = LinkedList()  # created an object 'l' to call class LinkedList

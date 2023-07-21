@@ -23,6 +23,7 @@ Time Complexity: O(n log n)
 
 """
 
+
 def Merge2SortedList(arr1, arr2):
     """Input: 2 sorted lists"""
     sortedList = []  # created an empty sorted list
@@ -33,13 +34,13 @@ def Merge2SortedList(arr1, arr2):
     while i < len_arr1 and j < len_arr2:
         if arr1[i] <= arr2[j]:  # compare elements between both the lists
             sortedList.append(arr1[i])  # append to sorted list
-            i+=1  # i pointer is increased by 1 and j pointer is static
+            i += 1  # i pointer is increased by 1 and j pointer is static
         else:
             sortedList.append(arr2[j])
-            j+=1
+            j += 1
     while i < len_arr1:
         sortedList.append(arr1[i])
-        i+=1
+        i += 1
     while j < len_arr2:
         sortedList.append(arr2[j])
         j += 1
@@ -50,12 +51,15 @@ def MergeSort(arr):
     # if list is empty or contains 1 element only: return list
     if len(arr) <= 1:
         return arr
-    mid = len(arr) // 2  # get middle index of array to divide it into 2 parts: left and right
+    # get middle index of array to divide it into 2 parts: left and right
+    mid = len(arr) // 2
     left = arr[:mid]  # dividing list into 2 parts: left and right
     right = arr[mid:]  # dividing list into 2 parts: left and right
 
-    left = MergeSort(left)  # recursively call MergeSort function to sort left array
-    right = MergeSort(right)  # recursively call MergeSort function to sort right array
+    # recursively call MergeSort function to sort left array
+    left = MergeSort(left)
+    # recursively call MergeSort function to sort right array
+    right = MergeSort(right)
     # MergeSort(left)  # recursively call MergeSort function to sort left array
     # MergeSort(right)  # recursively call MergeSort function to sort right array
 

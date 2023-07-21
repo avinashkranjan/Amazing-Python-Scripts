@@ -40,7 +40,7 @@ if __name__ == "__main__":
         bday = item['Birthday']
         bday = datetime.datetime.strptime(bday, "%d-%m-%Y")
         bday = bday.strftime("%d-%m")
-        if(today == bday) and yearNow not in str(item['LastWishedYear']):
+        if (today == bday) and yearNow not in str(item['LastWishedYear']):
             # calling the sendmail function
             sendEmail(item['Email'], "Happy Birthday", item['Dialogue'])
             writeInd.append(index)

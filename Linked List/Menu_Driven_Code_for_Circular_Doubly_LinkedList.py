@@ -6,11 +6,13 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Circular Doubly Linked List
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.right = None
         self.left = None
+
 
 class LinkedList:
     def __init__(self):
@@ -30,9 +32,9 @@ class LinkedList:
             self.root = n
             self.last.right = self.root
             self.root.left = self.last
-        print('\nInserted Element: ',self.root.data)
+        print('\nInserted Element: ', self.root.data)
         self.printList()
-            
+
     def deleteLeft(self):
         if self.root == None:
             print('\nLinked List is empty..!!')
@@ -44,9 +46,9 @@ class LinkedList:
                 self.root = self.root.right
                 self.root.left = self.last
                 self.last.right = self.root
-            print('\nDeleted element: ',temp.data)
+            print('\nDeleted element: ', temp.data)
         self.printList()
-    
+
     def insertRight(self, data):
         n = Node(data)
         if self.root == None:
@@ -60,7 +62,7 @@ class LinkedList:
             self.last = n
             self.last.right = self.root
             self.root.left = self.last
-        print('\nInserted Element: ',n.data)
+        print('\nInserted Element: ', n.data)
         self.printList()
 
     def deleteRight(self):
@@ -70,12 +72,12 @@ class LinkedList:
             if self.root == self.last:
                 self.root = None
             else:
-                print('Deleted Element: ',self.last.data)
+                print('Deleted Element: ', self.last.data)
                 self.last = self.last.left
                 self.last.right = self.root
                 self.root.left = self.last
         self.printList()
-            
+
     def printList(self):
         if self.root == None:
             print('\nLinked List is empty..!!')
@@ -83,7 +85,7 @@ class LinkedList:
         temp = self.root
         print('\nElements in Linked List are: ')
         while True:
-            print('|',temp.data,'| <-> ',end = '')
+            print('|', temp.data, '| <-> ', end='')
             temp = temp.right
             if temp == self.root:
                 break
@@ -97,12 +99,13 @@ class LinkedList:
         temp = self.last
         print('\nElements in Linked List are: ')
         while True:
-            print('|',temp.data,'| <-> ',end = '')
+            print('|', temp.data, '| <-> ', end='')
             temp = temp.left
             if temp == self.last:
                 break
         print('Last')
         print()
+
 
 o = LinkedList()
 
@@ -120,10 +123,10 @@ while True:
     elif ch == 2:
         data = int(input('\nEnter value to be inserted in right: '))
         o.insertRight(data)
-    
+
     elif ch == 3:
         o.deleteLeft()
-    
+
     elif ch == 4:
         o.deleteRight()
 
@@ -132,10 +135,10 @@ while True:
 
     elif ch == 6:
         o.printReverseList()
-    
+
     elif ch == 0:
         print('You are out of the program..!!')
         break
-    
+
     else:
         print('\nWrong Input..\nEnter the correct choice..!!\n')

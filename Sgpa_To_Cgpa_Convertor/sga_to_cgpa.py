@@ -1,7 +1,8 @@
 import tkinter as tk
 
 
-def create_sgpa_entries():  # Create SGPA entries based on the total number of semesters entered by the user.
+# Create SGPA entries based on the total number of semesters entered by the user.
+def create_sgpa_entries():
     num_semesters = int(num_semesters_entry.get())
 
     for i in range(num_semesters):
@@ -16,10 +17,12 @@ def create_sgpa_entries():  # Create SGPA entries based on the total number of s
         sgpa_entries.append(sgpa_entry)
 
     create_sgpa_buttons.grid_remove()
-    cgpa_calc.grid(row=num_semesters + 2, column=0, columnspan=2, padx=10, pady=5)
+    cgpa_calc.grid(row=num_semesters + 2, column=0,
+                   columnspan=2, padx=10, pady=5)
 
 
-def validate_sgpa_entries():  # Validate the SGPA entries to enable or disable the CGPA calculation button.
+# Validate the SGPA entries to enable or disable the CGPA calculation button.
+def validate_sgpa_entries():
     filled_entries = [entry.get() for entry in sgpa_entries]
     if all(filled_entries):
         cgpa_calc.configure(state="normal")
@@ -69,15 +72,18 @@ num_semesters_entry.grid(row=0, column=1, padx=10, pady=5, sticky="W")
 sgpa_labels = []
 sgpa_entries = []
 
-create_sgpa_buttons = tk.Button(sgpa_frame, text="Create SGPA Entries", command=create_sgpa_entries)
+create_sgpa_buttons = tk.Button(
+    sgpa_frame, text="Create SGPA Entries", command=create_sgpa_entries)
 create_sgpa_buttons.grid(row=1, column=0, columnspan=2, padx=10, pady=5)
 
-cgpa_calc = tk.Button(sgpa_frame, text="Calculate CGPA", command=calculate_cgpa, state="disabled")
+cgpa_calc = tk.Button(sgpa_frame, text="Calculate CGPA",
+                      command=calculate_cgpa, state="disabled")
 
 cgpa_label = tk.Label(root, text="CGPA: ")
 cgpa_label.pack()
 
-reset_button = tk.Button(root, text="Reset", command=reset_entries, state="disabled")
+reset_button = tk.Button(
+    root, text="Reset", command=reset_entries, state="disabled")
 reset_button.pack()
 
 root.mainloop()

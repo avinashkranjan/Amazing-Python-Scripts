@@ -11,6 +11,7 @@ def fibo(n):
             sequence.append(sequence[i-1] + sequence[i-2])
         return sequence
 
+
 n = 0
 while n <= 0:
     n = int(input("Enter how many terms you need in your Fibonacci Sequence: "))

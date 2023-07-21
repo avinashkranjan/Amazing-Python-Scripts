@@ -14,7 +14,7 @@ def amazon(item):
     soup = BeautifulSoup(page.content, "html.parser")
     name = "Amazon"
     # For access to product links un-comment these:
-    #links = []
+    # links = []
     # for link in soup.find_all("a",{"class":"a-link-normal a-text-normal"}, limit = 5):
     # links.append(link["href"])
 
@@ -39,7 +39,7 @@ def flipkart(item):
     soup = BeautifulSoup(page.content, "html.parser")
     name = "Flipkart"
     # For access to product links un-comment these:
-    #links = []
+    # links = []
 
     products = []
     prices = []

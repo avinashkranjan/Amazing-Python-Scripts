@@ -25,7 +25,8 @@ def savefile():
         time = int(sec.get())
         add = addr + "/" + str(filename.get()) + ".wav"
         showinfo(title="Start", message="Recording started")
-        rece = sounddevice.rec(frames=time * 44100, samplerate=44100, channels=2)
+        rece = sounddevice.rec(frames=time * 44100,
+                               samplerate=44100, channels=2)
         sounddevice.wait()
         write(add, rate=44100, data=rece)
         showinfo(title="End", message="Recording stopped")

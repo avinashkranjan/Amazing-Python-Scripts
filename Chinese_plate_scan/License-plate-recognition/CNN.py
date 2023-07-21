@@ -22,30 +22,37 @@ def cnn_train():
     X_train, y_train = [], []
     for i in range(n):
         print("正在读取第%d张图片" % i)
-        img = cv2.imdecode(np.fromfile(path + pic_name[i], dtype=np.uint8), -1)  # cv2.imshow无法读取中文路径图片，改用此方式
+        # cv2.imshow无法读取中文路径图片，改用此方式
+        img = cv2.imdecode(np.fromfile(path + pic_name[i], dtype=np.uint8), -1)
         label = [char_dict[name] for name in pic_name[i][0:7]]  # 图片名前7位为车牌标签
         X_train.append(img)
         y_train.append(label)
     X_train = np.array(X_train)
-    y_train = [np.array(y_train)[:, i] for i in range(7)]  # y_train是长度为7的列表，其中每个都是shape为(n,)的ndarray，分别对应n张图片的第一个字符，第二个字符....第七个字符
+    # y_train是长度为7的列表，其中每个都是shape为(n,)的ndarray，分别对应n张图片的第一个字符，第二个字符....第七个字符
+    y_train = [np.array(y_train)[:, i] for i in range(7)]
 
     # cnn模型
     Input = layers.Input((80, 240, 3))  # 车牌图片shape(80,240,3)
     x = Input
-    x = layers.Conv2D(filters=16, kernel_size=(3, 3), strides=1, padding='same', activation='relu')(x)
+    x = layers.Conv2D(filters=16, kernel_size=(
+        3, 3), strides=1, padding='same', activation='relu')(x)
     x = layers.MaxPool2D(pool_size=(2, 2), padding='same', strides=2)(x)
     for i in range(3):
-        x = layers.Conv2D(filters=32 * 2 ** i, kernel_size=(3, 3), padding='valid', activation='relu')(x)
-        x = layers.Conv2D(filters=32 * 2 ** i, kernel_size=(3, 3), padding='valid', activation='relu')(x)
+        x = layers.Conv2D(filters=32 * 2 ** i, kernel_size=(3, 3),
+                          padding='valid', activation='relu')(x)
+        x = layers.Conv2D(filters=32 * 2 ** i, kernel_size=(3, 3),
+                          padding='valid', activation='relu')(x)
         x = layers.MaxPool2D(pool_size=(2, 2), padding='same', strides=2)(x)
         x = layers.Dropout(0.5)(x)
     x = layers.Flatten()(x)
     x = layers.Dropout(0.3)(x)
-    Output = [layers.Dense(65, activation='softmax', name='c%d' % (i + 1))(x) for i in range(7)]  # 7个输出分别对应车牌7个字符，每个输出都为65个类别类概率
+    Output = [layers.Dense(65, activation='softmax', name='c%d' % (
+        i + 1))(x) for i in range(7)]  # 7个输出分别对应车牌7个字符，每个输出都为65个类别类概率
     model = models.Model(inputs=Input, outputs=Output)
     model.summary()
     model.compile(optimizer='adam',
-                  loss='sparse_categorical_crossentropy',  # y_train未进行one-hot编码，所以loss选择sparse_categorical_crossentropy
+                  # y_train未进行one-hot编码，所以loss选择sparse_categorical_crossentropy
+                  loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
     # 模型训练
@@ -62,9 +69,11 @@ def cnn_predict(cnn, Lic_img):
                   "N", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     Lic_pred = []
     for lic in Lic_img:
-        lic_pred = cnn.predict(lic.reshape(1, 80, 240, 3))  # 预测形状应为(1,80,240,3)
+        lic_pred = cnn.predict(lic.reshape(
+            1, 80, 240, 3))  # 预测形状应为(1,80,240,3)
         lic_pred = np.array(lic_pred).reshape(7, 65)  # 列表转为ndarray，形状为(7,65)
-        if len(lic_pred[lic_pred >= 0.8]) >= 4:  # 统计其中预测概率值大于80%以上的个数，大于等于4个以上认为识别率高，识别成功
+        # 统计其中预测概率值大于80%以上的个数，大于等于4个以上认为识别率高，识别成功
+        if len(lic_pred[lic_pred >= 0.8]) >= 4:
             chars = ''
             for arg in np.argmax(lic_pred, axis=1):  # 取每行中概率值最大的arg,将其转为字符
                 chars += characters[arg]

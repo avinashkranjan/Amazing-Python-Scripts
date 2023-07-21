@@ -1,6 +1,7 @@
 import random
 import quote
 
+
 def generate_quotes():
     print("1. Inspirational")
     print("2. Motivational")
@@ -24,7 +25,7 @@ def generate_quotes():
     quotes = quote.quote(search_term)
     num = int(input("Enter the No. of quotes to generate: "))
     for i in range(num):
-        print(i+1 ,".", random.choice(quotes)['quote'])
-    
+        print(i+1, ".", random.choice(quotes)['quote'])
+
 
 generate_quotes()

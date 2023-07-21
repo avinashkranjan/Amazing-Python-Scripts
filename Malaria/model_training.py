@@ -52,7 +52,7 @@ data2 = data1[n]
 labels2 = labels1[n]
 
 # Splitting the dataset into the Training set and Test set
-X_train, X_valid, y_train,y_valid = train_test_split(data2,
+X_train, X_valid, y_train, y_valid = train_test_split(data2,
                                                       labels2, test_size=0.2, random_state=0)
 X_trainF = X_train.astype('float32')
 X_validF = X_valid.astype('float32')

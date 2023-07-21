@@ -61,14 +61,16 @@ def send():
                 image_data = f.read()
                 image_type = imghdr.what(f.name)
                 image_name = f.name
-            newMessage.add_attachment(image_data, maintype='image', subtype=image_type, filename=image_name)
+            newMessage.add_attachment(
+                image_data, maintype='image', subtype=image_type, filename=image_name)
             with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
                 smtp.login(my_mail, password)
                 smtp.send_message(newMessage)
 
             messagebox.showinfo("Status", "Mail has been sent successfully")
         else:
-            messagebox.showerror("Error", "Invalid Email or QR Code not generated")
+            messagebox.showerror(
+                "Error", "Invalid Email or QR Code not generated")
     except:
         messagebox.showerror("Error", "Invalid Email")
 

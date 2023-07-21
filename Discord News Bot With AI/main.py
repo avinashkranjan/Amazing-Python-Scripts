@@ -10,7 +10,6 @@ openai.api_key = 'YOUR_OPENAI_API_KEY'
 # Get a key at https://platform.openai.com/docs/api-reference
 
 
-
 CLIENT_TOKEN = 'YOUR_DISCORD_TOKEN'
 # Get a token at the discord developer portal https://discord.com/developers/docs/intro
 
@@ -25,7 +24,6 @@ params = {
 }
 
 
-
 intents = discord.Intents.default()
 intents.members = True
 
@@ -33,8 +31,6 @@ client = discord.Client(intents=intents)
 
 latest_url = ""
 
-
-        
 
 def get_latest_article():
     global latest_article
@@ -53,18 +49,18 @@ async def send_article():
         await channel.send(message)
         latest_url = latest_article['url']
         response_text = f'\n {message}'
-        
+
         # Feel free to add your own prompts
         prompt = "Come up with a sarcastic response to this news article " + response_text
         response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        temperature=0.7,
-        max_tokens=60,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-    )
+            model="text-davinci-003",
+            prompt=prompt,
+            temperature=0.7,
+            max_tokens=60,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0
+        )
         sarcastic_response = response.choices[0].text.strip()
         if sarcastic_response:
             await channel.send(sarcastic_response)
@@ -79,9 +75,8 @@ async def on_ready():
 
     while True:
         await send_article()
-        await asyncio.sleep(10*60)  # wait for 10 minutes before sending the next article to avoid using to many resources
-        
-        
+        # wait for 10 minutes before sending the next article to avoid using to many resources
+        await asyncio.sleep(10*60)
 
 
 client.run(CLIENT_TOKEN)

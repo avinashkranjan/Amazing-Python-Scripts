@@ -12,6 +12,8 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # Mention timeline tweets
+
+
 def mention_timeline_tweets(username, count):
     try:
         # Get user timeline tweets
@@ -20,9 +22,11 @@ def mention_timeline_tweets(username, count):
             # Mention the tweet author in a new tweet
             mention = f'@{tweet.user.screen_name} Hello! Just mentioning you.'
             api.update_status(mention, in_reply_to_status_id=tweet.id)
-            print(f'Mentioned @{tweet.user.screen_name} in response to tweet: {tweet.text}')
+            print(
+                f'Mentioned @{tweet.user.screen_name} in response to tweet: {tweet.text}')
     except tweepy.TweepError as e:
         print('Error:', str(e))
+
 
 # Example usage
 mention_timeline_tweets('openai', 5)

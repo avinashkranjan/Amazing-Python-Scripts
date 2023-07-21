@@ -6,6 +6,7 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Priority Queue
 """
 
+
 class Q:
     queue = []
     MaxSize = 0
@@ -25,13 +26,13 @@ class Q:
         Q.rear += 1
         Q.queue[Q.rear] = e
         Q.queue.sort(reverse=True)
-        print(e, 'enqueued in Queue at position: ',Q.rear+1)
+        print(e, 'enqueued in Queue at position: ', Q.rear+1)
         print('')
 
     def dequeue(self):
         temp = Q.queue[Q.front]
         Q.front += 1
-        print(temp, 'dequeued from Queue',Q.front)
+        print(temp, 'dequeued from Queue', Q.front)
         print('')
 
     def isFull(self):
@@ -49,7 +50,7 @@ class Q:
     def printQueue(self):
         print('Position', '\tData')
         for i in range(Q.front, Q.rear+1):
-            print(i+1,'\t\t',Q.queue[i])
+            print(i+1, '\t\t', Q.queue[i])
 
 
 # Main Code:

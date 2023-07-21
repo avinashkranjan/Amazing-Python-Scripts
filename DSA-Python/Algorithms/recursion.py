@@ -7,7 +7,7 @@ from docutils.nodes import field
 def sumIteration(n):
     sum = 0
     for i in range(1, n+1):
-        sum+=i
+        sum += i
     return sum
 
 
@@ -26,7 +26,6 @@ def fibonacci(n):
     if n == 0 or n == 1:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
-
 
 
 if __name__ == '__main__':

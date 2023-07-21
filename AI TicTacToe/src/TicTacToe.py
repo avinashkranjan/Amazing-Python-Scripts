@@ -1,5 +1,6 @@
 import random
 
+
 def display_board(board):
     print('-------------')
     print('| ' + board[7] + ' | ' + board[8] + ' | ' + board[9] + ' |')
@@ -109,6 +110,7 @@ def play_tic_tac_toe():
             else:
                 print('Thank you for playing.')
             break
+
 
 # Start the game
 play_tic_tac_toe()

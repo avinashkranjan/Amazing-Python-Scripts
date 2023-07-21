@@ -28,11 +28,11 @@ def sql_fetch(con):
 
     for row in rows:
         # Check if row has searched HashTag
-        if(searchHashtag in row):
+        if (searchHashtag in row):
             print(row[1]+'\n')
             isEmptySearch = False
 
-    if(isEmptySearch):
+    if (isEmptySearch):
         print("\nNo tweets with #"+searchHashtag+" fetched into database \n")
 
 

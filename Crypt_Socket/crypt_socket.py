@@ -18,7 +18,8 @@ client_socket, client_address = server_socket.accept()
 print('Connected to:', client_address)
 
 # Wrap the socket with SSL/TLS encryption
-ssl_socket = ssl.wrap_socket(client_socket, server_side=True, ssl_version=ssl.PROTOCOL_TLS)
+ssl_socket = ssl.wrap_socket(
+    client_socket, server_side=True, ssl_version=ssl.PROTOCOL_TLS)
 
 while True:
     # Receive data from the client

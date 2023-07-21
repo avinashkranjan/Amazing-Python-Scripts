@@ -9,12 +9,17 @@ Output = "One Hundred Twenty Three"
 import tkinter as tk
 
 # Initialising some variables
-digit = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
+digit = ["Zero", "One", "Two", "Three", "Four",
+         "Five", "Six", "Seven", "Eight", "Nine"]
 denominations = ["", "Thousand", "Million", "Billion", "Trillion"]
-tens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"]
-ties = ["Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"]
+tens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen",
+        "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"]
+ties = ["Ten", "Twenty", "Thirty", "Forty",
+        "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"]
 
 # Function which handles the algorithm written inside init
+
+
 def convertNumberToWords():
     # Getting value from the input box of GUI
     inputValue = numberEntry.get()
@@ -75,15 +80,19 @@ def convertNumberToWords():
         result = "Zero" if inputValue == "000" else convert(0, 0)
         resultLabel.config(text=result, fg="white")
 
+
 # GUI formation starts
 window = tk.Tk()
-window.title("Number to Words Converter") # This is the title of the GUI
-window.configure(background="black") # Background of the GUI
+window.title("Number to Words Converter")  # This is the title of the GUI
+window.configure(background="black")  # Background of the GUI
 
 numberLabel = tk.Label(window, text="Enter Number:", bg="black", fg="white")
-numberEntry = tk.Entry(window) # Getting data from the user while entering into the input box
-resultLabel = tk.Label(window, text="In Words:", bg="black", fg="white") # Result label will print answer get by the algorithm
-convertButton = tk.Button(window, text="Convert", command=convertNumberToWords) # Calling/Trigger the function to convert the number
+# Getting data from the user while entering into the input box
+numberEntry = tk.Entry(window)
+# Result label will print answer get by the algorithm
+resultLabel = tk.Label(window, text="In Words:", bg="black", fg="white")
+# Calling/Trigger the function to convert the number
+convertButton = tk.Button(window, text="Convert", command=convertNumberToWords)
 
 numberLabel.grid(row=0, column=0, padx=10, pady=10)
 numberEntry.grid(row=0, column=1, padx=10, pady=10)

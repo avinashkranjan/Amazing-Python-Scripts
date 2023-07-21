@@ -13,12 +13,12 @@ dictionary = PyDictionary()
 
 def getMeaning():
     response = dictionary.meaning(word.get())
-    if(response):
-        if('Noun' in response):
+    if (response):
+        if ('Noun' in response):
             meaning = response['Noun'][0]
-        elif('Verb' in response):
+        elif ('Verb' in response):
             meaning = response['Verb'][0]
-        elif('Adjective' in response):
+        elif ('Adjective' in response):
             meaning = response['Adjective'][0]
         else:
             meaning = "Invalid word"

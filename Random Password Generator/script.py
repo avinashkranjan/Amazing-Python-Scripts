@@ -30,17 +30,17 @@ def create_pass():
     strn = opt.get()
     pass_wrd = ""
     # password of low strength
-    if(strn == 1):
+    if (strn == 1):
         for i in range(0, Len):
             pass_wrd = pass_wrd + random.choice(lower + num)
         return pass_wrd
     # password of medium strength
-    elif(strn == 2):
+    elif (strn == 2):
         for i in range(0, Len):
             pass_wrd = pass_wrd + random.choice(lower + upper + num)
         return pass_wrd
     # password of high strength
-    elif(strn == 3):
+    elif (strn == 3):
         for i in range(0, Len):
             pass_wrd = pass_wrd + random.choice(lower + upper + num + punc)
         return pass_wrd

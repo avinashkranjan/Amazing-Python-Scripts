@@ -11,15 +11,16 @@ def dalle(message):
 
     # Generate a response
     response = openai.Image.create(
-    prompt=prompt,
-    n=1,
-    size="1024x1024"
+        prompt=prompt,
+        n=1,
+        size="1024x1024"
     )
     image_url = response['data'][0]['url']
     response = requests.get(image_url)
     with open("image.jpg", "wb") as f:
         f.write(response.content)
-        
+
     print(image_url)
-    
+
+
 dalle(input("Enter something : "))

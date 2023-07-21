@@ -18,6 +18,7 @@ print("-" * 60)
 # Check what time the scan started
 t1 = datetime.now()
 
+
 async def scan_port(port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.setblocking(False)
@@ -31,6 +32,7 @@ async def scan_port(port):
         pass
     finally:
         sock.close()
+
 
 async def main():
     tasks = []

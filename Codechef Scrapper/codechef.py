@@ -114,7 +114,7 @@ def main():
     info = get_problems(problem_difficulty[category], no_of_problems)
     for name, url in info.items():
         problem = get_problem_description(url, name)
-        if(problem is not None):
+        if (problem is not None):
             convert_to_pdf(problem)
         else:
             pass

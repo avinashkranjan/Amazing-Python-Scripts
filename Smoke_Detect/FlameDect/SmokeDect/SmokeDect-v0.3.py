@@ -35,7 +35,8 @@ if __name__ == '__main__':
         fmask = cv2.medianBlur(fmask, 3)
         fmask = cv2.dilate(fmask, kernel)
 
-        contour_img, contours, hierarchy = cv2.findContours(fmask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        contour_img, contours, hierarchy = cv2.findContours(
+            fmask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         for cnt in contours:
             x, y, w, h = cv2.boundingRect(cnt)
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)

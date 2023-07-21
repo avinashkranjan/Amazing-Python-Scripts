@@ -52,7 +52,7 @@ def reset():
 
 def check():
     global value
-    #Label(root, text=str(value)).grid(row=8)
+    # Label(root, text=str(value)).grid(row=8)
 
     # tells the user how many attempts are left
     global attempts

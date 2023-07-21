@@ -9,24 +9,25 @@ Java :: Linked HashMap
 C++ :: std::map
 """
 
+
 class HashTable():
     """
     In class hashTable, an array of size '100' is created which is initialised using list_comprehension; val in each
     element is None
     """
+
     def __init__(self):
         self.MAX = 100  # size of array = 100
         self.arr = [None for i in range(self.MAX)]  # list-comprehension
 
-
     def get_hash(self, key):
         h = 0
         for char in key:
-            h += ord(char) # returns ASCII val of char
-        return h%self.MAX  # hash: Sum(ASCII_Values(key)) % size(array)
+            h += ord(char)  # returns ASCII val of char
+        return h % self.MAX  # hash: Sum(ASCII_Values(key)) % size(array)
 
     def add(self, key, val):
-        h = self.get_hash(key) # retrieving hash function
+        h = self.get_hash(key)  # retrieving hash function
         self.arr[h] = val
 
     def get(self, key):
@@ -36,8 +37,6 @@ class HashTable():
     def delete(self, key):
         h = self.get_hash(key)
         self.arr[h] = None
-
-
 
 
 t = HashTable()  # object of class HashTable
@@ -54,4 +53,3 @@ print(r)
 s = t.add('Google', 121)
 z = t.get('Google')
 print(z)
-

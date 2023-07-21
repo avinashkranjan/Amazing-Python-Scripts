@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 def scrape_links(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -10,6 +11,8 @@ def scrape_links(url):
         if href and href.startswith('http'):  # Filter out non-HTTP links
             print(href)
 
+
 # Example usage:
-url = 'https://www.linkedin.com/feed/'  # Replace with the URL of the website you want to scrape
+# Replace with the URL of the website you want to scrape
+url = 'https://www.linkedin.com/feed/'
 scrape_links(url)

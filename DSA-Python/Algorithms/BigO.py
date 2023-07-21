@@ -92,6 +92,8 @@ The following table contains some useful estimates assuming a time limit of one 
 """ Time Complexity """
 
 # Linear Time Complexity O(n)
+
+
 def squareNum(numbers):
     """
     Time Complexity: O(n)  :: loop will iterate n time linearly
@@ -126,6 +128,8 @@ def duplicateInArray(numbers):
 
 
 """ Space Complexity """
+
+
 def Search(numbers):
     """
     Search for 10 in list
@@ -134,8 +138,6 @@ def Search(numbers):
     for i in range(len(numbers)):
         if numbers[i] == 10:
             print(i)
-
-
 
 
 if __name__ == '__main__':
@@ -155,4 +157,3 @@ if __name__ == '__main__':
 
     numbers = [1, 6, 8, 10, 4, 5]
     Search(numbers)
-

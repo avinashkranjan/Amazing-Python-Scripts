@@ -33,7 +33,8 @@ def extracting_problem_links(diff_level):
     options.headless = True
     driver = webdriver.Chrome(DRIVER_PATH, options=options)
     print("\nRequesting URL ...")
-    driver.get(f"https://codeforces.com/problemset/?tags={diff_level[0]}-{diff_level[1]}")
+    driver.get(
+        f"https://codeforces.com/problemset/?tags={diff_level[0]}-{diff_level[1]}")
 
     # ===================Getting no. of Pages to Scrape=============================
 
@@ -54,7 +55,8 @@ def extracting_problem_links(diff_level):
     # ***************************** SCRAPING PAGE 1 *************************************
     print(f"\nScraping Page {page}")
 
-    elements = driver.find_elements_by_css_selector("td.id.dark.left a" and "td.id.left a")
+    elements = driver.find_elements_by_css_selector(
+        "td.id.dark.left a" and "td.id.left a")
     for element in elements:
         # Saving the link in pblms_links
         pblms_links.append(element.get_attribute("href"))
@@ -63,7 +65,8 @@ def extracting_problem_links(diff_level):
         # If we scraped required no. of questions then return
         if pblms_link_scraped == no_of_questions:
             print(f"URLs of Question Scraped till now: {pblms_link_scraped}")
-            print(f"\nURLs Scrapped Successfully {pblms_link_scraped} out of {no_of_questions}")
+            print(
+                f"\nURLs Scrapped Successfully {pblms_link_scraped} out of {no_of_questions}")
             return pblms_links
     page += 1
     print(f"URLs of Question Scraped till now: {pblms_link_scraped}")
@@ -75,7 +78,8 @@ def extracting_problem_links(diff_level):
 
         # Going to next Page
         driver.get(link)
-        elements = driver.find_elements_by_css_selector("td.id.dark.left a" and "td.id.left a")
+        elements = driver.find_elements_by_css_selector(
+            "td.id.dark.left a" and "td.id.left a")
         for element in elements:
             # Saving the link in pblms_links
             pblms_links.append(element.get_attribute("href"))
@@ -83,8 +87,10 @@ def extracting_problem_links(diff_level):
 
             # If we scraped required no. of questions then return
             if pblms_link_scraped == no_of_questions:
-                print(f"URLs of Question Scraped till now: {pblms_link_scraped}")
-                print(f"\nURLs Scrapped Successfully {pblms_link_scraped} out of {no_of_questions}")
+                print(
+                    f"URLs of Question Scraped till now: {pblms_link_scraped}")
+                print(
+                    f"\nURLs Scrapped Successfully {pblms_link_scraped} out of {no_of_questions}")
                 return pblms_links
 
         print(f"URLs of Question Scraped till now: {pblms_link_scraped}")
@@ -92,7 +98,8 @@ def extracting_problem_links(diff_level):
     # ----------------------------------------------------------------------------------------------
 
     # scraped all the available questions but still the count is less
-    print(f"\n{pblms_link_scraped} out of {no_of_questions} URLs able to scrapped !!!")
+    print(
+        f"\n{pblms_link_scraped} out of {no_of_questions} URLs able to scrapped !!!")
     return pblms_links
 
 
@@ -140,14 +147,17 @@ def getproblem(URLs):
         pdf.add_page()  # Adding new page to the pdf
         pdf.image(path, MARGIN, MARGIN)
 
-        pdf.output(os.path.join(target_folder, filename), "F")  # saving the pdf with the specified filename
-        print(f'File saved in your directory ./problems_pdf/{filename}   ({file_counter}/{len(URLs)}) !')
+        # saving the pdf with the specified filename
+        pdf.output(os.path.join(target_folder, filename), "F")
+        print(
+            f'File saved in your directory ./problems_pdf/{filename}   ({file_counter}/{len(URLs)}) !')
         file_counter += 1
 
 
 if __name__ == "__main__":
     DRIVER_PATH = input("Enter DRIVER PATH location: ")
     diff = select_difficulty()   # Accepting difficulty level from user
-    problems_link = extracting_problem_links(diff)  # scraping the required the no. of links
+    # scraping the required the no. of links
+    problems_link = extracting_problem_links(diff)
     getproblem(problems_link)  # saving the Questions in PDF file.
     os.remove('image.png')

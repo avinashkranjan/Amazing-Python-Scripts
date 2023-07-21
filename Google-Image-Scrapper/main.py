@@ -16,7 +16,8 @@ image_request = {'name': '', 'number_of_images': 0}
 
 class ImageForm(FlaskForm):
     name = StringField('name', validators=[DataRequired()])
-    number_of_images = IntegerField('number_of_images', validators=[DataRequired()])
+    number_of_images = IntegerField(
+        'number_of_images', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
@@ -31,7 +32,8 @@ def index():
         return redirect('/')
 
     if downloaded[0]:
-        response.download(image_request['name'], int(image_request['number_of_images']))
+        response.download(image_request['name'], int(
+            image_request['number_of_images']))
         flash('All of your images have been downloaded')
         downloaded[0] = False
         return redirect('/')

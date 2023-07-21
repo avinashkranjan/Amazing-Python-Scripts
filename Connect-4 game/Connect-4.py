@@ -133,7 +133,7 @@ while not game_over:
                     drop_piece(board, row, col, 1)
 
                     if winning_move(board, 1):
-                        #print("Player 1 wins CONGRATULATIONS!!")
+                        # print("Player 1 wins CONGRATULATIONS!!")
                         label = myfont.render("Player 1 wins!!", 1, RED)
                         screen.blit(label, (40, 10))
                         game_over = True
@@ -147,7 +147,7 @@ while not game_over:
                     drop_piece(board, row, col, 2)
 
                     if winning_move(board, 2):
-                        #print("Player 2 wins CONGRATULATIONS!!")
+                        # print("Player 2 wins CONGRATULATIONS!!")
                         label = myfont.render("Player 2 wins!!", 1, YELLOW)
                         screen.blit(label, (40, 10))
                         game_over = True

@@ -16,7 +16,7 @@ x, y, w, h = 950, 300, 100, 100
 heartbeat_count = 128
 heartbeat_values = [0]*heartbeat_count
 heartbeat_times = [time.time()]*heartbeat_count
-# Matplotlib graph surface 
+# Matplotlib graph surface
 fig = plt.figure()
 ax = fig.add_subplot(111)
 while True:
@@ -32,7 +32,8 @@ while True:
     fig.canvas.draw()
     plot_img_np = np.fromstring(fig.canvas.tostring_rgb(),
                                 dtype=np.uint8, sep='')
-    plot_img_np = plot_img_np.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    plot_img_np = plot_img_np.reshape(
+        fig.canvas.get_width_height()[::-1] + (3,))
     plt.cla()
     # Display the frames
     cv2.imshow('Crop', crop_img)

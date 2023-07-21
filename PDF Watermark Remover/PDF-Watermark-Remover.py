@@ -7,7 +7,7 @@ from PIL import Image
 from fpdf import FPDF
 import shutil
 
-pdfFile = input('PDF file location: ') 
+pdfFile = input('PDF file location: ')
 dirname = os.path.dirname(os.path.normpath(pdfFile))
 outputFile = os.path.basename(pdfFile)
 outputFile = os.path.splitext(outputFile)[0]
@@ -16,19 +16,24 @@ pages = pdf_reader.getNumPages()
 rang = int(pages) + 1
 
 # Select the pixel from the extracted images of pdf pages
-def select_pixel(r,g,b):
+
+
+def select_pixel(r, g, b):
     if r > 120 and r < 254 and g > 120 and g < 254 and b > 120 and b < 254:
         return True
     else:
         return False
 
 # Handling of images for removing the watermark
+
+
 def handle(imgs):
-    for  i in range(imgs.shape[0]):
+    for i in range(imgs.shape[0]):
         for j in range(imgs.shape[1]):
-            if select_pixel(imgs[i][j][0],imgs[i][j][1],imgs[i][j][2]):
-                imgs[i][j][0] =  imgs[i][j][1] = imgs[i][j][2] = 255
+            if select_pixel(imgs[i][j][0], imgs[i][j][1], imgs[i][j][2]):
+                imgs[i][j][0] = imgs[i][j][1] = imgs[i][j][2] = 255
     return imgs
+
 
 images = convert_from_path(pdfFile)
 
@@ -48,15 +53,15 @@ for img in images:
 # Merging images to a sigle PDF
 pdf = FPDF()
 sdir = dirname + "img/"
-w,h = 0,0
+w, h = 0, 0
 
 for i in range(1, rang):
     fname = sdir + "img%.0d.jpg" % i
     if os.path.exists(fname):
         if i == 1:
             cover = Image.open(fname)
-            w,h = cover.size
-            pdf = FPDF(unit = "pt", format = [w,h])
+            w, h = cover.size
+            pdf = FPDF(unit="pt", format=[w, h])
         image = fname
         pdf.add_page()
         pdf.image(image, 0, 0, w, h)

@@ -8,7 +8,7 @@ def notifly_execute():
     Runs the notifly main script upon button press to update Google Calendar
     """
     for i in range(0, len(update_options)):
-        if(update_options[i] == clicked.get()):
+        if (update_options[i] == clicked.get()):
             months_to_update = i+1
 
     for month in range(datetime.today().month, datetime.today().month + months_to_update):
@@ -19,7 +19,7 @@ def notifly_delete():
     """
     Runs the notifly delete scripts upon button press to delete rocket launch events as desired
     """
-    if(delete_options[0] == clicked_delete.get()):
+    if (delete_options[0] == clicked_delete.get()):
         notifly.delete_all()
     else:
         month_to_delete = clicked_delete.get().split()[1]

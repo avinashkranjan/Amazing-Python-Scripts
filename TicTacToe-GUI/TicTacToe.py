@@ -11,7 +11,7 @@ import numpy as np
 # -------
 width = 800
 height = 800
-#row and columns
+# row and columns
 board_rows = 3
 board_columns = 3
 cross_width = 25
@@ -54,7 +54,7 @@ textRect.center = (width-400, 30)
 leaveRect.center = (width-120, 30)
 board = np.zeros((board_rows, board_columns))
 # print(board)
-#pygame.draw.line( screen ,red ,(10,10),(300,300),10)
+# pygame.draw.line( screen ,red ,(10,10),(300,300),10)
 
 
 def draw_figures():
@@ -132,7 +132,7 @@ def check_win(player):
 def draw_horizontal_winning_line(row, player):
     posY = row*square_size + square_size//2
 
-    if(player == 1):
+    if (player == 1):
         color = circle_color
     else:
         color = cross_color
@@ -142,7 +142,7 @@ def draw_horizontal_winning_line(row, player):
 
 def draw_vertical_winning_line(col, player):
     posX = col*square_size + square_size//2
-    if(player == 1):
+    if (player == 1):
         color = circle_color
     else:
         color = cross_color
@@ -150,7 +150,7 @@ def draw_vertical_winning_line(col, player):
 
 
 def draw_asc_diagonal(player):
-    if(player == 1):
+    if (player == 1):
         color = circle_color
     else:
         color = cross_color
@@ -158,7 +158,7 @@ def draw_asc_diagonal(player):
 
 
 def draw_des_diagonal(player):
-    if(player == 1):
+    if (player == 1):
         color = circle_color
     else:
         color = cross_color
@@ -196,7 +196,7 @@ while True:  # main game loop
             clicked_column = int(mouseX // square_size)
             if available_square(clicked_row, clicked_column):
                 mark_square(clicked_row, clicked_column, player)
-                if(check_win(player)):
+                if (check_win(player)):
                     game_over = True
                     Won = font.render("Player"+str(player) +
                                       " Won ", True, blue, green)

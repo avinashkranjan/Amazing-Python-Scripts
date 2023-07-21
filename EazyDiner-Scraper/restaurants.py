@@ -50,7 +50,8 @@ class EazyDiner:
                 location = r.find("h3", class_="res_loc").getText().strip()
                 rating = r.find("span", class_="critic").getText().strip()
                 cuisine = (
-                    r.find("div", class_="res_cuisine").getText().replace(",", ", ")
+                    r.find("div", class_="res_cuisine").getText().replace(
+                        ",", ", ")
                 )
                 price = (
                     r.find("span", class_="cost_for_two")

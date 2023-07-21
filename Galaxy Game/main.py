@@ -1,3 +1,10 @@
+from kivy.uix.widget import Widget
+from kivy.properties import NumericProperty, Clock, ObjectProperty, StringProperty
+from kivy.graphics.vertex_instructions import Line, Quad, Triangle, Rectangle
+from kivy.graphics.context_instructions import Color
+from kivy.app import App
+from kivy.core.window import Window
+from kivy import platform
 import random
 
 from kivy.config import Config
@@ -8,15 +15,9 @@ from kivy.uix.relativelayout import RelativeLayout
 Config.set('graphics', 'width', '900')
 Config.set('graphics', 'height', '400')
 
-from kivy import platform
-from kivy.core.window import Window
-from kivy.app import App
-from kivy.graphics.context_instructions import Color
-from kivy.graphics.vertex_instructions import Line, Quad, Triangle, Rectangle
-from kivy.properties import NumericProperty, Clock, ObjectProperty, StringProperty
-from kivy.uix.widget import Widget
 
 Builder.load_file("menu.kv")
+
 
 class MainWidget(RelativeLayout):
     from transforms import transform, transform_2D, transform_perspective
@@ -81,7 +82,8 @@ class MainWidget(RelativeLayout):
         self.reset_game()
 
         if self.is_desktop():
-            self._keyboard = Window.request_keyboard(self.keyboard_closed, self)
+            self._keyboard = Window.request_keyboard(
+                self.keyboard_closed, self)
             self._keyboard.bind(on_key_down=self.on_keyboard_down)
             self._keyboard.bind(on_key_up=self.on_keyboard_up)
 
@@ -91,8 +93,10 @@ class MainWidget(RelativeLayout):
     def init_audio(self):
         self.sound_begin = SoundLoader.load("audio/begin.wav")
         self.sound_galaxy = SoundLoader.load("audio/galaxy.wav")
-        self.sound_gameover_impact = SoundLoader.load("audio/gameover_impact.wav")
-        self.sound_gameover_voice = SoundLoader.load("audio/gameover_voice.wav")
+        self.sound_gameover_impact = SoundLoader.load(
+            "audio/gameover_impact.wav")
+        self.sound_gameover_voice = SoundLoader.load(
+            "audio/gameover_voice.wav")
         self.sound_music1 = SoundLoader.load("audio/music1.wav")
         self.sound_restart = SoundLoader.load("audio/restart.wav")
 
@@ -223,7 +227,7 @@ class MainWidget(RelativeLayout):
     def init_vertical_lines(self):
         with self.canvas:
             Color(0.72, 0.72, 0.99)  # Color(1, 1, 1)  Color(1, 0.89, 0.94)
-            #self.line = Line(points=[100, 0, 100, 100])
+            # self.line = Line(points=[100, 0, 100, 100])
             for i in range(0, self.V_NB_LINES):
                 self.vertical_lines.append(Line())
 
@@ -249,8 +253,10 @@ class MainWidget(RelativeLayout):
         for i in range(0, self.NB_TILES):
             tile = self.tiles[i]
             tile_coordinates = self.tiles_coordinates[i]
-            xmin, ymin = self.get_tile_coordinates(tile_coordinates[0], tile_coordinates[1])
-            xmax, ymax = self.get_tile_coordinates(tile_coordinates[0]+1, tile_coordinates[1]+1)
+            xmin, ymin = self.get_tile_coordinates(
+                tile_coordinates[0], tile_coordinates[1])
+            xmax, ymax = self.get_tile_coordinates(
+                tile_coordinates[0]+1, tile_coordinates[1]+1)
 
             #  2    3
             #
@@ -339,13 +345,9 @@ class MainWidget(RelativeLayout):
         self.menu_widget.opacity = 0
 
 
-
-
 class GalaxyApp(App):
     def build(self):
         self.icon = r'images/favicon.png'  # icon for app window
 
 
 GalaxyApp().run()
-
-
