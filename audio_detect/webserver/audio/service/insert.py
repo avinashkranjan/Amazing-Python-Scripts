@@ -19,7 +19,7 @@ def init_table(index_client, conn, cursor, table_name):
 
 
 def get_ids_file(ids_milvus, ids_audio, file_name):
-    with open(file_name,'w') as f:
+    with open(file_name, 'w') as f:
         for i in range(len(ids_audio)):
             line = str(ids_milvus[i]) + "," + ids_audio[i] + '\n'
             f.write(line)
@@ -48,7 +48,7 @@ def get_wav_info(audio_path, wav):
 
 
 def do_insert_audio(index_client, conn, cursor, table_name, audio_path):
-    
+
     try:
         init_table(index_client, conn, cursor, table_name)
         wavs = os.listdir(audio_path)
@@ -58,14 +58,15 @@ def do_insert_audio(index_client, conn, cursor, table_name, audio_path):
         for wav in wavs:
             # print("---wav:", wav)
             if ".wav" in wav:
-                ids_wav, vectors_wav = get_audio_embedding(audio_path + '/' + wav)
+                ids_wav, vectors_wav = get_audio_embedding(
+                    audio_path + '/' + wav)
                 if vectors_wav:
                     get_spectorgram(audio_path, wav)
                     embeddings.append(vectors_wav)
                     ids_audio.append(ids_wav)
                 # print("len of embeddings", len(embeddings))
         _, ids_milvus = insert_vectors(index_client, table_name, embeddings)
-        
+
         file_name = str(uuid.uuid1()) + ".csv"
         get_ids_file(ids_milvus, ids_audio, file_name)
         print("load data to mysql:", file_name)

@@ -9,8 +9,9 @@ try:
 except ImportError:
     codecs = None
 
+
 class MultiprocessHandler(logging.FileHandler):
-    def __init__(self,filename,when='D',backupCount=0,encoding=None,delay=False):
+    def __init__(self, filename, when='D', backupCount=0, encoding=None, delay=False):
 
         self.prefix = filename
         self.backupCount = backupCount
@@ -18,23 +19,24 @@ class MultiprocessHandler(logging.FileHandler):
         self.extMath = r"^\d{4}-\d{2}-\d{2}"
 
         self.when_dict = {
-            'S':"%Y-%m-%d-%H-%M-%S",
-            'M':"%Y-%m-%d-%H-%M",
-            'H':"%Y-%m-%d-%H",
-            'D':"%Y-%m-%d"
+            'S': "%Y-%m-%d-%H-%M-%S",
+            'M': "%Y-%m-%d-%H-%M",
+            'H': "%Y-%m-%d-%H",
+            'D': "%Y-%m-%d"
         }
 
         self.suffix = self.when_dict.get(when)
         if not self.suffix:
             raise ValueError(u"指定的日期间隔单位无效: %s" % self.when)
-        
-        self.filefmt = os.path.join("logs","%s.%s" % (self.prefix,self.suffix))
-        
+
+        self.filefmt = os.path.join("logs", "%s.%s" %
+                                    (self.prefix, self.suffix))
+
         self.filePath = datetime.datetime.now().strftime(self.filefmt)
-        
+
         _dir = os.path.dirname(self.filefmt)
         try:
-        
+
             if not os.path.exists(_dir):
                 os.makedirs(_dir)
         except Exception:
@@ -45,29 +47,30 @@ class MultiprocessHandler(logging.FileHandler):
         if codecs is None:
             encoding = None
 
-        logging.FileHandler.__init__(self,self.filePath,'a+',encoding,delay)
+        logging.FileHandler.__init__(
+            self, self.filePath, 'a+', encoding, delay)
 
     def shouldChangeFileToWrite(self):
-      
+
         _filePath = datetime.datetime.now().strftime(self.filefmt)
-      
+
         if _filePath != self.filePath:
             self.filePath = _filePath
             return True
         return False
 
     def doChangeFile(self):
-    
+
         self.baseFilename = os.path.abspath(self.filePath)
-  
+
         if self.stream:
-            
+
             self.stream.close()
-            
+
             self.stream = None
 
         if not self.delay:
-          
+
             self.stream = self._open()
 
         if self.backupCount > 0:
@@ -78,7 +81,7 @@ class MultiprocessHandler(logging.FileHandler):
 
     def getFilesToDelete(self):
 
-        dirName,_ = os.path.split(self.baseFilename)
+        dirName, _ = os.path.split(self.baseFilename)
         fileNames = os.listdir(dirName)
         result = []
 
@@ -90,9 +93,8 @@ class MultiprocessHandler(logging.FileHandler):
                 suffix = fileName[plen:]
 
                 if re.compile(self.extMath).match(suffix):
-                    result.append(os.path.join(dirName,fileName))
+                    result.append(os.path.join(dirName, fileName))
         result.sort()
-
 
         if len(result) < self.backupCount:
             result = []
@@ -105,8 +107,8 @@ class MultiprocessHandler(logging.FileHandler):
         try:
             if self.shouldChangeFileToWrite():
                 self.doChangeFile()
-            logging.FileHandler.emit(self,record)
-        except (KeyboardInterrupt,SystemExit):
+            logging.FileHandler.emit(self, record)
+        except (KeyboardInterrupt, SystemExit):
             raise
         except:
             self.handleError(record)
@@ -121,12 +123,10 @@ def write_log(log_message, level=0):
     stream_handler.setLevel(logging.INFO)
     stream_handler.setFormatter(fmt)
 
-
     log_name = "app.log"
     file_handler = MultiprocessHandler(log_name, when='D', backupCount=7)
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(fmt)
-
 
     logger.addHandler(stream_handler)
     logger.addHandler(file_handler)
@@ -134,5 +134,3 @@ def write_log(log_message, level=0):
         logger.error(log_message)
     else:
         logger.info(log_message)
-
-
