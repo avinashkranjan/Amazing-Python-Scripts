@@ -24,7 +24,7 @@ def valid(word):
         bool: True if the word is valid, False otherwise.
     """
     dictionary = PyDictionary()
-    return dictionary.meaning(word) is not None
+    return bool(dictionary.meaning(word))
 
 
 def compute_score(word):
