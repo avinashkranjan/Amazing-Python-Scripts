@@ -1,0 +1,16 @@
+panns-inference==0.0.7
+matplotlib==3.0.3
+soundfile==0.10.3.post1
+torch==1.0.1.post2
+torchlibrosa==0.0.4
+librosa==0.8.0
+numpy==1.16.5
+pymilvus==0.2.15
+pillow
+pymysql
+fastapi
+uvicorn
+pandas
+python-multipart
+aiofiles
+cryptography
