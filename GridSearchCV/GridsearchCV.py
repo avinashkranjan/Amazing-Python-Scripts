@@ -1,4 +1,4 @@
-#importing necessary libraries
+# importing necessary libraries
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
+
 
 def perform_grid_search(X, y):
     # Define the parameter grid for each algorithm
@@ -40,12 +41,15 @@ def perform_grid_search(X, y):
     }
 
     # Create the GridSearchCV objects for each algorithm
-    rf_grid_search = GridSearchCV(RandomForestClassifier(), rf_param_grid, cv=5)
+    rf_grid_search = GridSearchCV(
+        RandomForestClassifier(), rf_param_grid, cv=5)
     svm_grid_search = GridSearchCV(SVC(), svm_param_grid, cv=5)
     dt_grid_search = GridSearchCV(DecisionTreeRegressor(), dt_param_grid, cv=5)
     nb_grid_search = GridSearchCV(GaussianNB(), nb_param_grid, cv=5)
-    knn_grid_search = GridSearchCV(KNeighborsClassifier(), knn_param_grid, cv=5)
-    logr_grid_search = GridSearchCV(LogisticRegression(), logr_param_grid, cv=5)
+    knn_grid_search = GridSearchCV(
+        KNeighborsClassifier(), knn_param_grid, cv=5)
+    logr_grid_search = GridSearchCV(
+        LogisticRegression(), logr_param_grid, cv=5)
 
     # Fit the models and perform grid search
     rf_grid_search.fit(X, y)

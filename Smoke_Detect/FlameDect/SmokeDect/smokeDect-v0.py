@@ -25,7 +25,8 @@ def draw_detections(img, rects, thickness=1):
         # the HOG detector returns slightly larger rectangles than the real objects.
         # so we slightly shrink the rectangles to get a nicer output.
         pad_w, pad_h = int(0.15 * w), int(0.05 * h)
-        cv2.rectangle(img, (x + pad_w, y + pad_h), (x + w - pad_w, y + h - pad_h), (0, 255, 0), thickness)
+        cv2.rectangle(img, (x + pad_w, y + pad_h),
+                      (x + w - pad_w, y + h - pad_h), (0, 255, 0), thickness)
 
 
 hog = cv2.HOGDescriptor()
@@ -44,12 +45,14 @@ while True:
 
     # 缩小 n 倍显示视频
     n = 1
-    small_frame = cv2.resize(frame, (width / n, height / n), interpolation=cv2.INTER_CUBIC)
+    small_frame = cv2.resize(
+        frame, (width / n, height / n), interpolation=cv2.INTER_CUBIC)
 
     # fgmask = fgbg.apply(small_frame)
     # median = cv2.medianBlur(fgmask, 3)
 
-    found, w = hog.detectMultiScale(small_frame, winStride=(8, 8), padding=(8, 8), scale=1.05)
+    found, w = hog.detectMultiScale(
+        small_frame, winStride=(8, 8), padding=(8, 8), scale=1.05)
     draw_detections(small_frame, found, 3)
 
     print "found: {}".format(found)

@@ -65,7 +65,7 @@ def start():
     print('2 - Input the image path.')
     print('3 - Exit')
 
-    while(1):
+    while (1):
         print()
         user = int(input('Enter the number: '))
         print()

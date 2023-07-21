@@ -23,7 +23,7 @@ def sql_table(con):
     """
     cur = con.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS posts(SUBREDDIT text, TAG text, "
-                " TITLE text, AUTHOR text, TIMESTAMP text, UPVOTES int, " 
+                " TITLE text, AUTHOR text, TIMESTAMP text, UPVOTES int, "
                 " COMMENTS text, URL text)")
     con.commit()
 
@@ -53,9 +53,10 @@ def scraper():
 
     while 1:
         subreddit = input('\n\nEnter the name of the subreddit: r/').lower()
-        max_count = int(input('Enter the maximum number of entries to collect: '))
+        max_count = int(
+            input('Enter the maximum number of entries to collect: '))
         select = int(input('Select tags to add for the search: \n1. hot\n2. new'
-                            '\n3. rising\n4. controversial\n5. top\nMake your choice: '))
+                           '\n3. rising\n4. controversial\n5. top\nMake your choice: '))
 
         if select == 1:
             tag = 'hot'
@@ -92,7 +93,7 @@ def scraper():
             while 1:
                 for post in soup.find_all('div', attrs=attrs):
                     try:
-                        # To obtain the post title 
+                        # To obtain the post title
                         title = post.find('a', class_='title').text
 
                         # To get the username of the post author
@@ -102,7 +103,8 @@ def scraper():
                         time_stamp = post.time.attrs['title']
 
                         # To obtain the number of comments on the post
-                        comments = post.find('a', class_='comments').text.split()[0]
+                        comments = post.find(
+                            'a', class_='comments').text.split()[0]
                         if comments == 'comment':
                             comments = 0
 
@@ -116,7 +118,7 @@ def scraper():
                         link = 'www.reddit.com' + link
 
                         # Entering all the collected information into our database
-                        entities = (subreddit, tag, title, author, time_stamp, upvotes, 
+                        entities = (subreddit, tag, title, author, time_stamp, upvotes,
                                     comments, link)
                         sql_insert_table(con, entities)
 
@@ -144,7 +146,8 @@ def scraper():
                     break
 
             print('DONE!\n')
-            ans = input('Press (y) to continue or any other key to exit: ').lower()
+            ans = input(
+                'Press (y) to continue or any other key to exit: ').lower()
             if ans == 'y':
                 continue
             else:
@@ -156,4 +159,3 @@ def scraper():
 
 if __name__ == '__main__':
     scraper()
-

@@ -18,7 +18,7 @@ class Madwire(BaseShortener):
         params = {
             'link': url
         }
-        
+
         response = self._post(self.api_url, data=params)
 
         if response.ok:

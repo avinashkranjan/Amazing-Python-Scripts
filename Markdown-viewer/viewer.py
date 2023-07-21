@@ -6,6 +6,8 @@ from markdown2 import Markdown
 from tkhtmlview import HTMLLabel
 
 # Function to display markdown on button click
+
+
 def onKeyUp():
     markdown = Markdown()
     markdownText = markdown_editor.get("1.0", END)

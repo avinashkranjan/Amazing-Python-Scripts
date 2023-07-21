@@ -22,15 +22,16 @@ def unet_train():
     X_train = np.array(X_train)
     y_train = np.array(y_train)
 
-
     def Conv2d_BN(x, nb_filter, kernel_size, strides=(1, 1), padding='same'):
-        x = layers.Conv2D(nb_filter, kernel_size, strides=strides, padding=padding)(x)
+        x = layers.Conv2D(nb_filter, kernel_size,
+                          strides=strides, padding=padding)(x)
         x = layers.BatchNormalization(axis=3)(x)
         x = layers.LeakyReLU(alpha=0.1)(x)
         return x
 
     def Conv2dT_BN(x, filters, kernel_size, strides=(2, 2), padding='same'):
-        x = layers.Conv2DTranspose(filters, kernel_size, strides=strides, padding=padding)(x)
+        x = layers.Conv2DTranspose(
+            filters, kernel_size, strides=strides, padding=padding)(x)
         x = layers.BatchNormalization(axis=3)(x)
         x = layers.LeakyReLU(alpha=0.1)(x)
         return x
@@ -38,19 +39,23 @@ def unet_train():
     inpt = layers.Input(shape=(height, width, 3))
     conv1 = Conv2d_BN(inpt, 8, (3, 3))
     conv1 = Conv2d_BN(conv1, 8, (3, 3))
-    pool1 = layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(conv1)
+    pool1 = layers.MaxPooling2D(pool_size=(
+        2, 2), strides=(2, 2), padding='same')(conv1)
 
     conv2 = Conv2d_BN(pool1, 16, (3, 3))
     conv2 = Conv2d_BN(conv2, 16, (3, 3))
-    pool2 = layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(conv2)
+    pool2 = layers.MaxPooling2D(pool_size=(
+        2, 2), strides=(2, 2), padding='same')(conv2)
 
     conv3 = Conv2d_BN(pool2, 32, (3, 3))
     conv3 = Conv2d_BN(conv3, 32, (3, 3))
-    pool3 = layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(conv3)
+    pool3 = layers.MaxPooling2D(pool_size=(
+        2, 2), strides=(2, 2), padding='same')(conv3)
 
     conv4 = Conv2d_BN(pool3, 64, (3, 3))
     conv4 = Conv2d_BN(conv4, 64, (3, 3))
-    pool4 = layers.MaxPooling2D(pool_size=(2, 2), strides=(2, 2), padding='same')(conv4)
+    pool4 = layers.MaxPooling2D(pool_size=(
+        2, 2), strides=(2, 2), padding='same')(conv4)
 
     conv5 = Conv2d_BN(pool4, 128, (3, 3))
     conv5 = layers.Dropout(0.5)(conv5)
@@ -81,7 +86,8 @@ def unet_train():
     conv9 = Conv2d_BN(concat4, 8, (3, 3))
     conv9 = Conv2d_BN(conv9, 8, (3, 3))
     conv9 = layers.Dropout(0.5)(conv9)
-    outpt = layers.Conv2D(filters=3, kernel_size=(1, 1), strides=(1, 1), padding='same', activation='relu')(conv9)
+    outpt = layers.Conv2D(filters=3, kernel_size=(1, 1), strides=(
+        1, 1), padding='same', activation='relu')(conv9)
 
     model = models.Model(inpt, outpt)
     model.compile(optimizer='adam',
@@ -96,15 +102,16 @@ def unet_train():
 
 
 def unet_predict(unet, img_src_path):
-    img_src = cv2.imdecode(np.fromfile(img_src_path, dtype=np.uint8), -1) 
+    img_src = cv2.imdecode(np.fromfile(img_src_path, dtype=np.uint8), -1)
     if img_src.shape != (512, 512, 3):
-        img_src = cv2.resize(img_src, dsize=(512, 512), interpolation=cv2.INTER_AREA)[:, :, :3]
+        img_src = cv2.resize(img_src, dsize=(512, 512),
+                             interpolation=cv2.INTER_AREA)[:, :, :3]
     img_src = img_src.reshape(1, 512, 512, 3)
-    img_mask = unet.predict(img_src) 
-    img_src = img_src.reshape(512, 512, 3) 
+    img_mask = unet.predict(img_src)
+    img_src = img_src.reshape(512, 512, 3)
     img_mask = img_mask.reshape(512, 512, 3)
-    img_mask = img_mask / np.max(img_mask) * 255  
-    img_mask[:, :, 2] = img_mask[:, :, 1] = img_mask[:, :, 0]  
+    img_mask = img_mask / np.max(img_mask) * 255
+    img_mask[:, :, 2] = img_mask[:, :, 1] = img_mask[:, :, 0]
     img_mask = img_mask.astype(np.uint8)
 
     return img_src, img_mask

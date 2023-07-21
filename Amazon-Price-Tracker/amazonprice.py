@@ -26,10 +26,11 @@ soup = BeautifulSoup(page.content, "html.parser")
 # print(soup)
 
 
-def message_sending(phone_number,title):
+def message_sending(phone_number, title):
     now = datetime.datetime.now()
     message = f"Price of {title} is fallen below the threshold amount. Click on the link below to buy the product!!!\n\n"
     pywhatkit.sendwhatmsg(phone_number, message, now.hour, now.minute + 1)
+
 
 def mail_sending(mail_id, title, password):
     server_mail = "smtp.gmail.com"

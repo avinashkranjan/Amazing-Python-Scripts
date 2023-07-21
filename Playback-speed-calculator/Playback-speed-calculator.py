@@ -1,9 +1,9 @@
-from datetime import timedelta,datetime
+from datetime import timedelta, datetime
 
 time1 = input("Time in (00:00:00) format limit(23:59:59)")
 speed = input("Speed in this (1.50) format limit(9.99)")
 
-#for error checking of input if needed
+# for error checking of input if needed
 '''
 #time1 limit
 if len(time1) == 8:
@@ -22,17 +22,22 @@ if len(speed) == 4:
               print("ok")
               '''
 
-#main function/code
-def Calculate_result_time_and_saved_time(time1,speed):
-    original_total_seconds = (int(time1[0]+time1[1]) * 3600)+ (int(time1[3]+time1[4]) * 60) + (int(time1[6]+time1[7]))
-    calculated_result_seconds = float(original_total_seconds)/float(speed) # result
-    rounded_calculated_result_seconds = round(calculated_result_seconds, 0) # removing decimal part
-    result_time = timedelta(seconds=rounded_calculated_result_seconds) # changing format
-    datetime1 = datetime.strptime(time1,"%H:%M:%S")
-    datetime2 = datetime.strptime(str(result_time),"%H:%M:%S")
-    saved_time = datetime1 - datetime2 # subracting to find saved time
+# main function/code
+
+
+def Calculate_result_time_and_saved_time(time1, speed):
+    original_total_seconds = (int(time1[0]+time1[1]) * 3600) + (
+        int(time1[3]+time1[4]) * 60) + (int(time1[6]+time1[7]))
+    calculated_result_seconds = float(
+        original_total_seconds)/float(speed)  # result
+    rounded_calculated_result_seconds = round(
+        calculated_result_seconds, 0)  # removing decimal part
+    result_time = timedelta(
+        seconds=rounded_calculated_result_seconds)  # changing format
+    datetime1 = datetime.strptime(time1, "%H:%M:%S")
+    datetime2 = datetime.strptime(str(result_time), "%H:%M:%S")
+    saved_time = datetime1 - datetime2  # subracting to find saved time
     return str(result_time), str(saved_time)
 
-        
 
-print(Calculate_result_time_and_saved_time(time1,speed))
+print(Calculate_result_time_and_saved_time(time1, speed))

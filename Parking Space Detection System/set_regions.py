@@ -103,7 +103,8 @@ def process_video(video_path, out_file):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('video_path', help="Path of the video file")
-    parser.add_argument('--out_file', help="Name of the output file", default="regions.p")
+    parser.add_argument(
+        '--out_file', help="Name of the output file", default="regions.p")
     args = parser.parse_args()
 
     video_path = args.video_path

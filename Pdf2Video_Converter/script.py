@@ -58,16 +58,12 @@ def text2video(mtext, video_file, Pdf_file_name):
 
     audio = MP3("output.mp3")
 
-
-
     # duration of audio file in seconds
     audio_length = int(audio.info.length)
 
-
     videoclip = VideoFileClip(video_file)
 
-
-    if int(videoclip.duration)>audio_length:
+    if int(videoclip.duration) > audio_length:
 
         # Clipping orignal video according to the length of video
         videoclip = videoclip.subclip(0, audio_length)

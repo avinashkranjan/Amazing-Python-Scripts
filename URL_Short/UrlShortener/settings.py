@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 import string
 
-#Try get personal key, else make one
+# Try get personal key, else make one
 try:
     from private_settings import SECRET_KEY
 except ImportError:
@@ -23,8 +23,6 @@ except ImportError:
     with open('private_settings.py', 'w') as f:
         f.write("SECRET_KEY = '" + private_key + "'")
     from private_settings import SECRET_KEY
-
-
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

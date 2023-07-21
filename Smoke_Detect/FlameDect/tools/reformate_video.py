@@ -27,7 +27,8 @@ def zoom_down(frames, time=None, size=None):
     """
     if time is not None:
         h, w, r = frames.shape  # h:height w:width r:ret
-        small_frames = cv2.resize(frame, (w / time, h / time), interpolation=cv2.INTER_CUBIC)
+        small_frames = cv2.resize(
+            frame, (w / time, h / time), interpolation=cv2.INTER_CUBIC)
     elif size is not None:
         small_frames = cv2.resize(frame, size, interpolation=cv2.INTER_CUBIC)
     return small_frames

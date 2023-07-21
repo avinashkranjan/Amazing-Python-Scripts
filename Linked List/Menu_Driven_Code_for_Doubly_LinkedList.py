@@ -6,11 +6,13 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Doubly Linked List
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.right = None
         self.left = None
+
 
 class LinkedList:
     def __init__(self):
@@ -35,8 +37,8 @@ class LinkedList:
             if self.root.right == self.root.left == None:
                 self.root = None
             else:
-                self.root = self.root.right            
-            print('Deleted: ',temp.data)
+                self.root = self.root.right
+            print('Deleted: ', temp.data)
 
     def insertRight(self, data):
         n = Node(data)
@@ -49,7 +51,7 @@ class LinkedList:
             temp.right = n
             n.left = temp
             n.right = None
-        print('Inserted Element: ',n.data)
+        print('Inserted Element: ', n.data)
 
     def deleteRight(self):
         if self.root == None:
@@ -61,10 +63,9 @@ class LinkedList:
                 temp = self.root
                 while temp.right != None:
                     temp = temp.right
-                print('\nDeleted: ',temp.data)
+                print('\nDeleted: ', temp.data)
                 temp = temp.left
                 temp.right = None
-            
 
     def printList(self):
         if self.root == None:
@@ -74,7 +75,7 @@ class LinkedList:
             temp = self.root
             print('Elements of linked list are: ')
             while temp != None:
-                print('|',temp.data,' <-> ',end = " ")
+                print('|', temp.data, ' <-> ', end=" ")
                 temp = temp.right
             print('None')
             print('')
@@ -89,11 +90,12 @@ class LinkedList:
             while temp.right != None:
                 temp = temp.right
             while temp != None:
-                print('|',temp.data,' <-> ',end = " ")
+                print('|', temp.data, ' <-> ', end=" ")
                 temp = temp.left
-                
+
             print('None')
             print('')
+
 
 o = LinkedList()
 
@@ -111,10 +113,10 @@ while True:
     elif ch == 2:
         data = int(input('\nEnter value to be inserted in right: '))
         o.insertRight(data)
-    
+
     elif ch == 3:
         o.deleteLeft()
-    
+
     elif ch == 4:
         o.deleteRight()
 
@@ -123,10 +125,10 @@ while True:
 
     elif ch == 6:
         o.printListReverse()
-    
+
     elif ch == 0:
         print('You are out of the program..!!')
         break
-    
+
     else:
         print('\nWrong Input..\nEnter the correct choice..!!\n')

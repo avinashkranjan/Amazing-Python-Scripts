@@ -29,11 +29,11 @@ blogs = results_div.find('div')
 count = 0
 for blog in blogs:
 
-    # If div is not a blog then skip 
+    # If div is not a blog then skip
     check_blog = blog.find('a')['href']
     if check_blog[0] == '/':
         continue
-    
+
     # If div is blog then start scraping individual blogs
     blog_link = blog.find('a', class_='items-start')['href']
     post_url = blog_link
@@ -42,13 +42,13 @@ for blog in blogs:
 
     post_html = driver.page_source
     soup = BeautifulSoup(post_html, "html.parser")
-    title = soup.find('h1', itemprop = 'headline name').text
-    author = soup.find('span', itemprop = 'name').text
-    
+    title = soup.find('h1', itemprop='headline name').text
+    author = soup.find('span', itemprop='name').text
+
     # Post content found
     blog_content_body = soup.find(
         'div', itemprop='text')
-    content_tags = blog_content_body.find_all(['p','h2','h3','h4'])
+    content_tags = blog_content_body.find_all(['p', 'h2', 'h3', 'h4'])
 
     title_string = (title.strip()).encode(
         'latin-1', 'replace').decode('latin-1')
@@ -72,7 +72,7 @@ for blog in blogs:
         # Add part of article to pdf
         pdf.multi_cell(0, 5, txt=article_part, align='L')
 
-    # Trim title 
+    # Trim title
     title = title if len(title) < 30 else title[:30]
 
     # save the pdf with name .pdf
@@ -80,7 +80,7 @@ for blog in blogs:
     pdf.output("{}.pdf".format(pdf_title))
 
     count = count + 1
-    if(count == number_articles):
+    if (count == number_articles):
         break
 
 driver.close()  # closing the webdriver

@@ -115,7 +115,8 @@ def signup():
                 ]
                 pickle.dump(record, Myfile)
                 Myfile.close()
-            messagebox.showinfo("Done", "Account Created Successfully.!", parent=pop)
+            messagebox.showinfo(
+                "Done", "Account Created Successfully.!", parent=pop)
             pop.destroy()
 
         Label(
@@ -269,8 +270,10 @@ def signup():
                                                 ) as Myfile:
                                                     while True:
                                                         try:
-                                                            a = pickle.load(Myfile)
-                                                            usernames.append(a[0])
+                                                            a = pickle.load(
+                                                                Myfile)
+                                                            usernames.append(
+                                                                a[0])
 
                                                         except EOFError:
                                                             break
@@ -495,10 +498,12 @@ def signup():
     )
     signupbutton.place(x=800, y=540)
 
-    resetbutton = Button(root, cursor="hand2", image=resetimage, command=reset, bd=0)
+    resetbutton = Button(root, cursor="hand2",
+                         image=resetimage, command=reset, bd=0)
     resetbutton.place(x=1050, y=530)
 
-    exitbutton = Button(root, cursor="hand2", image=exitimage, command=quitt, bd=0)
+    exitbutton = Button(root, cursor="hand2",
+                        image=exitimage, command=quitt, bd=0)
     exitbutton.place(x=1200, y=595)
 
     root.mainloop()
@@ -566,7 +571,8 @@ def alllogintry(username, password):
 def logindetails(username):
     file = open("logins.txt", "a")
     entry = str(
-        {"Name": str(username), "Date": str(togetdate()), "time": str(togettime())}
+        {"Name": str(username), "Date": str(
+            togetdate()), "time": str(togettime())}
     )
     # a="Name :--> "+str(username)+"   Date :--> "+str(togetdate())+"   Time :--> "+str(togettime())
     file.write(entry)
@@ -668,7 +674,8 @@ loginbutton = Button(
 loginbutton.place(x=200, y=478)
 
 """reset button"""
-resetbutton = Button(window, cursor="hand2", image=resetimage, command=reset, bd=0)
+resetbutton = Button(window, cursor="hand2",
+                     image=resetimage, command=reset, bd=0)
 resetbutton.place(x=365, y=472)
 
 """signup contents"""
@@ -681,7 +688,8 @@ registerlable = Label(
 )
 registerlable.place(x=190, y=600)
 
-signupbutton = Button(window, cursor="hand2", image=registerimage, command=signup, bd=0)
+signupbutton = Button(window, cursor="hand2",
+                      image=registerimage, command=signup, bd=0)
 signupbutton.place(x=380, y=595)
 
 

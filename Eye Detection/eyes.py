@@ -6,7 +6,7 @@ capture = cv2.VideoCapture(0)  # To open camera 1
 
 if (capture.isOpened() == False):
     print("Sorry")
-while(capture.isOpened()):
+while (capture.isOpened()):
 
     # Load trained cascade classifier
     ret, color_image = capture.read()

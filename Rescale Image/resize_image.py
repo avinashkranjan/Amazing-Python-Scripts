@@ -1,5 +1,6 @@
 import cv2
 
+
 def resize_image(input_image, output_image, new_width, new_height):
     # Read the input image
     image = cv2.imread(input_image)
@@ -21,6 +22,7 @@ def resize_image(input_image, output_image, new_width, new_height):
     cv2.imshow('Resized Image', resized_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
 
 # Specify the input image path, output image path, and new dimensions
 input_image_path = 'input_image.jpg'

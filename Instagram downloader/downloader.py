@@ -96,7 +96,7 @@ def download_allposts():
     user_name = url.split('/')[-1]
 
     # check if folder corresponding to user name exist or not
-    if(os.path.isdir(user_name) == False):
+    if (os.path.isdir(user_name) == False):
 
         # Create folder
         os.mkdir(user_name)
@@ -124,7 +124,7 @@ def download_allposts():
         save_content('_97aPb', user_name+'/'+'content1')
     c = 2
 
-    while(True):
+    while (True):
         next_el = next_post()
 
         if next_el != False:

@@ -59,7 +59,8 @@ class StackOverflow:
             json_data = json.dumps(questions_data)
             return json_data
         except:
-            error_message = {"message": "No questions related to the topic found"}
+            error_message = {
+                "message": "No questions related to the topic found"}
 
             ejson = json.dumps(error_message)
             return ejson

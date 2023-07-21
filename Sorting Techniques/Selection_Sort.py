@@ -7,6 +7,7 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Selection Sort
 """
 
+
 def selectionsort(a):
     for i in range(len(a)-1):
         min = a[i]
@@ -15,7 +16,8 @@ def selectionsort(a):
             if a[j] < min:
                 min = a[j]
                 pos = j
-        a[i],a[pos] = min,a[i]
+        a[i], a[pos] = min, a[i]
+
 
 a = []
 size = int(input('Enter size of array: '))
@@ -24,7 +26,7 @@ for i in range(size):
     data = int(input('Enter element: '))
     a.append(data)
 print('')
-print('Elements are: ',a)
+print('Elements are: ', a)
 
 selectionsort(a)
-print('After sorting elements are: ',a)
+print('After sorting elements are: ', a)

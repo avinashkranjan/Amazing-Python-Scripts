@@ -1,5 +1,6 @@
 import speech_recognition as sr
 
+
 def convert_audio_to_text():
     # Initialize the recognizer
     r = sr.Recognizer()
@@ -11,15 +12,20 @@ def convert_audio_to_text():
 
     try:
         # Use the recognizer to convert audio to text
-        text = r.recognize_google(audio)  # Convert audio to text using Google Speech Recognition service
+        # Convert audio to text using Google Speech Recognition service
+        text = r.recognize_google(audio)
         return text
     except sr.UnknownValueError:
-        print("Unable to recognize speech.")  # Handle the case when speech cannot be recognized
+        # Handle the case when speech cannot be recognized
+        print("Unable to recognize speech.")
     except sr.RequestError as e:
-        print("Error: {0}".format(e))  # Handle any errors that occur during speech recognition
+        # Handle any errors that occur during speech recognition
+        print("Error: {0}".format(e))
+
 
 # Example usage
-audio_text = convert_audio_to_text()  # Call the function to convert audio to text
+# Call the function to convert audio to text
+audio_text = convert_audio_to_text()
 if audio_text:
     print("You said:", audio_text)  # Print the converted text
 
@@ -34,4 +40,3 @@ if audio_text:
     print("Words:", words)
 
     # Perform other operations on the text as needed
-    

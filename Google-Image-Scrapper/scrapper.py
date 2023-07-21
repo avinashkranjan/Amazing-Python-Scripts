@@ -88,7 +88,8 @@ class simple_image_download:
                 if not os.path.exists(path):
                     os.makedirs(path)
 
-                filename = str(keyword_to_search[i]) + "_" + str(j + 1) + ".jpg"
+                filename = str(
+                    keyword_to_search[i]) + "_" + str(j + 1) + ".jpg"
 
                 try:
                     r = requests.get(object_raw, allow_redirects=True)

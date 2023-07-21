@@ -80,7 +80,7 @@ if __name__ == '__main__':
     to_currency_menu.place(x=303, y=110)
 
     answer = tk.Label(screen, anchor="center", bg='#282828',
-                         fg='red', width=50, font=("Lato", 12),text="")
+                      fg='red', width=50, font=("Lato", 12), text="")
     answer.place(x=50, y=220)
 
     # Convert button and placing

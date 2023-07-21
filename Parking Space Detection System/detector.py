@@ -60,7 +60,8 @@ def compute_overlaps(parked_car_boxes, car_boxes):
             polygon1_shape = shapely_poly(park_area)
             polygon2_shape = shapely_poly(car_box)
 
-            polygon_intersection = polygon1_shape.intersection(polygon2_shape).area
+            polygon_intersection = polygon1_shape.intersection(
+                polygon2_shape).area
             polygon_union = polygon1_shape.union(polygon2_shape).area
             iou = polygon_intersection / polygon_union
             overlaps[i][j] = iou
@@ -69,7 +70,8 @@ def compute_overlaps(parked_car_boxes, car_boxes):
 
 
 def draw_parking_area(frame, parking_area, color=(71, 27, 92), thickness=2):
-    cv2.drawContours(frame, [np.array(parking_area)], contourIdx=-1, color=color, thickness=thickness)
+    cv2.drawContours(frame, [np.array(parking_area)],
+                     contourIdx=-1, color=color, thickness=thickness)
 
 
 def draw_overlay(frame, overlay, alpha):
@@ -89,7 +91,8 @@ def process_video(video_path, regions_path, output_path):
     video_capture = cv2.VideoCapture(video_path)
     video_FourCC = cv2.VideoWriter_fourcc(*'XVID')
     video_fps = video_capture.get(cv2.CAP_PROP_FPS)
-    video_size = (int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH)), int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+    video_size = (int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH)),
+                  int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
     out = cv2.VideoWriter(output_path, video_FourCC, video_fps, video_size)
 
     while video_capture.isOpened():
@@ -113,7 +116,8 @@ def process_video(video_path, regions_path, output_path):
                 draw_parking_area(overlay, park_area)
 
         draw_overlay(frame, overlay, alpha)
-        cv2.putText(frame, f"Inference Time: {inference_time:.2f}s", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+        cv2.putText(frame, f"Inference Time: {inference_time:.2f}s", (
+            10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
 
         cv2.imshow('Parking Space Detection', frame)
         out.write(frame)
@@ -130,7 +134,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('video_path', help="Video file")
     parser.add_argument('regions_path', help="Regions file")
-    parser.add_argument('--output', '-o', help="Output file", default="output.avi")
+    parser.add_argument(
+        '--output', '-o', help="Output file", default="output.avi")
     args = parser.parse_args()
 
     video_path = args.video_path

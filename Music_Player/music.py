@@ -1,12 +1,15 @@
 import pygame
 
+
 def play_music(file_path):
     pygame.mixer.init()
     pygame.mixer.music.load(file_path)
     pygame.mixer.music.play()
 
+
 def stop_music():
     pygame.mixer.music.stop()
+
 
 def main():
     print("Simple Music Player")
@@ -29,6 +32,7 @@ def main():
             break
         else:
             print("Invalid choice. Please try again.")
+
 
 if __name__ == "__main__":
     main()

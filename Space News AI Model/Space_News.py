@@ -1,25 +1,27 @@
 # 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 WELCOME TO SPACE NEWS AI CHAT MODEL 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 
+from IPython import display
+from PIL import Image
+from playsound import playsound
+from gtts import gTTS
+import matplotlib.pyplot as plt
+import urllib.request
+import random
+import io
+import os
+import requests
+import time
+import nasapy
 print('🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\n')
 
 # Enter the API key of NASA
 Api_Key = input("Enter the NASA API Key: ")
 
 # Importing modules
-import nasapy
-import time
-import requests
-import os
-import io
-import random
-import urllib.request
-import matplotlib.pyplot as plt
-from gtts import gTTS
-from playsound import playsound
-from PIL import Image
-from IPython import display
 
 # Function which handles the news data of space
+
+
 def spaceNews():
     print("\nWhat day would you like to know ?")
 
@@ -30,8 +32,8 @@ def spaceNews():
     print("\nExtracting Data......")
     print('\nPlease wait.....')
     Url = "https://api.nasa.gov/planetary/apod?api_key=" + str(Api_Key)
-    Params = {'date':str(Date)}
-    r = requests.get(Url, params = Params)
+    Params = {'date': str(Date)}
+    r = requests.get(Url, params=Params)
 
     # Parsing the fetched data for displaying
     Data = r.json()
@@ -52,7 +54,7 @@ def spaceNews():
     # Clear the terminal for the next operation
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\n🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\n')
-    
+
     # Displaying the fetched data
     img.show()
     print(f"\nTitle of this news - {Title}")
@@ -60,6 +62,8 @@ def spaceNews():
     print(f"\nFileName - {FileName}\n")
 
 # Function which fetch the mars images of different dates
+
+
 def MarsImage():
     date = input("\nEnter date {yyyy-mm-dd}: ")
     url = f"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date={date}&api_key={Api_Key}"
@@ -67,14 +71,14 @@ def MarsImage():
     # Fetching data from the internet
     r = requests.get(url)
     Data = r.json()
-    
+
     # Extracting data from the fetched data set
     Photos = Data['photos'][0:9]
 
     if Data['photos'] == []:
         print("\nSorry, No data found!\n")
     else:
-        for index , photo in enumerate(Photos):
+        for index, photo in enumerate(Photos):
             # Creating a lists of different values
             camera = photo['camera']
             full_camera_name = camera['full_name']
@@ -84,36 +88,40 @@ def MarsImage():
             # Downloading images from the internet
             p = requests.get(img_url)
             img = f'{index}.jpg'
-            with open(img,'wb') as file:
+            with open(img, 'wb') as file:
                 file.write(p.content)
             os.startfile(img)
-            
-            print(f'Image "{index}.jpg" was captured with {full_camera_name} on {date_of_photo}\n')
+
+            print(
+                f'Image "{index}.jpg" was captured with {full_camera_name} on {date_of_photo}\n')
             time.sleep(1)
 
 # Function whixh tells about the number of asteroids in a range of dates
+
+
 def Astro():
     # Getting two dates from the user for calculation of number of asteroids in between this range
     print("\nDifference between start and last dates is not more than 7 days.")
     print("\nNow, What's the start date ?")
-    start_date = input("Enter date {yyyy-mm-dd}: ") # Start date
+    start_date = input("Enter date {yyyy-mm-dd}: ")  # Start date
     print("\nAnd the last date ?")
-    end_date = input("Enter date {yyyy-mm-dd}: ") # Last date
+    end_date = input("Enter date {yyyy-mm-dd}: ")  # Last date
 
     url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={start_date}&end_date={end_date}&api_key={Api_Key}"
 
     # Fetching data from the internet
     r = requests.get(url)
     Data = r.json()
-    
+
     # Clear the terminal for the next operation
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\n🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\n')
-    
+
     # Extracting data from the fetched data set
     Total_Astro = Data['element_count']
-    print(f"\nTotal no. of asteroid falling on The Earth between {start_date} and {end_date} is : {Total_Astro} Asteroids\n")
-    
+    print(
+        f"\nTotal no. of asteroid falling on The Earth between {start_date} and {end_date} is : {Total_Astro} Asteroids\n")
+
     # enumarating the objects one by one
     neo = Data['near_earth_objects']
 
@@ -124,21 +132,23 @@ def Astro():
         absolute = body['absolute_magnitude_h']
 
         # Finally printing the extracted data in a readable format
-        print(id,name,absolute)
-        
+        print(id, name, absolute)
+
     print("\nID & Name of those asteroids are listed above.\n")
 
 # Function which gives information about different solar bodies
+
+
 def SolarBodies():
     print("\nExtracting data.....\n")
     print("\nPlease wait.....\n")
-    
+
     # Link of the website to fetch data of different bodies of the solar system
     url = "https://api.le-systeme-solaire.net/rest/bodies/"
 
     # Fetching data from the internet
     r = requests.get(url)
-    Data = r.json() # Save the fetched data after converting into json object
+    Data = r.json()  # Save the fetched data after converting into json object
 
     # Clear the terminal for the next operation
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -151,22 +161,23 @@ def SolarBodies():
 
     try:
         # Getting input from the user
-        Body = input("\nTell me the name of the solar bodies you want to know - ")
-        while(Body == None):
+        Body = input(
+            "\nTell me the name of the solar bodies you want to know - ")
+        while (Body == None):
             Body = input("\nPlease enter the valid input - ")
-        Body = Body.replace(" ","")
+        Body = Body.replace(" ", "")
 
         print("\nPlease wait......\n")
 
         # Fetching data for that body
         body = Body
         url_2 = f"https://api.le-systeme-solaire.net/rest/bodies/{body}"
-        rrr = requests.get(url_2) # Fetchin data from the internet
+        rrr = requests.get(url_2)  # Fetchin data from the internet
         data = rrr.json()
 
         # Listing / parsing the dataset
         mass_1 = data['mass']['massValue']
-        mass = mass_1*1000 # Converting mass into the trillion tons unit
+        mass = mass_1*1000  # Converting mass into the trillion tons unit
         volume = data['vol']['volValue']
         density = data['density']
         gravity = data['gravity']
@@ -176,12 +187,16 @@ def SolarBodies():
         str = data['bodyType']
 
         # Displaying the fetched data set in a readable / understandable format
-        print(f"\n------------------------------- Data of {body} -------------------------------------")
+        print(
+            f"\n------------------------------- Data of {body} -------------------------------------")
         print(f"\n       Mass of {body} - {mass} trillion tons")
         print(f"\n       Volume of {body} - {volume} trillion kilometer^cube")
-        print(f"\n       Gravity of {body} - {gravity} meter per second^square")
-        print(f"\n       Escape Velocity of {body} - {escape} meter per second")
-        print(f"\n       Density of {body} - {density} gram per centimeter^cube")
+        print(
+            f"\n       Gravity of {body} - {gravity} meter per second^square")
+        print(
+            f"\n       Escape Velocity of {body} - {escape} meter per second")
+        print(
+            f"\n       Density of {body} - {density} gram per centimeter^cube")
         print(f"\n       Radius of {body} - {radius} kilometer")
         print(f"\n       Average Temperature of {body} - {avgTemp} Kelvin")
         print(f"\n       Body Type of {body} - {str}")
@@ -190,6 +205,8 @@ def SolarBodies():
         print(f"\nData of {body} is not found!\n")
 
 # Function which fetch the images of different solar bodies
+
+
 def solarBodiesPictures():
     # List of different images for displaying to the user
     # Keys of Google drive images
@@ -220,7 +237,7 @@ def solarBodiesPictures():
         '1zNQwgjG-_pBsDuvgXyjndA0ld51LQD1i',
         '1HktS1ginfv2QWOjLINa_r5IXJIv-nE_I'
     ]
-    
+
     print("Extracting data.....\n")
     # Selecting a random image key
     imageKey = random.choice(imageKeys)
@@ -241,108 +258,114 @@ def solarBodiesPictures():
     plt.show()
 
 # This function will tells about the current news of space with images
-def todayNews():
-    nasa = nasapy.Nasa(key = Api_Key)
 
-    #Get today's date in YYYY-MM-DD format:
+
+def todayNews():
+    nasa = nasapy.Nasa(key=Api_Key)
+
+    # Get today's date in YYYY-MM-DD format:
     d = input("Enter date {yyyy-mm-dd}: ")
 
     print('\nExtracting data....\n')
     print('\nPlease wait.....\n')
 
-    #Get the image data:
+    # Get the image data:
     apod = nasa.picture_of_the_day(date=d, hd=True)
 
-    #POINT A:
-    #Check the media type available:
-    if(apod["media_type"] == "image"):
+    # POINT A:
+    # Check the media type available:
+    if (apod["media_type"] == "image"):
 
-        #POINT B:
-        #Displaying hd images only:
-        if("hdurl" in apod.keys()):
-        
-            #POINT C:
-            #Saving name for image:
-            title = d + "_" + apod["title"].replace(" ","_").replace(":","_") + ".jpg"
-        
-            #POINT D:
-            #Path of the directory:
+        # POINT B:
+        # Displaying hd images only:
+        if ("hdurl" in apod.keys()):
+
+            # POINT C:
+            # Saving name for image:
+            title = d + "_" + \
+                apod["title"].replace(" ", "_").replace(":", "_") + ".jpg"
+
+            # POINT D:
+            # Path of the directory:
             image_dir = "./"
-        
-            #Checking if the directory already exists?
+
+            # Checking if the directory already exists?
             dir_res = os.path.exists(image_dir)
 
-            #If it doesn't exist then make a new directory:
+            # If it doesn't exist then make a new directory:
             if (dir_res == False):
                 os.makedirs(image_dir)
 
-            #POINT E:
-            #Retrieving the image:
-            urllib.request.urlretrieve(url = apod["hdurl"] , filename = os.path.join(image_dir,title))
+            # POINT E:
+            # Retrieving the image:
+            urllib.request.urlretrieve(
+                url=apod["hdurl"], filename=os.path.join(image_dir, title))
 
             # Clear the terminal for the next operation
             os.system('cls' if os.name == 'nt' else 'clear')
             print('\n🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\n')
 
-            #POINT F:
-            #Displaying information related to image:
-            if("date" in apod.keys()):
-                print("Date image released: ",apod["date"])
+            # POINT F:
+            # Displaying information related to image:
+            if ("date" in apod.keys()):
+                print("Date image released: ", apod["date"])
                 print("\n")
 
-            if("copyright" in apod.keys()):
-                print("This image is owned by: ",apod["copyright"])
+            if ("copyright" in apod.keys()):
+                print("This image is owned by: ", apod["copyright"])
                 print("\n")
 
-            if("title" in apod.keys()):
-                print("Title of the image: ",apod["title"])
+            if ("title" in apod.keys()):
+                print("Title of the image: ", apod["title"])
                 print("\n")
 
-            if("explanation" in apod.keys()):
-                print("Description for the image: ",apod["explanation"])
+            if ("explanation" in apod.keys()):
+                print("Description for the image: ", apod["explanation"])
                 print("\n")
 
-            if("hdurl" in apod.keys()):
-                print("URL for this image: ",apod["hdurl"])
+            if ("hdurl" in apod.keys()):
+                print("URL for this image: ", apod["hdurl"])
                 print("\n")
 
-            #POINT G:
-            #Displaying main image:
-            img = Image.open(os.path.join(image_dir,title))
+            # POINT G:
+            # Displaying main image:
+            img = Image.open(os.path.join(image_dir, title))
             img.show()
 
-            #Point H:
-            #Text to Speech Conversion:
-            #Take input from user:
+            # Point H:
+            # Text to Speech Conversion:
+            # Take input from user:
             choice = input("\nPress * to hear the audio explanation : ")
-            if(choice=="*"):
-                #Text to be converted:
+            if (choice == "*"):
+                # Text to be converted:
                 mytext = apod["explanation"]
-                
-                #Creating an object:
+
+                # Creating an object:
                 myobj = gTTS(text=mytext, lang="en", slow=False)
 
-                #Generating audio file name:
+                # Generating audio file name:
                 audio_title = d + "_" + apod["title"] + ".mp3"
 
-                #Save the converted file:
-                myobj.save(os.path.join(image_dir,audio_title))
+                # Save the converted file:
+                myobj.save(os.path.join(image_dir, audio_title))
 
-                #Name of sound file:
-                sound_file = os.path.join(image_dir,audio_title)
+                # Name of sound file:
+                sound_file = os.path.join(image_dir, audio_title)
 
                 # Playing the converted file
                 display.display(display.Audio(sound_file, autoplay=True))
-                
+
                 playsound(f'.\\{audio_title}')
 
-    #POINT I:
-    #If media type is not image:
+    # POINT I:
+    # If media type is not image:
     else:
         print("\nSorry, Image not available!\n")
         time.sleep(2)
 
 # Function which keeps holding all the other functions
+
+
 def SpaceNews():
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -378,31 +401,31 @@ def SpaceNews():
             print('\n🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\n')
             time.sleep(2)
             exit()
-        
+
         elif choice == 1:
             todayNews()
-        
+
         elif choice == 2:
             spaceNews()
-        
+
         elif choice == 3:
             MarsImage()
-        
+
         elif choice == 4:
             Astro()
-        
+
         elif choice == 5:
             SolarBodies()
-        
+
         elif choice == 6:
             solarBodiesPictures()
-        
+
         else:
             print("\nYou have entered the wrong choice !\n")
-    
+
         print('\n🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\n')
         input('\nPress "Enter" key to proceed further...\n')
 
+
 # Program starts
 SpaceNews()
-

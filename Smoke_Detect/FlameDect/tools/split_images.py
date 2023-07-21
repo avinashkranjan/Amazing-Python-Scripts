@@ -47,7 +47,8 @@ if __name__ == '__main__':
         k = cv2.waitKey(0) & 0xFF
         if k == ord('s'):
             while True:
-                clip_name = 'clips/n-clip%d-%d.jpg' % (frame_count, block_count)
+                clip_name = 'clips/n-clip%d-%d.jpg' % (
+                    frame_count, block_count)
                 cv2.imwrite(clip_name, clip)
                 print('saved %s' % clip_name)
                 block_count += 1

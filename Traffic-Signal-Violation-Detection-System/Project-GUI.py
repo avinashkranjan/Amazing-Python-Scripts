@@ -5,6 +5,7 @@ import object_detection as od
 import imageio
 import cv2
 
+
 class Window(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
@@ -25,17 +26,18 @@ class Window(Frame):
         file.add_command(label="Open", command=self.open_file)
         file.add_command(label="Exit", command=self.client_exit)
         menu.add_cascade(label="File", menu=file)
-        
+
         analyze = Menu(menu)
-        analyze.add_command(label="Region of Interest", command=self.regionOfInterest)
+        analyze.add_command(label="Region of Interest",
+                            command=self.regionOfInterest)
         menu.add_cascade(label="Analyze", menu=analyze)
 
         self.filename = "Images/home.jpg"
         self.imgSize = Image.open(self.filename)
-        self.tkimage =  ImageTk.PhotoImage(self.imgSize)
+        self.tkimage = ImageTk.PhotoImage(self.imgSize)
         self.w, self.h = (1366, 768)
-        
-        self.canvas = Canvas(master = root, width = self.w, height = self.h)
+
+        self.canvas = Canvas(master=root, width=self.w, height=self.h)
         self.canvas.create_image(20, 20, image=self.tkimage, anchor='nw')
         self.canvas.pack()
 
@@ -45,28 +47,29 @@ class Window(Frame):
         cap = cv2.VideoCapture(self.filename)
 
         reader = imageio.get_reader(self.filename)
-        fps = reader.get_meta_data()['fps'] 
+        fps = reader.get_meta_data()['fps']
 
         ret, image = cap.read()
-        cv2.imwrite('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg', image)
+        cv2.imwrite(
+            'G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg', image)
 
-        self.show_image('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
-
+        self.show_image(
+            'G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
 
     def show_image(self, frame):
         self.imgSize = Image.open(frame)
-        self.tkimage =  ImageTk.PhotoImage(self.imgSize)
+        self.tkimage = ImageTk.PhotoImage(self.imgSize)
         self.w, self.h = (1366, 768)
 
         self.canvas.destroy()
 
-        self.canvas = Canvas(master = root, width = self.w, height = self.h)
+        self.canvas = Canvas(master=root, width=self.w, height=self.h)
         self.canvas.create_image(0, 0, image=self.tkimage, anchor='nw')
         self.canvas.pack()
 
     def regionOfInterest(self):
-        root.config(cursor="plus") 
-        self.canvas.bind("<Button-1>", self.imgClick) 
+        root.config(cursor="plus")
+        self.canvas.bind("<Button-1>", self.imgClick)
 
     def client_exit(self):
         exit()
@@ -77,8 +80,10 @@ class Window(Frame):
             x = int(self.canvas.canvasx(event.x))
             y = int(self.canvas.canvasy(event.y))
             self.line.append((x, y))
-            self.pos.append(self.canvas.create_line(x - 5, y, x + 5, y, fill="red", tags="crosshair"))
-            self.pos.append(self.canvas.create_line(x, y - 5, x, y + 5, fill="red", tags="crosshair"))
+            self.pos.append(self.canvas.create_line(
+                x - 5, y, x + 5, y, fill="red", tags="crosshair"))
+            self.pos.append(self.canvas.create_line(
+                x, y - 5, x, y + 5, fill="red", tags="crosshair"))
             self.counter += 1
 
         # elif self.counter < 4:
@@ -90,20 +95,23 @@ class Window(Frame):
         #     self.counter += 1
 
         if self.counter == 2:
-            #unbinding action with mouse-click
+            # unbinding action with mouse-click
             self.canvas.unbind("<Button-1>")
             root.config(cursor="arrow")
             self.counter = 0
 
-            #show created virtual line
+            # show created virtual line
             print(self.line)
             print(self.rect)
-            img = cv2.imread('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
+            img = cv2.imread(
+                'G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
             cv2.line(img, self.line[0], self.line[1], (0, 255, 0), 3)
-            cv2.imwrite('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg', img)
-            self.show_image('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg')
+            cv2.imwrite(
+                'G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg', img)
+            self.show_image(
+                'G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg')
 
-            ## for demonstration
+            # for demonstration
             # (rxmin, rymin) = self.rect[0]
             # (rxmax, rymax) = self.rect[1]
 
@@ -125,12 +133,12 @@ class Window(Frame):
             #     cv2.rectangle(img, (rxmin,rymin), (rxmax,rymax), (0,255,0), 3)
 
             # cv2.imshow('traffic violation', img)
-            
-            #image processing
+
+            # image processing
             self.main_process()
             print("Executed Successfully!!!")
 
-            #clearing things
+            # clearing things
             self.line.clear()
             self.rect.clear()
             for i in self.pos:
@@ -152,7 +160,7 @@ class Window(Frame):
         b2 = x4-x3
         c2 = x3*y4-x4*y3
 
-        if(a1*b2-a2*b1 == 0):
+        if (a1*b2-a2*b1 == 0):
             return False
         print((a1, b1, c1), (a2, b2, c2))
         x = (b1*c2 - b2*c1) / (a1*b2 - a2*b1)
@@ -188,17 +196,18 @@ class Window(Frame):
         cap = cv2.VideoCapture(video_src)
 
         reader = imageio.get_reader(video_src)
-        fps = reader.get_meta_data()['fps']    
-        writer = imageio.get_writer('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Resources/output/output.mp4', fps = fps)
-            
+        fps = reader.get_meta_data()['fps']
+        writer = imageio.get_writer(
+            'G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Resources/output/output.mp4', fps=fps)
+
         j = 1
         while True:
             ret, image = cap.read()
-           
+
             if (type(image) == type(None)):
                 writer.close()
                 break
-            
+
             image_h, image_w, _ = image.shape
             new_image = od.preprocess_input(image, od.net_h, od.net_w)
 
@@ -208,24 +217,26 @@ class Window(Frame):
 
             for i in range(len(yolos)):
                 # decode the output of the network
-                boxes += od.decode_netout(yolos[i][0], od.anchors[i], od.obj_thresh, od.nms_thresh, od.net_h, od.net_w)
+                boxes += od.decode_netout(yolos[i][0], od.anchors[i],
+                                          od.obj_thresh, od.nms_thresh, od.net_h, od.net_w)
 
             # correct the sizes of the bounding boxes
             od.correct_yolo_boxes(boxes, image_h, image_w, od.net_h, od.net_w)
 
             # suppress non-maximal boxes
-            od.do_nms(boxes, od.nms_thresh)     
+            od.do_nms(boxes, od.nms_thresh)
 
             # draw bounding boxes on the image using labels
-            image2 = od.draw_boxes(image, boxes, self.line, od.labels, od.obj_thresh, j) 
-            
+            image2 = od.draw_boxes(
+                image, boxes, self.line, od.labels, od.obj_thresh, j)
+
             writer.append_data(image2)
 
             # cv2.imwrite('E:/Virtual Traffic Light Violation Detection System/Images/frame'+str(j)+'.jpg', image2)
             # self.show_image('E:/Virtual Traffic Light Violation Detection System/Images/frame'+str(j)+'.jpg')
 
             cv2.imshow('Traffic Violation', image2)
-            
+
             print(j)
 
             if cv2.waitKey(10) & 0xFF == ord('q'):
@@ -236,9 +247,10 @@ class Window(Frame):
 
         cv2.destroyAllWindows()
 
+
 root = Tk()
 app = Window(root)
-root.geometry("%dx%d"%(535, 380))
+root.geometry("%dx%d" % (535, 380))
 root.title("Traffic Violation")
 
 root.mainloop()

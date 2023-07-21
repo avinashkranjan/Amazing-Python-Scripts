@@ -19,6 +19,7 @@ UserAgents = [
     "Mozilla/5.0 (Linux; Android 10; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.77 Mobile Safari/537.36",
 ]
 
+
 def get_ua():
     return choice(UserAgents)
 

@@ -29,7 +29,8 @@ def hog_feature(img):
     block_stride = (8, 8)
     cell_size = (8, 8)
     nbins = 9
-    descriptor = cv2.HOGDescriptor(win_size, block_size, block_stride, cell_size, nbins)
+    descriptor = cv2.HOGDescriptor(
+        win_size, block_size, block_stride, cell_size, nbins)
     hog_feature_hog = descriptor.compute(img)
     hog_feature_hog = np.float32(hog_feature_hog)
     return hog_feature_hog
@@ -86,7 +87,8 @@ def split(img, cell_size, flatten=False):
     """
     split_h, split_w = img.shape[:2]
     sx, sy = cell_size
-    split_cells = [np.hsplit(row, split_w // sx) for row in np.vsplit(img, split_h // sy)]
+    split_cells = [np.hsplit(row, split_w // sx)
+                   for row in np.vsplit(img, split_h // sy)]
     split_cells = np.array(split_cells)
     if flatten:
         split_cells = split_cells.reshape(-1, sy, sx)
@@ -146,7 +148,8 @@ if __name__ == '__main__':
 
         fmask_copy = fmask.copy()
 
-        contour_img, contours, hierarchy = cv2.findContours(fmask_copy, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        contour_img, contours, hierarchy = cv2.findContours(
+            fmask_copy, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
         if contours is None:
             continue
@@ -174,7 +177,8 @@ if __name__ == '__main__':
                         # np.savetxt(hog_file, hog)
 
             if DEBUG_MOD is True:
-                cv2.rectangle(frame_copy, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                cv2.rectangle(frame_copy, (x, y),
+                              (x + w, y + h), (0, 255, 0), 2)
 
         print(result)
         if 0 in result:

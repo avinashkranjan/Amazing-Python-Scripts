@@ -3,6 +3,7 @@ import sys
 from os.path import join
 from PIL import Image, ImageEnhance
 
+
 def FolderSelectAndRun():
     batch(
         "<input folder>",
@@ -12,6 +13,7 @@ def FolderSelectAndRun():
 
 
 basewidth = 2048
+
 
 def batch(infolder, outfolder, watermark):
     mark = Image.open(watermark)

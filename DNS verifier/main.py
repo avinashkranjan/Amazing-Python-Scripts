@@ -33,7 +33,7 @@ if __name__ == '__main__':
     dns_val = None
     option = None
     print("Enter the DNS:")
-    dns_val=input()  
+    dns_val = input()
     try:
         response = checker(dns_val=dns_val)
     except Exception as err:

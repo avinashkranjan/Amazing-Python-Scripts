@@ -4,7 +4,7 @@ import sys
 import json
 from github import Github
 
-if(len(sys.argv) > 1):
+if (len(sys.argv) > 1):
     # access token
     token = sys.argv[1]
     repo_name = 'avinashkranjan/Amazing-Python-Scripts'
@@ -18,7 +18,7 @@ if(len(sys.argv) > 1):
         contents = repo.get_contents("")
         for content in contents:
             script = content
-            if((script.type == "dir") and (script.name not in files_to_be_excluded)):
+            if ((script.type == "dir") and (script.name not in files_to_be_excluded)):
                 repo_contents[script.name] = script.html_url
 
         with open('Scripts.json', 'w') as jsonfile:

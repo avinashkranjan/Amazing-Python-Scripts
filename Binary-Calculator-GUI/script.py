@@ -5,21 +5,29 @@ window.title("Standard Binary Calculator")
 window.resizable(0, 0)
 
 # Function to clear the entry field
+
+
 def f1():
     s = e1_val.get()
     e1.delete(first=0, last=len(s))
 
 # Function to add "1" to the entry field
+
+
 def f2():
     s = e1_val.get()
     e1.insert(END, "1")
 
 # Function to add "0" to the entry field
+
+
 def f3():
     s = e1_val.get()
     e1.insert(END, "0")
 
 # Function to evaluate the expression and display the result
+
+
 def f4():
     s = e1_val.get()
     result = evaluate_expression(s)
@@ -27,22 +35,32 @@ def f4():
     e1.insert(END, result)
 
 # Function to add "+" operator to the entry field
+
+
 def f5():
     e1.insert(END, "+")
 
 # Function to add "-" operator to the entry field
+
+
 def f6():
     e1.insert(END, "-")
 
 # Function to add "/" operator to the entry field
+
+
 def f7():
     e1.insert(END, "/")
 
 # Function to add "X" operator to the entry field
+
+
 def f8():
     e1.insert(END, "X")
 
 # Function to negate the sign of the number in the entry field
+
+
 def negate():
     s = e1_val.get()
     if s.startswith("-"):
@@ -51,11 +69,15 @@ def negate():
         e1_val.set("-" + s)
 
 # Function to delete the last character in the entry field
+
+
 def backspace():
     s = e1_val.get()
     e1_val.set(s[:-1])
 
 # Function to convert binary to decimal
+
+
 def binary_to_decimal(n):
     num = n
     dec_value = 0
@@ -69,6 +91,8 @@ def binary_to_decimal(n):
     return dec_value
 
 # Function to convert decimal to binary
+
+
 def decimal_to_binary(n):
     if n == 0:
         return '0'
@@ -79,6 +103,8 @@ def decimal_to_binary(n):
     return binary
 
 # Function to evaluate the expression
+
+
 def evaluate_expression(expression):
     x = 0
     s = expression
@@ -101,6 +127,8 @@ def evaluate_expression(expression):
     return ""
 
 # Function to perform binary addition
+
+
 def add(x, y):
     a = binary_to_decimal(x)
     b = binary_to_decimal(y)
@@ -109,12 +137,15 @@ def add(x, y):
     return d
 
 # Function to perform binary subtraction
+
+
 def sub(x, y):
     a = binary_to_decimal(x)
     b = binary_to_decimal(y)
     c = a - b
     d = decimal_to_binary(c)
     return d
+
 
 # Creating a StringVar to store the value of the entry field
 e1_val = StringVar()
@@ -158,22 +189,29 @@ bnegate.grid(row=3, column=0)
 bbackspace = Button(window, text="⌫", width=8, height=2, command=backspace)
 bbackspace.grid(row=3, column=1)
 
-bbinary = Button(window, text="Bin to Dec", width=12, height=2, command=on_binary)
+bbinary = Button(window, text="Bin to Dec", width=12,
+                 height=2, command=on_binary)
 bbinary.grid(row=3, column=2)
 
-bdecimal = Button(window, text="Dec to Bin", width=12, height=2, command=on_decimal)
+bdecimal = Button(window, text="Dec to Bin", width=12,
+                  height=2, command=on_decimal)
 bdecimal.grid(row=3, column=3)
 
 # Function to convert binary to decimal and update entry field
+
+
 def on_binary():
     s = e1_val.get()
     decimal = binary_to_decimal(s)
     e1_val.set(decimal_to_binary(decimal))
 
 # Function to convert decimal to binary and update entry field
+
+
 def on_decimal():
     s = e1_val.get()
     binary = decimal_to_binary(int(s))
     e1_val.set(binary)
+
 
 window.mainloop()

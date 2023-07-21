@@ -6,6 +6,7 @@ Time Complexity: O(n^2)
 Space Complexity: O(1)
 """
 
+
 def BubbleSort(elements):
     size = len(elements)  # get size of list for iteration purpose
 
@@ -13,7 +14,8 @@ def BubbleSort(elements):
         # If list is already swapped, loop would run only once
         swapped = False  # list is not swapped yet
         # swaps greatest element each time
-        for j in range(size-1-i):  # no element after last element to compare with: that's why size-1
+        # no element after last element to compare with: that's why size-1
+        for j in range(size-1-i):
             # size-1-i: if last 2 elements of list are already sorted, run loop for previous elements only
             if elements[j] > elements[j+1]:  # if element[left] > element[right]
                 # Swapping Variables in traditional way
@@ -24,7 +26,6 @@ def BubbleSort(elements):
 
         if not swapped:
             break
-
 
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@ import re
 
 def check_syntax(email):
     regex = r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
-    if(re.search(regex, email)):
+    if (re.search(regex, email)):
         print("Check 1 (Syntax) Passed")
     else:
         print("Check 1 FAILED! Bad Syntax, Invalid Email!")

@@ -1,10 +1,12 @@
 from PIL import Image
 
+
 def resize_image(input_image, output_image, new_size):
     image = Image.open(input_image)
     resized_image = image.resize(new_size)
     resized_image.save(output_image)
     print("Image resized and saved successfully.")
+
 
 def rotate_image(input_image, output_image, degrees):
     image = Image.open(input_image)
@@ -12,11 +14,13 @@ def rotate_image(input_image, output_image, degrees):
     rotated_image.save(output_image)
     print("Image rotated and saved successfully.")
 
+
 def flip_image(input_image, output_image, flip_mode):
     image = Image.open(input_image)
     flipped_image = image.transpose(flip_mode)
     flipped_image.save(output_image)
     print("Image flipped and saved successfully.")
+
 
 # Example usage: Resize, rotate, and flip an image
 input_file = 'input_image.jpg'

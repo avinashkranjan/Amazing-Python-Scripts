@@ -7,10 +7,12 @@ LinkedIn: agarwal-himanshu (https://linkedin.com/in/agarwal-himanshu)
 # Menu Driven Code for Dynamic Stack using Linked List
 """
 
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
 
 class DynamicStack:
     def __init__(self):
@@ -23,20 +25,20 @@ class DynamicStack:
         else:
             n.next = self.tos
             self.tos = n
-        
+
     def pop(self):
         if self.tos == None:
             print('\nStack is empty..!!')
         else:
             temp = self.tos
             self.tos = self.tos.next
-            print('Popped Element from Stack: ',temp.data)
+            print('Popped Element from Stack: ', temp.data)
 
     def peek(self):
         if self.tos == None:
             print('\nStack is empty..!!')
         else:
-            print('Peeked Element: ',self.tos.data)
+            print('Peeked Element: ', self.tos.data)
 
     def printStack(self):
         if self.tos == None:
@@ -49,6 +51,7 @@ class DynamicStack:
                 temp = temp.next
 
 # Main Code
+
 
 o = DynamicStack()
 
@@ -65,16 +68,16 @@ while True:
 
     elif ch == 2:
         o.pop()
-    
+
     elif ch == 3:
         o.peek()
-    
+
     elif ch == 4:
         o.printStack()
-    
+
     elif ch == 0:
         print('You are out of the program..!!')
         break
-    
+
     else:
         print('\nWrong Input..\nEnter the correct choice..!!\n')

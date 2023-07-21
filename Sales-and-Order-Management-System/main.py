@@ -7,7 +7,9 @@ from Admin_menu import Admin
 from User_menu import User
 
 # MAIN WINDOW
-class Main(Login,Admin,User):
+
+
+class Main(Login, Admin, User):
 
     def __init__(self):
         Login.__init__(self)
@@ -22,7 +24,7 @@ class Main(Login,Admin,User):
         y = (screen_height / 2) - (height / 2)
         self.mainw.geometry("%dx%d+%d+%d" % (width, height, x, y))
         self.mainw.title("Inventory")
-        self.mainw.resizable(0,0)
+        self.mainw.resizable(0, 0)
         self.mainw.protocol('WM_DELETE_WINDOW', self.__Main_del__)
         self.getdetails()
 
@@ -43,7 +45,8 @@ class Main(Login,Admin,User):
         self.products = self.cur.fetchall()
         capuser = self.username.get()
         capuser = capuser.upper()
-        self.cur.execute("select account_type from users where username= ? ", (capuser,))
+        self.cur.execute(
+            "select account_type from users where username= ? ", (capuser,))
         l = self.cur.fetchall()
         self.account_type = l[0][0]
         self.buildmain()
@@ -52,23 +55,26 @@ class Main(Login,Admin,User):
     def buildmain(self):
         if self.account_type == 'ADMIN':
             super(Admin).__init__()
-            self.admin_mainmenu(8,8)
+            self.admin_mainmenu(8, 8)
         else:
             super(User).__init__()
-            self.user_mainmenu(8,8)
+            self.user_mainmenu(8, 8)
         self.logout.config(command=self.__Main_del__)
         self.changeuser.config(command=self.change_user)
-        self.topframe=LabelFrame(self.mainw,width=1400,height=120,bg="skyblue")
-        self.topframe.place(x=0,y=0)
+        self.topframe = LabelFrame(
+            self.mainw, width=1400, height=120, bg="skyblue")
+        self.topframe.place(x=0, y=0)
         self.store_name = 'The Bake Shop'
-        self.storelable=Label(self.topframe,text=self.store_name + "'s Sales & Inventory System",bg="skyblue",anchor="center")
-        self.storelable.config(font="Roboto 30 bold",fg="snow")
-        self.storelable.place(x=360,y=30)
+        self.storelable = Label(self.topframe, text=self.store_name +
+                                "'s Sales & Inventory System", bg="skyblue", anchor="center")
+        self.storelable.config(font="Roboto 30 bold", fg="snow")
+        self.storelable.place(x=360, y=30)
         mi = PhotoImage(file="images/myprofile.png")
-        mi = mi.subsample(4,4)
-        self.myprofile = ttk.Label(self.topframe,text=(self.username.get()).capitalize(),image=mi, compound=TOP)
+        mi = mi.subsample(4, 4)
+        self.myprofile = ttk.Label(self.topframe, text=(
+            self.username.get()).capitalize(), image=mi, compound=TOP)
         self.myprofile.image = mi
-        self.myprofile.place(x=1300,y=15)
+        self.myprofile.place(x=1300, y=15)
         ''''
         if self.account_type == 'ADMIN':
             self.adminlabel= Label(self.topframe,text="Admin",font="Roboto 10 bold",bg="#4267b2")

@@ -8,4 +8,4 @@ _pattern = '*.mp4'
 
 for _root, dirs, _files in os.walk(root_path):
 for _file in fnmatch.filter(_files, _pattern):
-print( os.path.join(_root, _file))
+print(os.path.join(_root, _file))

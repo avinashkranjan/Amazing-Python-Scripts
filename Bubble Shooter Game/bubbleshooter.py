@@ -363,12 +363,12 @@ def popflotrs(bbarr, cpyofbrd, col, row=0):
     elif bbarr[row][col] == cpyofbrd[row][col]:
         return
     bbarr[row][col] = cpyofbrd[row][col]
-    if(row == 0):
+    if (row == 0):
         popflotrs(bbarr, cpyofbrd, col + 1, row)
         popflotrs(bbarr, cpyofbrd, col - 1, row)
         popflotrs(bbarr, cpyofbrd, col, row + 1)
         popflotrs(bbarr, cpyofbrd, col - 1, row + 1)
-    elif(row % 2 == 0):
+    elif (row % 2 == 0):
         popflotrs(bbarr, cpyofbrd, col + 1, row)
         popflotrs(bbarr, cpyofbrd, col - 1, row)
         popflotrs(bbarr, cpyofbrd, col, row + 1)
@@ -437,12 +437,12 @@ def stbb(bbarr, newbb, launchbb, score):
                                 bbarr[newRow][newcol].row = newRow
                                 bbarr[newRow][newcol].col = newcol
 
-                    elif(newbb.rect.centery < bbarr[row][col].rect.centery):
-                        if(newbb.rect.centerx >= bbarr[row][col].rect.centerx):
-                            if(row == 0 or row % 2 == 0):
+                    elif (newbb.rect.centery < bbarr[row][col].rect.centery):
+                        if (newbb.rect.centerx >= bbarr[row][col].rect.centerx):
+                            if (row == 0 or row % 2 == 0):
                                 newRow = row - 1
                                 newcol = col
-                                if(bbarr[newRow][newcol] != blank):
+                                if (bbarr[newRow][newcol] != blank):
                                     newRow = newRow + 1
                                 bbarr[newRow][newcol] = copy.copy(newbb)
                                 bbarr[newRow][newcol].row = newRow
@@ -457,10 +457,10 @@ def stbb(bbarr, newbb, launchbb, score):
                                 bbarr[newRow][newcol].col = newcol
 
                         elif newbb.rect.centerx <= bbarr[row][col].rect.centerx:
-                            if(row == 0 or row % 2 == 0):
+                            if (row == 0 or row % 2 == 0):
                                 newRow = row - 1
                                 newcol = col - 1
-                                if(bbarr[newRow][newcol] != blank):
+                                if (bbarr[newRow][newcol] != blank):
                                     newRow = newRow + 1
                                 bbarr[newRow][newcol] = copy.copy(newbb)
                                 bbarr[newRow][newcol].row = newRow
@@ -469,7 +469,7 @@ def stbb(bbarr, newbb, launchbb, score):
                             else:
                                 newRow = row - 1
                                 newcol = col
-                                if(bbarr[newRow][newcol] != blank):
+                                if (bbarr[newRow][newcol] != blank):
                                     newRow = newRow + 1
                                 bbarr[newRow][newcol] = copy.copy(newbb)
                                 bbarr[newRow][newcol].row = newRow
@@ -477,7 +477,7 @@ def stbb(bbarr, newbb, launchbb, score):
 
                     popbb(bbarr, newRow, newcol, newbb.color, dellst)
 
-                    if(len(dellst) >= 3):
+                    if (len(dellst) >= 3):
                         for pos in dellst:
                             popSound.play()
                             row = pos[0]
@@ -508,22 +508,22 @@ def addbbtotop(bbarr, bubble):
 
 
 def popbb(bbarr, row, col, color, dellst):
-    if(row < 0 or col < 0 or row > (len(bbarr)-1) or col > (len(bbarr[0])-1)):
+    if (row < 0 or col < 0 or row > (len(bbarr)-1) or col > (len(bbarr[0])-1)):
         return
     elif (bbarr[row][col] == blank):
         return
-    elif(bbarr[row][col].color != color):
+    elif (bbarr[row][col].color != color):
         return
     for bubble in dellst:
-        if(bbarr[bubble[0]][bubble[1]] == bbarr[row][col]):
+        if (bbarr[bubble[0]][bubble[1]] == bbarr[row][col]):
             return
     dellst.append((row, col))
-    if(row == 0):
+    if (row == 0):
         popbb(bbarr, row, col-1, color, dellst)
         popbb(bbarr, row, col+1, color, dellst)
         popbb(bbarr, row+1, col, color, dellst)
         popbb(bbarr, row+1, col-1, color, dellst)
-    elif(row % 2 == 0):
+    elif (row % 2 == 0):
         popbb(bbarr, row + 1, col, color, dellst)
         popbb(bbarr, row + 1, col-1, color, dellst)
         popbb(bbarr, row - 1, col, color, dellst)
@@ -543,7 +543,7 @@ def popbb(bbarr, row, col, color, dellst):
 def drawbbary(array):
     for row in range(aryhgt):
         for col in range(len(array[row])):
-            if(array[row][col] != blank):
+            if (array[row][col] != blank):
                 array[row][col].draw()
 
 
@@ -582,12 +582,12 @@ def endScreen(score, winorlose):
 
     while True:
         for event in pygame.event.get():
-            if(event.type == QUIT):
+            if (event.type == QUIT):
                 terminate()
-            elif(event.type == KEYUP):
-                if(event.key == K_RETURN):
+            elif (event.type == KEYUP):
+                if (event.key == K_RETURN):
                     return
-                elif(event.key == K_ESCAPE):
+                elif (event.key == K_ESCAPE):
                     terminate()
 
 

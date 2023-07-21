@@ -1,6 +1,6 @@
-# Hangman representation after every turn on the terminal 
+# Hangman representation after every turn on the terminal
 lives_visual_dict = {
-        0: """
+    0: """
                 ___________
                | /        | 
                |/        ( )
@@ -8,7 +8,7 @@ lives_visual_dict = {
                |         / \\
                |
            """,
-        1: """
+    1: """
                 ___________
                | /        | 
                |/        ( )
@@ -16,7 +16,7 @@ lives_visual_dict = {
                |         / 
                |
             """,
-        2: """
+    2: """
                 ___________
                | /        | 
                |/        ( )
@@ -24,7 +24,7 @@ lives_visual_dict = {
                |          
                |
             """,
-        3: """
+    3: """
                 ___________
                | /        | 
                |/        ( )
@@ -32,7 +32,7 @@ lives_visual_dict = {
                |          
                |
             """,
-        4: """
+    4: """
                 ___________
                | /        | 
                |/        
@@ -40,7 +40,7 @@ lives_visual_dict = {
                |          
                |
             """,
-        5: """
+    5: """
                 ___________
                | /        
                |/        
@@ -48,12 +48,12 @@ lives_visual_dict = {
                |          
                |
             """,
-        6: """
+    6: """
                |
                |
                |
                |
                |
             """,
-        7: "",
-    }
+    7: "",
+}

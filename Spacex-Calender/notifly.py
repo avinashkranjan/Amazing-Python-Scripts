@@ -79,7 +79,7 @@ def is_in_current_month(date, current_month) -> bool:
     launch_month = date_split[1].strip().lower()
     launch_month_split = launch_month.split(',')
 
-    if(MONTH_MAP[launch_month_split[0]] == current_month):
+    if (MONTH_MAP[launch_month_split[0]] == current_month):
         return True
     return False
 
@@ -100,12 +100,12 @@ def create_calendar(service) -> str:
     exists = False
     for calendar in calendars['items']:
         # print(calendar['summary'])
-        if(calendar['summary'] == 'Rocket launches by Notifly'):
+        if (calendar['summary'] == 'Rocket launches by Notifly'):
             exists = True
             calendarId = calendar['id']
             break
 
-    if(not exists):
+    if (not exists):
         notifly_calendar = service.calendars().insert(body=launch_calendar).execute()
         print(
             f"Calendar {notifly_calendar['summary']} was successfully created")
@@ -119,12 +119,12 @@ def add_to_calendar(title, date, location, service, notifly_calendar_id) -> bool
     Creates an event with the rocket launch information and adds it 
     to Notifly's calendar. Returns false if the event already exists
     """
-    if(get_utc_time(date) != "all day"):
+    if (get_utc_time(date) != "all day"):
         start_launch_time = get_utc_time(date)
         added_hour = str(int(start_launch_time[1])+1)
-        if(start_launch_time[0] == '2' and added_hour == '4'):
+        if (start_launch_time[0] == '2' and added_hour == '4'):
             end_launch_time = '23:59'
-        elif(int(start_launch_time[0]) > 0):
+        elif (int(start_launch_time[0]) > 0):
             end_launch_time = start_launch_time[0] + \
                 added_hour + start_launch_time[2:]
         else:
@@ -175,13 +175,13 @@ def add_to_calendar(title, date, location, service, notifly_calendar_id) -> bool
 
     for old_event in events['items']:
         # replace event with newer version
-        if(old_event['summary'] == launch_event['summary']):
+        if (old_event['summary'] == launch_event['summary']):
             service.events().delete(calendarId=notifly_calendar_id,
                                     eventId=old_event['id']).execute()
             service.events().insert(calendarId=notifly_calendar_id, body=launch_event).execute()
             event_exists = True
 
-    if(not event_exists):
+    if (not event_exists):
         service.events().insert(calendarId=notifly_calendar_id, body=launch_event).execute()
         return True
     return False
@@ -192,7 +192,7 @@ def get_utc_time(launch_date) -> str:
     Returns the rocket launch time in UTC, or all day if the time is NET
     """
     split_date = launch_date.split()
-    if(split_date[0] == "NET"):
+    if (split_date[0] == "NET"):
         return "all day"
     else:
         utc_time = split_date[4]
@@ -205,7 +205,7 @@ def get_launch_date_formatted(launch_date) -> str:
     """
     split_date = launch_date.split()
 
-    if(len(split_date) < 4):
+    if (len(split_date) < 4):
         month_int = MONTH_MAP[split_date[1].split(',')[0].lower()]
         formatted_date = f"{split_date[2]}-{0 if month_int < 10 else ''}{month_int}-01"
     else:
@@ -226,7 +226,7 @@ def main(current_month):
     next_page = True
     query_page = 0
 
-    while(next_page):
+    while (next_page):
 
         # GET HTTP request
         query_page += 1
@@ -247,7 +247,7 @@ def main(current_month):
                 class_='mdl-card__supporting-text').get_text().split('\n')
             launch_date = date_location[2].strip()
 
-            if(is_in_current_month(launch_date, current_month)):
+            if (is_in_current_month(launch_date, current_month)):
                 break
             start_index += 1
 
@@ -264,7 +264,7 @@ def main(current_month):
             launch_location = date_location[4].strip()
 
             # stop finding launches once they are outside of the current month
-            if(not is_in_current_month(launch_date, current_month)):
+            if (not is_in_current_month(launch_date, current_month)):
                 next_page = False
                 break
 
@@ -272,8 +272,8 @@ def main(current_month):
             #     f'title: {launch_title} \ndate: {launch_date} \nlocation: {launch_location}')
 
             # -------Add launch to Google Calendar----------
-            if(add_to_calendar(launch_title, launch_date,
-                               launch_location, service, notifly_calendar_id)):
+            if (add_to_calendar(launch_title, launch_date,
+                                launch_location, service, notifly_calendar_id)):
                 events_added += 1
                 print(str(events_added) + " events added")
             else:
@@ -319,7 +319,7 @@ def delete_events(month):
         except:
             event_month = int(event['start']['date'].split('-')[1])
 
-        if(event_month == month_int):
+        if (event_month == month_int):
             service.events().delete(calendarId=notifly_calendar_id,    # pylint: disable=maybe-no-member
                                     eventId=event['id']).execute()
             events_deleted += 1

@@ -40,7 +40,7 @@ for article in articles:
     post_html = driver.page_source
     soup = BeautifulSoup(post_html, "html.parser")
     a_tags = soup.find_all('a')
-    
+
     author = a_tags[2].text
 
     title = soup.find('h1').text.strip()
@@ -63,18 +63,19 @@ for article in articles:
     pdf.cell(200, 10, txt=author_string, ln=2, align='C')
 
     for p_tag in p_tags:
-        article_part = (p_tag.text.strip()).encode('latin-1', 'replace').decode('latin-1')
+        article_part = (p_tag.text.strip()).encode(
+            'latin-1', 'replace').decode('latin-1')
         article_part += '\n'
         # Add part of article to pdf
         pdf.multi_cell(0, 5, txt=article_part, align='L')
-        
+
     # save the pdf with name .pdf
     pdf_title = ''.join(e for e in title if e.isalnum())
     pdf.output("{}.pdf".format(pdf_title))
 
     num = num-1
-    if(num == 0):
+    if (num == 0):
         break
-    
+
 
 driver.close()  # closing the webdriver

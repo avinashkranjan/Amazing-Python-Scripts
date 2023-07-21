@@ -2,7 +2,7 @@
     Sets are a collection of unordered elements that are unique.
 '''
 
-set = {1, 2, 1, 4, 'A' ,'B', 'A', 5}
+set = {1, 2, 1, 4, 'A', 'B', 'A', 5}
 
 print(f"All the Unique elements of Set are {set}", end="\n\n")
 
@@ -30,14 +30,15 @@ set_2 = {3, 4, 5, 6, 'B'}
 
 print("UNION ", set.union(set_2), '----------', set | set_2, end="\n\n")
 
-print("INTERSECTION ", set.intersection(set_2), '----------', set & set_2, end="\n\n")
+print("INTERSECTION ", set.intersection(set_2),
+      '----------', set & set_2, end="\n\n")
 
-print("DIFFERENCE ", set.difference(set_2), '----------', set - set_2, end="\n\n")
+print("DIFFERENCE ", set.difference(set_2),
+      '----------', set - set_2, end="\n\n")
 
-print("SYMMETRIC-DIFFERENCE ",set.symmetric_difference(set_2), '----------', set ^ set_2, end="\n\n")
+print("SYMMETRIC-DIFFERENCE ", set.symmetric_difference(set_2),
+      '----------', set ^ set_2, end="\n\n")
 
 set.clear()
 
 print(f"Deleted all elements of set {set}", end="\n\n")
-
-

@@ -10,6 +10,7 @@ import warnings
 import requests
 warnings.filterwarnings("ignore")
 
+
 class SeleniumScraper:
     def __init__(self, timeout=10):
         self.timeout = timeout
@@ -32,7 +33,7 @@ class SeleniumScraper:
             'sec-fetch-dest': 'document',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         }
-    
+
     def fetch_request_normal(self, url, params=None):
         try:
             headers = {
@@ -42,26 +43,27 @@ class SeleniumScraper:
 
             if response.status_code == 200:
                 return response.text
-            
+
             if response.status_code == 301:
                 # retry with redirect
                 response = requests.get(response.headers['Location'])
                 response.raise_for_status()
                 if response.status_code == 200:
                     return response.text
-                
+
             if response.status_code == 503:
-                #print("Request Failed Response status code for url: {} and status code: {}".format(url, 503))
+                # print("Request Failed Response status code for url: {} and status code: {}".format(url, 503))
                 return None
-                        
+
         except Exception as e:
             print(
-                "Exception occurred for url: {} and exception: {}".format(url, e)
+                "Exception occurred for url: {} and exception: {}".format(
+                    url, e)
             )
             print("Exception occurred for url: {} and exception: {}".format(url, e))
             pass
             return None
-        
+
     def get_xpath_link(self, doc, xpath, website):
         try:
             name = doc.xpath("".join(xpath))
@@ -77,7 +79,7 @@ class SeleniumScraper:
             pass
             return None
             pass
-        
+
     def get_selenium_driver(self):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
@@ -104,7 +106,8 @@ class SeleniumScraper:
 
         except Exception as e:
             print(
-                "Exception occurred for url: {} and exception: {}".format(url, e)
+                "Exception occurred for url: {} and exception: {}".format(
+                    url, e)
             )
             pass
 
@@ -117,9 +120,10 @@ class SeleniumScraper:
             print("Error in getting {}: {}".format(name, e))
             pass
             return None
-        
+
     def slow_page_scroll(self, driver, speed):
-        current_scroll_position = driver.execute_script("return window.pageYOffset;")
+        current_scroll_position = driver.execute_script(
+            "return window.pageYOffset;")
         while current_scroll_position < driver.execute_script(
             "return document.body.scrollHeight;"
         ):
@@ -134,20 +138,18 @@ class SeleniumScraper:
         df_combined.drop_duplicates(subset=unique_id, inplace=True)
         if storageFormat == "csv":
             df_combined.to_csv(
-            self.storagePath +"/{}_{}.csv".format(name, self.stamp),
-            index=False,
-        )
+                self.storagePath + "/{}_{}.csv".format(name, self.stamp),
+                index=False,
+            )
         elif storageFormat == "json":
             df_combined.to_json(
-            self.storagePath + "/{}_{}.json".format(name, self.stamp),
-            orient="records",
-        )
-      
+                self.storagePath + "/{}_{}.json".format(name, self.stamp),
+                orient="records",
+            )
+
     def cleanData(self, array):
         array = [x.strip() for x in array]
         array = list(filter(None, array))
         array = [x.encode("ascii", "ignore").decode() for x in array]
         array = [x.replace("\n", "") for x in array]
         return array
-    
-    

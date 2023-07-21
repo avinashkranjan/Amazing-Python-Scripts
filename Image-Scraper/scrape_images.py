@@ -5,7 +5,7 @@ import requests
 import sys
 
 if len(sys.argv) != 2:
-  sys.exit("Usage: python scrape_images.py {url}")
+    sys.exit("Usage: python scrape_images.py {url}")
 
 response = requests.get(
     sys.argv[1],
@@ -18,4 +18,4 @@ html_data = BeautifulSoup(response.text, 'html.parser')
 images = html_data.find_all('img', src=True)
 
 for image in images:
-  print(image)
+    print(image)

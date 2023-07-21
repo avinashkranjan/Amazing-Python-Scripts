@@ -6,15 +6,20 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 import io
 
+
 def extract_education(resume_text):
     education_pattern = r"((?:Bachelor|Master|Ph\.?D|Diploma)[^.,]*\b(?:\.\b)?(?:[^.,\n]*\b(?:University|College|School|Institute)\b[^.,\n]*)?)"
-    education_matches = re.findall(education_pattern, resume_text, re.IGNORECASE)
+    education_matches = re.findall(
+        education_pattern, resume_text, re.IGNORECASE)
     return education_matches
+
 
 def extract_experience(resume_text):
     experience_pattern = r"(?:(?:[A-Z][a-z]+\s+){1,3})?(?:(?:\d{4}\s?-\s?\d{4}|\d{4})\s)?(?:(?:Present|Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)[A-Za-z\s]+\d{4})"
-    experience_matches = re.findall(experience_pattern, resume_text, re.IGNORECASE)
+    experience_matches = re.findall(
+        experience_pattern, resume_text, re.IGNORECASE)
     return experience_matches
+
 
 def extract_skills(resume_text, skills_list):
     skills_found = []

@@ -24,6 +24,8 @@ BigO of stack:
 '''
 
 ''' CLASS STACK() '''
+
+
 class Stack():
     def __init__(self):
         self.stack = list()
@@ -43,7 +45,9 @@ class Stack():
 
     def __str__(self):
         return str(self.stack)
-''' CLASS STACK() END '''        
+
+
+''' CLASS STACK() END '''
 
 stack = list()
 # .append method to append items to the stack
@@ -68,6 +72,4 @@ print(f"Deleted item is {stack.pop()}")
 print(f"Seek is at {stack.peek()}")
 
 
-
-#TODO: Stack continue ( https://youtu.be/kQDxmjfkIKY?t=3077 )
-
+# TODO: Stack continue ( https://youtu.be/kQDxmjfkIKY?t=3077 )

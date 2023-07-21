@@ -94,7 +94,7 @@ def get_info(movie):
     lis = []
     res = []
     for tag in tags:
-        if(count > 2):
+        if (count > 2):
             break
         m = re.search('<a href=.*>(.*?)</a>', str(tag))
         try:

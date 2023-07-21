@@ -27,11 +27,13 @@ root.title("Text Sentimental Analysis")
 
 root.resizable(False, False)
 
-image = PhotoImage(file="./Text_Sentimental_Analysis_Script_with_GUI/images/background.png")
+image = PhotoImage(
+    file="./Text_Sentimental_Analysis_Script_with_GUI/images/background.png")
 image_label = Label(root, image=image)
 image_label.place(x=0, y=0)
 
-enterWordLabel = Label(root, text='Enter Text for Analysis', font=('castellar', 15, 'bold'), fg='black')
+enterWordLabel = Label(root, text='Enter Text for Analysis',
+                       font=('castellar', 15, 'bold'), fg='black')
 enterWordLabel.place(x=180, y=20)
 
 enterWordEntry = Entry(root, font=('arial', 20, 'bold'), bd=5, justify=CENTER)
@@ -39,7 +41,8 @@ enterWordEntry.place(x=100, y=70)
 
 enterWordEntry.focus_set()
 
-searchImage = PhotoImage(file='./Text_Sentimental_Analysis_Script_with_GUI/images/search.png')
+searchImage = PhotoImage(
+    file='./Text_Sentimental_Analysis_Script_with_GUI/images/search.png')
 searchButton = Button(root, image=searchImage, bd=0, bg='whitesmoke', activebackground='whitesmoke', cursor='hand2',
                       command=search)
 searchButton.place(x=450, y=50)

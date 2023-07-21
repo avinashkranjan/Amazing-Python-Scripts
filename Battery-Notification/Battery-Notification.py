@@ -7,13 +7,13 @@ threshold = int(input('Enter the threshold: '))
 battery = psutil.sensors_battery()
 percent = battery.percent
 
-while(True):
+while (True):
     battery = psutil.sensors_battery()
     cur_per = battery.percent
     change = cur_per - percent
     diff = abs(change)
     # We calculate the change in the battery and show notification if battery level increases or decreases
-    if(diff >= threshold):
+    if (diff >= threshold):
         notification.notify(
             title="Battery Percentage",
             message=str(cur_per) + "% Battery Remaining",

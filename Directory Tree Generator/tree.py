@@ -20,7 +20,8 @@ def get_file_info(path, root=None):
         path = os.path.join(root, path)
     size = os.path.getsize(path)
     modified = os.path.getmtime(path)
-    modified_time = datetime.fromtimestamp(modified).strftime('%Y-%m-%d %H:%M:%S')
+    modified_time = datetime.fromtimestamp(
+        modified).strftime('%Y-%m-%d %H:%M:%S')
     return f'{realname(path, root=root)} (Size: {size} bytes, Modified: {modified_time})'
 
 
@@ -51,8 +52,10 @@ if __name__ == '__main__':
     print("\nDirectory tree\n")
 
     parser = argparse.ArgumentParser(description='Prints directory tree.')
-    parser.add_argument('startpath', type=str, help='Path to starting directory')
-    parser.add_argument('-d', '--depth', type=int, default=-1, help='Depth of the directory tree')
+    parser.add_argument('startpath', type=str,
+                        help='Path to starting directory')
+    parser.add_argument('-d', '--depth', type=int, default=-
+                        1, help='Depth of the directory tree')
     args = parser.parse_args()
 
     ptree(args.startpath, args.depth)

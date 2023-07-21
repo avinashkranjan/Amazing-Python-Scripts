@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 
 
 def scrape_travel_destinations():
-    url = "https://www.example.com/destinations"  # Replace with the actual URL of the travel destinations page
+    # Replace with the actual URL of the travel destinations page
+    url = "https://www.example.com/destinations"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
