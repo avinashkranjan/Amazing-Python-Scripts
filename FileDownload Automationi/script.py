@@ -1,9 +1,10 @@
 import requests
 
+
 def download_file(url, save_path, file_name):
     """
     Download a file from a given URL and save it to a specified directory.
-    
+
     Parameters:
     - url (str): The URL of the file to be downloaded. 
                  Get the URL of download button through it's inspect button.
@@ -15,6 +16,7 @@ def download_file(url, save_path, file_name):
     with open(file_path, 'wb') as file:
         file.write(response.content)
     print("File downloaded successfully!")
+
 
 # Example URL
 file_url = "https://files.ceenaija.com/wp-content/uploads/music/2022/09/Keane_-_Somewhere_Only_We_Know_CeeNaija.com_.mp3"
