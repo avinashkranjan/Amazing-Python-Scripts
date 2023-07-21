@@ -1,0 +1,76 @@
+body{
+    background-color: #ECF0F5;
+}
+.row-same-heigh {
+    display: table;
+}
+
+.row-same-heigh .panel {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+video {
+    position: relative;
+}
+
+div.counter div.footer {
+    position: relative;
+    bottom: 0;
+    font-size: 13px;
+    height: 17px;
+    line-height: 17px;
+    color: #5a5a5a;
+    margin: 0;
+}
+.counter .footer .first {
+    position: absolute;
+    left:50%;
+}
+.counter .footer .last {
+    position: absolute;
+    right:0;
+}
+
+.timeline {
+    margin: 1em 70px 1em 0;
+    border: 1px solid #5a5a5a;
+    border-width: 0 1px;
+}
+
+.timeline .line {
+    border-top: 4px solid #008000;
+}
+
+.timeline .line .events .event .circle {
+    background: #42e804 !important;
+    border: 4px solid #205a03 !important;
+    border-color: #078c28;
+}
+
+.timeline .line .events .event .label {
+    border: 3px solid #0000ff;
+    background: #fff;
+}
+
+.timeline .line h4.total {
+    padding-left: 35px;
+}
+
+p.alert-time {
+    border-bottom: 1px solid white;
+    width: 80%;
+}
+
+i.fa.fa-play {
+    cursor: pointer;
+}
+
+.timeline .line .events .event {
+    top: -0.1em;
+    margin: 0 0 0 -0.5em;
+}
+
+.timeline .line.video1 {
+    border-color: #1db32d;
+}
