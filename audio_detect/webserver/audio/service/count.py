@@ -5,6 +5,7 @@ from audio.common.config import DEFAULT_TABLE
 from audio.indexer.index import milvus_client, count_collection
 from audio.indexer.tools import count_table
 
+
 def do_count_table(index_client, conn, cursor, table_name):
     if not table_name:
         table_name = DEFAULT_TABLE

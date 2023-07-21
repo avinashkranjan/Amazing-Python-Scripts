@@ -18,7 +18,7 @@ def create_table_milvus(client, table_name, dimension):
         collection_param = {
             'collection_name': table_name,
             'dimension': dimension,
-            'index_file_size':2048,
+            'index_file_size': 2048,
             'metric_type':  METRIC_TYPE
         }
         status = client.create_collection(collection_param)
@@ -61,7 +61,8 @@ def delete_collection(client, table_name):
 def search_vectors(client, table_name, vectors, metric, top_k):
     search_param = {'nprobe': 32}
     try:
-        status, res = client.search(collection_name=table_name, query_records=vectors, top_k=top_k, params=search_param)
+        status, res = client.search(
+            collection_name=table_name, query_records=vectors, top_k=top_k, params=search_param)
         print(status)
         return res
     except Exception as e:

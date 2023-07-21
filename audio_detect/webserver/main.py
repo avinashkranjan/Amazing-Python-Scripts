@@ -54,11 +54,12 @@ def unzip_file(zip_src, dst_dir):
 async def audio_count_table_api(table_name: str = None):
     try:
         index_client, conn, cursor = audio_init_conn()
-        rows_milvus, rows_mysql = audio_count_table(index_client, conn, cursor, table_name)
+        rows_milvus, rows_mysql = audio_count_table(
+            index_client, conn, cursor, table_name)
         return {'status': True, 'msg': {'rows_milvus': rows_milvus, 'rows_mysql': rows_mysql}}, 200
     except Exception as e:
         logging.error(e)
-        return {'status': False, 'msg':e}, 400
+        return {'status': False, 'msg': e}, 400
 
 
 @app.get('/getAudio')
@@ -68,7 +69,7 @@ async def audio_endpoint(audio: str):
         return FileResponse(audio)
     except Exception as e:
         logging.error(e)
-        return {'status': False, 'msg':e}, 400
+        return {'status': False, 'msg': e}, 400
 
 
 @app.get('/getSpectrogram')
@@ -78,7 +79,7 @@ async def spectrogram_endpoint(image: str):
         return FileResponse(image)
     except Exception as e:
         logging.error(e)
-        return {'status': False, 'msg':e}, 400
+        return {'status': False, 'msg': e}, 400
 
 
 @app.post('/audio/insert')
@@ -91,17 +92,19 @@ async def do_insert_audio_api(file: bytes = File(...), table_name: str = None):
 
         os.makedirs(audio_UPLOAD_PATH + "/" + table_name)
         fname_path = audio_UPLOAD_PATH + "/" + table_name + "/" + "demo_audio.zip"
-        with open(fname_path,'wb') as f:
+        with open(fname_path, 'wb') as f:
             f.write(file)
 
-        audio_path = unzip_file(fname_path, audio_UPLOAD_PATH + "/" + table_name)
+        audio_path = unzip_file(
+            fname_path, audio_UPLOAD_PATH + "/" + table_name)
         os.remove(fname_path)
 
-        info = audio_insert_audio(index_client, conn, cursor, table_name, audio_UPLOAD_PATH + "/" + table_name)
+        info = audio_insert_audio(
+            index_client, conn, cursor, table_name, audio_UPLOAD_PATH + "/" + table_name)
         return {'status': True, 'msg': info}, 200
     except Exception as e:
         logging.error(e)
-        return {'status': False, 'msg':e}, 400
+        return {'status': False, 'msg': e}, 400
 
 
 @app.post('/audio/search')
@@ -114,8 +117,9 @@ async def do_search_audio_api(request: Request, audio: UploadFile = File(...), t
 
         index_client, conn, cursor = audio_init_conn()
         host = request.headers['host']
-        milvus_ids, milvus_distance, audio_ids = audio_search_audio(index_client, conn, cursor, table_name, filename)
-        
+        milvus_ids, milvus_distance, audio_ids = audio_search_audio(
+            index_client, conn, cursor, table_name, filename)
+
         results = []
         for i in range(len(milvus_ids)):
             re = {
@@ -128,8 +132,7 @@ async def do_search_audio_api(request: Request, audio: UploadFile = File(...), t
         return {'status': True, 'msg': results}, 200
     except Exception as e:
         logging.error(e)
-        return {'status': False, 'msg':e}, 400
-
+        return {'status': False, 'msg': e}, 400
 
 
 if __name__ == '__main__':
