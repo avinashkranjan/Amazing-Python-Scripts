@@ -1,0 +1,1 @@
+# The above script is capable of printing a multiplication table for the given positive number.
