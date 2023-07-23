@@ -1,5 +1,13 @@
-# prints out a multiplication table for a given number
 def generate_table(number):
+    """
+    Generates and prints a multiplication table for a given number.
+
+    Parameters:
+        number (int): The number up to which the multiplication table will be generated.
+
+    Returns:
+        None
+    """
     if number <= 0:
         print("Please enter a positive number")
         return
@@ -25,4 +33,3 @@ if __name__ == "__main__":
         generate_table(num)
     except ValueError:
         print("Invalid number. Please enter a positive integer.")
-        
