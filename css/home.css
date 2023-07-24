@@ -176,6 +176,7 @@ a.nav-link {
 
 .contributor-card {
   width: 180px !important;
+  border: 2px solid #000;
 }
 
 .row {
