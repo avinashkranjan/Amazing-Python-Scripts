@@ -46,8 +46,11 @@ body[data-mode="dark"] .contri {
 /*scripts page */
 
 body[data-mode="dark"] .card-body {
-    border: 2px solid #fff;
     background-color: #000;
+}
+
+body[data-mode="dark"] .author {
+    color: #fff;
 }
 
 body[data-mode="dark"] .prev-next {
