@@ -134,7 +134,9 @@ label.agree {
 
 /*Styling submit button */
 .submitbtn {
+  display: block;
   width: 13rem;
+  margin-top: 2rem;
   padding: 0.7rem;
   font-size: 1.2rem;
   color: white;
