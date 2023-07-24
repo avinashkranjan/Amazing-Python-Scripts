@@ -1,3 +1,4 @@
+import sys
 class Definations:
     '''Contains the actual logic for base conversion.
 
@@ -40,6 +41,10 @@ class Converter(Definations):
     '''Inherits the Definations Class and converts the number based on user input'''
     def __init__(self,number):
         super().__init__(number)
+
+    def helper(self, func_name):
+        return getattr(Definations,func_name)(self)
+
     def convert(self,FROM="d",TO="b"):
         '''
         By Default conversion takes place from decimal to binary.
@@ -49,36 +54,9 @@ class Converter(Definations):
         x-hexadecimal,
         o-octal
         '''
-        bases = {'d':"DECIMAL",'b':"BINARY",'x':'HEXADECIMAL','o':"OCTAL"} 
-        if FROM == 'd':
-            if TO == 'b':
-                ans = Definations.Decimal_to_Binary(self)
-            elif TO == 'x':
-                ans = Definations.Decimal_to_Hexadecimal(self)
-            elif TO == 'o':
-                ans = Definations.Decimal_to_Octal(self)
-        if FROM == 'b':
-            if TO == 'd':
-                ans = Definations.Binary_to_Decimal(self)
-            elif TO == 'x':
-                ans = Definations.Binary_to_Hexadecimal(self)
-            elif TO == 'o':
-                ans = Definations.Binary_to_Octal(self)
-        if FROM == 'x':
-            if TO == 'b':
-                ans = Definations.Hexadecimal_to_Binary(self)
-            elif TO == 'd':
-                ans = Definations.Hexadecimal_to_Decimal(self)
-            elif TO == 'o':
-                ans = Definations.Hexadecimal_to_Octal(self)
-        if FROM == 'o':
-            if TO == 'b':
-                ans = Definations.Octal_to_Binary(self)
-            elif TO == 'd':
-                ans = Definations.Octal_to_Decimal(self)
-            elif TO == 'x':
-                ans = Definations.Octal_to_Hexadecimal(self)
-        return f"\n{self.number} in {bases[FROM]} = {ans} in {bases[TO]}"
+        bases = {'d':"Decimal",'b':"Binary",'x':'Hexadecimal','o':"Octal"} 
+        to_call_function = bases[FROM] + '_to_' + bases[TO]
+        return f"\n{self.number} in {bases[FROM]} = {self.helper(to_call_function)} in {bases[TO]}"
 
 def header_decoration():
     print('''
@@ -90,7 +68,8 @@ def footer_decoration():
     -------------- --------------------------- -----------
     ''')
     
-header_decoration()
-Num = Converter(input("Enter number = "))
-print(Num.convert(input("From = "),input("To = ")))
-footer_decoration()
+if __name__=='__main__':
+    header_decoration()
+    Num = Converter(input("Enter number = "))
+    print(Num.convert(input("From = "),input("To = ")))
+    footer_decoration()
