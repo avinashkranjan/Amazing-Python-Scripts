@@ -1,3 +1,0 @@
-img2pdf>=0.3.6
-pdf2image>=1.13.1
-Pillow>=7.2.0
