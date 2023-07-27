@@ -13,6 +13,9 @@ Run the command in terminal to install package
 ```
 $ pip install requests
 ```
+```
+$ pip install tkinter
+```
 Run the program using command
 
 ``` 
