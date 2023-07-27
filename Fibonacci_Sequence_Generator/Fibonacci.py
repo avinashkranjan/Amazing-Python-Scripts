@@ -14,7 +14,7 @@ def fibo(n):
 
 n = 0
 while n <= 0:
-    n = int(input("Enter how many terms you need in your Fibonacci Sequence: "))
+    n = int(input("Enter how many terms you need in your Fibonacci Sequence: \n"))
 
 fib_sequence = fibo(n)
 print(", ".join(map(str, fib_sequence)))
