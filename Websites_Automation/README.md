@@ -1,6 +1,6 @@
-# ADVISOR APPLICATION
+# WEBSITE AUTOMATION
 
-This is a Python Script which gives you advice and motivation quote lines.
+This is a Python Script help in opening the websites just by speaking the name of the websites.
 
 --- 
 
