@@ -89,16 +89,18 @@ def predictface():
 
     else:
         return jsonify({'similarity_percentage': 'Could not detect faces in both images.'})
-    
-@app.route('/face_recognize_from_Urls',methods=['POST'])
+
+
+@app.route('/face_recognize_from_Urls', methods=['POST'])
 def predictface():
-    data=request.json
-    url1=data['url1']
-     # get URL of first image from form data
+    data = request.json
+    url1 = data['url1']
+    # get URL of first image from form data
     url2 = data['url2']
 
     # Read the first image from URL using requests library
-    img1 = cv2.imdecode(np.frombuffer(requests.get(url1).content, np.uint8), cv2.IMREAD_COLOR)
+    img1 = cv2.imdecode(np.frombuffer(requests.get(
+        url1).content, np.uint8), cv2.IMREAD_COLOR)
 
     # Download the second image from the URL
     with urllib.request.urlopen(url2) as url:
@@ -110,8 +112,10 @@ def predictface():
     gray_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
     # Detect faces in the images
-    faces1 = face_cascade.detectMultiScale(gray_img1, scaleFactor=1.1, minNeighbors=5)
-    faces2 = face_cascade.detectMultiScale(gray_img2, scaleFactor=1.1, minNeighbors=5)
+    faces1 = face_cascade.detectMultiScale(
+        gray_img1, scaleFactor=1.1, minNeighbors=5)
+    faces2 = face_cascade.detectMultiScale(
+        gray_img2, scaleFactor=1.1, minNeighbors=5)
 
     # Compare only the first detected face in each image
     if len(faces1) > 0 and len(faces2) > 0:
@@ -135,7 +139,7 @@ def predictface():
         return jsonify({'similarity_percentage': similarity_percentage})
 
     else:
-        return jsonify({'similarity_percentage': 'Could not detect faces in both images.'})    
+        return jsonify({'similarity_percentage': 'Could not detect faces in both images.'})
 
 
 if __name__ == '__main__':
