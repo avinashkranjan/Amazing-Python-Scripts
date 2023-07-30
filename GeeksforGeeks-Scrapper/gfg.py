@@ -5,6 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 
+
 class geeksforgeeks:
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
@@ -78,7 +79,8 @@ class geeksforgeeks:
                 "message": "Popular Courses are now fetched",
             }
         except (WebDriverException, NoSuchElementException) as e:
-            raise Exception(f"An error occurred while scraping popular courses: {str(e)}")
+            raise Exception(
+                f"An error occurred while scraping popular courses: {str(e)}")
 
     def get_self_paced(self):
         """
@@ -111,7 +113,8 @@ class geeksforgeeks:
                     },
                 )
                 name.append(course_name.text)
-                course_rating = items.find("div", {"class": "courseListingPage_courseCardContentsGrid__jk3VM"}).find("span",{"class":"urw-din"})
+                course_rating = items.find("div", {"class": "courseListingPage_courseCardContentsGrid__jk3VM"}).find(
+                    "span", {"class": "urw-din"})
                 if not course_rating:
                     course_rating = "Information not available"
                 else:
@@ -142,7 +145,8 @@ class geeksforgeeks:
                 "message": "Self paced Courses are now fetched",
             }
         except (WebDriverException, NoSuchElementException) as e:
-            raise Exception(f"An error occurred while scraping popular courses: {str(e)}")
+            raise Exception(
+                f"An error occurred while scraping popular courses: {str(e)}")
 
     def get_live_course(self):
         """
@@ -207,5 +211,5 @@ class geeksforgeeks:
                 "message": "Live Courses are now fetched",
             }
         except (WebDriverException, NoSuchElementException) as e:
-            raise Exception(f"An error occurred while scraping popular courses: {str(e)}")
-
+            raise Exception(
+                f"An error occurred while scraping popular courses: {str(e)}")
