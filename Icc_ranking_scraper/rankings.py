@@ -8,7 +8,7 @@ class ICC:
         self.url = "https://www.icc-cricket.com/rankings/mens/"
 
     def team_rankings(self, format):
-        
+
         try:
             obj_keys = ["rank", "team"]
             resposne_list = []
@@ -17,16 +17,15 @@ class ICC:
             soup = BeautifulSoup(response.content, "html.parser")
             teams = soup.find_all("span", class_="u-hide-phablet")
             for rank, team in enumerate(teams, 1):
-                obj_values = [rank,team.get_text()]
+                obj_values = [rank, team.get_text()]
                 resposne_list.append(dict(zip(obj_keys, obj_values)))
-
 
             return resposne_list
         except:
             return None
 
     def player_ranking(self, type, format):
-        
+
         try:
             url = self.url + f"/player-rankings/{format}/{type}"
             response = requests.get(url)
