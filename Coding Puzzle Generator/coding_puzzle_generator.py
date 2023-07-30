@@ -1,5 +1,6 @@
 import random
 
+
 def generate_puzzle(difficulty):
     if difficulty == "easy":
         return generate_easy_puzzle()
@@ -8,7 +9,9 @@ def generate_puzzle(difficulty):
     elif difficulty == "hard":
         return generate_hard_puzzle()
     else:
-        raise ValueError("Invalid difficulty level. Please choose 'easy', 'medium', or 'hard'.")
+        raise ValueError(
+            "Invalid difficulty level. Please choose 'easy', 'medium', or 'hard'.")
+
 
 def generate_easy_puzzle():
     puzzle_type = random.choice(["arithmetic", "string"])
@@ -28,6 +31,7 @@ def generate_easy_puzzle():
 
     return puzzle, solution, hint
 
+
 def generate_medium_puzzle():
     puzzle_type = random.choice(["arithmetic", "string", "logical"])
     if puzzle_type == "arithmetic":
@@ -40,8 +44,10 @@ def generate_medium_puzzle():
     elif puzzle_type == "string":
         word = random.choice(["apple", "banana", "orange", "grape"])
         num_chars_to_remove = random.randint(1, len(word) - 1)
-        indices_to_remove = random.sample(range(len(word)), num_chars_to_remove)
-        puzzle = "".join(c if i not in indices_to_remove else "_" for i, c in enumerate(word))
+        indices_to_remove = random.sample(
+            range(len(word)), num_chars_to_remove)
+        puzzle = "".join(
+            c if i not in indices_to_remove else "_" for i, c in enumerate(word))
         solution = word
         hint = f"Remove {num_chars_to_remove} letter(s) to reveal the original word."
     else:  # puzzle_type == "logical"
@@ -53,6 +59,7 @@ def generate_medium_puzzle():
         hint = "This is a logical puzzle."
 
     return puzzle, solution, hint
+
 
 def generate_hard_puzzle():
     puzzle_type = random.choice(["arithmetic", "string", "logical"])
@@ -66,8 +73,10 @@ def generate_hard_puzzle():
     elif puzzle_type == "string":
         word = random.choice(["python", "programming", "challenge"])
         num_chars_to_replace = random.randint(1, len(word) - 1)
-        indices_to_replace = random.sample(range(len(word)), num_chars_to_replace)
-        replacement_chars = "".join(random.choices("abcdefghijklmnopqrstuvwxyz", k=num_chars_to_replace))
+        indices_to_replace = random.sample(
+            range(len(word)), num_chars_to_replace)
+        replacement_chars = "".join(random.choices(
+            "abcdefghijklmnopqrstuvwxyz", k=num_chars_to_replace))
         puzzle = "".join(c if i not in indices_to_replace else replacement_chars[idx]
                          for idx, c in enumerate(word))
         solution = word
@@ -82,15 +91,17 @@ def generate_hard_puzzle():
 
     return puzzle, solution, hint
 
+
 def main():
     print("Welcome to the Coding Puzzle Generator!")
-    difficulty_level = input("Choose difficulty level (easy, medium, hard): ").lower()
-    
+    difficulty_level = input(
+        "Choose difficulty level (easy, medium, hard): ").lower()
+
     try:
         puzzle, solution, hint = generate_puzzle(difficulty_level)
         print("\nSolve the puzzle:")
         print(f"Question: {puzzle}")
-        
+
         attempts = 3
         while attempts > 0:
             user_answer = input("Your answer: ").strip()
@@ -98,20 +109,23 @@ def main():
                 print(f"HINT: {hint}")
             else:
                 try:
-                    user_answer = float(user_answer)  # Convert to float for numeric puzzles
+                    # Convert to float for numeric puzzles
+                    user_answer = float(user_answer)
                     if user_answer == solution:
                         print("Congratulations! Your answer is correct.")
                         break
                     else:
                         attempts -= 1
                         if attempts > 0:
-                            print(f"Sorry, that's incorrect. You have {attempts} {'attempts' if attempts > 1 else 'attempt'} remaining.")
+                            print(
+                                f"Sorry, that's incorrect. You have {attempts} {'attempts' if attempts > 1 else 'attempt'} remaining.")
                         else:
                             print(f"Sorry, the correct answer is: {solution}")
                 except ValueError:
                     print("Invalid input. Please enter a numeric answer.")
     except ValueError as e:
         print(e)
+
 
 if __name__ == "__main__":
     main()
