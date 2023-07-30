@@ -18,9 +18,11 @@ difficulty_levels = {
     "hard": ["num1 = 10\nnum2 = 5\nprint(num1 * num2)", "def fibonacci(n):\n    if n <= 0:\n        return 'Invalid input'\n    elif n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\nprint(fibonacci(6))"]
 }
 
+
 def get_random_code_snippet(difficulty):
     """Return a random Python code snippet based on the selected difficulty."""
     return random.choice(difficulty_levels[difficulty])
+
 
 def main():
     print("Welcome to the Coding Language Learning Game!")
@@ -64,6 +66,7 @@ def main():
             break
 
     print(f"Your final score: {score}")
+
 
 if __name__ == "__main__":
     main()
