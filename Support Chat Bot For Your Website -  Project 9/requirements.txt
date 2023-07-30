@@ -1,0 +1,5 @@
+langchain
+pinecone-client
+openai
+tiktoken
+nest_asyncio
