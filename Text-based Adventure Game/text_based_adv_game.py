@@ -1,8 +1,10 @@
 import time
 
+
 def print_delay(text, delay=1):
     print(text)
     time.sleep(delay)
+
 
 def intro():
     print_delay("You wake up in a dark, mysterious room.")
@@ -10,11 +12,13 @@ def intro():
     print_delay("As you look around, you see two doors in front of you.")
     print_delay("One door is red, and the other door is blue.")
 
+
 def choose_door():
     door = ""
     while door != "red" and door != "blue":
         door = input("Which door do you choose? (red/blue): ").lower()
     return door
+
 
 def red_door_scenario():
     print_delay("You open the red door and find yourself in a fiery cave.")
@@ -41,6 +45,7 @@ def red_door_scenario():
         print_delay("Invalid choice. Please enter 1 or 2.")
         red_door_scenario()
 
+
 def blue_door_scenario():
     print_delay("You open the blue door and find yourself in a peaceful garden.")
     print_delay("There's a friendly fairy sitting on a bench.")
@@ -61,11 +66,13 @@ def blue_door_scenario():
         print_delay("You politely decline the potion.")
         print_delay("The fairy understands and smiles at you.")
         print_delay("You feel a sense of peace in the garden.")
-        print_delay("You've chosen a different path, but it's still a happy ending.")
+        print_delay(
+            "You've chosen a different path, but it's still a happy ending.")
         print_delay("Congratulations! You win!")
     else:
         print_delay("Invalid choice. Please enter 1 or 2.")
         blue_door_scenario()
+
 
 def secret_room_scenario():
     print_delay("You find a hidden passage behind the bookshelf.")
@@ -78,18 +85,21 @@ def secret_room_scenario():
     choice = input("Enter 1 or 2: ")
 
     if choice == "1":
-        print_delay("You take the amulet, and it starts to shine even brighter.")
+        print_delay(
+            "You take the amulet, and it starts to shine even brighter.")
         print_delay("Suddenly, you feel a surge of power flowing through you.")
         print_delay("You've unlocked hidden abilities!")
         print_delay("Congratulations! You win!")
     elif choice == "2":
         print_delay("You decide not to touch anything and leave the room.")
         print_delay("As you exit the secret room, you feel a sense of relief.")
-        print_delay("You've chosen a different path, but it's still a happy ending.")
+        print_delay(
+            "You've chosen a different path, but it's still a happy ending.")
         print_delay("Congratulations! You win!")
     else:
         print_delay("Invalid choice. Please enter 1 or 2.")
         secret_room_scenario()
+
 
 def play_game():
     intro()
@@ -100,14 +110,17 @@ def play_game():
     elif chosen_door == "blue":
         blue_door_scenario()
 
-    print_delay("You continue exploring and find a hidden door behind a bookshelf.")
+    print_delay(
+        "You continue exploring and find a hidden door behind a bookshelf.")
     print_delay("Do you want to open the door?")
     hidden_door_choice = input("Enter 'yes' or 'no': ").lower()
 
     if hidden_door_choice == "yes":
         secret_room_scenario()
     else:
-        print_delay("You decide not to open the hidden door and continue your adventure.")
+        print_delay(
+            "You decide not to open the hidden door and continue your adventure.")
+
 
 if __name__ == "__main__":
     play_game()
