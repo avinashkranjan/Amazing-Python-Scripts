@@ -14,8 +14,10 @@ inspirational_quotes = [
     "The only thing standing between you and your goal is the story you keep telling yourself. - Jordan Belfort"
 ]
 
+
 def generate_random_quote():
     return random.choice(inspirational_quotes)
+
 
 if __name__ == "__main__":
     print("Welcome to the Random Inspirational Quote Generator!")
