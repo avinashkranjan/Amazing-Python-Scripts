@@ -1,0 +1,7 @@
+beautifulsoup4==4.9.1
+bs4==0.0.1
+lxml==4.9.1
+parse==1.18.0
+pyquery==1.4.1
+requests==2.31.0
+requests-html==0.10.0
