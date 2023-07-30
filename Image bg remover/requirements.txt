@@ -1,0 +1,4 @@
+matplotlib
+torch
+torchaudio
+torchvision
