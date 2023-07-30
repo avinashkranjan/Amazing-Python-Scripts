@@ -1,6 +1,7 @@
 
 import random
 
+
 def play_game():
     print("Welcome to the Number Guessing Game!")
     print("Think of a number between 1 and 100, and I will try to guess it.")
@@ -28,5 +29,6 @@ def play_game():
             guess_count += 1
         else:
             print("Invalid input. Please try again.")
+
 
 play_game()
