@@ -1,5 +1,6 @@
 import requests
 
+
 def get_linkedin_posts(access_token):
     url = 'https://api.linkedin.com/v2/shares?q=owners&owners=urn:li:person:YOUR_USER_ID&count=10'
     headers = {'Authorization': f'Bearer {access_token}'}
@@ -13,7 +14,9 @@ def get_linkedin_posts(access_token):
             post_text = post.get('text', '')
             print(post_text)
     else:
-        print(f"Error: {response.status_code} - {data.get('message', 'Unknown error')}")
+        print(
+            f"Error: {response.status_code} - {data.get('message', 'Unknown error')}")
+
 
 if __name__ == "__main__":
     # Replace YOUR_ACCESS_TOKEN and YOUR_USER_ID with appropriate values
