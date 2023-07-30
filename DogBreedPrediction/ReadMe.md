@@ -8,7 +8,16 @@ Steps:
 1. cd DogBreedPrediction
 2. streamlit run app.py
 
-Note: To run the collab notebook, please add you kaggle API , kaggle.json file.
+Note: To run the collab notebook, please upload your kaggle API , kaggle.json file.
+
+Requirements(Ignore if installed):
+1. pip install Keras
+2. pip install opencv-python
+3.pip install numpy
+4.pip install streamlit
+5.pip install tensorflow
+
+
 
 frontend:
 
