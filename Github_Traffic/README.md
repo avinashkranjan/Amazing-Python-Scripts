@@ -1,3 +1,0 @@
-GitHub does not have an official API endpoint to retrieve traffic data directly. However, you can use the requests library in Python to send HTTP requests to the GitHub website and parse the HTML content to extract traffic data from the repository page.
-
-Please note that web scraping without proper authorization might violate GitHub's terms of service. Ensure you comply with their policies and consider using GitHub's official API if available for your use case.
