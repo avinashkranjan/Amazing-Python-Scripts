@@ -1,0 +1,5 @@
+beautifulsoup4==4.11.1
+demoji==1.1.0
+pyTelegramBotAPI==4.12.0
+pyTelegramBotAPI==4.12.0
+Requests==2.31.0
