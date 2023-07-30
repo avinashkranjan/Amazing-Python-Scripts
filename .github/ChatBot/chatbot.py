@@ -1,6 +1,7 @@
 import nltk
 from nltk.chat.util import Chat, reflections
-from chat_patterns import patterns  # Import patterns from the chat_patterns.py file
+# Import patterns from the chat_patterns.py file
+from chat_patterns import patterns
 
 chatbot = Chat(patterns, reflections)
 
@@ -14,6 +15,7 @@ def start_chat():
             break
         response = chatbot.respond(user_input)
         print("Chatbot:", response)
+
 
 if __name__ == "__main__":
     nltk.download('punkt')
