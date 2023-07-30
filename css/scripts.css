@@ -208,8 +208,8 @@ a.nav-link {
   margin-top: 40px; /* Adjust the margin as needed */
 }
 .disabled{
-  fill:grey;
-  cursor: not-allowed;
+  fill:grey !important ;
+  cursor: not-allowed !important;
 }
 
 
