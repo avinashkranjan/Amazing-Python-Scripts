@@ -8,16 +8,21 @@ from selenium.webdriver.chrome.options import Options
 
 # Configure Chrome options
 chrome_options = Options()
-chrome_options.add_experimental_option("prefs", {"profile.default_content_setting_values.notifications": 2})
+chrome_options.add_experimental_option(
+    "prefs", {"profile.default_content_setting_values.notifications": 2})
 
 # Load environmental variables from .env file
 load_dotenv(dotenv_path=Path(".", ".env"))
 
 # Read credentials from environmental variables
+
+
 def read_creds():
     return {"username": os.getenv("username"), "password": os.getenv("password")}
 
 # Function for accepting requests
+
+
 def accept_requests(browser):
     browser.get("https://www.facebook.com/friends")
     element_id = browser.find_element_by_css_selector("input#email")
@@ -27,7 +32,8 @@ def accept_requests(browser):
     element_id.submit()
 
     while True:
-        confirm_btns = browser.find_elements_by_css_selector("div[aria-label='Confirm']")
+        confirm_btns = browser.find_elements_by_css_selector(
+            "div[aria-label='Confirm']")
         if not confirm_btns:
             break
 
@@ -44,6 +50,7 @@ def accept_requests(browser):
         except:
             pass
 
+
 def main():
     # Initialize Chrome browser with options
     browser = webdriver.Chrome(options=chrome_options)
@@ -55,6 +62,7 @@ def main():
 
     print("All Request Accepted")
     browser.quit()
+
 
 if _name_ == "_main_":
     main()
