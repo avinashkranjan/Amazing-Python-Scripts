@@ -77,4 +77,3 @@ query = "What is a house?"
 print(new_prompt_template.format(userInput=query))
 
 print(llm(new_prompt_template.format(userInput=query)))
-
