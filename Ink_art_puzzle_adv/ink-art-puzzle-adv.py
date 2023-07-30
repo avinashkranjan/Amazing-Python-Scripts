@@ -18,6 +18,8 @@ player_x, player_y = WIDTH // 2, HEIGHT // 2
 player_speed = 5
 
 # Main game loop
+
+
 def game_loop():
     running = True
     while running:
@@ -38,13 +40,15 @@ def game_loop():
 
         # Draw the player and background
         screen.fill(WHITE)
-        pygame.draw.rect(screen, BLACK, (player_x, player_y, 50, 50))  # Player rectangle
+        # Player rectangle
+        pygame.draw.rect(screen, BLACK, (player_x, player_y, 50, 50))
 
         # Draw ink art illustrations (replace this with your own images)
         # Example: ink_art_image = pygame.image.load("ink_art_image.png")
         # screen.blit(ink_art_image, (x, y))
 
         pygame.display.update()
+
 
 # Start the game loop
 game_loop()
