@@ -24,4 +24,5 @@ frontend:
 https://github.com/avinashkranjan/Amazing-Python-Scripts/assets/74114936/fc2b397a-05bd-42c1-94a6-384917fe2da5
 
 backend(cnn):
+
 ![image](https://github.com/avinashkranjan/Amazing-Python-Scripts/assets/74114936/61d6a128-3965-40c5-abb7-194b655f9c30)
