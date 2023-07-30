@@ -12,7 +12,8 @@ def load_and_preprocess_image(image_path):
     preprocess = transforms.Compose([
         transforms.Resize((512, 512)),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[
+                             0.229, 0.224, 0.225]),
     ])
     input_tensor = preprocess(image).unsqueeze(0)
     return input_tensor
@@ -38,11 +39,14 @@ def remove_background(image_path, save_path, alpha_foreground=255, alpha_backgro
     mask_pil = mask_pil.resize((image.size[0], image.size[1]))
 
     # Apply the mask to the input image
-    image_with_alpha = Image.alpha_composite(Image.new('RGBA', image.size, (255, 255, 255, alpha_background)), image)
-    image_with_alpha.putalpha(mask_pil.point(lambda p: alpha_foreground if p else 0))
+    image_with_alpha = Image.alpha_composite(
+        Image.new('RGBA', image.size, (255, 255, 255, alpha_background)), image)
+    image_with_alpha.putalpha(mask_pil.point(
+        lambda p: alpha_foreground if p else 0))
 
     # Save the resulting image with transparent background
     image_with_alpha.save(save_path, format='PNG')
+
 
 if __name__ == "__main__":
     # Replace 'input_folder' with the path to the folder containing your input images
@@ -54,5 +58,6 @@ if __name__ == "__main__":
     for filename in os.listdir(input_folder):
         if filename.endswith(".jpg") or filename.endswith(".png") or filename.endswith(".avif"):
             image_path = os.path.join(input_folder, filename)
-            save_path = os.path.join(output_folder, filename.replace(".jpg", ".png").replace(".png", ".png"))
+            save_path = os.path.join(output_folder, filename.replace(
+                ".jpg", ".png").replace(".png", ".png"))
             remove_background(image_path, save_path)
