@@ -8,7 +8,7 @@ In the backup_files function, you need to specify the source directory and desti
 - Replace /path/to/source_directory with the path to the directory containing the files you want to back up.
 - Replace /path/to/destination_directory with the path to the directory where the backup files should be stored.
 
-# Requirments
+# Requirements
 
 - os
 - shutil
