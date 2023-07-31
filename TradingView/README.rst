@@ -1,9 +1,9 @@
 
 =======
-fixtool
+Trading View
 =======
 
-|  |Build Status|  |Docs|  |Code Health|  |Coverage|  |PyPI|  |Python|
+| |PyPI|  |Python|
 
 Introduction
 ============
