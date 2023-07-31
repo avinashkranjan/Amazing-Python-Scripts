@@ -1,7 +1,8 @@
-# **ZABE MUSIC PLAYER**
-## Made in Python
-It's a music player for console written in Python.
+# **Console Music Player**
+
+## All right reserved by py3
+Music player for console written in Python.
 
 ## Instructions
 
- - You must put your songs in the "songs" folder.
+ - Don't forget to put the song in the songs folder because the .py code fetching the data and then playing the song.
