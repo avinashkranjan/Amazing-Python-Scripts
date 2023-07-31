@@ -1,0 +1,10 @@
+[Unit]
+Description=CEC input mappings
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -lc cecmap
+ExecReload=/bin/kill -USR1 $MAINPID
+
+[Install]
+WantedBy=default.target

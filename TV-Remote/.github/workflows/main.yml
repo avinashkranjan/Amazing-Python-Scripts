@@ -1,0 +1,45 @@
+name: Tests
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '12  8  *  *  1'
+
+jobs:
+  build:
+    name: build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python:
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.10"
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+
+      - run: python -m pip install -U pip
+      - run: python -m pip install setuptools wheel twine flake8
+
+      - run: python setup.py sdist bdist_wheel
+
+      - run: twine check dist/*
+      - run: flake8
+
+      - name: Publish PyPI package
+        if: startsWith(github.ref, 'refs/tags/v') &&
+            matrix.os == 'ubuntu-latest' &&
+            matrix.python == '3.9'
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: twine upload dist/*
