@@ -1,5 +1,3 @@
-import cec
-
 import argparse
 import os
 import signal
