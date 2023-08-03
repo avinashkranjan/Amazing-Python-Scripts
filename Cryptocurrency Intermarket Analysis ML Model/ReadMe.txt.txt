@@ -1,0 +1,5 @@
+Description:
+
+This project employs intermarket analysis to study the relationship between Bitcoin and NASDAQ markets using technical indicators like Relative Strength Index (RSI). It uses the RIPPER algorithm for rule-based classification to predict Bitcoin price direction.
+
+In this project, historical price data for Bitcoin (BTC-USD), Ethereum (ETH-USD), and NASDAQ (^NDX) is collected using the yfinance library. Technical indicators such as Relative Strength Index (RSI), Williams %R, and Moving Averages are calculated using the pandas_ta library for feature engineering. A rule-based classifier (RIPPER) from the wittgenstein library is applied to predict Bitcoin price direction. Additionally, Ethereum price forecasting is done using the ARIMA (AutoRegressive Integrated Moving Average) time-series model, with evaluation based on Root Mean Squared Error (RMSE). Visualizations of Williams %R and Ethereum true vs. predicted prices are produced.
