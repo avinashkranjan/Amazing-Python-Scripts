@@ -1,21 +1,64 @@
-conversion_table = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4',
-                    5: '5', 6: '6', 7: '7',
-                    8: '8', 9: '9', 10: 'A', 11: 'B', 12: 'C',
-                    13: 'D', 14: 'E', 15: 'F'}
+import tkinter as tk
 
+def hex_add():
+    try:
+        num1 = int(entry1.get(), 16)
+        num2 = int(entry2.get(), 16)
+        result = hex(num1 + num2)
+        output.config(text="Result: " + result.upper())
+    except ValueError:
+        output.config(text="Invalid Input")
 
-def decimalToHexadecimal(a):
-    b = ''
-    while (a > 0):
-        remainder = a % 16
-        b = conversion_table[remainder] + b
-        a = a // 16
+def hex_subtract():
+    try:
+        num1 = int(entry1.get(), 16)
+        num2 = int(entry2.get(), 16)
+        result = hex(num1 - num2)
+        output.config(text="Result: " + result.upper())
+    except ValueError:
+        output.config(text="Invalid Input")
 
-    return b
+def hex_multiply():
+    try:
+        num1 = int(entry1.get(), 16)
+        num2 = int(entry2.get(), 16)
+        result = hex(num1 * num2)
+        output.config(text="Result: " + result.upper())
+    except ValueError:
+        output.config(text="Invalid Input")
 
+def hex_divide():
+    try:
+        num1 = int(entry1.get(), 16)
+        num2 = int(entry2.get(), 16)
+        result = hex(num1 // num2)
+        output.config(text="Result: " + result.upper())
+    except (ValueError, ZeroDivisionError):
+        output.config(text="Invalid Input")
 
-decimal = int(input("Enter decimal value: "))
-hexadecimal = decimalToHexadecimal(decimal)
+# Main tkinter window
+root = tk.Tk()
+root.title("Hex Calculator")
 
-print("Decimal Value:", decimal)
-print("Hexadecimal Value:", hexadecimal)
+# Entry fields
+entry1 = tk.Entry(root, width=15)
+entry1.grid(row=0, column=0, padx=10, pady=5)
+entry2 = tk.Entry(root, width=15)
+entry2.grid(row=0, column=1, padx=10, pady=5)
+
+# Buttons
+add_button = tk.Button(root, text="Add", command=hex_add)
+add_button.grid(row=1, column=0, padx=10, pady=5)
+subtract_button = tk.Button(root, text="Subtract", command=hex_subtract)
+subtract_button.grid(row=1, column=1, padx=10, pady=5)
+multiply_button = tk.Button(root, text="Multiply", command=hex_multiply)
+multiply_button.grid(row=2, column=0, padx=10, pady=5)
+divide_button = tk.Button(root, text="Divide", command=hex_divide)
+divide_button.grid(row=2, column=1, padx=10, pady=5)
+
+# Output Label
+output = tk.Label(root, text="Result: ")
+output.grid(row=3, columnspan=2)
+
+root.mainloop()
+
