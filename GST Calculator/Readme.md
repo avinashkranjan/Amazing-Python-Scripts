@@ -4,7 +4,9 @@
 
 ## GST Calculator Functionalities : 🚀
 
-- This is a GST Calculator where the user enters the original price and net price and the script returns the GST percentage.
+- This is a GST Calculator where the user enters the original price and net price
+- And the script returns the GST percentage with SGST and CGST percent value and the Total GST Value.
+- This code uses Tkinter as a User Interface and python as its main language.
 
 ## GST Calculator Instructions: 👨🏻‍💻
 
@@ -22,7 +24,11 @@
 
 ### Step 4:
 
-    Sit back and Relax. Let the Script do the Job. ☕
+    Let the Script do the Job and after that the tkinter UI will automatically be opened. ☕
+
+### Step 5:
+
+    Now, enter the value of the total Value with GST and MRP of the product. And select the Calculate GST button.
 
 ## Requirements
 
@@ -38,3 +44,7 @@
 ## Author
    
 [Amit Kumar Mishra](https://github.com/Amit366)
+
+## Editor (Improvements) 
+
+[Tanuj Bordikar](https://github.com/tanujbordikar)
