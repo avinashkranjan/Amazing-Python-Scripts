@@ -45,6 +45,6 @@
    
 [Amit Kumar Mishra](https://github.com/Amit366)
 
-## Editor (Improvements) 
+## Editor (Improvements adder) 
 
 [Tanuj Bordikar](https://github.com/tanujbordikar)
