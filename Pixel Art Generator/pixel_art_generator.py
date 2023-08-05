@@ -2,6 +2,10 @@ import turtle
 import tkinter as tk
 from tkinter import colorchooser, simpledialog, messagebox
 
+turtle.setup(width=800, height=600) 
+turtle.speed(0)                    
+turtle.title("Pixel Art Generator")  
+
 def draw_pixel(x, y, color, size):
     turtle.penup()
     turtle.goto(x - size // 2, y - size // 2)
