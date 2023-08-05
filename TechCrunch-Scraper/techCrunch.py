@@ -15,7 +15,7 @@ class TechCrunch:
     """
 
     def getArticles(self, category):
-        self.category = category
+
         """
         Class - `TechCrunch`
         Example:
@@ -34,7 +34,7 @@ class TechCrunch:
         }
         """
         url = (
-            "https://techcrunch.com/category/" + self.category.replace(" ", "-").lower()
+            "https://techcrunch.com/category/" + category.replace(" ", "-").lower()
         )
         try:
             res = requests.get(url)
@@ -100,7 +100,7 @@ class TechCrunch:
             return ejson
 
     def search(self, topic):
-        self.topic = topic
+
         """
         Class - `TechCrunch`
         Example:
@@ -118,7 +118,7 @@ class TechCrunch:
             "link": Link to the article
         }
         """
-        url = "https://search.techcrunch.com/search?p=" + self.topic + "&fr=techcrunch"
+        url = "https://search.techcrunch.com/search?p=" + topic + "&fr=techcrunch"
         try:
             res = requests.get(url)
             soup = BeautifulSoup(res.text, "html.parser")
