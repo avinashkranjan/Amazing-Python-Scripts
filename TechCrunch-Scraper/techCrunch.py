@@ -14,7 +14,7 @@ class TechCrunch:
     1. ``.getArticles() | Response - Articles with title, descriptions, images, date and link.
     """
 
-    def getArticles(self, category):
+    def get_articles(self, category):
 
         """
         Class - `TechCrunch`
