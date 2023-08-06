@@ -3,3 +3,9 @@ The project uses TensorFlow and Keras libraries to create a Convolutional Neural
 
 Dataset:
 https://drive.google.com/file/d/12I9KXycZQb3OFnb4UySFc8iHscdCZ0yJ/view?usp=sharing
+
+Model Summary:
+![Screenshot 2023-08-07 015812](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/671a2fd7-29c3-4a00-aca8-a4ae659f2de6)
+
+Output:
+![Screenshot 2023-08-07 015148](https://github.com/smty2018/Amazing-Python-Scripts/assets/74114936/e5a68322-91e9-46e3-a497-fe6259d70325)
