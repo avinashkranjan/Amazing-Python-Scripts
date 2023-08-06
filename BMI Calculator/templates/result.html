@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator - Result</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <p>Your BMI is: {{ bmi }}</p>
+        <p>Interpretation: {{ interpretation }}</p>
+        <p>
+            BMI Categories:
+            <ul>
+                <li>Underweight: less than 18.5</li>
+                <li>Normal weight: 18.5 - 24.9</li>
+                <li>Overweight: 25 - 29.9</li>
+                <li>Obese: 30 or greater</li>
+            </ul>
+        </p>
+        <a href="/">Calculate Again</a>
+    </div>
+</body>
+</html>
