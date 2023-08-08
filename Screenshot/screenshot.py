@@ -3,6 +3,7 @@ import pyautogui
 import tkinter as tk
 from tkinter import ttk
 
+
 def take_screenshot(delay):
     name = int(round(time.time() * 1000))
     name = '{}.png'.format(name)  # To name the file
@@ -10,9 +11,11 @@ def take_screenshot(delay):
     img = pyautogui.screenshot(name)
     img.show()  # To Show the Screenshot After Being Taken
 
+
 def on_take_screenshot():
     delay = float(delay_entry.get())
     take_screenshot(delay)
+
 
 # Create the tkinter GUI
 root = tk.Tk()
@@ -27,7 +30,8 @@ delay_entry.pack(pady=5)
 delay_entry.insert(0, "5.0")  # Default value
 
 # Button to trigger the screenshot capture
-screenshot_button = ttk.Button(root, text="Take Screenshot", command=on_take_screenshot)
+screenshot_button = ttk.Button(
+    root, text="Take Screenshot", command=on_take_screenshot)
 screenshot_button.pack(pady=20)
 
 root.mainloop()
