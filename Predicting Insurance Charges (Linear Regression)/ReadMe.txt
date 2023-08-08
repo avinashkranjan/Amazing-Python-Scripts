@@ -1,0 +1,3 @@
+Predicting Insurance Charges using Linear Regression and Exploratory Data Analysis
+
+This project aims to predict insurance charges based on a range of factors through the application of linear regression. The dataset was subjected to thorough preprocessing, visualization, and feature scaling. By developing a predictive model, the study sought to uncover insights into how various attributes such as age, BMI, gender, smoking habits, and region contribute to the variability in insurance charges.
