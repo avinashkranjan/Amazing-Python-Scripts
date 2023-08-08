@@ -15,7 +15,6 @@ class TechCrunch:
     """
 
     def get_articles(self, category):
-
         """
         Class - `TechCrunch`
         Example:
@@ -34,7 +33,8 @@ class TechCrunch:
         }
         """
         url = (
-            "https://techcrunch.com/category/" + category.replace(" ", "-").lower()
+            "https://techcrunch.com/category/" +
+            category.replace(" ", "-").lower()
         )
         try:
             res = requests.get(url)
@@ -78,7 +78,8 @@ class TechCrunch:
                     .encode("ascii", "ignore")
                     .decode()
                 )
-                links = n.find_all("a", class_="post-block__title__link", href=True)
+                links = n.find_all(
+                    "a", class_="post-block__title__link", href=True)
                 link = links[0]["href"]
                 articles_data["articles"].append(
                     {
@@ -100,7 +101,6 @@ class TechCrunch:
             return ejson
 
     def search(self, topic):
-
         """
         Class - `TechCrunch`
         Example:
@@ -125,11 +125,13 @@ class TechCrunch:
 
             articles_data = {"articles": []}
 
-            articles = soup.find_all("li", class_="ov-a mt-0 pt-26 pb-26 bt-dbdbdb")
+            articles = soup.find_all(
+                "li", class_="ov-a mt-0 pt-26 pb-26 bt-dbdbdb")
             for i in articles:
                 name = i.find("a", class_="fz-20 lh-22 fw-b").getText()
                 desc = i.find("p", class_="fz-14 lh-20 c-777").getText()
-                img = i.find("img", class_="s-img mr-10 s-img-errchk", src=True)
+                img = i.find(
+                    "img", class_="s-img mr-10 s-img-errchk", src=True)
                 image = img["src"]
                 author = i.find("span", class_="mr-15").getText()
                 date = i.find("span", class_="pl-15 bl-1-666").getText()
