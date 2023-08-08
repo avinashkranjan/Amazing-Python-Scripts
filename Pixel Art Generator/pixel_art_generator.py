@@ -2,15 +2,17 @@ import turtle
 import tkinter as tk
 from tkinter import colorchooser, simpledialog, messagebox
 
-turtle.setup(width=800, height=600) 
-turtle.speed(0)                    
-turtle.title("Pixel Art Generator")  
+turtle.setup(width=800, height=600)
+turtle.speed(0)
+turtle.title("Pixel Art Generator")
+
 
 def draw_pixel(x, y, color, size):
     turtle.penup()
     turtle.goto(x - size // 2, y - size // 2)
     turtle.pendown()
     turtle.dot(size, color)
+
 
 def draw_square(x, y, color, size, fill=False):
     turtle.penup()
@@ -25,6 +27,7 @@ def draw_square(x, y, color, size, fill=False):
     if fill:
         turtle.end_fill()
 
+
 def draw_circle(x, y, color, size, fill=False):
     turtle.penup()
     turtle.goto(x, y - size // 2)
@@ -35,6 +38,7 @@ def draw_circle(x, y, color, size, fill=False):
     turtle.circle(size // 2)
     if fill:
         turtle.end_fill()
+
 
 def draw_triangle(x, y, color, size, fill=False):
     turtle.penup()
@@ -48,6 +52,7 @@ def draw_triangle(x, y, color, size, fill=False):
         turtle.left(120)
     if fill:
         turtle.end_fill()
+
 
 def draw_diamond(x, y, color, size, fill=False):
     turtle.penup()
@@ -63,6 +68,7 @@ def draw_diamond(x, y, color, size, fill=False):
         turtle.left(135)
     if fill:
         turtle.end_fill()
+
 
 def draw_heart(x, y, color, size, fill=False):
     turtle.penup()
@@ -80,6 +86,7 @@ def draw_heart(x, y, color, size, fill=False):
     if fill:
         turtle.end_fill()
 
+
 def draw_polygon(x, y, color, size, sides, fill=False):
     turtle.penup()
     turtle.goto(x, y - size // 2)
@@ -94,6 +101,7 @@ def draw_polygon(x, y, color, size, sides, fill=False):
     if fill:
         turtle.end_fill()
 
+
 def draw_line(x, y, color, size, thickness):
     turtle.penup()
     turtle.goto(x - size // 2, y)
@@ -101,6 +109,7 @@ def draw_line(x, y, color, size, thickness):
     turtle.pensize(thickness)
     turtle.pencolor(color)
     turtle.forward(size)
+
 
 def draw_star(x, y, color, size, points, fill=False):
     turtle.penup()
@@ -115,6 +124,7 @@ def draw_star(x, y, color, size, points, fill=False):
     if fill:
         turtle.end_fill()
 
+
 def draw_spiral(x, y, color, size, loops):
     turtle.penup()
     turtle.goto(x, y - size // 2)
@@ -124,13 +134,16 @@ def draw_spiral(x, y, color, size, loops):
         turtle.forward(size / 20)
         turtle.right(10)
 
+
 def set_background_color():
     color = colorchooser.askcolor(title="Choose a background color")
     if color[1] is not None:
         turtle.bgcolor(color[1])
 
+
 def set_pen_style():
-    pen_style = simpledialog.askstring("Pen Style", "Enter the pen style (solid/dashed/dotted):")
+    pen_style = simpledialog.askstring(
+        "Pen Style", "Enter the pen style (solid/dashed/dotted):")
     if pen_style in ['solid', 'dashed', 'dotted']:
         turtle.pensize(1)
         if pen_style == 'dashed':
@@ -140,6 +153,7 @@ def set_pen_style():
             turtle.pendown()
             turtle.pendown(1, 1)
 
+
 def get_color():
     color = colorchooser.askcolor(title="Choose a color")
     if color[1] is not None:
@@ -147,17 +161,24 @@ def get_color():
     else:
         return None
 
+
 def get_size():
-    size = simpledialog.askinteger("Size", "Enter the size (5-50):", minvalue=5, maxvalue=50)
+    size = simpledialog.askinteger(
+        "Size", "Enter the size (5-50):", minvalue=5, maxvalue=50)
     return size
 
+
 def get_thickness():
-    thickness = simpledialog.askinteger("Thickness", "Enter the thickness (1-10):", minvalue=1, maxvalue=10)
+    thickness = simpledialog.askinteger(
+        "Thickness", "Enter the thickness (1-10):", minvalue=1, maxvalue=10)
     return thickness
 
+
 def get_sides():
-    sides = simpledialog.askinteger("Sides", "Enter the number of sides (3-10):", minvalue=3, maxvalue=10)
+    sides = simpledialog.askinteger(
+        "Sides", "Enter the number of sides (3-10):", minvalue=3, maxvalue=10)
     return sides
+
 
 def main():
     turtle.speed(0)
@@ -168,7 +189,8 @@ def main():
     canvas.bgcolor("white")
 
     while True:
-        pattern = tk.simpledialog.askstring("Pattern", "Choose a pattern (square/circle/triangle/diamond/heart/polygon/line/star/spiral/clear/save/background/pen_style/exit):")
+        pattern = tk.simpledialog.askstring(
+            "Pattern", "Choose a pattern (square/circle/triangle/diamond/heart/polygon/line/star/spiral/clear/save/background/pen_style/exit):")
         if pattern == 'exit':
             break
 
@@ -177,11 +199,13 @@ def main():
             canvas.update()
             continue
         elif pattern == 'save':
-            file_path = tk.filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png")])
+            file_path = tk.filedialog.asksaveasfilename(
+                defaultextension=".png", filetypes=[("PNG files", "*.png")])
             if file_path:
                 canvas.getcanvas().postscript(file=file_path + ".eps")
                 canvas.update()
-                messagebox.showinfo("Saved", f"Pixel art saved as {file_path}.png")
+                messagebox.showinfo(
+                    "Saved", f"Pixel art saved as {file_path}.png")
             continue
         elif pattern == 'background':
             set_background_color()
@@ -224,16 +248,19 @@ def main():
             if not thickness:
                 break
             draw_func = draw_line
-            canvas.onclick(lambda x, y: draw_func(x, y, color, size, thickness))
+            canvas.onclick(lambda x, y: draw_func(
+                x, y, color, size, thickness))
             continue
         elif pattern == 'star':
-            points = simpledialog.askinteger("Points", "Enter the number of points (5-20):", minvalue=5, maxvalue=20)
+            points = simpledialog.askinteger(
+                "Points", "Enter the number of points (5-20):", minvalue=5, maxvalue=20)
             if not points:
                 break
             fill = messagebox.askyesno("Fill", "Fill the star with color?")
             draw_func = draw_star
         elif pattern == 'spiral':
-            loops = simpledialog.askinteger("Loops", "Enter the number of loops (1-20):", minvalue=1, maxvalue=20)
+            loops = simpledialog.askinteger(
+                "Loops", "Enter the number of loops (1-20):", minvalue=1, maxvalue=20)
             if not loops:
                 break
             draw_func = draw_spiral
@@ -241,9 +268,11 @@ def main():
         if pattern != 'line' and pattern != 'star' and pattern != 'spiral':
             canvas.onclick(lambda x, y: draw_func(x, y, color, size, fill))
         else:
-            canvas.onclick(lambda x, y: draw_func(x, y, color, size, points if pattern == 'star' else loops))
+            canvas.onclick(lambda x, y: draw_func(
+                x, y, color, size, points if pattern == 'star' else loops))
 
     turtle.done()
+
 
 if __name__ == "__main__":
     main()
