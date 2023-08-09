@@ -1,5 +1,6 @@
 import PyPDF2
 
+
 def merge_pdfs(output_filename, input_files):
     pdf_merger = PyPDF2.PdfMerger()
 
@@ -15,6 +16,7 @@ def merge_pdfs(output_filename, input_files):
 
     print(f"PDFs merged successfully! Output file: {output_filename}")
 
+
 def main():
     print("PDF Merge Tool")
     print("Please enter the names of the two PDF files to merge:")
@@ -27,6 +29,7 @@ def main():
     input_files = [pdf1, pdf2]
 
     merge_pdfs(output_filename, input_files)
+
 
 if __name__ == "__main__":
     main()
