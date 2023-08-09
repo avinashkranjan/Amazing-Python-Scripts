@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import webbrowser
 
+
 def takeCommand():
     recognizer = sr.Recognizer()
 
@@ -20,16 +21,19 @@ def takeCommand():
         print(f"\nError occurred while requesting results: {e}\n")
         return None
 
+
 def openWebsite(website):
     website = website.replace("Open", "")
     website = website.replace(" ", "")
     url = f"https://www.{website}.com"
     webbrowser.open(url)
 
+
 def displayInstructions():
     print('''\n\n1. Say "Open ${Website Name}" to open the Website.
 2. Say "exit" to close the program.\n
 ''')
+
 
 if __name__ == "__main__":
     displayInstructions()
