@@ -89,7 +89,8 @@ while running:
         # Check for collisions with celestial bodies
         if distance < body["mass"] + spaceship_radius:
             collision_sound.play()
-            pygame.draw.circle(screen, RED, body["pos"], int(body["mass"] / 10))
+            pygame.draw.circle(
+                screen, RED, body["pos"], int(body["mass"] / 10))
             pygame.draw.circle(screen, YELLOW, spaceship_pos, spaceship_radius)
             pygame.display.flip()
             pygame.time.delay(2000)
@@ -119,7 +120,8 @@ while running:
     # Check for level completion
     if spaceship_pos[0] > WIDTH or spaceship_pos[0] < 0 or \
             spaceship_pos[1] > HEIGHT or spaceship_pos[1] < 0:
-        score += fuel + (level * 100)  # Increase score based on remaining fuel and level
+        # Increase score based on remaining fuel and level
+        score += fuel + (level * 100)
         level += 1
         fuel = 100
         spaceship_pos = [WIDTH // 2, HEIGHT // 2]
