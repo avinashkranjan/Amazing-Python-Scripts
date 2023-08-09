@@ -588,12 +588,13 @@ conversations = [
     },
 ]
 
+
 def vocabulary_quiz():
     print("AI Language Learning Assistant: Vocabulary Quiz")
     score = 0
     quiz_items = list(vocabulary.keys())
     random.shuffle(quiz_items)
-    
+
     for word in quiz_items:
         user_answer = input(f"What does '{word}' mean? ")
         if user_answer.strip().lower() == vocabulary[word].lower():
@@ -601,13 +602,14 @@ def vocabulary_quiz():
             score += 1
         else:
             print(f"Wrong. The correct answer is: {vocabulary[word]}")
-    
+
     print(f"Quiz completed! Your score: {score}/{len(vocabulary)}")
+
 
 def grammar_exercise_quiz():
     print("AI Language Learning Assistant: Grammar Exercise")
     score = 0
-    
+
     for item in grammar_exercise:
         user_answer = input(item['question'] + " ")
         if user_answer.strip().lower() == item['answer'].lower():
@@ -615,13 +617,15 @@ def grammar_exercise_quiz():
             score += 1
         else:
             print(f"Wrong. The correct answer is: {item['answer']}")
-    
-    print(f"Grammar exercise completed! Your score: {score}/{len(grammar_exercise)}")
+
+    print(
+        f"Grammar exercise completed! Your score: {score}/{len(grammar_exercise)}")
+
 
 def interactive_conversation_practice():
     print("AI Language Learning Assistant: Interactive Conversation Practice")
     print("Type 'exit' to end the conversation.")
-    
+
     while True:
         conversation = random.choice(conversations)
         user_input = input("ChatBot: " + conversation['question'] + " ")
@@ -629,21 +633,22 @@ def interactive_conversation_practice():
             break
         print("ChatBot:", conversation['answer'])
 
+
 def detect_pronunciation_errors():
     print("AI Language Learning Assistant: Pronunciation Errors Detection")
-    
+
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         print("Speak a sentence for pronunciation evaluation:")
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
-    
+
     try:
         user_sentence = recognizer.recognize_google(audio)
-        
+
         # Compare user_sentence with a pre-defined correct sentence to detect errors.
         # For simplicity, let's assume a fixed correct sentence.
-        
+
         correct_sentence = "I love learning languages."
         if user_sentence.strip().lower() == correct_sentence.lower():
             print("Your pronunciation is great!")
@@ -653,6 +658,7 @@ def detect_pronunciation_errors():
         print("Sorry, I couldn't understand what you said.")
     except sr.RequestError:
         print("Sorry, there was an error processing the audio. Please try again.")
+
 
 vocabulary_quiz()
 grammar_exercise_quiz()
