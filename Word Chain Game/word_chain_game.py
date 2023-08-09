@@ -5,6 +5,8 @@ import time
 # Existing code (is_valid_word, is_valid_move, word_list)
 
 # Additional features
+
+
 def get_word_length_difficulty(difficulty):
     if difficulty == "Easy":
         return 3
@@ -15,8 +17,10 @@ def get_word_length_difficulty(difficulty):
     else:
         raise ValueError("Invalid difficulty level.")
 
+
 def get_random_letter():
     return random.choice(string.ascii_lowercase)
+
 
 def get_hint(prev_word):
     # Simple hint: Suggest a valid word with one letter change from prev_word
@@ -25,6 +29,7 @@ def get_hint(prev_word):
         if is_valid_word(new_word) and is_valid_move(prev_word, new_word):
             return new_word
     return None  # Return None if a hint can't be found
+
 
 def word_chain_game():
     # Existing code
@@ -104,14 +109,17 @@ def word_chain_game():
 
         # Check if player's word is too short for the difficulty level
         if len(new_word) < word_length_required:
-            print(f"Word should be at least {word_length_required} letters long for {difficulty} difficulty.")
+            print(
+                f"Word should be at least {word_length_required} letters long for {difficulty} difficulty.")
             print("You lose this round.")
             break
 
         # Check if the game should end
         if player_turn > 1 and not is_valid_move(chain[-2], chain[-1]):
-            print(f"Game over! {player_name} cannot find a valid word. {player_name} wins!")
+            print(
+                f"Game over! {player_name} cannot find a valid word. {player_name} wins!")
             break
+
 
 if __name__ == "__main__":
     word_chain_game()
