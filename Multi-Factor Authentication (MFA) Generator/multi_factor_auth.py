@@ -16,7 +16,7 @@ def save_secret(secret_key, filename):
     data = {'secret_key': secret_key}
     with open(filename, 'w') as file:
         json.dump(data, file)
-    print(f'Secret key saved to {filename}')
+    return f'Secret key saved to {filename}'
 
 def load_secret(filename):
     try:
@@ -46,7 +46,8 @@ def main():
     elif args.generate or args.verify:
         secret_key = input('Enter your secret key: ').strip()
         if args.save:
-            save_secret(secret_key, args.save)
+            save_result = save_secret(secret_key, args.save)
+            print(save_result)
     else:
         print('Please specify either --generate or --verify.')
         return
@@ -65,3 +66,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
