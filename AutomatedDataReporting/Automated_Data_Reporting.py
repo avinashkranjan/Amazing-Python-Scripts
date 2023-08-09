@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def generate_data_report(data_file_path, report_file_path):
     df = pd.read_csv(data_file_path)
 
@@ -18,6 +19,7 @@ def generate_data_report(data_file_path, report_file_path):
         report_file.write(str(column_max_values) + "\n\n")
         report_file.write("Column Minimum Values:\n")
         report_file.write(str(column_min_values))
+
 
 if __name__ == "__main__":
     data_file_path = "path/to/your/data.csv"
