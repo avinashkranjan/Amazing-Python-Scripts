@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 def hex_add():
     try:
         num1 = int(entry1.get(), 16)
@@ -8,6 +9,7 @@ def hex_add():
         output.config(text="Result: " + result.upper())
     except ValueError:
         output.config(text="Invalid Input")
+
 
 def hex_subtract():
     try:
@@ -18,6 +20,7 @@ def hex_subtract():
     except ValueError:
         output.config(text="Invalid Input")
 
+
 def hex_multiply():
     try:
         num1 = int(entry1.get(), 16)
@@ -27,6 +30,7 @@ def hex_multiply():
     except ValueError:
         output.config(text="Invalid Input")
 
+
 def hex_divide():
     try:
         num1 = int(entry1.get(), 16)
@@ -35,6 +39,7 @@ def hex_divide():
         output.config(text="Result: " + result.upper())
     except (ValueError, ZeroDivisionError):
         output.config(text="Invalid Input")
+
 
 # Main tkinter window
 root = tk.Tk()
@@ -61,4 +66,3 @@ output = tk.Label(root, text="Result: ")
 output.grid(row=3, columnspan=2)
 
 root.mainloop()
-

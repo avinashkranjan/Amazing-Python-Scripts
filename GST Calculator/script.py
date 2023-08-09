@@ -1,22 +1,25 @@
 from tkinter import *
 
 # Function for finding CGST, SGST, and Total GST rates
+
+
 def GST_Calc():
     cgst_percentField.delete(0, END)
     sgst_percentField.delete(0, END)
     total_gstField.delete(0, END)
-    
+
     org_cost = int(original_priceField.get())
     N_price = int(net_priceField.get())
     total_gst_rate = ((N_price - org_cost) * 100) / org_cost
     cgst_rate = total_gst_rate / 2
     sgst_rate = total_gst_rate / 2
-    
+
     cgst_percentField.insert(10, str(cgst_rate) + " % ")
     sgst_percentField.insert(10, str(sgst_rate) + " % ")
-    
+
     total_gst = (N_price - org_cost)
     total_gstField.insert(10, f"₹ {total_gst:.2f}")
+
 
 def clearAll():
     original_priceField.delete(0, END)
@@ -24,6 +27,7 @@ def clearAll():
     cgst_percentField.delete(0, END)
     sgst_percentField.delete(0, END)
     total_gstField.delete(0, END)
+
 
 # Driver Code
 if __name__ == "__main__":
@@ -48,7 +52,8 @@ if __name__ == "__main__":
     net_priceField = Entry(gui, font=entry_font)
     net_priceField.grid(row=2, column=1, padx=10, pady=10, sticky='w')
 
-    find = Button(gui, text="Calculate GST", fg="black", bg="light yellow", font=button_font, command=GST_Calc)
+    find = Button(gui, text="Calculate GST", fg="black",
+                  bg="light yellow", font=button_font, command=GST_Calc)
     find.grid(row=3, column=1, padx=10, pady=10, sticky='w')
 
     cgst_percent = Label(gui, text="CGST Rate:", font=label_font)
@@ -69,7 +74,8 @@ if __name__ == "__main__":
     total_gstField = Entry(gui, font=entry_font)
     total_gstField.grid(row=6, column=1, padx=10, pady=10, sticky='w')
 
-    clear = Button(gui, text="Clear All", fg="black", bg="light yellow", font=button_font, command=clearAll)
+    clear = Button(gui, text="Clear All", fg="black",
+                   bg="light yellow", font=button_font, command=clearAll)
     clear.grid(row=7, column=1, padx=10, pady=10, sticky='w')
 
     # Start the GUI
