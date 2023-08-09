@@ -1,6 +1,7 @@
 import random
 import copy
 
+
 class AI2048:
     def __init__(self, board):
         self.board = board
@@ -83,8 +84,10 @@ class AI2048:
                     next += 1
                 if next >= 4:
                     next -= 1
-                current_value = 0 if self.board[i][current] == 0 else math.log2(self.board[i][current])
-                next_value = 0 if self.board[i][next] == 0 else math.log2(self.board[i][next])
+                current_value = 0 if self.board[i][current] == 0 else math.log2(
+                    self.board[i][current])
+                next_value = 0 if self.board[i][next] == 0 else math.log2(
+                    self.board[i][next])
                 if current_value > next_value:
                     monotonicity[0] += next_value - current_value
                 elif next_value > current_value:
@@ -100,8 +103,10 @@ class AI2048:
                     next += 1
                 if next >= 4:
                     next -= 1
-                current_value = 0 if self.board[current][j] == 0 else math.log2(self.board[current][j])
-                next_value = 0 if self.board[next][j] == 0 else math.log2(self.board[next][j])
+                current_value = 0 if self.board[current][j] == 0 else math.log2(
+                    self.board[current][j])
+                next_value = 0 if self.board[next][j] == 0 else math.log2(
+                    self.board[next][j])
                 if current_value > next_value:
                     monotonicity[2] += next_value - current_value
                 elif next_value > current_value:
@@ -209,10 +214,12 @@ class AI2048:
     def transpose_board(self, board):
         board[:] = [list(i) for i in zip(*board)]
 
+
 def print_board(board):
     for row in board:
         print(row)
     print()
+
 
 if __name__ == "__main__":
     board = [
