@@ -5,7 +5,7 @@ from telethon.tl.types import InputPeerChat
 from telethon.tl.functions.messages import ImportChatInviteRequest
 
 # Define your API credentials
-api_id = #####
+api_id =
 api_hash = '######################'
 
 # Twilio API credentials
@@ -17,15 +17,21 @@ twilio_client = Client(account_sid, auth_token)
 telegram_client = TelegramClient('session_name', api_id, api_hash)
 telegram_client.start()
 
+
 def send_telegram_message(chat_id, message):
     chat = InputPeerChat(chat_id)
     telegram_client.send_message(chat, message)
 
+
 def send_twilio_sms(to_phone_number, message):
-    twilio_client.messages.create(to=to_phone_number, from_='##########', body=message)
+    twilio_client.messages.create(
+        to=to_phone_number, from_='##########', body=message)
+
 
 def make_twilio_call(to_phone_number):
-    twilio_client.calls.create(url='http://demo.twilio.com/docs/voice.xml', to=to_phone_number, from_='#############')
+    twilio_client.calls.create(
+        url='http://demo.twilio.com/docs/voice.xml', to=to_phone_number, from_='#############')
+
 
 def check_sites(site_list, chat_id):
     for site in site_list:
@@ -40,6 +46,7 @@ def check_sites(site_list, chat_id):
         else:
             message = "Oops " + site + " not available at the moment"
             send_telegram_message(chat_id, message)
+
 
 if __name__ == '__main__':
     # Define the site list and chat ID here
