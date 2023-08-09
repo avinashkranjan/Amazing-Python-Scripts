@@ -247,7 +247,6 @@ while game:
         if game_over != 0:
             my_ball = False
 
-
     if not my_ball:
         if game_over == 0:
             draw_text('CLICK ANYWHERE TO START', font,
