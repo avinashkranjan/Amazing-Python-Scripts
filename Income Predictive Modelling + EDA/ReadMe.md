@@ -3,7 +3,7 @@
  Description:
  This project encompasses  exploratory data analysis and predictive modelling for income classification using a Random Forest Classifier. 
  The dataset, loaded from a CSV file, contains diverse socio-economic features.It employs advanced visualizations, including a correlation network, to uncover intricate feature relationships. After preprocessing and encoding,
- a Random Forest Classifier predicts income levels with a focus on accuracy and classification metrics.
+ a Random Forest Classifier predicts income levels.
 
  EDA Graphs:
 
