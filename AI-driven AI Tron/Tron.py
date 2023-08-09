@@ -31,7 +31,8 @@ class TronGame:
         pygame.display.set_caption("AI-driven AI Tron")
         self.clock = pygame.time.Clock()
         self.running = True
-        self.board = [[BLACK for _ in range(NUM_TILES_X)] for _ in range(NUM_TILES_Y)]
+        self.board = [[BLACK for _ in range(NUM_TILES_X)]
+                      for _ in range(NUM_TILES_Y)]
         self.player1_pos = (NUM_TILES_X // 4, NUM_TILES_Y // 2)
         self.player2_pos = (NUM_TILES_X * 3 // 4, NUM_TILES_Y // 2)
         self.player1_direction = RIGHT
@@ -40,7 +41,8 @@ class TronGame:
     def draw_board(self):
         for y in range(NUM_TILES_Y):
             for x in range(NUM_TILES_X):
-                pygame.draw.rect(self.screen, self.board[y][x], (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
+                pygame.draw.rect(
+                    self.screen, self.board[y][x], (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
 
     def move_player(self, player_pos, player_direction, player_color):
         x, y = player_pos
@@ -56,8 +58,10 @@ class TronGame:
         return False
 
     def update(self):
-        new_player1_pos = self.move_player(self.player1_pos, self.player1_direction, BLUE)
-        new_player2_pos = self.move_player(self.player2_pos, self.player2_direction, RED)
+        new_player1_pos = self.move_player(
+            self.player1_pos, self.player1_direction, BLUE)
+        new_player2_pos = self.move_player(
+            self.player2_pos, self.player2_direction, RED)
 
         if not new_player1_pos or not new_player2_pos:
             self.running = False
@@ -85,7 +89,8 @@ class TronGame:
                 for d in [UP, DOWN, LEFT, RIGHT]:
                     new_pos = simulate_move(pos, d)
                     if is_valid_move(new_pos):
-                        value = max(value, alpha_beta_search(new_pos, d, opponent_pos, depth - 1, alpha, beta, False))
+                        value = max(value, alpha_beta_search(
+                            new_pos, d, opponent_pos, depth - 1, alpha, beta, False))
                         alpha = max(alpha, value)
                         if beta <= alpha:
                             break
@@ -95,7 +100,8 @@ class TronGame:
                 for d in [UP, DOWN, LEFT, RIGHT]:
                     new_pos = simulate_move(opponent_pos, d)
                     if is_valid_move(new_pos):
-                        value = min(value, alpha_beta_search(pos, direction, new_pos, depth - 1, alpha, beta, True))
+                        value = min(value, alpha_beta_search(
+                            pos, direction, new_pos, depth - 1, alpha, beta, True))
                         beta = min(beta, value)
                         if beta <= alpha:
                             break
@@ -106,7 +112,8 @@ class TronGame:
         for d in [UP, DOWN, LEFT, RIGHT]:
             new_pos = simulate_move(player_pos, d)
             if is_valid_move(new_pos):
-                score = alpha_beta_search(new_pos, d, opponent_pos, depth=3, alpha=-float('inf'), beta=float('inf'), max_player=False)
+                score = alpha_beta_search(
+                    new_pos, d, opponent_pos, depth=3, alpha=-float('inf'), beta=float('inf'), max_player=False)
                 if score > best_score:
                     best_score = score
                     best_move = d
@@ -143,4 +150,3 @@ class TronGame:
 if __name__ == "__main__":
     game = TronGame()
     game.run()
-
