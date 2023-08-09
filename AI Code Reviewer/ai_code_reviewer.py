@@ -1,6 +1,7 @@
 import ast
 import pycodestyle
 
+
 class CodeReviewer:
     def __init__(self):
         self.feedback = []
@@ -27,10 +28,12 @@ class CodeReviewer:
         for node in ast.walk(tree):
             if isinstance(node, ast.FunctionDef):
                 if node.body and not isinstance(node.body[0], ast.Expr):
-                    self.feedback.append(f"Function '{node.name}' should have a docstring or 'pass' statement.")
+                    self.feedback.append(
+                        f"Function '{node.name}' should have a docstring or 'pass' statement.")
             elif isinstance(node, (ast.For, ast.While, ast.If, ast.With)):
                 if not isinstance(node.body[0], ast.Expr):
-                    self.feedback.append(f"Indentation Error: Missing 'pass' statement for '{ast.dump(node)}'.")
+                    self.feedback.append(
+                        f"Indentation Error: Missing 'pass' statement for '{ast.dump(node)}'.")
 
     def _check_undefined_vars(self, tree):
         undefined_vars = set()
@@ -47,7 +50,8 @@ class CodeReviewer:
         style_guide = pycodestyle.StyleGuide()
         result = style_guide.check_code(code)
         if result.total_errors:
-            self.feedback.append("Code style issues found. Please check and fix them.")
+            self.feedback.append(
+                "Code style issues found. Please check and fix them.")
 
     def _check_comments(self, code):
         lines = code.split('\n')
@@ -55,10 +59,12 @@ class CodeReviewer:
             if line.strip().startswith('#'):
                 # Check for empty comments or comments without space after '#'
                 if len(line.strip()) == 1 or line.strip()[1] != ' ':
-                    self.feedback.append(f"Improve comment style in line {i + 1}: '{line.strip()}'")
+                    self.feedback.append(
+                        f"Improve comment style in line {i + 1}: '{line.strip()}'")
 
     def get_feedback(self):
         return self.feedback
+
 
 if __name__ == "__main__":
     # Example Python code to analyze
