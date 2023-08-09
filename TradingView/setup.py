@@ -23,6 +23,7 @@
 #
 ########################################################################
 
+from fixtool import VERSION
 import inspect
 import os
 import sys
@@ -33,8 +34,6 @@ from setuptools import setup
 d = os.path.dirname(inspect.getfile(inspect.currentframe()))
 d = os.path.join(d, "python")
 sys.path.append(d)
-
-from fixtool import VERSION
 
 
 with open("README.rst") as readme:
@@ -50,7 +49,7 @@ setup(name="fixtool",
       license="MIT",
       keywords="fix testing",
       install_requires=["simplefix>=1.0.8"],
-      package_dir= {"": "python"},
+      package_dir={"": "python"},
       packages=["fixtool"],
       entry_points={
           "console_scripts": [
@@ -58,15 +57,15 @@ setup(name="fixtool",
           ]
       },
       classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Topic :: System :: Networking',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        ],
+          'Development Status :: 3 - Alpha',
+          'Topic :: System :: Networking',
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: MIT License',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 3.5',
+          'Programming Language :: Python :: 3.6',
+      ],
       )
 
 

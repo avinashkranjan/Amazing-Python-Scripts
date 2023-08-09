@@ -702,6 +702,7 @@ class ServerDestroyedMessage:
 
 class SessionSendMessage:
     """Request message be sent from server to client."""
+
     def __init__(self, name: str, payload: bytes):
         self.type = "session_send"
         self.name = name
@@ -723,6 +724,7 @@ class SessionSendMessage:
 
 class SessionSentMessage:
     """Acknowledge message was sent from server to client."""
+
     def __init__(self, name: str, result: bool, message: str):
         self.type = "session_sent"
         self.name = name

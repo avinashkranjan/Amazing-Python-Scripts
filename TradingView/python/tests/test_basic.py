@@ -67,6 +67,7 @@ def test_create_server():
     proxy.shutdown()
     return
 
+
 def xxx_test_connect_disconnect():
     proxy = fixtool.FixToolProxy("localhost", 11011)
     client = proxy.create_client("c1")
