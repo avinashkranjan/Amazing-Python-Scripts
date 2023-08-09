@@ -68,7 +68,8 @@ st.markdown(
 )
 
 model = load_model("breed_prediction.h5")
-Class_Names = ['boston_bull', 'golden_retriever', 'labrador_retriever', 'german_shepherd', 'border_collie']
+Class_Names = ['boston_bull', 'golden_retriever',
+               'labrador_retriever', 'german_shepherd', 'border_collie']
 
 header_image = "dog.png"
 st.image(header_image, use_column_width=True)
@@ -81,7 +82,8 @@ dog_image = st.file_uploader("Choose an image...", type=["png", "jpg", "jpeg"])
 if dog_image is not None:
     st.image(dog_image, caption="Uploaded Image", use_column_width=True)
 
-    img_array = np.array(cv2.imdecode(np.fromstring(dog_image.read(), np.uint8), 1))
+    img_array = np.array(cv2.imdecode(
+        np.fromstring(dog_image.read(), np.uint8), 1))
     img_array = cv2.resize(img_array, (224, 224))
     img_array = img_array / 255.0
 
