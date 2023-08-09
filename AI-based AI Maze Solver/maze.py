@@ -1,6 +1,7 @@
 import heapq
 import random
 
+
 class MazeSolver:
     def __init__(self, maze):
         self.maze = maze
@@ -51,17 +52,21 @@ class MazeSolver:
 
                 if neighbor not in g_score or tentative_g_score < g_score[neighbor]:
                     g_score[neighbor] = tentative_g_score
-                    f_score[neighbor] = tentative_g_score + self.heuristic(neighbor)
+                    f_score[neighbor] = tentative_g_score + \
+                        self.heuristic(neighbor)
                     heapq.heappush(open_set, (f_score[neighbor], neighbor))
 
         return None
 
+
 def generate_random_maze(rows, cols, obstacle_probability):
     return [[random.random() < obstacle_probability for _ in range(cols)] for _ in range(rows)]
+
 
 def print_maze(maze):
     for row in maze:
         print("".join(["#" if cell else " " for cell in row]))
+
 
 def main():
     rows = 10
@@ -82,6 +87,7 @@ def main():
         print_maze(maze)
     else:
         print("\nNo path found!")
+
 
 if __name__ == "__main__":
     main()
