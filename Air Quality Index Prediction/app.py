@@ -51,33 +51,45 @@ city_mapping = {
 y = df.pop("AQI")
 
 
-x_train, x_test, y_train, y_test = train_test_split(df, y, test_size=0.2, random_state=0)
+x_train, x_test, y_train, y_test = train_test_split(
+    df, y, test_size=0.2, random_state=0)
 
 
 model = RandomForestRegressor(max_depth=50, random_state=0)
 model.fit(x_train, y_train)
+
 
 def main():
     st.title("Air Quality Index Prediction")
 
     st.write("## User Input Features")
 
-    
     city = st.selectbox("City", df["City"].unique())
-    pm2_5 = st.slider("PM2.5", float(df["PM2.5"].min()), float(df["PM2.5"].max()), float(df["PM2.5"].mean()))
-    pm10 = st.slider("PM10", float(df["PM10"].min()), float(df["PM10"].max()), float(df["PM10"].mean()))
-    no = st.slider("NO", float(df["NO"].min()), float(df["NO"].max()), float(df["NO"].mean()))
-    no2 = st.slider("NO2", float(df["NO2"].min()), float(df["NO2"].max()), float(df["NO2"].mean()))
-    nox = st.slider("NOx", float(df["NOx"].min()), float(df["NOx"].max()), float(df["NOx"].mean()))
-    nh3 = st.slider("NH3", float(df["NH3"].min()), float(df["NH3"].max()), float(df["NH3"].mean()))
-    co = st.slider("CO", float(df["CO"].min()), float(df["CO"].max()), float(df["CO"].mean()))
-    so2 = st.slider("SO2", float(df["SO2"].min()), float(df["SO2"].max()), float(df["SO2"].mean()))
-    o3 = st.slider("O3", float(df["O3"].min()), float(df["O3"].max()), float(df["O3"].mean()))
-    benzene = st.slider("Benzene", float(df["Benzene"].min()), float(df["Benzene"].max()), float(df["Benzene"].mean()))
-    toluene = st.slider("Toluene", float(df["Toluene"].min()), float(df["Toluene"].max()), float(df["Toluene"].mean()))
-    xylene = st.slider("Xylene", float(df["Xylene"].min()), float(df["Xylene"].max()), float(df["Xylene"].mean()))
+    pm2_5 = st.slider("PM2.5", float(df["PM2.5"].min()), float(
+        df["PM2.5"].max()), float(df["PM2.5"].mean()))
+    pm10 = st.slider("PM10", float(df["PM10"].min()), float(
+        df["PM10"].max()), float(df["PM10"].mean()))
+    no = st.slider("NO", float(df["NO"].min()), float(
+        df["NO"].max()), float(df["NO"].mean()))
+    no2 = st.slider("NO2", float(df["NO2"].min()), float(
+        df["NO2"].max()), float(df["NO2"].mean()))
+    nox = st.slider("NOx", float(df["NOx"].min()), float(
+        df["NOx"].max()), float(df["NOx"].mean()))
+    nh3 = st.slider("NH3", float(df["NH3"].min()), float(
+        df["NH3"].max()), float(df["NH3"].mean()))
+    co = st.slider("CO", float(df["CO"].min()), float(
+        df["CO"].max()), float(df["CO"].mean()))
+    so2 = st.slider("SO2", float(df["SO2"].min()), float(
+        df["SO2"].max()), float(df["SO2"].mean()))
+    o3 = st.slider("O3", float(df["O3"].min()), float(
+        df["O3"].max()), float(df["O3"].mean()))
+    benzene = st.slider("Benzene", float(df["Benzene"].min()), float(
+        df["Benzene"].max()), float(df["Benzene"].mean()))
+    toluene = st.slider("Toluene", float(df["Toluene"].min()), float(
+        df["Toluene"].max()), float(df["Toluene"].mean()))
+    xylene = st.slider("Xylene", float(df["Xylene"].min()), float(
+        df["Xylene"].max()), float(df["Xylene"].mean()))
 
-    
     input_data = pd.DataFrame(
         {
             "City": [city],
@@ -98,7 +110,7 @@ def main():
 
     st.sidebar.write("## City Label Mapping")
     st.sidebar.write(city_mapping)
-    
+
     prediction = model.predict(input_data)
 
     st.write("## Prediction")
