@@ -8,16 +8,15 @@ import demoji
 def link_to_get(link):
     """This function will get the url of the image & book download direct link using the given link for book download"""
     response = requests.get(link)
-    th_html = bs(response.text , "html.parser")
-    td_all = th_html.find_all("td" ,id ="info")
+    th_html = bs(response.text, "html.parser")
+    td_all = th_html.find_all("td", id="info")
     td_all = td_all[0]
     td_a = td_all.find_all("a")
     link_href = td_a[1].get("href")
-    img_link_td = td_all.find("img" ,alt="cover")
+    img_link_td = td_all.find("img", alt="cover")
     img_link_src = img_link_td.get("src")
     img_link = f"http://library.lol{img_link_src}"
     return [link_href, img_link]
-
 
 
 def book_get(name, mainres=25, results=5):
@@ -47,20 +46,20 @@ def book_get(name, mainres=25, results=5):
     # getting request and response
     url = f"http://libgen.is/search.php?req={name}&lg_topic=libgen&open=0&view=simple&res={mainres}&phrase=1&column=def"
     response = requests.get(url)
-    bs_html = bs(response.text , "html.parser")
+    bs_html = bs(response.text, "html.parser")
 
     if "Search string must contain minimum 3 characters.." in bs_html.body:
         return "Error: Title Too Short"
-    
+
     # scraping the site for response
     table = bs_html.find_all("table")
     table = table[2]
     table_rows = table.find_all("tr")
     a = len(table_rows)
     table_rows.pop(0)
-    if a > 1 :
+    if a > 1:
         counter = 0
-        for i in table_rows :
+        for i in table_rows:
             if counter <= results:
                 # make book list
                 book_lst = []
@@ -76,7 +75,7 @@ def book_get(name, mainres=25, results=5):
                     publisher = "unknown"
                 # getting link to book
                 link_row = table_datas[9]
-                a = link_row.find("a" , href = True)
+                a = link_row.find("a", href=True)
                 link = a.get("href")
                 # getting image url & direct book download link
                 link_all = link_to_get(link)
@@ -101,20 +100,20 @@ def book_get(name, mainres=25, results=5):
                 book_lst.append(link_all[1])
                 book_lst.append(language)
                 Books.append(book_lst)
-                counter+=1
-        if len(Books) >=1 :
+                counter += 1
+        if len(Books) >= 1:
             return Books
-        else :
+        else:
             return "Error: no results found"
     else:
         return "Error: no results found"
-    
 
 
 if __name__ == "__main__":
-    a = book_get("Python",25,5)
+    a = book_get("Python", 25, 5)
     if "Error" not in a:
-        for i in a :
-            print(f"\n\nName : {i[0]}\nAuthor : {i[1]}\nPublisher : {i[2]}\nSize : {i[3]}\nFormat : {i[4]}\nLink : {i[5]}\nImage : {i[6]}\n\n")
+        for i in a:
+            print(
+                f"\n\nName : {i[0]}\nAuthor : {i[1]}\nPublisher : {i[2]}\nSize : {i[3]}\nFormat : {i[4]}\nLink : {i[5]}\nImage : {i[6]}\n\n")
     else:
         print(a)

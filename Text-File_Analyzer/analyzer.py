@@ -18,6 +18,7 @@ def text_file_analyzer(file_path):
         print(f"Error: File '{file_path}' not found.")
         return 0, 0, 0
 
+
 if __name__ == "__main__":
     file_path = input("Enter the path of the text file: ")
 

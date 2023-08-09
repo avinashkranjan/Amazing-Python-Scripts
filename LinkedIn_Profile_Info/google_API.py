@@ -5,6 +5,7 @@ import time
 
 logger = logging.getLogger(__name__)
 
+
 class GoogleSearchAPI:
     def __init__(self, key: str, cx: str):
         self._cx = cx
@@ -34,12 +35,14 @@ class GoogleSearchAPI:
                     params["start"] = next_page[0]["startIndex"]
                 elif resp.status_code == 429:  # API rate limiting
                     retry_after = int(resp.headers.get("Retry-After", 5))
-                    logger.warning(f"Google Custom Search API rate limit reached. Retrying in {retry_after} seconds.")
+                    logger.warning(
+                        f"Google Custom Search API rate limit reached. Retrying in {retry_after} seconds.")
                     time.sleep(retry_after)
                 else:
                     resp.raise_for_status()  # Raise an exception for other HTTP status codes
         except requests.exceptions.RequestException as e:
             logger.exception(f"Error in _hit_api: {e}")
         except Exception as e:
-            logger.exception("An error occurred while processing the API response.")
+            logger.exception(
+                "An error occurred while processing the API response.")
         return results
