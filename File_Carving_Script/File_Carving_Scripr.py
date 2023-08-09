@@ -9,6 +9,8 @@ file_cnt = 0
 dir_cnt = 0
 
 # Directory search
+
+
 def fileSearch(dir_path, cnt):
     global file_cnt
     global dir_cnt
@@ -28,13 +30,16 @@ def fileSearch(dir_path, cnt):
         elif os.path.isdir(full_path):
             for i in range(cnt):
                 print("\t", end=" ")
-            print("[!] SubDirectory: \"%s\" found. Start file search in this directory." % files)
+            print(
+                "[!] SubDirectory: \"%s\" found. Start file search in this directory." % files)
             filelist.extend(fileSearch(full_path, cnt + 1))
             dir_cnt += 1
 
     return filelist
 
 # File open and store carved file
+
+
 def Carving(file_list):
     cnt = 0
     carv_list = []
@@ -56,6 +61,8 @@ def Carving(file_list):
     return carv_list
 
 # Find signature
+
+
 def findSignature(file):
     flag = 0
     contents = []
@@ -76,6 +83,7 @@ def findSignature(file):
             else:
                 contents.append(buf)
     return contents
+
 
 # Main
 if __name__ == "__main__":
