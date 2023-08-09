@@ -4,6 +4,8 @@ import spacy
 nlp = spacy.load("en_core_web_sm")
 
 # Function to get the response from the chatbot
+
+
 def get_response(query):
     # Process the user query
     doc = nlp(query)
@@ -62,6 +64,7 @@ def get_response(query):
 
     # If no specific response is generated, provide a default response
     return "I'm sorry, but I'm not sure how to help with that."
+
 
 # Main chat loop
 print("Chatbot: Hello! How can I assist you today? Type 'exit' to end the conversation.")
