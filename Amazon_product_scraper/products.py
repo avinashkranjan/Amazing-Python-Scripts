@@ -1,13 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-# scraping amazon product page
 class Product:
     def __init__(self, product_name: str):
         self.product_name = product_name
 
     def get_product(self):
-        
         try:
             product_name = self.product_name
             product_name = product_name.replace(" ", "+")
@@ -19,7 +17,8 @@ class Product:
             r = requests.get(url, headers=headers)
             soup = BeautifulSoup(r.content, "html.parser")
             product = soup.find("div", {"class": "s-product-image-container"})
-            product_link = product.find("a", {"class": "a-link-normal"})["href"]
+            product_link = product.find(
+                "a", {"class": "a-link-normal"})["href"]
             product_link = "https://www.amazon.in" + product_link
             return {
                 "data": product_link,
