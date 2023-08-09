@@ -5,6 +5,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class GoogleSearchAPI:
     def __init__(self, key: str, cx: str):
         self._cx = cx
@@ -24,7 +25,8 @@ class GoogleSearchAPI:
             while True:
                 resp = requests.get(self._api_url, params=params)
                 if resp.status_code != 200:
-                    logger.warning(f"Google Custom Search API error: {resp.status_code} - {resp.text}")
+                    logger.warning(
+                        f"Google Custom Search API error: {resp.status_code} - {resp.text}")
                     break
 
                 data = resp.json()
@@ -38,6 +40,7 @@ class GoogleSearchAPI:
         except Exception as e:
             logger.exception("Error in _hit_api:")
         return results
+
 
 class ProfilePicture:
     def __init__(self, key: str, cx: str):
@@ -54,7 +57,8 @@ class ProfilePicture:
         return linkedin_id
 
     def _check_picture_url(self, link: str) -> bool:
-        match = re.search(r"(media-exp\d\.licdn\.com).+?(profile-displayphoto-shrink_)", link)
+        match = re.search(
+            r"(media-exp\d\.licdn\.com).+?(profile-displayphoto-shrink_)", link)
         return bool(match)
 
     def _check_url_exists(self, link: str) -> bool:
@@ -71,7 +75,8 @@ class ProfilePicture:
             search_id = self.extract_id(linkedin_url)
             if search_id == linkedin_id:
                 metatags = item.get("pagemap", {}).get("metatags", [])
-                metatags = [tag.get("og:image") for tag in metatags if "og:image" in tag]
+                metatags = [tag.get("og:image")
+                            for tag in metatags if "og:image" in tag]
 
                 for url in metatags:
                     if self._check_picture_url(url) and self._check_url_exists(url):
@@ -96,7 +101,8 @@ class ProfilePicture:
     def get_profile_picture(self, link: str) -> str:
         linkedin_id = self.extract_id(link)
         api_resp = self._api_obj._hit_api(linkedin_id)
-        profile_picture_url = self._extract_profile_picture(linkedin_id, api_resp)
+        profile_picture_url = self._extract_profile_picture(
+            linkedin_id, api_resp)
         return profile_picture_url
 
     def get_profile_info(self, link: str) -> dict:

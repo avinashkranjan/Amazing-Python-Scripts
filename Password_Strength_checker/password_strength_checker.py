@@ -1,10 +1,11 @@
 import re
 
+
 def is_strong_password(password):
     # Check length (at least 8 characters)
     if len(password) < 8:
         return False
-    
+
     # Check for uppercase letters
     if not any(char.isupper() for char in password):
         return False
@@ -24,6 +25,7 @@ def is_strong_password(password):
 
     return True
 
+
 def main():
     password = input("Enter your password: ")
 
@@ -31,6 +33,7 @@ def main():
         print("Strong password! Good job.")
     else:
         print("Weak password. Please make it stronger.")
+
 
 if __name__ == "__main__":
     main()
