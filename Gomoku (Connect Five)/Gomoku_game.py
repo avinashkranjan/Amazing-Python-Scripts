@@ -1,11 +1,13 @@
 def create_board(size):
     return [[' ' for _ in range(size)] for _ in range(size)]
 
+
 def display_board(board):
     size = len(board)
     for row in board:
         print(' | '.join(row))
         print('-' * (size * 4 - 1))
+
 
 def check_win(board, row, col):
     size = len(board)
@@ -33,8 +35,10 @@ def check_win(board, row, col):
 
     return False
 
+
 def is_board_full(board):
     return all(board[row][col] != ' ' for row in range(len(board)) for col in range(len(board[0])))
+
 
 def gomoku():
     size = 15
@@ -62,6 +66,7 @@ def gomoku():
             player = 'O' if player == 'X' else 'X'
         else:
             print("Invalid move. Try again.")
+
 
 if __name__ == "__main__":
     gomoku()
