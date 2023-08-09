@@ -15,15 +15,15 @@ statements = [
 # Evaluate each statement using the GPT-3 model
 for statement in statements:
     prompt = f"Check if the following statement is true or false:\nStatement: {statement}\nAnswer:"
-    
+
     response = openai.Completion.create(
         engine="davinci",  # Use the appropriate engine
         prompt=prompt,
         max_tokens=1,      # Limit the response to 1 token
     )
-    
+
     answer = response.choices[0].text.strip()
-    
+
     print(f"Statement: {statement}")
     print(f"Answer: {answer}")
     print("----------------------------")
