@@ -67,12 +67,16 @@ recipe_instructions = {
 }
 
 # Function to preprocess the recipes
+
+
 def preprocess_recipe(recipe):
     stop_words = set(stopwords.words("english"))
     tokens = word_tokenize(recipe.lower())
     return [word for word in tokens if word.isalpha() and word not in stop_words]
 
 # Function to generate a unique recipe
+
+
 def generate_recipe(ingredients, preferences=None):
     processed_ingredients = preprocess_recipe(ingredients)
 
@@ -91,21 +95,29 @@ def generate_recipe(ingredients, preferences=None):
 # Function to get user ingredient substitutions
 
 # Function to suggest similar recipes
+
+
 def suggest_similar_recipes(generated_recipe_name):
-    similar_recipes = random.sample([name for name in recipes.keys() if name != generated_recipe_name], 2)
+    similar_recipes = random.sample(
+        [name for name in recipes.keys() if name != generated_recipe_name], 2)
     return similar_recipes
 
 # Main function
+
+
 def main():
     print("AI-Powered Recipe Generator")
     print("Available Recipes:")
     for idx, recipe_name in enumerate(recipes.keys(), start=1):
         print(f"{idx}. {recipe_name}")
 
-    user_ingredients = input("Enter the list of ingredients you have (comma-separated): ")
-    user_preferences = input("Enter your dietary preferences (comma-separated, or press Enter to skip): ").split(",")
+    user_ingredients = input(
+        "Enter the list of ingredients you have (comma-separated): ")
+    user_preferences = input(
+        "Enter your dietary preferences (comma-separated, or press Enter to skip): ").split(",")
 
-    generated_recipe_name, source_link = generate_recipe(user_ingredients, user_preferences)
+    generated_recipe_name, source_link = generate_recipe(
+        user_ingredients, user_preferences)
 
     print("\nGenerated Recipe:")
     print(f"Recipe: {generated_recipe_name}")
@@ -114,11 +126,11 @@ def main():
     print(recipe_instructions[generated_recipe_name])
     print("Source Link:", source_link)
 
-
     similar_recipes = suggest_similar_recipes(generated_recipe_name)
     print("\nYou may also like these recipes:")
     for idx, recipe_name in enumerate(similar_recipes, start=1):
         print(f"{idx}. {recipe_name}")
+
 
 if __name__ == "__main__":
     nltk.download("punkt")
