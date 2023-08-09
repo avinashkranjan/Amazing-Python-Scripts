@@ -42,7 +42,7 @@ obstacles = []
 # Game loop
 running = True
 clock = pygame.time.Clock()
-pygame.mixer.music.play(-1) 
+pygame.mixer.music.play(-1)
 
 while running:
     for event in pygame.event.get():
@@ -82,14 +82,16 @@ while running:
             obstacles[i] = (obstacle_x, obstacle_y + obstacle_speed)
         elif obstacle_type == "tri":
             # Triangular obstacle: move diagonally
-            obstacles[i] = (obstacle_x + obstacle_speed, obstacle_y + obstacle_speed)
+            obstacles[i] = (obstacle_x + obstacle_speed,
+                            obstacle_y + obstacle_speed)
         elif obstacle_type == "circle":
             # Rotating circular obstacle: update the angle
             angle = 0.1  # Adjust the rotation speed
             rotated_obstacle_x = obstacle_x + (obstacle_width // 2)
             rotated_obstacle_y = obstacle_y + (obstacle_height // 2)
             obstacles[i] = (rotated_obstacle_x - obstacle_width // 2 * math.cos(angle),
-                            rotated_obstacle_y - obstacle_height // 2 * math.sin(angle),
+                            rotated_obstacle_y -
+                            obstacle_height // 2 * math.sin(angle),
                             "circle")
 
         # Remove obstacles that are off the screen
@@ -114,12 +116,14 @@ while running:
     screen.fill(WHITE)
 
     # Draw the player
-    pygame.draw.rect(screen, (0, 0, 255), (player_x, player_y, player_width, player_height))
+    pygame.draw.rect(screen, (0, 0, 255), (player_x,
+                     player_y, player_width, player_height))
 
     # Draw the obstacles
     for obstacle_x, obstacle_y, obstacle_type in obstacles:
         if obstacle_type == "rect":
-            pygame.draw.rect(screen, (255, 0, 0), (obstacle_x, obstacle_y, obstacle_width, obstacle_height))
+            pygame.draw.rect(screen, (255, 0, 0), (obstacle_x,
+                             obstacle_y, obstacle_width, obstacle_height))
         elif obstacle_type == "tri":
             pygame.draw.polygon(screen, (0, 255, 0), [(obstacle_x, obstacle_y), (obstacle_x + obstacle_width, obstacle_y),
                                                       (obstacle_x + obstacle_width // 2, obstacle_y + obstacle_height)])
