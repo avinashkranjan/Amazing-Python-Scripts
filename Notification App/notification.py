@@ -5,6 +5,7 @@ import time
 from datetime import datetime, timedelta
 import winsound
 
+
 class NotificationApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -13,8 +14,10 @@ class NotificationApp(tk.Tk):
         self.configure(bg="black")
 
         style = ttk.Style(self)
-        style.configure("TLabel", foreground="white", background="black", font=("Helvetica", 12))
-        style.configure("TButton", foreground="black", background="white", font=("Helvetica", 12))
+        style.configure("TLabel", foreground="white",
+                        background="black", font=("Helvetica", 12))
+        style.configure("TButton", foreground="black",
+                        background="white", font=("Helvetica", 12))
 
         self.label_days = ttk.Label(self, text="Days:")
         self.label_days.pack(pady=5)
@@ -40,16 +43,19 @@ class NotificationApp(tk.Tk):
         self.entry_seconds = ttk.Entry(self)
         self.entry_seconds.pack()
 
-        self.label_message = ttk.Label(self, text="Enter notification message:")
+        self.label_message = ttk.Label(
+            self, text="Enter notification message:")
         self.label_message.pack(pady=5)
 
         self.entry_message = ttk.Entry(self)
         self.entry_message.pack()
 
-        self.button_set = ttk.Button(self, text="Set Notification", command=self.schedule_notification)
+        self.button_set = ttk.Button(
+            self, text="Set Notification", command=self.schedule_notification)
         self.button_set.pack(pady=10)
 
-        self.label_time_left = ttk.Label(self, text="Time left: 0 days, 0:00:00")
+        self.label_time_left = ttk.Label(
+            self, text="Time left: 0 days, 0:00:00")
         self.label_time_left.pack(pady=5)
 
     def show_notification(self):
@@ -60,7 +66,8 @@ class NotificationApp(tk.Tk):
         notification_window.geometry("300x150")
         notification_window.configure(bg="black")
 
-        notification_label = ttk.Label(notification_window, text=f"{message}\n\nCurrent time: {now}", font=("Helvetica", 12), foreground="white", background="black")
+        notification_label = ttk.Label(notification_window, text=f"{message}\n\nCurrent time: {now}", font=(
+            "Helvetica", 12), foreground="white", background="black")
         notification_label.pack(pady=10)
 
         # Play notification sound
@@ -77,13 +84,15 @@ class NotificationApp(tk.Tk):
             seconds = int(self.entry_seconds.get())
 
             if days < 0 or hours < 0 or minutes < 0 or seconds < 0:
-                messagebox.showerror("Error", "All values must be non-negative.")
+                messagebox.showerror(
+                    "Error", "All values must be non-negative.")
                 return None
 
             total_seconds = days * 86400 + hours * 3600 + minutes * 60 + seconds
             return total_seconds
         except ValueError:
-            messagebox.showerror("Error", "Invalid input. Please enter numeric values.")
+            messagebox.showerror(
+                "Error", "Invalid input. Please enter numeric values.")
             return None
 
     def schedule_notification(self):
@@ -92,7 +101,8 @@ class NotificationApp(tk.Tk):
             return
 
         self.button_set.config(state=tk.DISABLED)
-        notification_thread = Thread(target=self._wait_and_notify, args=(delay,))
+        notification_thread = Thread(
+            target=self._wait_and_notify, args=(delay,))
         notification_thread.start()
 
     def _wait_and_notify(self, delay):
@@ -107,6 +117,7 @@ class NotificationApp(tk.Tk):
 
         self.show_notification()
         self.button_set.config(state=tk.NORMAL)
+
 
 if __name__ == "__main__":
     app = NotificationApp()
