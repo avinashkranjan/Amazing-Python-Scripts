@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
 
+
 def track_expenses():
     date = input("Enter the date (YYYY-MM-DD): ")
     description = input("Enter the expense description: ")
@@ -11,12 +12,15 @@ def track_expenses():
     try:
         df = pd.read_csv("expenses.csv")
     except FileNotFoundError:
-        df = pd.DataFrame(columns=["Date", "Description", "Amount", "Category"])
+        df = pd.DataFrame(
+            columns=["Date", "Description", "Amount", "Category"])
 
-    df = df.append({"Date": date, "Description": description, "Amount": amount, "Category": category}, ignore_index=True)
+    df = df.append({"Date": date, "Description": description,
+                   "Amount": amount, "Category": category}, ignore_index=True)
     df.to_csv("expenses.csv", index=False)
 
     print("Expense added successfully!")
+
 
 def view_expenses():
     try:
@@ -24,6 +28,7 @@ def view_expenses():
         print(df)
     except FileNotFoundError:
         print("No expenses found.")
+
 
 def generate_spending_report():
     try:
@@ -39,11 +44,13 @@ def generate_spending_report():
     except FileNotFoundError:
         print("No expenses found.")
 
+
 def set_budget():
     budget = float(input("Enter your budget amount: "))
     with open("budget.txt", "w") as file:
         file.write(str(budget))
     print("Budget set successfully!")
+
 
 def reset_monthly_budget():
     now = datetime.now()
@@ -52,6 +59,7 @@ def reset_monthly_budget():
     df.to_csv("expenses.csv", index=False)
 
     print("Monthly budget and expenses reset successfully.")
+
 
 def check_budget():
     try:
@@ -63,6 +71,7 @@ def check_budget():
         print("Remaining Budget: $", remaining_budget)
     except FileNotFoundError:
         print("Budget not set. Please set a budget first.")
+
 
 def visualize_expense_distribution():
     try:
@@ -78,6 +87,7 @@ def visualize_expense_distribution():
         plt.show()
     except FileNotFoundError:
         print("No expenses found.")
+
 
 def main():
     while True:
