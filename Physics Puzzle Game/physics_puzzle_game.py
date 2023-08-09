@@ -21,6 +21,7 @@ space.gravity = 0, 1000  # Set the gravity
 # Main game loop
 clock = pygame.time.Clock()
 
+
 def create_physics_object(x, y, vertices):
     body = pymunk.Body(1, 100)
     body.position = x, y
@@ -28,6 +29,7 @@ def create_physics_object(x, y, vertices):
     shape.elasticity = 0.5
     space.add(body, shape)
     return body
+
 
 # Create interactive objects
 object_vertices = [(-30, -30), (30, -30), (30, 30), (-30, 30)]
@@ -64,7 +66,8 @@ while True:
     for body in space.bodies:
         for shape in body.shapes:
             # Convert physics coordinates to screen coordinates
-            vertices = [(body.position + v.rotated(body.angle)) for v in shape.get_vertices()]
+            vertices = [(body.position + v.rotated(body.angle))
+                        for v in shape.get_vertices()]
             vertices = [(v.x, SCREEN_HEIGHT - v.y) for v in vertices]
             pygame.draw.polygon(screen, BLACK, vertices)
 
