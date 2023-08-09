@@ -1,15 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-# scraping amazon product page
-
-
 class Product:
     def __init__(self, product_name: str):
         self.product_name = product_name
 
     def get_product(self):
-
         try:
             product_name = self.product_name
             product_name = product_name.replace(" ", "+")
@@ -60,10 +56,8 @@ class Product:
             }
             r = requests.get(product_link, headers=headers)
             soup = BeautifulSoup(r.content, "html.parser")
-            product_name = soup.find(
-                "span", {"id": "productTitle"}).text.strip()
-            product_price = soup.find(
-                "span", {"class": "a-price-whole"}).text.strip()
+            product_name = soup.find("span", {"id": "productTitle"}).text.strip()
+            product_price = soup.find("span", {"class": "a-price-whole"}).text.strip()
             product_rating = soup.find(
                 "span", {"class": "a-size-base a-color-base"}
             ).text.strip()
@@ -170,8 +164,7 @@ class Product:
                 review_text = review_element.find(
                     "span", {"data-hook": "review-body"}
                 ).text.strip()
-                review = [reviewer_name, rating,
-                          review_title, review_date, review_text]
+                review = [reviewer_name, rating, review_title, review_date, review_text]
             return {
                 "data": review,
                 "message": f"Product review has been fetched",
