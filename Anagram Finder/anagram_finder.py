@@ -1,6 +1,7 @@
+from nltk.corpus import words
 import nltk
 nltk.download('words')
-from nltk.corpus import words
+
 
 def find_anagrams(search_words, word_list):
     # Function to sort letters in a word and return it as a string
@@ -29,6 +30,7 @@ def find_anagrams(search_words, word_list):
             results[search_word] = []
 
     return results
+
 
 if __name__ == "__main__":
     # Retrieve the NLTK word list
