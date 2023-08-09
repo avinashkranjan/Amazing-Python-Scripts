@@ -1,4 +1,4 @@
-#AI-driven AI Flappy Bird
+# AI-driven AI Flappy Bird
 import pygame
 import neat
 import os
@@ -10,19 +10,25 @@ WINDOW_HEIGHT = 800
 
 # Bird images
 BIRD_IMAGES = [
-    pygame.transform.scale2x(pygame.image.load(os.path.join("images", "bird1.png"))),
-    pygame.transform.scale2x(pygame.image.load(os.path.join("images", "bird2.png"))),
-    pygame.transform.scale2x(pygame.image.load(os.path.join("images", "bird3.png")))
+    pygame.transform.scale2x(pygame.image.load(
+        os.path.join("images", "bird1.png"))),
+    pygame.transform.scale2x(pygame.image.load(
+        os.path.join("images", "bird2.png"))),
+    pygame.transform.scale2x(pygame.image.load(
+        os.path.join("images", "bird3.png")))
 ]
 
 # Pipe image
-PIPE_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join("images", "pipe.png")))
+PIPE_IMAGE = pygame.transform.scale2x(
+    pygame.image.load(os.path.join("images", "pipe.png")))
 
 # Base image
-BASE_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join("images", "base.png")))
+BASE_IMAGE = pygame.transform.scale2x(
+    pygame.image.load(os.path.join("images", "base.png")))
 
 # Background image
-BG_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join("images", "bg.png")))
+BG_IMAGE = pygame.transform.scale2x(
+    pygame.image.load(os.path.join("images", "bg.png")))
 
 
 class Bird:
@@ -85,7 +91,8 @@ class Bird:
             self.image_count = self.ANIMATION_TIME * 2
 
         rotated_image = pygame.transform.rotate(self.image, self.tilt)
-        new_rect = rotated_image.get_rect(center=self.image.get_rect(topleft=(self.x, self.y)).center)
+        new_rect = rotated_image.get_rect(
+            center=self.image.get_rect(topleft=(self.x, self.y)).center)
         win.blit(rotated_image, new_rect.topleft)
 
     def get_mask(self):
@@ -215,7 +222,8 @@ def main(genomes, config):
             bird.move()
             ge[x].fitness += 0.1
 
-            output = nets[x].activate((bird.y, abs(bird.y - pipes[pipe_ind].height), abs(bird.y - pipes[pipe_ind].bottom)))
+            output = nets[x].activate((bird.y, abs(
+                bird.y - pipes[pipe_ind].height), abs(bird.y - pipes[pipe_ind].bottom)))
 
             if output[0] > 0.5:
                 bird.jump()
@@ -279,4 +287,3 @@ if __name__ == "__main__":
     pygame.init()
     STAT_FONT = pygame.font.SysFont("comicsans", 50)
     run_neat()
-
