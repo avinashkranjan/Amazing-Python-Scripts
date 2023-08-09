@@ -1,0 +1,7 @@
+langchain
+streamlit
+openai
+tiktoken
+python-dotenv
+pinecone-client
+duckduckgo_search

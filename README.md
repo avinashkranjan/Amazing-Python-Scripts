@@ -59,4 +59,10 @@ Thanks go to these **Wonderful People** 👨🏻‍💻:      🚀 **Contributio
 
 [![Stargazers over time](https://starchart.cc/avinashkranjan/Amazing-Python-Scripts.svg)](https://starchart.cc/avinashkranjan/Amazing-Python-Scripts)
 
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
+
+
 <h1 align=center>Happy Coding 👨‍💻 </h1>

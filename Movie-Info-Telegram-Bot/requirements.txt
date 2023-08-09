@@ -1,6 +1,6 @@
 APScheduler==3.6.3
 beautifulsoup4==4.9.3
-certifi==2020.12.5
+certifi==2023.7.22
 python-dateutil==2.8.1
 python-decouple==3.4
 python-telegram-bot==13.1
