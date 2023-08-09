@@ -2,6 +2,8 @@ import tweepy
 import requests
 
 # Function to get tweets from Twitter API
+
+
 def get_tweets(api_key, api_secret_key, access_token, access_token_secret, username):
     auth = tweepy.OAuthHandler(api_key, api_secret_key)
     auth.set_access_token(access_token, access_token_secret)
@@ -13,10 +15,12 @@ def get_tweets(api_key, api_secret_key, access_token, access_token_secret, usern
             tweets.append(tweet.full_text)
     except tweepy.TweepError as e:
         print(f"Error: {e}")
-    
+
     return tweets
 
 # Function to get weather data from OpenWeatherMap API
+
+
 def get_weather(api_key, city):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
     response = requests.get(url)
@@ -29,6 +33,8 @@ def get_weather(api_key, city):
         return None
 
 # Function to get stock data from Alpha Vantage API
+
+
 def get_stock_data(api_key, symbol):
     url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={api_key}"
     response = requests.get(url)
@@ -39,6 +45,7 @@ def get_stock_data(api_key, symbol):
     else:
         print(f"Error: {data['Note']}")
         return None
+
 
 if __name__ == "__main__":
     # Replace with your Twitter API credentials
@@ -57,7 +64,8 @@ if __name__ == "__main__":
     stock_symbol = "AAPL"
 
     # Retrieve data from APIs
-    tweets = get_tweets(twitter_api_key, twitter_api_secret_key, twitter_access_token, twitter_access_token_secret, twitter_username)
+    tweets = get_tweets(twitter_api_key, twitter_api_secret_key,
+                        twitter_access_token, twitter_access_token_secret, twitter_username)
     weather_data = get_weather(weather_api_key, city_name)
     stock_data = get_stock_data(alpha_vantage_api_key, stock_symbol)
 
