@@ -1,82 +1,85 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  const requestURL = 'datastore.json'
-  const request = new XMLHttpRequest()
-  request.open('GET', requestURL)
-  request.responseType = 'json'
-  request.send()
-  request.onload = processData
+document.addEventListener('DOMContentLoaded', (event) => {
+  const requestURL = 'datastore.json';
+  const request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = processData;
 
   function processData() {
-    const data = request.response
-    const authors = []
-    let jsonData = JSON.parse(JSON.stringify(data))
-    let categories = Object.keys(jsonData)
-    let scriptNumber = 1
-    for (category in categories) {
-      var category_scripts = jsonData[categories[category]]
-      for (script in category_scripts) {
-        author = category_scripts[script][4]
-        authors.push(author)
-        scriptNumber++
+    const data = request.response;
+    const authors = [];
+    const jsonData = JSON.parse(JSON.stringify(data));
+    const categories = Object.keys(jsonData);
+    let scriptNumber = 1;
+    
+    for (const category of categories) {
+      const categoryScripts = jsonData[category];
+      for (const script of categoryScripts) {
+        const author = script[4];
+        authors.push(author);
+        scriptNumber++;
       }
     }
-    authorsArray = sortByFrequency(authors)
-    const contributors = Array.from(new Set(authorsArray))
-    contributorCards(contributors)
+    
+    const authorsArray = sortByFrequency(authors);
+    const contributors = Array.from(new Set(authorsArray));
+    contributorCards(contributors);
   }
 
   function contributorCards(contributors) {
-    const contributorHolder = document.getElementById('contributors-holder')
-    for (let index = 0; index <= contributors.length; index++) {
-      const divHTML = `<div class="col-md-2 col-sm-6 my-2">
-                <div class="contributor-card card shadow-sm border-2 rounded">
-                    <div class="card-body p-0"><img src="https://github.com/${contributors[index]}.png?size=125" alt="" class="card-img-top">
-                        <div class="contributor-name">                      
-                            <a href="https://github.com/${contributors[index]}" class="mt-2"> <h6 class="mb-0">${contributors[index]} <i class="fab fa-github"></i></h6></a>
-                        </div>
-                    </div>
-                </div>
-            </div>`
-      contributorHolder.innerHTML += divHTML
+    const contributorHolder = document.getElementById('contributors-holder');
+    
+    for (const contributor of contributors) {
+      const div = document.createElement('div');
+      div.className = 'col-md-2 col-sm-6 my-2';
+      div.innerHTML = `
+        <div class="contributor-card card shadow-sm border-2 rounded">
+          <div class="card-body p-0">
+            <img src="https://github.com/${contributor}.png?size=125" alt="" class="card-img-top">
+            <div class="contributor-name">
+              <a href="https://github.com/${contributor}" class="mt-2">
+                <h6 class="mb-0">${contributor} <i class="fab fa-github"></i></h6>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+      contributorHolder.appendChild(div);
     }
   }
 
-  // Bind event listener
-  let search = document.getElementById('search-contributor')
-  search.addEventListener('keydown', searchContributor)
+  const search = document.getElementById('search-contributor');
+  search.addEventListener('input', searchContributor);
 
   function searchContributor() {
-    let contributorsCount = document.getElementById('contributors-holder')
-      .children.length
-    let contributors = document.getElementById('contributors-holder').children
-    let searchKey = document
-      .getElementById('search-contributor')
-      .value.toLowerCase()
-    for (let count = 0; count < contributorsCount; count++) {
-      contributorName = contributors[count]
-        .getElementsByTagName('h6')[0]
-        .innerHTML.toLowerCase()
+    const contributors = document.querySelectorAll('.contributor-card');
+    const searchKey = search.value.toLowerCase();
+    
+    contributors.forEach((contributor) => {
+      const contributorName = contributor.querySelector('h6').textContent.toLowerCase();
+      
       if (contributorName.includes(searchKey)) {
-        contributors[count].style.display = 'block'
+        contributor.style.display = 'block';
       } else {
-        contributors[count].style.display = 'none'
+        contributor.style.display = 'none';
       }
-    }
+    });
   }
 
   function sortByFrequency(array) {
-    var frequency = {}
+    const frequency = {};
+    
+    array.forEach((value) => {
+      frequency[value] = 0;
+    });
 
-    array.forEach(function (value) {
-      frequency[value] = 0
-    })
+    const uniques = array.filter((value) => {
+      return ++frequency[value] === 1;
+    });
 
-    var uniques = array.filter(function (value) {
-      return ++frequency[value] == 1
-    })
-
-    return uniques.sort(function (a, b) {
-      return frequency[b] - frequency[a]
-    })
+    return uniques.sort((a, b) => {
+      return frequency[b] - frequency[a];
+    });
   }
-})
+});
