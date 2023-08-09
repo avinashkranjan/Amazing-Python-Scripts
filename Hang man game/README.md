@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This Hangman game is a simple Python program that allows players to guess a word letter by letter. It's a great project for beginners to practice programming skills and logic.
+This Hangman game is a simple Python program that allows players to guess a word letter by letter.
 
 ## How to Play
 
@@ -13,9 +13,3 @@ This Hangman game is a simple Python program that allows players to guess a word
 5. The player has a limited number of chances to guess the correct word.
 6. Enter letters to guess, and the game will provide feedback if the letter is correct or not.
 7. If the player guesses the entire word before running out of chances, they win!
-
-## How to Run
-
-1. Clone this repository to your local machine.
-2. Open your terminal or IDE and navigate to the project folder.
-3. Run the Python script using the following command:
