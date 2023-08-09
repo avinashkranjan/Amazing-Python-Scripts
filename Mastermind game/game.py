@@ -55,7 +55,8 @@ else:
         if count == 0:
             print("None of the numbers in your input match.")
         else:
-            print("Not quite the number. But you did get", count, "digit(s) correct!")
+            print("Not quite the number. But you did get",
+                  count, "digit(s) correct!")
         print('\n')
         n = int(input("Enter your next choice of numbers: "))
 
