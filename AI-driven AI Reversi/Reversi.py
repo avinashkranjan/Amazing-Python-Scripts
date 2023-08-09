@@ -9,15 +9,19 @@ BLACK = 1
 WHITE = 2
 
 # Define directions to explore in the board
-DIRECTIONS = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+DIRECTIONS = [(0, 1), (0, -1), (1, 0), (-1, 0),
+              (1, 1), (1, -1), (-1, 1), (-1, -1)]
+
 
 def create_board():
     return [[EMPTY for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
+
 
 def print_board(board):
     print("   " + " ".join(str(i) for i in range(BOARD_SIZE)))
     for i in range(BOARD_SIZE):
         print(f"{i} |" + " ".join(str(board[i][j]) for j in range(BOARD_SIZE)))
+
 
 def is_valid_move(board, player, row, col):
     if board[row][col] != EMPTY:
@@ -30,6 +34,7 @@ def is_valid_move(board, player, row, col):
             if 0 <= r < BOARD_SIZE and 0 <= c < BOARD_SIZE and board[r][c] == player:
                 return True
     return False
+
 
 def make_move(board, player, row, col):
     if not is_valid_move(board, player, row, col):
@@ -48,6 +53,7 @@ def make_move(board, player, row, col):
                 break
     return True
 
+
 def get_valid_moves(board, player):
     valid_moves = []
     for i in range(BOARD_SIZE):
@@ -56,10 +62,12 @@ def get_valid_moves(board, player):
                 valid_moves.append((i, j))
     return valid_moves
 
+
 def count_discs(board):
     black_count = sum(row.count(BLACK) for row in board)
     white_count = sum(row.count(WHITE) for row in board)
     return black_count, white_count
+
 
 def evaluate_board(board, player):
     black_count, white_count = count_discs(board)
@@ -67,6 +75,7 @@ def evaluate_board(board, player):
         return black_count - white_count
     else:
         return white_count - black_count
+
 
 def minimax(board, depth, player, alpha, beta, maximizing_player):
     if depth == 0:
@@ -96,6 +105,7 @@ def minimax(board, depth, player, alpha, beta, maximizing_player):
                 break
         return min_eval
 
+
 def find_best_move(board, player):
     valid_moves = get_valid_moves(board, player)
     best_move = None
@@ -104,13 +114,15 @@ def find_best_move(board, player):
     for row, col in valid_moves:
         new_board = copy.deepcopy(board)
         make_move(new_board, player, row, col)
-        move_eval = minimax(new_board, depth=3, player=player, alpha=float('-inf'), beta=float('inf'), maximizing_player=False)
+        move_eval = minimax(new_board, depth=3, player=player, alpha=float(
+            '-inf'), beta=float('inf'), maximizing_player=False)
 
         if move_eval > best_eval:
             best_eval = move_eval
             best_move = (row, col)
 
     return best_move
+
 
 def main():
     board = create_board()
@@ -149,6 +161,7 @@ def main():
             break
 
         current_player = WHITE if current_player == BLACK else BLACK
+
 
 if __name__ == "__main__":
     main()
