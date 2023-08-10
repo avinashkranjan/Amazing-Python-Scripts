@@ -32,8 +32,10 @@ messages = [
     "THINK OUTSIDE THE BOX"
 ]
 
+
 def generate_message():
     return random.choice(messages)
+
 
 def play_game():
     player_name = input("Enter your name: ")
@@ -46,9 +48,9 @@ def play_game():
         encrypted_message = generate_message()
         print("Decipher the following message:")
         print(encrypted_message)
-        
+
         guess = input("Enter your guess: ").upper()
-        
+
         if guess == encrypted_message:
             score += 1
             print("Congratulations! You deciphered the message.")
@@ -61,6 +63,7 @@ def play_game():
             print(f"Thank you for playing, {player_name}!")
             print(f"Final Score: {score}")
             break
+
 
 if __name__ == "__main__":
     play_game()
