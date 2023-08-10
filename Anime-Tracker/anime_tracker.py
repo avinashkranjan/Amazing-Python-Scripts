@@ -1,12 +1,15 @@
 try:
+    import sys
     import requests
     from bs4 import BeautifulSoup
     import urllib.parse as parse
     import re
     import argparse
 
-except ImportError:
-    print('Some modules are not installed! ')
+except ImportError as e:
+    print('Terminal Error! ')
+    print(f'System module import error: {e}')
+    sys.exit(1)
 
 # mainly bs4 lib is used for extracting html from web pages
 
