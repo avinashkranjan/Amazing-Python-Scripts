@@ -1,5 +1,6 @@
 import time
 
+
 class Car:
     def __init__(self, name, top_speed, acceleration):
         self.name = name
@@ -14,7 +15,8 @@ class Car:
         else:
             rpm = self.current_speed / (self.top_speed * (self.gear - 1))
         self.current_speed += self.acceleration * self.gear
-        print(f"{self.name}: {self.current_speed:.2f} km/h (Gear: {self.gear}, RPM: {rpm:.2f})")
+        print(
+            f"{self.name}: {self.current_speed:.2f} km/h (Gear: {self.gear}, RPM: {rpm:.2f})")
 
     def shift_gear(self):
         if self.gear < 5:
@@ -27,6 +29,7 @@ class Car:
             self.accelerate()
             if self.current_speed >= self.top_speed * 0.8:
                 self.shift_gear()
+
 
 if __name__ == "__main__":
     car1 = Car("Player Car", top_speed=200, acceleration=20)
