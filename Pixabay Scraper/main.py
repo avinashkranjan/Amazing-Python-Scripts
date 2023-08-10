@@ -13,7 +13,7 @@ class Pixabay():
 
     """
     def __init__(self, verbose=True):
-        self.__api_key = '38504833-19606430bd8fde504120d1630'
+        self.bunch = '38504833-19606430bd8fde504120d1630'
         self.name = 'Pixabay'
         self.verbose = verbose  
 
@@ -29,7 +29,6 @@ class Pixabay():
          Returns:
          ```js
          {
-            'key': API Key from Pixaby,
             'q': query given by user,
             'video_type': typeof video(default is film),
             'orientation': orientation of the video,
@@ -39,7 +38,6 @@ class Pixabay():
          ```
         """
         params = {
-            'key': self.__api_key,
             'q': query,
             'video_type': 'film',
             'orientation': 'horizontal',
@@ -61,8 +59,7 @@ class Pixabay():
          Returns: Downloads num number of videos into local storage.
 
         """
-        if self.key == '':
-          return 'Call setkey(key) method to set up the key first before using the scraper.'
+        
         BASE_URL = 'https://pixabay.com/api/videos/'
         _params = self.__get_params_video(query, num, params)
         response = requests.get(BASE_URL, params=_params)
@@ -89,7 +86,7 @@ class Pixabay():
          Returns:
          ```js
          {
-            'key': API Key from Pixaby,
+          
             'q': query given by user,
             'video_type': type of photo,
             'orientation': orientation of the photo,
@@ -99,7 +96,7 @@ class Pixabay():
          ```
         """
         params = {
-            'key': self.__api_key,
+            
             'q': query,
             'image_type': 'photo',
             'orientation': 'horizontal',
@@ -120,8 +117,7 @@ class Pixabay():
          Returns: Downloads num number of photos into local storage.
 
         """
-        if self.key == '':
-          return 'Call setkey(key) method to set up the key first before using the scraper.'
+        
         BASE_URL = 'https://pixabay.com/api/'
         _params = self.__get_params_photo(query, num, params)
         response = requests.get(BASE_URL, params=_params)
