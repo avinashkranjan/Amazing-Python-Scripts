@@ -1,5 +1,6 @@
 import subprocess
 
+
 def create_and_commit_branch(branch_name, commit_message):
     # Create a new branch
     subprocess.run(["git", "checkout", "-b", branch_name])
@@ -13,6 +14,7 @@ def create_and_commit_branch(branch_name, commit_message):
 
     # Push the changes to the remote repository
     subprocess.run(["git", "push", "origin", branch_name])
+
 
 if __name__ == "__main__":
     new_branch_name = "feature/awesome-feature"
