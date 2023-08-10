@@ -1,4 +1,4 @@
-# codebreaker_challenge.py
+# Codebreaker Challenge
 
 This is a digital version of the classic Mastermind game, implemented in Python. The player's goal is to guess the correct combination of colors within a limited number of attempts.
 
