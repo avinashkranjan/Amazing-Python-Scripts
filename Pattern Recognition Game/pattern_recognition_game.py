@@ -1,8 +1,10 @@
 import random
 import time
 
+
 def generate_pattern():
-    colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white", "cyan", "magenta"]
+    colors = ["red", "green", "blue", "yellow", "orange", "purple",
+              "pink", "brown", "gray", "black", "white", "cyan", "magenta"]
     patterns = [
         ["red", "green", "blue", "yellow", "orange"],
         ["purple", "pink", "brown", "gray", "black"],
@@ -23,17 +25,21 @@ def generate_pattern():
     pattern = random.choice(patterns)
     return pattern
 
+
 def get_next_pattern(pattern):
-    colors = set(["red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white", "cyan", "magenta"])
+    colors = set(["red", "green", "blue", "yellow", "orange", "purple",
+                 "pink", "brown", "gray", "black", "white", "cyan", "magenta"])
     pattern_set = set(pattern)
     missing_color = list(colors - pattern_set)[0]
     next_pattern = pattern[1:] + [missing_color]
     return next_pattern
 
+
 def play_game():
     print("Welcome to the Pattern Recognition Game!")
     print("Try to identify the underlying rule of the color patterns.")
-    print("For example, if the pattern is ['red', 'green', 'blue', 'yellow', 'orange'], the next pattern will be ['green', 'blue', 'yellow', 'orange', 'purple'] (alphabetical order).\n")
+    print(
+        "For example, if the pattern is ['red', 'green', 'blue', 'yellow', 'orange'], the next pattern will be ['green', 'blue', 'yellow', 'orange', 'purple'] (alphabetical order).\n")
 
     score = 0
     max_attempts = 3
@@ -52,8 +58,9 @@ def play_game():
                 print("Correct!")
                 break
             else:
-                print(f"Wrong! {max_attempts - attempt - 1} attempts remaining.")
-        
+                print(
+                    f"Wrong! {max_attempts - attempt - 1} attempts remaining.")
+
         else:
             print(f"\nGame Over! Your score: {score}\n")
             break
@@ -77,6 +84,7 @@ def play_game():
             pass
         print("\nTime's up!\n")
         print(f"Your score: {score}\n")
+
 
 if __name__ == "__main__":
     play_game()
