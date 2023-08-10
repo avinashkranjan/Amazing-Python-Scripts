@@ -19,8 +19,8 @@ while video_capture.isOpened():
 
     height, width, _ = frame.shape
 
-   
-    blob = cv2.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
+    blob = cv2.dnn.blobFromImage(
+        frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
     yolo_net.setInput(blob)
 
     layer_names = yolo_net.getUnconnectedOutLayersNames()
@@ -32,7 +32,7 @@ while video_capture.isOpened():
 
             class_id = np.argmax(scores)
             confidence = scores[class_id]
-            if confidence > 0.5 and class_id == 2: 
+            if confidence > 0.5 and class_id == 2:
                 center_x = int(detection[0] * width)
 
                 center_y = int(detection[1] * height)
@@ -42,9 +42,9 @@ while video_capture.isOpened():
 
                 x = int(center_x - bbox_width / 2)
                 y = int(center_y - bbox_height / 2)
-                cv2.rectangle(frame, (x, y), (x + bbox_width, y + bbox_height), (0, 255, 0), 2)
+                cv2.rectangle(frame, (x, y), (x + bbox_width,
+                              y + bbox_height), (0, 255, 0), 2)
 
-                
     resized_frame = cv2.resize(frame, (720, 480))
 
     cv2.imshow('Car Tracking', frame)
