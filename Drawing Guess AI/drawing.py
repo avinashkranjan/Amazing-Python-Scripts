@@ -1,15 +1,20 @@
 import random
 
+
 def choose_word():
-    words = ["apple", "banana", "car", "dog", "elephant", "flower", "guitar", "house", "ice cream", "jacket"]
+    words = ["apple", "banana", "car", "dog", "elephant",
+             "flower", "guitar", "house", "ice cream", "jacket"]
     return random.choice(words)
+
 
 def draw_object(word):
     print(f"Draw a {word} on the screen.")
 
+
 def guess_object():
     guess = input("Enter your guess: ").lower()
     return guess
+
 
 def main():
     print("Welcome to Drawing Guess AI!")
@@ -24,6 +29,7 @@ def main():
             break
         else:
             print("Oops! That's not the right guess. Try again!")
+
 
 if __name__ == "__main__":
     main()
