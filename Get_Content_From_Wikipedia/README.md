@@ -14,4 +14,4 @@ Just Need to run this command "pip install wikipedia-api
 
 ## Detailed explanation of script, if needed
 
-This Script Is Only for Dirbrute_Script use only! 
+This Script Is Only for Get_Content_From_Wikipedia use only! 
