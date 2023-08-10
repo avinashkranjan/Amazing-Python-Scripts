@@ -19,6 +19,8 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Zhed")
 
 # Main loop
+
+
 def main():
     running = True
 
@@ -36,11 +38,14 @@ def main():
     sys.exit()
 
 # Draw the grid
+
+
 def draw_grid():
     for x in range(0, WIDTH, CELL_SIZE):
         pygame.draw.line(screen, BLACK, (x, 0), (x, HEIGHT))
     for y in range(0, HEIGHT, CELL_SIZE):
         pygame.draw.line(screen, BLACK, (0, y), (WIDTH, y))
+
 
 # Start the game
 if __name__ == "__main__":
