@@ -1,6 +1,7 @@
 import os
 import shutil
 
+
 def automated_backup(source_dir, destination_dir):
     try:
         # Check if the source directory exists
@@ -15,16 +16,19 @@ def automated_backup(source_dir, destination_dir):
         for root, dirs, files in os.walk(source_dir):
             for file in files:
                 source_file = os.path.join(root, file)
-                destination_file = os.path.join(destination_dir, os.path.relpath(source_file, source_dir))
+                destination_file = os.path.join(
+                    destination_dir, os.path.relpath(source_file, source_dir))
                 shutil.copy2(source_file, destination_file)
 
         print("Backup completed successfully!")
     except Exception as e:
         print(f"An error occurred during backup: {e}")
 
+
 if __name__ == '__main__':
     source_directory = input("Enter the source directory to be backed up: ")
-    destination_directory = input("Enter the destination directory for the backup: ")
+    destination_directory = input(
+        "Enter the destination directory for the backup: ")
 
     automated_backup(source_directory, destination_directory)
   '''
