@@ -7,6 +7,7 @@ Short description of package/script
 
 ## Setup instructions
 
+
 Just Need to run this command "pip install wikipedia-api
 " then run the Get_Content_From_Wikipedia.py file and for running  python3 is must be installed! 
 
