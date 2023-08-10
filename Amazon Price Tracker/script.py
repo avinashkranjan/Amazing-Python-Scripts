@@ -4,6 +4,7 @@ import time
 import smtplib
 from email.mime.text import MIMEText
 
+
 def get_amazon_product_price(product_url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
@@ -13,7 +14,7 @@ def get_amazon_product_price(product_url):
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
         price_element = soup.find('span', id='priceblock_ourprice')
-        
+
         if price_element:
             price_text = price_element.get_text()
             return price_text.strip()
@@ -22,6 +23,7 @@ def get_amazon_product_price(product_url):
 
     else:
         return "Failed to retrieve data from Amazon"
+
 
 def send_email(subject, message):
     sender_email = 'your_sender_email@gmail.com'
@@ -39,10 +41,11 @@ def send_email(subject, message):
     server.sendmail(sender_email, recipient_email, msg.as_string())
     server.quit()
 
+
 if __name__ == "__main__":
     amazon_product_url = "https://www.amazon.com/dp/B07RF1XD36/"
     target_price = 500  # Set your desired target price
-    
+
     while True:
         current_price = get_amazon_product_price(amazon_product_url)
         print(f"Current Price: {current_price}")
