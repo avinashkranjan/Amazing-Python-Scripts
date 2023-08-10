@@ -1,0 +1,77 @@
+name: Close Issue if Opener has Opened Issues
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  close_issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if opener has multiple open issues
+        id: check_open_issues
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issueNumber = context.issue.number;
+            const issueOpener = context.payload.issue.user.login;
+
+            const previousIssuesResponse = await github.request('GET /repos/{owner}/{repo}/issues', {
+              owner,
+              repo,
+              state: 'open',
+              creator: issueOpener
+            });
+
+            const previousOpenIssues = previousIssuesResponse.data.filter(issue => issue.number !== issueNumber && !issue.pull_request);
+            const previousOpenIssueNumbers = previousOpenIssues.map(issue => `#${issue.number}`);
+            const openerName = context.payload.issue.user.login;
+
+            const closeIssue = previousOpenIssues.length > 0;
+            console.log(`Close issue: ${closeIssue}`);
+
+            if (closeIssue) {
+              const comment = `Hey @${openerName} , You can't have another issue before completing the previous one 😀 \n you already have the following ${previousOpenIssues.length} open issues 👀 ! :\n\n${previousOpenIssueNumbers.join('\n')}`;
+              core.exportVariable('comment_body', comment); // Export the variable
+              core.setOutput('close_issue', true);
+            } else {
+              core.exportVariable('comment_body', '');
+              core.setOutput('close_issue', false);
+            }
+
+      - name: Close the issue and add a comment
+        if: always() && ${{ needs.check_open_issues.outputs.close_issue }}
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issueNumber = context.issue.number;
+            const comment = process.env.comment_body; // Retrieve the exported variable
+            
+            if (comment.trim() === '') {
+              console.log('Comment body is empty. Skipping comment creation.');
+              return;
+            }
+
+            const closeComment = `${comment}`;
+
+            await github.issues.createComment({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              body: closeComment
+            });
+
+            await github.issues.update({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              state: 'closed'
+            });
