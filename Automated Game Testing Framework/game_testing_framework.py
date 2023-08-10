@@ -1,5 +1,6 @@
 import unittest
 
+
 class Game:
     def __init__(self):
         self.is_running = False
@@ -24,6 +25,7 @@ class Game:
     def quit(self):
         self.is_running = False
         return "Game quit."
+
 
 class TestGame(unittest.TestCase):
     @classmethod
@@ -52,6 +54,7 @@ class TestGame(unittest.TestCase):
         self.game.quit()
         result = self.game.play("move_forward")
         self.assertEqual(result, "Game is not running.")
+
 
 if __name__ == "__main__":
     unittest.main()
