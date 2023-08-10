@@ -3,6 +3,7 @@ import socket
 import argparse
 from datetime import datetime
 
+
 def scan_ports(target, ports):
     open_ports = []
     for port in ports:
@@ -15,11 +16,11 @@ def scan_ports(target, ports):
     return open_ports
 
 
-
 def main():
     parser = argparse.ArgumentParser(description="Simple port scanner.")
     parser.add_argument("target", help="Target IP address to scan.")
-    parser.add_argument("-p", "--ports", type=str, default="1-100", help="Port range to scan (e.g., '1-100').")
+    parser.add_argument("-p", "--ports", type=str, default="1-100",
+                        help="Port range to scan (e.g., '1-100').")
     args = parser.parse_args()
 
     target = socket.gethostbyname(args.target)
@@ -48,6 +49,7 @@ def main():
     except socket.error:
         print("Server not responding!")
         sys.exit()
+
 
 if __name__ == "__main__":
     main()
