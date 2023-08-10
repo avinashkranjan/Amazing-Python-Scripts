@@ -44,6 +44,9 @@ You can refer to the following articles on **_basics of Git and Github and also 
 <h2 align=center> ✨ Contributors </h2>
 
 Thanks go to these **Wonderful People** 👨🏻‍💻:      🚀 **Contributions** of any kind are welcome! 
+<p>
+  <img src="https://api.vaunt.dev/v1/github/entities/avinashkranjan/repositories/Amazing-Python-Scripts/contributors?format=svg&limit=54" width="600" height"250" />
+</p>
 
 <table>
 	<tr>
