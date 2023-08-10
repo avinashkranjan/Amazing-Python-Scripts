@@ -12,13 +12,13 @@ class Pixabay():
 
 
     """
+
     def __init__(self, verbose=True):
         self.bunch = '38504833-19606430bd8fde504120d1630'
         self.name = 'Pixabay'
-        self.verbose = verbose  
+        self.verbose = verbose
 
     def __get_params_video(self, query, num, update_params={}):
-
         """
          Class - `Pixabay`
          Example:
@@ -48,7 +48,6 @@ class Pixabay():
         return params
 
     def get_video(self, query, num=10, params={}):
-      
         """
          Class - `Pixabay`
          Example:
@@ -59,7 +58,7 @@ class Pixabay():
          Returns: Downloads num number of videos into local storage.
 
         """
-        
+
         BASE_URL = 'https://pixabay.com/api/videos/'
         _params = self.__get_params_video(query, num, params)
         response = requests.get(BASE_URL, params=_params)
@@ -86,7 +85,7 @@ class Pixabay():
          Returns:
          ```js
          {
-          
+
             'q': query given by user,
             'video_type': type of photo,
             'orientation': orientation of the photo,
@@ -96,7 +95,7 @@ class Pixabay():
          ```
         """
         params = {
-            
+
             'q': query,
             'image_type': 'photo',
             'orientation': 'horizontal',
@@ -117,7 +116,7 @@ class Pixabay():
          Returns: Downloads num number of photos into local storage.
 
         """
-        
+
         BASE_URL = 'https://pixabay.com/api/'
         _params = self.__get_params_photo(query, num, params)
         response = requests.get(BASE_URL, params=_params)
@@ -132,6 +131,3 @@ class Pixabay():
             if response is not None:
                 with open(f'photo_pixabay_{i+1:02d}.jpg', 'wb') as f:
                     f.write(response.content)
-
-
-
