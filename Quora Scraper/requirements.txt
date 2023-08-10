@@ -1,3 +1,5 @@
 beautifulsoup4==4.9.1
 bs4==0.0.1
 requests==2.31.0
+json==3.11.4
+pandas==1.2.4
