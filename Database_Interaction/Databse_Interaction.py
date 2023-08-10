@@ -1,5 +1,6 @@
 import sqlite3
 
+
 def create_table(connection):
     cursor = connection.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS employees (
@@ -10,16 +11,20 @@ def create_table(connection):
                     )''')
     connection.commit()
 
+
 def insert_data(connection, name, position, salary):
     cursor = connection.cursor()
     cursor.execute("INSERT INTO employees (name, position, salary) VALUES (?, ?, ?)",
                    (name, position, salary))
     connection.commit()
 
+
 def update_salary(connection, employee_id, new_salary):
     cursor = connection.cursor()
-    cursor.execute("UPDATE employees SET salary = ? WHERE id = ?", (new_salary, employee_id))
+    cursor.execute("UPDATE employees SET salary = ? WHERE id = ?",
+                   (new_salary, employee_id))
     connection.commit()
+
 
 def query_data(connection):
     cursor = connection.cursor()
@@ -28,7 +33,9 @@ def query_data(connection):
 
     print("\nEmployee Data:")
     for row in rows:
-        print(f"ID: {row[0]}, Name: {row[1]}, Position: {row[2]}, Salary: {row[3]}")
+        print(
+            f"ID: {row[0]}, Name: {row[1]}, Position: {row[2]}, Salary: {row[3]}")
+
 
 if __name__ == "__main__":
     database_name = "employee_database.db"
