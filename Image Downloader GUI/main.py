@@ -3,12 +3,14 @@ from tkinter import messagebox
 import os
 import requests
 
+
 def get_ext(url: str) -> str | None:
     exts = [".png", ".jpeg", ".jpg"]
     for ext in exts:
         if ext in url:
             return ext
     return None
+
 
 def download_img():
     u = url_ent.get()
@@ -27,7 +29,8 @@ def download_img():
     img_path = os.path.join(f, f"{n}{ext}")
 
     if os.path.isfile(img_path):
-        messagebox.showerror("Error", "A file with the same name already exists.")
+        messagebox.showerror(
+            "Error", "A file with the same name already exists.")
         return
 
     try:
@@ -37,6 +40,7 @@ def download_img():
             messagebox.showinfo("Success", f"Image downloaded to:\n{img_path}")
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
+
 
 root = tk.Tk()
 root.title("Image Downloader")
@@ -60,7 +64,8 @@ fl.pack(pady=5)
 folder_ent = tk.Entry(root, width=50)
 folder_ent.pack(pady=5)
 
-dl_btn = tk.Button(root, text="Download", command=download_img, bg="#303030", fg="white")
+dl_btn = tk.Button(root, text="Download",
+                   command=download_img, bg="#303030", fg="white")
 dl_btn.pack(pady=10)
 
 root.mainloop()
