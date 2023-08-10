@@ -171,14 +171,18 @@ event_music_mapping = {
 }
 
 # Simulated in-game events
+
+
 def simulate_game_events():
     while True:
         yield random.choice(list(event_music_mapping.keys()))
 
 # Main loop
+
+
 def main():
     events = simulate_game_events()
-    
+
     for event in events:
         # Handle the in-game event and update the music
         if event in event_music_mapping:
@@ -186,14 +190,15 @@ def main():
             new_element = random.choice(event_music)
         else:
             new_element = random.choice(music_elements)
-            
+
         if new_element != current_element:
             current_element.stop()
             current_element = pygame.mixer.Sound(new_element)
             current_element.play()
-        
+
         # Simulated delay between events
         time.sleep(random.uniform(5, 15))
+
 
 if __name__ == "__main__":
     try:
