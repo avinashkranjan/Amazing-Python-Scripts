@@ -1,8 +1,11 @@
 import random
 
+
 def choose_random_word():
-    words = ["apple", "banana", "cherry", "grape", "orange", "watermelon", "kiwi", "mango"]
+    words = ["apple", "banana", "cherry", "grape",
+             "orange", "watermelon", "kiwi", "mango"]
     return random.choice(words)
+
 
 def display_word(word, guessed_letters):
     display = ""
@@ -12,6 +15,7 @@ def display_word(word, guessed_letters):
         else:
             display += "_"
     return display
+
 
 def guess_the_word():
     print("Welcome to Guess the Word game!")
@@ -48,6 +52,7 @@ def guess_the_word():
     else:
         print("Game over! You ran out of attempts.")
         print(f"The word was: {secret_word}")
+
 
 if __name__ == "__main__":
     guess_the_word()
