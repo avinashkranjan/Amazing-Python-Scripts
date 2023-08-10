@@ -1,5 +1,0 @@
-os
-requests
-tqdm
-math
-time

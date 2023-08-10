@@ -1,7 +1,0 @@
-pytest
-setuptools
-simplefix
-twine
-ujson
-wheel
-yolk3k

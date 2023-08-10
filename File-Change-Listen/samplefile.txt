@@ -1,3 +1,0 @@
-# make changes to this file for testing
-This is sample file
-Deleted the line

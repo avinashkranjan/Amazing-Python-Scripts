@@ -1,2 +1,0 @@
-requests==2.31.0
-dotenv==0.05

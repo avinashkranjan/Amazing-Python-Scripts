@@ -1,1 +1,0 @@
-https: // www.amazon. in /Apple-Original-MMTN2ZM-Lightning-Connector/dp/B01M1EEPOB/ref = sr_1_1?crid = XFITOYOGI999 & keywords = airpods+apple & qid = 1685422019 & s = electronics & sprefix = airpods+appl % 2Celectronics % 2C458 & sr = 1-1

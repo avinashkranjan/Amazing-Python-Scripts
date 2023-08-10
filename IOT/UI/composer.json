@@ -1,6 +1,0 @@
-{
-    "require": {
-        "components/jquery": "^3.3",
-        "almasaeed2010/adminlte": "~2.4"
-    }
-}

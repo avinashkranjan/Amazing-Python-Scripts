@@ -1,3 +1,0 @@
-python 
-random
-speech_recognition

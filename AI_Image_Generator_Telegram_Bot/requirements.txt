@@ -1,4 +1,0 @@
-requests
-python-telegram-bot
-python-dotenv
-replicate

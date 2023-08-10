@@ -1,3 +1,0 @@
-torch==1.13.1
-torchvision==0.13.0
-gradio==3.13.2

@@ -1,3 +1,0 @@
-product_categories = [
-    'mobiles',
-]

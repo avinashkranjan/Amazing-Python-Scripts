@@ -1,2 +1,0 @@
-pyppdf==0.1.2
-pyppeteer==0.2.2

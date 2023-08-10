@@ -1,2 +1,0 @@
-googletrans==3.1.0a0
-httpx>=0.23.0 # not directly required, pinned by Snyk to avoid a vulnerability

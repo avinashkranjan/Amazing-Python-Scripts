@@ -1,4 +1,0 @@
-bs4
-requests
-urllib3
-img2pdf

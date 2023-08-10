@@ -1,3 +1,0 @@
-speech_recognition
-pyttsx3
-wolframalpha
