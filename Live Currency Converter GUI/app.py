@@ -3,7 +3,7 @@ from tkinter import messagebox
 import requests
 
 BASE_URL = "http://api.exchangeratesapi.io/v1/latest"
-API_KEY = "111010136e803fdc2d600a9b204fa385"
+API_KEY = "Your API Key"
 
 class CurrencyConverterApp:
     def __init__(self, root):
