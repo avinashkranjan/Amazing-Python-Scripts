@@ -20,7 +20,8 @@ search_input_xpath = "//input[@class='input-field-input i18n input-search-input'
 
 # Wait for the search input field to be clickable
 wait = WebDriverWait(driver, 10)
-search_input = wait.until(EC.element_to_be_clickable((By.XPATH, search_input_xpath)))
+search_input = wait.until(
+    EC.element_to_be_clickable((By.XPATH, search_input_xpath)))
 
 group_name = input("Enter the group name")
 # Perform a search by sending keys and pressing RETURN
@@ -56,5 +57,3 @@ for member_item in members_container.find("ul"):
     member_img = member_item.find("img")
     if member_img:
         print("Member Image:", member_img['src'])
-
-
