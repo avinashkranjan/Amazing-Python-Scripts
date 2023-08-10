@@ -1,7 +1,9 @@
 import random
 
+
 def create_grid(size):
     return [[' ' for _ in range(size)] for _ in range(size)]
+
 
 def place_treasure(grid, size):
     row = random.randint(0, size - 1)
@@ -9,11 +11,13 @@ def place_treasure(grid, size):
     grid[row][col] = 'T'
     return row, col
 
+
 def display_grid(grid):
     size = len(grid)
     for row in grid:
         print(' | '.join(cell.center(3) for cell in row))
         print('-' * (size * 5 - 1))
+
 
 def move_explorer(grid, row, col, direction):
     size = len(grid)
@@ -27,9 +31,11 @@ def move_explorer(grid, row, col, direction):
         col += 1
     return row, col
 
+
 def grid_explorer(size):
     grid = create_grid(size)
-    explorer_row, explorer_col = random.randint(0, size - 1), random.randint(0, size - 1)
+    explorer_row, explorer_col = random.randint(
+        0, size - 1), random.randint(0, size - 1)
     treasure_row, treasure_col = place_treasure(grid, size)
 
     print("Welcome to Grid Explorer!")
@@ -49,7 +55,8 @@ def grid_explorer(size):
             print("Invalid move. Try again.")
             continue
 
-        new_explorer_row, new_explorer_col = move_explorer(grid, explorer_row, explorer_col, move)
+        new_explorer_row, new_explorer_col = move_explorer(
+            grid, explorer_row, explorer_col, move)
 
         if grid[new_explorer_row][new_explorer_col] == 'T':
             display_grid(grid)
@@ -59,6 +66,7 @@ def grid_explorer(size):
             grid[explorer_row][explorer_col] = ' '
             explorer_row, explorer_col = new_explorer_row, new_explorer_col
             grid[explorer_row][explorer_col] = 'E'
+
 
 if __name__ == "__main__":
     grid_explorer(5)
