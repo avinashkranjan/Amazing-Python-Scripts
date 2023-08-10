@@ -2,10 +2,12 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+
 def calculate_bmi(weight, height):
     height_in_meters = height / 100
     bmi = weight / (height_in_meters ** 2)
     return bmi
+
 
 def interpret_bmi(bmi):
     if bmi < 18.5:
@@ -16,6 +18,7 @@ def interpret_bmi(bmi):
         return "Overweight"
     else:
         return "Obese"
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -29,6 +32,7 @@ def index():
         return render_template("result.html", bmi=bmi, interpretation=interpretation)
 
     return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
