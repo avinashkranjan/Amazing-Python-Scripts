@@ -1,19 +1,21 @@
 import tkinter as tk
 from itertools import permutations
 
+
 def find_anagrams():
     a = entry.get().strip().lower()
-    
+
     if a:
         b = a.split()
         c = []
         for d in b:
             e = ["".join(f) for f in permutations(d)]
             c.extend(e)
-            
+
         y.set(", ".join(c))
     else:
         y.set("Please enter a valid string.")
+
 
 app = tk.Tk()
 app.title("Anagram Finder")
@@ -34,9 +36,9 @@ y = tk.StringVar()
 result_label = tk.Label(frame, textvariable=y, wraplength=300)
 result_label.grid(row=1, columnspan=3, pady=10)
 
-frame.config(bg="#333") 
-label.config(fg="white")  
-entry.config(bg="gray", fg="white")  
-find_button.config(bg="gray", fg="white")  
-result_label.config(bg="#333", fg="white")  
+frame.config(bg="#333")
+label.config(fg="white")
+entry.config(bg="gray", fg="white")
+find_button.config(bg="gray", fg="white")
+result_label.config(bg="#333", fg="white")
 app.mainloop()
