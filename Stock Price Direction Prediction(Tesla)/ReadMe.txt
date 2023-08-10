@@ -1,0 +1,5 @@
+Aim
+Aims to predict whether the stock price of Tesla Inc. will increase or decrease in the next two days, leveraging technical indicators and moving averages.Performs a classification task on historical stock price data of Tesla Inc. (TSLA). It uses a Random Forest classifier to predict whether the stock price will increase ('1') or decrease ('0') in the next two days based on various technical indicators and moving averages.
+
+Details
+Random Forest classifier is employed for the prediction, and GridSearchCV hyperparameter tuning is performed to optimize model performance. The dataset is downloaded using the Yahoo Finance API and contains columns for 'Open,' 'High,' 'Low,' 'Close,' and 'Volume' prices. It calculates moving averages, Bollinger Bands, Relative Strength Index (RSI), and Commodity Channel Index (CCI) as additional features for the classification.
