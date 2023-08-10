@@ -12,6 +12,7 @@ RECIPIENT_EMAIL = 'recipient_email@example.com'
 WISHLIST_URL = 'https://www.amazon.com/gp/registry/wishlist/YOUR_WISHLIST_ID'
 CHECK_INTERVAL = 3600  # Check every hour
 
+
 def get_wishlist_items():
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
@@ -28,13 +29,15 @@ def get_wishlist_items():
             price_element = item.find('span', class_='a-offscreen')
             price = price_element.get_text().strip() if price_element else "Price not available"
             availability = "In stock" if "In Stock" in item.get_text() else "Out of stock"
-            wishlist.append({'name': name, 'price': price, 'availability': availability})
+            wishlist.append({'name': name, 'price': price,
+                            'availability': availability})
 
         return wishlist
 
     else:
         print("Failed to retrieve wishlist data from Amazon.")
         return []
+
 
 def send_email(subject, message):
     msg = MIMEText(message)
@@ -47,6 +50,7 @@ def send_email(subject, message):
     server.login(SENDER_EMAIL, SENDER_PASSWORD)
     server.sendmail(SENDER_EMAIL, RECIPIENT_EMAIL, msg.as_string())
     server.quit()
+
 
 def main():
     while True:
@@ -65,6 +69,7 @@ def main():
                 send_email(subject, message)
 
         time.sleep(CHECK_INTERVAL)
+
 
 if __name__ == "__main__":
     main()
