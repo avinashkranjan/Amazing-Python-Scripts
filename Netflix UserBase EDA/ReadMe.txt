@@ -1,0 +1,3 @@
+ Exploratory Data Analysis (EDA) of a dataset containing information about user subscriptions to a service. The dataset includes attributes such as Subscription Type, Monthly Revenue, Join Date, Last Payment Date, Country, Age, Gender, and Device. The primary objective of the analysis is to gain insights and understand patterns within the data that could potentially influence user behavior and subscription preferences.
+
+The analysis includes basic summary statistics, data cleaning, and visualization techniques using Python libraries such as Pandas, Seaborn, and Matplotlib. The visualizations range from basic counts and distributions to more advanced plots like correlation heatmaps, violin plots, hexbin plots, cluster maps, and more.

@@ -1,0 +1,3 @@
+A command-line tic-tac-toe game where you can play against an AI opponent that uses the minimax algorithm to make its moves. 
+
+To play the game, you'll execute this script in a Python environment that supports command-line input/output. The game board is printed, and you're prompted to enter your move by specifying the row and column (both ranging from 0 to 2). The AI calculates its move and takes its turn automatically.
