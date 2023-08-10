@@ -3,12 +3,14 @@ from urllib.request import urlopen
 from http import HTTPStatus
 from fake_useragent import UserAgent
 
+
 def get_status(status_code: int) -> str:
     for value in HTTPStatus:
         if value.value == status_code:
             description = f'({value.value} {value.name}) {value.description}'
             return description
     return "Unknown Status Code..."
+
 
 def check_website():
     website_url = website_entry.get()
@@ -24,17 +26,20 @@ def check_website():
 
     result_text.insert(tk.END, result)
 
+
 root = tk.Tk()
 root.title("Website Checker")
-root.configure(bg="#1e1e1e")  
+root.configure(bg="#1e1e1e")
 
-website_label = tk.Label(root, text="Enter Website URL:", bg="#1e1e1e", fg="white")
+website_label = tk.Label(
+    root, text="Enter Website URL:", bg="#1e1e1e", fg="white")
 website_label.pack(pady=5)
 
 website_entry = tk.Entry(root, width=50)
 website_entry.pack(pady=5)
 
-check_button = tk.Button(root, text="Check Website", command=check_website, bg="#303030", fg="white")
+check_button = tk.Button(root, text="Check Website",
+                         command=check_website, bg="#303030", fg="white")
 check_button.pack(pady=5)
 
 result_text = tk.Text(root, wrap=tk.WORD, bg="#1e1e1e", fg="white")
