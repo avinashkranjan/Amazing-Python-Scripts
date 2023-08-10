@@ -11,10 +11,12 @@ servo_pin = 18
 GPIO.setup(servo_pin, GPIO.OUT)
 pwm = GPIO.PWM(servo_pin, 50)  # 50 Hz PWM frequency
 
+
 def set_servo_position(angle):
     duty_cycle = angle / 18 + 2  # Map angle to duty cycle
     pwm.ChangeDutyCycle(duty_cycle)
     time.sleep(0.5)  # Give time for the servo to move
+
 
 if __name__ == "__main__":
     try:
