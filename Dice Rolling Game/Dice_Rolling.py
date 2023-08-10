@@ -1,10 +1,13 @@
 import random
 
+
 def roll_dice():
     return random.randint(1, 6)
 
+
 def ai_roll():
     return roll_dice()
+
 
 def main():
     print("Welcome to Dice Rolling AI!")
@@ -27,6 +30,7 @@ def main():
             print("AI wins! Better luck next time.")
         else:
             print("It's a tie!")
+
 
 if __name__ == "__main__":
     main()
