@@ -6,18 +6,18 @@ import re
 import smtplib
 import time
 
-url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/movie-<city-code>-<refnumber>-MT/"  # replace with the movie name, city, city code, movie specific number
-'''example of URL
- :https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues-bengaluru/movie-bang-ET00338629-MT/20230811'''
+url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/movie-<city-code>-<refnumber>-MT/"  # replace with the movie name, city, city code
+"""example of URL:
+https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues-bengaluru/movie-bang-ET00338629-MT/20230811"""
 date = "<YYYYMMDD>"  # eg: 20230101
 site = url + date
-hdr= {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+hdr= { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
       'Accept-Encoding': 'none',
       'Accept-Language': 'en-US,en;q=0.8',
-      'Connection': 'keep-alive'}
-venue = 'CPCL'  # this can be found by inspecting the element data-id for the venue where you would like to watch
+      'Connection': 'keep-alive' }
+venue = 'CPCL'  # found by inspecting the element data-id for the venue you want to watch at
 show = '9:30 PM'  # replace it with your preferred show timing
 delay = 600   # timegap in seconds between 2 script runs
 
@@ -26,18 +26,18 @@ to = 'xyz@gmail.com'  # relace with your email id on which you want to get the a
 # toggle allow less secure apps to on
 # https://myaccount.google.com/lesssecureapps?pli=1
 gmail_user = 'no_reply@gmail.com'
-gmail_pwd = '123et435!' # fill in your password
+gmail_pwd = '123et435!'
 subject = 'Tickets are now available'
 text = 'Tickets are now available for '+show+' show at the venue'+venue
 
 
 def send_mail():
-    '''Function to send mail'''
+    """Function to send mail"""
     print("Sending Email")
     smtpserver = smtplib.SMTP("smtp.gmail.com", 587)
     smtpserver.ehlo()
     smtpserver.starttls()
-    smtpserver.login(gmail_user, gmail_passwd)
+    smtpserver.login(gmail_user, gmail_pwd)
     header = 'To:' + to + '\n' + 'From:' + gmail_user
     header = header + '\n' + 'Subject:' + subject + '\n'
     messg = header + '\n' + text + '\n\n'
@@ -45,7 +45,7 @@ def send_mail():
     smtpserver.close()
 
 
-req = urllib.request.Request(site, headers = hdr)
+req = urllib.request.Request(site, headers=hdr)
 try:
     # open the url
     with urllib.request.urlopen(req) as page:
@@ -63,15 +63,13 @@ try:
         line2 = str(soup6)
         # Use regular expression to find data-availability="A" in the modified HTML
         result = re.findall(r'data-availability="A"', line2)
-        
         if len(result) > 0:
             print("Ticket Available")
             send_mail()
-      
         else:
             print("Not available yet")
 
 except urllib.error.URLError as e:
     print("Error occurred:", e)
 
-time.sleep(delay) #adjust the sleep timing by changing the delay variable as required
+time.sleep(delay)  # adjust the sleep timing by changing the delay variable as required
