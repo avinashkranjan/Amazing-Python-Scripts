@@ -6,8 +6,8 @@ import re
 import smtplib
 import time
 
-url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/
-movie-<city-code>-<refnumber>-MT/"
+url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/"+
++"movie-<city-code>-<refnumber>-MT/"
 # replace above with the movie name, city, city code
 """example of URL:
 https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues
