@@ -6,18 +6,20 @@ import re
 import smtplib
 import time
 
-url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/movie-<city-code>-<refnumber>-MT/"  # replace with the movie name, city, city code
+url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/movie-<city-code>-<refnumber>-MT/"  
+# replace above with the movie name, city, city code
 """example of URL:
-https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues-bengaluru/movie-bang-ET00338629-MT/20230811"""
+https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues
+-bengaluru/movie-bang-ET00338629-MT/20230811"""
 date = "<YYYYMMDD>"  # eg: 20230101
 site = url + date
-hdr= { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
-      'Accept-Encoding': 'none',
-      'Accept-Language': 'en-US,en;q=0.8',
-      'Connection': 'keep-alive' }
-venue = 'CPCL'  # found by inspecting the element data-id for the venue you want to watch at
+hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+       'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+       'Accept-Encoding': 'none',
+       'Accept-Language': 'en-US,en;q=0.8',
+       'Connection': 'keep-alive'}
+venue = 'CPCL'  # found by inspecting the element data-id for venue
 show = '9:30 PM'  # replace it with your preferred show timing
 delay = 600   # timegap in seconds between 2 script runs
 
