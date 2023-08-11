@@ -26,7 +26,7 @@ to = 'abcd123@email.com'  # relace with your email id on which you want to get t
 # toggle allow less secure apps to on
 # https://myaccount.google.com/lesssecureapps?pli=1
 gmail_user = 'abcd123@xmail.com'
-gmail_passwd = 'abcd123'
+gmail_passwd = '' # fill in your password
 subject = 'Tickets are now available'
 text = 'Tickets are now available for '+show+' show at the venue'+venue
 
