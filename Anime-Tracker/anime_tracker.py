@@ -2,9 +2,7 @@ try:
     import sys
     import requests
     from bs4 import BeautifulSoup
-    import urllib.parse as parse
     import re
-    import argparse
 
 except ImportError as e:
     print('Terminal Error! ')
