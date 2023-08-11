@@ -21,12 +21,12 @@ venue = 'CPCL'  # this can be found by inspecting the element data-id for the ve
 show = '9:30 PM'  # replace it with your preferred show timing
 delay = 600   # timegap in seconds between 2 script runs
 
-to = 'abcd123@email.com'  # relace with your email id on which you want to get the alert
+to = 'xyz@gmail.com'  # relace with your email id on which you want to get the alert
 # Please add your username and password below, and make sure you
 # toggle allow less secure apps to on
 # https://myaccount.google.com/lesssecureapps?pli=1
-gmail_user = 'abcd123@xmail.com'
-gmail_passwd = '' # fill in your password
+gmail_user = 'no_reply@gmail.com'
+gmail_pwd = '123et435!' # fill in your password
 subject = 'Tickets are now available'
 text = 'Tickets are now available for '+show+' show at the venue'+venue
 
