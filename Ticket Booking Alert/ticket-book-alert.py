@@ -9,9 +9,9 @@ import time
 url = "https://in.bookmyshow.com/buytickets/<movie_name>-<city>/"
 url += "movie-<city-code>-<refnumber>-MT/"
 # replace above with the movie name, city, city code
-"""example of URL
-https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues
--bengaluru/movie-bang-ET00338629-MT/20230811"""
+# example of URL
+# https://in.bookmyshow.com/buytickets/gadar-2-the-katha-continues
+# -bengaluru/movie-bang-ET00338629-MT/
 date = "<YYYYMMDD>"  # eg: 20230101
 site = url + date
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)' +
