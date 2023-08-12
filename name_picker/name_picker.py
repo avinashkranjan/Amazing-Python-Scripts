@@ -1,3 +1,5 @@
+# author: Ashir Mehmood
+# for Awesome-Python-Scripts repo
 import random
 string_input = input(" Enter names or random strings ! separated by space")
 name_list = string_input.split()
