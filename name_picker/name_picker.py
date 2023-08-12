@@ -9,15 +9,15 @@ name_list = string_input.split()
 
 # the random name picker method
 def random_name_picker(char_list):
-    '''This method returns a unique name, from entered list of names '''
+    """This method returns a unique name, from entered list of names"""
     random.shuffle(char_list)
     shuffled_list = char_list
     length = len(shuffled_list)
     random_index = random.randint(1, length)
     new_name = ""
     for x in range(random_index):
-     new_name =  new_name + (shuffled_list[x])
-    print(new_name)  
+        new_name = new_name + (shuffled_list[x])
+    print(new_name)
     return new_name
 
 
