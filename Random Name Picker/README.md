@@ -11,7 +11,3 @@
 
 Random Name Picker is an easy-to-use online tool to draw a random name from a list of names. Python will be required for this project. This project allows you to randomly select a name.
 
-**Output**
-
-![ALT](/Amazing-Python-Scripts/Random Name Picker/Output.png "Output")
-
