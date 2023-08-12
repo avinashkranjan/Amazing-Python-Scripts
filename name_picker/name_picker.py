@@ -21,4 +21,4 @@ def random_name_picker(char_list):
     return new_name
 
 
-random_name_picker(name_list)    
+random_name_picker(name_list)
