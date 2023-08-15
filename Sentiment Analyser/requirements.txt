@@ -65,7 +65,7 @@ tensorflow-estimator==2.12.0
 tensorflow-intel==2.12.0rc1
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.2.0
-tornado==6.3.2
+tornado==6.3.3
 traitlets==5.9.0
 typing_extensions==4.5.0
 urllib3==1.26.15
