@@ -1,0 +1,2 @@
+gTTS==2.2.3
+playsound==1.2.2
