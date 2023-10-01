@@ -21,7 +21,7 @@ Navigate to the directory where you saved "server.py" and "client.py".
 To run the server:
 3. Run the following command:
 
-Copy code
+Copy Code
 python server.py
 The server will start listening for client connections.
 
