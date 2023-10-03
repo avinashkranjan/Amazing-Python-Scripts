@@ -124,7 +124,7 @@ typer==0.7.0
 typing_extensions==4.5.0
 tzdata==2022.7
 tzlocal==4.3
-urllib3==1.26.15
+urllib3==1.26.17
 validators==0.20.0
 wasabi==1.1.1
 watchdog==3.0.0
