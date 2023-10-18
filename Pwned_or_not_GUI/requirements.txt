@@ -3,5 +3,5 @@ chardet==4.0.0
 idna==2.10
 python-decouple==3.4
 requests==2.31.0
-urllib3==1.26.4
+urllib3==1.26.18
 tkinter==8.6
