@@ -65,7 +65,7 @@ Pillow==9.4.0
 playwright==1.34.0
 preshed==3.0.8
 protobuf==4.23.3
-pyarrow==12.0.1
+pyarrow==14.0.1
 pycountry==22.3.5
 pycparser==2.21
 pycryptodome==3.17
