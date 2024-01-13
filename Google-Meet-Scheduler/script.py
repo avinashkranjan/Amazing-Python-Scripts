@@ -1,11 +1,14 @@
+# Rename your OAuth credentials file to credentials.json and save it in the same directory as this script.
+
 from googleapiclient.discovery import build
 from uuid import uuid4
 from google.auth.transport.requests import Request
-from pathlib import Path
 from google_auth_oauthlib.flow import InstalledAppFlow
 from typing import Dict, List
-from pickle import load, dump
+import os
+from google.oauth2.credentials import Credentials
 
+SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 class CreateMeet:
     def __init__(self, attendees: Dict[str, str], event_time: Dict[str, str], topic):
@@ -29,23 +32,24 @@ class CreateMeet:
 
     @staticmethod
     def _auth():
-        token_file, scopes = Path(
-            "./token.pickle"), ["https://www.googleapis.com/auth/calendar"]
-        credentials = None
-        if token_file.exists():
-            with open(token_file, "rb") as token:
-                credentials = load(token)
-        if not credentials or not credentials.valid:
-            if credentials and credentials.expired and credentials.refresh_token:
-                credentials.refresh(Request())
+        creds = None
+        if os.path.exists("token.json"):
+            creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+        # If there are no (valid) credentials available, let the user log in.
+        if not creds or not creds.valid:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
             else:
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    'credentials.json', scopes)
-                credentials = flow.run_local_server(port=0)
-            with open(token_file, "wb") as token:
-                dump(credentials, token)
-        calendar_service = build("calendar", "v3", credentials=credentials)
-        return calendar_service
+                    "credentials.json", SCOPES
+                )
+            creds = flow.run_local_server(port=0)
+            # Save the credentials for the next run
+            with open("token.json", "w") as token:
+                token.write(creds.to_json())
+
+        service = build("calendar", "v3", credentials=creds)
+        return service
 
 
 print('------------------------------')
@@ -60,6 +64,7 @@ end = input('Enter ending time : ').strip()
 emails = list(
     input('Enter the emails of guests separated by 1 space each : ').strip().split())
 topic = input('Enter the topic of the meeting : ')
+
 time = {
     'start': date+'T'+start+':00.000000',
     'end': date+'T'+end+':00.000000'
