@@ -1,5 +1,3 @@
-# Rename your OAuth credentials file to credentials.json and save it in the same directory as this script.
-
 from googleapiclient.discovery import build
 from uuid import uuid4
 from google.auth.transport.requests import Request
@@ -13,9 +11,9 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 class CreateMeet:
     def __init__(self, attendees: Dict[str, str], event_time: Dict[str, str], topic):
         authe = self._auth()
-        attendees = [{"email": e} for e in attendees.values()]
+        attendees_list = [{"email": e} for e in attendees.values()]
         self.event_states = self._create_event(
-            attendees, event_time, authe, topic)
+            attendees_list, event_time, authe, topic)
 
     @staticmethod
     def _create_event(attendees: List[Dict[str, str]], event_time, authe: build, topic):
@@ -43,10 +41,10 @@ class CreateMeet:
                 flow = InstalledAppFlow.from_client_secrets_file(
                     "credentials.json", SCOPES
                 )
-            creds = flow.run_local_server(port=0)
-            # Save the credentials for the next run
-            with open("token.json", "w") as token:
-                token.write(creds.to_json())
+                creds = flow.run_local_server(port=0)
+                # Save the credentials for the next run
+                with open("token.json", "w") as token:
+                    token.write(creds.to_json())
 
         service = build("calendar", "v3", credentials=creds)
         return service
