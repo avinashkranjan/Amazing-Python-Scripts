@@ -17,15 +17,15 @@ class CreateMeet:
 
     @staticmethod
     def _create_event(attendees: List[Dict[str, str]], event_time, authe: build, topic):
-        event = {"conferenceData": {"createRequest": {"requestId": f"{uuid4().hex}", "conferenceSolutionKey": {"type": "hangoutsMeet"}}},
-                 "attendees": attendees,
-                 "start": {"dateTime": event_time["start"], 'timeZone': 'Asia/Kolkata'},
-                 "end": {"dateTime": event_time["end"], 'timeZone': 'Asia/Kolkata'},
-                 "summary": topic,
-                 "reminders": {"useDefault": True}
-                 }
+        event_data = {"conferenceData": {"createRequest": {"requestId": f"{uuid4().hex}", "conferenceSolutionKey": {"type": "hangoutsMeet"}}},
+                      "attendees": attendees,
+                      "start": {"dateTime": event_time["start"], 'timeZone': 'Asia/Kolkata'},
+                      "end": {"dateTime": event_time["end"], 'timeZone': 'Asia/Kolkata'},
+                      "summary": topic,
+                      "reminders": {"useDefault": True}
+                      }
         event = authe.events().insert(calendarId="primary", sendNotifications=True,
-                                      body=event, conferenceDataVersion=1).execute()
+                                      body=event_data, conferenceDataVersion=1).execute()
         return event
 
     @staticmethod
