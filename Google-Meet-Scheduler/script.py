@@ -1,10 +1,11 @@
 from googleapiclient.discovery import build
-from uuid import uuid4
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.credentials import Credentials
+
+from uuid import uuid4
 from typing import Dict, List
 import os
-from google.oauth2.credentials import Credentials
 
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
@@ -15,7 +16,7 @@ class CreateMeet:
         authe = self._auth()
         attendees_list = [{"email": e} for e in attendees.values()]
         self.event_states = self._create_event(
-            attendees_list, event_time, authe,Topic)
+            attendees_list, event_time, authe, Topic)
 
     @staticmethod
     def _create_event(
