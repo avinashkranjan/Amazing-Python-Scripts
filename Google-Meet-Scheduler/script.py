@@ -11,21 +11,21 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 class CreateMeet:
     def __init__(self, attendees: Dict[str, str], event_time: Dict[str, str], topic):
         authe = self._auth()
-        self.topic = topic  # Make topic a class attribute
-        attendees_list = [{"email": e} for e in attendees.values()]
-        self.event_states = self._create_event(attendees_list, event_time, authe)
+        attendees = [{"email": e} for e in attendees.values()]
+        self.event_states = self._create_event(
+            attendees, event_time, authe, topic)
 
     @staticmethod
-    def _create_event(attendees: List[Dict[str, str]], event_time, authe: build):
-        event_data = {"conferenceData": {"createRequest": {"requestId": f"{uuid4().hex}", "conferenceSolutionKey": {"type": "hangoutsMeet"}}},
-                      "attendees": attendees,
-                      "start": {"dateTime": event_time["start"], 'timeZone': 'Asia/Kolkata'},
-                      "end": {"dateTime": event_time["end"], 'timeZone': 'Asia/Kolkata'},
-                      "summary": CreateMeet.topic,  # Access topic as a class attribute
-                      "reminders": {"useDefault": True}
-                      }
+    def _create_event(attendees: List[Dict[str, str]], event_time, authe: build, topic):
+        event = {"conferenceData": {"createRequest": {"requestId": f"{uuid4().hex}", "conferenceSolutionKey": {"type": "hangoutsMeet"}}},
+                 "attendees": attendees,
+                 "start": {"dateTime": event_time["start"], 'timeZone': 'Asia/Kolkata'},
+                 "end": {"dateTime": event_time["end"], 'timeZone': 'Asia/Kolkata'},
+                 "summary": topic,
+                 "reminders": {"useDefault": True}
+                 }
         event = authe.events().insert(calendarId="primary", sendNotifications=True,
-                                      body=event_data, conferenceDataVersion=1).execute()
+                                      body=event, conferenceDataVersion=1).execute()
         return event
 
     @staticmethod
@@ -48,6 +48,7 @@ class CreateMeet:
 
         service = build("calendar", "v3", credentials=creds)
         return service
+
 
 
 print('------------------------------')
