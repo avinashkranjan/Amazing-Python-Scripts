@@ -8,15 +8,18 @@ from google.oauth2.credentials import Credentials
 
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
+
 class CreateMeet:
-    def __init__(self, attendees: Dict[str, str], event_time: Dict[str, str], topic):
+    def __init__(self, attendees: Dict[str, str],
+                 event_time: Dict[str, str], topic):
         authe = self._auth()
         attendees = [{"email": e} for e in attendees.values()]
         self.event_states = self._create_event(
             attendees, event_time, authe, topic)
 
     @staticmethod
-    def _create_event(attendees: List[Dict[str, str]], event_time, authe: build, topic):
+    def _create_event(
+            attendees: List[Dict[str, str]], event_time, authe: build, topic):
         event = {"conferenceData": {"createRequest": {"requestId": f"{uuid4().hex}", "conferenceSolutionKey": {"type": "hangoutsMeet"}}},
                  "attendees": attendees,
                  "start": {"dateTime": event_time["start"], 'timeZone': 'Asia/Kolkata'},
@@ -50,7 +53,6 @@ class CreateMeet:
         return service
 
 
-
 print('------------------------------')
 print('-- Follow YYYY-MM-DD format --')
 print('------------------------------')
@@ -65,8 +67,8 @@ emails = list(
 topic = input('Enter the topic of the meeting : ')
 
 time = {
-    'start': date+'T'+start+':00.000000',
-    'end': date+'T'+end+':00.000000'
+    'start': date + 'T' + start + ':00.000000',
+    'end': date + 'T' + end + ':00.000000'
 }
 guests = {email: email for email in emails}
 meet = CreateMeet(guests, time, topic)
@@ -76,4 +78,4 @@ print('---------------------')
 print('-- Meeting Details --')
 print('---------------------')
 for key in keys:
-    print(key+' : ', details[key])
+    print(key + ' : ', details[key])
