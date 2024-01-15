@@ -10,16 +10,14 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 
 class CreateMeet:
-    def __init__(self, attendees: Dict[str, str],
-                 event_time: Dict[str, str], topic):
+    def __init__(self, attendees: Dict[str, str],event_time: Dict[str, str], topic):
         authe = self._auth()
         attendees = [{"email": e} for e in attendees.values()]
         self.event_states = self._create_event(
             attendees, event_time, authe, topic)
 
     @staticmethod
-    def _create_event(
-            attendees: List[Dict[str, str]], event_time, authe: build, topic):
+    def _create_event(attendees: List[Dict[str, str]], event_time, authe: build, topic):
         event = {"conferenceData": {"createRequest": {"requestId": f"{uuid4().hex}", "conferenceSolutionKey": {"type": "hangoutsMeet"}}},
                  "attendees": attendees,
                  "start": {"dateTime": event_time["start"], 'timeZone': 'Asia/Kolkata'},
