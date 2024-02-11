@@ -16,7 +16,7 @@ gensim==4.3.1
 google-auth==2.16.2
 google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
-grpcio==1.53.0
+grpcio==1.53.2
 h5py==3.8.0
 idna==3.4
 ipykernel==6.21.3
