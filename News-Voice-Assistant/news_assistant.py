@@ -28,7 +28,7 @@ def speak(text: str):
 
 if __name__ == '__main__':
     with open("api_key.txt", "r") as file:
-        api_key = file.readline()
+        api_key = file.readline(5_000_000)
     newsapi = newsapi.NewsApiClient(api_key=api_key)
 
     headlines = fetch_news()
