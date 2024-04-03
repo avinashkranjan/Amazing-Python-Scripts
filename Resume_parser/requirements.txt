@@ -61,7 +61,7 @@ parse==1.19.0
 pathy==0.10.1
 pdfminer==20191125
 pdfreader==0.1.12
-Pillow==9.4.0
+Pillow==10.3.0
 playwright==1.34.0
 preshed==3.0.8
 protobuf==4.23.3
