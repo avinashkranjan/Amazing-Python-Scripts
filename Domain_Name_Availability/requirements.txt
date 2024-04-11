@@ -1,6 +1,6 @@
 certifi==2023.7.22
 chardet==4.0.0
-idna==2.10
+idna==3.7
 python-decouple==3.4
 requests==2.25.1
 urllib3==1.26.5
