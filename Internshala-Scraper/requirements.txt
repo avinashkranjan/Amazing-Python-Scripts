@@ -2,7 +2,7 @@ beautifulsoup4==4.9.3
 bs4==0.0.1
 certifi==2023.7.22
 chardet==3.0.4
-idna==2.10
+idna==3.7
 lxml==4.9.1
 requests==2.31.0
 soupsieve==2.0.1
