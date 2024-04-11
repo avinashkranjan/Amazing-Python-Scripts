@@ -1,7 +1,7 @@
 beautifulsoup4==4.9.3
 certifi==2023.7.22
 chardet==4.0.0
-idna==2.10
+idna==3.7
 requests==2.31.0
 soupsieve==2.2.1
 urllib3==1.26.4
