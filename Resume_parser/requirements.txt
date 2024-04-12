@@ -37,7 +37,7 @@ GitPython==3.1.41
 greenlet==2.0.2
 h11==0.14.0
 huggingface-hub==0.15.1
-idna==3.4
+idna==3.7
 importlib-metadata==6.7.0
 jieba3k==0.35.1
 Jinja2==3.1.3
