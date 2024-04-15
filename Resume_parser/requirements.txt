@@ -102,7 +102,7 @@ soupsieve==2.4.1
 spacy==3.5.1
 spacy-legacy==3.0.12
 spacy-loggers==1.0.4
-sqlparse==0.4.4
+sqlparse==0.5.0
 srsly==2.4.6
 streamlit==1.30.0
 sumy==0.11.0
