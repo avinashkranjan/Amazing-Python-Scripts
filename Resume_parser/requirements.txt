@@ -69,7 +69,7 @@ pyarrow==12.0.1
 pycountry==22.3.5
 pycparser==2.21
 pycryptodome==3.17
-pydantic==1.10.6
+pydantic==1.10.13
 pydeck==0.8.1b0
 pyee==9.0.4
 Pygments==2.15.1
