@@ -7,22 +7,29 @@ class CodeReviewer:
         self.feedback = []
 
     def analyze_python_code(self, code):
-        try:
-            # Parse the Python code into an Abstract Syntax Tree (AST)
-            tree = ast.parse(code)
-        except SyntaxError as e:
-            self.feedback.append(f"Syntax Error: {e}")
-            return
+    try:
+        # Parse the Python code into an Abstract Syntax Tree (AST)
+        tree = ast.parse(code)
+    except SyntaxError as e:
+        self.feedback.append(f"Syntax Error: {e.text.strip()} at line {e.lineno}, column {e.offset}")
+        return
+    except Exception as e:
+        self.feedback.append(f"Unexpected error during AST parsing: {e}")
+        return
 
-        # Check for indentation errors and undefined variables
-        self._check_indentation(tree)
-        self._check_undefined_vars(tree)
+    self._safe_check(self._check_indentation, tree, "Indentation Check")
+    self._safe_check(self._check_undefined_vars, code, "Undefined Variables Check")
+    self._safe_check(self._check_code_style, code, "Code Style Check")
+    self._safe_check(self._check_comments, code, "Comments Check")
 
-        # Check code style using pycodestyle
-        self._check_code_style(code)
+def _safe_check(self, check_method, data, check_name):
+    try:
+        check_method(data)
+    except Exception as e:
+        self.feedback.append(f"Error during {check_name}: {e}")
 
-        # Check code comments
-        self._check_comments(code)
+# Rest of the class remains the same...
+
 
     def _check_indentation(self, tree):
         for node in ast.walk(tree):
