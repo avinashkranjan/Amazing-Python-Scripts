@@ -1,5 +1,5 @@
 from chatterbot import ChatBot
-
+import os
 # naming the ChatBot calculator
 # using mathematical evaluation logic
 # the calculator AI will not learn with the user input
@@ -10,7 +10,7 @@ Bot = ChatBot(name='Calculator',
 
 
 # clear the screen and start the calculator
-print('\033c')
+os.system('cls' if os.name == 'nt' else 'clear')
 print("Hello, I am a calculator. How may I help you?")
 while (True):
     # take the input from the user
