@@ -2,8 +2,16 @@ from PIL import Image
 import numpy as np
 
 
-# Rotation code
 def rotate(matrix):
+    """
+    Rotates a 2D matrix 90 degrees clockwise.
+
+    Parameters:
+    matrix (list of list of int): The 2D matrix to be rotated.
+
+    Returns:
+    list of list of int: The rotated 2D matrix.
+    """
     n = len(matrix)
     for i in range(n):
         for j in range(i + 1, n):
@@ -12,23 +20,48 @@ def rotate(matrix):
     return matrix
 
 
-# Function to load image and convert to 2D matrix
 def image_to_matrix(image_path):
+    """
+    Loads an image and converts it to a 2D matrix.
+
+    Parameters:
+    image_path (str): The path to the image file.
+
+    Returns:
+    list of list of int: The image represented as a 2D matrix.
+    """
     image = Image.open(image_path)
     image = image.convert('RGB')
     matrix = np.array(image).tolist()
     return matrix
 
 
-# Function to convert 2D matrix back to image
 def matrix_to_image(matrix):
+    """
+    Converts a 2D matrix back to an image.
+
+    Parameters:
+    matrix (list of list of int): The 2D matrix representing the image.
+
+    Returns:
+    Image: The image object created from the 2D matrix.
+    """
     array = np.array(matrix, dtype=np.uint8)
     image = Image.fromarray(array)
     return image
 
 
-# Main function to rotate image
 def rotate_image(image_path, output_path):
+    """
+    Rotates an image 90 degrees clockwise and saves the rotated image.
+
+    Parameters:
+    image_path (str): The path to the input image file.
+    output_path (str): The path to save the rotated image file.
+
+    Returns:
+    None
+    """
     matrix = image_to_matrix(image_path)
     matrix = rotate(matrix)
     rotated_image = matrix_to_image(matrix)
