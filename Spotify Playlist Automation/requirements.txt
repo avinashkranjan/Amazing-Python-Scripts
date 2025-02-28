@@ -1,2 +1,2 @@
 Flask==2.3.2
-spotipy==2.23.0
+spotipy==2.25.1
