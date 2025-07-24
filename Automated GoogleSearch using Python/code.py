@@ -65,7 +65,7 @@ def main():
             google_search_bot.perform_search()
         elif choice == 4:
             google_search_bot.print_search_res()
-        else choice == 5:
+        else:
             sys.exit()
 
         print("To continue with the code execution, enter 'y' or 'n':")
