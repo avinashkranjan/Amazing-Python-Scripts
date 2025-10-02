@@ -9,15 +9,19 @@ def get_nutrition_info(food: str):
     Returns None if food item is invalid
     '''
 
+    # API Call URL
     api_url = f"https://api.calorieninjas.com/v1/nutrition?query={food}"
 
-    # Request call to send to API
+    # Request call to send to API,
+    # Takes in the api url, headers with api-key and a timeout 
+    # so the request doesn't run forever
     response = requests.get(api_url, headers={"X-API-key": "YOUR-API-KEY"}, timeout=30)
 
     # Checking if the request was a 200 or an error.
     if response.status_code == requests.codes.ok:
         data = response.json()
         return data["items"]
+    
     # Prints error if response was bad
     print("Error:", response.status_code, response.text )
     return None
@@ -42,6 +46,7 @@ def print_info(facts : dict):
 if __name__ == "__main__":
     # main loop
     while True:
+        # Print opening message
         print("Enter food query: ", end="")
         query = input()
 
