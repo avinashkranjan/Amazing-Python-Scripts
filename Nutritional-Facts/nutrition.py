@@ -1,5 +1,4 @@
 import requests
-import json
 
 # Function to get the nutrition info of the food item
 # Using the calorie ninja api
@@ -11,14 +10,14 @@ def get_nutrition_info (food: str):
 
     api_url = f"https://api.calorieninjas.com/v1/nutrition?query={food}"
 
-    response = requests.get(api_url, headers={"X-API-key": "YOUR-API-KEY"})
+    response = requests.get(api_url, headers={"X-API-key": "YOUR-API-KEY"}, timeout=30)
 
     # Checking if the request was a 200 or an error.
     if response.status_code == requests.codes.ok:
-        data = json.loads(response.text)
+        data = response.json()
         return data["items"]
     else:
-        print("Error:". response.status_code, response.text )
+        print("Error:", response.status_code, response.text )
         return None
 
 
