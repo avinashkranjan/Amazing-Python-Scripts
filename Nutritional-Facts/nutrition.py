@@ -16,16 +16,17 @@ def get_nutrition_info (food: str):
     if response.status_code == requests.codes.ok:
         data = response.json()
         return data["items"]
-    else:
-        print("Error:", response.status_code, response.text )
-        return None
+    
+    print("Error:", response.status_code, response.text )
+    return None
 
 
-def print_info(items : dict):
+def print_info(facts : dict):
     '''
     Takes in a dictionary of items 
     and prints the contents in a legible format
     '''
+    items = facts
 
     # prints items in a hierarchical format.
     for item in items:
