@@ -41,7 +41,7 @@ if __name__ == "__main__":
     
     # main loop
     while True:
-        print("Enter a food: ", end="")
+        print("Enter food query: ", end="")
         query = input()
 
         if query.lower() == "q" or query.lower() == "quit":
