@@ -11,14 +11,14 @@ def get_nutrition_info (food: str):
 
     api_url = f"https://api.calorieninjas.com/v1/nutrition?query={food}"
 
-    response = requests.get(api_url, headers={"X-API-key": "rJTP0nmfPsklAFY1TSRfzQ==1a4HURegEEQx2DK5"})
+    response = requests.get(api_url, headers={"X-API-key": "YOUR-API-KEY"})
 
     # Checking if the request was a 200 or an error.
     if response.status_code == requests.codes.ok:
         data = json.loads(response.text)
         return data["items"]
     else:
-        print("Error:". response.status_code, response.text )
+        print("Error:", response.status_code, response.text )
         return None
 
 
