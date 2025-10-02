@@ -2,7 +2,7 @@ import requests
 
 # Function to get the nutrition info of the food item
 # Using the calorie ninja api
-def get_nutrition_info (food: str):
+def get_nutrition_info(food: str):
     '''
     Retrieves nutritional information of food item, 
     Returns None if food item is invalid
@@ -26,14 +26,14 @@ def print_info(facts : dict):
     Takes in a dictionary of items 
     and prints the contents in a legible format
     '''
-    items = facts
+    facts
 
     # prints items in a hierarchical format.
-    for item in items:
-        if item == "name":
-            print(f"{item}: {items[item]}")
+    for fact in facts:
+        if fact == "name":
+            print(f"{fact}: {facts[fact]}")
         else:
-            print(f"\t{item}: {items[item]}")
+            print(f"\t{fact}: {facts[fact]}")
 
 
 
