@@ -1,4 +1,12 @@
 import requests
+'''
+Nutritional Info Script
+
+The script will be able to retrieve the nutrional facts about foods 
+using the CalorieNinjas API. Users can enter a food query and receive detailed
+nutrional facts like calories, protein, fat etc.
+'''
+
 
 # Function to get the nutrition info of the food item
 # Using the calorie ninja api
@@ -6,7 +14,10 @@ import requests
 def get_nutrition_info(food: str):
     '''
     Retrieves nutritional information of food item, 
-    Returns None if food item is invalid
+    Args:
+        food (str): Name of food (apple, chucken)
+    Returns:
+        list[dict] | None: A list of nutritional fact dictionaries if found otherwise None
     '''
 
     # API Call URL
@@ -29,8 +40,10 @@ def get_nutrition_info(food: str):
 
 def print_info(facts : dict):
     '''
-    Takes in a dictionary of items 
-    and prints the contents in a legible format
+    Prints the nutritional information in a legible format
+
+    Args:
+        facts (dict): A dictionary of nutrition facts for a single food item
     '''
 
     # prints items in a hierarchical format.
@@ -43,7 +56,13 @@ def print_info(facts : dict):
 
 
 
-if __name__ == "__main__":
+def main():
+    '''
+        Main loop, for the nutrition script
+        Infintely prompts user for food queries
+        until user quits
+    '''
+
     # main loop
     while True:
         # Print opening message
@@ -65,3 +84,6 @@ if __name__ == "__main__":
             for item in items:
                 print_info(item)
                 print("\n")
+
+if __name__ == "__main__":
+    main()
