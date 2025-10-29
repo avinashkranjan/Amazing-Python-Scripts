@@ -1,4 +1,4 @@
-Keras==2.4.3
+Keras==3.12.0
 keras-nightly==2.5.0.dev2021032900
 matplotlib==3.3.3
 numpy==1.22.0
