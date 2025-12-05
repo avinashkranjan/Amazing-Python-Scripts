@@ -309,7 +309,7 @@ class IPTVLinkTester:
 
         if is_working:
             status = (f"✓ WORKING (at least {successful_tests} "
-                     f"test(s) succeeded)")
+                      f"test(s) succeeded)")
         else:
             status = "✗ BROKEN (all tests failed)"
 
@@ -330,7 +330,11 @@ class IPTVLinkTester:
         Returns:
             tuple: (is_working, success_percentage)
         """
-        self._display_test_header(url, link_number, total_links)
+        IPTVLinkTester._display_test_header(
+            url,
+            link_number,
+            total_links
+        )
 
         test_methods = [
             ("HTTP HEAD Request", self.test_http_head),
@@ -360,7 +364,7 @@ class IPTVLinkTester:
             success_percentage = 0.0
 
         # Display results
-        is_working = self._display_test_results(
+        is_working = IPTVLinkTester._display_test_results(
             successful_tests,
             total_tests,
             success_percentage
@@ -492,13 +496,13 @@ class IPTVLinkTester:
                   "Saving partial results...")
 
         # Write results to files
-        if not self._write_results_to_file(
+        if not IPTVLinkTester._write_results_to_file(
             self.working_file,
             working_links
         ):
             return
 
-        if not self._write_results_to_file(
+        if not IPTVLinkTester._write_results_to_file(
             self.broken_file,
             broken_links
         ):
