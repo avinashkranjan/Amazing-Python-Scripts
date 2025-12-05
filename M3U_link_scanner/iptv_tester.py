@@ -58,8 +58,14 @@ class IPTVLinkTester:
                 allow_redirects=True
             )
             return response.status_code in self.SUCCESS_STATUS_CODES
-        except (requests.RequestException, requests.Timeout, 
-                requests.ConnectionError) as e:
+        except requests.Timeout:
+            return False
+        except requests.ConnectionError:
+            return False
+        except requests.RequestException:
+            return False
+        except Exception as e:
+            print(f"  Unexpected error in HTTP HEAD: {type(e).__name__}")
             return False
 
     def test_http_get_partial(self, url):
@@ -88,8 +94,14 @@ class IPTVLinkTester:
                 chunk = next(response.iter_content(1024), None)
                 return chunk is not None and len(chunk) > 0
             return False
-        except (requests.RequestException, requests.Timeout, 
-                requests.ConnectionError):
+        except requests.Timeout:
+            return False
+        except requests.ConnectionError:
+            return False
+        except requests.RequestException:
+            return False
+        except Exception as e:
+            print(f"  Unexpected error in HTTP GET Partial: {type(e).__name__}")
             return False
 
     def test_http_streaming(self, url):
@@ -121,8 +133,14 @@ class IPTVLinkTester:
                             return True
                 return chunk_count > 0
             return False
-        except (requests.RequestException, requests.Timeout, 
-                requests.ConnectionError):
+        except requests.Timeout:
+            return False
+        except requests.ConnectionError:
+            return False
+        except requests.RequestException:
+            return False
+        except Exception as e:
+            print(f"  Unexpected error in HTTP Streaming: {type(e).__name__}")
             return False
 
     def test_socket_connection(self, url):
@@ -148,8 +166,17 @@ class IPTVLinkTester:
                 sock.settimeout(self.timeout)
                 result = sock.connect_ex((host, port))
                 return result == 0
-                
-        except (socket.error, socket.timeout, OSError):
+        except socket.timeout:
+            return False
+        except socket.gaierror:
+            # DNS resolution failed
+            return False
+        except socket.error:
+            return False
+        except OSError:
+            return False
+        except Exception as e:
+            print(f"  Unexpected error in Socket Connection: {type(e).__name__}")
             return False
 
     def test_with_ffmpeg(self, url):
@@ -177,9 +204,11 @@ class IPTVLinkTester:
         except FileNotFoundError:
             # ffprobe not installed
             return False
+        except PermissionError:
+            # No permission to execute ffprobe
+            return False
         except Exception as e:
-            # Catch any other unexpected errors
-            print(f"  Unexpected error in ffprobe: {type(e).__name__}")
+            print(f"  Unexpected error in FFmpeg: {type(e).__name__}")
             return False
 
     def _run_test_attempts(self, method_name, test_func, url):
@@ -206,14 +235,19 @@ class IPTVLinkTester:
                 
                 # Delay between attempts to avoid rate limiting
                 time.sleep(2 if result else 3)
-                    
+            except KeyboardInterrupt:
+                print("\n\nTesting interrupted by user")
+                raise
             except Exception as e:
                 print(f"✗ ERROR: {str(e)[:50]}")
                 method_results.append(False)
                 time.sleep(3)
         
-        success_rate = (sum(method_results) / len(method_results)) * 100
-        print(f"  Success rate: {success_rate:.1f}%")
+        if method_results:
+            success_rate = (sum(method_results) / len(method_results)) * 100
+            print(f"  Success rate: {success_rate:.1f}%")
+        else:
+            print("  Success rate: 0.0%")
         
         return method_results
 
@@ -252,7 +286,11 @@ class IPTVLinkTester:
         # Calculate overall statistics
         total_tests = len(all_results)
         successful_tests = sum(all_results)
-        success_percentage = (successful_tests / total_tests) * 100
+        
+        if total_tests > 0:
+            success_percentage = (successful_tests / total_tests) * 100
+        else:
+            success_percentage = 0.0
         
         # Display results
         print(f"\n{'─' * 70}")
@@ -262,8 +300,11 @@ class IPTVLinkTester:
         # If ANY test passed even once, consider it potentially working
         is_working = successful_tests > 0
         
-        status = (f"✓ WORKING (at least {successful_tests} test(s) succeeded)" 
-                 if is_working else "✗ BROKEN (all tests failed)")
+        if is_working:
+            status = f"✓ WORKING (at least {successful_tests} test(s) succeeded)"
+        else:
+            status = "✗ BROKEN (all tests failed)"
+            
         print(f"Status: {status}")
         print(f"{separator}\n")
         
@@ -278,6 +319,12 @@ class IPTVLinkTester:
         except FileNotFoundError:
             print(f"Error: {self.input_file} not found!")
             print(f"Please create {self.input_file} with one IPTV link per line.")
+            return
+        except PermissionError:
+            print(f"Error: Permission denied reading {self.input_file}")
+            return
+        except UnicodeDecodeError:
+            print(f"Error: Unable to decode {self.input_file}. Please ensure it's UTF-8 encoded.")
             return
         except IOError as e:
             print(f"Error reading {self.input_file}: {e}")
@@ -298,30 +345,43 @@ class IPTVLinkTester:
         broken_links = []
         
         # Test each link
-        for idx, link in enumerate(links, 1):
-            is_working, success_rate = self.test_link_comprehensive(
-                link, idx, len(links)
-            )
-            
-            if is_working:
-                working_links.append(f"{link} # Success rate: {success_rate:.1f}%\n")
-            else:
-                broken_links.append(f"{link} # All tests failed\n")
-            
-            # Delay between links to avoid rate limiting
-            if idx < len(links):
-                print("Waiting 5 seconds before next link...\n")
-                time.sleep(5)
+        try:
+            for idx, link in enumerate(links, 1):
+                is_working, success_rate = self.test_link_comprehensive(
+                    link, idx, len(links)
+                )
+                
+                if is_working:
+                    working_links.append(f"{link} # Success rate: {success_rate:.1f}%\n")
+                else:
+                    broken_links.append(f"{link} # All tests failed\n")
+                
+                # Delay between links to avoid rate limiting
+                if idx < len(links):
+                    print("Waiting 5 seconds before next link...\n")
+                    time.sleep(5)
+        except KeyboardInterrupt:
+            print("\n\nTesting interrupted by user. Saving partial results...")
         
         # Write results to files
         try:
             with open(self.working_file, 'w', encoding='utf-8') as f:
                 f.writelines(working_links)
-            
+        except PermissionError:
+            print(f"Error: Permission denied writing to {self.working_file}")
+            return
+        except IOError as e:
+            print(f"Error writing to {self.working_file}: {e}")
+            return
+        
+        try:
             with open(self.broken_file, 'w', encoding='utf-8') as f:
                 f.writelines(broken_links)
+        except PermissionError:
+            print(f"Error: Permission denied writing to {self.broken_file}")
+            return
         except IOError as e:
-            print(f"Error writing output files: {e}")
+            print(f"Error writing to {self.broken_file}: {e}")
             return
         
         # Display summary
@@ -340,8 +400,14 @@ def main():
     print("IPTV Link Tester - Comprehensive Edition")
     print("=" * 70)
     
-    tester = IPTVLinkTester()
-    tester.process_links()
+    try:
+        tester = IPTVLinkTester()
+        tester.process_links()
+    except KeyboardInterrupt:
+        print("\n\nProgram terminated by user")
+    except Exception as e:
+        print(f"\n\nUnexpected error: {type(e).__name__}: {e}")
+        print("Please report this issue with the full error message")
 
 
 if __name__ == "__main__":
