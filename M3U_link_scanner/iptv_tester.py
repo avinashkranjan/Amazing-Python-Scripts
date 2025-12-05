@@ -291,7 +291,8 @@ class IPTVLinkTester:
             truncated_url += '...'
         print(f"URL: {truncated_url}")
         print(separator)
-
+   
+    @staticmethod
     def _display_test_results(
         self,
         successful_tests,
@@ -367,7 +368,8 @@ class IPTVLinkTester:
         )
 
         return is_working, success_percentage
-
+    
+    @staticmethod
     def _read_links_from_file(self):
         """
         Read links from input file
