@@ -280,7 +280,8 @@ class IPTVLinkTester:
 
         return method_results
 
-    def _display_test_header(self, url, link_number, total_links):
+    @staticmethod
+    def _display_test_header(url, link_number, total_links):
         """Display test header information"""
         separator = '=' * 70
         print(f"\n{separator}")
