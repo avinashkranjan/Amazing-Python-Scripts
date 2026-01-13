@@ -28,7 +28,7 @@ et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 feedfinder2==0.0.4
 feedparser==6.0.10
-filelock==3.12.2
+filelock==3.20.3
 fsspec==2023.6.0
 future==0.18.3
 gensim==4.3.1
