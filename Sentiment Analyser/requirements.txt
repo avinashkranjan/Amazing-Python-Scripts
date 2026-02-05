@@ -40,7 +40,7 @@ parso==0.8.3
 pickleshare==0.7.5
 platformdirs==3.1.1
 prompt-toolkit==3.0.38
-protobuf==4.22.1
+protobuf==5.29.6
 psutil==5.9.4
 pure-eval==0.2.2
 pyasn1==0.4.8
