@@ -69,3 +69,10 @@ Terms and conditions for use, reproduction and distribution are under the [MIT L
 
 
 <h1 align=center>Happy Coding 👨‍💻 </h1>
+---
+
+## Contribution by Raki
+
+This section was added to demonstrate Git branching and merge conflict handling.
+
+Branch: feature-readme-update
