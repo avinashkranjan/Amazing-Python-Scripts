@@ -51,7 +51,7 @@ mdurl==0.1.2
 mime==0.1.0
 murmurhash==1.0.9
 newspaper3k==0.2.8
-nltk==3.8.1
+nltk==3.9.2
 numpy==1.24.2
 openpyxl==3.1.2
 outcome==1.2.0
