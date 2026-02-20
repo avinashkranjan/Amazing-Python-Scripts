@@ -1,2 +1,2 @@
-nltk==3.6.6
+nltk==3.9.2
 pyspellchecker==0.6.2
