@@ -129,5 +129,6 @@
 | 113\.      | Fake News Detection | The Fake News Detection is Python based ML script which allows you to check if your news article is Real or Fake. | [Take me](https://github.com/Parul1606/Amazing-Python-Scripts/tree/testing/Fake-News-Detection) | [Parul Pandey](https://github.com/Parul1606)
 | 114\.     | Complaint Management Application | This python program will give the facility to add the complaints and list the pending complaints using mysql database. | [Take me](./Complaint-Management) | [Avdhesh Varshney](https://github.com/Avdhesh-Varshney)
 | 114\.     | All Convertors | This python program provides all types of convertors to the user with best user interface and experience. | [Take me](./All-Convertors) | [Avdhesh Varshney](https://github.com/Avdhesh-Varshney)
+| 115\.     | DNA Analysis | Personal genome analysis toolkit that processes raw DNA data across 17 categories (ancestry, health risks, nutrition, fitness, pharmacogenomics, and more) and generates a terminal-style single-page HTML report. | [Take Me](./DNA-Analysis) | [shmlkv](https://github.com/shmlkv) |
 
 
