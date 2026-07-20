@@ -68,10 +68,12 @@ def show_list(df, kind):
 
 
 def pause(message="\nEnter..."):
+    """Pause execution until the user presses Enter."""
     input(message)
 
 
 def prompt_text(prompt):
+    """Prompt the user for a non-empty text value."""
     while True:
         value = input(prompt).strip()
         if value:
@@ -80,6 +82,7 @@ def prompt_text(prompt):
 
 
 def prompt_int(prompt):
+    """Prompt the user for a whole number value."""
     while True:
         try:
             return int(input(prompt))
@@ -88,6 +91,7 @@ def prompt_int(prompt):
 
 
 def prompt_float(prompt):
+    """Prompt the user for a numeric value."""
     while True:
         try:
             return float(input(prompt))
@@ -96,6 +100,7 @@ def prompt_float(prompt):
 
 
 def show_menu(title, options):
+    """Display a menu and return the user's selection."""
     clear()
     header()
     print(f"{title}\n")
@@ -105,6 +110,7 @@ def show_menu(title, options):
 
 
 def exit_app():
+    """Log the session end time and show the logout animation."""
     logout_time = datetime.now()
     log_path = data_path("log.csv")
 
@@ -127,6 +133,7 @@ def exit_app():
 
 
 def sales_menu():
+    """Manage sales entries through the sales menu."""
     df = pd.read_csv(data_path("sales.csv"))
     choice = show_menu("SALES", ["1. View", "2. Add"])
 
@@ -150,6 +157,7 @@ def sales_menu():
 
 
 def stock_menu():
+    """Manage stock entries through the stock menu."""
     df = pd.read_csv(data_path("stock.csv"))
     choice = show_menu("STOCK", ["1. View", "2. Add/Update", "3. Search"])
 
@@ -186,6 +194,7 @@ def stock_menu():
 
 
 def product_menu():
+    """Manage product records through the products menu."""
     df = pd.read_csv(data_path("products.csv"))
     choice = show_menu("PRODUCTS", ["1. View", "2. Add", "3. Change Price"])
 
@@ -213,6 +222,7 @@ def product_menu():
 
 
 def employee_menu():
+    """Manage employee records through the employees menu."""
     df = pd.read_csv(data_path("employees.csv"))
     choice = show_menu("EMPLOYEES", ["1. View", "2. Add", "3. Filter"])
 
@@ -240,6 +250,7 @@ def employee_menu():
 
 
 def liability_menu():
+    """Manage liabilities through the liabilities menu."""
     df = pd.read_csv(data_path("liabilities.csv"))
     choice = show_menu("LIABILITIES", ["1. View", "2. Add"])
 
@@ -262,6 +273,7 @@ def liability_menu():
 
 
 def main():
+    """Run the main interactive shop management loop."""
     while True:
         clear()
         header()
@@ -293,3 +305,4 @@ def main():
 if __name__ == "__main__":
     setup()
     main()
+    
