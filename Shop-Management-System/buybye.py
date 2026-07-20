@@ -9,19 +9,22 @@ login_time = datetime.now()
 
 
 def data_path(filename):
+    """Return the full path to a data file inside the script directory."""
     return os.path.join(BASE_DIR, filename)
 
 
 def clear():
+    """Clear the terminal screen."""
     os.system("cls" if os.name == "nt" else "clear")
 
 
 def header():
+    """Print the app banner and title."""
     print(r"""
 ██████╗ ██╗   ██╗██╗   ██╗██████╗ ██╗   ██╗███████╗
 ██╔══██╗██║   ██║╚██╗ ██╔╝██╔══██╗╚██╗ ██╔╝██╔════╝
-██████╔╝██║   ██║ ╚████╔╝ ██████╔╝ ╚████╔╝ █████╗  
-██╔══██╗██║   ██║  ╚██╔╝  ██╔══██╗  ╚██╔╝  ██╔══╝  
+██████╔╝██║   ██║ ╚████╔╝ ██████╔╝ ╚████╔╝ █████╗
+██╔══██╗██║   ██║  ╚██╔╝  ██╔══██╗  ╚██╔╝  ██╔══╝
 ██████╔╝╚██████╔╝   ██║   ██████╔╝   ██║   ███████╗
 ╚═════╝  ╚═════╝    ╚═╝   ╚═════╝    ╚═╝   ╚══════╝
 """)
@@ -29,6 +32,7 @@ def header():
 
 
 def setup():
+    """Create the CSV data files if they do not already exist."""
     files = {
         "sales.csv": ["Item", "Qty", "Total"],
         "stock.csv": ["Product", "Qty"],
@@ -45,6 +49,7 @@ def setup():
 
 
 def show_list(df, kind):
+    """Display rows from a dataframe based on the selected section."""
     if df.empty:
         print("No data found.\n")
         return
