@@ -1,13 +1,19 @@
-import pandas as pd
 import os
 import time
 from datetime import datetime
 
+import pandas as pd
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 login_time = datetime.now()
 
 
+def data_path(filename):
+    return os.path.join(BASE_DIR, filename)
+
+
 def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def header():
@@ -29,12 +35,13 @@ def setup():
         "products.csv": ["Product", "Price"],
         "employees.csv": ["Name", "Role"],
         "liabilities.csv": ["Name", "Amount", "Due"],
-        "log.csv": ["Login Time", "Logout Time"]
+        "log.csv": ["Login Time", "Logout Time"],
     }
 
-    for f, cols in files.items():
-        if not os.path.exists(f):
-            pd.DataFrame(columns=cols).to_csv(f, index=False)
+    for filename, cols in files.items():
+        path = data_path(filename)
+        if not os.path.exists(path):
+            pd.DataFrame(columns=cols).to_csv(path, index=False)
 
 
 def show_list(df, kind):
@@ -44,23 +51,61 @@ def show_list(df, kind):
 
     for i, row in df.iterrows():
         if kind == "sales":
-            print(f"{i+1}. {row['Item']} | Qty: {row['Qty']} | ₹{row['Total']}")
+            print(f"{i + 1}. {row['Item']} | Qty: {row['Qty']} | ₹{row['Total']}")
         elif kind == "stock":
-            print(f"{i+1}. {row['Product']} | Qty: {row['Qty']}")
+            print(f"{i + 1}. {row['Product']} | Qty: {row['Qty']}")
         elif kind == "products":
-            print(f"{i+1}. {row['Product']} | ₹{row['Price']}")
+            print(f"{i + 1}. {row['Product']} | ₹{row['Price']}")
         elif kind == "employees":
-            print(f"{i+1}. {row['Name']} | {row['Role']}")
+            print(f"{i + 1}. {row['Name']} | {row['Role']}")
         elif kind == "liab":
-            print(f"{i+1}. {row['Name']} | ₹{row['Amount']} | Due: {row['Due']}")
+            print(f"{i + 1}. {row['Name']} | ₹{row['Amount']} | Due: {row['Due']}")
+
+
+def pause(message="\nEnter..."):
+    input(message)
+
+
+def prompt_text(prompt):
+    while True:
+        value = input(prompt).strip()
+        if value:
+            return value
+        print("Please enter a value.")
+
+
+def prompt_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Please enter a valid whole number.")
+
+
+def prompt_float(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Please enter a valid number.")
+
+
+def show_menu(title, options):
+    clear()
+    header()
+    print(f"{title}\n")
+    for option in options:
+        print(option)
+    return input(">> ")
 
 
 def exit_app():
     logout_time = datetime.now()
+    log_path = data_path("log.csv")
 
-    log = pd.read_csv("log.csv")
+    log = pd.read_csv(log_path)
     log.loc[len(log)] = [login_time, logout_time]
-    log.to_csv("log.csv", index=False)
+    log.to_csv(log_path, index=False)
 
     clear()
     header()
@@ -77,176 +122,138 @@ def exit_app():
 
 
 def sales_menu():
-    clear()
-    header()
-    df = pd.read_csv("sales.csv")
-
-    print("SALES\n")
-    print("1. View")
-    print("2. Add")
-
-    choice = input(">> ")
+    df = pd.read_csv(data_path("sales.csv"))
+    choice = show_menu("SALES", ["1. View", "2. Add"])
 
     if choice == "1":
         clear()
         header()
         show_list(df, "sales")
-        input("\nEnter...")
+        pause()
 
     elif choice == "2":
-        item = input("Item: ")
-        qty = int(input("Qty: "))
-        price = float(input("Price (₹): "))
+        item = prompt_text("Item: ")
+        qty = prompt_int("Qty: ")
+        price = prompt_float("Price (₹): ")
         total = qty * price
 
         df.loc[len(df)] = [item, qty, total]
-        df.to_csv("sales.csv", index=False)
+        df.to_csv(data_path("sales.csv"), index=False)
 
         print(f"Saved: ₹{total}")
-        input("Enter...")
+        pause()
 
 
 def stock_menu():
-    clear()
-    header()
-    df = pd.read_csv("stock.csv")
-
-    print("STOCK\n")
-    print("1. View")
-    print("2. Add/Update")
-    print("3. Search")
-
-    choice = input(">> ")
+    df = pd.read_csv(data_path("stock.csv"))
+    choice = show_menu("STOCK", ["1. View", "2. Add/Update", "3. Search"])
 
     if choice == "1":
         clear()
         header()
         show_list(df, "stock")
-        input("\nEnter...")
+        pause()
 
     elif choice == "2":
-        name = input("Product: ")
-        qty = int(input("Qty: "))
+        name = prompt_text("Product: ")
+        qty = prompt_int("Qty: ")
 
         # use case-insensitive matching to keep behavior consistent with search
         name_lower = name.lower()
-        product_match = df["Product"].str.lower() == name_lower
+        product_match = df["Product"].astype(str).str.lower() == name_lower
 
         if product_match.any():
             df.loc[product_match, "Qty"] = qty
         else:
             df.loc[len(df)] = [name, qty]
 
-        df.to_csv("stock.csv", index=False)
+        df.to_csv(data_path("stock.csv"), index=False)
         print("Stock updated.")
-        input("Enter...")
+        pause()
 
     elif choice == "3":
-        name = input("Search: ")
+        name = prompt_text("Search: ")
         clear()
         header()
         result = df[df["Product"].str.contains(name, case=False)]
         show_list(result, "stock")
-        input("\nEnter...")
+        pause()
 
 
 def product_menu():
-    clear()
-    header()
-    df = pd.read_csv("products.csv")
-
-    print("PRODUCTS\n")
-    print("1. View")
-    print("2. Add")
-    print("3. Change Price")
-
-    choice = input(">> ")
+    df = pd.read_csv(data_path("products.csv"))
+    choice = show_menu("PRODUCTS", ["1. View", "2. Add", "3. Change Price"])
 
     if choice == "1":
         clear()
         header()
         show_list(df, "products")
-        input("\nEnter...")
+        pause()
 
     elif choice == "2":
-        name = input("Name: ")
-        price = float(input("Price (₹): "))
+        name = prompt_text("Name: ")
+        price = prompt_float("Price (₹): ")
         df.loc[len(df)] = [name, price]
-        df.to_csv("products.csv", index=False)
+        df.to_csv(data_path("products.csv"), index=False)
         print("Product added.")
-        input("Enter...")
+        pause()
 
     elif choice == "3":
-        name = input("Product: ")
-        price = float(input("New price (₹): "))
+        name = prompt_text("Product: ")
+        price = prompt_float("New price (₹): ")
         df.loc[df["Product"] == name, "Price"] = price
-        df.to_csv("products.csv", index=False)
+        df.to_csv(data_path("products.csv"), index=False)
         print("Price updated.")
-        input("Enter...")
+        pause()
 
 
 def employee_menu():
-    clear()
-    header()
-    df = pd.read_csv("employees.csv")
-
-    print("EMPLOYEES\n")
-    print("1. View")
-    print("2. Add")
-    print("3. Filter")
-
-    choice = input(">> ")
+    df = pd.read_csv(data_path("employees.csv"))
+    choice = show_menu("EMPLOYEES", ["1. View", "2. Add", "3. Filter"])
 
     if choice == "1":
         clear()
         header()
         show_list(df, "employees")
-        input("\nEnter...")
+        pause()
 
     elif choice == "2":
-        name = input("Name: ")
-        role = input("Role: ")
+        name = prompt_text("Name: ")
+        role = prompt_text("Role: ")
         df.loc[len(df)] = [name, role]
-        df.to_csv("employees.csv", index=False)
+        df.to_csv(data_path("employees.csv"), index=False)
         print("Employee added.")
-        input("Enter...")
+        pause()
 
     elif choice == "3":
-        role = input("Role: ")
+        role = prompt_text("Role: ")
         clear()
         header()
         result = df[df["Role"].str.contains(role, case=False)]
         show_list(result, "employees")
-        input("\nEnter...")
+        pause()
 
 
 def liability_menu():
-    clear()
-    header()
-    df = pd.read_csv("liabilities.csv")
-
-    print("LIABILITIES\n")
-    print("1. View")
-    print("2. Add")
-
-    choice = input(">> ")
+    df = pd.read_csv(data_path("liabilities.csv"))
+    choice = show_menu("LIABILITIES", ["1. View", "2. Add"])
 
     if choice == "1":
         clear()
         header()
         show_list(df, "liab")
-        input("\nEnter...")
+        pause()
 
     elif choice == "2":
-        name = input("Name: ")
-        amt = float(input("Amount (₹): "))
-        due = input("Due date: ")
+        name = prompt_text("Name: ")
+        amt = prompt_float("Amount (₹): ")
+        due = prompt_text("Due date: ")
 
         df.loc[len(df)] = [name, amt, due]
-        df.to_csv("liabilities.csv", index=False)
+        df.to_csv(data_path("liabilities.csv"), index=False)
 
         print("Liability added.")
-        input("Enter...")
+        pause()
 
 
 def main():
