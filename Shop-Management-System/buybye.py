@@ -128,8 +128,12 @@ def stock_menu():
         name = input("Product: ")
         qty = int(input("Qty: "))
 
-        if name in df["Product"].values:
-            df.loc[df["Product"] == name, "Qty"] = qty
+        # use case-insensitive matching to keep behavior consistent with search
+        name_lower = name.lower()
+        product_match = df["Product"].str.lower() == name_lower
+
+        if product_match.any():
+            df.loc[product_match, "Qty"] = qty
         else:
             df.loc[len(df)] = [name, qty]
 
