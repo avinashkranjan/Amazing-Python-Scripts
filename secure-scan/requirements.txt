@@ -1,0 +1,15 @@
+# LangGraph workflow
+langgraph
+
+# LLM integration with Ollama
+langchain-ollama
+langchain-core
+
+# Browser automation and website inspection
+selenium
+
+# Environment variable management
+python-dotenv
+
+# Testing
+pytest
