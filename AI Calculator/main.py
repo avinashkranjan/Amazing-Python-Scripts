@@ -1,30 +1,41 @@
-from chatterbot import ChatBot
+"""
+AI Calculator using ChatterBot with mathematical evaluation logic.
+"""
+
 import os
-# naming the ChatBot calculator
-# using mathematical evaluation logic
-# the calculator AI will not learn with the user input
-Bot = ChatBot(name='Calculator',
-              read_only=True,
-              logic_adapters=["chatterbot.logic.MathematicalEvaluation"],
-              storage_adapter="chatterbot.storage.SQLStorageAdapter")
+from chatterbot import ChatBot
 
 
-# clear the screen and start the calculator
-os.system('cls' if os.name == 'nt' else 'clear')
-print("Hello, I am a calculator. How may I help you?")
-while (True):
-    # take the input from the user
-    user_input = input("me: ")
+def main() -> None:
+    """Initialize the calculator chatbot and run the main interactive loop."""
+    # Initialize the ChatBot calculator with mathematical evaluation logic
+    bot = ChatBot(
+        name="Calculator",
+        read_only=True,
+        logic_adapters=["chatterbot.logic.MathematicalEvaluation"],
+        storage_adapter="chatterbot.storage.SQLStorageAdapter",
+    )
 
-    # check if the user has typed quit to exit the prgram
-    if user_input.lower() == 'quit':
-        print("Exiting")
-        break
+    # Clear the screen and start the calculator
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Hello, I am a calculator. How may I help you?")
 
-    # otherwise, evaluate the user input
-    # print invalid input if the AI is unable to comprehend the input
-    try:
-        response = Bot.get_response(user_input)
-        print("Calculator:", response)
-    except:
-        print("Calculator: Please enter valid input.")
+    while True:
+        # Take input from the user
+        user_input = input("me: ")
+
+        # Check if the user wants to exit the program
+        if user_input.lower() == "quit":
+            print("Exiting")
+            break
+
+        # Evaluate the user input or catch errors
+        try:
+            response = bot.get_response(user_input)
+            print(f"Calculator: {response}")
+        except Exception:
+            print("Calculator: Please enter valid input.")
+
+
+if __name__ == "__main__":
+    main()
